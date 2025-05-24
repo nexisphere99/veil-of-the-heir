@@ -1,0 +1,250 @@
+
+
+
+:: interact_with_keeper_random
+<<nobr>>
+<<set _i to random(0, 19)>>
+<<if _i == 0>>
+    <<speech "malgros">>
+You're back, princeling? Thought you'd melt after one dose of real magic.
+<</speech>>
+<br>
+<<speech "mc">>
+I didn’t come here to impress you. I came for what I need.
+<</speech>>
+<br>
+<<speech "malgros">>
+Need gets most killed. But I admire the stupidity. Ask your riddle, then.
+<</speech>>
+<<elseif _i == 1>>
+<<speech "malgros">>
+Velmoria’s heirs used to come with swords, not soft eyes and smooth hands.
+<</speech>>
+<br>
+<<speech "mc">>
+Maybe this heir brings a sharper mind instead.
+<</speech>>
+<br>
+<<speech "malgros">>
+Hah! Talk’s cheap. Minds still burn. Let's test yours—ask your riddle.
+<</speech>>
+<<elseif _i == 2>>
+<<speech "malgros">>
+Seen deer with more backbone. You're sure you're here for firethorn resin?
+<</speech>>
+<br>
+<<speech "mc">>
+Yes. I’ll take whatever it costs to become what I must.
+<</speech>>
+<br>
+<<speech "malgros">>
+We'll see if you're still sure once the riddle burns you first.
+<</speech>>
+<<elseif _i == 3>>
+<<speech "malgros">>
+Hmph. You again. Looking more like a princess and less like a fighter every time.
+<</speech>>
+<br>
+<<speech "mc">>
+Then I must be on the right path.
+<</speech>>
+<br>
+<<speech "malgros">>
+Right path’s still full of traps. Let’s see if you spot one. Riddle time.
+<</speech>>
+<<elseif _i == 4>>
+<<speech "malgros">>
+Back already? Magic hasn’t eaten your soul yet? Disappointing.
+<</speech>>
+<br>
+<<speech "mc">>
+I’m not that easy to swallow.
+<</speech>>
+<br>
+<<speech "malgros">>
+Then chew on this: one wrong answer, and you're walking home with scars.
+<</speech>>
+<<elseif _i == 5>>
+<<speech "malgros">>
+Your shadow’s getting lighter, princeling. Losing weight or losing resolve?
+<</speech>>
+<br>
+<<speech "mc">>
+Gaining purpose, actually.
+<</speech>>
+<br>
+<<speech "malgros">>
+Purpose won’t help you here. But maybe wits will. Let’s find out.
+<</speech>>
+<<elseif _i == 6>>
+<<speech "malgros">>
+The tower winds brought gossip. They say the prince smiles now. Dangerous thing.
+<</speech>>
+<br>
+<<speech "mc">>
+Only fools fear change. I'm not one of them.
+<</speech>>
+<br>
+<<speech "malgros">>
+We’ll see if you're a fool or liar. One question. One chance.
+<</speech>>
+<<elseif _i == 7>>
+<<speech "malgros">>
+Hope you brought a backbone with those lips, princeling. Today's item bites.
+<</speech>>
+<br>
+<<speech "mc">>
+Then I’ll bite back.
+<</speech>>
+<br>
+<<speech "malgros">>
+Feisty. Let's test if your brain’s as sharp as your tongue.
+<</speech>>
+<<elseif _i == 8>>
+<<speech "malgros">>
+You still think transformation is a path of petals? It's thorns, blood, and bone.
+<</speech>>
+<br>
+<<speech "mc">>
+I know. And I’m not backing down.
+<</speech>>
+<br>
+<<speech "malgros">>
+Then earn your bloom. Riddle me, princeling.
+<</speech>>
+<<elseif _i == 9>>
+<<speech "malgros">>
+I should start charging for these little performances. You make a good act.
+<</speech>>
+<br>
+<<speech "mc">>
+This isn't an act. This is who I must become.
+<</speech>>
+<br>
+<<speech "malgros">>
+Then prove it. Mind to mind. Question for vial.
+<</speech>>
+<<elseif _i == 10>>
+<<speech "malgros">>
+You’re becoming a regular pest, princeling. Magic vault’s not a bakery.
+<</speech>>
+<br>
+<<speech "mc">>
+Then treat me like fire, not dough. I’m not here for pastries.
+<</speech>>
+<br>
+<<speech "malgros">>
+Ha! Sharp tongue. Let’s see if your mind’s just as crisp. Ask your riddle.
+<</speech>>
+<<elseif _i == 11>>
+<<speech "malgros">>
+Some nobles buy power with gold. You bring only questions and nerves.
+<</speech>>
+<br>
+<<speech "mc">>
+Power earned by wit lasts longer than what’s bought with coin.
+<</speech>>
+<br>
+<<speech "malgros">>
+Big words. Let’s test that noble brain before I hand over venomroot.
+<</speech>>
+<<elseif _i == 12>>
+<<speech "malgros">>
+You smell of perfume and court silk. This is a place of burns and ash.
+<</speech>>
+<br>
+<<speech "mc">>
+Even silk can smother flame, if used right.
+<</speech>>
+<br>
+<<speech "malgros">>
+Clever. Let’s see if your answers are as tightly woven. Ask away.
+<</speech>>
+<<elseif _i == 13>>
+<<speech "malgros">>
+Back again. Trying to be queen or just stubborn?
+<</speech>>
+<br>
+<<speech "mc">>
+Both. And I won’t stop until the crown fits.
+<</speech>>
+<br>
+<<speech "malgros">>
+Then earn your lace and thorns alike. Time for your trial.
+<</speech>>
+<<elseif _i == 14>>
+<<speech "malgros">>
+Every herb you take changes you. Do you even recognize yourself anymore?
+<</speech>>
+<br>
+<<speech "mc">>
+I recognize who I’m becoming—and she’s stronger than I ever was.
+<</speech>>
+<br>
+<<speech "malgros">>
+Bold. Let’s see if your brain still works beneath all that change.
+<</speech>>
+<<elseif _i == 15>>
+<<speech "malgros">>
+Come to sip beauty from glass again, have you? Mirrors lie, potions don’t.
+<</speech>>
+<br>
+<<speech "mc">>
+Then I’ll shape truth from fire and liquid. No lies in that.
+<</speech>>
+<br>
+<<speech "malgros">>
+We’ll see how truthful you are when the riddle twists your tongue.
+<</speech>>
+<<elseif _i == 16>>
+<<speech "malgros">>
+I used to see kings here. Now, soft footed heirs with dreams in bottles.
+<</speech>>
+<br>
+<<speech "mc">>
+Maybe it’s time kings learned to dream... or step aside.
+<</speech>>
+<br>
+<<speech "malgros">>
+Dreams mean little without answers. Start with this one.
+<</speech>>
+<<elseif _i == 17>>
+<<speech "malgros">>
+You look different each time. Bit less prince, bit more... something else.
+<</speech>>
+<br>
+<<speech "mc">>
+That something else is exactly who I intend to become.
+<</speech>>
+<br>
+<<speech "malgros">>
+Good. Becoming something costs. Riddle me before I give you a drop.
+<</speech>>
+<<elseif _i == 18>>
+<<speech "malgros">>
+You brought back the last batch alive? Hmph. Maybe you’re harder to kill than I thought.
+<</speech>>
+<br>
+<<speech "mc">>
+You’ll find I’m full of surprises.
+<</speech>>
+<br>
+<<speech "malgros">>
+Then surprise me with a correct answer. Here’s your riddle.
+<</speech>>
+<<elseif _i == 19>>
+<<speech "malgros">>
+Ten visits already, and you still haven’t cried. Not bad, princeling.
+<</speech>>
+<br>
+<<speech "mc">>
+I’ve cried. Just not in front of you.
+<</speech>>
+<br>
+<<speech "malgros">>
+Smart. Tears don’t buy ingredients. But maybe your mind can.
+<</speech>>
+<</if>>
+<br>
+[[Ask Your Riddle|riddle]] | [[Leave Essence Valut|castle_map_back_select]]
+<</nobr>>

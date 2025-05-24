@@ -1,0 +1,1045 @@
+
+
+:: right_hand
+<<nobr>>
+<<set $user_stats.gender_Identity -= 1>>
+<<set $curr_potion = setup.hand_forward_potions>>
+/* <pre><<=JSON.stringify($curr_potion, null, 2)>></pre> */
+<<if State.variables.direction == "reverse">>
+    <<set $curr_potion = setup.hand_reverse_potions>>
+<</if>>
+/* <<=$userBody.right_hand.curr_body>> */
+<<set $curr_potion_selected = $curr_potion[$userBody.right_hand.curr_body]>>
+/* <pre><<=JSON.stringify($curr_potion_selected, null, 2)>></pre> */
+<<if $curr_potion_selected == undefined>>
+    <p style="color: red;">You do not have any right hands potions available for your current right hand version to transform.</p>
+    <<link "Leave Potion Scroll Selection">><<goto "veil_tower">><</link>> |
+    <<link "Leave Veil Tower">><<goto "castle_map_back_select">><</link>> |
+    <<link "Try another Potion Scroll">><<goto "potion_lab">><</link>>
+<<else>>
+/* <pre><<= JSON.stringify($userBody.right_hand, null, 2)>></pre> */
+/* <pre><<= JSON.stringify($curr_potion_selected, null, 2)>></pre> */
+/* <pre><<= JSON.stringify($userItems, null, 2)>></pre> */
+<<set $ingredient = {}>>
+<span style="font-family: 'Papyrus', serif; font-size: 22px; color: #8b5e3c;">
+<b>✦ Ancient Alchemical Recipe ✦</b><br><br>
+
+<b>Potion:</b> <<=$curr_potion_selected.name>><br>
+<b>Purpose:</b> <<=$curr_potion_selected.purpose>><br><br>
+
+<b>🜃 Ingredients:</b><br>
+<ol>
+<<for _item, _value range $curr_potion_selected.ingredients>>
+  <li><<=$userItems[_item].name>>: _value <<=$userItems[_item].unit>></li>
+  <<set $ingredient[_item] = {amount: $userItems[_item].amount, needed: _value, unit: $userItems[_item].unit}>>
+<</for>>
+</ol>
+<<set _potion = $curr_potion_selected>>
+/* <<set $currentObjectives = 'Create Potion: ' + _potion.name + '. Ingredients are: '>>
+
+<<for _item, _value range _potion.ingredients>>
+  <<set $currentObjectives += $userItems[_item].name + ': ' + _value + ' ' + $userItems[_item].unit + ', '>>
+<</for>>
+
+<<replace "#objectives-text" t8n>>
+  <<=$currentObjectives>>
+<</replace>> */
+
+<b>⤐ Function:</b><br>
+<i><<=$curr_potion_selected.function>></i><br><br>
+
+<b>⚠ Side Effects:</b><br>
+<i><<=$curr_potion_selected.sideEffects>></i>
+</span>
+/* <pre><<= JSON.stringify($ingredient, null, 2)>></pre> */
+<<set $ingredinetAvailable = true>>
+<<for _key, _data range $ingredient>>
+    <<if $ingredient[_key].amount < $ingredient[_key].needed>>
+        <p style="color: red;">
+        You do not have enough <<=$userItems[_key].name>>. You need <<=$ingredient[_key].needed>> 
+        <<=$userItems[_key].unit>>, but you have only <<=$ingredient[_key].amount>> <<=$userItems[_key].unit>>.</p>
+        <<set $ingredinetAvailable = false>>
+    <<else>>
+        <p style="color: green;">
+        You have enough <<=$userItems[_key].name>>. You need <<=$ingredient[_key].needed>> 
+        <<=$userItems[_key].unit>>, you have only <<=$ingredient[_key].amount>> <<=$userItems[_key].unit>>.</p>
+    <</if>>
+<</for>>
+<<if $currentArc["main_arc"] == 3>>
+    <<link "Refer Another Potion Scroll">><<goto "potion_lab">><</link>>
+<<elseif $ingredinetAvailable>>
+    <p style="color: green;">You have all the ingredients needed to make the potion.</p>
+    <<link "Make Potion">><<goto "potion_create_right_hand">><</link>>
+    <<link "Try another Potion Scroll">><<goto "potion_lab">><</link>>
+<<else>>
+    <p style="color: red;">You do not have all the ingredients needed to make the potion.</p>
+    <<link "Leave Potion Scroll Selection">><<goto "veil_tower">><</link>> |
+    <<link "Leave Veil Tower">><<goto "castle_map_back_select">><</link>> |
+    <<link "Try another Potion Scroll">><<goto "potion_lab">><</link>>
+<</if>>
+<<set $potion = $curr_potion_selected>>
+<<set $potionInventory = {}>>
+<<for _item, _needed range $potion.ingredients>>
+    <<set $potionInventory[_item] = 0>>
+<</for>>
+<</if>>
+<</nobr>>
+
+
+:: potion_create_right_hand
+<<nobr>>
+
+<span style="font-family: 'Papyrus', serif; font-size: 22px; color: #8b5e3c;">
+<b>🧪 Assembling: <span style="color: #5a2e13"><<=$potion.name>></span></b><br>
+<i>Match the exact ingredients to brew this potion:</i><br><br>
+<div class="item-grid">
+	<<for _item, _needed range $potion.ingredients>>
+			<div class="item-card">
+                <<capture _item>>
+                    [img[$userItems[_item].img]]
+                    <<set $reverse_passage_ingredient = "potion_create_right_hand">>
+                    <<=$userItems[_item].name>>
+                    <div class="ingredient_details"><<link "Details">><<set $selectedIngredient = _item>><<goto "IngredientDetail">><</link>></div>
+                <</capture>>
+            </div>
+	<</for>>
+</div>
+<br>
+<<for _item, _needed range $potion.ingredients>>
+  <div style="margin-bottom: 10px;">
+    <b><<=$userItems[_item].name>></b> (You have: <<=$userItems[_item].amount>> <<=$userItems[_item].unit>>)<br>
+    Needed: <<=_needed>> <<=$userItems[_item].unit>> | Added: <<=$potionInventory[_item]>> <<=$userItems[_item].unit>><br>
+
+    <<if $userItems[_item].amount > 0>>
+        <<capture _item>>
+        <<set $potion_add = "+" + $userItems[_item].min_amount + " " + $userItems[_item].unit>>
+        <<link $potion_add>>
+            <<set $potionInventory[_item] += $userItems[_item].min_amount>>
+            <<set $userItems[_item].amount -= $userItems[_item].min_amount>>
+            <<goto "potion_create_right_hand">>
+        <</link>>
+        <</capture>>
+    <</if>>
+    <<if $potionInventory[_item] > 0>>
+        <<set $potion_add = "-" + $userItems[_item].min_amount + " " + $userItems[_item].unit>>
+        <<capture _item>>
+            <<link $potion_add>>
+                <<set $potionInventory[_item] -= $userItems[_item].min_amount>>
+                <<set $userItems[_item].amount += $userItems[_item].min_amount>>
+                <<goto "potion_create_right_hand">>
+            <</link>>
+      <</capture>>
+    <</if>>
+  </div>
+<</for>>
+
+<<set $_matches = true>>
+<<for _item, _data range $potion.ingredients>>
+  <<if $potionInventory[_item] != $potion.ingredients[_item]>>
+    <<set $_matches = false>>
+  <</if>>
+<</for>>
+<<if $_matches>>
+  <p style="color: green;"><b>✅ All ingredients matched perfectly. Ready to brew!</b></p>
+  <<link "Brew Potion">>
+    <<goto "brew_success_potion_create_right_hand">>
+  <</link>>
+<</if>>
+<<if not $_matches>>
+  <p style="color: red;"><b>⚠ Ingredient quantities do not match the recipe. Adjust to proceed.</b></p>
+<</if>>
+
+<<link "Cancel">>
+  <<for _item, _data range $potionInventory>>
+    <<set $userItems[_item].amount += $potionInventory[_item]>>
+  <</for>>
+  <<goto "potion_lab">>
+<</link>>
+</span>
+<</nobr>>
+
+:: brew_success_potion_create_right_hand
+<<nobr>>
+<<set $_i to random(1, 4)>>
+<<set $img_path = "potion/potion_"+$_i +".gif">>
+<div style="text-align: center; "><img style="text-align: center; border-radius: 9px;
+    border: 10px ridge #8b5e3c;" @src="setup.ImagePath+$img_path"></div>
+
+/* <pre><<=JSON.stringify($curr_potion_selected, null, 2)>></pre> */
+<<set $next_passage = "right_hand_"+$curr_potion_selected.from +"_"+ "right_hand_" + $curr_potion_selected.to>>
+<br>
+[[Move Forth|$next_passage]]
+<</nobr>>
+
+:: use_success_potion_create_right_hand 
+<<nobr>>
+/* <<=>> */
+/* <pre><<= JSON.stringify($userBody.right_hand, null, 2)>></pre> */
+<<set $userBody.right_hand.curr_body = $curr_potion_selected.to>>
+<<set $image_key_hand_path = "mc/figure/" + $userBody.right_hand.orig_body + "/" + $userBody.right_hand.curr_body + "/" + $userBody.right_hand.orig_body + "_" + $userBody.right_hand.curr_body + "_" + "right_hand.png">>
+/* <<=$image_key_hand_path>> */
+<<set $userBody.right_hand.img = $image_key_hand_path>>
+/* <pre><<= JSON.stringify($userBody.right_hand, null, 2)>></pre> */
+<div style="text-align: center;">
+<div class="change_show torso">[img[setup.ImagePath+$userBody.torso.img]]</div>
+<div class="change_show head">[img[setup.ImagePath+$userBody.head.img]]</div>
+<div class="change_show right_hand">[img[setup.ImagePath+$userBody.right_hand.img]]</div>
+<div class="change_show left_hand">[img[setup.ImagePath+$userBody.left_hand.img]]</div>
+<div class="change_show left_leg">[img[setup.ImagePath+$userBody.left_leg.img]]</div>
+<div class="change_show right_leg">[img[setup.ImagePath+$userBody.right_leg.img]]</div>
+<div class="change_show chest">[img[setup.ImagePath+$userBody.chest.img]]</div>
+<div class="change_show crotch">[img[setup.ImagePath+$userBody.crotch.img]]</div>
+<div class="change_show hair">[img[setup.ImagePath+$userBody.hair.img]]</div>
+</div>
+<<link "Try another Potion Scroll">><<goto "potion_lab">><</link>> |
+[[Leave Veil Tower|castle_map_back_select]]
+<</nobr>>
+
+
+
+
+
+
+:: right_hand_ml_right_hand_mm
+<<nobr>>
+<div style="text-align: center; width: 95%;"><img style="text-align: center; border-radius: 9px;
+    border: 10px ridge #8b5e3c;width: 95%;" @src="setup.ImagePath+'map/veil_tower_mage_map.png'"></div>
+<<speech "thalara">>You have brewed the potion. Let me see it first.  Caelan Are you ready to start the process...<</speech>>
+<br>
+[[I’m ready for this. If becoming queen means changing, then I want to face it head-on.|right_hand_ml_right_hand_mm_1]] | <br><br>
+[[I’m not sure I like this... But if it’s what the Queen demands, I’ll endure.|right_hand_ml_right_hand_mm_1]] | <br><br>
+[[I don’t want this. Changing who I am feels wrong. |right_hand_ml_right_hand_mm_1]] | <br><br>
+<</nobr>>
+
+:: right_hand_ml_right_hand_mm_1
+<<nobr>>
+<<speech "thalara">>Your face holds the legacy of your father’s line bold, strong, uncompromising. A sculptor might say it was hewn from stone. But even stone yields, given time… or magic.<</speech>><br>
+
+<<speech "mc">>And now you’ll chisel it away. One gulp at a time.<</speech>><br>
+
+<<speech "thalara">>Not chisel. Melt. Like snow turning to stream. This is not destruction, Caelan. This is reshaping. Every part of you will still be you. Only… seen differently. Felt differently. Worn differently.<</speech>><br>
+
+<<speech "mc">>It feels like wearing a mask. One I can never take off.<</speech>><br>
+
+[[Move Forth|right_hand_ml_right_hand_mm_2]]
+<</nobr>>
+
+:: right_hand_ml_right_hand_mm_2
+<<nobr>>
+<<speech "thalara">>A mask hides. This brings forth what lies beneath. You may not know her yet, the woman who waits inside. But she is watching… and waiting for breath.<</speech>><br>
+
+<<speech "mc">>...You speak like this is sacred.<</speech>><br>
+
+<<speech "thalara">>Because it is. A face is not just flesh. It’s identity. It’s how the world answers you. But it also shapes how you answer the world.<</speech>><br>
+
+<<speech "mc">>So what answers will this face give? Will I smile easier? Cry more? Speak softer?<</speech>><br>
+[[Move Forth|right_hand_ml_right_hand_mm_3]]
+<</nobr>>
+
+:: right_hand_ml_right_hand_mm_3
+<<nobr>>
+<<speech "thalara">>You will smile with meaning. Cry when your spirit demands it. Speak not softer, but with clarity born from both power and elegance. That’s the gift of balance.<</speech>><br>
+
+<<speech "mc">>It smells like… violets. And honey.<</speech>><br>
+
+<<speech "thalara">>And lavender stem, ground moonstone, and a drop of your blood from last night’s offering. All aligned to your lineage, your essence.<</speech>><br>
+
+<<speech "mc">>It’s warm… it’s crawling through my jaw… gods, that’s <</speech>><br>
+[[Move Forth|right_hand_ml_right_hand_mm_4]]
+<</nobr>>
+
+:: right_hand_ml_right_hand_mm_4
+<<nobr>>
+<<speech "thalara">>It will pass. The ache of transition. Your brow is lightening. See? Even your neck relaxes… the angles soften. No more harsh shadow beneath the chin.<</speech>><br>
+
+<<speech "mc">>I feel… like I’m sinking into something. Like a blanket pulling over my bones.<</speech>><br>
+
+<<speech "thalara">>Look. The beginning of grace. Your father’s jaw still echoes there… but now, so too does your mother’s cheekbones.<</speech>><br>
+
+<<speech "mc">>It’s me. But not me. It’s… her, isn’t it? The one waiting beneath?<</speech>><br>
+
+[[Move Forth|right_hand_ml_right_hand_mm_5]]
+<</nobr>>
+
+:: right_hand_ml_right_hand_mm_5
+<<nobr>>
+<<speech "thalara">>Only the first glimpse. More will come, if you let it.<</speech>><br>
+
+<<speech "mc">>I didn’t think a few degrees of cheekbone would feel different. But it does. Like my smile knows it’s meant for court instead of campfire.<</speech>><br>
+
+<<speech "thalara">>That is the beginning of understanding. Not just of body but of presence. You will find new ways to be seen. But more importantly… you will learn how to see yourself.<</speech>><br>
+
+<<speech "mc">>Do you think she’ll be proud of me? The Queen?<</speech>><br>
+
+[[Move Forth|right_hand_ml_right_hand_mm_6]]
+<</nobr>>
+
+:: right_hand_ml_right_hand_mm_6
+<<nobr>>
+<<speech "thalara">>I think you will be. In time. That matters more than even a crown.<</speech>><br>
+
+<<speech "mc">>And my hand… will it be weaker now? I trained so hard to master the sword.<</speech>><br>
+
+<<speech "thalara">>It will not be weaker. Just different. You may wield a quill or a fan, a glance or a law, with the same precision you once gave to blade. Femininity is not the absence of strength it is strength reshaped.<</speech>><br>
+
+<<speech "mc">>Strange. I thought the hardest part would be pain. But it’s this… knowing I’ll never hold the hilt quite the same way again.<</speech>><br>
+[[Move Forth|right_hand_ml_right_hand_mm_7]]
+<</nobr>>
+
+:: right_hand_ml_right_hand_mm_7
+<<nobr>>
+<<speech "thalara">>And yet, someday soon, you’ll hold the realm itself in your hand. That is a grip far mightier than steel.<</speech>><br>
+
+<<speech "mc">>You speak as if you've seen it before. Have you done this to others?<</speech>><br>
+
+<<speech "thalara">>I have guided a few across the threshold. Not all princes, not all queens. But every soul who braved the crossing came away changed… and closer to truth. Yours will be no different.<</speech>><br>
+
+<<speech "mc">>Then… let’s see who I become.<</speech>><br>
+
+[[Move Forth|right_hand_ml_right_hand_mm_8]]
+
+<</nobr>>
+
+:: right_hand_ml_right_hand_mm_8
+<<nobr>>
+<<speech "thalara">>Then let the potion take root. Let your hand begin its remembering of who it was, and who it longs to be.<</speech>><br>
+[[I feel the potion working in my right hand|use_success_potion_create_right_hand]]
+<</nobr>>
+
+
+
+
+
+
+
+:: right_hand_mm_right_hand_ml
+<<nobr>>
+<div style="text-align: center; width: 95%;"><img style="text-align: center; border-radius: 9px;
+    border: 10px ridge #8b5e3c;width: 95%;" @src="setup.ImagePath+'map/veil_tower_mage_map.png'"></div>
+<<speech "thalara">>You have brewed the potion. Let me see it first.  Caelan Are you ready to start the process...<</speech>>
+<br>
+[[I want to reclaim what was once mine.|right_hand_mm_right_hand_ml_1]] | <br><br>
+[[I never thought I’d want this… to grow tougher again.|right_hand_mm_right_hand_ml_1]] | <br><br>
+[[I reject this softening they took too much already. |right_hand_mm_right_hand_ml_1]] | <br><br>
+<</nobr>>
+
+:: right_hand_mm_right_hand_ml_1
+<<nobr>>
+<<speech "thalara">>You return to me as though retracing your own footsteps. Do you think the ground will feel the same beneath them?<</speech>><br>
+
+<<speech "mc">>I need it back. The grip, the strength, the callus. I don’t want this softness in me anymore.<</speech>><br>
+
+<<speech "thalara">>And yet it’s not just in you. It is you now. Part of you. Magic doesn’t simply fade it remembers.<</speech>><br>
+
+<<speech "mc">>Then let it forget. I want my hand back. I want to be what I was before.<</speech>><br>
+
+[[Move Forth|right_hand_mm_right_hand_ml_2]]
+<</nobr>>
+
+:: right_hand_mm_right_hand_ml_2
+<<nobr>>
+
+<<speech "thalara">>What you were before… or what you believe you must be again?<</speech>><br>
+
+<<speech "mc">>What I need to be. For me. For the fight. For my name.<</speech>><br>
+
+<<speech "thalara">>So be it. But know this reversal does not undo insight. You will feel the difference. The hand you knew may return, but it will carry memory of softness. Of gentleness.<</speech>><br>
+
+<<speech "mc">>I’ll carry that memory. But I won’t wear it anymore.<</speech>><br>
+
+[[Move Forth|right_hand_mm_right_hand_ml_3]]
+<</nobr>>
+
+:: right_hand_mm_right_hand_ml_3
+<<nobr>>
+
+<<speech "thalara">>Very well. Then we begin the return. The potion is heavier this time ironroot and dragonbone, the scent of ash and steel. Your veins will remember the forge.<</speech>><br>
+
+<<speech "mc">>Gah ! It burns. It’s like lightning in my bones.<</speech>><br>
+
+<<speech "thalara">>Transformation backward always resists. You are not simply re-growing strength you are evicting vulnerability. That never leaves quietly.<</speech>><br>
+
+<<speech "mc">>My fingers they’re stiffening. Thickening again. The veins are rising…<</speech>><br>
+
+[[Move Forth|right_hand_mm_right_hand_ml_4]]
+<</nobr>>
+
+:: right_hand_mm_right_hand_ml_4
+<<nobr>>
+
+<<speech "thalara">>Yes. The musculature returns. The flex of dominance. The imprint of the sword’s grip. Already your palm thickens. Already the wrist reshapes.<</speech>><br>
+
+<<speech "mc">>It’s so fast. It’s ugh it feels wrong, even if it’s what I wanted. Gods, what does that mean?<</speech>><br>
+
+<<speech "thalara">>It means you now understand both sides. Strength as weapon… and strength as touch. You will always carry both, even if the world sees only one.<</speech>><br>
+
+<<speech "mc">>Is that shame I feel… or mourning?<</speech>><br>
+
+[[Move Forth|right_hand_mm_right_hand_ml_5]]
+<</nobr>>
+
+:: right_hand_mm_right_hand_ml_5
+<<nobr>>
+<<speech "thalara">>It is the ghost of change. The echo of becoming. Not every path forward leads through softness but every detour leaves a mark.<</speech>><br>
+
+<<speech "mc">>It’s finished. The bulk’s returned. My hand… it feels like it could crack stone again.<</speech>><br>
+
+<<speech "thalara">>Then let it crack what must be broken, and spare what must be held. For a ruler must know when to wield… and when to release.<</speech>><br>
+
+<<speech "mc">>You speak as if this is still a lesson. I thought I was stepping away from all of that.<</speech>><br>
+
+[[Move Forth|right_hand_mm_right_hand_ml_6]]
+
+<</nobr>>
+
+:: right_hand_mm_right_hand_ml_6
+<<nobr>>
+
+<<speech "thalara">>There is no away. Only through. And you, my prince, have walked further than most ever dare. That truth will linger long after the hand forgets its shape.<</speech>><br>
+[[I feel the potion working in my right hand|use_success_potion_create_right_hand]]
+<</nobr>>
+
+
+
+
+
+
+
+:: right_hand_mm_right_hand_ms
+<<nobr>>
+<div style="text-align: center; width: 95%;"><img style="text-align: center; border-radius: 9px;
+    border: 10px ridge #8b5e3c;width: 95%;" @src="setup.ImagePath+'map/veil_tower_mage_map.png'"></div>
+<<speech "thalara">>You have brewed the potion. Let me see it first.  Caelan Are you ready to start the process...<</speech>>
+<br>
+[[I want to embrace the softer strength I’ve gained.|right_hand_mm_right_hand_ms_1]] | <br><br>
+[[It feels strange to soften, but I trust the process.|right_hand_mm_right_hand_ms_1]] | <br><br>
+[[I don’t want to lose my old strength.|right_hand_mm_right_hand_ms_1]] | <br><br>
+<</nobr>>
+
+:: right_hand_mm_right_hand_ms_1
+<<nobr>>
+<<speech "thalara">>Do you feel it already? Even before the touch… your hand is preparing to let go.<</speech>><br>
+
+<<speech "mc">>It’s just a bowl of potion. And yet… my palm aches like it knows what's coming.<</speech>><br>
+
+<<speech "thalara">>Because it remembers. Last session left an impression. Magic reshapes the body, yes but it also stirs the spirit housed within. Each part of you whispers its own story as it changes.<</speech>><br>
+
+<<speech "mc">>It’s not screaming this time. Just… murmuring. Like it’s asking if it really has to let go.<</speech>><br>
+
+[[Move Forth|right_hand_mm_right_hand_ms_2]]
+<</nobr>>
+
+:: right_hand_mm_right_hand_ms_2
+<<nobr>>
+
+<<speech "thalara">>The grip is the last to surrender. Fingers remember every sword hilt, every bowstring. But they can learn new truths. The warmth of skin. The language of invitation rather than force.<</speech>><br>
+
+<<speech "mc">>But what if I need that grip again someday? To hold the kingdom? To defend it?<</speech>><br>
+
+<<speech "thalara">>Then you will. But differently. Queens defend not always with blade, but with bonds. With hands that reach instead of strike. Grip does not vanish it transforms its purpose.<</speech>><br>
+
+<<speech "mc">>It’s warm… deeper than the first time. It’s in my wrist now, coiling. Almost… silken?<</speech>><br>
+
+[[Move Forth|right_hand_mm_right_hand_ms_3]]
+<</nobr>>
+
+:: right_hand_mm_right_hand_ms_3
+<<nobr>>
+
+<<speech "thalara">>The potion this time weaves between sinew and joint, loosening the armor around the gesture. This session teaches your hand to move with intent, not impulse. It begins to listen, not just act.<</speech>><br>
+
+<<speech "mc">>Gods, my knuckles feel strange. Like they’ve forgotten how to clench properly.<</speech>><br>
+
+<<speech "thalara">>Good. The body forgets harshness before it remembers elegance. Let it feel hollow for now. It is only making space for grace.<</speech>><br>
+
+<<speech "mc">>There’s… less in the palm. Less tension. But I can still flex it. Still lift it. It's just… not driven anymore.<</speech>><br>
+
+[[Move Forth|right_hand_mm_right_hand_ms_4]]
+<</nobr>>
+
+:: right_hand_mm_right_hand_ms_4
+<<nobr>>
+
+<<speech "thalara">>That is the hidden strength I want you to know. Not instinct. Not reflex. Choice. A hand that can choose whether to wield or welcome is one that rules justly.<</speech>><br>
+
+<<speech "mc">>I always thought ruling meant having control over others.<</speech>><br>
+
+<<speech "thalara">>And now you’re learning… it begins with control over yourself. Over what you touch. What you release. What you carry and what you don’t.<</speech>><br>
+
+<<speech "mc">>My fingers are longer. I can see it now. The curve they don’t jut forward like before. They're… poised.<</speech>><br>
+
+[[Move Forth|right_hand_mm_right_hand_ms_5]]
+
+<</nobr>>
+
+:: right_hand_mm_right_hand_ms_5
+<<nobr>>
+
+<<speech "thalara">>Yes. And they will write letters instead of war orders. They will touch cheek and cloth and cradle a crown. Not as a burden. But as belonging.<</speech>><br>
+
+<<speech "mc">>That sounds… like someone else’s life.<</speech>><br>
+
+<<speech "thalara">>It was. But it is becoming yours, line by line. Potion by potion. Look at your hand, Caelan. It still remembers strength but now, it is learning to speak in gentleness.<</speech>><br>
+
+<<speech "mc">>So I’m not losing my grip. I’m choosing not to use it the same way.<</speech>><br>
+
+[[Move Forth|right_hand_mm_right_hand_ms_6]]
+<</nobr>>
+
+:: right_hand_mm_right_hand_ms_6
+<<nobr>>
+
+<<speech "thalara">>Precisely. The Hollowing is not emptiness it is readiness. For touch, for truth, for the responsibilities only you will bear.<</speech>><br>
+
+<<speech "mc">>Then let it hollow. I want to know what that hand can hold when it’s not clenching a blade.<</speech>><br>
+
+<<speech "thalara">>Very well. Then we continue. And as your grip fades, let your reach grow.<</speech>><br>
+
+
+[[I feel the potion working in my right hand|use_success_potion_create_right_hand]]
+<</nobr>>
+
+
+
+
+
+
+
+:: right_hand_ms_right_hand_mm
+<<nobr>>
+<div style="text-align: center; width: 95%;"><img style="text-align: center; border-radius: 9px;
+    border: 10px ridge #8b5e3c;width: 95%;" @src="setup.ImagePath+'map/veil_tower_mage_map.png'"></div>
+<<speech "thalara">>You have brewed the potion. Let me see it first.  Caelan Are you ready to start the process...<</speech>>
+<br>
+[[I’m ready to take back the strength I had before.|right_hand_ms_right_hand_mm_1]] | <br><br>
+[[I don’t want to lose the gentleness I’ve found...|right_hand_ms_right_hand_mm_1]] | <br><br>
+[[Softness is weakness. I want my old grip back|right_hand_ms_right_hand_mm_1]] | <br><br>
+<</nobr>>
+
+:: right_hand_ms_right_hand_mm_1
+<<nobr>>
+<<speech "thalara">>You come back again. To call strength home. Tell me… is it courage that brings you here or fear?<</speech>><br>
+
+<<speech "mc">>Maybe both. Maybe neither. All I know is I need to feel it again. The firmness. The grip that doesn’t hesitate.<</speech>><br>
+
+<<speech "thalara">>And what will you do with that grip, Caelan? Crush? Command? Or merely remember what it was like not to doubt it?<</speech>><br>
+
+<<speech "mc">>I don’t know. I just miss knowing what my hand is for. Right now, it trembles when it should clench. Reaches when it should guard.<</speech>><br>
+
+[[Move Forth|right_hand_ms_right_hand_mm_2]]
+<</nobr>>
+
+:: right_hand_ms_right_hand_mm_2
+<<nobr>>
+
+<<speech "thalara">>Then let us show it another memory. One not of blade or brush, but of presence. The potion is stronger today stirred with wolfsbane root and charred oak. You’ll feel its intent like a drum beneath your skin.<</speech>><br>
+
+<<speech "mc">>The color… it’s darker now. Like amber in stormlight.<</speech>><br>
+
+<<speech "thalara">>Yes. It remembers fire. And it will rekindle what was dimmed. But it will not erase what you’ve learned. No potion ever truly forgets.<</speech>><br>
+
+<<speech "mc">>Gods it bites. It’s crawling into the joints… curling the fingers inward. They want to close now.<</speech>><br>
+
+[[Move Forth|right_hand_ms_right_hand_mm_3]]
+<</nobr>>
+
+
+:: right_hand_ms_right_hand_mm_3
+<<nobr>>
+
+<<speech "thalara">>The muscle awakens. Old reflexes stir. The hollow places you once opened now fill again, slowly, deliberately. The grip returns, not as instinct but as intent.<</speech>><br>
+
+<<speech "mc">>It’s like someone is rewinding me. Pulling thread back into tight knots.<</speech>><br>
+
+<<speech "thalara">>That is not failure. It is merely re-centering. Even queens must retreat at times. You are not choosing weakness or strength you are choosing understanding.<</speech>><br>
+
+<<speech "mc">>My fingers… they feel dense again. Less float. More presence. Like they’ve reclaimed weight.<</speech>><br>
+
+[[Move Forth|right_hand_ms_right_hand_mm_4]]
+<</nobr>>
+
+:: right_hand_ms_right_hand_mm_4
+<<nobr>>
+
+<<speech "thalara">>They have. And with weight comes responsibility. You’ve felt softness. Now feel command again. But hold it with wisdom, not fear.<</speech>><br>
+
+<<speech "mc">>There’s a pulse in my palm. Familiar. Firm. But quieter than before.<</speech>><br>
+
+<<speech "thalara">>Because now it knows balance. You are not the same boy who first clenched a sword. You’ve touched tenderness. That changes the strike even if you strike again.<</speech>><br>
+
+<<speech "mc">>So this isn't undoing. It's… remembering another version of me.<</speech>><br>
+
+[[Move Forth|right_hand_ms_right_hand_mm_5]]
+<</nobr>>
+
+:: right_hand_ms_right_hand_mm_5
+<<nobr>>
+
+<<speech "thalara">>Precisely. Let the hand flex again, if it must. Let it lead when the moment demands. But never forget it was also made to hold. To open.<</speech>><br>
+
+<<speech "mc">>It’s done. I can feel it in the grip. It’s not the brute strength I had before… but it’s closer. Firmer. Grounded.<</speech>><br>
+
+<<speech "thalara">>Then let it serve you. Not as master or servant. But as instrument. You are not losing your path, Caelan. You’re feeling its curves.<</speech>><br>
+
+<<speech "mc">>...Then I’ll walk it with both hands. One that remembers war… and one that remembers warmth.<</speech>><br>
+
+[[Move Forth|right_hand_ms_right_hand_mm_6]]
+<</nobr>>
+
+:: right_hand_ms_right_hand_mm_6
+<<nobr>>
+
+<<speech "thalara">>That is the path of true rule. When the throne calls, let it find you ready not only to wield… but to receive.<</speech>><br>
+[[I feel the potion working in my right hand|use_success_potion_create_right_hand]]
+<</nobr>>
+
+
+
+
+
+
+
+
+:: right_hand_ms_right_hand_fs
+<<nobr>>
+<div style="text-align: center; width: 95%;"><img style="text-align: center; border-radius: 9px;
+    border: 10px ridge #8b5e3c;width: 95%;" @src="setup.ImagePath+'map/veil_tower_mage_map.png'"></div>
+<<speech "thalara">>You have brewed the potion. Let me see it first.  Caelan Are you ready to start the process...<</speech>>
+<br>
+[[I’m ready to meet the reflection waiting in this mirror.|right_hand_ms_right_hand_fs_1]] | <br><br>
+[[I’m not sure I like who I see halfway between, but I’ll keep going.|right_hand_ms_right_hand_fs_1]] | <br><br>
+[[I don’t like this shadow self half prince, half princess.|right_hand_ms_right_hand_fs_1]] | <br><br>
+<</nobr>>
+
+:: right_hand_ms_right_hand_fs_1
+<<nobr>>
+<<speech "thalara">>You have crossed the halfway mark. Do you feel it? How the flesh no longer answers to memory alone, but to possibility?<</speech>><br>
+
+<<speech "mc">>It’s strange. I look at it and… it doesn’t feel like mine anymore. Or maybe it’s becoming mine in a way it never was.<</speech>><br>
+
+<<speech "thalara">>That is not contradiction it is awakening. The hand you once forged in war now begins to shape the future in elegance, not edge.<</speech>><br>
+
+<<speech "mc">>But it still remembers… I still remember… what it was like to hold steel, to draw blood.<</speech>><br>
+
+[[Move Forth|right_hand_ms_right_hand_fs_2]]
+<</nobr>>
+
+:: right_hand_ms_right_hand_fs_2
+<<nobr>>
+
+<<speech "thalara">>And you always will. That memory doesn’t vanish it deepens. Refines. Would you have this hand unlearn its strength? Or let it rise again with a new form of power?<</speech>><br>
+
+<<speech "mc">>The runes are glowing. Why do they feel like they’re humming through my bones?<</speech>><br>
+
+<<speech "thalara">>Because they’re not drawing power from the potion alone. They’re drawing it from you. From the will you carry. Your fear, your hope, your resistance… your surrender. All of it feeds the flame.<</speech>><br>
+
+<<speech "mc">>I can feel the shape changing. Gods… my wrist it's thin. Not weak… but delicate. I could never imagine calling it that before.<</speech>><br>
+
+[[Move Forth|right_hand_ms_right_hand_fs_3]]
+<</nobr>>
+
+:: right_hand_ms_right_hand_fs_3
+<<nobr>>
+<<speech "thalara">>Delicacy is not weakness, Caelan. It is precision. It is intent. Like silk thread that holds royal banners stronger than chain when woven with purpose.<</speech>><br>
+
+<<speech "mc">>The skin’s smoother. The fingers feel… lighter. Like they don’t want to clench anymore. Like they’re meant to gesture. Or to touch gently, not grip hard.<</speech>><br>
+
+<<speech "thalara">>Yes. They are beginning to express, not just execute. They are learning the language of grace. Of allure. And of command through presence, not pressure.<</speech>><br>
+
+<<speech "mc">>My nails what’s happening? They’re shimmering. I didn’t think nails could glow.<</speech>><br>
+
+[[Move Forth|right_hand_ms_right_hand_fs_4]]
+<</nobr>>
+
+:: right_hand_ms_right_hand_fs_4
+<<nobr>>
+<<speech "thalara">>A reflection of your essence. They will always carry the echo of your bloodline, your magic, your decisions. You are not losing yourself, Caelan. You are refining your truth.<</speech>><br>
+
+<<speech "mc">>I want to say it still feels like me… but I’m not sure it does. It feels like her. Like someone else’s hand is growing where mine used to be.<</speech>><br>
+
+<<speech "thalara">>Then speak to her. The woman whose hand this is becoming. She is not a stranger. She is a part of you long ignored. Greet her not with doubt, but with dignity.<</speech>><br>
+
+<<speech "mc">>…Hello. I suppose… you’ve waited long enough.<</speech>><br>
+
+[[Move Forth|right_hand_ms_right_hand_fs_5]]
+<</nobr>>
+
+:: right_hand_ms_right_hand_fs_5
+<<nobr>>
+
+<<speech "thalara">>And she heard you. Look your fingers now rest in poise without effort. The muscles are still yours, but they obey a different rhythm now. One not born of resistance… but invitation.<</speech>><br>
+
+<<speech "mc">>It feels strange. Like the air touches it differently. Softer. Even the pulse in my wrist feels quieter.<</speech>><br>
+
+<<speech "thalara">>That is the heartbeat of transformation. Faint now but it will grow louder, stronger. You are no longer just reshaped you are becoming.<</speech>><br>
+
+<<speech "mc">>So this is the threshold. After today, I don’t get to call it “my hand” in the same way anymore, do I?<</speech>><br>
+
+[[Move Forth|right_hand_ms_right_hand_fs_6]]
+<</nobr>>
+
+
+:: right_hand_ms_right_hand_fs_6
+<<nobr>>
+<<speech "thalara">>No. You call it yourself. Not what you held. Not what you lost. But what you have chosen to extend into the world. This hand will be your introduction. Your grace. Your authority. Your legacy.<</speech>><br>
+
+<<speech "mc">>Then… I’ll let it become what it needs to. Just promise me it will still know how to hold the weight of who I was.<</speech>><br>
+
+<<speech "thalara">>It will. And it will carry it not as a burden but as a root. And roots, my dear Caelan, are what let the blossom rise.<</speech>><br>
+[[I feel the potion working in my right hand|use_success_potion_create_right_hand]]
+<</nobr>>
+
+
+
+
+
+
+:: right_hand_fs_right_hand_ms
+<<nobr>>
+<div style="text-align: center; width: 95%;"><img style="text-align: center; border-radius: 9px;
+    border: 10px ridge #8b5e3c;width: 95%;" @src="setup.ImagePath+'map/veil_tower_mage_map.png'"></div>
+<<speech "thalara">>You have brewed the potion. Let me see it first.  Caelan Are you ready to start the process...<</speech>>
+<br>
+[[I’m ready to reclaim what I once was.|right_hand_fs_right_hand_ms_1]] | <br><br>
+[[I’m unsure about losing this part of me, but maybe it’s time to return.|right_hand_fs_right_hand_ms_1]] | <br><br>
+[[I never wanted to change in the first place. I want my old hand back|right_hand_fs_right_hand_ms_1]] | <br><br>
+<</nobr>>
+
+:: right_hand_fs_right_hand_ms_1
+<<nobr>>
+<<speech "thalara">>You step backward over a threshold you crossed with pain and promise. Are you prepared for what might be waiting on this side?<</speech>><br>
+
+<<speech "mc">>I don’t know. I just… I need to remember what it felt like. Before.<</speech>><br>
+
+<<speech "thalara">>Then you shall. The body does not forget. It buries, but it does not erase. Already, your tendons respond the bones shift back, recalibrating for tension over tenderness.<</speech>><br>
+
+<<speech "mc">>It’s… tight. My fingers ache. The wrist feels heavier again. Like armor being slid over the skin.<</speech>><br>
+
+[[Move Forth|right_hand_fs_right_hand_ms_2]]
+<</nobr>>
+
+:: right_hand_fs_right_hand_ms_2
+<<nobr>>
+
+<<speech "thalara">>Because the form is remembering its former purpose. The hand regains its edge not for war, perhaps, but for certainty. This is the grip of assertion, not invitation.<</speech>><br>
+
+<<speech "mc">>The softness is fading. I can see it… feel it. Even the nails are dulling again. No more shimmer.<</speech>><br>
+
+<<speech "thalara">>You called it a mask once, remember? Perhaps this was always another mask. Or perhaps… both versions were your face, from different angles.<</speech>><br>
+
+<<speech "mc">>Do you ever regret helping me change? Or unchange?<</speech>><br>
+
+[[Move Forth|right_hand_fs_right_hand_ms_3]]
+<</nobr>>
+
+:: right_hand_fs_right_hand_ms_3
+<<nobr>>
+
+<<speech "thalara">>I regret nothing done by choice. But I do mourn what is lost when that choice is made from fear rather than clarity.<</speech>><br>
+
+<<speech "mc">>The fingers they're thicker now. Less elegant. More blunt. I don’t know if I’m relieved or ashamed.<</speech>><br>
+
+<<speech "thalara">>You are both. That is what makes you human. This transformation is not shameful it is simply honest. It reveals what you need in this moment.<</speech>><br>
+
+<<speech "mc">>I wanted to reach back… to be what I was. But now I don’t know if what I was is enough anymore.<</speech>><br>
+
+[[Move Forth|right_hand_fs_right_hand_ms_4]]
+<</nobr>>
+
+:: right_hand_fs_right_hand_ms_4
+<<nobr>>
+<<speech "thalara">>Then you’ve learned the lesson of all shapeshifting: there is no going back. Only forward, into another form of understanding. This hand is not the same as before. It never will be.<</speech>><br>
+
+<<speech "mc">>So this… this is what a hand feels like when it’s caught between who I was and who I might have been.<</speech>><br>
+
+<<speech "thalara">>Precisely. Neither weapon nor whisper. Not yet. But it will choose. And so will you.<</speech>><br>
+
+<<speech "mc">>It hurts. Not the pain of the potion. Something else. Like saying goodbye to a part of me I was just starting to trust.<</speech>><br>
+
+[[Move Forth|right_hand_fs_right_hand_ms_5]]
+<</nobr>>
+
+:: right_hand_fs_right_hand_ms_5
+<<nobr>>
+<<speech "thalara">>Trust leaves echoes. Let them echo. Let them haunt you, even. From echo comes resonance and from that… choice that matters.<</speech>><br>
+
+<<speech "mc">>What will she think? The one I saw in the mirror. The one this hand used to belong to.<</speech>><br>
+
+<<speech "thalara">>She watches still. And she waits. Whether you return to her… or carry her forward in new form, is yours to decide.<</speech>><br>
+
+<<speech "mc">>Then let this hand hold both of us. Him and her. Not erased. Not replaced. Just… remembered.<</speech>><br>
+
+[[Move Forth|right_hand_fs_right_hand_ms_6]]
+
+<</nobr>>
+:: right_hand_fs_right_hand_ms_6
+<<nobr>>
+<<speech "thalara">>And in remembering, reshaped.<</speech>><br>
+[[I feel the potion working in my right hand|use_success_potion_create_right_hand]]
+<</nobr>>
+
+
+
+
+
+
+
+
+:: right_hand_fs_right_hand_fm
+<<nobr>>
+<div style="text-align: center; width: 95%;"><img style="text-align: center; border-radius: 9px;
+    border: 10px ridge #8b5e3c;width: 95%;" @src="setup.ImagePath+'map/veil_tower_mage_map.png'"></div>
+<<speech "thalara">>You have brewed the potion. Let me see it first.  Caelan Are you ready to start the process...<</speech>>
+<br>
+[[This feels… easier now. Like my body finally agrees with the change.|right_hand_fs_right_hand_fm_1]] | <br><br>
+[[I’m still not sure how much of this is me.|right_hand_fs_right_hand_fm_1]] | <br><br>
+[[You keep calling this refinement. But all I see is the strength I earned being covered up|right_hand_fs_right_hand_fm_1]] | <br><br>
+<</nobr>>
+
+:: right_hand_fs_right_hand_fm_1
+<<nobr>>
+<<speech "thalara">>Your hand is a story, Caelan. It tells of battles won and losses mourned. But now it will also tell of patience, finesse, and choice.<</speech>><br>
+
+<<speech "mc">>I can feel the difference. It’s like every movement is more deliberate, more… thoughtful. But sometimes, it feels unfamiliar. Almost foreign.<</speech>><br>
+
+<<speech "thalara">>That unfamiliarity is the soil where new strength grows. Strength not forged in fire, but nurtured in calm. Elegance is its own kind of power.<</speech>><br>
+
+<<speech "mc">>It’s strange to think of power as something soft. Like velvet draped over steel.<</speech>><br>
+
+[[Move Forth|right_hand_fs_right_hand_fm_2]]
+<</nobr>>
+
+:: right_hand_fs_right_hand_fm_2
+<<nobr>>
+
+<<speech "thalara">>Exactly so. Velvet protects the steel, but it also invites touch. It does not demand respect through force, but through allure. There is a deep courage in that.<</speech>><br>
+
+<<speech "mc">>I suppose I’m learning a new language one spoken in gestures and glances, not shouts and clangs.<</speech>><br>
+
+<<speech "thalara">>And you will speak it fluently, in time. The world listens closely to those who wield grace. They bend not by weakness, but by wisdom.<</speech>><br>
+
+<<speech "mc">>Sometimes I wonder if I’ll ever fully belong in this new skin. If this hand, this body, will ever truly feel like mine.<</speech>><br>
+
+[[Move Forth|right_hand_fs_right_hand_fm_3]]
+<</nobr>>
+
+
+:: right_hand_fs_right_hand_fm_3
+<<nobr>>
+
+<<speech "thalara">>Belonging is a journey, not a destination. This hand is becoming a reflection of who you are becoming. That reflection is still you just a version shaped by choice and magic.<</speech>><br>
+
+<<speech "mc">>There’s a beauty in that idea. A chance to remake myself without losing what matters.<</speech>><br>
+
+<<speech "thalara">>Yes. Transformation is not erasure, but revelation. The layers you shed were only parts that no longer served you.<</speech>><br>
+
+<<speech "mc">>Do you think others will notice? Will they see the change before I do?<</speech>><br>
+
+[[Move Forth|right_hand_fs_right_hand_fm_4]]
+<</nobr>>
+
+:: right_hand_fs_right_hand_fm_4
+<<nobr>>
+
+<<speech "thalara">>Eyes trained in the old ways might miss it at first. But grace always finds its stage. Soon, the subtlety of your movements will speak louder than any word.<</speech>><br>
+
+<<speech "mc">>I want to be more than a symbol. I want to be real. To move with intention and truth.<</speech>><br>
+
+<<speech "thalara">>That truth is within you already. The ritual is only the key to unlock it. Your hand is learning not just to perform, but to express.<</speech>><br>
+
+<<speech "mc">>Then I will practice every gesture, every motion. So when the moment comes, I won’t hesitate.<</speech>><br>
+
+[[Move Forth|right_hand_fs_right_hand_fm_5]]
+<</nobr>>
+
+:: right_hand_fs_right_hand_fm_5
+<<nobr>>
+
+<<speech "thalara">>That is the spirit of elegance confidence born from preparation, not chance.<</speech>><br>
+
+<<speech "mc">>Thank you, Thalara. For helping me find this part of myself.<</speech>><br>
+
+<<speech "thalara">>It is my honor, Caelan. The path is long, but with each step, you shape your own destiny.<</speech>><br>
+[[I feel the potion working in my right hand|use_success_potion_create_right_hand]]
+<</nobr>>
+
+
+
+
+
+
+
+:: right_hand_fm_right_hand_fs
+<<nobr>>
+<div style="text-align: center; width: 95%;"><img style="text-align: center; border-radius: 9px;
+    border: 10px ridge #8b5e3c;width: 95%;" @src="setup.ImagePath+'map/veil_tower_mage_map.png'"></div>
+<<speech "thalara">>You have brewed the potion. Let me see it first.  Caelan Are you ready to start the process...<</speech>>
+<br>
+[[I’ve walked far into femininity… maybe it’s time to step back|right_hand_fm_right_hand_fs_1]] | <br><br>
+[[I still feel the warmth of what I was becoming|right_hand_fm_right_hand_fs_1]] | <br><br>
+[[All that grace, that softness they weren’t mine. |right_hand_fm_right_hand_fs_1]] | <br><br>
+<</nobr>>
+
+:: right_hand_fm_right_hand_fs_1
+<<nobr>>
+<<speech "thalara">>Strength is not lost, Caelan. It has only changed its form. You are reclaiming what is essential without erasing what you have learned.<</speech>><br>
+
+<<speech "mc">>It feels different now, heavier somehow. Not like before, but… sturdier. Like a foundation, not a dance.<</speech>><br>
+
+<<speech "thalara">>Yes. This hand has learned to bend, to express softness but now it must learn to hold fast again. To be the anchor beneath the flow.<</speech>><br>
+
+<<speech "mc">>The grace feels like a distant memory. I almost miss the lightness, the ease.<</speech>><br>
+
+[[Move Forth|right_hand_fm_right_hand_fs_2]]
+<</nobr>>
+
+:: right_hand_fm_right_hand_fs_2
+<<nobr>>
+
+<<speech "thalara">>And yet, even as you reclaim strength, the grace will remain beneath the surface like roots feeding a mighty tree.<</speech>><br>
+
+<<speech "mc">>I’m afraid the elegance might fade too much. What if I become too rigid? Too harsh?<</speech>><br>
+
+<<speech "thalara">>Balance is the goal, not absolutes. You will carry both within you power tempered by wisdom, strength softened by understanding.<</speech>><br>
+
+<<speech "mc">>Sometimes I wonder who I really am when I shift between these states. The woman I was becoming, or the warrior I was born.<</speech>><br>
+
+[[Move Forth|right_hand_fm_right_hand_fs_3]]
+<</nobr>>
+
+:: right_hand_fm_right_hand_fs_3
+<<nobr>>
+
+<<speech "thalara">>You are both and more. Transformation is a river, not a wall. You flow through many forms but remain one essence.<</speech>><br>
+
+<<speech "mc">>I want to be steady. To stand firm without losing what grace taught me.<</speech>><br>
+
+<<speech "thalara">>That steadiness will grow with time. Strength is not just muscle it is the calm in the storm.<</speech>><br>
+
+<<speech "mc">>Do others see the change? Or am I the only one feeling this shifting inside?<</speech>><br>
+
+[[Move Forth|right_hand_fm_right_hand_fs_4]]
+<</nobr>>
+
+:: right_hand_fm_right_hand_fs_4
+<<nobr>>
+
+<<speech "thalara">>Your presence will reflect your inner balance. Those who truly know you will notice the return of resolve and the persistence of softness.<</speech>><br>
+
+<<speech "mc">>Thank you, Thalara. For guiding me back, not just to what was, but to what can be.<</speech>><br>
+
+<<speech "thalara">>It is your courage that guides the magic, Caelan. The path is yours to walk, with strength and grace intertwined.<</speech>><br>
+[[I feel the potion working in my right hand|use_success_potion_create_right_hand]]
+<</nobr>>
+
+
+
+
+
+
+
+:: right_hand_fm_right_hand_fl
+<<nobr>>
+<div style="text-align: center; width: 95%;"><img style="text-align: center; border-radius: 9px;
+    border: 10px ridge #8b5e3c;width: 95%;" @src="setup.ImagePath+'map/veil_tower_mage_map.png'"></div>
+<<speech "thalara">>You have brewed the potion. Let me see it first.  Caelan Are you ready to start the process...<</speech>>
+<br>
+[[If I must become her… then let it be with open eyes.|right_hand_fm_right_hand_fl_1]] | <br><br>
+[[I’ve come so far. It feels right… but frightening.|right_hand_fm_right_hand_fl_1]] | <br><br>
+[[So this is what it means to let go entirely. Fine.|right_hand_fm_right_hand_fl_1]] | <br><br>
+<</nobr>>
+
+:: right_hand_fm_right_hand_fl_1
+<<nobr>>
+<<speech "thalara">>Change is never a loss, Caelan. It is transformation in motion. You carry both the queen’s elegance and the warrior’s might within you.<</speech>><br>
+
+<<speech "mc">>This hand feels heavier, but somehow more certain. The delicate curves are fading, replaced by strength that feels both familiar and new.<</speech>><br>
+
+<<speech "thalara">>Strength and grace are threads woven together. Neither is less important than the other. You learn to hold both, shifting as the moment demands.<</speech>><br>
+
+<<speech "mc">>Will I forget the gentleness? The softness that made me feel… more than just power?<</speech>><br>
+
+[[Move Forth|right_hand_fm_right_hand_fl_2]]
+<</nobr>>
+
+:: right_hand_fm_right_hand_fl_2
+<<nobr>>
+
+<<speech "thalara">>Gentleness remains, deeper than the skin. It shapes your touch, even when your hand wields authority.<</speech>><br>
+
+<<speech "mc">>It’s strange to feel this tug back toward a past self. Not a loss exactly, but a layering.<</speech>><br>
+
+<<speech "thalara">>A layering is growth. The queen’s hand still guides, but the warrior’s grasp strengthens the foundation beneath it.<</speech>><br>
+
+<<speech "mc">>I wonder if I can carry both without losing myself.<</speech>><br>
+
+[[Move Forth|right_hand_fm_right_hand_fl_3]]
+<</nobr>>
+
+:: right_hand_fm_right_hand_fl_3
+<<nobr>>
+
+<<speech "thalara">>You are never lost, only evolving. Both hands will come to reflect the whole you power tempered with grace.<</speech>><br>
+
+<<speech "mc">>Thank you for walking this path with me. For helping me hold onto what matters.<</speech>><br>
+
+<<speech "thalara">>It is your heart that guides the magic, Caelan. The hand is but an instrument your spirit shapes its true strength.<</speech>><br>
+[[I feel the potion working in my right hand|use_success_potion_create_right_hand]]
+<</nobr>>
+
+
+
+
+
+
+
+:: right_hand_fl_right_hand_fm
+<<nobr>>
+<div style="text-align: center; width: 95%;"><img style="text-align: center; border-radius: 9px;
+    border: 10px ridge #8b5e3c;width: 95%;" @src="setup.ImagePath+'map/veil_tower_mage_map.png'"></div>
+<<speech "thalara">>You have brewed the potion. Let me see it first.  Caelan Are you ready to start the process...<</speech>>
+<br>
+[[Maybe I don’t need to be perfect to rule. Just… present.|right_hand_fl_right_hand_fm_1]] | <br><br>
+[[It felt right, the elegance… but I suppose not every part of me|right_hand_fl_right_hand_fm_1]] | <br><br>
+[[Maybe it looked like a queen’s hand, but it never felt like mine.|right_hand_fl_right_hand_fm_1]] | <br><br>
+<</nobr>>
+
+:: right_hand_fl_right_hand_fm_1
+<<nobr>>
+<<speech "thalara">>This transformation is a dance between strength and grace, Caelan. You are reclaiming a strength that does not diminish your elegance it reshapes it.<</speech>><br>
+
+<<speech "mc">>It feels strange, like the hand remembers something it had forgotten. The delicate glow fades, replaced by a steady pulse beneath the skin.<</speech>><br>
+
+<<speech "thalara">>Power often wears many faces. Today, it wears a firmer skin a hand that commands without losing its refinement.<</speech>><br>
+
+<<speech "mc">>Will the softness return someday? Or is this a one-way path?<</speech>><br>
+
+[[Move Forth|right_hand_fl_right_hand_fm_2]]
+<</nobr>>
+
+:: right_hand_fl_right_hand_fm_2
+<<nobr>>
+
+<<speech "thalara">>Magic is never so linear. The softness will always live beneath the surface, accessible when you call it forth.<</speech>><br>
+
+<<speech "mc">>I’m surprised to find comfort in this change. The hand feels more mine less a fragile ornament.<</speech>><br>
+
+<<speech "thalara">>That is the balance you must master the harmony of strength and tenderness.<</speech>><br>
+
+<<speech "mc">>Do you think the queen who once held this hand would recognize it now?<</speech>><br>
+
+[[Move Forth|right_hand_fl_right_hand_fm_3]]
+<</nobr>>
+
+:: right_hand_fl_right_hand_fm_3
+<<nobr>>
+
+<<speech "thalara">>She would see the same soul, tempered and refined by experience. Different, yes but always you.<</speech>><br>
+
+<<speech "mc">>It’s hard to say goodbye to the final touches of grace. But maybe strength is its own kind of beauty.<</speech>><br>
+
+<<speech "thalara">>Indeed. Your hand will carry the future strong, elegant, and entirely your own.<</speech>><br>
+
+
+[[I feel the potion working in my right hand|use_success_potion_create_right_hand]]
+<</nobr>>

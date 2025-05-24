@@ -1,0 +1,85 @@
+
+
+:: StoryInit
+<<set $userBody = {}>>
+<<for _key, _data range setup.msBodyParts>>
+	<<if _key == "torso" || _key == "crotch" || _key == "chest" || _key == "top_underwear" || _key == "bottom_underwear" || _key == "top_wear" || _key == "bottom_wear">>
+		<<if _data.img != "">>
+			<<set $key_img_path = "mc/figure/" + _data.curr_body + "/" + _data.orig_body + "_" + _data.img>>
+		<<else>>
+			<<set $key_img_path = "">>
+		<</if>>
+		<<set $userBody[_key] to {
+        img: $key_img_path,
+		orig_body: _data.orig_body,
+		curr_body: _data.curr_body,
+		curr_hair: _data.curr_hair,
+		curr_crotch: _data.curr_crotch,
+		curr_head: _data.curr_head,
+		curr_chest: _data.curr_chest,
+		curr_top_underwear: _data.curr_top_underwear,
+		curr_bottom_underwear: _data.curr_bottom_underwear,
+		curr_top_wear: _data.curr_top_wear,
+		curr_bottom_wear: _data.curr_bottom_wear,
+    	}>>
+	<<else>>
+		<<set $userBody[_key] to {
+			img: "mc/figure/" + _data.curr_body + "/" + _data.orig_body + "/" + _data.curr_body + "_" + _data.orig_body + "_" + _data.img,
+			orig_body: _data.orig_body,
+			curr_body: _data.curr_body,
+			curr_hair: _data.curr_hair,
+			curr_crotch: _data.curr_crotch,
+			curr_head: _data.curr_head,
+			curr_chest: _data.curr_chest,
+		}>>
+	<</if>>
+<</for>>
+
+<<set $riddleLimit = 3>>
+<<set $riddleAttempts = 0>>
+<<set $hasIngredientAccess = false>>
+<<set $riddleSuccess = false>>
+<<set $currentObjectives = "No Objectives">>
+<<set $userItems to {}>>
+<<for _key, _data range setup.storeItems>>
+	<<set $userItems[_key] to {
+		name: _data.name,
+		amount: 0,
+		unit: _data.unit,
+		img: _data.img,
+		min_amount: _data.min_amount,
+	}>>
+<</for>>
+<<set $ingredientChoices to 0>>
+<<set $maxChoices to 3>>
+<<set $day_number to 0>>
+
+<<set $bodyChoice = 3>>
+<<set $reverse_passage_ingredient = "">>
+<<set $reverse_passage = "">>
+
+
+<<set $showUnderwear = true>>
+<<set $showWear = true>>
+<<set $locationName = 'Castle'>>
+<<set $locationImage = setup.ImagePath + 'location/castle.png'>>
+
+<<set $currentArc = {}>>
+
+<<set $curr_crotch = Number($userBody.crotch.curr_crotch.split("_")[1])>>;
+<<set $curr_chest = Number($userBody.chest.curr_chest.split("_")[1])>>;
+
+
+<<set $gold = 100>>
+<<set $health = 100>>
+<<set $veil_of_the_heir = true>>
+
+<<set $user_stats = {
+	gender_Identity: 95,
+	dominance_level: 95,
+	confidence: 50,
+	leadership: 40,
+	archery_ability: 20,
+	combat_ability: 20,
+	energy: 70
+}>>

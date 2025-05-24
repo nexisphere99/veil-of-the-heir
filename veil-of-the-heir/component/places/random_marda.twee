@@ -1,0 +1,646 @@
+
+
+
+
+:: interact_with_marda
+<<nobr>>
+<<set _i to random(0, 19)>>
+<<if _i == 0>>
+    <<speech "marda">>
+You walk like a prince, but your eyes beg to be led. Curious mix. Tell me  are you here to command, or to be corrected?
+<</speech>>
+<br>
+
+<<speech "mc">>
+I'm here to understand the chain of command.
+<</speech>>
+<br>
+
+<<speech "marda">>
+Then start by learning how satisfying it is to kneel before you demand others do. Humility first. Power later.
+<</speech>>
+<br>
+<<elseif _i == 1>>
+<<speech "marda">>
+Royal blood stains just like common blood. Don’t pout  I'm merely reminding you that your crown won’t shield you here. My keys open iron doors… and break egos.
+<</speech>>
+<br>
+
+<<speech "mc">>
+I'm not afraid of a few shadows and cells.
+<</speech>>
+<br>
+
+<<speech "marda">>
+No, princeling. You’re afraid of being seen in them. And that’s far more delicious.
+<</speech>>
+<br>
+<<elseif _i == 2>>
+<<speech "marda">>
+Let me guess  you want control over your body, your future, your throne. And yet... every time you speak, it sounds like you're begging to give it away.
+<</speech>>
+<br>
+
+<<speech "mc">>
+That’s not what this is.
+<</speech>>
+<br>
+
+<<speech "marda">>
+Of course it isn’t. But come down here often enough, and even lions start to purr for the whip.
+<</speech>>
+<br>
+
+
+<<elseif _i == 3>>
+<<speech "marda">>
+There’s a certain elegance to submission, you know. Holding still when commanded, offering the throat without question. It’s not weakness. It’s clarity.
+<</speech>>
+<br>
+
+<<speech "mc">>
+And what would I gain from that?
+<</speech>>
+<br>
+
+<<speech "marda">>
+Relief. Purpose. And perhaps… the exquisite satisfaction of letting someone else make the world make sense.
+<</speech>>
+<br>
+<<elseif _i == 4>>
+<<speech "marda">>
+I watched you in court today  chin lifted, voice trembling. Regal, but cracking. You’ll either break gloriously… or learn to let someone shape you properly.
+<</speech>>
+<br>
+
+<<speech "mc">>
+I'm not yours to shape.
+<</speech>>
+<br>
+
+<<speech "marda">>
+Not yet. But even steel bends under fire. And I have all the time  and the heat  I need.
+<</speech>>
+<br>
+<<elseif _i == 5>>
+<<speech "marda">>
+Touch the manacles. Go on. Cold, aren’t they? But comforting too, yes? Like rules with teeth. Some creatures need a cage to know their place.
+<</speech>>
+<br>
+
+<<speech "mc">>
+I'm not some creature to be caged.
+<</speech>>
+<br>
+
+<<speech "marda">>
+You keep saying that… but your breath quickens every time I speak like this. Denial tastes better when it’s desperate.
+<</speech>>
+<br>
+<<elseif _i == 6>>
+<<speech "marda">>
+Every ruler needs a place to fall apart safely. A dungeon can be that… if you let it. Down here, there’s no judgment. Only rules.
+<</speech>>
+<br>
+
+<<speech "mc">>
+You think I'd ever surrender like that?
+<</speech>>
+<br>
+
+<<speech "marda">>
+I know you will. The question is whether you'll enjoy it more the first time… or the hundredth.
+<</speech>>
+<br>
+<<elseif _i == 7>>
+<<speech "marda">>
+Stand straighter. Speak softer. Look down when you listen. These aren't commands, princeling. They're lessons you’ve begged for in every breath.
+<</speech>>
+<br>
+
+<<speech "mc">>
+I don’t remember begging.
+<</speech>>
+<br>
+
+<<speech "marda">>
+No? Then allow me to remind you. Slowly. Firmly. With care, of course.
+<</speech>>
+<br>
+<<elseif _i == 8>>
+<<speech "marda">>
+You walk into my domain without armor, without authority, and still expect deference. Adorable. Strip yourself of pride, and maybe  maybe  you’ll learn something real.
+<</speech>>
+<br>
+
+<<speech "mc">>
+You enjoy this far too much.
+<</speech>>
+<br>
+
+<<speech "marda">>
+Pleasure is power, darling. And submission? That’s just pleasure in disguise.
+<</speech>>
+<br>
+<<elseif _i == 9>>
+<<speech "marda">>
+Kneel.
+<</speech>>
+<br>
+
+<<speech "mc">>
+What?
+<</speech>>
+<br>
+
+<<speech "marda">>
+See? You heard me. You paused. You felt it. The pull. Don’t worry. Most don’t obey right away. But the smart ones always come back for more.
+<</speech>>
+<br>
+<<elseif _i == 10>>
+<<speech "marda">>
+You're royalty up there, but down here… you're just another soul waiting to be tested. Strip away the silk, princeling  there’s truth in rawness.
+<</speech>>
+<br>
+
+<<speech "mc">>
+I’m not here to be stripped of anything.
+<</speech>>
+<br>
+
+<<speech "marda">>
+Then why do you keep returning, hm? Seeking punishment… or permission?
+<</speech>>
+<br>
+<<elseif _i == 11>>
+<<speech "marda">>
+Your mother trains your mind. The mage shapes your body. But tell me  who teaches you surrender? Who shows you how to yield with purpose?
+<</speech>>
+<br>
+
+<<speech "mc">>
+Yielding was never part of the plan.
+<</speech>>
+<br>
+
+<<speech "marda">>
+That’s because you’ve never yielded to someone who knew exactly what to do with you.
+<</speech>>
+<br>
+<<elseif _i == 12>>
+<<speech "marda">>
+Your voice trembles on the edge of obedience. I could press it  just a word, and you'd fall right into place. Shall I test that theory, royal pet?
+<</speech>>
+<br>
+
+<<speech "mc">>
+I am no one’s pet.
+<</speech>>
+<br>
+
+<<speech "marda">>
+Then prove it. Say no… and mean it.
+<</speech>>
+<br>
+<<elseif _i == 13>>
+<<speech "marda">>
+Every bruise tells a story. Some are warnings. Others, invitations. Which do you want yours to be?
+<</speech>>
+<br>
+
+<<speech "mc">>
+You're assuming I'd let you mark me.
+<</speech>>
+<br>
+
+<<speech "marda">>
+Darling, I'm not asking. I’m simply watching to see how long you pretend not to crave it.
+<</speech>>
+<br>
+<<elseif _i == 14>>
+<<speech "marda">>
+A throne doesn’t teach restraint. A whip does. Shall I give you a lesson in stillness, Caelan? One you won’t soon forget?
+<</speech>>
+<br>
+
+<<speech "mc">>
+I don’t need your discipline.
+<</speech>>
+<br>
+
+<<speech "marda">>
+Oh, but you want it. And wanting... that’s far more dangerous.
+<</speech>>
+<br>
+<<elseif _i == 15>>
+<<speech "marda">>
+I saw how you flinched when the noblewoman touched your arm. You’re not frightened of women, are you, princeling? Or just the ones who won’t bow to you?
+<</speech>>
+<br>
+
+<<speech "mc">>
+I flinch from poison, not strength.
+<</speech>>
+<br>
+
+<<speech "marda">>
+Good. Then you’ll drink deeply when I offer the cup.
+<</speech>>
+<br>
+<<elseif _i == 16>>
+<<speech "marda">>
+Careful how you look at me, little heir. That spark in your eyes could start a fire. But I do love to watch things burn slowly.
+<</speech>>
+<br>
+
+<<speech "mc">>
+You assume I’d let you near the flame.
+<</speech>>
+<br>
+
+<<speech "marda">>
+I don’t need to be near. I only need you to want it. And you already do.
+<</speech>>
+<br>
+<<elseif _i == 17>>
+<<speech "marda">>
+Tell me, if I fastened you to that post and whispered commands, how long would you last before breaking  beautifully?
+<</speech>>
+<br>
+
+<<speech "mc">>
+You’re crossing a line, Marda.
+<</speech>>
+<br>
+
+<<speech "marda">>
+Darling, I don’t cross lines. I redraw them.
+<</speech>>
+<br>
+<<elseif _i == 18>>
+<<speech "marda">>
+A queen must rule with grace. But sometimes… sometimes, she must also obey. Wouldn’t you like to practice the other side of the crown?
+<</speech>>
+<br>
+
+<<speech "mc">>
+I don’t kneel easily.
+<</speech>>
+<br>
+
+<<speech "marda">>
+Good. The ones who resist the hardest make the sweetest sound when they finally drop.
+<</speech>>
+<br>
+<<elseif _i == 19>>
+<<speech "marda">>
+They’ll all tell you who to become. The mage, the tailor, the queen. But only I can show you the pleasure of letting go. Entirely. Willingly.
+<</speech>>
+<br>
+
+<<speech "mc">>
+You think surrender is strength?
+<</speech>>
+<br>
+
+<<speech "marda">>
+No, Caelan. I know it is. And I’ll make you feel it in every inch of your skin.
+<</speech>>
+<br>
+<</if>>
+<<if !$marda_session_1>>
+[[Have Conversayion with Marda 1|marda_session_1]] |<br><br>
+<</if>>
+<<if $marda_session_1 && !$marda_session_2>>
+[[Have Conversayion with Marda 2|marda_session_2]] |<br><br>
+<</if>>
+[[Leave Dungeon Keeper|dungeon]] |<br><br>
+[[Leave Dungeon|castle_map_back_select]]
+<</nobr>>
+
+
+
+:: marda_session_1
+<<nobr>>
+    <<set $marda_session_1 = true>>
+ <<speech "marda">>Well, well. A lamb in the wolf’s den. <</speech>><br>
+
+ <<speech "mc">>I… I was just looking for the old armory. I must’ve taken a wrong <</speech>><br>
+
+ <<speech "marda">>You didn’t take a wrong turn, sweetling. You took a step into your future. That’s what this place is. A mirror. A forge. A proving ground. <</speech>><br>
+
+ <<speech "mc">>Forgive me. I should go. <</speech>><br>
+[[Move Forth|marda_session_1_1]]
+<</nobr>>
+
+:: marda_session_1_1
+<<nobr>>
+ <<speech "marda">>You could. Or you could stay. Speak. You’ve been so quiet all these weeks. I thought your tongue had been snipped. <</speech>><br>
+
+ <<speech "mc">>At least I have a tongue. Some people just hiss like serpents. <</speech>><br>
+
+ <<speech "marda">>Oho. The princeling’s teeth are sharper than I thought. <</speech>><br>
+
+ <<speech "mc">>I didn’t mean <</speech>><br>
+[[Move Forth|marda_session_1_2]]
+<</nobr>>
+
+:: marda_session_1_2
+<<nobr>>
+ <<speech "marda">>Never apologize for fire. You’ll need it. But know this: when you play with flames down here, they bite back. <</speech>><br>
+
+ <<speech "mc">>What… do you mean? <</speech>><br>
+
+ <<speech "marda">>Sit on that bench. Now. That was a command, not a suggestion. <</speech>><br>
+
+ <<speech "mc">>…Yes, Mistress. <</speech>><br>
+[[Move Forth|marda_session_1_3]]
+<</nobr>>
+
+:: marda_session_1_3
+<<nobr>>
+ <<speech "marda">>Mistress? That came easily. Are the potions working, or is the girl already clawing her way out? <</speech>><br>
+
+ <<speech "mc">>It… it was just instinct. <</speech>><br>
+
+ <<speech "marda">>Instinct reveals more truth than confession. <</speech>><br>
+Marda walked behind me.<br><br>
+
+ <<speech "marda">>Your shoulders… still stubbornly broad. But the rest? Softening. Mmm. You’re being melted. <</speech>><br>
+[[Move Forth|marda_session_1_4]]
+<</nobr>>
+
+:: marda_session_1_4
+<<nobr>>
+ <<speech "mc">>I didn’t come here for this. <</speech>><br>
+
+ <<speech "marda">>No one comes here for this. But some leave with something they didn’t know they craved. <</speech>><br>
+
+ <<speech "mc">>You’re terrifying. <</speech>><br>
+
+ <<speech "marda">>Good. You’ll need to learn to kneel before things that terrify you. <</speech>><br>
+Marda produced a silken rope.<br><br>
+[[Move Forth|marda_session_1_5]]
+<</nobr>>
+
+:: marda_session_1_5
+<<nobr>>
+ <<speech "marda">>Arms forward. Let’s play a game. You win? You leave. You lose? I get a confession. <</speech>><br>
+
+ <<speech "mc">>…What kind of game? <</speech>><br>
+
+ <<speech "marda">>Simple. Endure without pulling away. I’ll touch. You don’t flinch. Fair? <</speech>><br>
+
+ <<speech "mc">>…Fair. <</speech>><br>
+[[Move Forth|marda_session_1_6]]
+<</nobr>>
+
+:: marda_session_1_6
+<<nobr>>
+
+ <<speech "marda">>Not too tight. Just enough to remind you you’re not in control. <</speech>><br>
+
+ <<speech "mc">>I can feel my heart pounding. <</speech>><br>
+
+ <<speech "marda">>Good. That means you’re alive. And maybe… ready. <</speech>><br>
+Marda lightly trailed her fingers along My collarbone.<br><br>
+
+ <<speech "marda">>This is changing. Do you feel it? Skin thinning. Feminizing. <</speech>><br>
+[[Move Forth|marda_session_1_7]]
+<</nobr>>
+
+:: marda_session_1_7
+<<nobr>>
+ <<speech "mc">>Yes… I feel… different lately. <</speech>><br>
+
+ <<speech "marda">>Say it. <</speech>><br>
+
+ <<speech "mc">>I feel… like I’m slipping. Into her. <</speech>><br>
+
+ <<speech "marda">>Her who? <</speech>><br>
+[[Move Forth|marda_session_1_8]]
+<</nobr>>
+
+:: marda_session_1_8
+<<nobr>>
+
+ <<speech "mc">>Her… me. The woman I’m becoming. <</speech>><br>
+
+ <<speech "marda">>There she is. <</speech>><br>
+Marda leaned close, whispering.<br><br>
+
+ <<speech "marda">>Has anyone taught you how to use a curtsey to command a room? <</speech>><br>
+
+ <<speech "mc">>No… <</speech>><br>
+[[Move Forth|marda_session_1_9]]
+<</nobr>>
+
+:: marda_session_1_9
+<<nobr>>
+
+ <<speech "marda">>I’ll teach you. After you beg. <</speech>><br>
+
+ <<speech "mc">>I don’t beg. <</speech>><br>
+
+ <<speech "marda">>Oh, but you will. <</speech>><br>
+Marda trailed her fingers to My lower back.<br><br>
+
+ <<speech "marda">>Do you know where shame lives? <</speech>><br>
+[[Move Forth|marda_session_1_10]]
+<</nobr>>
+
+:: marda_session_1_10
+<<nobr>>
+
+ <<speech "mc">>…Where? <</speech>><br>
+
+ <<speech "marda">>In secrets. But you, sweetling, are being unwrapped. <</speech>><br>
+
+ <<speech "mc">>This is wrong. <</speech>><br>
+
+ <<speech "marda">>No, it’s raw. And it’s real. <</speech>><br>
+Marda gently released the rope.<br><br>
+[[Move Forth|marda_session_1_11]]
+<</nobr>>
+
+:: marda_session_1_11
+<<nobr>>
+
+ <<speech "marda">>You won the game. You didn’t flinch. Not once. <</speech>><br>
+
+ <<speech "mc">>I… did? <</speech>><br>
+
+ <<speech "marda">>You’re stronger than you think. Or perhaps weaker in delicious new ways. <</speech>><br>
+
+ <<speech "mc">>Will you tell anyone about this? <</speech>><br>
+[[Move Forth|marda_session_1_12]]
+<</nobr>>
+
+:: marda_session_1_12
+<<nobr>>
+
+ <<speech "nyssa">>Secrets are like chains. I know how to keep them locked tight. <</speech>><br>
+
+ <<speech "mc">>…Thank you. I think. <</speech>><br>
+ <<set $user_stats.dominance_level -= 3>>
+[[Leave Dungeon Keeper|dungeon]] |<br><br>
+[[Leave Dungeon|castle_map_back_select]]
+<</nobr>>
+
+
+
+
+
+:: marda_session_2
+<<nobr>>
+    <<set $marda_session_2 = true>>
+<<speech "mc">>I came… back.<</speech>><br>
+
+<<speech "marda">>Of course you did, my little bird. Curiosity always returns to the cage, especially once it learns to like the bars.<</speech>><br>
+
+<<speech "mc">>I’m not here to… surrender.<</speech>><br>
+
+<<speech "marda">>No, no. You’re here to discover. What hurts. What excites. What leaks.<</speech>><br>
+
+[[Move Forth|marda_session_2_1]]
+<</nobr>>
+
+:: marda_session_2_1
+<<nobr>>
+<<speech "mc">>That’s not<</speech>><br>
+
+<<speech "marda">>Strip. Leave the prince at the stairs. Come forward as her. As the trembling little pet who whimpers when I breathe too close.<</speech>><br>
+
+<<speech "mc">>You… always talk like this?<</speech>><br>
+
+<<speech "marda">>No, pet. I only talk this way to those who deserve to be owned.<</speech>><br>
+[[Move Forth|marda_session_2_2]]
+<</nobr>>
+
+
+:: marda_session_2_2
+<<nobr>>
+<<speech "mc">>This is wrong.<</speech>><br>
+
+<<speech "marda">>No. This is ritual.<</speech>><br>
+Marda fastened a collar around My neck and attached a short silver chain to it.<br><br>
+
+<<speech "marda">>Tonight, you’ll learn the three poses of obedience: the kneel, the arch, and the open bloom.<</speech>><br>
+
+<<speech "mc">>That sounds like<</speech>><br>
+[[Move Forth|marda_session_2_3]]
+<</nobr>>
+
+
+:: marda_session_2_3
+<<nobr>>
+<<speech "marda">>like the beginning of surrender.<</speech>><br>
+
+<<speech "marda">>Kneel. Back straight. Hands behind neck.<</speech>><br>
+
+<<speech "mc">>Like this…?<</speech>><br>
+
+<<speech "marda">>Mmm. That’ll do. Now say, ‘Your pet awaits its punishment, Mistress.’<</speech>><br>
+[[Move Forth|marda_session_2_4]]
+<</nobr>>
+
+
+:: marda_session_2_4
+<<nobr>>
+<<speech "mc">>Your pet… awaits its punishment, Mistress.<</speech>><br>
+
+<<speech "marda">>Delicious. You say that better than some of the trained ones. Do you know how much power is in surrender, pet? Queens can’t beg. But princesses… can plead so prettily.<</speech>><br>
+
+<<speech "mc">>I’m not a princess yet.<</speech>><br>
+
+<<speech "marda">>No. But tonight, we’ll coax her out of you one moan at a time.<</speech>><br>
+Marda led Me to a padded cross and bound him with soft velvet strapsankles wide, arms spread. She blindfolded him.<br><br>
+
+[[Move Forth|marda_session_2_5]]
+<</nobr>>
+
+
+:: marda_session_2_5
+<<nobr>>
+<<speech "marda">>Sight is for kings. Feel is for queens.<</speech>><br>
+She ran the crop gently over his inner thighs.<br><br>
+
+<<speech "marda">>You’re so soft now… potion working. But softness is dangerous. It attracts attention. And punishment.<</speech>><br>
+Smack! The first stroke was firm but not cruel.<br><br>
+
+<<speech "marda">>Say ‘thank you, Mistress.’<</speech>><br>
+
+<<speech "mc">>Th-thank you, Mistress…<</speech>><br>
+
+[[Move Forth|marda_session_2_6]]
+<</nobr>>
+
+
+:: marda_session_2_6
+<<nobr>>
+<<speech "marda">>You’re learning. Shame tastes better when it’s hot and heavy.<</speech>><br>
+A nipple clamp slid on.<br><br>
+
+<<speech "marda">>A gift. To remind your chest it’s not a man’s anymore.<</speech>><br>
+Marda whispered as she tightened it.<br><br>
+
+<<speech "marda">>Pain makes you present. That’s why queens used to rule with canes.<</speech>><br>
+Marda switched to feathers, brushing sensitive spots already stung by the crop.<br><br>
+
+<<speech "mc">>Why does that feel… so good…<</speech>><br>
+[[Move Forth|marda_session_2_7]]
+<</nobr>>
+
+
+:: marda_session_2_7
+<<nobr>>
+<<speech "marda">>Because your body’s a contradiction, darling. And contradictions moan loudest.<</speech>><br>
+After a silence, Marda spoke again.<br><br>
+
+<<speech "marda">>Tell me your deepest fear.<</speech>><br>
+
+<<speech "mc">>That I’ll enjoy this… more than I should.<</speech>><br>
+
+<<speech "marda">>You already do. And I won’t stop until you beg me to define you.<</speech>><br>
+A jeweled and elegant plug was shown.<br><br>
+
+[[Move Forth|marda_session_2_8]]
+<</nobr>>
+
+
+:: marda_session_2_8
+<<nobr>>
+<<speech "marda">>Fit for royalty. But it must be earned.<</speech>><br>
+
+<<speech "mc">>Earned how?<</speech>><br>
+
+<<speech "marda">>By crawling. And confessing. Your girl name.<</speech>><br>
+
+<<speech "mc">>I… I haven’t chosen yet.<</speech>><br>
+
+[[Move Forth|marda_session_1_9]]
+<</nobr>>
+
+
+:: marda_session_2_9
+<<nobr>>
+<<speech "marda">>Then tonight, I’ll give you one. ‘Caelia.’ Sweet, broken Caelia.<</speech>><br>
+
+<<speech "mc">>Caelia…<</speech>><br>
+She marked the name onto My inner thigh with scented oil. She whispered it in one ear, then bit the other.<br><br>
+
+<<speech "marda">>Now you wear her. Next time, you’ll be her.<</speech>><br>
+Marda finished with a ritual of praise and restraint, leaving me bound, collared, but relaxeddrenched in endorphins and confusion.<br><br>
+
+<<speech "marda">>Do you understand now? This is not punishment. This is permission. To become.<</speech>><br>
+
+[[Move Forth|marda_session_2_10]]
+<</nobr>>
+
+:: marda_session_2_10
+<<nobr>>
+<<speech "mc">>Yes… Mistress…<</speech>><br>
+<<set $user_stats.dominance_level -= 3>>
+[[Leave Dungeon Keeper|dungeon]] |<br><br>
+[[Leave Dungeon|castle_map_back_select]]
+<</nobr>>

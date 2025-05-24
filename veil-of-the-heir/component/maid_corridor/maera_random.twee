@@ -1,0 +1,1456 @@
+
+
+:: interact_with_maera
+<<nobr>>
+<<set _i to random(0, 19)>>
+<<if _i == 0>>
+<<speech "maera">>
+You sneak into a lady’s chambers without knocking now? Careful, Your Grace I might get ideas.
+<</speech>>
+<br>
+
+<<speech "mc">>
+What if I wanted you to get ideas?
+<</speech>>
+<br>
+
+<<speech "maera">>
+Then you’d best learn to handle them, princeling. I’m sharper than I look.
+<</speech>>
+<br>
+<<elseif _i == 1>>
+<<speech "maera">>
+Took you long enough. I was beginning to think the palace swallowed you whole.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Maybe I just missed your face more than I care to admit.
+<</speech>>
+<br>
+
+<<speech "maera">>
+Flattery? From you? What do you want tea or trouble?
+<</speech>>
+<br>
+<<elseif _i == 2>>
+<<speech "maera">>
+You’ve got that storm-in-your-eyes look again. Come here before you sink the whole kingdom with it.
+<</speech>>
+<br>
+
+<<speech "mc">>
+I thought you liked storms.
+<</speech>>
+<br>
+
+<<speech "maera">>
+Only the ones I can tame. And I’m still working on you.
+<</speech>>
+<br>
+<<elseif _i == 3>>
+<<speech "maera">>
+You're bleeding again. Did the sword lesson go poorly, or are you just showing off for me?
+<</speech>>
+<br>
+
+<<speech "mc">>
+If I were showing off, I’d be shirtless and dramatically brooding.
+<</speech>>
+<br>
+
+<<speech "maera">>
+Careful I do know how to swoon.
+<</speech>>
+<br>
+<<elseif _i == 4>>
+<<speech "maera">>
+You're late. If I’d known royalty moved this slowly, I’d have started without you.
+<</speech>>
+<br>
+
+<<speech "mc">>
+I had to look good for you. A terrible burden.
+<</speech>>
+<br>
+
+<<speech "maera">>
+Oh please, you looked good the moment you started walking like you meant it.
+<</speech>>
+<br>
+<<elseif _i == 5>>
+<<speech "maera">>
+You’ve changed, you know. Not just the clothes, or the walk. Something deeper.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Is that good or bad?
+<</speech>>
+<br>
+
+<<speech "maera">>
+It’s terrifying. And I’ve never been prouder.
+<</speech>>
+<br>
+<<elseif _i == 6>>
+<<speech "maera">>
+Why are you staring at me like that?
+<</speech>>
+<br>
+
+<<speech "mc">>
+Just wondering how you manage to look that stunning and still boss me around.
+<</speech>>
+<br>
+
+<<speech "maera">>
+Because I’m magic. Didn’t you notice?
+<</speech>>
+<br>
+<<elseif _i == 7>>
+<<speech "maera">>
+Another lesson in etiquette today? Try not to stab anyone with your fork this time.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Only if they don’t insult you first.
+<</speech>>
+<br>
+
+<<speech "maera">>
+Careful. Loyalty like that might make a girl swoon.
+<</speech>>
+<br>
+<<elseif _i == 8>>
+<<speech "maera">>
+If you’re here to brood, there’s a corner for that. If you’re here for company, I saved you the good seat.
+<</speech>>
+<br>
+
+<<speech "mc">>
+I came for you. The seat is just a bonus.
+<</speech>>
+<br>
+
+<<speech "maera">>
+Gods help me, you’re learning charm.
+<</speech>>
+<br>
+<<elseif _i == 9>>
+<<speech "maera">>
+One day you’ll rule this kingdom. Doesn’t mean you get to rule me.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Wouldn’t dream of it. I’d rather earn your loyalty than demand it.
+<</speech>>
+<br>
+
+<<speech "maera">>
+Good answer. Keep that up, and I might just kiss you.
+<</speech>>
+<br>
+<<elseif _i == 10>>
+<<speech "maera">>
+You know, if you keep looking at me like that, I might forget you're royalty.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Maybe I want you to forget. Just for tonight.
+<</speech>>
+<br>
+
+<<speech "maera">>
+Dangerous talk… and I’m not in the habit of resisting danger.
+<</speech>>
+<br>
+<<elseif _i == 11>>
+<<speech "maera">>
+That collar’s too tight. Whoever dressed you clearly doesn't know how to leave room to breathe or bite.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Then maybe you should undress me next time. For safety.
+<</speech>>
+<br>
+
+<<speech "maera">>
+Careful. I am trained in quick removals.
+<</speech>>
+<br>
+<<elseif _i == 12>>
+<<speech "maera">>
+There are rumors going around that the prince has a lover.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Really? And who’s the lucky soul?
+<</speech>>
+<br>
+
+<<speech "maera">>
+That’s the fun part they say it’s a servant girl with a wicked tongue and a better smile.
+<</speech>>
+<br>
+<<elseif _i == 13>>
+<<speech "maera">>
+I had a dream about you last night. You were wearing less… and saying more.
+<</speech>>
+<br>
+
+<<speech "mc">>
+I can’t decide which part I envy more.
+<</speech>>
+<br>
+
+<<speech "maera">>
+I’ll let you choose next time we’re both dreaming.
+<</speech>>
+<br>
+<<elseif _i == 14>>
+<<speech "maera">>
+You're far too composed. A little undone would suit you.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Is that your way of offering to help with that?
+<</speech>>
+<br>
+
+<<speech "maera">>
+Only if you're brave enough to let me.
+<</speech>>
+<br>
+<<elseif _i == 15>>
+<<speech "maera">>
+Tell me something true, Caelan. Something raw.
+<</speech>>
+<br>
+
+<<speech "mc">>
+I think about kissing you more than I should.
+<</speech>>
+<br>
+
+<<speech "maera">>
+Good. Because I’ve stopped pretending I don’t want the same.
+<</speech>>
+<br>
+<<elseif _i == 16>>
+<<speech "maera">>
+Sometimes I wonder what would happen if I just… stepped closer.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Then I’d stop wondering and kiss you.
+<</speech>>
+<br>
+
+<<speech "maera">>
+Gods, say that again. Slower.
+<</speech>>
+<br>
+<<elseif _i == 17>>
+<<speech "maera">>
+I cleaned your linens this morning. You talk in your sleep, you know.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Should I be worried?
+<</speech>>
+<br>
+
+<<speech "maera">>
+Only if you didn’t mean it when you said my name like that.
+<</speech>>
+<br>
+<<elseif _i == 18>>
+<<speech "maera">>
+Most nobles want me quiet, invisible. But you… you always see me.
+<</speech>>
+<br>
+
+<<speech "mc">>
+How could I not? You burn brighter than any court jewel.
+<</speech>>
+<br>
+
+<<speech "maera">>
+Say things like that again and I’ll forget every line of duty I ever learned.
+<</speech>>
+<br>
+<<elseif _i == 19>>
+<<speech "maera">>
+We’re alone. No titles. No duties. Just… you and me.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Then let me be nothing but yours for a while.
+<</speech>>
+<br>
+
+<<speech "maera">>
+Don’t tempt me, Caelan… unless you mean to follow through.
+<</speech>>
+<br>
+<</if>>
+<<if $curr_crotch > 2 && !$maera_blow_job_1>>
+[[Ask for Oral Sex|maera_blow_job_1]] | <br><br>
+<</if>>
+<<if $curr_crotch > 2 && !$maera_sex_1>>
+[[Ask to have Sex|maera_sex_1]] | <br><br>
+<</if>>
+<<if $curr_chest > 3 && !$maera_sex_2>>
+[[Have Conversation with Maera|maera_sex_2]] | <br><br>
+<<elseif $curr_chest > 4 && !$maera_sex_3>>
+[[Have Conversation with Maera|maera_sex_3]] | <br><br>
+<<elseif $curr_chest > 5 && !$maera_sex_4>>
+[[Have Conversation with Maera|maera_sex_4]] | <br><br>
+<<elseif $curr_chest > 6 && !$maera_sex_5>>
+[[Have Conversation with Maera|maera_sex_5]] | <br><br>
+<<elseif $curr_chest > 7 && !$maera_sex_6>>
+[[Have Conversation with Maera|maera_sex_6]] | <br><br>
+<</if>>
+[[Leave Maera|maera_chamber_map_select]] |<br><br>
+[[Leave Maera's Chamber|bed_chamber_girl]] |<br><br>
+[[Leave Maid Room Corridor|castle_map_back_select]]
+<</nobr>>
+
+
+:: maera_blow_job_1
+<<set $maera_blow_job_1 to true>>
+<<nobr>>
+<<speech "mc">>Maera, I need your help tonight.<</speech>><br>
+<<speech "maera">>As always, Your Highness, But remember, this is our secret<</speech>><br>
+<<speech "maera">>You're restless, my prince, What troubles you?<</speech>><br>
+<<speech "mc">>I feel... torn, Maera. I am a prince, soon to be princess, yet I crave the touch of a woman. 
+I dream of silk gowns and soft words, yet I am expected to don armor and command armies.<</speech>><br>
+[[Move Forth|maera_blow_job_1_1]]
+<</nobr>>
+
+:: maera_blow_job_1_1
+<<nobr>>
+<<speech "maera">>You are more than your title, Caelan. You are strength and kindness, courage and compassion. 
+You will be a queen who rules with both heart and steel.<</speech>><br>
+<<speech "mc">>"queen." You... you understand, Maera?<</speech>><br>
+<<speech "maera">>I've been your shadow since we were children, Caelan. 
+I know you better than you know yourself. And I know you're not ready to let the world see the real you yet.<</speech>><br>
+<<speech "maera">>You've always been my rock, Maera. My confidante, my protector.<</speech>><br>
+[[Move Forth|maera_blow_job_1_2]]
+<</nobr>>
+
+:: maera_blow_job_1_2
+<<nobr>>
+<<speech "maera">>And I always will be, Caelan. But I can be more. I can be your lover, your secret, your escape.<</speech>><br>
+
+My heart pounded in my chest. I had dreamed of this moment, of Maera's touch, her kiss. 
+I leaned in, my lips meeting hers in a soft, tentative kiss. 
+Maera responded, her hands reaching up to cup my face, her fingers tangling in my hair.<br><br>
+
+<<speech "mc">>Maera, I want you. I want to feel your touch, your kiss. I want to lose myself in you.<</speech>><br>
+
+<<speech "maera">>Then take me, Caelan. Take what you want.<</speech>><br>
+My hands trembled as I reached for the laces of Maera's dress, my fingers fumbling in my haste. Maera chuckled, her hands covering me, guiding me. <br><br>
+
+<<speech "maera">>Patience, my prince. We have all night.<</speech>><br>
+[[Move Forth|maera_blow_job_1_3]]
+<</nobr>>
+
+
+:: maera_blow_job_1_3
+<<nobr>>
+The dress fell away, revealing Maera's petite form, her skin glowing in the firelight. 
+My breath caught as I took in her beauty, my eyes tracing the curve of her breasts, the dip of her waist, the flare of her hips. 
+I reached out, her fingers brushing against her nipple, feeling it harden at my touch.<br><br>
+
+Maera gasped, her head falling back, exposing the long line of her neck. 
+I leaned in, my lips finding the pulse point at the base of her throat, my tongue flicking out to taste her skin. 
+I could feel her heartbeat, fast and steady, mirroring my own.<br><br>
+
+<<speech "maera">>Caelan, Please...<</speech>><br>
+
+My hands roamed her body, exploring every curve, every dip. 
+I found the heat between her legs, my fingers slipping inside her, feeling her wetness, her desire. 
+Maera's hips moved against my hand, her breath coming in short gasps.<br><br>
+
+<<speech "maera">>Caelan, I want to taste you. I want to feel you in my mouth.<</speech>><br>
+
+My cock twitched at her words, a bead of pre cum forming at the tip. 
+I stepped back, my hands going to the laces of my breeches, my eyes never leaving Maera's. 
+She watched me, her tongue darting out to wet her lips, her eyes dark with desire.<br><br>
+
+<<speech "maera">>Let me<</speech>><br>
+
+She pushed my hands away, her fingers deftly unlacing my breeches, pushing them down to reveal my hard cock. 
+She looked up at me, her eyes meeting mine, before leaning in, her tongue flicking out to taste the bead of pre cum at the tip.<br><br>
+
+[[Move Forth|maera_blow_job_1_4]]
+<</nobr>>
+
+:: maera_blow_job_1_4
+<<nobr>>
+<<speech "mc">>Fuck, Maera<</speech>><br>
+
+My hands finding her hair, tangling in the dark curls. 
+Maera hummed, her mouth taking him in, her tongue swirling around my cock, her lips tight. 
+My hips moved, my cock sliding in and out of Maera's mouth, my groans filling the room.<br><br>
+
+<<speech "mc">>Maera, I'm going to come. I'm going to come in your mouth.<</speech>><br>
+
+<<speech "maera">>Come for me, Caelan. I want to taste you.<</speech>><br>
+
+With a final thrust, I came, my cock pulsing in Maera's mouth, my cum filling her. 
+Maera swallowed, her eyes never leaving me, a satisfied smile on her lips.<br><br>
+
+[[Leave her|maera_chamber_map_select]] | <br><br>
+[[Lick Her Pussy|maera_blow_job_1_5]]
+<</nobr>>
+
+:: maera_blow_job_1_5
+<<nobr>>
+<<speech "maera">>My turn...<</speech>><br>
+
+She pushed me back onto the bed, her hands going to her own breasts, pinching her nipples, her back arching. 
+I watched, my cock already hardening again, my eyes dark with desire.<br><br>
+
+<<speech "mc">>Maera, I need to taste you. I need to feel you come on my tongue.<</speech>><br>
+
+Maera straddled me, her pussy hovering over my mouth. 
+I reached up, my hands grabbing her hips, pulling her down, my tongue finding her clit, flicking against it. 
+Maera moaned, her hips moving, riding my tongue.<br><br>
+
+<<speech "maera">>Caelan, I'm going to come. I'm going to come on your tongue.<</speech>><br>
+[[Move Forth|maera_blow_job_1_6]]
+<</nobr>>
+
+:: maera_blow_job_1_6
+<<nobr>>
+
+I growled, my tongue moving faster, my fingers finding her entrance, slipping inside her, feeling her tighten around me. 
+Maera's moans filled the room, her body tensing, her orgasm washing over her. 
+I felt her, felt her come on my tongue, her taste filling my mouth.<br><br>
+
+Maera collapsed onto the bed beside me, her breath coming in short gasps. 
+I turned to her, my hand reaching out, my fingers tracing the curve of her breast. <br><br>
+
+<<speech "mc">>Maera, I love you.<</speech>><br>
+
+<<speech "maera">>And I love you, Caelan. My prince, my lover, my soon to be queen.<</speech>><br>
+
+
+[[Leave her|maera_chamber_map_select]]
+<</nobr>>
+
+
+
+
+:: maera_sex_1
+<<nobr>>
+<<set $maera_sex_1 = true>>
+Maera looked up at me, surprise and confusion in her eyes as she stepped aside to let me into her room. 
+It was so much smaller and cozier than my own grand chamber, which felt almost cold and empty in comparison. 
+A single candle on the nightstand was the only source of light, casting shadows across the walls as it flickered with our movements.<br><br>
+
+<<speech "maera">>What's going on, Caelan?<</speech>><br>
+
+<<speech "mc">>I couldn't sleep, I just had to see you.<</speech>><br>
+
+she whispered, closing the door softly behind me.<br><br>
+<<speech "maera">>What's really bothering you?<</speech>><br>
+
+<<speech "mc">>It's everything, This... change, this uncertainty. 
+And you, Maera. You're the one thing in my life that's constant, and I'm afraid it'll all just slip away.<</speech>><br>
+[[Move Forth|maera_sex_1_1]]
+<</nobr>>
+
+:: maera_sex_1_1
+<<nobr>>
+Maera reached up, her hand gently touching my face, pushing a stray lock of hair out of my eyes. <br><br>
+<<speech "maera">>I won't slip away, But you do need to be careful. If anyone finds out about us...<</speech>><br>
+
+Her words trailed off, but I knew what she meant. 
+The risk was real, but in that moment, it didn't matter. 
+I craved the connection we shared, the warmth and passion that could only be found in each other's arms. <br><br>
+
+<<speech "mc">>I know, But I can't help it, Maera. I need you. I need this.<</speech>><br>
+
+Maera's eyes searched my own for a brief moment before she spoke again.
+
+<<speech "maera">>Then take what you need, <</speech>><br>
+
+My heart pounded as I leaned in, my hand covering hers. Our lips met in a gentle, tentative kiss that grew more urgent with each passing second. 
+She melted against me, her arms winding around my neck as our kiss deepened.<br><br>
+
+[[Move Forth|maera_sex_1_2]]
+<</nobr>>
+
+:: maera_sex_1_2
+<<nobr>>
+Maera's breath hitched as our tongues danced together, and I knew she felt the same desperation I did.<br><br>
+
+<<speech "maera">>Caelan, we shouldn't... not here.<</speech>><br>
+
+<<speech "mc">>I know, but I can't stop. I need you.<</speech>><br>
+
+Her eyes searched mine, and she seemed to understand.<br><br>
+
+<<speech "maera">>Then take me, my prince. Make me yours.<</speech>><br>
+
+[[Move Forth|maera_sex_1_3]]
+<</nobr>>
+
+:: maera_sex_1_3
+<<nobr>>
+I didn't need any more encouragement. 
+I picked her up and carried her to the bed, laying her down carefully. 
+We kissed again, our bodies tangling together, our hands exploring every inch of each other.<br><br>
+
+Maera's voice was a breathy moan against my skin as I moved lower, my mouth finding her breasts. 
+Her fingers tightened in my hair, and I knew she was close. 
+I kissed my way down to her center, my tongue finding her wetness, making her buck and whimper beneath me.<br><br>
+
+<<speech "maera">>Caelan, yes, just like that. I'm going to cum.<</speech>><br>
+
+Her words spurred me on, my mouth and hands working in unison to bring her to the brink of ecstasy. 
+When she finally did, her body shuddered and her nails dug into my skin.<br><br>
+
+Her words spurred me on, my mouth and hands working in unison to bring her to the brink of ecstasy. 
+When she finally did, her body shuddered and her nails dug into my skin.
+
+My tongue moved faster, my fingers slipped in alongside, feeling her walls tighten around me. 
+She came with a scream, her body seizing, her legs trembling, and her grip on my hair almost painful.
+
+I moved up her body, my lips finding hers, my tongue pushing into her mouth, letting her taste herself on me. 
+She moaned, her hands moving to my cock, stroking me, making me harder.<br><br>
+
+Moving up her body, I claimed her mouth, my tongue delving in, sharing her sweet taste. 
+Her hands found their way to my cock, stroking me, making me even harder.
+
+<<speech "maera">>I want you inside me, Caelan, I want to feel you fuck me.<</speech>><br>
+
+[[Move Forth|maera_sex_1_4]]
+<</nobr>>
+
+:: maera_sex_1_4
+<<nobr>>
+
+I growled, my hands moving to her hips, lifting her slightly. 
+I positioned myself at her entrance, my eyes meeting hers. 
+
+<<speech "mc">>Are you sure, Maera?<</speech>><br>
+
+<<speech "maera">>Yes, Yes, Caelan. Fuck me. Make me yours.<</speech>><br>
+
+I pushed inside her, feeling her tightness envelop me, making me groan. 
+She gasped, her body arching into me, her legs wrapping around my waist, pulling me deeper.<br><br>
+
+<<speech "maera">>Oh, Caelan, Yes, just like that. Fuck me, Caelan. Fuck me hard.<</speech>><br>
+
+I pushed in, feeling her tightness clench around me, making me groan in pure bliss. 
+She gasped, her body arching into me, her legs wrapping around my waist, urging me deeper.
+<br><br>
+
+<<speech "mc">>Maera, I'm going to cum, Maera,<</speech>><br>
+
+[[Cum Outside Her and Leave Maera|maera_chamber_map_select]]
+[[Cum Inside Maera|maera_sex_1_5]]
+<</nobr>>
+
+:: maera_sex_1_5
+<<nobr>>
+
+<<speech "maera">>Yes, Come inside me, Caelan. Fill me up.<</speech>><br>
+
+<<speech "mc">>Maera, are you sure?<</speech>><br>
+
+<<speech "maera">>Yes, Caelan, please<</speech>><br>
+
+I couldn't hold back anymore, my body bucked, and I released everything I had inside her, filling her completely. 
+She responded with her own moan, our bodies moving together in perfect rhythm.<br><br>
+
+We lay there, our bodies entwined, our breaths slowly returning to normal. 
+I leaned down, my lips finding hers in a soft, tender kiss.<br><br>
+
+<<speech "mc">>I love you, Maera<</speech>><br>
+
+<<speech "maera">>I love you too, Caelan. Always.<</speech>><br>
+
+[[Leave Mera|maera_chamber_map_select]]
+<</nobr>>
+
+
+:: maera_sex_2
+<<nobr>>
+<<set $maera_sex_2 = true>>
+<<speech "maera">>You took long enough, princess.<</speech>><br>
+
+<<speech "mc">>Don’t call me that. Not yet.<</speech>><br>
+
+<<speech "maera">>Then prove it.<</speech>><br>
+
+I leaned down to kiss her hungrily at first, then slower, more uncertain.<br>
+
+<<speech "mc">>I missed this… missed you.<</speech>><br>
+[[Move Forth|maera_sex_2_1]]
+<</nobr>>
+
+:: maera_sex_2_1
+<<nobr>>
+Her hands slid under my tunic, grazing my chest.<br>
+
+<<speech "maera">>You feel... different. Softer.<</speech>><br>
+
+I winced as her thumb circled a nipple, too sensitive.<br>
+
+<<speech "mc">>Ah… careful. They ache now.<</speech>><br>
+
+<<speech "maera">>Since when do your nipples react like mine?<</speech>><br>
+
+I sat on the edge of the bed, eyes on the floor.<br>
+
+<<speech "mc">>The first draught. The mage said it would start with sensitivity.<</speech>><br>
+[[Move Forth|maera_sex_2_2]]
+<</nobr>>
+
+
+:: maera_sex_2_2
+<<nobr>>
+She pulled me back onto the bed, straddling my lap.<br>
+
+<<speech "maera">>You’re still warm. Still you. Can I…?<</speech>><br>
+
+I nodded. She lifted my tunic, exposing my bare chest.<br>
+
+<<speech "maera">>Gods. They’re really… growing, aren’t they?<</speech>><br>
+
+I caught her hands.<br>
+
+<<speech "mc">>It’s not much. Just... different.<</speech>><br>
+
+She leaned in, kissing down my neck.<br>
+
+<<speech "maera">>Different can be good.<</speech>><br>
+[[Move Forth|maera_sex_2_3]]
+<</nobr>>
+
+
+:: maera_sex_2_3
+<<nobr>>
+Her tongue teased my nipple, making me flinch.<br>
+
+<<speech "mc">>M-Maera…<</speech>><br>
+
+<<speech "maera">>You're blushing. Never seen you like this before.<</speech>><br>
+
+I pushed her onto her back, taking control for now.<br>
+
+<<speech "mc">>Let me remind you I’m still your prince.<</speech>><br>
+
+<<speech "maera">>Then do it. Take what’s yours.<</speech>><br>
+
+Our mouths crashed together, hands tangled in hair, her legs wrapping around my waist.<br>
+
+[[Move Forth|maera_sex_2_4]]
+<</nobr>>
+
+
+:: maera_sex_2_4
+<<nobr>>
+<<speech "maera">>Still hard. That’s a relief.<</speech>><br>
+
+I hesitated, pressing against her entrance, feeling how she welcomed me like always.<br>
+
+<<speech "mc">>You’re always ready for me.<</speech>><br>
+
+She gasped as I began to move.<br>
+
+<<speech "maera">>Don’t stop. Gods, don’t stop.<</speech>><br>
+
+But something was different. My body felt more reactive, almost too sensitive.<br>
+
+<<speech "mc">>Why do my nipples feel like they’re on fire?<</speech>><br>
+[[Move Forth|maera_sex_2_5]]
+<</nobr>>
+
+
+:: maera_sex_2_5
+<<nobr>>
+<<speech "maera">>What’s wrong?<</speech>><br>
+
+<<speech "mc">>Nothing. Just… trying to keep control.<</speech>><br>
+
+She kissed my jaw, murmuring into my skin.<br>
+
+<<speech "maera">>You used to last longer.<</speech>><br>
+
+My hips faltered, thrusts growing shallow.<br>
+
+<<speech "mc">>It’s hard to focus. Everything’s so sensitive.<</speech>><br>
+
+[[Move Forth|maera_sex_2_6]]
+<</nobr>>
+
+
+:: maera_sex_2_6
+<<nobr>>
+She moaned, but her gaze stayed distant.<br>
+
+<<speech "maera">>Feels good. Just… not the same.<</speech>><br>
+
+I paused, buried inside her, chest heaving.<br>
+
+<<speech "mc">>Am I… disappointing you?<</speech>><br>
+
+She met my gaze.<br>
+
+<<speech "maera">>No. Just surprising me.<</speech>><br>
+
+She rolled me over, taking control, riding me with a slow, practiced rhythm.<br>
+
+<<speech "maera">>Let me… just feel you. While I still can.<</speech>><br>
+
+[[Move Forth|maera_sex_2_7]]
+<</nobr>>
+
+
+:: maera_sex_2_7
+<<nobr>>
+I gripped her thighs, watching her move strong, beautiful.<br>
+
+<<speech "mc">>You’re incredible.<</speech>><br>
+
+She leaned down, kissed me deeply.<br>
+
+<<speech "maera">>You’re still mine.<</speech>><br>
+
+Our bodies arched together. I climaxed too quickly, surprising even myself.<br>
+
+<<speech "mc">>I Maera !<</speech>><br>
+
+She continued moving a little longer, chasing her own end, but didn’t reach it.<br>
+
+<<speech "maera">>…You finished already?<</speech>><br>
+[[Move Forth|maera_sex_2_8]]
+<</nobr>>
+
+
+:: maera_sex_2_8
+<<nobr>>
+Guilt hit me hard. I sat up, reaching for her.<br>
+
+<<speech "mc">>I’m sorry. I can make it up to you <</speech>><br>
+
+She stopped my hand, smiling softly.<br>
+
+<<speech "maera">>No. It’s okay.<</speech>><br>
+
+But the smile didn’t reach her eyes.<br>
+
+<<speech "maera">>It’s just… I didn’t expect you to change this fast.<</speech>><br>
+
+I lay beside her, staring at the ceiling.<br>
+
+<<speech "mc">>Neither did I.<</speech>><br>
+
+[[Move Forth|maera_sex_2_9]]
+<</nobr>>
+
+
+:: maera_sex_2_9
+<<nobr>>
+She traced circles on my chest.<br>
+
+<<speech "maera">>Still feel like you… just with softer edges.<</speech>><br>
+
+I took her hand, pressing it to my heart.<br>
+
+<<speech "mc">>Do you still want me?<</speech>><br>
+
+She didn’t answer right away.<br>
+
+<<speech "maera">>I want all of you. Even the parts I’m scared to lose.<</speech>><br>
+
+I kissed her forehead.<br>
+
+<<speech "mc">>I’m not going anywhere.<</speech>><br>
+
+[[Move Forth|maera_sex_2_10]]
+<</nobr>>
+
+:: maera_sex_2_10
+<<nobr>>
+Silence fell between us, only our breathing remained.<br>
+
+<<speech "maera">>Let’s just stay like this. While we still can.<</speech>><br>
+
+[[Leave Maera|maera_chamber_map_select]] |<br><br>
+[[Leave Maera's Chamber|bed_chamber_girl]] |<br><br>
+[[Leave Maid Room Corridor|castle_map_back_select]]
+
+<</nobr>>
+
+
+
+
+
+
+:: maera_sex_3
+<<nobr>>
+<<set $maera_sex_3 = true>>
+<<speech "maera">>You sneak in here like a thief every night, and yet you never steal a kiss properly.<</speech>><br>
+
+<<speech "mc">>I was hoping you'd steal it from me instead.<</speech>><br>
+
+<<speech "maera">>You always knew how to make my knees weak, you royal brat.<</speech>><br>
+
+<<speech "maera">>You smell different lately. Like moon blossoms and... change.<</speech>><br>
+[[Move Forth|maera_sex_3_1]]
+<</nobr>>
+
+:: maera_sex_3_1
+<<nobr>>
+<<speech "mc">>You trying to say I smell like a girl now?<</speech>><br>
+
+<<speech "maera">>Maybe. But you're still my prince... for now.<</speech>><br>
+
+<<speech "mc">>Does that bother you?<</speech>><br>
+
+<<speech "maera">>Ask me again after you don’t need me anymore.<</speech>><br><br>
+
+[[Move Forth|maera_sex_3_2]]
+<</nobr>>
+
+:: maera_sex_3_2
+<<nobr>>
+<<speech "maera">>You’re slipping through my fingers. One potion at a time.<</speech>><br>
+
+<<speech "mc">>I’m still me, Maera.<</speech>><br>
+
+<<speech "maera">>I know. But you won’t always be mine.<</speech>><br>
+
+<<speech "maera">>Your touch is changing. Softer, like silk instead of steel.<</speech>><br>
+[[Move Forth|maera_sex_3_3]]
+<</nobr>>
+
+
+:: maera_sex_3_3
+<<nobr>>
+<<speech "mc">>Does that make it less worth holding?<</speech>><br>
+
+<<speech "maera">>No. It makes it harder to let go.<</speech>><br>
+
+<<speech "maera">>I never feared the Queen’s court or the knives in the dark. But this? Losing this part of you? It scares me.<</speech>><br>
+
+<<speech "mc">>Then hold on to me while I still have it.<</speech>><br><br>
+[[Move Forth|maera_sex_3_4]]
+<</nobr>>
+
+
+:: maera_sex_3_4
+<<nobr>>
+<<speech "maera">>Still want me? Even with everything else... changing?<</speech>><br>
+
+<<speech "mc">>I don’t want anyone else.<</speech>><br>
+
+<<speech "maera">>Good. Because I need to feel you... before you forget how.<</speech>><br>
+
+<<speech "mc">>Maera… it’s not just my body that’s shifting.<</speech>><br>
+[[Move Forth|maera_sex_3_5]]
+<</nobr>>
+
+
+:: maera_sex_3_5
+<<nobr>>
+<<speech "maera">>Then make me remember who you are. Here. Now.<</speech>><br>
+
+<<speech "maera">>You still fit against me like before. But it feels different… warmer… softer.<</speech>><br>
+
+<<speech "mc">>Is that a complaint or a compliment?<</speech>><br>
+
+<<speech "maera">>Both.<</speech>><br><br>
+[[Move Forth|maera_sex_3_6]]
+<</nobr>>
+
+
+:: maera_sex_3_6
+<<nobr>>
+<<speech "maera">>You’re not as hard as you used to be…<</speech>><br>
+
+<<speech "mc">>The potions… they’re working.<</speech>><br>
+
+<<speech "maera">>I miss how you used to pin me. The way you… filled me.<</speech>><br>
+
+<<speech "mc">>Maera, I  <</speech>><br>
+[[Move Forth|maera_sex_3_7]]
+<</nobr>>
+
+
+:: maera_sex_3_7
+<<nobr>>
+<<speech "maera">>Don’t apologize. Just… pretend. Tonight.<</speech>><br>
+
+<<speech "maera">>Let me mourn you like this… one last time.<</speech>><br>
+
+<<speech "mc">>It doesn’t have to be the last.<</speech>><br>
+
+<<speech "maera">>But it will be.<</speech>><br><br>
+[[Move Forth|maera_sex_3_8]]
+<</nobr>>
+
+
+:: maera_sex_3_8
+<<nobr>>
+<<speech "maera">>Do you think she’ll still let me stay? After you’re crowned?<</speech>><br>
+
+<<speech "mc">>You’ll always have a place beside me.<</speech>><br>
+
+<<speech "maera">>Not beside. Behind. That’s what queens demand.<</speech>><br>
+
+<<speech "mc">>Then I’ll be a different kind of queen.<</speech>><br>
+[[Move Forth|maera_sex_3_9]]
+<</nobr>>
+
+
+:: maera_sex_3_9
+<<nobr>>
+<<speech "maera">>Not if they carve the prince out of you completely.<</speech>><br>
+
+<<speech "maera">>Will you still kiss me once your lips wear rouge?<</speech>><br>
+
+<<speech "mc">>Every kiss will taste sweeter with you.<</speech>><br><br>
+
+<<speech "maera">>Your chest... it’s swelling. Like ripe fruit. I don’t know if I want to touch or cry.<</speech>><br>
+[[Move Forth|maera_sex_3_10]]
+<</nobr>>
+
+
+:: maera_sex_3_10
+<<nobr>>
+<<speech "maera">>Your voice  when you moan now  it’s higher. Softer. Are you hearing it?<</speech>><br>
+
+<<speech "maera">>The way you walk… you’ve stopped leading with your shoulders.<</speech>><br>
+
+<<speech "mc">>And started swaying with my hips. I noticed.<</speech>><br>
+
+<<speech "maera">>It’s… oddly arousing. And deeply sad.<</speech>><br>
+[[Move Forth|maera_sex_3_11]]
+<</nobr>>
+
+
+:: maera_sex_3_11
+<<nobr>>
+<<speech "maera">>Will you one day want someone who doesn’t remind you of your old self?<</speech>><br>
+
+<<speech "mc">>Why would I want anyone but the one who knows me best?<</speech>><br>
+
+<<speech "maera">>Even if you become a stranger to yourself?<</speech>><br>
+
+<<speech "mc">>Then I’ll need you more than ever.<</speech>><br><br>
+[[Move Forth|maera_sex_3_12]]
+<</nobr>>
+
+:: maera_sex_3_12
+<<nobr>>
+<<speech "maera">>If they take everything else from you... let me be the last thing they can’t change.<</speech>><br>
+
+<<speech "mc">>Then be my anchor, Maera. No matter how deep this sea pulls me.<</speech>><br>
+
+[[Leave Maera|maera_chamber_map_select]] |<br><br>
+[[Leave Maera's Chamber|bed_chamber_girl]] |<br><br>
+[[Leave Maid Room Corridor|castle_map_back_select]]
+<</nobr>>
+
+
+
+:: maera_sex_4
+<<nobr>>
+<<set $maera_sex_4 = true>>
+<<speech "maera">>Another dose tonight?<</speech>><br>
+
+<<speech "mc">>Yes. My chest feels… tight. Sensitive.<</speech>><br>
+
+<<speech "maera">>It shows. They’re starting to bounce when you move.<</speech>><br><br>
+
+<<speech "maera">>They used to be flat. Yours. Hard. Like the rest of you.<</speech>><br>
+
+[[Move Forth|maera_sex_4_1]]
+<</nobr>>
+
+:: maera_sex_4_1
+<<nobr>>
+
+<<speech "mc">>Do they bother you?<</speech>><br>
+
+<<speech "maera">>Only when I miss what came before.<</speech>><br><br>
+
+<<speech "maera">>You’re not hard.<</speech>><br>
+
+<<speech "mc">>I can try  <</speech>><br>
+
+[[Move Forth|maera_sex_4_2]]
+<</nobr>>
+
+:: maera_sex_4_2
+<<nobr>>
+
+<<speech "maera">>You used to not need to try.<</speech>><br><br>
+
+<<speech "maera">>Maybe if I touch you more… maybe you’ll remember how it felt.<</speech>><br>
+
+<<speech "maera">>You used to fill me so deep. Push until I screamed your name. Where’s that Caelan now?<</speech>><br><br>
+
+<<speech "mc">>I want to please you. Even if it’s… different now.<</speech>><br><br>
+
+[[Move Forth|maera_sex_4_3]]
+<</nobr>>
+
+:: maera_sex_4_3
+<<nobr>>
+
+<<speech "maera">>It’s not the same. You’re softer, gentler. Too gentle.<</speech>><br>
+
+<<speech "maera">>Gods, I don’t want gentle. I want you to fuck me like you used to.<</speech>><br><br>
+
+<<speech "mc">>I can’t. It’s the potions. It’s  <</speech>><br>
+
+<<speech "maera">>It’s not just the potions. It’s you. You’re changing, and I’m still here, aching for the man who’s disappearing.<</speech>><br><br>
+
+[[Move Forth|maera_sex_4_4]]
+<</nobr>>
+
+:: maera_sex_4_4
+<<nobr>>
+
+<<speech "maera">>Come on. Remember what this felt like. Me riding you until you couldn’t breathe…<</speech>><br><br>
+
+<<speech "maera">>I don’t know how to want you like this. I want to. But I keep looking for him.<</speech>><br>
+
+<<speech "mc">>I’m still here, Maera.<</speech>><br>
+
+<<speech "maera">>Then why do you feel like a stranger beneath me?<</speech>><br><br>
+
+[[Move Forth|maera_sex_4_5]]
+<</nobr>>
+
+:: maera_sex_4_5
+<<nobr>>>>
+
+<<speech "mc">>I’m becoming who I need to be… for Velmoria, for the throne… for me.<</speech>><br>
+
+<<speech "maera">>And what about me?! What am I becoming, Caelan? Just another court relic? Another maid without a man to love?<</speech>><br><br>
+
+<<speech "maera">>You’ll be a queen soon. They’ll paint your face, dress your body, teach you how to moan like a lady.<</speech>><br>
+
+<<speech "mc">>Do I not already?<</speech>><br>
+[[Move Forth|maera_sex_4_6]]
+<</nobr>>
+
+
+:: maera_sex_4_6
+<<nobr>>
+<<speech "maera">>Not like before. Before you made me moan.<</speech>><br><br>
+
+<<speech "mc">>Then let me learn again. As I am now. Let me find new ways to make you cry out.<</speech>><br>
+
+<<speech "maera">>Try then. But don’t ask me to pretend it’s the same.<</speech>><br><br>
+
+<<speech "mc">>I’m fighting it, Maera. I still want you. I still need you.<</speech>><br>
+
+[[Move Forth|maera_sex_4_7]]
+<</nobr>>
+
+:: maera_sex_4_7
+<<nobr>>
+<<speech "maera">>Then fight harder. Because soon you won’t have the tools to show me anymore.<</speech>><br><br>
+
+<<speech "maera">>If this is our last time like this… then make it count. Make me feel him one more time.<</speech>><br>
+
+<<speech "mc">>Then let me try.<</speech>><br>
+
+[[Leave Maera|maera_chamber_map_select]] |<br><br>
+[[Leave Maera's Chamber|bed_chamber_girl]] |<br><br>
+[[Leave Maid Room Corridor|castle_map_back_select]]
+<</nobr>>
+
+
+:: maera_sex_5
+<<nobr>>
+<<set $maera_sex_5 = true>>
+Maera looks up as I push the door open, the hinges creaking under the weight of the storm.<br>
+<<speech "maera">>Storm’s got you sneaking in like a thief.<</speech>><br>
+
+I close the door behind me, water dripping from my cloak.<br>
+<<speech "mc">>If I’m a thief, I’m here to steal you.<</speech>><br>
+
+She smirks, but her gaze lingers—my tunic clings differently now.<br>
+<<speech "maera">>You’re… smaller.<</speech>><br>
+
+I laugh nervously, unfastening the wet fabric.<br>
+<<speech "mc">>It’s not just the rain.<</speech>><br>
+
+[[Move Forth|maera_sex_5_1]]
+<</nobr>>
+
+:: maera_sex_5_1
+<<nobr>>
+Beneath the tunic, my chest is bare—two subtle mounds pressing outward, flushed and firm.<br>
+<<speech "maera">>You’re really growing…<</speech>><br>
+
+She stands, stepping close, her fingers brushing the edge of one breast.<br>
+<<speech "maera">>They bounce when you walk now.<</speech>><br>
+
+I flinch when she pinches a nipple lightly.<br>
+<<speech "mc">>They’re… sensitive. Too much, sometimes.<</speech>><br>
+
+Her breath warms my skin near my collarbone.<br>
+<<speech "maera">>Can I taste?<</speech>><br>
+
+[[Move Forth|maera_sex_5_2]]
+<</nobr>>
+
+:: maera_sex_5_2
+<<nobr>>
+I nod. She leans in, licking and sucking gently at the nipple, her breath hot and teasing.<br>
+<<speech "maera">>Gods, you taste like me.<</speech>><br>
+
+A gasp escapes my lips, my back arching instinctively.<br>
+<<speech "mc">>That feels… not like before.<</speech>><br>
+
+She chuckles darkly.<br>
+<<speech "maera">>You moaned like a maiden just now.<</speech>><br>
+
+Her hand trails lower, curling around my shaft—smaller now, softer, even when stiff.<br>
+<<speech "maera">>This used to throb in my hand. Now it just… twitches.<</speech>><br>
+
+[[Move Forth|maera_sex_5_3]]
+<</nobr>>
+
+:: maera_sex_5_3
+<<nobr>>
+A groan escapes me, heavy with conflict.<br>
+<<speech "mc">>I still want you.<</speech>><br>
+
+She kisses me, rough and hungry, before pushing me onto the bed.<br>
+<<speech "maera">>Then show me.<</speech>><br>
+
+She straddles me, grinding slowly against my changed form.<br>
+<<speech "maera">>Do you feel that? It’s not the same. You don’t press into me like you used to.<</speech>><br>
+
+I gasp as she rocks her hips forward—my shaft barely parting her folds.<br>
+<<speech "mc">>I’m still inside you…<</speech>><br>
+
+[[Move Forth|maera_sex_5_4]]
+<</nobr>>
+
+:: maera_sex_5_4
+<<nobr>>
+She winces, slowing the rhythm.<br>
+<<speech "maera">>Barely. It’s like chasing a memory.<</speech>><br>
+
+I grip her hips, trying to thrust, but the depth just isn’t there.<br>
+<<speech "mc">>Let me try. Just let me move.<</speech>><br>
+
+She leans forward, one breast brushing my lips.<br>
+<<speech "maera">>Then suck. If you can’t fill me, tease me.<</speech>><br>
+
+I wrap my lips around her nipple, sucking gently at first, then with growing hunger. She moans—but something is missing.<br>
+<<speech "maera">>You feel like a lover in a new skin.<</speech>><br>
+
+[[Move Forth|maera_sex_5_5]]
+<</nobr>>
+
+:: maera_sex_5_5
+<<nobr>>
+I try harder, fingers moving between her legs, tongue flicking and pressing.<br>
+<<speech "mc">>Tell me what you need.<</speech>><br>
+
+She gasps, but there’s no release.<br>
+<<speech "maera">>I need more… I don’t know from who.<</speech>><br>
+
+Her hips stutter—frustrated, she pulls off, breath catching.<br>
+<<speech "maera">>It’s not you—it’s not working.<</speech>><br>
+
+I sit up, shame burning in my chest.<br>
+<<speech "mc">>I’m sorry. I—I’m trying to hold onto what I am.<</speech>><br>
+
+[[Move Forth|maera_sex_5_6]]
+<</nobr>>
+
+:: maera_sex_5_6
+<<nobr>>
+She sits beside me, brushing her curls away.<br>
+<<speech "maera">>It’s not just the size. You move… differently.<</speech>><br>
+
+I study her—face flushed, thighs slick, but unfulfilled.<br>
+<<speech "mc">>I’ll pleasure you another way.<</speech>><br>
+
+I lower myself between her legs, kissing down her stomach.<br>
+<<speech "maera">>You never used to ask. You just took me.<</speech>><br>
+
+I pause, lips trembling.<br>
+<<speech "mc">>Am I weaker now?<</speech>><br>
+
+[[Move Forth|maera_sex_5_7]]
+<</nobr>>
+
+:: maera_sex_5_7
+<<nobr>>
+She sighs, fingers stroking my hair as I kiss her folds.<br>
+<<speech "maera">>No. Just… gentler. Too gentle.<</speech>><br>
+
+My tongue moves, learning her anew. She moans, body shifting, but her eyes remain closed.<br>
+<<speech "maera">>Keep going. Don’t stop.<</speech>><br>
+
+I press and flick, circling—her breathing quickens but holds back.<br>
+<<speech "maera">>It’s good… but…<</speech>><br>
+
+I lift my head, face damp with her.<br>
+<<speech "mc">>But not enough.<</speech>><br>
+
+[[Move Forth|maera_sex_5_8]]
+<</nobr>>
+
+:: maera_sex_5_8
+<<nobr>>
+She leans down, kisses me, tasting herself on my lips.<br>
+<<speech "maera">>Not what it used to be.<</speech>><br>
+
+I rest my head against her stomach.<br>
+<<speech "mc">>Am I losing you?<</speech>><br>
+
+Her voice cracks softly.<br>
+<<speech "maera">>No. But I’m scared.<</speech>><br>
+
+We lie back, limbs entangled, hearts thundering.<br>
+<<speech "maera">>I miss being thrown onto the bed.<</speech>><br>
+
+[[Move Forth|maera_sex_5_9]]
+<</nobr>>
+
+:: maera_sex_5_9
+<<nobr>>
+I whisper, ashamed and raw.<br>
+<<speech "mc">>I don’t know if I’ll be able to again.<</speech>><br>
+
+She gazes at me, tears brimming in her eyes.<br>
+<<speech "maera">>Then hold me like you won’t vanish.<</speech>><br>
+
+I wrap my arms around her, pressing my soft chest to her back.<br>
+<<speech "mc">>I’m still here.<</speech>><br>
+
+<<speech "maera">>You used to make me scream. Now I hold my breath.<</speech>><br>
+
+[[Move Forth|maera_sex_5_10]]
+<</nobr>>
+
+:: maera_sex_5_10
+<<nobr>>
+I press a kiss to her shoulder.<br>
+<<speech "mc">>Next time, I’ll try harder.<</speech>><br>
+
+She nods, though her voice sounds distant.<br>
+<<speech "maera">>Next time.<</speech>><br>
+
+[[Leave Maera|maera_chamber_map_select]] |<br><br>
+[[Leave Maera's Chamber|bed_chamber_girl]] |<br><br>
+[[Leave Maid Room Corridor|castle_map_back_select]]
+<</nobr>>
+
+
+
+:: maera_sex_6
+<<nobr>>
+<<set $maera_sex_6 = true>>
+I stepped into Maera’s chamber, the silk robe clinging to the curve of my hips. Her gaze met mine—curious, hungry, unsure.<br><br>
+
+<<speech "maera">>You’re changing faster than I can keep track of.<</speech>><br>
+
+<<speech "mc">>Faster than I can understand myself.<</speech>><br>
+
+She crossed the room to me, brushing a dark curl behind her ear, her eyes tracing the lines of my body.<br><br>
+
+<<speech "maera">>Your breasts… they’re fuller now. They bounce when you move.<</speech>><br>
+
+Her fingers grazed the soft curve of one breast, and I shivered.<br><br>
+
+<<speech "mc">>Too sensitive… every brush feels electric.<</speech>><br>
+[[Move Forth|maera_sex_6_1]]
+<</nobr>>
+
+
+:: maera_sex_6_1
+<<nobr>>
+<<speech "maera">>Electric, yeah. But I miss the fire too.<</speech>><br>
+
+I stepped closer, searching her face.<br><br>
+
+<<speech "mc">>I’m still here. For you.<</speech>><br>
+
+<<speech "maera">>You are. But you’re… different.<</speech>><br>
+
+My robe shifted slightly, revealing more of my altered form.<br><br>
+
+<<speech "mc">>It’s shrinking. I’m… afraid I won’t be enough.<</speech>><br>
+[[Move Forth|maera_sex_6_3]]
+<</nobr>>
+
+
+:: maera_sex_6_3
+<<nobr>>
+She reached out and cupped me gently.<br><br>
+
+<<speech "maera">>You’ve always been enough. Just not like this.<</speech>><br>
+
+Then she knelt, parting the robe and brushing her lips over me.<br><br>
+
+<<speech "maera">>Let me remind you how it feels… even if it’s not the same.<</speech>><br>
+
+Her mouth enveloped me, slow and warm.<br><br>
+
+<<speech "mc">>It’s different… softer, like velvet.<</speech>><br>
+
+She pulled back and met my gaze.<br><br>
+
+<<speech "maera">>You used to take me. Now you let me lead.<</speech>><br>
+
+[[Move Forth|maera_sex_6_4]]
+<</nobr>>
+
+
+:: maera_sex_6_4
+<<nobr>>
+<<speech "mc">>I want to keep being what you need.<</speech>><br>
+
+Her hands moved to my hips, fingers exploring my new curves.<br><br>
+
+<<speech "maera">>Your hips—they’re wider. Curves I didn’t expect.<</speech>><br>
+
+Her touch trailed down and found me again.<br><br>
+
+<<speech "mc">>It’s so fragile now… but it still wants you.<</speech>><br>
+
+<<speech "maera">>Fragile’s not the word I’d use, but… it’s different.<</speech>><br>
+
+[[Move Forth|maera_sex_6_5]]
+<</nobr>>
+
+
+:: maera_sex_6_5
+<<nobr>>
+She leaned in and let her mouth find my nipple.<br><br>
+
+<<speech "maera">>You’ve got these curves now, and a softness I can’t ignore.<</speech>><br>
+
+<<speech "mc">>Please don’t stop.<</speech>><br>
+
+Her hands wandered over my newly smooth skin.<br><br>
+
+<<speech "maera">>I want to be close. But I’m afraid I’m losing what I loved.<</speech>><br>
+
+[[Move Forth|maera_sex_6_6]]
+<</nobr>>
+
+
+:: maera_sex_6_6
+<<nobr>>
+I kissed her, desperate.<br><br>
+
+<<speech "mc">>Hold me. Don’t let go.<</speech>><br>
+
+She climbed into my lap, her breath warm on my skin.<br><br>
+
+<<speech "maera">>I miss how you used to take me, rough and sure.<</speech>><br>
+
+<<speech "mc">>I can’t be that man anymore.<</speech>><br>
+
+She stroked my face, gentle and aching.<br><br>
+
+<<speech "maera">>Then be what you are. I’ll learn.<</speech>><br>
+
+[[Move Forth|maera_sex_6_7]]
+<</nobr>>
+
+
+:: maera_sex_6_7
+<<nobr>>
+We moved together, hesitant but longing for connection.<br><br>
+
+<<speech "mc">>It feels different… less forceful, more careful.<</speech>><br>
+
+<<speech "maera">>Careful can be good… but I want fire.<</speech>><br>
+
+She leaned in, lips brushing my neck.<br><br>
+
+<<speech "maera">>Show me how you still want me.<</speech>><br>
+
+<<speech "mc">>I want you so much.<</speech>><br>
+
+[[Move Forth|maera_sex_6_8]]
+<</nobr>>
+
+
+:: maera_sex_6_8
+<<nobr>>
+Her voice trembled as she paused.<br><br>
+
+<<speech "maera">>I want you too. But it’s slipping away.<</speech>><br>
+
+I cupped her face, pleading.<br><br>
+
+<<speech "mc">>Don’t give up on me.<</speech>><br>
+
+<<speech "maera">>I’m not. But I’m scared.<</speech>><br>
+
+Her hands explored my body, mapping every changed line.<br><br>
+
+<<speech "maera">>You’re still mine… just different.<</speech>><br>
+
+[[Move Forth|maera_sex_6_9]]
+<</nobr>>
+
+
+:: maera_sex_6_9
+<<nobr>>
+<<speech "mc">>Different can be beautiful.<</speech>><br>
+
+She kissed me, tasting change and memory all at once.<br><br>
+
+<<speech "maera">>I’m trying to believe that.<</speech>><br>
+
+We found rhythm again, uncertain but united, as the storm howled outside.<br><br>
+
+<<speech "maera">>Teach me your new ways.<</speech>><br>
+
+<<speech "mc">>Together.<</speech>><br>
+
+[[Move Forth|maera_sex_6_10]]
+<</nobr>>
+
+
+:: maera_sex_6_10
+<<nobr>>
+Her mouth trailed down my neck, searching for what still remained.<br><br>
+
+<<speech "maera">>Show me the softness.<</speech>><br>
+
+<<speech "mc">>I’m still here.<</speech>><br>
+
+She held me close, her voice soft against my chest.<br><br>
+
+<<speech "maera">>And I’ll still want you. Even as things change.<</speech>><br>
+
+[[Leave Maera|maera_chamber_map_select]] |<br><br>
+[[Leave Maera's Chamber|bed_chamber_girl]] |<br><br>
+[[Leave Maid Room Corridor|castle_map_back_select]]
+<</nobr>>
+

@@ -1,0 +1,2118 @@
+
+
+:: chest
+<<nobr>>
+<<set $user_stats.gender_Identity -= 2>>
+<<set $curr_potion = setup.chest_forward_potions>>
+<<if State.variables.direction == "reverse">>
+    <<set $curr_potion = setup.chest_reverse_potions>>
+<</if>>
+<<set $curr_potion_selected = $curr_potion[$userBody.chest.curr_chest]>>
+/* <pre><<=JSON.stringify($curr_potion_selected, null, 2)>></pre> */
+<<if $curr_potion_selected == undefined>>
+    <p style="color: red;">You do not have any chest potions available for your current chest version to transform.</p>
+    <<link "Leave Potion Scroll Selection">><<goto "veil_tower">><</link>> |
+    <<link "Leave Veil Tower">><<goto "castle_map_back_select">><</link>> |
+    <<link "Try another Potion Scroll">><<goto "potion_lab">><</link>>
+<<else>>
+/* <pre><<= JSON.stringify($userBody.chest, null, 2)>></pre> */
+/* <pre><<= JSON.stringify($curr_potion_selected, null, 2)>></pre> */
+/* <pre><<= JSON.stringify($userItems, null, 2)>></pre> */
+<<set $ingredient = {}>>
+<span style="font-family: 'Papyrus', serif; font-size: 22px; color: #8b5e3c;">
+<b>✦ Ancient Alchemical Recipe ✦</b><br><br>
+
+<b>Potion:</b> <<=$curr_potion_selected.name>><br>
+<b>Purpose:</b> <<=$curr_potion_selected.purpose>><br><br>
+
+<b>🜃 Ingredients:</b><br>
+<ol>
+<<for _item, _value range $curr_potion_selected.ingredients>>
+  <li><<=$userItems[_item].name>>: _value <<=$userItems[_item].unit>></li>
+  <<set $ingredient[_item] = {amount: $userItems[_item].amount, needed: _value, unit: $userItems[_item].unit}>>
+<</for>>
+</ol>
+<<set _potion = $curr_potion_selected>>
+/* <<set $currentObjectives = 'Create Potion: ' + _potion.name + '. Ingredients are: '>>
+
+<<for _item, _value range _potion.ingredients>>
+  <<set $currentObjectives += $userItems[_item].name + ': ' + _value + ' ' + $userItems[_item].unit + ', '>>
+<</for>>
+
+<<replace "#objectives-text" t8n>>
+  <<=$currentObjectives>>
+<</replace>> */
+
+<b>⤐ Function:</b><br>
+<i><<=$curr_potion_selected.function>></i><br><br>
+
+<b>⚠ Side Effects:</b><br>
+<i><<=$curr_potion_selected.sideEffects>></i>
+</span>
+/* <pre><<= JSON.stringify($ingredient, null, 2)>></pre> */
+<<set $ingredinetAvailable = true>>
+<<for _key, _data range $ingredient>>
+    <<if $ingredient[_key].amount < $ingredient[_key].needed>>
+        <p style="color: red;">
+        You do not have enough <<=$userItems[_key].name>>. You need <<=$ingredient[_key].needed>> 
+        <<=$userItems[_key].unit>>, but you have only <<=$ingredient[_key].amount>> <<=$userItems[_key].unit>>.</p>
+        <<set $ingredinetAvailable = false>>
+    <<else>>
+        <p style="color: green;">
+        You have enough <<=$userItems[_key].name>>. You need <<=$ingredient[_key].needed>> 
+        <<=$userItems[_key].unit>>, you have only <<=$ingredient[_key].amount>> <<=$userItems[_key].unit>>.</p>
+    <</if>>
+<</for>>
+<<if $currentArc["main_arc"] == 3>>
+    <<link "Refer Another Potion Scroll">><<goto "potion_lab">><</link>>
+<<elseif $ingredinetAvailable>>
+    <p style="color: green;">You have all the ingredients needed to make the potion.</p>
+    <<link "Make Potion">><<goto "potion_create_chest">><</link>>
+    <<link "Try another Potion Scroll">><<goto "potion_lab">><</link>>
+<<else>>
+    <p style="color: red;">You do not have all the ingredients needed to make the potion.</p>
+    <<link "Leave Potion Scroll Selection">><<goto "veil_tower">><</link>> |
+    <<link "Leave Veil Tower">><<goto "castle_map_back_select">><</link>> |
+    <<link "Try another Potion Scroll">><<goto "potion_lab">><</link>>
+<</if>>
+<<set $potion = $curr_potion_selected>>
+<<set $potionInventory = {}>>
+<<for _item, _needed range $potion.ingredients>>
+    <<set $potionInventory[_item] = 0>>
+<</for>>
+<</if>>
+<</nobr>>
+
+
+:: potion_create_chest
+<<nobr>>
+
+<span style="font-family: 'Papyrus', serif; font-size: 22px; color: #8b5e3c;">
+<b>🧪 Assembling: <span style="color: #5a2e13"><<=$potion.name>></span></b><br>
+<i>Match the exact ingredients to brew this potion:</i><br><br>
+<div class="item-grid">
+	<<for _item, _needed range $potion.ingredients>>
+			<div class="item-card">
+                <<capture _item>>
+                    [img[$userItems[_item].img]]
+                    <<set $reverse_passage_ingredient = "potion_create_chest">>
+                    <<=$userItems[_item].name>>
+                    <div class="ingredient_details"><<link "Details">><<set $selectedIngredient = _item>><<goto "IngredientDetail">><</link>></div>
+                <</capture>>
+            </div>
+	<</for>>
+</div>
+<br>
+<<for _item, _needed range $potion.ingredients>>
+  <div style="margin-bottom: 10px;">
+    <b><<=$userItems[_item].name>></b> (You have: <<=$userItems[_item].amount>> <<=$userItems[_item].unit>>)<br>
+    Needed: <<=_needed>> <<=$userItems[_item].unit>> | Added: <<=$potionInventory[_item]>> <<=$userItems[_item].unit>><br>
+
+    <<if $userItems[_item].amount > 0>>
+        <<capture _item>>
+        <<set $potion_add = "+" + $userItems[_item].min_amount + " " + $userItems[_item].unit>>
+        <<link $potion_add>>
+            <<set $potionInventory[_item] += $userItems[_item].min_amount>>
+            <<set $userItems[_item].amount -= $userItems[_item].min_amount>>
+            <<goto "potion_create_chest">>
+        <</link>>
+        <</capture>>
+    <</if>>
+    <<if $potionInventory[_item] > 0>>
+        <<set $potion_add = "-" + $userItems[_item].min_amount + " " + $userItems[_item].unit>>
+        <<capture _item>>
+            <<link $potion_add>>
+                <<set $potionInventory[_item] -= $userItems[_item].min_amount>>
+                <<set $userItems[_item].amount += $userItems[_item].min_amount>>
+                <<goto "potion_create_chest">>
+            <</link>>
+      <</capture>>
+    <</if>>
+  </div>
+<</for>>
+
+<<set $_matches = true>>
+<<for _item, _data range $potion.ingredients>>
+  <<if $potionInventory[_item] != $potion.ingredients[_item]>>
+    <<set $_matches = false>>
+  <</if>>
+<</for>>
+<<if $_matches>>
+  <p style="color: green;"><b>✅ All ingredients matched perfectly. Ready to brew!</b></p>
+  <<link "Brew Potion">>
+    <<goto "brew_success_potion_create_chest">>
+  <</link>>
+<</if>>
+<<if not $_matches>>
+  <p style="color: red;"><b>⚠ Ingredient quantities do not match the recipe. Adjust to proceed.</b></p>
+<</if>>
+
+<<link "Cancel">>
+  <<for _item, _data range $potionInventory>>
+    <<set $userItems[_item].amount += $potionInventory[_item]>>
+  <</for>>
+  <<goto "potion_lab">>
+<</link>>
+</span>
+<</nobr>>
+
+:: brew_success_potion_create_chest
+<<nobr>>
+<<set $_i to random(1, 4)>>
+<<set $img_path = "potion/potion_"+$_i +".gif">>
+<div style="text-align: center; "><img style="text-align: center; border-radius: 9px;
+    border: 10px ridge #8b5e3c;" @src="setup.ImagePath+$img_path"></div>
+
+/* <pre><<=JSON.stringify($curr_potion_selected, null, 2)>></pre> */
+<<set $next_passage = $curr_potion_selected.from +"_"+$curr_potion_selected.to>>
+<br>
+[[Move Forth|$next_passage]]
+<</nobr>>
+
+:: use_success_potion_create_chest
+<<nobr>>
+/* <pre><<= JSON.stringify($userBody.chest, null, 2)>></pre> */
+<<set $userBody.chest.curr_chest = $curr_potion_selected.to>>
+<<set $image_key_chest_path = "mc/figure/" + $userBody.chest.orig_body + "/" + $userBody.chest.orig_body + "_" + $userBody.chest.curr_chest+ ".png">>
+/* <<=$image_key_chest_path>> */
+<<set $userBody.chest.img = $image_key_chest_path>>
+/* <pre><<= JSON.stringify($userBody.chest, null, 2)>></pre> */
+<<set $curr_chest = Number($userBody.chest.curr_chest.split("_")[1])>>;
+<div style="text-align: center;" class="change_show">
+<div class="change_show torso">[img[setup.ImagePath+$userBody.torso.img]]</div>
+<div class="change_show head">[img[setup.ImagePath+$userBody.head.img]]</div>
+<div class="change_show right_hand">[img[setup.ImagePath+$userBody.right_hand.img]]</div>
+<div class="change_show left_hand">[img[setup.ImagePath+$userBody.left_hand.img]]</div>
+<div class="change_show left_leg">[img[setup.ImagePath+$userBody.left_leg.img]]</div>
+<div class="change_show right_leg">[img[setup.ImagePath+$userBody.right_leg.img]]</div>
+<div class="change_show chest">[img[setup.ImagePath+$userBody.chest.img]]</div>
+<div class="change_show crotch">[img[setup.ImagePath+$userBody.crotch.img]]</div>
+<div class="change_show hair">[img[setup.ImagePath+$userBody.hair.img]]</div>
+</div>
+<<link "Try another Potion Scroll">><<goto "potion_lab">><</link>> |
+[[Leave Veil Tower|castle_map_back_select]]
+<</nobr>>
+
+:: chest_1_chest_2
+<<nobr>>
+<div style="text-align: center; width: 95%;"><img style="text-align: center; border-radius: 9px;
+    border: 10px ridge #8b5e3c;width: 95%;" @src="setup.ImagePath+'map/veil_tower_mage_map.png'"></div>
+<<speech "thalara">>You have brewed the potion. Let me see it first.  Caelan Are you ready to start the process...<</speech>>
+<br>
+[[I’m ready. Let’s begin.|chest_1_chest_2_1]] | <br><br>
+[[I’m… here. I don’t know how I feel about this, but I’ll try.|chest_1_chest_2_1]] | <br><br>
+[[Don’t think for a second I like this. I’m only doing this because I have no choice.|chest_1_chest_2_1]] | <br><br>
+<</nobr>>
+
+:: chest_1_chest_2_1
+<<nobr>>
+<br>
+<<speech "thalara">>
+Step forward, Caelan. The first transformation is never about the body it is about your relationship with what you think it means.
+<</speech>><br>
+<<speech "mc">>…Right.<</speech>><br>
+<<speech "thalara">>
+This draught won’t sculpt breasts or enchant curves. Not yet. All it will do is ask your chest to let go to ease its grip on a shape that has served you until now.<</speech>><br>
+[[Move Forth|chest_1_chest_2_2]]
+<</nobr>>
+
+:: chest_1_chest_2_2
+<<nobr>>
+
+<<speech "mc">>So it’ll make me weaker?<</speech>><br>
+
+<<speech "thalara">>No. But it will unfasten the pride your muscles have worn like armor. Not every kind of strength shows in bulk. Sometimes it shows in surrender.<</speech>><br>
+
+<<speech "mc">>You sound like a philosopher.<</speech>><br>
+
+<<speech "thalara">>When you’ve brewed potions that change bones and bend voices, you learn to respect the philosophy of flesh.<</speech>><br>
+
+[[Move Forth|chest_1_chest_2_3]]
+<</nobr>>
+
+:: chest_1_chest_2_3
+<<nobr>>
+
+<<speech "thalara">>This will taste like mint, metal, and maybe… regret. You may feel your chest ache for its former form. That’s normal. Muscles remember.<</speech>><br>
+
+<<speech "mc">>How fast will it work?<</speech>><br>
+
+<<speech "thalara">>Gradually. Within the hour, the tautness in your chest will soften. Your posture will shift. Clothes will feel looser. And you may… feel exposed.<</speech>><br>
+
+<<speech "mc">>You mean… like I’m losing something?<</speech>><br>
+
+[[Move Forth|chest_1_chest_2_4]]
+<</nobr>>
+
+:: chest_1_chest_2_4
+<<nobr>>
+
+<<speech "thalara">>You are. But you’re not being robbed. You are offering it, in exchange for something else. That’s what every step in magic is a trade, not a theft.<</speech>><br>
+
+<<speech "mc">>…It’s cold.<</speech>><br>
+
+<<speech "thalara">>Good. That means it’s working. The swelling in your chest will ease first. That defined line under your collarbone it’ll blur. Pectorals will yield to smoother flesh. Your heart will beat more openly, less behind armor.<</speech>><br>
+
+<<speech "mc">>…It feels strange already. Like I’ve been… unmade a little.<</speech>><br>
+
+[[Move Forth|chest_1_chest_2_5]]
+<</nobr>>
+
+:: chest_1_chest_2_5
+<<nobr>>
+<<speech "thalara">>That’s not strangeness. That’s space. You’re creating room for what’s to come. It doesn’t matter yet what fills it. Only that you are willing or brave enough to allow it.<</speech>><br>
+
+<<speech "mc">>So this is just the beginning.<</speech>><br>
+
+<<speech "thalara">>Every beginning pretends to be small. But this one is honest. It tells you: the prince you’ve been is making room for someone else. And neither of you are vanishing.<</speech>><br>
+
+<<speech "thalara">>You may mourn. That’s allowed. But you may also wonder what else might grow here now?<</speech>><br>
+[[I feel the potion working in my breast|use_success_potion_create_chest]]
+<</nobr>>
+
+
+
+
+
+
+
+
+:: chest_2_chest_3
+<<nobr>>
+<div style="text-align: center; width: 95%;"><img style="text-align: center; border-radius: 9px;
+    border: 10px ridge #8b5e3c;width: 95%;" @src="setup.ImagePath+'map/veil_tower_mage_map.png'"></div>
+<<speech "thalara">>You have brewed the potion. Let me see it first.  Caelan Are you ready to start the process...<</speech>>
+<br>
+[[I’m ready to let go of this part of myself. It’s time.|chest_2_chest_3_1]] | <br><br>
+[[I… don’t know what this makes me. But I think I need to feel less like what I used to be.|chest_2_chest_3_1]] | <br><br>
+[[You want me to erase myself? To become nothing? Fine. Let’s see how blank I can be.|chest_2_chest_3_1]] | <br><br>
+<</nobr>>
+
+:: chest_2_chest_3_1
+<<nobr>>
+<<speech "thalara">>This session is quieter than the rest. Not because it is less important but because it asks for surrender, not growth.<</speech>><br>
+
+<<speech "mc">>It doesn’t look like much.<</speech>><br>
+
+<<speech "thalara">>Because it’s meant to feel like less. Less sharpness. Less memory. This potion doesn’t add it subtracts.<</speech>><br>
+
+<<speech "mc">>So it’s not feminine yet. But it’s no longer masculine either.<</speech>><br>
+
+[[Move Forth|chest_2_chest_3_2]]
+<</nobr>>
+
+:: chest_2_chest_3_2
+<<nobr>>
+
+<<speech "thalara">>Correct. This is the moment where your body ceases to declare your past.<</speech>><br>
+
+<<speech "mc">>And I become… what, exactly?<</speech>><br>
+
+<<speech "thalara">>A silence between notes. A fresh page. Not an absence, but a readiness.<</speech>><br>
+
+<<speech "mc">>So it’s not weakness?<</speech>><br>
+
+[[Move Forth|chest_2_chest_3_3]]
+<</nobr>>
+
+:: chest_2_chest_3_3
+<<nobr>>
+
+<<speech "thalara">>Not at all. Some of the strongest enchantments begin by wiping away the previous spell. Creation starts with undoing. This is your undoing gentle and sacred.<</speech>><br>
+
+<<speech "mc">>I worked hard to look like this. My tutors praised it. My mother approved of it. My knights admired it.<</speech>><br>
+
+<<speech "thalara">>And now it weighs you down.<</speech>><br>
+
+<<speech "mc">>Yes… it does. It’s armor I no longer want to wear.<</speech>><br>
+
+[[Move Forth|chest_2_chest_3_4]]
+<</nobr>>
+
+:: chest_2_chest_3_4
+<<nobr>>
+
+<<speech "thalara">>This potion doesn’t judge. It simply loosens what clings. Muscle will fade. Firmness will soften. When you wake tomorrow, your chest will not feel strong, or feminine. It will feel still.<</speech>><br>
+
+<<speech "mc">>I don’t know if I want to be a woman yet. But I don’t want to be just a man either.<</speech>><br>
+
+<<speech "thalara">>Then this is your step. Not toward queenhood. Not away from princeliness. But toward a space where both can wait together.<</speech>><br>
+
+<<speech "mc">>…It tastes like honey and something… old.<</speech>><br>
+
+[[Move Forth|chest_2_chest_3_5]]
+<</nobr>>
+
+:: chest_2_chest_3_5
+<<nobr>>
+
+<<speech "thalara">>It’s made from Velmorian honey. Fitting, for what you’re becoming.<</speech>><br>
+
+<<speech "mc">>It’s strange. I don’t feel like anything. Not man. Not woman. Just… me.<</speech>><br>
+
+<<speech "thalara">>Exactly. This is the rarest shape of all your own.<</speech>><br>
+
+<<speech "mc">>I thought I’d feel lost without it. But instead… I feel light.<</speech>><br>
+
+[[Move Forth|chest_2_chest_3_6]]
+<</nobr>>
+
+:: chest_2_chest_3_6
+<<nobr>>
+
+<<speech "thalara">>You’ve stepped into the in-between. Some fear it. But I’ve always believed it is where real power begins.<</speech>><br>
+
+<<speech "mc">>It’s quiet here.<</speech>><br>
+
+<<speech "thalara">>Yes. Let it be. Let your body listen, before it decides what song to sing next.<</speech>><br>
+[[I feel the potion working in my breast|use_success_potion_create_chest]]
+<</nobr>>
+
+
+
+
+
+:: chest_3_chest_4
+<<nobr>>
+<div style="text-align: center; width: 95%;"><img style="text-align: center; border-radius: 9px;
+    border: 10px ridge #8b5e3c;width: 95%;" @src="setup.ImagePath+'map/veil_tower_mage_map.png'"></div>
+<<speech "thalara">>You have brewed the potion. Let me see it first.  Caelan Are you ready to start the process...<</speech>>
+<br>
+[[It’s time, isn’t it? I’ve thought about this moment more than I’ll admit.|chest_3_chest_4_1]] | <br><br>
+[[I’m here, but I still don’t know if I should be. It’s all moving so fast.|chest_3_chest_4_1]] | <br><br>
+[[Let’s just get it over with. I don’t want to hear another speech about beauty or destiny.|chest_3_chest_4_1]] | <br><br>
+<</nobr>>
+
+:: chest_3_chest_4_1
+<<nobr>>
+<<speech "thalara">>This one is gentle. It doesn’t remake you in fire. It whispers to your body. Just enough to start.<</speech>><br>
+
+<<speech "mc">>So this is it… The first real step into being someone else.<</speech>><br>
+
+<<speech "thalara">>Not someone else. A version of you that’s been waiting, perhaps quietly. Buried beneath layers of role and expectation.<</speech>><br>
+
+<<speech "mc">>I’ve seen what this becomes. I’ve touched the silks meant for a chest I don’t have. And now... I drink this and I begin to grow into them?<</speech>><br>
+
+[[Move Forth|chest_3_chest_4_2]]
+<</nobr>>
+
+:: chest_3_chest_4_2
+<<nobr>>
+
+<<speech "thalara">>Not just physically. This potion is as much suggestion as it is alteration. Your body will listen. It will feel the pull.<</speech>><br>
+
+<<speech "mc">>Will I feel it?<</speech>><br>
+
+<<speech "thalara">>Not pain. Just… awakening. A tingle. A heat. Like the promise of something stirring beneath the surface.<</speech>><br>
+
+<<speech "mc">>You said the changes begin subtle. What should I expect?<</speech>><br>
+
+[[Move Forth|chest_3_chest_4_3]]
+
+<</nobr>>
+
+:: chest_3_chest_4_3
+<<nobr>>
+
+<<speech "thalara">>Your chest will soften first. Skin will feel more sensitive touch may linger longer. Then a rounding will begin. A swell so small it will feel imaginary, until the mirror confirms it.<</speech>><br>
+
+<<speech "mc">>Imaginary breasts. That’s quite the start to my legacy as queen.<</speech>><br>
+
+<<speech "thalara">>All great things begin as shadows on the skin. You’ll see.<</speech>><br>
+
+<<speech "mc">>…It’s sweet. And warm.<</speech>><br>
+
+[[Move Forth|chest_3_chest_4_4]]
+<</nobr>>
+
+:: chest_3_chest_4_4
+<<nobr>>
+
+<<speech "thalara">>Lilyroot and blushing orchid. Traditional herbs of femininity. They speak softly to the body.<</speech>><br>
+
+<<speech "mc">>There’s a… flutter. Not pain. More like… awareness. Like something humming just under my skin.<</speech>><br>
+
+<<speech "thalara">>That’s your body listening. The first threads of change stitching themselves into you. The flattening is over. Now comes the bloom.<</speech>><br>
+
+<<speech "mc">>I thought I’d feel afraid. But this is… oddly peaceful.<</speech>><br>
+
+[[Move Forth|chest_3_chest_4_5]]
+<</nobr>>
+
+:: chest_3_chest_4_5
+<<nobr>>
+
+<<speech "thalara">>You are crossing no chasm today, Caelan. Only stepping onto a path. This stage is like dew on a rosebud beautiful in its restraint.<</speech>><br>
+
+<<speech "mc">>I can’t see it yet. But I feel like something’s shifted. In me. Around me.<</speech>><br>
+
+<<speech "thalara">>That is not illusion. Your aura has already begun realigning. The body follows the soul. And the soul… has chosen this step.<</speech>><br>
+
+<<speech "mc">>And if I step back later?<</speech>><br>
+
+[[Move Forth|chest_3_chest_4_6]]
+<</nobr>>
+
+:: chest_3_chest_4_6
+<<nobr>>
+
+<<speech "thalara">>Then we guide you in retreat. But not shamefully. A queen must know how to command herself in both advance and withdrawal.<</speech>><br>
+
+<<speech "mc">>A queen… right.<</speech>><br>
+
+<<speech "thalara">>Or something new entirely. Your title may be written already, but your truth is still yours to shape.<</speech>><br>
+
+<<speech "mc">>It’s strange… I feel closer to myself. Not further.<</speech>><br>
+
+[[Move Forth|chest_3_chest_4_7]]
+<</nobr>>
+
+:: chest_3_chest_4_7
+<<nobr>>
+
+<<speech "thalara">>Then the potion has done its work.<</speech>><br>
+[[I feel the potion working in my breast|use_success_potion_create_chest]]
+<</nobr>>
+
+
+
+
+
+
+
+:: chest_4_chest_5
+<<nobr>>
+<div style="text-align: center; width: 95%;"><img style="text-align: center; border-radius: 9px;
+    border: 10px ridge #8b5e3c;width: 95%;" @src="setup.ImagePath+'map/veil_tower_mage_map.png'"></div>
+<<speech "thalara">>You have brewed the potion. Let me see it first.  Caelan Are you ready to start the process...<</speech>>
+<br>
+[[I’m ready. It’s time for something I can truly feel.|chest_4_chest_5_1]] | <br><br>
+[[I’m not sure how I’ll handle this, but… I guess there’s no turning back now.|chest_4_chest_5_1]] | <br><br>
+[[This doesn’t mean I’ve given up. I’m only drinking because I have to.|chest_4_chest_5_1]] | <br><br>
+<</nobr>>
+
+:: chest_4_chest_5_1
+<<nobr>>
+<<speech "thalara">>You carry more weight in your eyes than you do in your chest. For now.<</speech>><br>
+
+<<speech "mc">>That’s poetic, I suppose. Just not very comforting.<</speech>><br>
+
+<<speech "thalara">>Change is rarely comfortable. But discomfort is the fire in which identity is forged.<</speech>><br>
+
+<<speech "mc">>What’s different about this one?<</speech>><br>
+
+[[Move Forth|chest_4_chest_5_2]]
+<</nobr>>
+
+:: chest_4_chest_5_2
+<<nobr>>
+
+<<speech "thalara">>This is the first draught that doesn’t just nudge you it confirms you. You won’t just feel a shift inside. Your reflection will start to show it. A swell, a softness. The gentle rise of what you’ll soon learn to call your breasts.<</speech>><br>
+
+<<speech "mc">>Breasts.<</speech>><br>
+
+<<speech "thalara">>It won’t be drastic. Not yet. But the tissue will gather now. When you breathe, you’ll notice the way your shirt clings differently. The way your skin reacts to touch.<</speech>><br>
+
+<<speech "mc">>So I’ll actually feel them now? I mean, physically?<</speech>><br>
+
+[[Move Forth|chest_4_chest_5_3]]
+<</nobr>>
+
+:: chest_4_chest_5_3
+<<nobr>>
+
+<<speech "thalara">>Yes. Sensation is part of the enchantment. Your nerves will rewire slowly, like vines reaching toward sunlight. By the end of today’s session, you will no longer be able to pass as flat.<</speech>><br>
+
+<<speech "mc">>How long before it becomes... obvious to others?<</speech>><br>
+
+<<speech "thalara">>That depends on how close they are. A courtier’s glance won’t catch it yet. But a handmaiden lacing your tunic might pause. A lover? They would notice immediately.<</speech>><br>
+
+<<speech "mc">>I’m not sure I’m ready for people to see me differently.<</speech>><br>
+
+[[Move Forth|chest_4_chest_5_4]]
+<</nobr>>
+
+:: chest_4_chest_5_4
+<<nobr>>
+
+<<speech "thalara">>Then let them see your courage instead. There is no shame in small beginnings, Caelan. The world need not understand your shape to respect your strength.<</speech>><br>
+
+<<speech "mc">>What if this gets too real too fast?<</speech>><br>
+
+<<speech "thalara">>That’s why we go step by step. No forced leaps. Only decisions. Only draughts you choose to drink.<</speech>><br>
+
+<<speech "mc">>TAnd if I change my mind?<</speech>><br>
+
+[[Move Forth|chest_4_chest_5_5]]
+<</nobr>>
+
+:: chest_4_chest_5_5
+<<nobr>>
+
+<<speech "thalara">>Then we drink from the other vial. The one that slows. That gently retreats. You are not caged in magic. You are cradled by it.<</speech>><br>
+
+<<speech "mc">>It’s… warm.<</speech>><br>
+
+<<speech "thalara">>It should be. This one ignites your core. Blood will stir, tissues respond. You may feel a flutter like the anticipation before a first kiss.<</speech>><br>
+
+<<speech "mc">>…It tingles.<</speech>><br>
+
+[[Move Forth|chest_4_chest_5_6]]
+<</nobr>>
+
+:: chest_4_chest_5_6
+<<nobr>>
+
+<<speech "thalara">>That’s them growing. Like roses beneath the soil, ready to bloom. You’ll start to feel their weight, their presence. Barely noticeable now… but they’re there.<</speech>><br>
+
+<<speech "mc">>There’s a pressure. Not pain. Just… pressure.<</speech>><br>
+
+<<speech "thalara">>That’s your chest accepting the shape. The tissue rising like bread in an oven. The enchantment is gentle, but it does not lie. You are becoming.<</speech>><br>
+
+<<speech "mc">>They are there. Just… tiny. But real.<</speech>><br>
+
+[[Move Forth|chest_4_chest_5_7]]
+<</nobr>>
+
+:: chest_4_chest_5_7
+<<nobr>>
+
+<<speech "thalara">>Real is not measured in size. Real is felt in the beat of your heart, in the way you straighten your spine now.<</speech>><br>
+
+<<speech "mc">>Do I seem straighter to you?<</speech>><br>
+
+<<speech "thalara">>You seem aware. And that is far more powerful.<</speech>><br>
+[[I feel the potion working in my breast|use_success_potion_create_chest]]
+<</nobr>>
+
+
+
+
+
+
+
+:: chest_5_chest_6
+<<nobr>>
+<div style="text-align: center; width: 95%;"><img style="text-align: center; border-radius: 9px;
+    border: 10px ridge #8b5e3c;width: 95%;" @src="setup.ImagePath+'map/veil_tower_mage_map.png'"></div>
+<<speech "thalara">>You have brewed the potion. Let me see it first.  Caelan Are you ready to start the process...<</speech>>
+<br>
+[[I’m ready for this. I want to feel what it’s like to be seen as a woman.|chest_5_chest_6_1]] | <br><br>
+[[I don’t know if I’m ready… but I guess there’s no turning back now.|chest_5_chest_6_1]] | <br><br>
+[[I’ll take your potion but don’t think I’ve accepted this completely.|chest_5_chest_6_1]] | <br><br>
+<</nobr>>
+
+:: chest_5_chest_6_1
+<<nobr>>
+<<speech "mc">>So… this is the step that makes it real, huh?<</speech>><br>
+
+<<speech "thalara">>In the eyes of others? Yes. This is the turning point. No longer just softness or suggestion. After this, your form speaks clearly.<</speech>><br>
+
+<<speech "mc">>People will notice…<</speech>><br>
+
+<<speech "thalara">>They’ll glance, linger, whisper. Perhaps admire. Some may leer. But more than anything they will begin to address you with their eyes, not your name.<</speech>><br>
+[[Move Forth|chest_5_chest_6_2]]
+
+<</nobr>>
+
+:: chest_5_chest_6_2
+<<nobr>>
+
+<<speech "mc">>Sounds like a promotion I didn’t ask for.<</speech>><br>
+
+<<speech "thalara">>Perhaps. Or perhaps the world is simply catching up to what your magic has already begun.<</speech>><br>
+
+<<speech "mc">>They’ve been growing steadily, but still felt small. Now you’re saying they’ll… bounce?<</speech>><br>
+
+<<speech "thalara">>With weight comes presence. The potion awakens fullness flesh with a gentle pull, the kind that shifts with every motion. They will no longer hide beneath fabric. You’ll feel them as you move, sleep, breathe.<</speech>><br>
+[[Move Forth|chest_5_chest_6_3]]
+
+<</nobr>>
+
+:: chest_5_chest_6_3
+<<nobr>>
+
+<<speech "mc">>That sounds… intimate.<</speech>><br>
+
+<<speech "thalara">>It is. Your chest will no longer be a quiet space. Each sensation your heartbeat, your breath will pass through them. And when others brush too close, their eyes will follow the shape, not the shadow.<</speech>><br>
+
+<<speech "mc">>Does it hurt? The transformation, I mean.<</speech>><br>
+
+<<speech "thalara">>Not pai  more like pressure. A swelling warmth. You may feel tightness across the sternum, a tug at the skin, a pull from within. By dusk, your tunics will no longer fit quite the same.<</speech>><br>
+[[Move Forth|chest_5_chest_6_4]]
+
+<</nobr>>
+
+:: chest_5_chest_6_4
+<<nobr>>
+
+<<speech "mc">>I wonder what it’ll be like to lie on my side after this…<</speech>><br>
+
+<<speech "thalara">>Different. Softer. Heavier. You may need to relearn the comfort of pillows. But you will also gain the comfort of presence of seeing yourself become.<</speech>><br>
+
+<<speech "mc">>And once it’s done, there’s no hiding it anymore.<</speech>><br>
+
+<<speech "thalara">>No. You will be read as female from the chest alone. It is a badge you wear without speaking a curve that commands attention, whether you invite it or not.<</speech>><br>
+[[Move Forth|chest_5_chest_6_5]]
+
+<</nobr>>
+
+:: chest_5_chest_6_5
+<<nobr>>
+
+<<speech "mc">>I keep thinking about what my mother will say when she sees me.<</speech>><br>
+
+<<speech "thalara">>She will see her heir becoming something radiant more than a prince, more than a woman. A symbol of Velmoria’s evolution.<</speech>><br>
+
+<<speech "mc">>I’m scared.<</speech>><br>
+
+<<speech "thalara">>Good. That means you understand the weight of what you carry. Fear is not weakness it is reverence. Drink it.<</speech>><br>
+
+[[Move Forth|chest_5_chest_6_6]]
+<</nobr>>
+
+:: chest_5_chest_6_6
+<<nobr>>
+<<speech "mc">>It’s warm… almost fizzy.<</speech>><br>
+
+<<speech "thalara">>The bubbling is your body reshaping glands expanding, fat redistributing. Give it time. The weight will settle, and so will you.<</speech>><br>
+
+<<speech "mc">>Gods it’s like something’s inflating beneath my skin…<</speech>><br>
+
+<<speech "thalara">>That’s fullness. That’s womanhood rising. And from this point forward, you no longer need to wonder how it feels you will live it.<</speech>><br>
+
+[[Move Forth|chest_5_chest_6_7]]
+<</nobr>>
+
+:: chest_5_chest_6_7
+<<nobr>>
+<<speech "mc">>It’s real now. I feel them. Full. Round. Heavy.<</speech>><br>
+
+<<speech "thalara">>And beautiful. You’ve crossed the threshold, Caelan. What once whispered has now spoken aloud. This is your body telling the world who you are becoming.<</speech>><br>
+[[I feel the potion working in my breast|use_success_potion_create_chest]]
+<</nobr>>
+
+
+
+
+
+
+
+:: chest_6_chest_7
+<<nobr>>
+<div style="text-align: center; width: 95%;"><img style="text-align: center; border-radius: 9px;
+    border: 10px ridge #8b5e3c;width: 95%;" @src="setup.ImagePath+'map/veil_tower_mage_map.png'"></div>
+<<speech "thalara">>You have brewed the potion. Let me see it first.  Caelan Are you ready to start the process...<</speech>>
+<br>
+[[If I’m meant to be a queen, I suppose I should start looking like one.|chest_6_chest_7_1]] | <br><br>
+[[They already feel big enough... Is this really necessary?|chest_6_chest_7_1]] | <br><br>
+[[More? They're already in the way! How is this helping me rule?|chest_6_chest_7_1]] | <br><br>
+<</nobr>>
+
+:: chest_6_chest_7_1
+<<nobr>>
+<<speech "mc">>I think I can still button my tunic, barely… not sure for how much longer though.<</speech>><br>
+
+<<speech "thalara">>That’s not surprising. Level three is the border of modest femininity. Level four crosses into something… far more expressive. You’ll feel the difference today not just in your reflection, but in how the world regards you.<</speech>><br>
+
+<<speech "mc">>Are you saying people will notice now?<</speech>><br>
+
+<<speech "thalara">>Oh, they already do. But now, they won’t be able to pretend not to. Feminine presence is not subtle at this stage, Caelan. Your chest will project your progress, as clearly as a crown does your authority.<</speech>><br>
+
+[[Move Forth|chest_6_chest_7_2]]
+<</nobr>>
+
+:: chest_6_chest_7_2
+<<nobr>>
+
+<<speech "mc">>So this is no longer about subtle growth or gentle shifts. This is… what? A declaration?<</speech>><br>
+
+<<speech "thalara">>Precisely. The transformation ceases to whisper. It begins to speak. Your steps will carry sway, your presence will draw eyes, and your body will no longer fit the mold of ambiguity.<</speech>><br>
+
+<<speech "mc">>But I don’t know if I’m ready to give up fitting in.<</speech>><br>
+
+<<speech "thalara">>You stopped 'fitting in' the moment your body began to yield to magic, Caelan. This is not a disguise to be worn and removed it is becoming. And what you are becoming... is captivating.<</speech>><br>
+
+[[Move Forth|chest_6_chest_7_3]]
+<</nobr>>
+
+:: chest_6_chest_7_3
+<<nobr>>
+
+<<speech "mc">>I’m not sure I want to be captivating. Not like that.<</speech>><br>
+
+<<speech "thalara">>This isn't only about seduction or beauty though that too has its place. It is about ownership. Power drawn from shape and presence. Your body is becoming a vessel for influence.<</speech>><br>
+
+<<speech "mc">>But it’s just breasts. Soft, jiggling things that get in the way. What kind of power is that?<</speech>><br>
+
+<<speech "thalara">>A queen's allure is not always in her sword arm. It is in how she enters a room. How the silence follows her. How rivals glance twice before speaking. Beauty is a weapon, and you are being armed, my dear.<</speech>><br>
+
+[[Move Forth|chest_6_chest_7_4]]
+<</nobr>>
+
+:: chest_6_chest_7_4
+<<nobr>>
+
+<<speech "mc">>So... the more I grow, the more others will bend to me?<</speech>><br>
+
+<<speech "thalara">>Not because they must. But because they want to. Fascination and command are sisters. Let them serve you.<</speech>><br>
+
+<<speech "mc">>What does it feel like... when it starts working?<</speech>><br>
+
+<<speech "thalara">>Tightness at first. A deep warmth spreading through your chest, like your very ribs making room. Then... weight. Tender fullness. And your clothes those will remind you with every motion that you're no longer flat.<</speech>><br>
+[[Move Forth|chest_6_chest_7_5]]
+<</nobr>>
+
+:: chest_6_chest_7_5
+<<nobr>>
+
+<<speech "mc">>It’s… it’s warm, alright. Like something blooming under the skin.<</speech>><br>
+
+<<speech "thalara">>Let it happen. Let them swell. Trust the magic. You’ll be reshaped by the hour. Soon you’ll need binding, if not new gowns entirely.<</speech>><br>
+
+<<speech "mc">>They’re... heavier than before. I feel them moving when I shift. Gods, is that normal?<</speech>><br>
+
+<<speech "thalara">>Very. You’re entering the stage of sway, of bounce, of presence. Your walk will change. Your posture will adjust. Your breasts are no longer an idea they are reality.<</speech>><br>
+[[Move Forth|chest_6_chest_7_6]]
+<</nobr>>
+
+:: chest_6_chest_7_6
+<<nobr>>
+<<speech "mc">>It's… tight. I can’t imagine wearing this in court. They’ll all stare.<</speech>><br>
+
+<<speech "thalara">>Let them stare. Let them wonder how a prince grew into a queen. Their curiosity is part of your reign.<</speech>><br>
+
+<<speech "mc">>And if I wanted to stop? What if this is too much?<</speech>><br>
+
+<<speech "thalara">>Then you pause. You step back if needed. Nothing here is cruel, Caelan. Only decisive. But if you continue, you'll rise not as prince, not as mimic but as a woman impossible to ignore.<</speech>><br>
+[[Move Forth|chest_6_chest_7_7]]
+<</nobr>>
+
+:: chest_6_chest_7_7
+<<nobr>>
+<<speech "mc">>I didn’t think breasts would make me feel... powerful.<</speech>><br>
+
+<<speech "thalara">>That’s the secret of transformation. What you once feared as vulnerability becomes your throne. Now, stand tall. You’re blooming, and the world is watching.<</speech>><br>
+[[I feel the potion working in my breast|use_success_potion_create_chest]]
+<</nobr>>
+
+
+
+
+
+
+
+
+
+:: chest_7_chest_8
+<<nobr>>
+<div style="text-align: center; width: 95%;"><img style="text-align: center; border-radius: 9px;
+    border: 10px ridge #8b5e3c;width: 95%;" @src="setup.ImagePath+'map/veil_tower_mage_map.png'"></div>
+<<speech "thalara">>You have brewed the potion. Let me see it first.  Caelan Are you ready to start the process...<</speech>>
+<br>
+[[I’m ready. I want to see what it feels like to truly have a bust|chest_7_chest_8_1]] | <br><br>
+[[I don’t know… it’s already hard to hide them. Going any further might make it impossible.|chest_7_chest_8_1]] | <br><br>
+[[This is ridiculous. They're already huge. What, do you want them to wobble into the next room before I do?|chest_7_chest_8_1]] | <br><br>
+<</nobr>>
+
+:: chest_7_chest_8_1
+<<nobr>>
+<<speech "mc">>That glow looks stronger than the last one.<</speech>><br>
+
+<<speech "thalara">>Because the change it invites is deeper. This is not just growth it’s a reshaping. Your chest is no longer simply feminine. It is about to become abundant, commanding, and irresistibly soft.<</speech>><br>
+
+<<speech "mc">>They're already pulling at the seams. I can’t even cross my arms without feeling the stretch. Will this make it worse?<</speech>><br>
+
+<<speech "thalara">>It will make it different. You’ll feel the heft now the center of gravity in your upper body shifting. Your cleavage will deepen. Your nipples will become more sensitive, more prominent. And yes, your garments will plead for mercy unless you adjust them.<</speech>><br>
+[[Move Forth|chest_7_chest_8_2]]
+<</nobr>>
+
+:: chest_7_chest_8_2
+<<nobr>>
+<<speech "mc">>And what if I’m not ready for... all that attention?<</speech>><br>
+
+<<speech "thalara">>Then wear it like a veil. Let them wonder. Let them look. But control what they see. This form will give you that power to distract, to disarm, to delight, simply by standing still.<</speech>><br>
+
+<<speech "mc">>That’s the thing. I don't want to be seen like that. I’m not a seductress.<</speech>><br>
+
+<<speech "thalara">>No one said you were. But there is power in being noticed, Caelan. And whether you embrace it or not, your body is stepping into that realm. People will begin to react. The guards. The maids. Nobles. You may be addressed differently... not because you’re weaker, but because you’ve become magnetic.<</speech>><br>
+[[Move Forth|chest_7_chest_8_3]]
+<</nobr>>
+
+:: chest_7_chest_8_3
+<<nobr>>
+<<speech "mc">>You say that like it’s a weapon.<</speech>><br>
+
+<<speech "thalara">>Because it can be. A bust like this draws eyes. But more importantly, it alters posture, breath, and movement. It trains you to carry yourself like someone who has presence and presence is the currency of queens.<</speech>><br>
+
+<<speech "mc">>My back's already aching a bit. If they get any heavier...<</speech>><br>
+
+<<speech "thalara">>You will need support soon. Corsetry. Binding spells if needed. But this stage is also when the body begins to crave that attention. Not just from others but from itself. You’ll find yourself touching more. Adjusting. Stroking. It becomes part of your rhythm.<</speech>><br>
+[[Move Forth|chest_7_chest_8_4]]
+<</nobr>>
+
+:: chest_7_chest_8_4
+<<nobr>>
+<<speech "mc">>I’ve noticed that already. When no one's looking, I’ve… felt them. Just to check if they’re real. I thought I was losing it.<</speech>><br>
+
+<<speech "thalara">>You're not. You're discovering yourself both as a woman and as someone reborn. Your body is becoming something it never was before. Of course you're curious.<</speech>><br>
+
+<<speech "mc">>Will it hurt?<</speech>><br>
+
+<<speech "thalara">>No. It will tingle. Like champagne under the skin. Your nipples may throb. The skin will tighten before it stretches. It will feel warm. And afterward… they’ll sway. More than they did. You’ll feel them even when you try not to.<</speech>><br>
+[[Move Forth|chest_7_chest_8_5]]
+<</nobr>>
+
+:: chest_7_chest_8_5
+<<nobr>>
+<<speech "mc">>And this isn’t the final size, is it?<</speech>><br>
+
+<<speech "thalara">>Not yet. This is only the threshold of busty. You’ll move beyond it, if you choose. But for now, this stage marks the point where there is no more doubt. No more boy beneath the blouse. Only the rise of a woman’s form.<</speech>><br>
+
+<<speech "mc">>Alright then. Let’s see what kind of presence I can carry.<</speech>><br>
+
+<<speech "thalara">>Drink deeply. Let your chest bloom, and don’t shy away from what it becomes. This is not shame, Caelan. This is sovereignty.<</speech>><br>
+[[Move Forth|chest_7_chest_8_6]]
+<</nobr>>
+
+:: chest_7_chest_8_6
+<<nobr>>
+<<speech "mc">>It’s like fire and silk. Gods my nipples...<</speech>><br>
+
+<<speech "thalara">>They’re waking. You’ll want something softer against them now linen, not wool. Silk, if you can steal it from the queen’s wardrobe.<</speech>><br>
+
+<<speech "mc">>It’s pulling me forward... heavier... gods, they're touching each other. I can feel the crease between them.<</speech>><br>
+
+<<speech "thalara">>Stand tall. Let your back learn the new posture. Let your hips compensate. Your body will adapt. And you will grow into this form, not just physically... but completely.<</speech>><br>
+[[I feel the potion working in my breast|use_success_potion_create_chest]]
+<</nobr>>
+
+
+
+
+
+
+
+
+:: chest_8_chest_9
+<<nobr>>
+<div style="text-align: center; width: 95%;"><img style="text-align: center; border-radius: 9px;
+    border: 10px ridge #8b5e3c;width: 95%;" @src="setup.ImagePath+'map/veil_tower_mage_map.png'"></div>
+<<speech "thalara">>You have brewed the potion. Let me see it first.  Caelan Are you ready to start the process...<</speech>>
+<br>
+[[I think I’m ready to be... seen. To be more. Let’s go further.|chest_8_chest_9_1]] | <br><br>
+[[They’re already heavy, Thalara. Are you sure I won’t regret making them even bigger?|chest_8_chest_9_1]] | <br><br>
+[[If I’m being dragged into this, I might as well go all the way. Make it impossible to ignore me.|chest_8_chest_9_1]] | <br><br>
+<</nobr>>
+
+:: chest_8_chest_9_1
+<<nobr>>
+<<speech "mc">>It’s thicker than usual. Almost... pulsing.<</speech>><br>
+
+<<speech "thalara">>The potion mirrors what it awakens. Vitality. Fullness. Desire. It won’t just build your body it will amplify your presence.<</speech>><br>
+
+<<speech "mc">>Presence is overrated. I can barely train in armor anymore, and riding has become a chore. Everything moves too much.<</speech>><br>
+
+<<speech "thalara">>And yet, you wear that tension like a silk ribbon. You say you dislike the motion, but you’ve stopped binding them when you bathe. You no longer flinch when attendants linger with their eyes.<</speech>><br>
+[[Move Forth|chest_8_chest_9_2]]
+<</nobr>>
+
+:: chest_8_chest_9_2
+<<nobr>>
+<<speech "mc">>That’s different. It’s not like I asked for the attention. I just… got used to it.<</speech>><br>
+
+<<speech "thalara">>Used to it… or beginning to like it?<</speech>><br>
+
+<<speech "mc">>You always twist my words.<</speech>><br>
+
+<<speech "thalara">>I don’t twist them, Caelan. I hold up a mirror. It is you who surprises yourself.<</speech>><br>
+[[Move Forth|chest_8_chest_9_3]]
+<</nobr>>
+
+:: chest_8_chest_9_3
+<<nobr>>
+<<speech "mc">>What if they get too big? What if this step makes me something I can’t walk back from?<</speech>><br>
+
+<<speech "thalara">>Every change carves deeper into your destiny, yes. This level of femininity won’t be overlooked. Your nipples will stand proud, your breasts will beg to be supported and yes, they will move with purpose. But there is strength in that vulnerability. Influence. Power.<</speech>><br>
+
+<<speech "mc">>I never thought power would come in... this shape.<</speech>><br>
+
+<<speech "thalara">>You wore a sword and earned fear. Now, you’ll wear curves and command attention. Both are forms of power. One shouts. The other seduces.<</speech>><br>
+[[Move Forth|chest_8_chest_9_4]]
+<</nobr>>
+
+:: chest_8_chest_9_4
+<<nobr>>
+<<speech "mc">>They already feel heavy. I swear they bounce before I even move. And the nipples... they’re just there, constantly. Even the breeze feels obscene.<</speech>><br>
+
+<<speech "thalara">>That hypersensitivity is a gift. A reminder that you are alive in your flesh. You are felt, seen, desired.<</speech>><br>
+
+<<speech "mc">>You talk like I’m becoming some temple courtesan.<</speech>><br>
+
+<<speech "thalara">>Would that be so terrible? Many courtesans have ruled cities without lifting a blade. But no, my prince my princess this isn’t about seduction. It’s about comfort in your chosen skin.<</speech>><br>
+[[Move Forth|chest_8_chest_9_5]]
+<</nobr>>
+
+:: chest_8_chest_9_5
+<<nobr>>
+<<speech "mc">>So after this... my chest will grow again?<</speech>><br>
+
+<<speech "thalara">>Yes. Rounder, fuller. Your nipples will grow as well thicker, longer, more prominent. You may find them too sensitive for certain fabrics. You’ll need supportive garments. Lace or tight bindings won’t do anymore.<</speech>><br>
+
+<<speech "mc">>And people will stare more?<</speech>><br>
+
+<<speech "thalara">>They already do. This will only shift the way they stare from curiosity to awe.<</speech>><br>
+[[Move Forth|chest_8_chest_9_6]]
+<</nobr>>
+
+:: chest_8_chest_9_6
+<<nobr>>
+<<speech "mc">>Alright. No turning back now.<</speech>><br>
+
+<<speech "thalara">>Let your body claim its form. Let the swell announce your becoming. You will feel this change in every motion, every breath. And so will the world.<</speech>><br>
+
+<<speech "mc">>Gods, it’s hot. And tingly. It’s like... they’re filling from the inside out. Oh my nipples !<</speech>><br>
+
+<<speech "thalara">>Yes. That is the bloom of sensation. Let it rise. Let the weight come. With each heartbeat, your chest becomes your crown.<</speech>><br>
+[[Move Forth|chest_8_chest_9_7]]
+<</nobr>>
+
+:: chest_8_chest_9_7
+<<nobr>>
+<<speech "mc">>They’re bouncing... just from breathing. Are they supposed to be this sensitive?<</speech>><br>
+
+<<speech "thalara">>This level is for those ready to be seen. You’ll never blend in again, Caelan. You’re becoming the future queen not hidden, not subtle, but radiant.<</speech>><br>
+[[I feel the potion working in my breast|use_success_potion_create_chest]]
+<</nobr>>
+
+
+
+
+
+
+:: chest_9_chest_10
+<<nobr>>
+<div style="text-align: center; width: 95%;"><img style="text-align: center; border-radius: 9px;
+    border: 10px ridge #8b5e3c;width: 95%;" @src="setup.ImagePath+'map/veil_tower_mage_map.png'"></div>
+<<speech "thalara">>You have brewed the potion. Let me see it first.  Caelan Are you ready to start the process...<</speech>>
+<br>
+[[I'm ready. Let’s take this step… all the way.|chest_9_chest_10_1]] | <br><br>
+[[This might be too much… but I’ll trust your guidance.|chest_9_chest_10_1]] | <br><br>
+[[So what? Let’s see how far your damn potions can go.|chest_9_chest_10_1]] | <br><br>
+<</nobr>>
+
+:: chest_9_chest_10_1
+<<nobr>>
+<<speech "mc">>This looks... intense. Heavier than the last one. Literally.<</speech>><br>
+
+<<speech "thalara">>It must be. What lies ahead is not subtle, Caelan. This draught will reshape your presence. Not just your body but how the world receives it.<</speech>><br>
+
+<<speech "mc">>I’ve been knocking things off shelves just by turning. And now you’re saying they’ll get bigger?<</speech>><br>
+
+<<speech "thalara">>Not merely bigger. Commanding. They will sway with every step, pull at your spine, and demand garments made to bear their weight. You will feel them in every movement.<</speech>><br>
+[[Move Forth|chest_9_chest_10_2]]
+<</nobr>>
+
+:: chest_9_chest_10_2
+<<nobr>>
+<<speech "mc">>So I’ll need straps. Lots of straps.<</speech>><br>
+
+<<speech "thalara">>Straps... and strength. Not the strength of swords or shields, but of poise. Balance. The kind of strength queens must learn when their very presence becomes spectacle.<</speech>><br>
+
+<<speech "mc">>I didn’t think boobs would ever feel like power. But this? This is getting hard to ignore.<</speech>><br>
+
+<<speech "thalara">>That’s the point. Level Seven is not for hiding. It’s for owning. You are becoming a woman that the world will turn its head for whether you like it or not.<</speech>><br>
+[[Move Forth|chest_9_chest_10_3]]
+<</nobr>>
+
+:: chest_9_chest_10_3
+<<nobr>>
+<<speech "mc">>People already stare. I’ve caught the steward’s eyes lingering. Even the guards. One dropped his sword last time I bent forward.<</speech>><br>
+
+<<speech "thalara">>They are not trained to resist allure. And you are becoming alluring, Caelan not merely pretty, but magnetic. This form tests your comfort in being desired. Watched. Hungered for.<</speech>><br>
+
+<<speech "mc">>You make it sound like a weapon.<</speech>><br>
+
+<<speech "thalara">>It can be. Or a gift. Or a trap. That choice, as always, lies with you. But make no mistake this body will speak before you ever open your mouth.<</speech>><br>
+[[Move Forth|chest_9_chest_10_4]]
+<</nobr>>
+
+:: chest_9_chest_10_4
+<<nobr>>
+<<speech "mc">>And if I drink this…?<</speech>><br>
+
+<<speech "thalara">>You’ll feel it immediately. A pull, like gravity shifting upward and outward. Your breasts will balloon round, soft, immensely sensitive. Your nipples will thicken. Your balance will change. Sitting, walking, lying down... it all transforms.<</speech>><br>
+
+<<speech "mc">>Gods. I’ll really be top-heavy.<</speech>><br>
+
+<<speech "thalara">>Yes. And radiant. And impossible to forget.<</speech>><br>
+[[Move Forth|chest_9_chest_10_5]]
+<</nobr>>
+
+:: chest_9_chest_10_5
+<<nobr>>
+<<speech "mc">>It’s... thick. Warm. Like it's pushing outward.<</speech>><br>
+
+<<speech "thalara">>That’s the essence of Level Seven. Expansion. Feminine excess.<</speech>><br>
+
+<<speech "mc">>They’re… heavy. Already. Gods, Thalara my shirt can’t hold this. It’s tight.<</speech>><br>
+
+<<speech "thalara">>You’ve outgrown male tailoring. And female modesty. These are breasts meant to be seen, cradled, celebrated. The sway you feel now is just the beginning.<</speech>><br>
+[[Move Forth|chest_9_chest_10_6]]
+<</nobr>>
+
+:: chest_9_chest_10_6
+<<nobr>>
+<<speech "mc">>They keep going. They're spilling over. I feel like I’ve strapped pillows to my chest but they’re me.<</speech>><br>
+
+<<speech "thalara">>And you will need new attire before you re-enter court. Consider this your first royal inconvenience. A queen’s presence demands adjustment from all who witness her.<</speech>><br>
+
+<<speech "mc">>I’m not just being feminized… I’m being made into a symbol.<</speech>><br>
+
+<<speech "thalara">>Yes. And what a symbol you are becoming.<</speech>><br>
+[[I feel the potion working in my breast|use_success_potion_create_chest]]
+<</nobr>>
+
+
+
+
+
+:: chest_10_chest_11
+<<nobr>>
+<div style="text-align: center; width: 95%;"><img style="text-align: center; border-radius: 9px;
+    border: 10px ridge #8b5e3c;width: 95%;" @src="setup.ImagePath+'map/veil_tower_mage_map.png'"></div>
+<<speech "thalara">>You have brewed the potion. Let me see it first.  Caelan Are you ready to start the process...<</speech>>
+<br>
+[[I’ve come this far. Let’s show them something they won’t forget.|chest_10_chest_11_1]] | <br><br>
+[[This is… really big. I hope I’m not making a mistake.|chest_10_chest_11_1]] | <br><br>
+[[Fine. Let’s get this over with. It’s just more weight, right?|chest_10_chest_11_1]] | <br><br>
+<</nobr>>
+
+:: chest_10_chest_11_1
+<<nobr>>
+<<speech "mc">>You weren’t kidding when you said it would become a burden. It’s like I’m hauling two sacks of wet grain strapped to me already.<</speech>><br>
+
+<<speech "thalara">>And yet, you walk upright. Impressive. Many lose balance before they gain grace.<</speech>><br>
+
+<<speech "mc">>Grace, huh? I nearly knocked over a suit of armor in the east wing. Is that graceful enough?<</speech>><br>
+
+<<speech "thalara">>Some queens shake the court with words. Others shake it with every step. You, Caelan, may do both.<</speech>><br>
+[[Move Forth|chest_10_chest_11_2]]
+<</nobr>>
+
+:: chest_10_chest_11_2
+<<nobr>>
+
+
+<<speech "mc">>Do you always speak in riddles when someone’s about to grow out of their last wearable robe?<</speech>><br>
+
+<<speech "thalara">>This stage isn’t about clothing. It’s about inevitability. Once you drink this, there will be no more ambiguity. No mistaking you for a prince, not even from behind.<</speech>><br>
+
+<<speech "mc">>And if I regret it? What then?<</speech>><br>
+
+<<speech "thalara">>Then you will wear your regret as you do your body with poise. Regret does not undo growth. It teaches you how to carry it.<</speech>><br>
+
+[[Move Forth|chest_10_chest_11_3]]
+<</nobr>>
+
+:: chest_10_chest_11_3
+<<nobr>>
+<<speech "mc">>You know they stare. Even the guards. Even the servants.<</speech>><br>
+
+<<speech "thalara">>Of course. You’re becoming the myth they whisper about. The prince turned enchantress. The body that shouldn’t be but is. Their eyes can’t help it.<</speech>><br>
+
+<<speech "mc">>Well, I hope they enjoy the view. Because it’s getting heavier by the day.<</speech>><br>
+
+<<speech "thalara">>They don’t just look at you, Caelan. They see you. This form is impossible to ignore. You radiate presence. You command space.<</speech>><br>
+[[Move Forth|chest_10_chest_11_4]]
+<</nobr>>
+
+:: chest_10_chest_11_4
+<<nobr>>
+<<speech "mc">>And what if I don’t want that kind of presence?<</speech>><br>
+
+<<speech "thalara">>Then this is the time to stop. But if you drink this... you are choosing a body that dominates not just rooms but conversations, minds, and memories.<</speech>><br>
+
+<<speech "mc">>Give it to me.<</speech>><br>
+
+<<speech "mc">>Goddess... it’s like... they’re alive.<</speech>><br>
+[[Move Forth|chest_10_chest_11_5]]
+<</nobr>>
+
+:: chest_10_chest_11_5
+<<nobr>>
+
+<<speech "thalara">>They are. You are. This is form incarnate femininity carved in full bloom. You carry not just softness now, but powerful softness. Intimidating, intoxicating.<</speech>><br>
+
+<<speech "mc">>I can’t walk through a door without brushing something against it.<</speech>><br>
+
+<<speech "thalara">>Your hips may follow soon enough. For now, let your steps adjust. Find rhythm in the sway. Learn to move with them, not despite them.<</speech>><br>
+
+<<speech "mc">>You make it sound like I’m wielding weapons.<</speech>><br>
+
+[[Move Forth|chest_10_chest_11_6]]
+<</nobr>>
+
+:: chest_10_chest_11_6
+<<nobr>>
+
+<<speech "thalara">>You are. They just happen to be soft, warm, and hypnotic.<</speech>><br>
+
+<<speech "mc">>And here I thought swords were complicated...<</speech>><br>
+
+<<speech "thalara">>Steel cuts flesh. Curves cut expectations. You, Caelan, are becoming more dangerous than any blade.<</speech>><br>
+[[I feel the potion working in my breast|use_success_potion_create_chest]]
+<</nobr>>
+
+
+
+
+
+
+
+
+:: chest_11_chest_12
+<<nobr>>
+<div style="text-align: center; width: 95%;"><img style="text-align: center; border-radius: 9px;
+    border: 10px ridge #8b5e3c;width: 95%;" @src="setup.ImagePath+'map/veil_tower_mage_map.png'"></div>
+<<speech "thalara">>You have brewed the potion. Let me see it first.  Caelan Are you ready to start the process...<</speech>>
+<br>
+[[I’m ready. If this is what it means to rule then let them see me.|chest_11_chest_12_1]] | <br><br>
+[[I don’t know if I’ll ever be ready for how the world sees me... but I’ll do it anyway.|chest_11_chest_12_1]] | <br><br>
+[[If I must be crowned, then let me do it with a form no one dares ignore.|chest_11_chest_12_1]] | <br><br>
+<</nobr>>
+
+:: chest_11_chest_12_1
+<<nobr>>
+<<speech "mc">>So this is the last one. The end of this path...It’s strange. I thought I’d feel triumphant. Instead, I feel... exposed.<</speech>><br>
+
+<<speech "thalara">>That’s because you are. Power is always naked beneath its robes, Caelan. But so is truth.<</speech>><br>
+
+<<speech "mc">>And truth now weighs several pounds each, bounces when I breathe, and makes eye contact before I do.<</speech>><br>
+
+<<speech "thalara">>Indeed. And no diplomat, knight, or noble will ever ignore you again. Not because they choose to listen because they must.<</speech>><br>
+[[Move Forth|chest_11_chest_12_2]]
+<</nobr>>
+
+:: chest_11_chest_12_2
+<<nobr>>
+<<speech "mc">>And what if they only see... these? What if they stop seeing me?<</speech>><br>
+
+<<speech "thalara">>Then make sure your voice echoes louder than your curves, even if your curves shout first.<</speech>><br>
+
+<<speech "mc">>I can’t believe I used to feel pride in my shoulders... now I can’t see them. They bounce with every step. My nipples feel like hot coins. And they sag Thalara, they sway like...<</speech>><br>
+
+<<speech "thalara">>Like a queen who doesn’t shrink from her own presence. Who knows her form is a weapon, a seduction, a promise. This body is a command.<</speech>><br>
+[[Move Forth|chest_11_chest_12_3]]
+<</nobr>>
+
+:: chest_11_chest_12_3
+<<nobr>>
+<<speech "mc">>Then pour it. Let them stare. Let them remember.<</speech>><br>
+
+<<speech "thalara">>This is the end of your chest’s journey. There will be no hiding after today. Your dresses will cling. Your walk will sway. And when you sit on your throne, your presence alone will silence courtiers.<</speech>><br>
+
+<<speech "mc">>It’s thick. Like drinking honey... like it knows what it's doing.<</speech>><br>
+
+<<speech "thalara">>It does. It stretches, swells, lifts, droops, and ripens. You are becoming the embodiment of lushness.<</speech>><br>
+[[Move Forth|chest_11_chest_12_4]]
+<</nobr>>
+
+:: chest_11_chest_12_4
+<<nobr>>
+<<speech "mc">>By the stars... they're massive... my gods, they hurt. They feel... real. Like I could nurse a kingdom.<</speech>><br>
+
+<<speech "thalara">>That’s the power, Caelan. You are no longer androgynous. No longer curious. You are formed. Fully. Softness and command in equal measure.<</speech>><br>
+
+<<speech "mc">>They sag so much... so heavy. But they feel like me now.<</speech>><br>
+
+<<speech "thalara">>They are you. And every step from now on will remind you of that. You’ve crossed the final threshold. You’ve grown into royalty not through blade or birthright, but through becoming.<</speech>><br>
+[[Move Forth|chest_11_chest_12_5]]
+<</nobr>>
+
+:: chest_11_chest_12_5
+<<nobr>>
+<<speech "mc">>So this is what it means to carry power like a woman.<</speech>><br>
+
+<<speech "thalara">>This is what it means to rule as one.<</speech>><br>
+[[I feel the potion working in my breast|use_success_potion_create_chest]]
+<</nobr>>
+
+
+
+
+
+
+
+:: chest_12_chest_11
+<<nobr>>
+<div style="text-align: center; width: 95%;"><img style="text-align: center; border-radius: 9px;
+    border: 10px ridge #8b5e3c;width: 95%;" @src="setup.ImagePath+'map/veil_tower_mage_map.png'"></div>
+<<speech "thalara">>You have brewed the potion. Let me see it first.  Caelan Are you ready to start the process...<</speech>>
+<br>
+[[I need this. I’ve gone too far. I just want to feel me again not lost under all this.|chest_12_chest_11_1]] | <br><br>
+[[I don’t know if I’m making a mistake, but... I feel like I’m being buried by myself.|chest_12_chest_11_1]] | <br><br>
+[[This isn't surrender. It's strategy. Let them stare less for now.|chest_12_chest_11_1]] | <br><br>
+<</nobr>>
+
+:: chest_12_chest_11_1
+<<nobr>>
+<<speech "mc">>Every breath pulls the fabric tighter. Every step is a bounce, a sway, a drag.
+He sighs. "I thought I'd feel powerful. Instead, I feel... swallowed.<</speech>><br>
+
+<<speech "thalara">>It happens. When one grows beyond the world’s bounds, the world forgets how to hold them. You’ve crossed into excess, Caelan glorious excess, but excess still.<</speech>><br>
+
+<<speech "mc">>I’ve gone too far, haven’t I? I can’t dress without spilling. I can’t walk without swaying like I’m in heat. I can’t focus they jiggle every time I breathe.<</speech>><br>
+
+<<speech "thalara">>You’re not wrong. These breasts are the kind sculptors struggle to carve in marble. You don’t enter a room anymore you dominate it, unintentionally.<</speech>><br>
+[[Move Forth|chest_12_chest_11_2]]
+<</nobr>>
+
+:: chest_12_chest_11_2
+<<nobr>>
+<<speech "mc">>Maybe I don’t want to dominate. Not like this. I wanted to be seen... but now I’m being stared at.<</speech>><br>
+
+<<speech "thalara">>Then take this. Let your presence remain grand, womanly but not overwhelming. Let them see you again, not just... be hypnotized.<</speech>><br>
+
+<<speech "mc">>Will it hurt?<</speech>><br>
+
+<<speech "thalara">>No. But you’ll feel it. A slow pull inward. Less bounce. Slight lift. Nipples will recede just a bit. The weight will ease, and so will the stares.<</speech>><br>
+[[Move Forth|chest_12_chest_11_3]]
+<</nobr>>
+
+:: chest_12_chest_11_3
+<<nobr>>
+<<speech "mc">>They called me Queen with reverence. But lately... I think they mean something else. Something heavier.<</speech>><br>
+
+<<speech "thalara">>The crown must fit the head, not just the chest. Let this shape be yours, not theirs.<</speech>><br>
+
+<<speech "mc">>It tastes like quiet.<</speech>><br>
+
+<<speech "thalara">>It is. Quiet. Balance. Your form will still sing but not scream.<</speech>><br>
+[[Move Forth|chest_12_chest_11_4]]
+<</nobr>>
+
+:: chest_12_chest_11_4
+<<nobr>>
+<<speech "mc">>They’re pulling in... still big... still soft. But not suffocating.<</speech>><br>
+
+<<speech "thalara">>Exactly. You are not erasing power you’re choosing how to wield it.<</speech>><br>
+
+<<speech "mc">>It’s strange. I feel... more myself now. Still woman. Still ruler. But less spectacle.<</speech>><br>
+
+<<speech "thalara">>Then you’ve found what most rulers never do your center. And in that center, Caelan, lies the kind of power no one dares mock.<</speech>><br>
+[[I feel the potion working in my breast|use_success_potion_create_chest]]
+<</nobr>>
+
+
+
+
+
+
+
+
+:: chest_11_chest_10
+<<nobr>>
+<div style="text-align: center; width: 95%;"><img style="text-align: center; border-radius: 9px;
+    border: 10px ridge #8b5e3c;width: 95%;" @src="setup.ImagePath+'map/veil_tower_mage_map.png'"></div>
+<<speech "thalara">>You have brewed the potion. Let me see it first.  Caelan Are you ready to start the process...<</speech>>
+<br>
+[[I need to breathe again. Let’s bring this back a notch.|chest_11_chest_10_1]] | <br><br>
+[[I don’t know if I’m going backward or just catching my breath.|chest_11_chest_10_1]] | <br><br>
+[[This doesn’t change anything. I’m still being shaped, just slower.|chest_11_chest_10_1]] | <br><br>
+<</nobr>>
+
+:: chest_11_chest_10_1
+<<nobr>>
+<<speech "mc">>They're... enormous. I can’t lie, Thalara sometimes I feel like I’ve become my own furniture.<</speech>><br>
+
+<<speech "thalara">>Lavish furnishings are the mark of a royal court. But yes... your frame groans beneath the grandeur. That’s what today is for.<</speech>><br>
+
+<<speech "mc">>It won’t undo all of it?<</speech>><br>
+
+<<speech "thalara">>No. Not even close. You’ll still turn heads in every hallway. But this will make them less... operatic.<</speech>><br>
+[[Move Forth|chest_11_chest_10_2]]
+<</nobr>>
+
+:: chest_11_chest_10_2
+<<nobr>>
+<<speech "mc">>Good. Because I swear I heard a lute string snap the last time I ran across the courtyard.<</speech>><br>
+
+<<speech "thalara">>Some dresses are stitched with ambition, not reinforcement. Drink, and the strain will ease. Your posture will thank you.<</speech>><br>
+
+<<speech "mc">>What if I get used to the weight? What if I end up missing it?<</speech>><br>
+
+<<speech "thalara">>Then you’ll grow again. This path doesn’t vanish it simply pauses where you need it to.<</speech>><br>
+[[Move Forth|chest_11_chest_10_3]]
+<</nobr>>
+
+:: chest_11_chest_10_3
+<<nobr>>
+<<speech "mc">>I still feel their weight... even when I’m dreaming.<</speech>><br>
+
+<<speech "thalara">>That’s because your dreams no longer belong to the man you were. They belong to the woman forming beneath.<</speech>><br>
+
+<<speech "mc">>Oof... it’s cold. It’s like it’s lifting up from the inside...<</speech>><br>
+
+<<speech "thalara">>That’s exactly what it does. Tissues condense. Sag reduces. Volume shrinks, just enough to be supported without surrendering softness.<</speech>><br>
+[[Move Forth|chest_11_chest_10_4]]
+<</nobr>>
+
+:: chest_11_chest_10_4
+<<nobr>>
+<<speech "mc">>It feels... easier. Lighter. But still there. Still... me.<</speech>><br>
+
+<<speech "thalara">>Good. Because that’s all this is meant to do help you feel yourself without feeling crushed by yourself.<</speech>><br>
+
+<<speech "mc">>Is it weakness to take a step back like this?<</speech>><br>
+
+<<speech "thalara">>No. It is wisdom. You are not unmaking what you’ve become. You’re pacing it. Honoring the strain it takes to bloom.<</speech>><br>
+[[Move Forth|chest_11_chest_10_5]]
+<</nobr>>
+
+:: chest_11_chest_10_5
+<<nobr>>
+<<speech "mc">>They’re still... huge. But not... consuming.<</speech>><br>
+
+<<speech "thalara">>Then the balance is struck. Still tempting. Still womanly. But no longer a burden. You’ve taken back some control.<</speech>><br>
+
+<<speech "mc">>For now. But knowing me, I’ll be back here in a week asking for the next vial up.<</speech>><br>
+
+<<speech "thalara">>And I will have it waiting. But for tonight, enjoy the silence in your spine.<</speech>><br>
+[[I feel the potion working in my breast|use_success_potion_create_chest]]
+<</nobr>>
+
+
+
+
+
+
+
+:: chest_10_chest_9
+<<nobr>>
+<div style="text-align: center; width: 95%;"><img style="text-align: center; border-radius: 9px;
+    border: 10px ridge #8b5e3c;width: 95%;" @src="setup.ImagePath+'map/veil_tower_mage_map.png'"></div>
+<<speech "thalara">>You have brewed the potion. Let me see it first.  Caelan Are you ready to start the process...<</speech>>
+<br>
+[[Let’s revert this back. I need a break from feeling like a walking monument.|chest_10_chest_9_1]] | <br><br>
+[[I’m not sure I want to go smaller... but I can’t breathe in this corset anymore.|chest_10_chest_9_1]] | <br><br>
+[[Fine. Shrink 'em if you must. I’m sick of people staring like I’m a goddess on parade.|chest_10_chest_9_1]] | <br><br>
+<</nobr>>
+
+:: chest_10_chest_9_1
+<<nobr>>
+<<speech "mc">>So this actually… shrinks them? Not all the way, right? Just... enough?<</speech>><br>
+
+<<speech "thalara">>Just enough. It relieves the strain eases the pull on your spine and the tightness of your clothing. But you remain unmistakably a woman, Caelan. A very full one.<</speech>><br>
+
+<<speech "mc">>Good. Because I’ve been knocking over goblets with every turn. I turned around in the library and took out a whole candleholder.<</speech>><br>
+
+<<speech "thalara">>Ah yes. The notorious ‘shelf cleaving bust’ phase. Some celebrate it. Others... choose a gentler curve.<</speech>><br>
+[[Move Forth|chest_10_chest_9_2]]
+<</nobr>>
+
+:: chest_10_chest_9_2
+<<nobr>>
+<<speech "mc">>I didn’t mind being full, but this last level? It made everything about my chest. Every hallway echo. Every glance. Every whisper.<</speech>><br>
+
+<<speech "thalara">>Your body spoke louder than your words, and not everyone knows how to listen beyond the curves. This step this soft regression can be a mercy. Or a reprieve.<</speech>><br>
+
+<<speech "mc">>Will I lose the sensitivity too?<</speech>><br>
+
+<<speech "thalara">>Some. But not all. This dose leaves you luscious, not diminished. You’ll bounce less. Nipples will ache less. But you’ll still turn heads just with less weight pulling you forward.<</speech>><br>
+[[Move Forth|chest_10_chest_9_3]]
+<</nobr>>
+
+:: chest_10_chest_9_3
+<<nobr>>
+<<speech "mc">>So I won’t be a walking fertility statue anymore?<</speech>><br>
+
+<<speech "thalara">>Not quite. But still a temple worth worshipping, I think.<</speech>><br>
+
+<<speech "mc">>Gods, woman. How do you say that with a straight face?<</speech>><br>
+
+<<speech "thalara">>Because I know what transformation means not just physically, but politically, emotionally. You are learning to wield shape like a blade. But even blades need sheathes.<</speech>><br>
+[[Move Forth|chest_10_chest_9_4]]
+<</nobr>>
+
+:: chest_10_chest_9_4
+<<nobr>>
+<<speech "mc">>Alright. Let’s sheath it... just a little.<</speech>><br>
+
+<<speech "mc">>Oh. That’s... lighter. Still big. Still swaying. But I’m not toppling anymore.<</speech>><br>
+
+<<speech "thalara">>Yes. The fabric relaxes. Your stance stabilizes. You are still beautifully busty, Caelan but you are once more navigable.<</speech>><br>
+
+<<speech "mc">>My back thanks you. I can finally walk without feeling like I’m dragging two barrels of cream on my chest.<</speech>><br>
+[[Move Forth|chest_10_chest_9_5]]
+<</nobr>>
+
+:: chest_10_chest_9_5
+<<nobr>>
+<<speech "thalara">>Careful. Too many reversals and you may find your admirers disappointed.<</speech>><br>
+
+<<speech "mc">>Let them adjust. This body’s mine not theirs to ogle.<</speech>><br>
+
+<<speech "thalara">>Spoken like someone learning the difference between being shaped... and taking shape.<</speech>><br>
+[[I feel the potion working in my breast|use_success_potion_create_chest]]
+<</nobr>>
+
+
+
+
+
+
+
+
+
+:: chest_9_chest_8
+<<nobr>>
+<div style="text-align: center; width: 95%;"><img style="text-align: center; border-radius: 9px;
+    border: 10px ridge #8b5e3c;width: 95%;" @src="setup.ImagePath+'map/veil_tower_mage_map.png'"></div>
+<<speech "thalara">>You have brewed the potion. Let me see it first.  Caelan Are you ready to start the process...<</speech>>
+<br>
+[[I need a little less attention today. Just want to feel like myself again.|chest_9_chest_8_1]] | <br><br>
+[[I’m not sure if this is the right move… but maybe I went too far last time.|chest_9_chest_8_1]] | <br><br>
+[[Fine. If I’m stuck here, I’ll dial it back. I’m not a walking display.|chest_9_chest_8_1]] | <br><br>
+<</nobr>>
+
+:: chest_9_chest_8_1
+<<nobr>>
+<<speech "mc">>They’ve been bouncing with everything lately. I can barely walk down the stairs without… well, everyone noticing.<</speech>><br>
+
+<<speech "thalara">>That was the nature of Level Six. It was meant to be bold. Now you seek retreat.<</speech>><br>
+
+<<speech "mc">>Not a full retreat. Just… breathing room. My nipples keep brushing fabric no matter what I wear. It’s maddening.<</speech>><br>
+
+<<speech "thalara">>A crown can weigh heavy. You’ve worn yours bravely, but you are not trapped by it. That is the beauty of this process you may lean forward or back, so long as you remain honest with yourself.<</speech>><br>
+[[Move Forth|chest_9_chest_8_2]]
+<</nobr>>
+
+:: chest_9_chest_8_2
+<<nobr>>
+<<speech "mc">>I thought I could own it, really own that look. And for a time… I did. But then I saw the way some of the guards stared. And the stablehands. And my cousin at dinner gods, that was awkward.<</speech>><br>
+
+<<speech "thalara">>The gaze of others can be as heavy as the flesh you carry. Sometimes heavier. But don’t mistake that for failure. You’re testing your form. Adjusting. Like a tailor with their final stitch.<</speech>><br>
+
+<<speech "mc">>This won’t undo everything, will it? I still want to… feel like I’ve crossed a line. Just maybe not quite so far.<</speech>><br>
+
+<<speech "thalara">>No. You will remain undeniably feminine. But less extravagant. Less... monumental. Your bust will still be full, shapely merely less commanding. Your nipples, while still noticeable, will retreat from center stage.<</speech>><br>
+[[Move Forth|chest_9_chest_8_3]]
+<</nobr>>
+
+:: chest_9_chest_8_3
+<<nobr>>
+<<speech "mc">>That sounds like such a strange thing to measure… nipple prominence.<</speech>><br>
+
+<<speech "thalara">>In your case, it’s a very important detail. Every movement you've made since Level Six has sent ripples through your body, your court, your self-perception. This is a moment of gentle recalibration.<</speech>><br>
+
+<<speech "mc">>Do many transitioners step back like this?<</speech>><br>
+
+<<speech "thalara">>The path to self is rarely a straight line. Some push forward too fast, others linger in comfort zones. You, Caelan, are walking a knife’s edge balancing destiny, identity, and legacy. Small reversals are not weakness. They’re wisdom.<</speech>><br>
+[[Move Forth|chest_9_chest_8_4]]
+<</nobr>>
+
+:: chest_9_chest_8_4
+<<nobr>>
+<<speech "mc">>It’s cooler than the others. Almost refreshing...<</speech>><br>
+
+<<speech "thalara">>It will ease the heat in your chest. Reduce the pull on your shoulders. You’ll still bounce, but not with such urgency. And your nipples will find quiet again.<</speech>><br>
+
+<<speech "mc">>It’s happening already. The weight’s still there, but it’s... hugging me instead of pulling me forward. It feels less like an announcement.<</speech>><br>
+
+<<speech "thalara">>Exactly. You are not abandoning femininity. You are simply turning the volume down for now. And if, or when, you’re ready to rise again... the chamber will welcome you.<</speech>><br>
+
+[[Move Forth|chest_9_chest_8_5]]
+<</nobr>>
+
+:: chest_9_chest_8_5
+<<nobr>>
+<<speech "mc">>I almost miss being flat. Almost. But this… this feels manageable. A middle path.<</speech>><br>
+
+<<speech "thalara">>A queen must know when to stand tall and when to rest her crown. You’ve chosen well today, Caelan.<</speech>><br>
+[[I feel the potion working in my breast|use_success_potion_create_chest]]
+<</nobr>>
+
+
+
+
+
+
+
+:: chest_8_chest_7
+<<nobr>>
+<div style="text-align: center; width: 95%;"><img style="text-align: center; border-radius: 9px;
+    border: 10px ridge #8b5e3c;width: 95%;" @src="setup.ImagePath+'map/veil_tower_mage_map.png'"></div>
+<<speech "thalara">>You have brewed the potion. Let me see it first.  Caelan Are you ready to start the process...<</speech>>
+<br>
+[[It’s time I took a step back. I’m not ready to carry this… allure just yet.|chest_8_chest_7_1]] | <br><br>
+[[I don’t know if this is the right choice, but I can’t handle the weight or stares today.|chest_8_chest_7_1]] | <br><br>
+[[I was pushed too far. I never wanted to bounce with every step. So yes, I want less.|chest_8_chest_7_1]] | <br><br>
+<</nobr>>
+
+:: chest_8_chest_7_1
+<<nobr>>
+<<speech "mc">>They’ve gotten too big. I can’t even walk through the palace halls without catching looks or knocking into things.<</speech>><br>
+
+<<speech "thalara">>It’s a burden, I know. One not all women choose willingly. Beauty, after all, can be as heavy as armor… and just as restrictive.<</speech>><br>
+
+<<speech "mc">>I didn’t mind the change at first. It was subtle. Curious. But now? I can’t train, I can’t sleep on my stomach, and every movement feels... exaggerated.<</speech>><br>
+
+<<speech "thalara">>You’ve stepped into a form that demands attention. That pulls focus. But stepping back isn’t weakness it’s strategy. A queen knows when to advance, and when to retreat.<</speech>><br>
+[[Move Forth|chest_8_chest_7_2]]
+<</nobr>>
+
+:: chest_8_chest_7_2
+<<nobr>>
+<<speech "mc">>Will it shrink them much?<</speech>><br>
+
+<<speech "thalara">>They will lose a degree of volume. Your cleavage will soften. The deep, brazen swell will recede still feminine, still full, but not overpowering. You’ll walk with less bounce, sleep more easily, and breathe a little freer.<</speech>><br>
+
+<<speech "mc">>And my nipples? They’ve been... sensitive. Sometimes unbearably so.<</speech>><br>
+
+<<speech "thalara">>That, too, will ease. The nerves won’t vanish, but they’ll settle. You may even miss the edge of it after a while. Sensation is seductive, even to the reluctant.<</speech>><br>
+[[Move Forth|chest_8_chest_7_3]]
+<</nobr>>
+
+:: chest_8_chest_7_3
+<<nobr>>
+<<speech "mc">>It’s not that I hate it. It's just... it feels like they’re starting to define me. I can see how people are treating me differently. I didn’t realize how much power breasts had until I had them.<</speech>><br>
+
+<<speech "thalara">>And now you wield the wisdom of both worlds. You’ve felt that sway, that gaze-following presence. And you can put it away when it suits you. That’s true power not just becoming something, but being able to choose what to be.<</speech>><br>
+
+<<speech "mc">>You always speak in riddles, Thalara.<</speech>><br>
+
+<<speech "thalara">>I speak in truths dressed as riddles. It’s the only way your mind listens sometimes.<</speech>><br>
+[[Move Forth|chest_8_chest_7_4]]
+<</nobr>>
+
+:: chest_8_chest_7_4
+<<nobr>>
+<<speech "mc">>If I drink this… I’ll still be feminine. Just less... overwhelming?<</speech>><br>
+
+<<speech "thalara">>Exactly. You’ll keep your shape, but it will whisper instead of shout. This isn’t regression it’s refinement.<</speech>><br>
+
+<<speech "mc">>Alright. I’m ready to breathe again.<</speech>><br>
+
+<<speech "thalara">>Then let your chest lighten. Let the tension ease. The world need not always watch you sway.<</speech>><br>
+[[Move Forth|chest_8_chest_7_5]]
+<</nobr>>
+
+:: chest_8_chest_7_5
+<<nobr>>
+<<speech "mc">>It’s cold. Like mint in my lungs.<</speech>><br>
+
+<<speech "thalara">>Good. That means it’s working. Your skin will tighten first. Then the tissue will soften and pull inward slightly. It won’t vanish it will compact.<</speech>><br>
+
+<<speech "mc">>They're... lighter. Still there, but they’re not demanding anymore. It’s almost a relief.<</speech>><br>
+
+<<speech "thalara">>You may return to this path, forward or back. The journey is yours, Caelan. But no matter the size, remember this: your form never dictates your strength. Only your will does.<</speech>><br>
+[[Move Forth|chest_8_chest_7_6]]
+<</nobr>>
+
+:: chest_8_chest_7_6
+<<nobr>>
+<<speech "mc">>Thank you... I needed that.<</speech>><br>
+
+<<speech "thalara">>Come back when you’re ready for the next choice. Your body listens to your heart even when you’re unsure what it’s saying.<</speech>><br>
+[[I feel the potion working in my breast|use_success_potion_create_chest]]
+<</nobr>>
+
+
+
+
+
+
+
+:: chest_7_chest_6
+<<nobr>>
+<div style="text-align: center; width: 95%;"><img style="text-align: center; border-radius: 9px;
+    border: 10px ridge #8b5e3c;width: 95%;" @src="setup.ImagePath+'map/veil_tower_mage_map.png'"></div>
+<<speech "thalara">>You have brewed the potion. Let me see it first.  Caelan Are you ready to start the process...<</speech>>
+<br>
+[[Honestly, I could use a little relief. My tunic’s been working overtime.|chest_7_chest_6_1]] | <br><br>
+[[I’m not sure if this is right, but… maybe I need to slow down.|chest_7_chest_6_1]] | <br><br>
+[[Good. They were getting ridiculous anyway. I don’t want to bounce like that.|chest_7_chest_6_1]] | <br><br>
+<</nobr>>
+
+:: chest_7_chest_6_1
+<<nobr>>
+<<speech "mc">>I didn’t realize how much they’d changed me until I tried leaning over a table this morning. Nearly knocked over the inkwell.<</speech>><br>
+
+<<speech "thalara">>It’s always the little things, isn’t it? Reaching for something, jogging up stairs, or simply breathing in a fitted tunic. Your body has shifted into something bold. This potion will quiet that boldness.<</speech>><br>
+
+<<speech "mc">>So this won’t undo it all? Just... tone it down?<</speech>><br>
+
+<<speech "thalara">>Yes. This is not reversal, only reduction. Your breasts will remain full rounded and feminine but they’ll retreat from the edge of lavishness. You’ll feel lighter. Less pronounced.<</speech>><br>
+[[Move Forth|chest_7_chest_6_2]]
+<</nobr>>
+
+:: chest_7_chest_6_2
+<<nobr>>
+<<speech "mc">>I didn’t expect how much attention they’d draw. It’s like walking with a sign across my chest. A big, jiggling sign.<</speech>><br>
+
+<<speech "thalara">>That is often the point of Level Four. Visibility. Command. Sensuality. But you’re not wrong it’s also exhausting. Breasts at that size begin to act on their own, pulling focus wherever you go.<</speech>><br>
+
+<<speech "mc">>They’ve been sore lately too. Sensitive. Every bump, every step… I’m not used to carrying them.<</speech>><br>
+
+<<speech "thalara">>And you shouldn’t rush into comfort with something that reshapes not just your body but your posture, your pace, your very movement through the world. That comfort must be earned, not forced.<</speech>><br>
+[[Move Forth|chest_7_chest_6_3]]
+<</nobr>>
+
+:: chest_7_chest_6_3
+<<nobr>>
+<<speech "mc">>I thought being bold would make me feel more in control. But it’s starting to feel like they control me.<</speech>><br>
+
+<<speech "thalara">>Then take back that control. This potion returns some quiet to your body. Let your chest settle into a form that supports you, not commands you.<</speech>><br>
+
+<<speech "mc">>Will people still notice?<</speech>><br>
+
+<<speech "thalara">>Yes. But they’ll admire. Not stare. You’ll remain full-breasted, feminine present, but not overpowering. It’s a different kind of allure. Calmer. More composed.<</speech>><br>
+[[Move Forth|chest_7_chest_6_4]]
+<</nobr>>
+
+:: chest_7_chest_6_4
+<<nobr>>
+<<speech "mc">>Feels... chillier than the others.<</speech>><br>
+
+<<speech "thalara">>It’s meant to calm swelling, not spark it. A binding brew, threaded with snowblossom and duskroot. You should feel the tension loosen within moments.<</speech>><br>
+
+<<speech "mc">>Oh… gods, yes. That’s better. They’re still there, but not as heavy. I can actually breathe again.<</speech>><br>
+
+<<speech "thalara">>You may want to rewrap them after this. Your tunic will hang differently now less taut, more graceful.<</speech>><br>
+[[Move Forth|chest_7_chest_6_5]]
+<</nobr>>
+
+:: chest_7_chest_6_5
+<<nobr>>
+<<speech "mc">>I thought going forward was the only path. That if I wanted to become... her, I had to accept every ounce of change.<</speech>><br>
+
+<<speech "thalara">>Transformation is not a tunnel, Caelan. It’s a garden. You may step forward, pause, even walk back a path or two to breathe in a different flower. The journey remains yours.<</speech>><br>
+
+<<speech "mc">>They still feel... good. Feminine. Just more me again. I needed this, Thalara.<</speech>><br>
+
+<<speech "thalara">>You are never less for slowing your pace. A queen who listens to her own needs is one who commands well. Rest here, if it suits you. Grow again when you are ready.<</speech>><br>
+
+[[I feel the potion working in my breast|use_success_potion_create_chest]]
+<</nobr>>
+
+
+
+
+
+
+:: chest_6_chest_5
+<<nobr>>
+<div style="text-align: center; width: 95%;"><img style="text-align: center; border-radius: 9px;
+    border: 10px ridge #8b5e3c;width: 95%;" @src="setup.ImagePath+'map/veil_tower_mage_map.png'"></div>
+<<speech "thalara">>You have brewed the potion. Let me see it first.  Caelan Are you ready to start the process...<</speech>>
+<br>
+[[I’ll take the potion. I’m open to seeing what happens when I go back a step.|chest_6_chest_5_1]] | <br><br>
+[[I guess I should do this, even if it feels strange to undo some of the change I’ve already felt.|chest_6_chest_5_1]] | <br><br>
+[[I’m not sure why I need to reverse it. I’ve come this far, why should I shrink back now?|chest_6_chest_5_1]] | <br><br>
+<</nobr>>
+
+:: chest_6_chest_5_1
+<<nobr>>
+<<speech "mc">>I never thought I’d want to make myself smaller… but here we are.<</speech>><br>
+
+<<speech "thalara">>Not smaller, just… more balanced. The transformation doesn’t always move in one direction. Sometimes, you must adjust, reset, to allow your body the time to settle in.<</speech>><br>
+
+<<speech "mc">>So, it’s like a pause?<</speech>><br>
+
+<<speech "thalara">>Exactly. A brief pause. To allow your body to adapt before continuing. You’ve felt the fullness, the weight, the shift into womanhood. This potion will reverse the most recent of those changes and bring you back to a more subtle version.<</speech>><br>
+[[Move Forth|chest_6_chest_5_2]]
+<</nobr>>
+
+:: chest_6_chest_5_2
+<<nobr>>
+<<speech "mc">>I can feel it already. My chest is tightening, pulling back. It’s like shrinking into myself again.<</speech>><br>
+
+<<speech "thalara">>That’s the essence of balance. You are neither too much nor too little. It will be softer now, more akin to the delicate curves of a young woman.<</speech>><br>
+
+<<speech "mc">>I guess this feels… normal? Maybe even more comfortable. It’s not like before, when I had to get used to the fullness.<</speech>><br>
+
+<<speech "thalara">>Sometimes, too much change too quickly can be overwhelming. A smaller chest may feel more natural for your current state. You’re still feminine, but the transition isn’t as stark.<</speech>><br>
+[[Move Forth|chest_6_chest_5_3]]
+<</nobr>>
+
+:: chest_6_chest_5_3
+<<nobr>>
+<<speech "mc">>So, this isn’t a failure, right? Just a step back?<</speech>><br>
+
+<<speech "thalara">>Not a failure. Just a shift, Caelan. Think of it like a sculptor refining a masterpiece. The shape evolves gradually, with each stage adding depth and understanding.<</speech>><br>
+
+<<speech "mc">>I feel less exposed now, like I can breathe easier in my own skin.<</speech>><br>
+
+<<speech "thalara">>That’s the goal. Comfort is part of the process. You must come to peace with each step, even when it feels contradictory. There’s no shame in adjusting.<</speech>><br>
+[[Move Forth|chest_6_chest_5_4]]
+<</nobr>>
+
+:: chest_6_chest_5_4
+<<nobr>>
+<<speech "mc">>And now I’m back to this more modest version. But I’m sure I’ll have to go back to the fuller shape soon, won’t I?<</speech>><br>
+
+<<speech "thalara">>Only when you’re ready, Caelan. This is your journey, and I’m here to guide you as you choose your path. There’s no hurry. You may find this version more fitting, or you may choose to continue onward.<</speech>><br>
+
+<<speech "mc">>It’s strange. I thought I’d miss the fullness, but this feels… comfortable. Like it’s mine, for now.<</speech>><br>
+
+<<speech "thalara">>Comfort is often the first sign of alignment with your true self. Embrace the changes, but don’t rush through them. Allow each stage to resonate before moving forward.<</speech>><br>
+[[Move Forth|chest_6_chest_5_5]]
+<</nobr>>
+
+:: chest_6_chest_5_5
+<<nobr>>
+<<speech "mc">>I think I understand now. It’s not about racing to the end. It’s about feeling every change, letting each moment settle in.<</speech>><br>
+
+<<speech "thalara">>Exactly. And each change, no matter how small, adds to the woman you are becoming.<</speech>><br>
+[[I feel the potion working in my breast|use_success_potion_create_chest]]
+<</nobr>>
+
+
+
+
+
+
+
+
+
+:: chest_5_chest_4
+<<nobr>>
+<div style="text-align: center; width: 95%;"><img style="text-align: center; border-radius: 9px;
+    border: 10px ridge #8b5e3c;width: 95%;" @src="setup.ImagePath+'map/veil_tower_mage_map.png'"></div>
+<<speech "thalara">>You have brewed the potion. Let me see it first.  Caelan Are you ready to start the process...<</speech>>
+<br>
+[[I think I need to slow things down. Just… for now.|chest_5_chest_4_1]] | <br><br>
+[[I’m not sure if I should. But something inside says I have to.|chest_5_chest_4_1]] | <br><br>
+[[This doesn’t mean I’m quitting. Just… correcting a mistake.|chest_5_chest_4_1]] | <br><br>
+<</nobr>>
+
+:: chest_5_chest_4_1
+<<nobr>>
+<<speech "mc">>This one feels different. Colder, even before I touch it.<</speech>><br>
+
+<<speech "thalara">>It’s meant to cool, to quiet. Where the other potions stir growth, this one soothes it. It reminds the body of stillness, and of neutrality.<</speech>><br>
+
+<<speech "mc">>They’ve barely started… but they’re there. I feel them when I lie down. When I move.<</speech>><br>
+
+<<speech "thalara">>And now you wish to feel less. Not nothing but a gentler echo of what has begun.<</speech>><br>
+
+[[Move Forth|chest_5_chest_4_2]]
+<</nobr>>
+
+:: chest_5_chest_4_2
+<<nobr>>
+
+<<speech "mc">>It’s not that I hate them. It’s just moving faster than I thought it would.<</speech>><br>
+
+<<speech "thalara">>You are allowed to pause. Even to step back. This path does not require haste it requires truth. And yours, I suspect, is still unfolding.<</speech>><br>
+
+<<speech "mc">>So if I drink this… what changes?<</speech>><br>
+
+<<speech "thalara">>The mounds you feel now will ease. The tension beneath your skin the tingling warmth will ebb. You’ll remain soft, but less shaped. The curves won’t vanish, but they’ll smooth back into subtler suggestions.<</speech>><br>
+[[Move Forth|chest_5_chest_4_3]]
+<</nobr>>
+
+:: chest_5_chest_4_3
+<<nobr>>
+<<speech "mc">>Will the sensitivity fade too?<</speech>><br>
+
+<<speech "thalara">>A little. The nerves will dull, not die. Think of it as resting the garden rather than burning it down.<</speech>><br>
+
+<<speech "mc">>They… felt kind of nice. A part of me liked it.<</speech>><br>
+
+<<speech "thalara">>Then remember that. This is not punishment. This is preservation. You are not saying no you are saying not yet.<</speech>><br>
+[[Move Forth|chest_5_chest_4_4]]
+<</nobr>>
+
+:: chest_5_chest_4_4
+<<nobr>>
+<<speech "mc">>What if I regret stepping back?<</speech>><br>
+
+<<speech "thalara">>Then we brew again. No gate is closed to you. We are sculptors, Caelan. We press clay forward, backward, sideward. We are not demolishing stone.<</speech>><br>
+
+<<speech "mc">>And this won’t erase me?<</speech>><br>
+
+<<speech "thalara">>Never. No magic I offer can do that. It will only quiet the voice of change until you are ready to listen again.<</speech>><br>
+[[Move Forth|chest_5_chest_4_5]]
+<</nobr>>
+
+:: chest_5_chest_4_5
+<<nobr>>
+<<speech "mc">>…Cold. Like frost on my tongue.<</speech>><br>
+
+<<speech "thalara">>That chill is clarity. The flesh beneath your chest listens, slackens. Your body is easing its grip on the curves it tried to claim.<</speech>><br>
+
+<<speech "mc">>It’s strange. I feel lighter. Emptier, almost.<</speech>><br>
+
+<<speech "thalara">>Lighter isn’t emptier. It’s just… breathing room. And that is no small thing.<</speech>><br>
+[[Move Forth|chest_5_chest_4_6]]
+<</nobr>>
+
+:: chest_5_chest_4_6
+<<nobr>>
+<<speech "mc">>They’re still there. But less. Like a memory.<</speech>><br>
+
+<<speech "thalara">>That’s exactly what they are now a promise you can revisit. One sip forward, or one back. All under your will.<</speech>><br>
+
+<<speech "mc">>…Thank you.<</speech>><br>
+
+<<speech "thalara">>When the heart trembles, we do not shame it we listen. That, my dear prince, is the first step of any queen.<</speech>><br>
+
+[[I feel the potion working in my breast|use_success_potion_create_chest]]
+<</nobr>>
+
+
+
+
+
+
+
+
+:: chest_4_chest_3
+<<nobr>>
+<div style="text-align: center; width: 95%;"><img style="text-align: center; border-radius: 9px;
+    border: 10px ridge #8b5e3c;width: 95%;" @src="setup.ImagePath+'map/veil_tower_mage_map.png'"></div>
+<<speech "thalara">>You have brewed the potion. Let me see it first.  Caelan Are you ready to start the process...<</speech>>
+<br>
+[[I’ve thought this through. I want to slow things down.|chest_4_chest_3_1]] | <br><br>
+[[I don’t know if I’m doing the right thing… but I need a breather.|chest_4_chest_3_1]] | <br><br>
+[[I’m not ready to be someone else’s fantasy. Not yet. Maybe not ever.|chest_4_chest_3_1]] | <br><br>
+<</nobr>>
+
+:: chest_4_chest_3_1
+<<nobr>>
+<<speech "thalara">>You carry hesitation in your chest now. I see it in the way you hold your arms.<</speech>><br>
+
+<<speech "mc">>It felt different. I thought I’d welcome the change more. I mean… it was barely noticeable, but I knew something was there.<</speech>><br>
+
+<<speech "thalara">>A budding curve. A whisper of what’s to come. Even the smallest shift echoes deeply when your body has never changed like this before.<</speech>><br>
+
+<<speech "mc">>That’s just it. It echoed too loudly. I looked in the mirror and saw someone in-between… and I didn’t know how to feel about him. Or her.<</speech>><br>
+[[Move Forth|chest_4_chest_3_2]]
+<</nobr>>
+
+:: chest_4_chest_3_2
+<<nobr>>
+<<speech "thalara">>That is no failure, Caelan. Not all paths are walked in straight lines. Even rivers bend to find their flow.<</speech>><br>
+
+<<speech "mc">>What does this one do?<</speech>><br>
+
+<<speech "thalara">>It tells your body to quiet. To hold, rather than bloom. It draws back the earliest growth, reshaping you back into ambiguity. No curve. No edge. Just stillness again.<</speech>><br>
+
+<<speech "mc">>Neutral. Neither prince nor princess.<</speech>><br>
+[[Move Forth|chest_4_chest_3_3]]
+<</nobr>>
+
+:: chest_4_chest_3_3
+<<nobr>>
+<<speech "thalara">>Sometimes, neutrality is power. You are not erasing what you’ve done only taking a breath.<</speech>><br>
+
+<<speech "mc">>Will I regret this?<</speech>><br>
+
+<<speech "thalara">>Only if you believe change must always move forward. But in truth, wisdom often moves in circles.<</speech>><br>
+
+<<speech "mc">>…It’s cold.<</speech>><br>
+[[Move Forth|chest_4_chest_3_4]]
+<</nobr>>
+
+:: chest_4_chest_3_4
+<<nobr>>
+<<speech "thalara">>Yes. Icevine and soulmint. Agents of stillness. Of clarity.<</speech>><br>
+
+<<speech "mc">>I can feel it. The tingling’s gone. That hum beneath the skin… silent.<</speech>><br>
+
+<<speech "thalara">>Your chest is settling. You’ll notice the slight swell flattening again. It will feel softer than before less muscular, but also less feminine.<</speech>><br>
+
+<<speech "mc">>So I’m… back in between. Again.<</speech>><br>
+[[Move Forth|chest_4_chest_3_5]]
+<</nobr>>
+
+:: chest_4_chest_3_5
+<<nobr>>
+<<speech "thalara">>You are always ‘in between,’ Caelan. Between who you were, and who you will be. There is no shame in pausing there.<</speech>><br>
+
+<<speech "mc">>People will ask why I stopped. Why I didn’t go all the way.<</speech>><br>
+
+<<speech "thalara">>Let them ask. Let them wonder. Their curiosity is not your command. You shape your story.<</speech>><br>
+
+<<speech "mc">>I thought I'd feel guilt. But instead… I feel like I can breathe again.<</speech>><br>
+[[Move Forth|chest_4_chest_3_6]]
+<</nobr>>
+
+:: chest_4_chest_3_6
+<<nobr>>
+<<speech "thalara">>Then you’ve made the right step for now. And when your heart calls again, forward or backward, I will be here. With draughts, with counsel… with no judgment.<</speech>><br>
+
+<<speech "mc">>Back to flat. But… not the same flat I started with.<</speech>><br>
+
+<<speech "thalara">>Because you’ve changed, even if only inside. And no potion can undo that.<</speech>><br>
+
+[[I feel the potion working in my breast|use_success_potion_create_chest]]
+<</nobr>>
+
+
+
+
+:: chest_3_chest_2
+<<nobr>>
+<div style="text-align: center; width: 95%;"><img style="text-align: center; border-radius: 9px;
+    border: 10px ridge #8b5e3c;width: 95%;" @src="setup.ImagePath+'map/veil_tower_mage_map.png'"></div>
+<<speech "thalara">>You have brewed the potion. Let me see it first.  Caelan Are you ready to start the process...<</speech>>
+<br>
+[[I want to feel like myself again. Or at least, like the version I was before all this.|chest_3_chest_2_1]] | <br><br>
+[[I’m not sure what I’m doing. I just… I don’t want to be nothing anymore.|chest_3_chest_2_1]] | <br><br>
+[[So I erased myself last time. This time, I take something back. Don’t try to stop me.|chest_3_chest_2_1]] | <br><br>
+<</nobr>>
+
+:: chest_3_chest_2_1
+<<nobr>>
+<<speech "thalara">>You’re returning to definition today. Shape. Identity. Perhaps even strength. Just a little.<</speech>><br>
+
+<<speech "mc">>It’s strange. I didn’t think I’d want this again. But I miss feeling… solid.<</speech>><br>
+
+<<speech "thalara">>The in-between can be freeing. But it can also feel like floating too long.<</speech>><br>
+
+<<speech "mc">>I’ve felt untethered lately. Like my chest doesn’t belong to anyone just some blank space between selves.<</speech>><br>
+[[Move Forth|chest_3_chest_2_2]]
+<</nobr>>
+
+:: chest_3_chest_2_2
+<<nobr>>
+<<speech "thalara">>So you seek form again. There’s no shame in that. Becoming a queen isn’t a straight line. It’s a spiral. Sometimes we walk it backward.<</speech>><br>
+
+<<speech "mc">>Will this make me masculine again?<</speech>><br>
+
+<<speech "thalara">>Not fully. This draught brings back tone, not dominance. It sharpens what was dulled. It whispers strength doesn’t shout it.<</speech>><br>
+
+<<speech "mc">>Why does it feel like a guilty sip?<</speech>><br>
+[[Move Forth|chest_3_chest_2_3]]
+<</nobr>>
+
+:: chest_3_chest_2_3
+<<nobr>>
+<<speech "thalara">>Because we’re trained to think undoing is failure. But it isn’t. It’s remembering. Testing. Feeling the old skin again to see if it still fits.<</speech>><br>
+
+<<speech "mc">>…It’s hot. Almost peppery.<</speech>><br>
+
+<<speech "thalara">>Fireroot and ironleaf. Masculine herbs. They fuel will, not just muscle.<</speech>><br>
+
+<<speech "mc">>It’s not what it was… but it’s something again.<</speech>><br>
+[[Move Forth|chest_3_chest_2_4]]
+<</nobr>>
+
+:: chest_3_chest_2_4
+<<nobr>>
+
+<<speech "thalara">>Not prince, not queen. But anchored again. Re-shaped, not erased.<</speech>><br>
+
+<<speech "mc">>I don’t know what I want to be. But I think I need to feel… real. Defined. Even if it’s temporary.<</speech>><br>
+
+<<speech "thalara">>Then this session has done its work. You are not a prisoner of either path, Caelan. You are a walker between them.<</speech>><br>
+
+<<speech "mc">>You make it sound noble.<</speech>><br>
+[[Move Forth|chest_3_chest_2_5]]
+<</nobr>>
+
+:: chest_3_chest_2_5
+<<nobr>>
+
+<<speech "thalara">>It is noble. Few have the courage to step backward. Even fewer to admit they need it.<</speech>><br>
+
+<<speech "mc">>Thank you… for not shaming me.<</speech>><br>
+
+<<speech "thalara">>This chamber does not demand shame. Only honesty. Come back when you’re ready for the next step forward or back.<</speech>><br>
+[[I feel the potion working in my breast|use_success_potion_create_chest]]
+<</nobr>>
+
+
+
+
+
+
+
+
+
+:: chest_2_chest_1
+<<nobr>>
+<div style="text-align: center; width: 95%;"><img style="text-align: center; border-radius: 9px;
+    border: 10px ridge #8b5e3c;width: 95%;" @src="setup.ImagePath+'map/veil_tower_mage_map.png'"></div>
+<<speech "thalara">>You have brewed the potion. Let me see it first.  Caelan Are you ready to start the process...<</speech>>
+<br>
+[[I’ve changed my mind. I want my strength back.|chest_2_chest_1_1]] | <br><br>
+[[I… don’t know why, but I need to feel like myself again. Even if just for a while.|chest_2_chest_1_1]] | <br><br>
+[[You don’t get to take everything from me. Not yet. Maybe not ever.|chest_2_chest_1_1]] | <br><br>
+<</nobr>>
+
+:: chest_2_chest_1_1
+<<nobr>>
+<<speech "thalara">>The brew is ready. Fireroot for your blood, ironroot for your bones. It will rebuild what you softened last time.<</speech>><br>
+
+<<speech "mc">>Will it hurt?<</speech>><br>
+
+<<speech "thalara">>No. But it will burn. The kind of burn you feel when your breath hits the cold air after a run. It’s not pain it’s memory.<</speech>><br>
+
+<<speech "mc">>So… I’ll look the way I used to again?<</speech>><br>
+
+[[Move Forth|chest_2_chest_1_2]]
+<</nobr>>
+
+:: chest_2_chest_1_2
+<<nobr>>
+
+<<speech "thalara">>More or less. The edge will return angles beneath the skin, the firmness of muscle rebuilt. Your chest will square again. And with it, your presence. Bold. Clear.<</speech>><br>
+
+<<speech "mc">>It’s strange. I thought I wanted to move forward. But something about seeing myself fade like that… I wasn’t ready.<</speech>><br>
+
+<<speech "thalara">>That’s not weakness. It’s awareness. The transformation you’re undertaking isn’t a straight road. There are turns, retreats, and resting points. And there is power in saying no.<</speech>><br>
+
+<<speech "mc">>So you don’t disapprove?<</speech>><br>
+[[Move Forth|chest_2_chest_1_3]]
+<</nobr>>
+
+:: chest_2_chest_1_3
+<<nobr>>
+
+<<speech "thalara">>I do not decide who you are. I only provide what lets you discover it.<</speech>><br>
+
+<<speech "thalara">>The potion will draw the strength from deep within you not from muscle alone, but from memory. From your boyhood games, the swordplay in the training yards, the day you first bested your father in a match.<</speech>><br>
+
+<<speech "mc">>He let me win.<</speech>><br>
+
+[[Move Forth|chest_2_chest_1_4]]
+<</nobr>>
+
+:: chest_2_chest_1_4
+<<nobr>>
+
+<<speech "thalara">>Perhaps. But you still stood straighter afterward. This will give you that straightness again.<</speech>><br>
+
+<<speech "mc">>…It’s like swallowing firewood and steel.<</speech>><br>
+
+<<speech "thalara">>And now it spreads. Your blood carries it into the fibers of your chest. Look already, the shape is shifting.<</speech>><br>
+
+<<speech "mc">>I feel… heavier. Solid. Like I’ve filled back into myself.<</speech>><br>
+
+[[Move Forth|chest_2_chest_1_5]]
+<</nobr>>
+
+:: chest_2_chest_1_5
+<<nobr>>
+
+<<speech "thalara">>You’ve claimed something. That will always change how you walk. This choice is yours to make again and again, as often as you need to.<</speech>><br>
+
+<<speech "mc">>Does it disappoint you?<</speech>><br>
+
+<<speech "thalara">>No. It reminds me you are not a vessel. You are a storm, caught between winds. That means you are alive.<</speech>><br>
+
+<<speech "mc">>I just… needed to feel like I still had a say.<</speech>><br>
+
+[[Move Forth|chest_2_chest_1_6]]
+<</nobr>>
+
+:: chest_2_chest_1_6
+<<nobr>>
+
+<<speech "thalara">>Then say it with your chest. It listens.<</speech>><br>
+[[I feel the potion working in my breast|use_success_potion_create_chest]]
+<</nobr>>

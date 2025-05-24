@@ -1,0 +1,313 @@
+
+
+
+
+:: interact_with_gribblek
+<<nobr>>
+<<set _i to random(0, 19)>>
+<<if _i == 0>>
+    <<speech "gribblek">>
+Well, well, the pretty princeling returns. What is it this time? A cursed ring? A haunted hairbrush? Or perhaps you're here to ask my opinion on eyeliner that doubles as a scrying tool?
+<</speech>>
+<br>
+
+<<speech "mc">>
+I’m here for knowledge, not fashion tips.
+<</speech>>
+<br>
+
+<<speech "gribblek">>
+Tch. Same thing, really. Both are illusions meant to protect squishy egos. Now  what do I get in return for enlightening your royal cluelessness?
+<</speech>>
+<br>
+<<elseif _i == 1>>
+<<speech "gribblek">>
+You know, most people knock before barging into my tower. But not you. No, you stride in like a glitter-drenched storm and expect wisdom to spill from my fanged mouth like wine.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Because you always give it eventually.
+<</speech>>
+<br>
+
+<<speech "gribblek">>
+Ugh. Flattery and accuracy. Fine. Sit. But I want double figs this time. No stems.
+<</speech>>
+<br>
+<<elseif _i == 2>>
+<<speech "gribblek">>
+You're changing again, I see. Inside and out. You wear it like someone trying on another's skin  unsure whether it fits, or if it’ll bite back.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Does it show that much?
+<</speech>>
+<br>
+
+<<speech "gribblek">>
+To most? No. To me? Like a troll in a tutu. But don’t worry. Discomfort is the tax of transformation. Pay it proudly.
+<</speech>>
+<br>
+<<elseif _i == 3>>
+<<speech "gribblek">>
+Once, long ago, a goblin king tried to become a unicorn. Horn and all. Do you know what he learned?
+<</speech>>
+<br>
+
+<<speech "mc">>
+Let me guess  he failed.
+<</speech>>
+<br>
+
+<<speech "gribblek">>
+No, he succeeded. But no one believed it was real. Lesson: sometimes becoming is the easy part. Being seen is harder.
+<</speech>>
+<br>
+<<elseif _i == 4>>
+<<speech "gribblek">>
+The palace mages think I’m mad. Maybe I am. But madness is just insight marinated too long. I see truths they’re too polished to touch.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Then tell me one of those truths.
+<</speech>>
+<br>
+
+<<speech "gribblek">>
+Fine. Here’s one: the crown doesn't fear weakness  it fears unpredictability. You, my shiny little wildcard, are terrifying.
+<</speech>>
+<br>
+<<elseif _i == 5>>
+<<speech "gribblek">>
+You smell like jasmine and self-doubt. A strange combination, but fitting.
+<</speech>>
+<br>
+
+<<speech "mc">>
+You’re not exactly a bouquet yourself.
+<</speech>>
+<br>
+
+<<speech "gribblek">>
+True. But I’m not trying to rule a kingdom. You are. So maybe spray on some certainty next time, hmm?
+<</speech>>
+<br>
+<<elseif _i == 6>>
+<<speech "gribblek">>
+I watched a dream-moth die last night. Its wings shimmered with forgotten names. Beautiful and tragic. Reminded me of you.
+<</speech>>
+<br>
+
+<<speech "mc">>
+That’s… oddly poetic for you.
+<</speech>>
+<br>
+
+<<speech "gribblek">>
+Don’t get used to it. Now hand me that rune chalk or I’ll start comparing you to soggy bread again.
+<</speech>>
+<br>
+<<elseif _i == 7>>
+<<speech "gribblek">>
+Ah, if it isn’t Velmoria’s least boring noble. You’ve either come for forbidden knowledge, or to hide from your mother. Which is it today?
+<</speech>>
+<br>
+
+<<speech "mc">>
+Bit of both.
+<</speech>>
+<br>
+
+<<speech "gribblek">>
+Then you’ll need a stronger invisibility spell… and stronger tea. The court is merciless and you’re still learning how to play dirty.
+<</speech>>
+<br>
+<<elseif _i == 8>>
+<<speech "gribblek">>
+I found an ancient prophecy that mentioned a “shifting heir with moonlight in their eyes.” Sound familiar, or shall I fetch a mirror?
+<</speech>>
+<br>
+
+<<speech "mc">>
+What else did it say?
+<</speech>>
+<br>
+
+<<speech "gribblek">>
+That they’d either save the realm or unravel it with a kiss. Delightfully vague. My favorite kind of doom.
+<</speech>>
+<br>
+<<elseif _i == 9>>
+<<speech "gribblek">>
+Some say goblins don’t feel loyalty. That we’re all teeth and mischief. But I’ve stuck around, haven’t I? I’ve seen your worst moods, your best dresses, your cursed fingernails  and still I stay.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Why?
+<</speech>>
+<br>
+
+<<speech "gribblek">>
+Because watching you rewrite fate is the most fun I’ve had in three hundred years. Now pass me a fig and let’s break another rule.
+<</speech>>
+<br>
+<<elseif _i == 10>>
+<<speech "gribblek">>
+Oh joy, it’s you again. I was just beginning to enjoy the silence of my miserable little exile  and here you come, dragging drama like a jeweled curse.
+<</speech>>
+<br>
+
+<<speech "mc">>
+If you truly hated me, you wouldn’t save your best riddles for my visits.
+<</speech>>
+<br>
+
+<<speech "gribblek">>
+Hate? Pfft. You’re like mold on a spellbook  annoying, inevitable, and oddly nostalgic.
+<</speech>>
+<br>
+<<elseif _i == 11>>
+<<speech "gribblek">>
+You ever try bottling your uncertainty? No? Shame. I could sell it as a love potion. "Essence of Angsty Royal." Guaranteed to confuse and attract.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Careful. That sounds like treason.
+<</speech>>
+<br>
+
+<<speech "gribblek">>
+Treason? Ha! I’ve committed worse crimes for less interesting people. You, at least, are chaos wrapped in velvet.
+<</speech>>
+<br>
+
+
+<<elseif _i == 12>>
+<<speech "gribblek">>
+Do you know how many heirs I’ve seen rise and fall? You’re the first one to ask me why the old glyphs hum when you pass.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Do they hum with approval… or warning?
+<</speech>>
+<br>
+
+<<speech "gribblek">>
+That depends on who’s listening. Magic’s like court politics  half truth, half threat, and always watching.
+<</speech>>
+<br>
+<<elseif _i == 13>>
+<<speech "gribblek">>
+Every time you change your walk, your voice, your clothes  I see it. Not with my eyes, princeling. With the skin between dimensions.
+<</speech>>
+<br>
+
+<<speech "mc">>
+What do you see?
+<</speech>>
+<br>
+
+<<speech "gribblek">>
+A soul shedding skin like a serpent  but unsure if it’s slithering toward power or just trying not to die.
+<</speech>>
+<br>
+<<elseif _i == 14>>
+<<speech "gribblek">>
+I enchanted a fig for you. It’ll make liars hiccup when they speak to you. Eat it before court. Or throw it at your mother. Both amuse me.
+<</speech>>
+<br>
+
+<<speech "mc">>
+You're not supposed to give me weapons.
+<</speech>>
+<br>
+
+<<speech "gribblek">>
+Pfft. It’s not a weapon. It’s a favor. You owe me now. That’s far more dangerous.
+<</speech>>
+<br>
+<<elseif _i == 15>>
+<<speech "gribblek">>
+Your face is changing. Not just from potions and practice  no, it’s in the way you look at your reflection. Less dread. More… defiance.
+<</speech>>
+<br>
+
+<<speech "mc">>
+I don’t know if that’s good or bad.
+<</speech>>
+<br>
+
+<<speech "gribblek">>
+Good? Bad? Bah. It’s delicious. Self-realization tastes better than fear. Keep seasoning it.
+<</speech>>
+<br>
+<<elseif _i == 16>>
+<<speech "gribblek">>
+I once tried to pass as a dwarf to steal a rune axe. Grew a beard with glamor magic and everything. Got caught because I insulted their beer.
+<</speech>>
+<br>
+
+<<speech "mc">>
+And that’s supposed to teach me what, exactly?
+<</speech>>
+<br>
+
+<<speech "gribblek">>
+Simple: masks only work if you know the culture you're mimicking. Don’t fake femininity  understand it. Own it.
+<</speech>>
+<br>
+<<elseif _i == 17>>
+<<speech "gribblek">>
+Heard the court's whispering about your transformation. Some call it divine. Others call it dangerous. I call it delightfully disruptive.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Do you ever take anything seriously?
+<</speech>>
+<br>
+
+<<speech "gribblek">>
+Only two things: the rules of ancient blood magic… and you, when you stop pretending you’re not scared.
+<</speech>>
+<br>
+<<elseif _i == 18>>
+<<speech "gribblek">>
+If you ever want to disappear for a week and return with a new face, I do know a hag in the mosslands. Accepts secrets instead of coin.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Sounds suspiciously tempting.
+<</speech>>
+<br>
+
+<<speech "gribblek">>
+Suspicion is temptation’s perfume. Wear it wisely, princeling.
+<</speech>>
+<br>
+<<elseif _i == 19>>
+<<speech "gribblek">>
+Sometimes I wonder why I didn’t just rot in peace. Then you barge in with your questions and dilemmas, and I remember  there’s still chaos worth watching.
+<</speech>>
+<br>
+
+<<speech "mc">>
+You could have refused to help.
+<</speech>>
+<br>
+
+<<speech "gribblek">>
+Refuse? I may be begrudged, not brainless. Your story’s too good to miss. Just make sure it doesn’t end in fire… or fashion disaster.
+<</speech>>
+<br>
+<</if>>
+[[Leave Goblin in the Right Tower|right_tower]] |<br><br>
+[[Leave Right Tower|castle_map_back_select]]
+<</nobr>>

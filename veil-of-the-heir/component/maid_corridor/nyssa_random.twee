@@ -1,0 +1,560 @@
+
+
+:: interact_with_nyssa
+<<nobr>>
+<<set _i to random(0, 19)>>
+<<if _i == 0>>
+<<speech "nyssa">>
+You’re late, princeling. The stars don’t wait, and neither do I.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Then I suppose I’ll have to make your time worth the wait.
+<</speech>>
+<br>
+
+<<speech "nyssa">>
+Mmm. Promises like that are dangerous. I like dangerous.
+<</speech>>
+<br>
+<<elseif _i == 1>>
+<<speech "nyssa">>
+You’ve stepped into my sanctum. Which means you’re either brave… or foolish.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Or maybe I just wanted to see what you'd do to me.
+<</speech>>
+<br>
+
+<<speech "nyssa">>
+Careful. I love an obedient test subject.
+<</speech>>
+<br>
+<<elseif _i == 2>>
+<<speech "nyssa">>
+You smell like steel and spellfire. Gods, you really are becoming something wicked.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Is that your way of saying I’m enchanting?
+<</speech>>
+<br>
+
+<<speech "nyssa">>
+No. I’m the enchantment. You’re just lucky enough to bask in it.
+<</speech>>
+<br>
+<<elseif _i == 3>>
+<<speech "nyssa">>
+If you’re hoping for mercy, I locked it in a rune box weeks ago.
+<</speech>>
+<br>
+
+<<speech "mc">>
+I wasn’t hoping for mercy. I was hoping for your hands.
+<</speech>>
+<br>
+
+<<speech "nyssa">>
+Oh? Then take off your crown and kneel. I might be convinced.
+<</speech>>
+<br>
+<<elseif _i == 4>>
+<<speech "nyssa">>
+You’re radiating tension. Shall I ease it with magic… or something more primal?
+<</speech>>
+<br>
+
+<<speech "mc">>
+Why not both? You seem like the type to enjoy combining pleasure with power.
+<</speech>>
+<br>
+
+<<speech "nyssa">>
+Mmm, clever and bold. Come closer, Caelan. Let’s see how brave you really are.
+<</speech>>
+<br>
+<<elseif _i == 5>>
+<<speech "nyssa">>
+The orb likes you tonight. It’s humming. That usually means arousal… or danger.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Then maybe it’s reading my thoughts.
+<</speech>>
+<br>
+
+<<speech "nyssa">>
+Tsk. Naughty prince. You should know I can read minds.
+<</speech>>
+<br>
+<<elseif _i == 6>>
+<<speech "nyssa">>
+You dream of me. I’ve seen it in the starlight.
+<</speech>>
+<br>
+
+<<speech "mc">>
+And what did I do in those dreams?
+<</speech>>
+<br>
+
+<<speech "nyssa">>
+You begged. Shall I make it real?
+<</speech>>
+<br>
+<<elseif _i == 7>>
+<<speech "nyssa">>
+Did you come here for a lesson, or to get on your knees and whisper my name?
+<</speech>>
+<br>
+
+<<speech "mc">>
+I came for both. Teach me, then ruin me.
+<</speech>>
+<br>
+
+<<speech "nyssa">>
+Oh, Caelan… you might be more fun than prophecy ever promised.
+<</speech>>
+<br>
+<<elseif _i == 8>>
+<<speech "nyssa">>
+Remove your shirt. I need to check the soulmarks.
+<</speech>>
+<br>
+
+<<speech "mc">>
+You’ve used that excuse before.
+<</speech>>
+<br>
+
+<<speech "nyssa">>
+And yet you never resist. Curious, isn’t it?
+<</speech>>
+<br>
+<<elseif _i == 9>>
+<<speech "nyssa">>
+You're mine, you know. The stars told me so.
+<</speech>>
+<br>
+
+<<speech "mc">>
+And if I told you I don’t believe in fate?
+<</speech>>
+<br>
+
+<<speech "nyssa">>
+Then I’d bind you with something stronger. Want.
+<</speech>>
+<br>
+<<elseif _i == 10>>
+<<speech "nyssa">>
+You're staring again. If I didn't know better, I’d think you were undressing me with your eyes.
+<</speech>>
+<br>
+
+<<speech "mc">>
+You say that like I haven’t already done it… in my thoughts.
+<</speech>>
+<br>
+
+<<speech "nyssa">>
+Mm. Then think harder, my prince. You missed a few buttons.
+<</speech>>
+<br>
+<<elseif _i == 11>>
+<<speech "nyssa">>
+This room is too quiet. Say something, or I’ll assume you brought me here for wicked reasons.
+<</speech>>
+<br>
+
+<<speech "mc">>
+And if I did?
+<</speech>>
+<br>
+
+<<speech "nyssa">>
+Then gods help us both… because I’m in no mood to say no tonight.
+<</speech>>
+<br>
+<<elseif _i == 12>>
+<<speech "nyssa">>
+You know what happens if someone sees you slipping into a handmaid’s room at this hour?
+<</speech>>
+<br>
+
+<<speech "mc">>
+Let them see. Let them wonder.
+<</speech>>
+<br>
+
+<<speech "nyssa">>
+Then shut the door, Your Grace. And let them wonder.
+<</speech>>
+<br>
+<<elseif _i == 13>>
+<<speech "nyssa">>
+Do you even know what you do to me when you say my name like that?
+<</speech>>
+<br>
+
+<<speech "mc">>
+Say it again. I want to hear how it sounds in your mouth, breathless.
+<</speech>>
+<br>
+
+<<speech "nyssa">>
+Caelan... if you don’t kiss me soon, I swear I’ll forget every damn rule I’ve ever followed.
+<</speech>>
+<br>
+<<elseif _i == 14>>
+<<speech "nyssa">>
+I should send you away. I really should.
+<</speech>>
+<br>
+
+<<speech "mc">>
+But you won’t.
+<</speech>>
+<br>
+
+<<speech "nyssa">>
+No. Because when you look at me like that, I forget who’s the servant.
+<</speech>>
+<br>
+<<elseif _i == 15>>
+<<speech "nyssa">>
+Your hand’s shaking. Is it nerves… or desire?
+<</speech>>
+<br>
+
+<<speech "mc">>
+Both. You always make me feel like I’m standing at the edge of something I can’t name.
+<</speech>>
+<br>
+
+<<speech "nyssa">>
+Then fall, Caelan. And let me catch you.
+<</speech>>
+<br>
+<<elseif _i == 16>>
+<<speech "nyssa">>
+You smell like fire and storm. Gods, it drives me mad.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Then come closer. Let the storm swallow us both.
+<</speech>>
+<br>
+
+<<speech "nyssa">>
+If I do, I won’t stop. Not tonight.
+<</speech>>
+<br>
+<<elseif _i == 17>>
+<<speech "nyssa">>
+I’ve imagined this. You, here. In my bedchamber. Saying nothing… just looking at me.
+<</speech>>
+<br>
+
+<<speech "mc">>
+And what happens next in that fantasy?
+<</speech>>
+<br>
+
+<<speech "nyssa">>
+Clothes vanish. Names fade. Only skin remembers.
+<</speech>>
+<br>
+<<elseif _i == 18>>
+<<speech "nyssa">>
+You always come to me when the palace feels too heavy. Why?
+<</speech>>
+<br>
+
+<<speech "mc">>
+Because when I’m with you, I remember who I am beneath the crown.
+<</speech>>
+<br>
+
+<<speech "nyssa">>
+Then let me strip that crown away. Slowly. Gently. Completely.
+<</speech>>
+<br>
+<<elseif _i == 19>>
+<<speech "nyssa">>
+If you stay tonight, there’s no going back to how it was before.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Then let it change. I’m tired of pretending I don’t want you.
+<</speech>>
+<br>
+
+<<speech "nyssa">>
+Gods… kiss me before I melt into a puddle at your feet.
+<</speech>>
+<br>
+<</if>>
+<<if !$nyssa_session_1>>
+[[Have Conversation with Nyssa 1|nyssa_session_1]] |<br><br>
+<</if>>
+<<if $nyssa_session_1 && !$nyssa_session_2>>
+[[Have Conversation with Nyssa 2|nyssa_session_2]] |<br><br>
+<</if>>
+[[Leave Nyssa|nyssa_chamber_map_select]] |<br><br>
+[[Leave Nyssa's Chamber|bed_chamber_girl]] |<br><br>
+[[Leave Maid Room Corridor|castle_map_back_select]]
+<</nobr>>
+
+
+
+
+
+
+
+:: nyssa_session_1
+<<nobr>>
+<<set $nyssa_session_1 = true>>
+<<speech "nyssa">>Mmm… look at you. My little princess in prince body. Soon you will be free...<</speech>><br>
+
+<<speech "mc">>I I look ridiculous…<</speech>><br>
+
+<<speech "nyssa">>No. You look delicious.<</speech>><br>
+
+<<speech "mc">>But I’m… still…<</speech>><br>
+[[Move Forth|nyssa_session_1_1]]
+<</nobr>>
+
+:: nyssa_session_1_1
+<<nobr>>
+<<speech "nyssa">>Still hard? Still twitching in your little cage of lace? It’s adorable how your princely cock is trying to ruin such a pretty set.<</speech>><br>
+
+<<speech "mc">>I didn’t ask for this.<</speech>><br>
+
+<<speech "nyssa">>No, but your body did. It’s begging. Practically drooling. Such a bad little girlcock.<</speech>><br>
+
+<<speech "mc">>Stop calling it that…<</speech>><br>
+[[Move Forth|nyssa_session_1_2]]
+<</nobr>>
+
+:: nyssa_session_1_2
+<<nobr>>
+<<speech "nyssa">>Oh? Not ready to admit your scepter’s become a sissy wand? Look at it. So needy. So proud.<</speech>><br>
+
+<<speech "mc">>I don’t want to see it like this…<</speech>><br>
+
+<<speech "nyssa">>Then let me show you what I see.<</speech>><br>
+Nyssa gently pushed Caelan back onto a cushioned platform, his legs instinctively spreading. She climbed between them, trailing kisses up one thigh.<br><br>
+
+<<speech "nyssa">>Pink lace. Smooth thighs. A cock that leaks just from being looked at. You’re the prettiest contradiction I’ve ever owned.<</speech>><br>
+[[Move Forth|nyssa_session_1_3]]
+<</nobr>>
+
+
+:: nyssa_session_1_3
+<<nobr>>
+<<speech "mc">>I’m not owned <</speech>><br>
+
+<<speech "nyssa">>Oh, sweetling. You will be. Tell me, does this make you hard? Being called ‘pretty’? Being stroked in frilly pink while your cock bounces like a debutante’s fan?<</speech>><br>
+
+<<speech "mc">>I… I don’t know…<</speech>><br>
+
+<<speech "nyssa">>Yes, you do. Say it.<</speech>><br>
+
+[[Move Forth|nyssa_session_1_4]]
+<</nobr>>
+
+
+:: nyssa_session_1_4
+<<nobr>>
+<<speech "mc">>It yes. Gods, yes.<</speech>><br>
+Nyssa wrapped her lips around his tip, slow and indulgent. Her tongue swirled while her fingers pinched his nipples through lace. He arched with a strangled moan.<br><br>
+
+<<speech "nyssa">>Mmm. Tastes like shame. Want more?<</speech>><br>
+
+<<speech "mc">>Please.<</speech>><br>
+
+<<speech "nyssa">>Please what, pretty thing?<</speech>><br>
+
+[[Move Forth|nyssa_session_1_5]]
+<</nobr>>
+
+
+:: nyssa_session_1_5
+<<nobr>>
+<<speech "mc">>Please suck me again…<</speech>><br>
+
+<<speech "nyssa">>Good girl.<</speech>><br>
+She devoured him with slow, sinful bobs, one hand playing with his inner thigh, the other still teasing his chest. Caelan squirmed, hips twitching, his voice soft and helpless.<br><br>
+
+<<speech "mc">>Nyssa, I I’m gonna <</speech>><br>
+
+<<speech "nyssa">>No. Not yet. You’re going to cum on these. And then wear them. Understood?<</speech>><br>
+
+[[Move Forth|nyssa_session_1_6]]
+<</nobr>>
+
+
+:: nyssa_session_1_6
+<<nobr>>
+<<speech "mc">>Yes. Yes, please…<</speech>><br>
+With a wicked laugh, Nyssa angled him and pumped furiously. His moans rose high, uncontrolled, beautiful.<br><br>
+
+<<speech "mc">>Nyssa !<</speech>><br>
+He spilled across the lace, shaking. Nyssa held the fabric up and watched with glee.<br><br>
+
+<<speech "nyssa">>Perfect. Now hold still.<</speech>><br>
+She slid the soaked panties up his legs and tugged them snug over his softening cock.<br><br>
+
+<<speech "nyssa">>Your scepter has served. Now tuck it in like a good little princess.<</speech>><br>
+
+[[Move Forth|nyssa_session_1_7]]
+<</nobr>>
+
+
+:: nyssa_session_1_7
+<<nobr>>
+<<speech "mc">>…Yes, Mistress.<</speech>><br>
+She kissed his forehead, curled around him, one leg draped possessively over his body.<br><br>
+
+<<speech "nyssa">>You’re not broken, Caelan. You’re becoming. And every time you surrender, you become more real.<</speech>><br>
+<<set $user_stats.gender_Identity -= 2>>
+<<set $user_stats.dominance_level -= 2>>
+[[Leave Nyssa|nyssa_chamber_map_select]] |<br><br>
+[[Leave Nyssa's Chamber|bed_chamber_girl]] |<br><br>
+[[Leave Maid Room Corridor|castle_map_back_select]]
+<</nobr>>
+
+
+
+
+
+:: nyssa_session_2
+<<nobr>>
+<<set $nyssa_session_2 = true>>
+<<speech "nyssa">>Well, look who returns. Still twitching in silk, little prince?<</speech>><br>
+
+<<speech "mc">>I… I couldn’t sleep after last time.<</speech>><br>
+
+<<speech "nyssa">>Awake, needy, and still pretending it wasn’t perfect. Adorable.<</speech>><br>
+Nyssa waved her fingers, and glimmering restraints shimmered into the air.<br><br>
+
+<<speech "nyssa">>Strip. Now. Then hands behind your back.<</speech>><br>
+[[Move Forth|nyssa_session_2_1]]
+<</nobr>>
+
+
+:: nyssa_session_2_1
+<<nobr>>
+<<speech "mc">>Yes… Mistress.<</speech>><br>
+He undressed slowly, his arousal immediate. Nyssa tutted softly.<br><br>
+
+<<speech "nyssa">>Still eager. So easily excited. It’s almost pathetic.<</speech>><br>
+She bound his wrists in floating silk runes that pulsed a soft violet.<br><br>
+
+<<speech "nyssa">>There. Now you can’t touch yourself. Only I can.<</speech>><br>
+
+<<speech "mc">>I’ve been… aching. All day.<</speech>><br>
+
+[[Move Forth|nyssa_session_2_2]]
+<</nobr>>
+
+
+:: nyssa_session_2_2
+<<nobr>>
+<<speech "nyssa">>I know. I enchanted your panties. Every heartbeat sent a little kiss of magic to that needy cock. Didn’t you feel it? That throbbing reminder that your pleasure belongs to me?<</speech>><br>
+
+<<speech "mc">>I felt it… I couldn’t stop thinking about you…<</speech>><br>
+
+<<speech "nyssa">>Good. Now don’t think. Just obey.<</speech>><br>
+She trailed her fingers along his shaft, barely touching, just enough to keep him quivering.<br><br>
+
+<<speech "mc">>Please… please let me…<</speech>><br>
+
+[[Move Forth|nyssa_session_2_3]]
+<</nobr>>
+
+
+:: nyssa_session_2_3
+<<nobr>>
+<<speech "nyssa">>Let you what, hmm?<</speech>><br>
+
+<<speech "mc">>Touch it. Or… or finish.<</speech>><br>
+
+<<speech "nyssa">>No, no, no. We’re not doing that tonight. You’re going to learn to ache for me. To beg prettily, and accept that you don’t always get what you want.<</speech>><br>
+
+<<speech "mc">>But I’m so hard…<</speech>><br>
+
+[[Move Forth|nyssa_session_2_4]]
+<</nobr>>
+
+
+:: nyssa_session_2_4
+<<nobr>>
+<<speech "nyssa">>I know. It’s beautiful. Look how obedient it is. Not like you. You fidget, you fight. But this? This little scepter would serve me forever.<</speech>><br>
+She stroked him in lazy circles, just enough to drive him mad. Caelan gasped, hips twitching.<br><br>
+
+<<speech "mc">>I can’t take much more <</speech>><br>
+
+<<speech "nyssa">>You’ll take exactly what I give. Nothing more. Beg.<</speech>><br>
+
+<<speech "mc">>Mistress, please please let me cum.<</speech>><br>
+
+[[Move Forth|nyssa_session_2_5]]
+<</nobr>>
+
+
+:: nyssa_session_2_5
+<<nobr>>
+<<speech "nyssa">>No.<</speech>><br>
+
+<<speech "mc">>Please! I’ll do anything <</speech>><br>
+
+<<speech "nyssa">>Then don’t cum. That’s your task. I want you to feel what it means to be ruled.<</speech>><br>
+Nyssa whispered a spell the runes glowed brighter. His cock throbbed harder, aching to burst.<br><br>
+
+<<speech "mc">>M-Mistress !<</speech>><br>
+
+[[Move Forth|nyssa_session_2_6]]
+<</nobr>>
+
+
+:: nyssa_session_2_6
+<<nobr>>
+<<speech "nyssa">>Feel it. Own it. Surrender to the ache. Every pulse is me inside you.<</speech>><br>
+He moaned through clenched teeth, hands bound, hips frozen. He didn’t climax but his whole body shivered from the edge.<br><br>
+
+<<speech "nyssa">>There’s a good girl. My obedient, desperate little queen-to-be.<</speech>><br>
+
+<<speech "mc">>I feel… broken…<</speech>><br>
+
+<<speech "nyssa">>No. You’re being reforged.<</speech>><br>
+
+[[Move Forth|nyssa_session_2_7]]
+<</nobr>>
+
+:: nyssa_session_2_7
+<<nobr>>
+She finally kissed him deep, slow, sensual. Her tongue commanded his. His cock twitched uselessly between them.<br><br>
+
+<<speech "nyssa">>Tonight, you sleep tied. No touching. No release. And in the morning… you’ll thank me for every ache.<</speech>><br>
+
+<<speech "mc">>Yes, Mistress…<</speech>><br>
+She floated a thin golden ribbon down his shaft and tied it around the base glowing faintly.<br><br>
+
+<<speech "nyssa">>There. A little crown for your desperate princehood. Tomorrow, we’ll see if it’s earned the right to stay.<</speech>><br>
+<<set $user_stats.gender_Identity -= 2>>
+<<set $user_stats.dominance_level -= 2>>
+[[Leave Nyssa|nyssa_chamber_map_select]] |<br><br>
+[[Leave Nyssa's Chamber|bed_chamber_girl]] |<br><br>
+[[Leave Maid Room Corridor|castle_map_back_select]]
+<</nobr>>

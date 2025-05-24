@@ -1,0 +1,310 @@
+
+
+:: interact_with_edran
+<<nobr>>
+<<set _i to random(0, 20)>>
+<<if _i == 0>>
+<<elseif _i == 1>>
+<<speech "edran">>
+Careful where you step, Your Highness... that’s Feylace bloom. One brush and your cheeks might blush for hours  inside and out.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Is that a warning... or an invitation? Gods, I didn’t think flowers could flirt.
+<</speech>>
+<br>
+
+<<speech "edran">>
+Some do. And some listen. The Moonpetals over there opened wider when you passed. They must like what you’re becoming.
+<</speech>>
+<br>
+<<elseif _i == 2>>
+<<speech "edran">>
+Velmorian Honey drips slowest at dawn. The bees hum a lullaby to coax it from the combs. Only gentleness earns their gift.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Gentleness... not my strongest trait lately. But maybe I’m learning.
+<</speech>>
+<br>
+
+<<speech "edran">>
+You are. Even the lilies bend softer when you pass. They're listening, even if you aren’t.
+<</speech>>
+<br>
+<<elseif _i == 3>>
+<<speech "edran">>
+Starblossoms only open for those with dreams they haven’t spoken aloud. I see five blooming behind you.
+<</speech>>
+<br>
+
+<<speech "mc">>
+And what would those dreams be, Edran?
+<</speech>>
+<br>
+
+<<speech "edran">>
+If I said them aloud, they’d belong to me. And something tells me they’re far too precious for that.
+<</speech>>
+<br>
+<<elseif _i == 4>>
+<<speech "edran">>
+Glowleaf burns brighter when it feels desire nearby. Yours must be leaking like sunlight through silk.
+<</speech>>
+<br>
+
+<<speech "mc">>
+You're making it very hard to pretend I'm only here for botany.
+<</speech>>
+<br>
+
+<<speech "edran">>
+Pretend all you want. Even the vines wrap tighter when you're flustered.
+<</speech>>
+<br>
+<<elseif _i == 5>>
+<<speech "edran">>
+You brushed against the Softroot patch... your skin will feel like velvet for hours. May want to warn anyone who dares touch you.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Anyone, Edran? That a suggestion?
+<</speech>>
+<br>
+
+<<speech "edran">>
+No, Your Highness. That was a temptation.
+<</speech>>
+<br>
+<<elseif _i == 6>>
+<<speech "edran">>
+Seraphmilk lilies bloomed last night. Only do that when someone nearby is craving purity and transformation in equal measure.
+<</speech>>
+<br>
+
+<<speech "mc">>
+You think I’m craving purity? That’s rich.
+<</speech>>
+<br>
+
+<<speech "edran">>
+No. But the flower never lies. Maybe you want to be seen as worthy... not just beautiful.
+<</speech>>
+<br>
+<<elseif _i == 7>>
+<<speech "edran">>
+One drop of Crimsondew on the lips and you’ll taste every kiss you’ve never had. Dangerous, if you’re lonely.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Good thing I’m not lonely. Just... curious.
+<</speech>>
+<br>
+
+<<speech "edran">>
+Then don’t lick your lips. Or do. But not without company.
+<</speech>>
+<br>
+<<elseif _i == 8>>
+<<speech "edran">>
+That vine you touched? Vinesilk. It’ll stretch your limbs just enough to make your next gown jealous.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Are you always this poetic, or do you save it for those who’ve changed?
+<</speech>>
+<br>
+
+<<speech "edran">>
+I bloom for those who are becoming. And you’re in full season.
+<</speech>>
+<br>
+<<elseif _i == 9>>
+<<speech "edran">>
+Feylace Petals shimmer when someone nearby is being watched. They lit up the moment you stepped in.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Watched... by plants? Or someone else?
+<</speech>>
+<br>
+
+<<speech "edran">>
+Does it matter, Caelan? Either way, you’re captivating.
+<</speech>>
+<br>
+<<elseif _i == 10>>
+<<speech "edran">>
+Crimsonroot Dust is stable now. It means the garden’s in balance... or that you are.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Balance? I feel like a rope pulled between two cliffs.
+<</speech>>
+<br>
+
+<<speech "edran">>
+And still, you don’t snap. That’s not weakness, Caelan. That’s the beauty of the becoming.
+<</speech>>
+<br>
+<<elseif _i == 11>>
+<<speech "edran">>
+The Lilywhisper Nectar you stepped near… it’s meant for those learning grace. Your stride has changed. More wind than thunder now.
+<</speech>>
+<br>
+
+<<speech "mc">>
+I didn’t notice.
+<</speech>>
+<br>
+
+<<speech "edran">>
+That’s how you know it’s real. Grace never asks for applause.
+<</speech>>
+<br>
+<<elseif _i == 12>>
+<<speech "edran">>
+You brushed through a Velvetgrove patch. Your thighs will carry softness for days. Tell me, does it feel like armor... or surrender?
+<</speech>>
+<br>
+
+<<speech "mc">>
+Maybe it’s both. Maybe I’m learning softness is a kind of shield.
+<</speech>>
+<br>
+
+<<speech "edran">>
+Spoken like someone blooming in the right soil.
+<</speech>>
+<br>
+<<elseif _i == 13>>
+<<speech "edran">>
+I left some Starblossom Pollen out, and the wind scattered it... toward your path. It never drifts without meaning.
+<</speech>>
+<br>
+
+<<speech "mc">>
+You sound like you expect fate to trim the hedges.
+<</speech>>
+<br>
+
+<<speech "edran">>
+Fate trims nothing. But it does leave pollen trails for the brave to follow.
+<</speech>>
+<br>
+<<elseif _i == 14>>
+<<speech "edran">>
+Moonpetal Extract is at its peak tonight. One whiff, and the body forgets how to pretend.
+<</speech>>
+<br>
+
+<<speech "mc">>
+And what if I’ve spent years pretending to be someone I’m not?
+<</speech>>
+<br>
+
+<<speech "edran">>
+Then it will taste like freedom. Bitter at first… but freeing.
+<</speech>>
+<br>
+<<elseif _i == 15>>
+<<speech "edran">>
+Glowleaf shimmered when you laughed. I don’t think I’ve ever seen it do that.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Maybe it liked the sound of me being... me.
+<</speech>>
+<br>
+
+<<speech "edran">>
+Then laugh more often. The plants aren't the only ones listening.
+<</speech>>
+<br>
+<<elseif _i == 16>>
+<<speech "edran">>
+I caught your shadow stretching toward the Seraphmilk vines. Shadows don’t lie, Caelan.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Then I must want more from this body than I’m ready to say aloud.
+<</speech>>
+<br>
+
+<<speech "edran">>
+That’s alright. The garden speaks for you until you’re ready.
+<</speech>>
+<br>
+<<elseif _i == 17>>
+<<speech "edran">>
+You smell of Ashfern Flakes. Who’s been trying to stop your change?
+<</speech>>
+<br>
+
+<<speech "mc">>
+No one... just doubts.
+<</speech>>
+<br>
+
+<<speech "edran">>
+Then bury them here. In soft soil. Doubts don’t bloom  they rot.
+<</speech>>
+<br>
+<<elseif _i == 18>>
+<<speech "edran">>
+The vines near you coiled tighter today. Vinesilk always senses anticipation.
+<</speech>>
+<br>
+
+<<speech "mc">>
+What makes you think I’m anticipating anything?
+<</speech>>
+<br>
+
+<<speech "edran">>
+Because I am. And you're mirroring me.
+<</speech>>
+<br>
+<<elseif _i == 19>>
+<<speech "edran">>
+The Glowleaf patch curled slightly as you passed. They're drawn to you now. You’re becoming radiant without noticing.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Radiant’s a strange word to use for someone with dirt under their nails.
+<</speech>>
+<br>
+
+<<speech "edran">>
+Then it suits you perfectly. Radiance doesn't mean clean  it means alive.
+<</speech>>
+<br>
+<<elseif _i == 20>>
+<<speech "edran">>
+There’s Dragonmoss blooming by the northern rocks. Strong stuff. Good for reinforcing old bones and... resisting softness.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Sounds like a warning.
+<</speech>>
+<br>
+
+<<speech "edran">>
+A choice. That plant won’t touch you unless you ask it to. And you haven’t.
+<</speech>>
+<br>
+<</if>>
+[[Leave Royal Gardener Edran Mossfoot|royal_garden]] |<br><br>
+[[Leave Royal Garden|castle_map_front_select]]
+<</nobr>>

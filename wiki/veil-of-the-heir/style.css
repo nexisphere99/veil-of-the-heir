@@ -1,0 +1,100 @@
+body {
+    margin: 0;
+    padding: 2rem;
+    font-family: 'Cormorant Garamond', serif;
+    background: url('https://www.transparenttextures.com/patterns/parchment.png');
+    background-color: #f9f1e7;
+    color: #2c1b10;
+}
+
+header {
+    font-family: 'IM Fell English SC', serif;
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.subheading {
+    font-style: italic;
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.content {
+    max-width: 900px;
+    margin: auto;
+    padding: 2rem;
+    border: 2px solid #5a3825;
+    border-radius: 12px;
+    background-color: rgba(255, 250, 240, 0.95);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    font-family: 'IM Fell English SC', serif;
+    border-bottom: 1px solid #5a3825;
+    padding-bottom: 0.25rem;
+}
+
+.nav-link {
+    display: block;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    background-color: #d8c4a0;
+    border: 1px solid #5a3825;
+    text-decoration: none;
+    color: #2c1b10;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+}
+
+.nav-link:hover {
+    background-color: #e6d2b4;
+}
+
+blockquote {
+    font-style: italic;
+    background-color: #f2e7d5;
+    padding: 1rem;
+    border-left: 4px solid #7a5a3b;
+    margin: 1.5rem 0;
+}
+
+.footer {
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 3rem;
+    color: #5a3825;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2em 0;
+    background: #fffef9;
+}
+
+th,
+td {
+    padding: 1em;
+    border: 1px solid #cbb;
+    vertical-align: top;
+}
+
+th {
+    background-color: #e9d8c3;
+    font-weight: bold;
+    text-align: left;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 1rem;
+    }
+
+    .content {
+        padding: 1rem;
+    }
+}

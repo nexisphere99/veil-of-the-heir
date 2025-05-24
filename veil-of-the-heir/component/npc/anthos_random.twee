@@ -1,0 +1,273 @@
+
+
+:: interact_with_anthos
+<<nobr>>
+<<set _i to random(0, 19)>>
+<<if _i == 0>>
+<<speech "anthos">>
+A queen who does not read will be ruled by those who do. Sit. The ledger of border treaties won’t translate itself.
+<</speech>>
+<br>
+<<speech "mc">>
+I was hoping for something lighter  maybe myths or poetry.
+<</speech>>
+<br>
+<<speech "anthos">>
+Poetry will come once your enemies are dead or disarmed. Until then, we read about taxes and terrain.
+<</speech>>
+<br>
+<<elseif _i == 1>>
+<<speech "anthos">>
+This tome here  written by a madwoman with three crowns and five assassinated husbands. Pay attention, her madness was genius.
+<</speech>>
+<br>
+<<speech "mc">>
+Sounds like the kind of queen I’m supposed to become.
+<</speech>>
+<br>
+<<speech "anthos">>
+Perhaps. Just don’t drink the ink. She did that too.
+<</speech>>
+<br>
+<<elseif _i == 2>>
+<<speech "anthos">>
+A woman may sway with a smile, but true dominion rests in knowing what the ministers fear at night. Read this. Slowly.
+<</speech>>
+<br>
+<<speech "mc">>
+You always make it sound like knowledge is a blade.
+<</speech>>
+<br>
+<<speech "anthos">>
+Wiser than steel. Sharper, too. And it never rusts.
+<</speech>>
+<br>
+<<elseif _i == 3>>
+<<speech "anthos">>
+The records of Queen Elyria’s reign are forbidden. Naturally, I’ve kept two copies. Do you want power, or comfort?
+<</speech>>
+<br>
+<<speech "mc">>
+If I wanted comfort, I’d be in the kitchens, not here with dust and secrets.
+<</speech>>
+<br>
+<<speech "anthos">>
+Good. Then read her downfall. It's a mirror with teeth.
+<</speech>>
+<br>
+<<elseif _i == 4>>
+<<speech "anthos">>
+See this glyph? Misread it, and you grant immunity. Read it correctly, and you condemn. That is the power of clarity.
+<</speech>>
+<br>
+<<speech "mc">>
+So, no pressure, then. Just one wrong syllable and someone lives or dies?
+<</speech>>
+<br>
+<<speech "anthos">>
+Exactly. Welcome to governance.
+<</speech>>
+<br>
+<<elseif _i == 5>>
+<<speech "anthos">>
+Diplomacy begins in ink. This scroll holds the alliance that saved Velmoria twice. Learn to write your salvation.
+<</speech>>
+<br>
+<<speech "mc">>
+Or damnation, depending on who reads it.
+<</speech>>
+<br>
+<<speech "anthos">>
+Ah, you're catching on. Words are weapons. Now forge wisely.
+<</speech>>
+<br>
+
+
+<<elseif _i == 6>>
+<<speech "anthos">>
+You want to be queen? Then learn to lie beautifully. Start by reading this manual on court flattery.
+<</speech>>
+<br>
+<<speech "mc">>
+Flattery sounds easy enough.
+<</speech>>
+<br>
+<<speech "anthos">>
+Easy flattery is spotted a mile away. True flattery wraps truth in silk and makes your enemies smile.
+<</speech>>
+<br>
+<<elseif _i == 7>>
+<<speech "anthos">>
+Ah, the young royal enters my domain again. Looking for forbidden truths or just avoiding sword practice?
+<</speech>>
+<br>
+<<speech "mc">>
+Maybe both. Your shelves don’t bruise my ribs.
+<</speech>>
+<br>
+<<speech "anthos">>
+Not yet. But they may bruise your illusions.
+<</speech>>
+<br>
+<<elseif _i == 8>>
+<<speech "anthos">>
+If you master the history of every noble house, you’ll rule them before they know you’ve begun.
+<</speech>>
+<br>
+<<speech "mc">>
+Sounds like memorizing a thousand grudges.
+<</speech>>
+<br>
+<<speech "anthos">>
+Exactly. And knowing which one to press makes all the difference.
+<</speech>>
+<br>
+<<elseif _i == 9>>
+<<speech "anthos">>
+Books do not judge your body, Caelan. They care only for the mind within. Feed it.
+<</speech>>
+<br>
+<<speech "mc">>
+Then maybe the books are the only ones who don’t care who  or what  I’m becoming.
+<</speech>>
+<br>
+<<speech "anthos">>
+Ah, but books will still shape the queen you must be. If you let them.
+<</speech>>
+<br>
+
+
+<<elseif _i == 10>>
+<<speech "anthos">>
+Every queen must know the laws of succession  how to bend them, break them, or ensure they hold.
+<</speech>>
+<br>
+<<speech "mc">>
+I thought succession was simple when you’re the heir.
+<</speech>>
+<br>
+<<speech "anthos">>
+It’s simple until someone challenges your blood, your body, or your right to rule. Be ready for all three.
+<</speech>>
+<br>
+<<elseif _i == 11>>
+<<speech "anthos">>
+These records were sealed after the War of Three Sisters. Open them, and you’ll see why.
+<</speech>>
+<br>
+<<speech "mc">>
+If they’re sealed, why are you showing them to me?
+<</speech>>
+<br>
+<<speech "anthos">>
+Because you need truths that scare lesser minds. Queens do not rule on rumors.
+<</speech>>
+<br>
+<<elseif _i == 12>>
+<<speech "anthos">>
+The glyphs here alter depending on the reader’s intent. What do you see?
+<</speech>>
+<br>
+<<speech "mc">>
+It... changed. It’s softer now. Gentler.
+<</speech>>
+<br>
+<<speech "anthos">>
+So are you. The library adapts to truth. As must you.
+<</speech>>
+<br>
+<<elseif _i == 13>>
+<<speech "anthos">>
+There are ten languages spoken in Velmoria, four of them by spies. Learn at least six.
+<</speech>>
+<br>
+<<speech "mc">>
+Including the language of secrets?
+<</speech>>
+<br>
+<<speech "anthos">>
+That one you’re already studying. Every day you wear the crown’s shadow.
+<</speech>>
+<br>
+<<elseif _i == 14>>
+<<speech "anthos">>
+This codex once belonged to a queen who ruled through whispers. Her pen was her dagger.
+<</speech>>
+<br>
+<<speech "mc">>
+And people feared her more than swords?
+<</speech>>
+<br>
+<<speech "anthos">>
+Because she made kings weep with a letter. Learn to write like that.
+<</speech>>
+<br>
+<<elseif _i == 15>>
+<<speech "anthos">>
+You’re forming into something rare, Caelan. Not just a ruler. A sovereign mind.
+<</speech>>
+<br>
+<<speech "mc">>
+Even if I’m no longer seen as a man?
+<</speech>>
+<br>
+<<speech "anthos">>
+Wisdom has no gender. But it does demand sacrifice. Keep reading.
+<</speech>>
+<br>
+<<elseif _i == 16>>
+<<speech "anthos">>
+The archive beneath us holds banned spells and theories. Most are dangerous.
+<</speech>>
+<br>
+<<speech "mc">>
+And you're offering them… why?
+<</speech>>
+<br>
+<<speech "anthos">>
+Because you’ll face enemies who use them. Better a queen who knows the darkness than one surprised by it.
+<</speech>>
+<br>
+<<elseif _i == 17>>
+<<speech "anthos">>
+This essay argues that femininity in queenship is an asset, not a limitation. It enraged five kings.
+<</speech>>
+<br>
+<<speech "mc">>
+Then it’s probably worth reading twice.
+<</speech>>
+<br>
+<<speech "anthos">>
+Three times. Especially once you begin ruling in silks, not armor.
+<</speech>>
+<br>
+<<elseif _i == 18>>
+<<speech "anthos">>
+Here lies the map of Velmoria's ley-lines. Whoever controls the flows of magic controls the realm’s heartbeat.
+<</speech>>
+<br>
+<<speech "mc">>
+And how many people know this exists?
+<</speech>>
+<br>
+<<speech "anthos">>
+Four. After today, five. Guard it like your throne.
+<</speech>>
+<br>
+<<elseif _i == 19>>
+<<speech "anthos">>
+Tell me, Caelan  when a noble calls you “Your Grace” with a sneer, how do you respond?
+<</speech>>
+<br>
+<<speech "mc">>
+I smile like I know a secret about their house.
+<</speech>>
+<br>
+<<speech "anthos">>
+Good. Because you will. Now, let’s look up their scandals.
+<</speech>>
+<br>
+<</if>>
+[[Leave Royal Librarian Anthos Quillshade|great_library]] |<br><br>
+[[Leave Royal Library|castle_map_front_select]]
+<</nobr>>

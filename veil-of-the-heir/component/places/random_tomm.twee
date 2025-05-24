@@ -1,0 +1,316 @@
+
+
+
+
+
+:: interact_with_tomm
+<<nobr>>
+<<set _i to random(0, 19)>>
+<<if _i == 0>>
+    <<speech "tomm">>
+You again? Careful, Your Highness  spend too much time ‘round horses and you’ll start smelling honest.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Is that a warning or an invitation?
+<</speech>>
+<br>
+
+<<speech "tomm">>
+Depends. You plannin’ to muck stalls, or just admire the view while pretendin’ you ain’t slummin’?
+<</speech>>
+<br>
+<<elseif _i == 1>>
+<<speech "tomm">>
+That filly over there bites diplomats, hates sugar, and kicked the High Priest last week. Frankly, I think she’s ready for court.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Sounds like she’d fit right in.
+<</speech>>
+<br>
+
+<<speech "tomm">>
+Only difference is she knows when to hold her tongue. Can’t say the same for half the nobles in velvet.
+<</speech>>
+<br>
+<<elseif _i == 2>>
+<<speech "tomm">>
+Yer walk’s gettin’ lighter. Either the mage is doin’ her job, or you’ve finally unclenched that royal backside.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Wouldn’t you like to know.
+<</speech>>
+<br>
+
+<<speech "tomm">>
+Oh, I don’t need to know. I just enjoy seein’ you squirm when I guess right.
+<</speech>>
+<br>
+<<elseif _i == 3>>
+<<speech "tomm">>
+I told Bessie here you were comin’. She asked if she should curtsy or run. I said  same thing most folk feel when a royal shows up, really.
+<</speech>>
+<br>
+
+<<speech "mc">>
+I hope she picked curtsy.
+<</speech>>
+<br>
+
+<<speech "tomm">>
+Nah. She chose to fart and wander off. Nobility meets reality, right there.
+<</speech>>
+<br>
+<<elseif _i == 4>>
+<<speech "tomm">>
+A crown don’t make you smart. Just shiny. Like strappin’ gold shoes on a mule and expectin’ it to win the derby.
+<</speech>>
+<br>
+
+<<speech "mc">>
+You calling me a mule?
+<</speech>>
+<br>
+
+<<speech "tomm">>
+Not at all. Mules are useful.
+<</speech>>
+<br>
+
+
+<<elseif _i == 5>>
+<<speech "tomm">>
+A little bird told me you’re turnin’ into a lady. If true, might I suggest not wearin’ heels in the mud? The stable doesn’t care how dainty your ankles are.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Noted. Should I also expect the horses to judge my eyeliner?
+<</speech>>
+<br>
+
+<<speech "tomm">>
+Only if it runs faster than you do.
+<</speech>>
+<br>
+<<elseif _i == 6>>
+<<speech "tomm">>
+You royal types are like spoiled stallions  high-steppin’, shiny, and liable to kick if you’re told “no.”
+<</speech>>
+<br>
+
+<<speech "mc">>
+Are you trying to say I’m dangerous?
+<</speech>>
+<br>
+
+<<speech "tomm">>
+Nah. I’m sayin’ you could be, if someone ever taught you how to buck properly.
+<</speech>>
+<br>
+<<elseif _i == 7>>
+<<speech "tomm">>
+I’ve seen horses that were more graceful in a tutu than nobles are at banquets. Least the horses don’t stab each other over soup placement.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Banquets are political battlefields.
+<</speech>>
+<br>
+
+<<speech "tomm">>
+Aye. And that’s why I eat with the dogs. Less backstabbing, more honest drool.
+<</speech>>
+<br>
+<<elseif _i == 8>>
+<<speech "tomm">>
+One of these days, Your Highness, you’ll stop worryin’ how you look in the saddle and start worryin’ how you ride.
+<</speech>>
+<br>
+
+<<speech "mc">>
+You think I’m too vain?
+<</speech>>
+<br>
+
+<<speech "tomm">>
+I think you polish your boots more than your courage. But don’t worry  both scuff up easy in the dirt.
+<</speech>>
+<br>
+<<elseif _i == 9>>
+<<speech "tomm">>
+Bess here’s a warhorse, but don’t let that scare you. She only bites when lied to. So… be honest, princeling  did you sneak in here for the view, or the company?
+<</speech>>
+<br>
+
+<<speech "mc">>
+Maybe both.
+<</speech>>
+<br>
+
+<<speech "tomm">>
+Well, the view’s got a tail and the company’s got hay in his beard. Pick your poison.
+<</speech>>
+<br>
+<<elseif _i == 10>>
+<<speech "tomm">>
+Careful with that saddle, Highness. Last time a noble tried lifting it, he dislocated a pride and bruised his ego. Both took weeks to heal.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Maybe I’ll let someone else carry it.
+<</speech>>
+<br>
+
+<<speech "tomm">>
+Aye, let the peasants sweat so the princes stay pretty  Velmoria’s oldest dance. Shall I hum the tune?
+<</speech>>
+<br>
+<<elseif _i == 11>>
+<<speech "tomm">>
+That filly's in heat and you've got perfume on. Might wanna back up before she proposes marriage.
+<</speech>>
+<br>
+
+<<speech "mc">>
+I’m flattered, honestly. That’s more affection than I’ve gotten from most nobles.
+<</speech>>
+<br>
+
+<<speech "tomm">>
+Well, at least she’s honest. Can’t say the same for Lord Silverpants and his courtly sniffs.
+<</speech>>
+<br>
+<<elseif _i == 12>>
+<<speech "tomm">>
+Funny thing about horses  they can smell fear, pride, and bad cologne. Lucky for you, you're only wearin' two of those.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Should I ask which two?
+<</speech>>
+<br>
+
+<<speech "tomm">>
+Nah, let it haunt you like a ghost in a perfume shop.
+<</speech>>
+<br>
+<<elseif _i == 13>>
+<<speech "tomm">>
+You keep showin' up down here, people’ll think you’re tryin’ to join the staff. Or worse  earn your keep.
+<</speech>>
+<br>
+
+<<speech "mc">>
+I’d rather clean a stall than attend another etiquette lesson.
+<</speech>>
+<br>
+
+<<speech "tomm">>
+Then congrats  you’ve passed the first test. Now let’s see if you can dodge dung like a true stablehand.
+<</speech>>
+<br>
+
+
+<<elseif _i == 14>>
+<<speech "tomm">>
+You know, if ruling doesn’t work out, you’ve got the cheekbones for traveling minstrel work. Or stable sweeping. One pays better.
+<</speech>>
+<br>
+
+<<speech "mc">>
+And which one’s that?
+<</speech>>
+<br>
+
+<<speech "tomm">>
+The sweeping. Less heartbreak, more hay rash.
+<</speech>>
+<br>
+<<elseif _i == 15>>
+<<speech "tomm">>
+Back again? Either you're avoidin' someone or you’re fallin’ for me. I recommend neither  it only ends in manure.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Maybe I like the smell of reality.
+<</speech>>
+<br>
+
+<<speech "tomm">>
+Then you’re in luck, because reality’s piled high and steamin’ in stall three.
+<</speech>>
+<br>
+<<elseif _i == 16>>
+<<speech "tomm">>
+This one here  Blossom  she’s the moodiest mare in the kingdom. If you two ever argued, the castle would explode.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Is that a compliment or a curse?
+<</speech>>
+<br>
+
+<<speech "tomm">>
+Both. But you’d look fabulous doing it, so go on.
+<</speech>>
+<br>
+<<elseif _i == 17>>
+<<speech "tomm">>
+I caught one of the stable boys trying to impress a girl by pretending to be you. I told him to stand straighter and cry prettier.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Cry prettier?
+<</speech>>
+<br>
+
+<<speech "tomm">>
+Aye. Nobles weep like it’s poetry. Us commoners just sweat from the eyes.
+<</speech>>
+<br>
+<<elseif _i == 18>>
+<<speech "tomm">>
+Want to know why horses don’t gossip? Because they’re too smart for that nonsense. Just stomp once and move on.
+<</speech>>
+<br>
+
+<<speech "mc">>
+And if someone insults you?
+<</speech>>
+<br>
+
+<<speech "tomm">>
+You bite ‘em on the arm. Or file a report. Depends on the mood.
+<</speech>>
+<br>
+<<elseif _i == 19>>
+<<speech "tomm">>
+I saw your fancy new gown last week. Looked like a unicorn exploded in a silk shop.
+<</speech>>
+<br>
+
+<<speech "mc">>
+It was enchanted.
+<</speech>>
+<br>
+
+<<speech "tomm">>
+Aye, by the spirit of bad taste. But you pulled it off  like a peacock in a sword fight.
+<</speech>>
+<br>
+<</if>>
+[[Leave Stable Keeper|stable]] |<br><br>
+[[Leave Stable|castle_map_back_select]]
+<</nobr>>

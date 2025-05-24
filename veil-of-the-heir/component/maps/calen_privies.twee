@@ -1,0 +1,55 @@
+:: mc_bed_chamber_toilet
+<<nobr>>
+<<set $locationImage = setup.ImagePath + 'map/mc_bed_chamber_toilet_map.png'>>
+<h3 style="text-align: center;">Caelan Bed Chamber Toilet</h3>
+<div style="position: relative; width: 100%; max-width: 700px; margin: 0 auto; aspect-ratio: 7 / 5;">
+  <img src="veil-of-the-heir/images/map/mc_bed_chamber_toilet_map.png" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" />
+  <svg viewBox="0 0 700 500"
+       preserveAspectRatio="none"
+       style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+    <polygon id="mc_toilet" 
+             points="14,497,27,477,36,460,33,436,13,412,3,392,2,364,34,357,58,357,85,355,116,355,130,357,133,367,118,390,90,428,88,440,86,455,99,473,111,486,110,495,100,499" 
+             class="mc_bed_chamber_map" 
+             data-passage="mc_toilet" />
+    <polygon id="mc_bath_tub" 
+             points="590,267,622,263,615,96,658,45,686,31,698,33,698,267,696,383,610,376" 
+             class="mc_bed_chamber_map" 
+             data-passage="mc_bath_tub" />
+  </svg>
+</div>
+<br>
+[[Leave Bed Chamber|mc_bed_chamber]]
+<</nobr>>
+
+:: mc_bath_tub
+<<nobr>>
+/* describe bathing */
+<<set _feelings = setup.bath_thoughts.random()>>
+
+<<for _line range _feelings>>
+  <<speech "mc">>
+  <<=_line>>
+  <</speech>>
+  <br>
+<</for>>
+<br><br>
+[[Leave Privies|mc_bed_chamber]] |
+[[Move Away from Bathtub|mc_bed_chamber_toilet]]
+<</nobr>>
+
+:: mc_toilet
+<<nobr>>
+/* describe toilet */
+<<set _feelings = setup.toilet_feelings.random()>>
+
+<<for _line range _feelings>>
+  <<speech "mc">>
+  <<=_line>>
+  <</speech>>
+  <br>
+<</for>>
+
+<br><br>
+[[Leave Privies|mc_bed_chamber]] |
+[[Move Away from Toilet|mc_bed_chamber_toilet]]
+<</nobr>>

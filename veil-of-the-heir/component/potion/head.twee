@@ -1,0 +1,1198 @@
+
+
+:: head
+<<nobr>>
+<<set $user_stats.gender_Identity -= 2>>
+<<set $curr_potion = setup.head_forward_potions>>
+
+<<if State.variables.direction == "reverse">>
+    <<set $curr_potion = setup.head_reverse_potions>>
+<</if>>
+<<set $curr_potion_selected = $curr_potion[$userBody.head.curr_head]>>
+/* <pre><<=JSON.stringify($curr_potion_selected, null, 2)>></pre> */
+<<if $curr_potion_selected == undefined>>
+    <p style="color: red;">You do not have any head potions available for your current head version to transform.</p>
+    <<link "Leave Potion Scroll Selection">><<goto "veil_tower">><</link>> |
+    <<link "Leave Veil Tower">><<goto "castle_map_back_select">><</link>> |
+    <<link "Try another Potion Scroll">><<goto "potion_lab">><</link>>
+<<else>>
+/* <pre><<= JSON.stringify($userBody.head, null, 2)>></pre>
+<pre><<= JSON.stringify($curr_potion_selected, null, 2)>></pre> */
+/* <pre><<= JSON.stringify($userItems, null, 2)>></pre> */
+<<set $ingredient = {}>>
+<span style="font-family: 'Papyrus', serif; font-size: 22px; color: #8b5e3c;">
+<b>✦ Ancient Alchemical Recipe ✦</b><br><br>
+
+<b>Potion:</b> <<=$curr_potion_selected.name>><br>
+<b>Purpose:</b> <<=$curr_potion_selected.purpose>><br><br>
+
+<b>🜃 Ingredients:</b><br>
+<ol>
+<<for _item, _value range $curr_potion_selected.ingredients>>
+  <li><<=$userItems[_item].name>>: _value <<=$userItems[_item].unit>></li>
+  <<set $ingredient[_item] = {amount: $userItems[_item].amount, needed: _value, unit: $userItems[_item].unit}>>
+<</for>>
+</ol>
+<<set _potion = $curr_potion_selected>>
+/* <<set $currentObjectives = 'Create Potion: ' + _potion.name + '. Ingredients are: '>>
+
+<<for _item, _value range _potion.ingredients>>
+  <<set $currentObjectives += $userItems[_item].name + ': ' + _value + ' ' + $userItems[_item].unit + ', '>>
+<</for>>
+
+<<replace "#objectives-text" t8n>>
+  <<=$currentObjectives>>
+<</replace>> */
+
+<b>⤐ Function:</b><br>
+<i><<=$curr_potion_selected.function>></i><br><br>
+
+<b>⚠ Side Effects:</b><br>
+<i><<=$curr_potion_selected.sideEffects>></i>
+</span>
+/* <pre><<= JSON.stringify($ingredient, null, 2)>></pre> */
+<<set $ingredinetAvailable = true>>
+<<for _key, _data range $ingredient>>
+    <<if $ingredient[_key].amount < $ingredient[_key].needed>>
+        <p style="color: red;">
+        You do not have enough <<=$userItems[_key].name>>. You need <<=$ingredient[_key].needed>> 
+        <<=$userItems[_key].unit>>, but you have only <<=$ingredient[_key].amount>> <<=$userItems[_key].unit>>.</p>
+        <<set $ingredinetAvailable = false>>
+    <<else>>
+        <p style="color: green;">
+        You have enough <<=$userItems[_key].name>>. You need <<=$ingredient[_key].needed>> 
+        <<=$userItems[_key].unit>>, you have only <<=$ingredient[_key].amount>> <<=$userItems[_key].unit>>.</p>
+    <</if>>
+<</for>>
+<<if $currentArc["main_arc"] == 3>>
+    <<link "Refer Another Potion Scroll">><<goto "potion_lab">><</link>>
+<<elseif $ingredinetAvailable>>
+    <p style="color: green;">You have all the ingredients needed to make the potion.</p>
+    <<link "Make Potion">><<goto "potion_create_head">><</link>>
+    <<link "Try another Potion Scroll">><<goto "potion_lab">><</link>>
+<<else>>
+    <p style="color: red;">You do not have all the ingredients needed to make the potion.</p>
+    <<link "Leave Potion Scroll Selection">><<goto "veil_tower">><</link>> |
+    <<link "Leave Veil Tower">><<goto "castle_map_back_select">><</link>> |
+    <<link "Try another Potion Scroll">><<goto "potion_lab">><</link>>
+<</if>>
+<<set $potion = $curr_potion_selected>>
+<<set $potionInventory = {}>>
+<<for _item, _needed range $potion.ingredients>>
+    <<set $potionInventory[_item] = 0>>
+<</for>>
+<</if>>
+<</nobr>>
+
+
+:: potion_create_head
+<<nobr>>
+
+<span style="font-family: 'Papyrus', serif; font-size: 22px; color: #8b5e3c;">
+<b>🧪 Assembling: <span style="color: #5a2e13"><<=$potion.name>></span></b><br>
+<i>Match the exact ingredients to brew this potion:</i><br><br>
+<div class="item-grid">
+	<<for _item, _needed range $potion.ingredients>>
+			<div class="item-card">
+                <<capture _item>>
+                    [img[$userItems[_item].img]]
+                    <<set $reverse_passage_ingredient = "potion_create_head">>
+                    <<=$userItems[_item].name>>
+                    <div class="ingredient_details"><<link "Details">><<set $selectedIngredient = _item>><<goto "IngredientDetail">><</link>></div>
+                <</capture>>
+            </div>
+	<</for>>
+</div>
+<br>
+<<for _item, _needed range $potion.ingredients>>
+  <div style="margin-bottom: 10px;">
+    <b><<=$userItems[_item].name>></b> (You have: <<=$userItems[_item].amount>> <<=$userItems[_item].unit>>)<br>
+    Needed: <<=_needed>> <<=$userItems[_item].unit>> | Added: <<=$potionInventory[_item]>> <<=$userItems[_item].unit>><br>
+
+    <<if $userItems[_item].amount > 0>>
+        <<capture _item>>
+        <<set $potion_add = "+" + $userItems[_item].min_amount + " " + $userItems[_item].unit>>
+        <<link $potion_add>>
+            <<set $potionInventory[_item] += $userItems[_item].min_amount>>
+            <<set $userItems[_item].amount -= $userItems[_item].min_amount>>
+            <<goto "potion_create_head">>
+        <</link>>
+        <</capture>>
+    <</if>>
+    <<if $potionInventory[_item] > 0>>
+        <<set $potion_add = "-" + $userItems[_item].min_amount + " " + $userItems[_item].unit>>
+        <<capture _item>>
+            <<link $potion_add>>
+                <<set $potionInventory[_item] -= $userItems[_item].min_amount>>
+                <<set $userItems[_item].amount += $userItems[_item].min_amount>>
+                <<goto "potion_create_head">>
+            <</link>>
+      <</capture>>
+    <</if>>
+  </div>
+<</for>>
+
+<<set $_matches = true>>
+<<for _item, _data range $potion.ingredients>>
+  <<if $potionInventory[_item] != $potion.ingredients[_item]>>
+    <<set $_matches = false>>
+  <</if>>
+<</for>>
+<<if $_matches>>
+  <p style="color: green;"><b>✅ All ingredients matched perfectly. Ready to brew!</b></p>
+  <<link "Brew Potion">>
+    <<goto "brew_success_potion_create_head">>
+  <</link>>
+<</if>>
+<<if not $_matches>>
+  <p style="color: red;"><b>⚠ Ingredient quantities do not match the recipe. Adjust to proceed.</b></p>
+<</if>>
+
+<<link "Cancel">>
+  <<for _item, _data range $potionInventory>>
+    <<set $userItems[_item].amount += $potionInventory[_item]>>
+  <</for>>
+  <<goto "potion_lab">>
+<</link>>
+</span>
+<</nobr>>
+
+
+:: brew_success_potion_create_head
+<<nobr>>
+<<set $_i to random(1, 4)>>
+<<set $img_path = "potion/potion_"+$_i +".gif">>
+<div style="text-align: center; "><img style="text-align: center; border-radius: 9px;
+    border: 10px ridge #8b5e3c;" @src="setup.ImagePath+$img_path"></div>
+
+/* <pre><<=JSON.stringify($curr_potion_selected, null, 2)>></pre> */
+<<set $next_passage = "head_"+$curr_potion_selected.from +"_"+ "head_" + $curr_potion_selected.to>>
+<br>
+[[Move Forth|$next_passage]]
+<</nobr>>
+
+:: use_success_potion_create_head
+<<nobr>>
+/* <pre><<= JSON.stringify($userBody.hair, null, 2)>></pre> */
+<<set $userBody.head.curr_head = $curr_potion_selected.to>>
+<<set $image_key_head_path = "mc/figure/" + $userBody.torso.orig_body + "/" + $userBody.head.curr_head + "/" + $userBody.torso.orig_body + "_" + $userBody.head.curr_head + "_head.png">>
+<<set $image_key_hair_path = "mc/figure/" + $userBody.torso.orig_body + "/" + $userBody.head.curr_head + "/" + $userBody.torso.orig_body + "_" + $userBody.head.curr_head + "_" + $userBody.hair.curr_hair+ ".png">>
+/* <<=$image_key_head_path>> */
+/* <<=$image_key_hair_path>> */
+<<set $userBody.head.img = $image_key_head_path>>
+<<set $userBody.hair.img = $image_key_hair_path>>
+<div style="text-align: center;">
+<div class="change_show torso">[img[setup.ImagePath+$userBody.torso.img]]</div>
+<div class="change_show head">[img[setup.ImagePath+$userBody.head.img]]</div>
+<div class="change_show right_hand">[img[setup.ImagePath+$userBody.right_hand.img]]</div>
+<div class="change_show left_hand">[img[setup.ImagePath+$userBody.left_hand.img]]</div>
+<div class="change_show left_leg">[img[setup.ImagePath+$userBody.left_leg.img]]</div>
+<div class="change_show right_leg">[img[setup.ImagePath+$userBody.right_leg.img]]</div>
+<div class="change_show chest">[img[setup.ImagePath+$userBody.chest.img]]</div>
+<div class="change_show crotch">[img[setup.ImagePath+$userBody.crotch.img]]</div>
+<div class="change_show hair">[img[setup.ImagePath+$userBody.hair.img]]</div>
+</div>
+<<link "Try another Potion Scroll">><<goto "potion_lab">><</link>> |
+[[Leave Veil Tower|castle_map_back_select]]
+<</nobr>>
+
+
+
+:: head_ml_head_mm
+<<nobr>>
+<div style="text-align: center; width: 95%;"><img style="text-align: center; border-radius: 9px;
+    border: 10px ridge #8b5e3c;width: 95%;" @src="setup.ImagePath+'map/veil_tower_mage_map.png'"></div>
+<<speech "thalara">>You have brewed the potion. Let me see it first.  Caelan Are you ready to start the process...<</speech>>
+<br>
+[[Let’s begin. I’ve accepted the path… and I’ll walk it fully.|head_ml_head_mm_1]] | <br><br>
+[[I’m not sure I’m ready, but… I came, didn’t I?|head_ml_head_mm_1]] | <br><br>
+[[This is a waste of time. But if I must drink your cursed brew again, let’s just get it over with.|head_ml_head_mm_1]] | <br><br>
+<</nobr>>
+
+:: head_ml_head_mm_1
+<<nobr>>
+<<speech "thalara">>Your face holds the legacy of your father’s line bold, strong, uncompromising. A sculptor might say it was hewn from stone. But even stone yields, given time… or magic.<</speech>><br>
+
+<<speech "mc">>And now you’ll chisel it away. One gulp at a time.<</speech>><br>
+
+<<speech "thalara">>Not chisel. Melt. Like snow turning to stream. This is not destruction, Caelan. This is reshaping. Every part of you will still be you. Only… seen differently. Felt differently. Worn differently.<</speech>><br>
+
+<<speech "mc">>It feels like wearing a mask. One I can never take off.<</speech>><br>
+
+[[Move Forth|head_ml_head_mm_2]]
+<</nobr>>
+
+:: head_ml_head_mm_2
+<<nobr>>
+
+<<speech "thalara">>A mask hides. This brings forth what lies beneath. You may not know her yet, the woman who waits inside. But she is watching… and waiting for breath.<</speech>><br>
+
+<<speech "mc">>...You speak like this is sacred.<</speech>><br>
+
+<<speech "thalara">>Because it is. A face is not just flesh. It’s identity. It’s how the world answers you. But it also shapes how you answer the world.<</speech>><br>
+
+<<speech "mc">>So what answers will this face give? Will I smile easier? Cry more? Speak softer?<</speech>><br>
+
+[[Move Forth|head_ml_head_mm_3]]
+<</nobr>>
+
+:: head_ml_head_mm_3
+<<nobr>>
+
+<<speech "thalara">>You will smile with meaning. Cry when your spirit demands it. Speak not softer, but with clarity born from both power and elegance. That’s the gift of balance.<</speech>><br>
+
+<<speech "mc">>It smells like… violets. And honey.<</speech>><br>
+
+<<speech "thalara">>And lavender stem, ground moonstone, and a drop of your blood from last night’s offering. All aligned to your lineage, your essence.<</speech>><br>
+
+<<speech "mc">>It’s warm… it’s crawling through my jaw… gods, that’s <</speech>><br>
+
+[[Move Forth|head_ml_head_mm_4]]
+<</nobr>>
+
+:: head_ml_head_mm_4
+<<nobr>>
+
+<<speech "thalara">>It will pass. The ache of transition. Your brow is lightening. See? Even your neck relaxes… the angles soften. No more harsh shadow beneath the chin.<</speech>><br>
+
+<<speech "mc">>I feel… like I’m sinking into something. Like a blanket pulling over my bones.<</speech>><br>
+
+<<speech "thalara">>Look. The beginning of grace. Your father’s jaw still echoes there… but now, so too does your mother’s cheekbones.<</speech>><br>
+
+<<speech "mc">>It’s me. But not me. It’s… her, isn’t it? The one waiting beneath?<</speech>><br>
+
+[[Move Forth|head_ml_head_mm_5]]
+<</nobr>>
+
+:: head_ml_head_mm_5
+<<nobr>>
+
+<<speech "thalara">>Only the first glimpse. More will come, if you let it.<</speech>><br>
+
+<<speech "mc">>I didn’t think a few degrees of cheekbone would feel different. But it does. Like my smile knows it’s meant for court instead of campfire.<</speech>><br>
+
+<<speech "thalara">>That is the beginning of understanding. Not just of body but of presence. You will find new ways to be seen. But more importantly… you will learn how to see yourself.<</speech>><br>
+
+<<speech "mc">>Do you think she’ll be proud of me? The Queen?<</speech>><br>
+
+[[Move Forth|head_ml_head_mm_6]]
+<</nobr>>
+
+:: head_ml_head_mm_6
+<<nobr>>
+
+<<speech "thalara">>I think you will be. In time. That matters more than even a crown.<</speech>><br>
+[[I feel the potion working in my body|use_success_potion_create_head]]
+<</nobr>>
+
+
+
+
+
+
+
+
+:: head_mm_head_ml
+<<nobr>>
+<div style="text-align: center; width: 95%;"><img style="text-align: center; border-radius: 9px;
+    border: 10px ridge #8b5e3c;width: 95%;" @src="setup.ImagePath+'map/veil_tower_mage_map.png'"></div>
+<<speech "thalara">>You have brewed the potion. Let me see it first.  Caelan Are you ready to start the process...<</speech>>
+<br>
+[[I’ve made my decision. If strength must return to my face, let it return fully.|head_mm_head_ml_1]] | <br><br>
+[[I don’t know what I’ll see in the mirror after this… but I have to know if it still fits me.|head_mm_head_ml_1]] | <br><br>
+[[I never wanted to lose my face in the first place. Let’s fix what never should’ve changed.|head_mm_head_ml_1]] | <br><br>
+<</nobr>>
+
+:: head_mm_head_ml_1
+<<nobr>>
+<<speech "thalara">>So, the pendulum swings once more. Are you returning to what was? Or simply testing the shape of the past?<</speech>><br>
+
+<<speech "mc">>Not everything that’s lost needs replacing. Maybe I want to remember who I was before all of this started.<</speech>><br>
+
+<<speech "thalara">>Memory lives in more than your bones. But I understand. There’s something sacred about reclaiming old armor, even if it no longer fits as it once did.<</speech>><br>
+
+<<speech "mc">>I’ve seen too many versions of my own reflection lately. One day, I see her. The next… someone in between. Maybe I just want a face that matches the fight still left in me.<</speech>><br>
+
+[[Move Forth|head_mm_head_ml_2]]
+<</nobr>>
+
+:: head_mm_head_ml_2
+<<nobr>>
+
+<<speech "thalara">>You seek the blunt edge again the square lines, the force of masculinity etched across your brow. This draught will give that back, in part. But remember, the mirror shows only surface. Not resolve. Not truth.<</speech>><br>
+
+<<speech "mc">>But the world listens to the face before it hears the voice.<</speech>><br>
+
+<<speech "thalara">>That it does. Then let the face speak the language you need today.<</speech>><br>
+
+<<speech "mc">>This one burns more than the last… it’s… tightening. I feel pressure behind my eyes jaw’s locking up. Gods, that’s sharp <</speech>><br>
+
+[[Move Forth|head_mm_head_ml_3]]
+<</nobr>>
+
+:: head_mm_head_ml_3
+<<nobr>>
+<<speech "thalara">>Let it surge. You’re not weakening you’re hardening. The flesh obeys your will. Look now already, your chin strengthens, your jaw firms. The softness flees like morning fog.<</speech>><br>
+
+<<speech "mc">>My brow… it’s like my whole face is shifting forward. Like I’m being carved again.<</speech>><br>
+
+<<speech "thalara">>And so you are. The angles of command return. You’ve traded the whisper of grace… for the shout of presence.<</speech>><br>
+
+<<speech "mc">>My gods. I look… older. Stronger. Harsher.<</speech>><br>
+
+[[Move Forth|head_mm_head_ml_4]]
+<</nobr>>
+
+:: head_mm_head_ml_4
+<<nobr>>
+
+<<speech "thalara">>Power wears many masks. This one blunt, assertive is no less royal than the last. The question is: Which do you wear by choice, and which by fear?<</speech>><br>
+
+<<speech "mc">>I don’t know yet. But I remember this face. And it remembers battle.<</speech>><br>
+
+<<speech "thalara">>Then carry it like a sword, not a shield. You don’t have to defend the past. Only learn from it.<</speech>><br>
+
+<<speech "mc">>How long until it stays this way?<</speech>><br>
+
+[[Move Forth|head_mm_head_ml_5]]
+<</nobr>>
+
+:: head_mm_head_ml_5
+<<nobr>>
+
+<<speech "thalara">>As long as you will it to… or until the next turning of the wheel.<</speech>><br>
+[[I feel the potion working in my body|use_success_potion_create_head]]
+<</nobr>>
+
+
+
+
+:: head_mm_head_ms
+<<nobr>>
+<div style="text-align: center; width: 95%;"><img style="text-align: center; border-radius: 9px;
+    border: 10px ridge #8b5e3c;width: 95%;" @src="setup.ImagePath+'map/veil_tower_mage_map.png'"></div>
+<<speech "thalara">>You have brewed the potion. Let me see it first.  Caelan Are you ready to start the process...<</speech>>
+<br>
+[[Another step toward feminine face… Let’s see what this one brings.|head_mm_head_ms_1]] | <br><br>
+[[I don’t know if I’m ready to let more of him go… but I’m here.|head_mm_head_ms_1]] | <br><br>
+[[Fine. Let’s get this over with. Another sip, another piece of me gone.|head_mm_head_ms_1]] | <br><br>
+<</nobr>>
+
+:: head_mm_head_ms_1
+<<nobr>>
+<<speech "thalara">>Come, Caelan. The next veil lifts today not with force, but with quiet grace. Sit.<</speech>><br>
+
+<<speech "mc">>I’ve noticed it, you know. The way my face catches the light differently. How the guards glance at me longer, unsure what they’re seeing.<</speech>><br>
+
+<<speech "thalara">>Your reflection begins to speak in new tones. Not louder just… more refined.<</speech>><br>
+
+<<speech "mc">>I used to have a face that made people step aside in a hallway. Now they hesitate like they don’t know whether to bow or flirt.<</speech>><br>
+
+[[Move Forth|head_mm_head_ms_2]]
+<</nobr>>
+
+:: head_mm_head_ms_2
+<<nobr>>
+
+<<speech "thalara">>Isn’t that the subtle power of a queen’s presence? Confusion is a kind of control, too.<</speech>><br>
+
+<<speech "mc">>Feels more like exposure than control.<</speech>><br>
+
+<<speech "thalara">>You were carved for war once. But the world you're stepping into now… doesn’t need carved stone. It needs marble shaped by conversation, compromise, and quiet confidence.<</speech>><br>
+
+<<speech "mc">>And this is what… smooths more of me away?<</speech>><br>
+
+[[Move Forth|head_mm_head_ms_3]]
+
+<</nobr>>
+
+:: head_mm_head_ms_3
+<<nobr>>
+
+<<speech "thalara">>It will lift your brow, lighten the bones beneath your cheeks, soften what’s still holding on. Not to erase who you were but to reveal who you might be beneath the shell of that prince.<</speech>><br>
+
+<<speech "mc">>It’s… not as bitter as last time.<</speech>><br>
+
+<<speech "thalara">>This one’s kinder. Less reshaping, more refining. Tell me what you feel.<</speech>><br>
+
+<<speech "mc">>My temples… tingling. Like the bones are loosening beneath the skin.<</speech>><br>
+
+[[Move Forth|head_mm_head_ms_4]]
+
+<</nobr>>
+
+:: head_mm_head_ms_4
+<<nobr>>
+
+<<speech "thalara">>Good. The potion’s taking to your essence quickly today. Your body’s stopped resisting. It’s… inviting change.<</speech>><br>
+
+<<speech "mc">>My skin feels thinner… no, softer. Like a layer’s peeled away. Gods, even the wind on my face feels different.<</speech>><br>
+
+<<speech "thalara">>You’re beginning to glow, Caelan. Not from magic, but from balance. Your soul and your body are speaking in harmony, even if your mind still debates.<</speech>><br>
+
+<<speech "mc">>...That doesn’t look like a warrior.<</speech>><br>
+
+[[Move Forth|head_mm_head_ms_5]]
+
+<</nobr>>
+
+:: head_mm_head_ms_5
+<<nobr>>
+
+<<speech "thalara">>No. But it looks like a ruler who can win battles without lifting a blade.<</speech>><br>
+
+<<speech "mc">>My brow isn’t as heavy… my eyes look clearer?<</speech>><br>
+
+<<speech "thalara">>They were always clear. But now the world might finally notice.<</speech>><br>
+
+<<speech "mc">>Mother would say this is progress.<</speech>><br>
+
+[[Move Forth|head_mm_head_ms_6]]
+<</nobr>>
+
+:: head_mm_head_ms_6
+<<nobr>>
+
+<<speech "thalara">>And what do you say?<</speech>><br>
+
+<<speech "mc">>I say… I’m scared of forgetting who I was. But I don’t hate who I’m becoming.<</speech>><br>
+
+<<speech "thalara">>Then you are already wiser than most queens crowned before you.<</speech>><br>
+[[I feel the potion working in my body|use_success_potion_create_head]]
+<</nobr>>
+
+
+
+
+
+
+
+:: head_ms_head_mm
+<<nobr>>
+<div style="text-align: center; width: 95%;"><img style="text-align: center; border-radius: 9px;
+    border: 10px ridge #8b5e3c;width: 95%;" @src="setup.ImagePath+'map/veil_tower_mage_map.png'"></div>
+<<speech "thalara">>You have brewed the potion. Let me see it first.  Caelan Are you ready to start the process...<</speech>>
+<br>
+[[Time to feel solid again. Let’s bring back some edge.|head_ms_head_mm_1]] | <br><br>
+[[I’m not sure I should undo this… but I have to know what I’m choosing.|head_ms_head_mm_1]] | <br><br>
+[[You’re turning me back. Bit by bit. Is that what the kingdom wants now?|head_ms_head_mm_1]] | <br><br>
+<</nobr>>
+
+:: head_ms_head_mm_1
+<<nobr>>
+<<speech "thalara">>This will not be like the first time, Caelan. Reclaiming form is not as gentle as letting go of it.<</speech>><br>
+
+<<speech "mc">>I remember when you first softened my jaw… it felt like fog brushing stone. What will this feel like?<</speech>><br>
+
+<<speech "thalara">>Like the fog receding. Like your bones remembering the shapes they once held. Some part of you never forgets.<</speech>><br>
+
+<<speech "mc">>I started to like this face. Less judgment in it. Less… armor.<</speech>><br>
+
+[[Move Forth|head_ms_head_mm_2]]
+<</nobr>>
+
+
+:: head_ms_head_mm_2
+<<nobr>>
+
+<<speech "thalara">>And yet, you chose to drink again. Do you seek the armor back, Caelan?<</speech>><br>
+
+<<speech "mc">>Maybe. Or maybe I just want to know how much of me is still mine to choose.<</speech>><br>
+
+<<speech "thalara">>This dose will raise your brow ridge, define your chin, thicken the neck slightly. Your features will speak louder again more command, less grace.<</speech>><br>
+
+<<speech "mc">>And will I lose what I’ve gained? The things I’ve learned in silence?<</speech>><br>
+
+[[Move Forth|head_ms_head_mm_3]]
+<</nobr>>
+
+:: head_ms_head_mm_3
+<<nobr>>
+
+<<speech "thalara">>You will not lose anything, Caelan. This is not a reversal. It is a rebalancing. A different truth carved from the same stone.<</speech>><br>
+
+<<speech "mc">>Ugh. That’s… stronger than I remember.<</speech>><br>
+
+<<speech "thalara">>It has to be. Your body had accepted softness. Now it must be reminded of edge.<</speech>><br>
+
+<<speech "mc">>My jaw… it’s tightening. Gods, it’s like sinew pulling back into place.<</speech>><br>
+
+[[Move Forth|head_ms_head_mm_4]]
+<</nobr>>
+
+:: head_ms_head_mm_4
+<<nobr>>
+
+<<speech "thalara">>Your brow is knitting deeper. There’s more shadow to your gaze already.<</speech>><br>
+
+<<speech "mc">>It hurts. Not the potion. Just… seeing it return. This isn’t just my face. It’s him. The version of me who never questioned anything.<</speech>><br>
+
+<<speech "thalara">>Does he scare you?<</speech>><br>
+
+<<speech "mc">>He disappoints me. But I don’t hate him.<</speech>><br>
+
+[[Move Forth|head_ms_head_mm_5]]
+<</nobr>>
+
+:: head_ms_head_mm_5
+<<nobr>>
+
+<<speech "thalara">>Then you carry him forward with wisdom, not regret.<</speech>><br>
+
+<<speech "mc">>There’s strength here. But less peace.<</speech>><br>
+
+<<speech "thalara">>Strength can be a mask or a mirror. You decide which.<</speech>><br>
+
+<<speech "mc">>I’ll need both, won’t I?<</speech>><br>
+
+[[Move Forth|head_ms_head_mm_6]]
+
+<</nobr>>
+
+:: head_ms_head_mm_6
+<<nobr>>
+
+<<speech "thalara">>If you’re to rule Velmoria? Absolutely.<</speech>><br>
+[[I feel the potion working in my body|use_success_potion_create_head]]
+<</nobr>>
+
+
+
+
+
+
+:: head_ms_head_fs
+<<nobr>>
+<div style="text-align: center; width: 95%;"><img style="text-align: center; border-radius: 9px;
+    border: 10px ridge #8b5e3c;width: 95%;" @src="setup.ImagePath+'map/veil_tower_mage_map.png'"></div>
+<<speech "thalara">>You have brewed the potion. Let me see it first.  Caelan Are you ready to start the process...<</speech>>
+<br>
+[[I’m ready. Let’s see who’s waiting behind the mist this time.|head_ms_head_fs_1]] | <br><br>
+[[I’m not sure I’ll recognize myself after this… but I suppose that’s the point, isn’t it?|head_ms_head_fs_1]] | <br><br>
+[[Tell me how much of me will be left once this is over? Or is that not part of the plan?|head_ms_head_fs_1]] | <br><br>
+<</nobr>>
+
+:: head_ms_head_fs_1
+<<nobr>>
+<<speech "thalara">>Today’s potion carries a softer magic, but make no mistake its effects are no less profound. It touches your reflection first, and then… the soul behind it.<</speech>><br>
+
+<<speech "mc">>I thought I’d gotten used to these sessions. But this one feels… closer. Like it’ll change what people see in my eyes.<</speech>><br>
+
+<<speech "thalara">>Because it will. Until now, your features still echoed both the prince and the path before you. But after this… the ambiguity fades.<</speech>><br>
+
+<<speech "mc">>So I stop being a ‘he who looks softer’ and become something… uncertain?<</speech>><br>
+
+[[Move Forth|head_ms_head_fs_2]]
+<</nobr>>
+
+:: head_ms_head_fs_2
+<<nobr>>
+
+<<speech "thalara">>No, Caelan. You begin to become a ‘she who has not yet arrived.’ There is a difference.<</speech>><br>
+
+<<speech "mc">>I keep expecting to wake up and see my old face again. Jawline sharp. Eyes like my father’s. But every time, I drift further. Like memory turning to fog.<</speech>><br>
+
+<<speech "thalara">>Not fog. Mist. And mist can reveal as much as it hides.<</speech>><br>
+
+<<speech "mc">>Will it hurt?<</speech>><br>
+
+[[Move Forth|head_ms_head_fs_3]]
+<</nobr>>
+
+:: head_ms_head_fs_3
+<<nobr>>
+
+<<speech "thalara">>Not in the way you fear. There may be warmth tingling along the cheekbones, a tightness in your lips. But the real ache comes when you look at the mirror… and she looks back.<</speech>><br>
+
+<<speech "mc">>Still bitter as ever…<</speech>><br>
+
+<<speech "thalara">>The bitterness is not from the potion. It’s from what it asks of you.<</speech>><br>
+
+<<speech "mc">>My skin feels… thinner. Not weaker. Just… like silk instead of leather.<</speech>><br>
+
+[[Move Forth|head_ms_head_fs_4]]
+<</nobr>>
+
+:: head_ms_head_fs_4
+<<nobr>>
+
+<<speech "thalara">>The cheekbones will lift now. Your lips will taper. The muscles behind your eyes will relax, letting softness pool there.<</speech>><br>
+
+<<speech "mc">>How do you know all this? Every inch of change, every flicker?<</speech>><br>
+
+<<speech "thalara">>I’ve walked others through this mist, Caelan. Queens who were not born as women. Nobles who gave up comfort for clarity. Some of them screamed. Others… sang.<</speech>><br>
+
+<<speech "mc">>And what did I do?<</speech>><br>
+
+[[Move Forth|head_ms_head_fs_5]]
+<</nobr>>
+
+:: head_ms_head_fs_5
+<<nobr>>
+
+<<speech "thalara">>You watched the mirror. And you listened. That is rarer than you think.<</speech>><br>
+
+<<speech "mc">>She’s already there, isn’t she? The version of me I haven’t met yet.<</speech>><br>
+
+<<speech "thalara">>She’s not a stranger, Caelan. She’s you without your armor.<</speech>><br>
+
+<<speech "mc">>That’s the part I don’t know how to face. What if I like her? What if I don’t?<</speech>><br>
+
+[[Move Forth|head_ms_head_fs_6]]
+<</nobr>>
+
+:: head_ms_head_fs_6
+<<nobr>>
+
+<<speech "thalara">>You don’t need to love her yet. Just let her breathe.<</speech>><br>
+
+<<speech "mc">>My lips… they’re thinner. Softer. Eyes look… different.<</speech>><br>
+
+<<speech "thalara">>You’re not supposed to recognize her completely. Not yet. She’ll grow clearer with each choice you make.<</speech>><br>
+
+<<speech "mc">>I feel like I’m standing between two portraits. Neither finished.<</speech>><br>
+
+[[Move Forth|head_ms_head_fs_7]]
+<</nobr>>
+
+
+:: head_ms_head_fs_7
+<<nobr>>
+
+<<speech "thalara">>Then let your reflection be a painting in progress. And remember what you become doesn’t erase who you were.<</speech>><br>
+
+<<speech "mc">>Into the mirror’s mist… and through it, I suppose.<</speech>><br>
+
+<<speech "thalara">>Exactly, my lady. And mist always clears… when it’s time.<</speech>><br>
+[[I feel the potion working in my body|use_success_potion_create_head]]
+<</nobr>>
+
+
+
+
+
+
+
+:: head_fs_head_ms
+<<nobr>>
+<div style="text-align: center; width: 95%;"><img style="text-align: center; border-radius: 9px;
+    border: 10px ridge #8b5e3c;width: 95%;" @src="setup.ImagePath+'map/veil_tower_mage_map.png'"></div>
+<<speech "thalara">>You have brewed the potion. Let me see it first.  Caelan Are you ready to start the process...<</speech>>
+<br>
+[[I’m ready to pull back from the edge. Let’s find what still belongs to me.|head_fs_head_ms_1]] | <br><br>
+[[This isn’t as simple as undoing a braid, is it?|head_fs_head_ms_1]] | <br><br>
+[[So we just throw her away? Like none of it mattered?|head_fs_head_ms_1]] | <br><br>
+<</nobr>>
+
+:: head_fs_head_ms_1
+<<nobr>>
+<<speech "thalara">>This potion… doesn’t erase. It rebalances. But yes, she will step aside for now.<</speech>><br>
+
+<<speech "mc">>She’s still there. I can almost see her outline, just behind my eyes.<</speech>><br>
+
+<<speech "thalara">>And she always will be. This magic doesn’t tear away it folds.<</speech>><br>
+
+<<speech "mc">>What if I liked the way she smiled? It was different. Lighter. As if the world wasn’t watching so closely.<</speech>><br>
+
+[[Move Forth|head_fs_head_ms_2]]
+<</nobr>>
+
+:: head_fs_head_ms_2
+<<nobr>>
+
+<<speech "thalara">>Then remember it. Even as your lips shift, remember how that smile felt. No transformation can take your truth from you.<</speech>><br>
+
+<<speech "mc">>Still bitter. But not like the last ones. This one tastes… dry. Empty, almost.<</speech>><br>
+
+<<speech "thalara">>Because it’s not building something new it’s closing a chapter. There’s melancholy in that. Even in power regained.<</speech>><br>
+
+<<speech "mc">>My skin… feels thicker again. Less delicate. Jaw feels… heavier?<</speech>><br>
+
+[[Move Forth|head_fs_head_ms_3]]
+<</nobr>>
+
+:: head_fs_head_ms_3
+<<nobr>>
+
+<<speech "thalara">>The lines return gradually. The cheeks broaden. The balance of muscle in your face begins to reassert.<</speech>><br>
+
+<<speech "mc">>So I’m becoming him again. Not her. Not both. Just… him.<</speech>><br>
+
+<<speech "thalara">>No, Caelan. You are still you. But the world will see him first again. It’s only a mask if you forget who's wearing it.<</speech>><br>
+
+<<speech "mc">>Why does it hurt more going back than it did going forward?<</speech>><br>
+
+[[Move Forth|head_fs_head_ms_4]]
+<</nobr>>
+
+
+:: head_fs_head_ms_4
+<<nobr>>
+
+<<speech "thalara">>Because forward was the unknown. Backward carries memory. The weight of what you’ve felt, lived, questioned. That’s heavier than transformation.<</speech>><br>
+
+<<speech "mc">>I can already feel my cheekbones dulling… my lips firming. The softness is still there, but it's… covered. Hidden.<</speech>><br>
+
+<<speech "thalara">>And that’s a kind of strength too. You’ve touched grace. Now you carry it inside, even if the mirror forgets.<</speech>><br>
+
+<<speech "mc">>What will people see now?<</speech>><br>
+
+[[Move Forth|head_fs_head_ms_5]]
+<</nobr>>
+
+:: head_fs_head_ms_5
+<<nobr>>
+
+<<speech "thalara">>They’ll see a prince who once glimpsed the queen within. That vision doesn’t vanish. It lives in your voice, your eyes, your choices.<</speech>><br>
+
+<<speech "mc">>Will she miss me? The one in the mist?<</speech>><br>
+
+<<speech "thalara">>She won’t need to. She is you. She’s waiting, not mourning.<</speech>><br>
+
+<<speech "mc">>I didn’t expect to grieve.<</speech>><br>
+
+[[Move Forth|head_fs_head_ms_6]]
+<</nobr>>
+
+:: head_fs_head_ms_6
+<<nobr>>
+
+<<speech "thalara">>Transformation always leaves echoes. Some fade. Some follow. But all of them shape the ruler you will be.<</speech>><br>
+
+<<speech "mc">>Then let her echo guide me. Even if the world calls me prince again… she was real. She is real.<</speech>><br>
+
+<<speech "thalara">>And should the time come to find her again… the mist will part. As it always does.<</speech>><br>
+[[I feel the potion working in my body|use_success_potion_create_head]]
+<</nobr>>
+
+
+
+
+
+
+:: head_fs_head_fm
+<<nobr>>
+<div style="text-align: center; width: 95%;"><img style="text-align: center; border-radius: 9px;
+    border: 10px ridge #8b5e3c;width: 95%;" @src="setup.ImagePath+'map/veil_tower_mage_map.png'"></div>
+<<speech "thalara">>You have brewed the potion. Let me see it first.  Caelan Are you ready to start the process...<</speech>>
+<br>
+[[Let’s do it. If I’m to wear this face before the court, let it be flawless.|head_fs_head_fm_1]] | <br><br>
+[[Another layer peeled away... I’m not sure who’s left underneath.|head_fs_head_fm_1]] | <br><br>
+[[So I’m just a mask now? A doll for court approval?|head_fs_head_fm_1]] | <br><br>
+<</nobr>>
+
+:: head_fs_head_fm_1
+<<nobr>>
+<<speech "thalara">>Not a mask. A canvas. And every queen has the right to choose how her portrait is painted.<</speech>><br>
+
+<<speech "mc">>This potion looks... prettier than the last.<</speech>><br>
+
+<<speech "thalara">>Because it touches closer to beauty’s core. The features that stir emotion subtle symmetry, softness, allure.<</speech>><br>
+
+<<speech "mc">>So now it’s about being beautiful?<</speech>><br>
+
+[[Move Forth|head_fs_head_fm_2]]
+<</nobr>>
+
+:: head_fs_head_fm_2
+<<nobr>>
+
+<<speech "thalara">>It’s about wielding beauty, Caelan. As others wield blades or words. You are nearing a point where your presence alone will speak volumes.<</speech>><br>
+
+<<speech "mc">>My lips are already... softer than they were. My eyes seem larger somehow.<</speech>><br>
+
+<<speech "thalara">>Your face is learning a new language. One not written in strength, but in expression. In silence. In invitation and denial.<</speech>><br>
+
+<<speech "mc">>The kind of face that stops a room?<</speech>><br>
+
+[[Move Forth|head_fs_head_fm_3]]
+<</nobr>>
+
+:: head_fs_head_fm_3
+<<nobr>>
+
+<<speech "thalara">>Yes. Or conquers one, without ever raising a voice.<</speech>><br>
+
+<<speech "mc">>Tingles this time. Right behind the eyes... and along my jaw. It’s strange.<</speech>><br>
+
+<<speech "thalara">>The potion eases the underlying muscles. Shapes them to respond to subtler emotion smiles, glances, soft amusement. It draws out grace you didn’t know you possessed.<</speech>><br>
+
+<<speech "mc">>My chin looks... different. Pointed?<</speech>><br>
+
+[[Move Forth|head_fs_head_fm_4]]
+<</nobr>>
+
+:: head_fs_head_fm_4
+<<nobr>>
+
+<<speech "thalara">>Tapered, yes. And your lips are beginning to round. Soon, every expression you make will be read differently. Felt differently.<</speech>><br>
+
+<<speech "mc">>That sounds... dangerous.<</speech>><br>
+
+<<speech "thalara">>It is. But so is any form of power. Your face will no longer command it will compel.<</speech>><br>
+
+<<speech "mc">>Would people even believe I was ever a prince?<</speech>><br>
+
+[[Move Forth|head_fs_head_fm_5]]
+<</nobr>>
+
+:: head_fs_head_fm_5
+<<nobr>>
+
+<<speech "thalara">>Some may forget. Others will only whisper. And a few will remember and revere you for the journey.<</speech>><br>
+
+<<speech "mc">>There’s something unreal about it all. Like watching someone else emerge from inside me.<</speech>><br>
+
+<<speech "thalara">>Not someone else. Just another truth. A truth you buried beneath duty, sword drills, and expectation.<</speech>><br>
+
+<<speech "mc">>And if I wanted to stop here?<</speech>><br>
+
+[[Move Forth|head_fs_head_fm_6]]
+<</nobr>>
+
+:: head_fs_head_fm_6
+<<nobr>>
+
+<<speech "thalara">>You could. But you'd carry an unfinished song in your skin. And songs half-sung tend to haunt their singers.<</speech>><br>
+
+<<speech "mc">>It already doesn’t feel like mine. And yet... it’s not wrong.<</speech>><br>
+
+<<speech "thalara">>That’s because you’re not losing yourself you’re unfolding. And every fold you reveal adds depth to the queen you may yet become.<</speech>><br>
+
+<<speech "mc">>I don’t know if I’ll ever believe that fully.<</speech>><br>
+
+[[Move Forth|head_fs_head_fm_7]]
+<</nobr>>
+
+
+:: head_fs_head_fm_7
+<<nobr>>
+
+<<speech "thalara">>Then believe in the possibility. In the silence of a hall when you walk in. In the way a rival stumbles over their words beneath your gaze. That is real. That is yours.<</speech>><br>
+
+<<speech "mc">>So… after this, I won’t just look like someone new. I’ll feel it, too?<</speech>><br>
+
+<<speech "thalara">>You’ll begin to. And the world will respond. Be ready, Caelan. Beauty carries its own burden.<</speech>><br>
+
+<<speech "mc">>Then teach me to wield it. Not like a mask… but like a blade.<</speech>><br>
+
+[[Move Forth|head_fs_head_fm_8]]
+<</nobr>>
+
+:: head_fs_head_fm_8
+<<nobr>>
+
+<<speech "thalara">>Spoken like a true ruler. Grace sharpened is grace that conquers.<</speech>><br>
+[[I feel the potion working in my body|use_success_potion_create_head]]
+<</nobr>>
+
+
+
+
+
+
+
+
+:: head_fm_head_fs
+<<nobr>>
+<div style="text-align: center; width: 95%;"><img style="text-align: center; border-radius: 9px;
+    border: 10px ridge #8b5e3c;width: 95%;" @src="setup.ImagePath+'map/veil_tower_mage_map.png'"></div>
+<<speech "thalara">>You have brewed the potion. Let me see it first.  Caelan Are you ready to start the process...<</speech>>
+<br>
+[[I want to see what’s left of the old me… before it vanishes completely.|head_fm_head_fs_1]] | <br><br>
+[[This doesn’t feel right. Like taking back something I already gave away.|head_fm_head_fs_1]] | <br><br>
+[[I never asked for this elegance. Let it go. Let me go.|head_fm_head_fs_1]] | <br><br>
+<</nobr>>
+
+:: head_fm_head_fs_1
+<<nobr>>
+<<speech "thalara">>You know, most who walk forward through change rarely glance back. And fewer still ask to undo the spell’s embroidery.<</speech>><br>
+
+<<speech "mc">>Maybe I just need to know what’s still mine. If anything is.<</speech>><br>
+
+<<speech "thalara">>This won’t bring back all you were. But it will soften the queenly mark you now wear. A gentler return… not a full retreat.<</speech>><br>
+
+<<speech "mc">>My lips… they used to be thinner. I remember biting them before battles, cracking them in the cold.<</speech>><br>
+
+[[Move Forth|head_fm_head_fs_2]]
+<</nobr>>
+
+:: head_fm_head_fs_2
+<<nobr>>
+
+<<speech "thalara">>You will feel that tension return. The softness will give way to endurance. Your nose will broaden. The tip will shift upward slightly.<</speech>><br>
+
+<<speech "mc">>This curve… It made me look fragile. Vulnerable.<</speech>><br>
+
+<<speech "thalara">>Now it will firm again. More square, more weight beneath your words. But vulnerability is not weakness, Caelan.<</speech>><br>
+
+<<speech "mc">>I know. But the court sees with old eyes.<</speech>><br>
+
+[[Move Forth|head_fm_head_fs_3]]
+<</nobr>>
+
+:: head_fm_head_fs_3
+<<nobr>>
+<<speech "thalara">>The court can be taught to blink. If only you dared to stay the course.<</speech>><br>
+
+<<speech "mc">>I’m not turning back entirely. I just  I need to feel anchored again. Even if only a little.<</speech>><br>
+
+<<speech "thalara">>Then sip. Let the potion find the tension in your features. Let it sculpt with memory instead of magic.<</speech>><br>
+
+<<speech "mc">>It burns, more than I thought.<</speech>><br>
+
+[[Move Forth|head_fm_head_fs_4]]
+<</nobr>>
+
+:: head_fm_head_fs_4
+<<nobr>>
+
+<<speech "thalara">>Because the skin resists what the mind regrets.<</speech>><br>
+
+<<speech "mc">>My mouth feels tight again. Less expressive. My nose… sharper somehow.<</speech>><br>
+
+<<speech "thalara">>The muscles are realigning. Returning to their old habits. You may find your smile changed. Less invitation, more calculation.<</speech>><br>
+
+<<speech "mc">>I feel older.<</speech>><br>
+
+[[Move Forth|head_fm_head_fs_5]]
+<</nobr>>
+
+:: head_fm_head_fs_5
+<<nobr>>
+
+<<speech "thalara">>No. You feel earlier. Before beauty touched you. Before softness tempered you.<</speech>><br>
+
+<<speech "mc">>My face… it’s still not what it was. But… there’s something stronger there.<</speech>><br>
+
+<<speech "thalara">>Strength and beauty are not enemies, Caelan. They’re just two sides of will.<</speech>><br>
+
+<<speech "mc">>Do you think I’m making a mistake?<</speech>><br>
+
+[[Move Forth|head_fm_head_fs_6]]
+<</nobr>>
+
+:: head_fm_head_fs_6
+<<nobr>>
+
+<<speech "thalara">>I think you’re searching for balance. And the only mistake is believing you must be only one thing or the other.<</speech>><br>
+
+<<speech "mc">>Will they still believe in me? The people?<</speech>><br>
+
+<<speech "thalara">>If you believe in yourself, they will. Whether queen, prince, or something entirely new.<</speech>><br>
+
+<<speech "mc">>Then maybe… just for today, I needed to feel something solid. Something I could still call mine.<</speech>><br>
+
+[[Move Forth|head_fm_head_fs_7]]
+<</nobr>>
+
+:: head_fm_head_fs_7
+<<nobr>>
+
+<<speech "thalara">>And tomorrow, you may want something else. That is not weakness, Caelan. That is evolution.<</speech>><br>
+[[I feel the potion working in my body|use_success_potion_create_head]]
+<</nobr>>
+
+
+
+
+
+
+
+
+:: head_fm_head_fl
+<<nobr>>
+<div style="text-align: center; width: 95%;"><img style="text-align: center; border-radius: 9px;
+    border: 10px ridge #8b5e3c;width: 95%;" @src="setup.ImagePath+'map/veil_tower_mage_map.png'"></div>
+<<speech "thalara">>You have brewed the potion. Let me see it first.  Caelan Are you ready to start the process...<</speech>>
+<br>
+[[Let it happen. I’ve come too far to stop at almost.|head_fm_head_fl_1]] | <br><br>
+[[What if I don’t recognize myself anymore?|head_fm_head_fl_1]] | <br><br>
+[[Do it. Let’s get this over with. I’ve learned not to flinch.|head_fm_head_fl_1]] | <br><br>
+<</nobr>>
+
+:: head_fm_head_fl_1
+<<nobr>>
+<<speech "thalara">>You’ve changed more than just your face, Caelan. This last step this final turn of the sculptor’s hand will not make you someone new. It will only reveal who you’ve chosen to be.<</speech>><br>
+
+<<speech "mc">>Will I still see myself in the mirror when it’s done?<</speech>><br>
+
+<<speech "thalara">>You will see yourself more clearly than ever. But perhaps not the you you were expecting.<</speech>><br>
+
+<<speech "mc">>Sometimes I try to remember what I looked like before. Strong jaw. Square chin. A soldier’s face. And now…<</speech>><br>
+
+[[Move Forth|head_fm_head_fl_2]]
+<</nobr>>
+
+:: head_fm_head_fl_2
+<<nobr>>
+
+<<speech "thalara">>And now you carry a face that commands in different ways. Not with fear. With presence.<</speech>><br>
+
+<<speech "mc">>Presence. Right. But what if I don’t feel present inside it?<</speech>><br>
+
+<<speech "thalara">>The body is an instrument. It reflects your soul in time, not the other way around. Let your spirit catch up, or pull ahead whichever path you choose.<</speech>><br>
+
+<<speech "mc">>It smells like roses and something ancient.<</speech>><br>
+
+[[Move Forth|head_fm_head_fl_3]]
+<</nobr>>
+
+:: head_fm_head_fl_3
+<<nobr>>
+
+<<speech "thalara">>Star-lotus and mirrorvine. Bloom only once per decade, only when bathed in moonlight and truth.<</speech>><br>
+
+<<speech "mc">>It’s warm. Almost too warm.<</speech>><br>
+
+<<speech "thalara">>That warmth is the essence weaving through you. It finds the bones. The skin. The tension that remains.<</speech>><br>
+
+<<speech "mc">>I can feel it… my bones are lighter. Is that even possible?<</speech>><br>
+
+[[Move Forth|head_fm_head_fl_4]]
+<</nobr>>
+
+:: head_fm_head_fl_4
+<<nobr>>
+
+<<speech "thalara">>The cheekbones rise to meet your gaze. The jaw eases its burden. The eyes yes, there they open wider now. Not with surprise, but with grace.<</speech>><br>
+
+<<speech "mc">>It feels like I’m smiling even when I’m not. These lips… this skin…<</speech>><br>
+
+<<speech "thalara">>Porcelain smooth. Not made for war, but for rule. That’s a different kind of strength.<</speech>><br>
+
+<<speech "mc">>I don’t look like a prince anymore. Or even someone who once was.<</speech>><br>
+
+[[Move Forth|head_fm_head_fl_5]]
+<</nobr>>
+
+:: head_fm_head_fl_5
+<<nobr>>
+
+<<speech "thalara">>You don’t look like anyone else, either. You look like her. The queen not yet crowned. The woman forged in fire, shaped by purpose.<</speech>><br>
+
+<<speech "mc">>I… I don’t know what to say.<</speech>><br>
+
+<<speech "thalara">>Then don’t. Let the silence speak. Let it tell you, you’ve arrived.<</speech>><br>
+
+<<speech "mc">>It’s done, isn’t it?<</speech>><br>
+
+[[Move Forth|head_fm_head_fl_6]]
+<</nobr>>
+
+:: head_fm_head_fl_6
+<<nobr>>
+
+<<speech "thalara">>The outer work, yes. But what happens from here is not my magic. It’s yours.<</speech>><br>
+
+<<speech "mc">>I see her now. In the mirror. Not Caelan the prince. Not even Caelan the student. Just… her.<</speech>><br>
+
+<<speech "thalara">>She is you. Fully, finally. And beautifully so.<</speech>><br>
+
+<<speech "mc">>Then let the court look upon me. Let them see the crown they don’t yet know they’ll kneel to.<</speech>><br>
+
+[[Move Forth|head_fm_head_fl_7]]
+<</nobr>>
+
+
+:: head_fm_head_fl_7
+<<nobr>>
+
+<<speech "thalara">>As they should. And as you were always meant to be seen.<</speech>><br>
+[[I feel the potion working in my body|use_success_potion_create_head]]
+<</nobr>>
+
+
+
+
+
+
+
+
+
+:: head_fl_head_fm
+<<nobr>>
+<div style="text-align: center; width: 95%;"><img style="text-align: center; border-radius: 9px;
+    border: 10px ridge #8b5e3c;width: 95%;" @src="setup.ImagePath+'map/veil_tower_mage_map.png'"></div>
+<<speech "thalara">>You have brewed the potion. Let me see it first.  Caelan Are you ready to start the process...<</speech>>
+<br>
+[[It’s time I find a middle ground one I choose.|head_fl_head_fm_1]] | <br><br>
+[[I thought I’d feel more… finished. But something tugs at me.|head_fl_head_fm_1]] | <br><br>
+[[I never asked to go that far. Now I want something back.|head_fl_head_fm_1]] | <br><br>
+<</nobr>>
+
+:: head_fl_head_fm_1
+<<nobr>>
+<<speech "thalara">>You tread backwards through a door few ever dare reopen. Most fear the loss of beauty. Others fear the clarity it brings.<</speech>><br>
+
+<<speech "mc">>I didn’t come here to be beautiful. I came to be me. And I’m still figuring out who that is.<</speech>><br>
+
+<<speech "thalara">>That’s honest. And rare. This elixir won’t return you to the battlefield, nor to the boy who stood at its edge. But it will bring balance if that’s what you truly want.<</speech>><br>
+
+<<speech "mc">>My face it felt… right, but not entirely mine. Like a mask I was growing into.<</speech>><br>
+
+[[Move Forth|head_fl_head_fm_2]]
+<</nobr>>
+
+:: head_fl_head_fm_2
+<<nobr>>
+
+<<speech "thalara">>Perhaps you wore it too well. Sometimes perfection imprisons more than it frees.<</speech>><br>
+
+<<speech "mc">>What will change?<</speech>><br>
+
+<<speech "thalara">>The cheeks will ease. The chin will settle stronger. The lips less sculpted, more real. You’ll still carry her grace, but not her ideal.<</speech>><br>
+
+<<speech "mc">>That sounds almost… comforting.<</speech>><br>
+
+[[Move Forth|head_fl_head_fm_3]]
+<</nobr>>
+
+:: head_fl_head_fm_3
+<<nobr>>
+
+<<speech "thalara">>Comfort isn’t weakness, Caelan. Sometimes, it’s the soil in which identity finally takes root.<</speech>><br>
+
+<<speech "mc">>It’s like… the pressure is lifting. My bones aren’t pulling as tight.<</speech>><br>
+
+<<speech "thalara">>Good. The potion listens when the spirit speaks. And yours is steady today.<</speech>><br>
+
+<<speech "mc">>It’s firmer again. But not harsh. Just enough.<</speech>><br>
+
+[[Move Forth|head_fl_head_fm_4]]
+<</nobr>>
+
+:: head_fl_head_fm_4
+<<nobr>>
+
+<<speech "thalara">>The mirror will show someone neither prince nor queen. But someone true. Someone becoming.<</speech>><br>
+
+<<speech "mc">>Less polish. More presence.<</speech>><br>
+
+<<speech "thalara">>Exactly. Beauty is not a crown. It’s a tool. Sometimes you put it down so your hands can be free.<</speech>><br>
+
+<<speech "mc">>I think I needed this. Not to undo anything but to feel like I’m choosing, not being shaped.<</speech>><br>
+
+[[Move Forth|head_fl_head_fm_5]]
+<</nobr>>
+
+:: head_fl_head_fm_5
+<<nobr>>
+
+<<speech "thalara">>Then you’ve taken your place at the forge. And that, my dear, is the mark of all true rulers.<</speech>><br>
+
+<<speech "mc">>So… I’m not less than I was yesterday?<</speech>><br>
+
+<<speech "thalara">>No. You are more yourself than ever. Every backward step was still forward because you took it.<</speech>><br>
+
+<<speech "mc">>I’m ready for the world to see this version of me.<</speech>><br>
+
+[[Move Forth|head_fl_head_fm_6]]
+<</nobr>>
+
+:: head_fl_head_fm_6
+<<nobr>>
+
+<<speech "thalara">>And the world will learn to bow not to perfection, but to truth. That truth is you.<</speech>><br>
+[[I feel the potion working in my body|use_success_potion_create_head]]
+<</nobr>>

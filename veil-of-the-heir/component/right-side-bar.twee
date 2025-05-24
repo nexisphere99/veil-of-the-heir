@@ -1,0 +1,167 @@
+
+
+:: StoryRightSidebar
+<<nobr>>
+<div id="right-sidebar" style="display: flex; flex-direction: column; height: 100vh; width: 20%; position: fixed; right: 0; top: 0; background-color: #1a0f0f; overflow: hidden;">
+<div style="display: flex; justify-content: space-between;">
+<div title="Show without Cloths">
+<<button "🚫👔👗">>
+  <<set $showWear to not $showWear>>
+  <<replace "#wear-status">>
+    <div class="avatar torso">[img[setup.ImagePath+$userBody.torso.img]]</div>
+    <div class="avatar head">[img[setup.ImagePath+$userBody.head.img]]</div>
+    <div class="avatar right_hand">[img[setup.ImagePath+$userBody.right_hand.img]]</div>
+    <div class="avatar left_hand">[img[setup.ImagePath+$userBody.left_hand.img]]</div>
+    <div class="avatar left_leg">[img[setup.ImagePath+$userBody.left_leg.img]]</div>
+    <div class="avatar right_leg">[img[setup.ImagePath+$userBody.right_leg.img]]</div>
+    <div class="avatar hair">[img[setup.ImagePath+$userBody.hair.img]]</div>
+    <div class="avatar crotch">[img[setup.ImagePath+$userBody.crotch.img]]</div>
+    <div class="avatar chest">[img[setup.ImagePath+$userBody.chest.img]]</div>
+
+
+    <<if $showUnderwear and $userBody.top_underwear.img>>
+    <div class="avatar top_underwear">[img[setup.ImagePath+$userBody.top_underwear.img]]</div>
+    <</if>>
+
+    <<if $showUnderwear and $userBody.bottom_underwear.img>>
+    <div class="avatar bottom_underwear">[img[setup.ImagePath+$userBody.bottom_underwear.img]]</div>
+    <</if>>
+
+    <<if $showWear and $userBody.top_wear.img>>
+    <div class="avatar top_wear">[img[setup.ImagePath+$userBody.top_wear.img]]</div>
+    <</if>>
+
+    <<if $showWear and $userBody.bottom_wear.img>>
+    <div class="avatar bottom_wear">[img[setup.ImagePath+$userBody.bottom_wear.img]]</div>
+    <</if>>
+  <</replace>>
+<</button>>
+</div>
+<div title="Show without Underwears">
+<<button "🚫🩲👙">>
+  /* <<set $showWear to not $showWear>> */
+  <<set $showUnderwear to not $showUnderwear>>
+  <<replace "#wear-status">>
+    <div class="avatar torso">[img[setup.ImagePath+$userBody.torso.img]]</div>
+    <div class="avatar head">[img[setup.ImagePath+$userBody.head.img]]</div>
+    <div class="avatar right_hand">[img[setup.ImagePath+$userBody.right_hand.img]]</div>
+    <div class="avatar left_hand">[img[setup.ImagePath+$userBody.left_hand.img]]</div>
+    <div class="avatar left_leg">[img[setup.ImagePath+$userBody.left_leg.img]]</div>
+    <div class="avatar right_leg">[img[setup.ImagePath+$userBody.right_leg.img]]</div>
+    <div class="avatar hair">[img[setup.ImagePath+$userBody.hair.img]]</div>
+    <div class="avatar crotch">[img[setup.ImagePath+$userBody.crotch.img]]</div>
+    <div class="avatar chest">[img[setup.ImagePath+$userBody.chest.img]]</div>
+
+    <<if $showUnderwear and $userBody.top_underwear.img>>
+    <div class="avatar top_underwear">[img[setup.ImagePath+$userBody.top_underwear.img]]</div>
+    <</if>>
+
+    <<if $showUnderwear and $userBody.bottom_underwear.img>>
+    <div class="avatar bottom_underwear">[img[setup.ImagePath+$userBody.bottom_underwear.img]]</div>
+    <</if>>
+
+    <<if $showWear and $userBody.top_wear.img>>
+    <div class="avatar top_wear">[img[setup.ImagePath+$userBody.top_wear.img]]</div>
+    <</if>>
+
+    <<if $showWear and $userBody.bottom_wear.img>>
+    <div class="avatar bottom_wear">[img[setup.ImagePath+$userBody.bottom_wear.img]]</div>
+    <</if>>
+  <</replace>>
+<</button>>
+</div>
+<div title="Show inventroy items">
+<button onclick="$('#inventory-popup').fadeIn()" style="position: absolute; right: 0px; top: 0px;">
+📦</button>
+</div>
+</div>
+<div style="display: flex; width: 100%; height: auto;">
+<div id="user_avatar_iamge" style="width: 70%;">
+<span id="wear-status">
+    <div class="avatar torso">[img[setup.ImagePath+$userBody.torso.img]]</div>
+    <div class="avatar head">[img[setup.ImagePath+$userBody.head.img]]</div>
+    <div class="avatar right_hand">[img[setup.ImagePath+$userBody.right_hand.img]]</div>
+    <div class="avatar left_hand">[img[setup.ImagePath+$userBody.left_hand.img]]</div>
+    <div class="avatar left_leg">[img[setup.ImagePath+$userBody.left_leg.img]]</div>
+    <div class="avatar right_leg">[img[setup.ImagePath+$userBody.right_leg.img]]</div>
+    <div class="avatar hair">[img[setup.ImagePath+$userBody.hair.img]]</div>
+    <div class="avatar crotch">[img[setup.ImagePath+$userBody.crotch.img]]</div>
+    <div class="avatar chest">[img[setup.ImagePath+$userBody.chest.img]]</div>
+
+    <<if $showUnderwear and $userBody.top_underwear.img>>
+    <div class="avatar top_underwear">[img[setup.ImagePath+$userBody.top_underwear.img]]</div>
+    <</if>>
+
+    <<if $showUnderwear and $userBody.bottom_underwear.img>>
+    <div class="avatar bottom_underwear">[img[setup.ImagePath+$userBody.bottom_underwear.img]]</div>
+    <</if>>
+
+    <<if $showWear and $userBody.top_wear.img>>
+    <div class="avatar top_wear">[img[setup.ImagePath+$userBody.top_wear.img]]</div>
+    <</if>>
+
+    <<if $showWear and $userBody.bottom_wear.img>>
+    <div class="avatar bottom_wear">[img[setup.ImagePath+$userBody.bottom_wear.img]]</div>
+    <</if>>
+</span>
+</div>
+/* <div id="user-item-list" onclick="$('#inventory-popup').fadeIn()" style="width: 30%; max-height: 45vh; overflow-y: auto; padding: 5px;">
+  <<for _key, _item range $userItems>>
+    <div class="user-item" @title="_item.name" onclick="$('#inventory-popup').fadeIn()" style="font-size: 0.7em;">
+      [img[_item.img]]
+      <small>[_item.amount]<em>[_item.unit]</em></small>
+    </div>
+  <</for>>
+</div> */
+
+</div>
+<div id="inventory-popup" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);
+background-color: rgba(20, 20, 30, 0.95); border: 2px solid #aaa; border-radius: 12px; padding: 20px; z-index: 1000; max-width: 90vw; max-height: 80vh; overflow-y: auto; box-shadow: 0 0 12px #000;">
+  <button onclick="$('#inventory-popup').fadeOut()" style="position: absolute; top: 10px; right: 10px; background: #440000; color: white; border: none; padding: 5px 10px; border-radius: 4px;">✖</button>
+  <h2 style="margin-top: 0; color: #f0e6d2;">Your Inventory</h2>
+  <div id="inventory-content" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px;">
+  <<for _key, _item range $userItems>>
+    <div class="inventory-card">
+      <div class="item-img">[img[_item.img]]</div>
+      <div class="item-name">_item.name</div>
+      <div class="item-info">[_item.amount] <em>[_item.unit]</em></div>
+    </div>
+  <</for>>
+</div>
+
+</div>
+
+<div id="user-stats" style="flex-shrink: 0; padding: 10px; background-color: #222; border-top: 1px solid #444; margin-top: auto;">
+  <h3 style="color: #f0e6d2; font-size: 1em;">Stats</h3>
+  <<for _key, _value range $user_stats>>
+    <div style="margin-bottom: 6px;">
+      <div style="font-size: 0.85em; color: #ddd; margin-bottom: 2px;">
+        <<= _key.replaceAll("_", " ").toUpperCase() >>
+      </div>
+      <div style="background-color: #444; border-radius: 4px; height: 12px; overflow: hidden;">
+        <<= '<div style="width: ' + _value + '%; background: linear-gradient(to right, #4caf50, #81c784); height: 100%;"></div>' >>
+      </div>
+
+      <<if _key == "gender_Identity">>
+        <div style="display: flex; justify-content: space-between; font-size: 0.75em; color: #aaa;">
+          <span>Feminine</span><span>Masculine</span>
+        </div>
+      <</if>>
+
+      <<if _key == "dominance_level">>
+        <div style="display: flex; justify-content: space-between; font-size: 0.75em; color: #aaa;">
+          <span>Submissive</span><span>Dominant</span>
+        </div>
+      <</if>>
+
+    </div>
+  <</for>>
+</div>
+
+
+
+
+</div>
+
+
+<</nobr>>

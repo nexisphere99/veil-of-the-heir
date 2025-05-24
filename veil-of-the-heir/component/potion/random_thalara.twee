@@ -1,0 +1,281 @@
+
+
+
+:: interact_with_mage_random
+<<nobr>>
+<<set _i to random(0, 18)>>
+<<if _i == 0>>
+<<speech "thalara">>
+Back again, I see. And still upright. Either the Vault hasn’t grown teeth, or you’re quicker than I thought.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Let’s say we’re both learning to tolerate each other.
+<</speech>>
+<br>
+
+<<speech "thalara">>
+Tolerate? Caelan, darling, the Vault respects only fear. But bring me those supplies and I’ll reward your bravery with a touch more beauty.
+<</speech>>
+<<elseif _i == 1>>
+<<speech "thalara">>
+Do you feel it yet? That flutter under your skin, like your body whispering its gratitude?
+<</speech>>
+<br>
+
+<<speech "mc">>
+I’m not sure what I feel anymore. Excitement. Dread. Maybe both.
+<</speech>>
+<br>
+
+<<speech "thalara">>
+Good. The body should tremble before becoming divine.
+<</speech>>
+<<elseif _i == 2>>
+<<speech "thalara">>
+Hmm… the air around you. It’s beginning to change. A hint of violet, silk, and silver fire.
+<</speech>>
+<br>
+
+<<speech "mc">>
+That’s... me?
+<</speech>>
+<br>
+
+<<speech "thalara">>
+It’s the you that waits beneath the skin. These potions only reveal what was always there.
+<</speech>>
+<<elseif _i == 3>>
+<<speech "thalara">>
+Ah, my loyal apothecary returns. What did the Vault offer you today? Bloodfern? Aetherglass? Or simply more bruises from that stubborn keeper?
+<</speech>>
+<br>
+
+<<speech "mc">>
+Both. He growled at me like a troll. I think he’s warming up to me.
+<</speech>>
+<br>
+
+<<speech "thalara">>
+Then perhaps we should bottle you next. A prince turned potion fierce, fragrant, and impossible to ignore.
+<</speech>>
+<<elseif _i == 4>>
+<<speech "thalara">>
+You’re walking differently. Either the Vault got to your spine… or the changes are settling in.
+<</speech>>
+<br>
+
+<<speech "mc">>
+You really notice everything, don’t you?
+<</speech>>
+<br>
+
+<<speech "thalara">>
+Of course. It’s not every day I sculpt a future queen from stubborn princely clay.
+<</speech>>
+<<elseif _i == 5>>
+<<speech "thalara">>
+Did the Vault Keeper insult your lineage again, or was it just his usual charming silence?
+<</speech>>
+<br>
+
+<<speech "mc">>
+He told me he'd rather wrestle a chimera than deal with me.
+<</speech>>
+<br>
+
+<<speech "thalara">>
+Oh, how sweet. I think he’s flirting.
+<</speech>>
+<<elseif _i == 6>>
+<<speech "thalara">>
+There’s a tension in your aura today subtle, but undeniable. You’re blooming, Caelan.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Am I? It feels… strange. Like I’m wearing a body that isn’t quite mine yet.
+<</speech>>
+<br>
+
+<<speech "thalara">>
+Then we’ll make it yours. One drop at a time.
+<</speech>>
+<<elseif _i == 7>>
+<<speech "thalara">>
+You look radiant today. Either the moon favored your birth… or the breast potion is kicking in.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Thalara! That’s... not something I expected you to say.
+<</speech>>
+<br>
+
+<<speech "thalara">>
+You’ll learn, darling mages rarely say what’s expected. But we’re almost always right.
+<</speech>>
+<<elseif _i == 8>>
+<<speech "thalara">>
+You seem tired. The transformations take their toll at first.
+<</speech>>
+<br>
+
+<<speech "mc">>
+I barely slept. My skin itched like I was shedding it.
+<</speech>>
+<br>
+
+<<speech "thalara">>
+You are. The body remembers what it was but we’re teaching it what it must become.
+<</speech>>
+<<elseif _i == 9>>
+<<speech "thalara">>
+Don’t rush. True alchemy requires patience... and sometimes, a bit of screaming.
+<</speech>>
+<br>
+
+<<speech "mc">>
+You really know how to calm someone down, you know that?
+<</speech>>
+<br>
+
+<<speech "thalara">>
+Would you prefer lies wrapped in silk? Or truth served raw in flame?
+<</speech>>
+<<elseif _i == 10>>
+<<speech "thalara">>
+You know, some mages use illusions for beauty. But you? You’re earning every curve the honest way.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Is that your idea of a compliment?
+<</speech>>
+<br>
+
+<<speech "thalara">>
+It’s my idea of progress. Beauty with depth. Magic with memory.
+<</speech>>
+<<elseif _i == 11>>
+<<speech "thalara">>
+Have you dared look into a mirror today?
+<</speech>>
+<br>
+
+<<speech "mc">>
+I did. For longer than usual. It... didn’t feel like a stranger this time.
+<</speech>>
+<br>
+
+<<speech "thalara">>
+Good. The mind often transforms before the body catches up.
+<</speech>>
+<<elseif _i == 12>>
+<<speech "thalara">>
+Did you notice your voice softening? Or the way your hands have grown finer?
+<</speech>>
+<br>
+
+<<speech "mc">>
+Not until now. I was so focused on the tasks, I didn’t see the results.
+<</speech>>
+<br>
+
+<<speech "thalara">>
+And yet they’re happening. That’s the nature of true change quiet, creeping, inevitable.
+<</speech>>
+<<elseif _i == 13>>
+<<speech "thalara">>
+There’s confidence in your stride now. Pride, even.
+<</speech>>
+<br>
+
+<<speech "mc">>
+I still have doubts. But they don’t rule me anymore.
+<</speech>>
+<br>
+
+<<speech "thalara">>
+Then you’re already halfway to queendom.
+<</speech>>
+<<elseif _i == 14>>
+<<speech "thalara">>
+You came alone this time. No handmaiden, no knight, just you.
+<</speech>>
+<br>
+
+<<speech "mc">>
+I don’t need an escort to carry a few petals and crystals. I’m not that fragile.
+<</speech>>
+<br>
+
+<<speech "thalara">>
+No, you’re not. And you’ll only grow stronger though not always in ways visible to the eye.
+<</speech>>
+
+<<elseif _i == 15>>
+<<speech "thalara">>
+Your aura hums differently today. Did something stir in your sleep?
+<</speech>>
+<br>
+
+<<speech "mc">>
+Maybe. I dreamt I was dancing… and everyone bowed to me like I’d always been queen.
+<</speech>>
+<br>
+
+<<speech "thalara">>
+Dreams have power, Caelan. Sometimes they whisper truths our waking minds dare not voice.
+<</speech>>
+<<elseif _i == 16>>
+<<speech "thalara">>
+The Vault keeper let you off without a lecture? A miracle!
+<</speech>>
+<br>
+
+<<speech "mc">>
+No such luck. He gave me a full speech on “honor” and “danger.” Again.
+<</speech>>
+<br>
+
+<<speech "thalara">>
+Then take comfort. If he’s repeating himself, he sees your persistence... and respects it in his own gruff way.
+<</speech>>
+
+<<elseif _i == 17>>
+<<speech "thalara">>
+Your scent changed. Subtle floral undertones. Did you use an oil or...?
+<</speech>>
+<br>
+
+<<speech "mc">>
+No... it must be from the potion effects. You said it would start shifting everything, even the unseen.
+<</speech>>
+<br>
+
+<<speech "thalara">>
+Exactly. Femininity isn’t only how you look it’s how the world senses you.
+<</speech>>
+
+<<elseif _i == 18>>
+<<speech "thalara">>
+Tell me honestly do you still hesitate?
+<</speech>>
+<br>
+
+<<speech "mc">>
+Sometimes. But not like before. It’s less fear now… more wonder.
+<</speech>>
+<br>
+
+<<speech "thalara">>
+That’s the transformation I treasure most the shift from resistance to curiosity.
+<</speech>>
+
+<</if>>
+<<set $reverse_passage = "veil_tower">>
+<br>
+[[Choose Potion|potion_lab]] | [[Leave Veil Tower|castle_map_back_select]]
+<</nobr>>

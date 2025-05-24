@@ -1,0 +1,310 @@
+
+
+
+:: interact_with_queen_random
+<<nobr>>
+<<set _i to random(0, 18)>>
+<<if _i == 0>>
+<<speech "alinora">>
+The crown does not bend, Caelan it expects those who wear it to rise. I did not raise you to be ordinary. I raised you to endure, to become the shape Velmoria needs, not the one it desires.
+<</speech>>
+<br>
+
+<<speech "mc">>
+And what if I’m not strong enough to become that shape?
+<</speech>>
+<br>
+
+<<speech "alinora">>
+Then I will grieve. Briefly. And then I will teach you again, as I always have.
+<</speech>>
+<br>
+<<elseif _i == 1>>
+<<speech "alinora">>
+I saw you hesitate during court today. Not in speech, but in bearing. A ruler cannot afford uncertainty not in voice, not in spine, not in the flicker of an eye.
+<</speech>>
+<br>
+
+<<speech "mc">>
+You never hesitated? Not once?
+<</speech>>
+<br>
+
+<<speech "alinora">>
+Every day. But I buried it beneath velvet and iron. That is the difference between fear and failure.
+<</speech>>
+<br>
+<<elseif _i == 2>>
+<<speech "alinora">>
+Do not mistake silence for disapproval, Caelan. I do not speak of your struggles because I expect them. You were not chosen for ease. You were chosen for legacy.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Sometimes I wish you’d see me as more than a legacy.
+<</speech>>
+<br>
+
+<<speech "alinora">>
+I do. But I see you as a Velmorian first. And that is not a name given lightly.
+<</speech>>
+<br>
+<<elseif _i == 3>>
+<<speech "alinora">>
+I remember holding you as an infant fragile, loud, utterly unfit for the throne. And yet, even then, I knew you would grow teeth sharper than mine.
+<</speech>>
+<br>
+
+<<speech "mc">>
+That doesn’t sound like love.
+<</speech>>
+<br>
+
+<<speech "alinora">>
+Love, my child, is not always gentle. Sometimes it wears armor and teaches you to bleed with dignity.
+<</speech>>
+<br>
+<<elseif _i == 4>>
+<<speech "alinora">>
+I have approved your next transformation session. Thalara assures me the changes will not be painful physically. Emotionally, I expect no such mercy.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Is that your way of preparing me? Or warning me?
+<</speech>>
+<br>
+
+<<speech "alinora">>
+Both. A queen learns to read her pain like scripture. You will do the same.
+<</speech>>
+<br>
+<<elseif _i == 5>>
+<<speech "alinora">>
+The nobles murmur about your softness. Your hesitance. But what they fail to see is that softness can smother just as well as steel can cut.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Do you think I’ll ever win them over?
+<</speech>>
+<br>
+
+<<speech "alinora">>
+You do not win over wolves, Caelan. You outlast them. Or you feed them your rivals.
+<</speech>>
+<br>
+<<elseif _i == 6>>
+<<speech "alinora">>
+I once dreamed of a daughter. Not because I longed for femininity, but because Velmoria’s law demanded it. Fate gave me you instead unexpected, beautiful, incomplete.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Do I disappoint you?
+<</speech>>
+<br>
+
+<<speech "alinora">>
+You challenge me. And for that, I am endlessly proud and endlessly wary.
+<</speech>>
+<br>
+<<elseif _i == 7>>
+<<speech "alinora">>
+The court sees transformation as spectacle. But this is no performance, Caelan. This is the re-forging of your soul in the fires of lineage.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Can’t I keep part of who I was?
+<</speech>>
+<br>
+
+<<speech "alinora">>
+If you must. But remember, a ruler does not ask the world for permission to become what they must be.
+<</speech>>
+<br>
+<<elseif _i == 8>>
+<<speech "alinora">>
+Your father weeps for you in the garden. He believes love should protect, not shape. I envy his softness… but I cannot afford it.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Do you ever wish you could be softer?
+<</speech>>
+<br>
+
+<<speech "alinora">>
+Often. But I learned early: softness is a luxury we cannot afford not as rulers. Not as Velmorians.
+<</speech>>
+<br>
+<<elseif _i == 9>>
+<<speech "alinora">>
+One day, they will carve your name into the stone of this castle. And I wonder what story they will tell. Will it be the tale of a prince who vanished… or a queen who conquered her fate?
+<</speech>>
+<br>
+
+<<speech "mc">>
+That depends on the choices I make.
+<</speech>>
+<br>
+
+<<speech "alinora">>
+Indeed. And I intend to give you every burden necessary to make the right ones.
+<</speech>>
+<br>
+<<elseif _i == 10>>
+<<speech "alinora">>
+You think I do not ache watching you change? I do. But that ache is a ghost I buried it long ago, alongside the woman I might have been if love ruled this kingdom instead of law.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Then why not let me choose a different path? One not carved by ancient rules?
+<</speech>>
+<br>
+
+<<speech "alinora">>
+Because queens do not walk paths. They blaze them in fire and blood, and history does not tolerate detours.
+<</speech>>
+<br>
+<<elseif _i == 11>>
+<<speech "alinora">>
+You stood taller in court today. I noticed. So did Lady Serelyne. The serpents are beginning to fear your fangs.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Then why do I still feel like I’m pretending?
+<</speech>>
+<br>
+
+<<speech "alinora">>
+Because you are. But every monarch begins as a myth in their own skin. Eventually, belief becomes truth.
+<</speech>>
+<br>
+<<elseif _i == 12>>
+<<speech "alinora">>
+There is power in being watched, Caelan. Every gaze tests you. Every whisper carves its mark. Learn to wear scrutiny like silk it may chafe at first, but it becomes second skin.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Sometimes I wish they’d all just stop watching.
+<</speech>>
+<br>
+
+<<speech "alinora">>
+Then they win. Never give your enemies the comfort of your retreat.
+<</speech>>
+<br>
+<<elseif _i == 13>>
+<<speech "alinora">>
+You are not the child who clung to my robes in the temple courtyard. That boy is gone. What remains is the vessel for Velmoria’s future.
+<</speech>>
+<br>
+
+<<speech "mc">>
+But I still feel him inside me. Small. Afraid.
+<</speech>>
+<br>
+
+<<speech "alinora">>
+Then take his hand, guide him through the fire, and teach him how to burn.
+<</speech>>
+<br>
+<<elseif _i == 14>>
+<<speech "alinora">>
+Thalara tells me the physical changes have begun to ripple outward. Eyes softer. Fingers thinner. Voice uncertain. The world will start to see you differently now. Prepare yourself.
+<</speech>>
+<br>
+
+<<speech "mc">>
+And how do you see me?
+<</speech>>
+<br>
+
+<<speech "alinora">>
+As someone I am beginning to fear and admire. Which means your enemies soon will, too.
+<</speech>>
+<br>
+<<elseif _i == 15>>
+<<speech "alinora">>
+You wore the amethyst gown tonight. Good. Its color commands without shouting. Its shape forces posture. Even silk can be armor when used properly.
+<</speech>>
+<br>
+
+<<speech "mc">>
+I didn’t wear it for tactics. I wore it because it felt… right.
+<</speech>>
+<br>
+
+<<speech "alinora">>
+Then you’re further along than I dared hope. Trust the instincts that sharpen you.
+<</speech>>
+<br>
+<<elseif _i == 16>>
+<<speech "alinora">>
+When the other kingdoms look to Velmoria, they will not see a transition. They will see strength reborn in unexpected form. You will be our thunder in velvet.
+<</speech>>
+<br>
+
+<<speech "mc">>
+That sounds beautiful. And terrifying.
+<</speech>>
+<br>
+
+<<speech "alinora">>
+Good. The most powerful queens are always both.
+<</speech>>
+<br>
+<<elseif _i == 17>>
+<<speech "alinora">>
+Your father writes you songs. I sharpen your legacy. Between the two of us, you are both heart and hammer.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Sometimes I wish you could just… hold me, without expecting anything.
+<</speech>>
+<br>
+
+<<speech "alinora">>
+I hold you every day in my decisions, in my sacrifices, in the silence I swallow so you can speak freely. That is the weight of royal love.
+<</speech>>
+<br>
+<<elseif _i == 18>>
+<<speech "alinora">>
+Do not let kindness be mistaken for submission. When you smile, let it be like a dagger graceful, and deadly if misunderstood.
+<</speech>>
+<br>
+
+<<speech "mc">>
+You really think I can command them, like you do?
+<</speech>>
+<br>
+
+<<speech "alinora">>
+No. I believe you will command them differently and that difference may save us all.
+<</speech>>
+<br>
+<<elseif _i == 19>>
+<<speech "alinora">>
+I am not your enemy, Caelan. But I am not your comfort, either. I am the forge that shapes you, the crown that waits above fire. You will thank me in legends.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Or curse you in silence.
+<</speech>>
+<br>
+
+<<speech "alinora">>
+Let history decide. My love for you is not lessened by your resentment. It is sharpened by it.
+<</speech>>
+<br>
+<</if>>
+[[Leave Queen Alinora|royal_bed_chamber]] |<br><br>
+[[Leave Royal Bed Chamber|castle_map_back_select]]
+<</nobr>>

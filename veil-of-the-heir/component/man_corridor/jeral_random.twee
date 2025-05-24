@@ -1,0 +1,311 @@
+
+
+
+:: interact_with_jeral
+<<nobr>>
+<<set _i to random(0, 18)>>
+<<if _i == 0>>
+    <<speech "jeral">>
+You know, Your Highness, most nobles wouldn’t notice if their steward dropped dead mid-sentence. But you… you watch. It’s unsettling, but oddly flattering.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Should I stop watching?
+<</speech>>
+<br>
+
+<<speech "jeral">>
+Heavens no. Just… be careful. A gaze like yours can be mistaken for affection or worse, favor.
+<</speech>>
+<br>
+<<elseif _i == 1>>
+<<speech "jeral">>
+I reorganized the archive today. You had three unsigned royal decrees tucked behind a book on dragon laws. Either you’re hiding incompetence, or you have a secret plan that involves parchment-based rebellion.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Maybe I enjoy keeping you guessing.
+<</speech>>
+<br>
+
+<<speech "jeral">>
+Then consider me very entertained. But also worried chaos looks terrible on royal ledgers.
+<</speech>>
+<br>
+<<elseif _i == 2>>
+<<speech "jeral">>
+You spoke quite eloquently during the council today. Almost made me forget they’d rather see you as decoration than decision-maker.
+<</speech>>
+<br>
+
+<<speech "mc">>
+They underestimate me.
+<</speech>>
+<br>
+
+<<speech "jeral">>
+Which is precisely why you should use me more often. I know what they whisper when you leave. I know which ink to smudge and which names to underline. Give me direction, and I’ll shape the storm for you.
+<</speech>>
+<br>
+<<elseif _i == 3>>
+<<speech "jeral">>
+If I may your signature has improved. Less hesitation in the strokes. It’s the first sign of a ruler growing into their skin.
+<</speech>>
+<br>
+
+<<speech "mc">>
+You read that from my handwriting?
+<</speech>>
+<br>
+
+<<speech "jeral">>
+I read everything, Highness. Between the lines, beneath the seals… even in your silences. It’s how one survives in this palace.
+<</speech>>
+<br>
+<<elseif _i == 4>>
+<<speech "jeral">>
+You once told me trust was earned, not given. So I earned it through ink, sweat, and secrets. If I fall now, it’ll be because I trusted you.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Do you regret it?
+<</speech>>
+<br>
+
+<<speech "jeral">>
+Not yet. But ask me again after the next scandal. Or betrayal. They tend to come in threes.
+<</speech>>
+<br>
+<<elseif _i == 5>>
+<<speech "jeral">>
+A letter arrived today, bearing no seal. I opened it, of course. I assumed it was poison or poetry. Oddly, it was both.
+<</speech>>
+<br>
+
+<<speech "mc">>
+You opened my letter without asking?
+<</speech>>
+<br>
+
+<<speech "jeral">>
+Of course. I open everything, Highness. Including opportunities. That’s why you keep me around… isn’t it?
+<</speech>>
+<br>
+<<elseif _i == 6>>
+<<speech "jeral">>
+If I may be bold… I’ve seen kings lose crowns for less than a misplaced smile. You smiled at me yesterday. Twice.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Are you saying that’s dangerous?
+<</speech>>
+<br>
+
+<<speech "jeral">>
+Only if you mean it. Because if you do… well, then I might start thinking I matter more than I should.
+<</speech>>
+<br>
+<<elseif _i == 7>>
+<<speech "jeral">>
+I drafted a counterproposal for Lady Serelyne’s new etiquette law. It’s buried in your inbox, third scroll from the top. If it passes, it’ll silence two of her spies. If it fails… I was never here.
+<</speech>>
+<br>
+
+<<speech "mc">>
+You’re playing a dangerous game, Jeral.
+<</speech>>
+<br>
+
+<<speech "jeral">>
+That’s the only kind worth playing in Velmoria. Especially if I want to stay alive long enough to be something more than just your steward.
+<</speech>>
+<br>
+<<elseif _i == 8>>
+<<speech "jeral">>
+Do you ever wonder if all this power, duty, pageantry was meant for someone else? Because sometimes I look at you and think… maybe fate has a strange sense of humor.
+<</speech>>
+<br>
+
+<<speech "mc">>
+I wonder that more than you know.
+<</speech>>
+<br>
+
+<<speech "jeral">>
+Then allow me to be the cruel joke’s footnote the clever one who sees through the illusion and still chooses to stay.
+<</speech>>
+<br>
+<<elseif _i == 9>>
+<<speech "jeral">>
+You once thanked me for my loyalty. But I didn’t correct you. What I feel isn’t loyalty. It’s investment.
+<</speech>>
+<br>
+
+<<speech "mc">>
+That sounds colder than I expected.
+<</speech>>
+<br>
+
+<<speech "jeral">>
+Oh, it burns hotter than you’d think. Because if you fall, I fall. And I’ve never bet on anyone this hard before.
+<</speech>>
+<br>
+<<elseif _i == 10>>
+<<speech "jeral">>
+There’s something thrilling about serving someone who might one day rewrite the rules that bind them. You’re not a ruler yet, but you look more like one every time you defy expectation.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Is that admiration I hear… or calculation?
+<</speech>>
+<br>
+
+<<speech "jeral">>
+Why not both? One feeds the mind. The other well, let’s just say ambition isn’t always cold.
+<</speech>>
+<br>
+<<elseif _i == 11>>
+<<speech "jeral">>
+I overheard Lady Astoria mocking your new appearance. I corrected her pronunciation… and mentioned your recent archery score. Politely, of course.
+<</speech>>
+<br>
+
+<<speech "mc">>
+And why defend me?
+<</speech>>
+<br>
+
+<<speech "jeral">>
+Because I prefer you powerful, not pitied. Besides, if anyone’s going to profit from your rise, I’d rather it be me.
+<</speech>>
+<br>
+<<elseif _i == 12>>
+<<speech "jeral">>
+There’s a whisper in the kitchens that you’ve grown softer lately. That you’re being… reshaped.
+<</speech>>
+<br>
+
+<<speech "mc">>
+And do you agree with them?
+<</speech>>
+<br>
+
+<<speech "jeral">>
+No. I think you’re becoming more dangerous. Softer edges can hide sharper blades. I admire that.
+<</speech>>
+<br>
+<<elseif _i == 13>>
+<<speech "jeral">>
+I had a dream last night about you, on the throne. Your voice calm, your enemies kneeling, your eyes… colder than they are now.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Was it a warning?
+<</speech>>
+<br>
+
+<<speech "jeral">>
+A possibility. One I might enjoy, if I’m sitting beside you when it happens.
+<</speech>>
+<br>
+<<elseif _i == 14>>
+<<speech "jeral">>
+Most people in this castle smile with their mouths and lie with their eyes. You’re different. You lie with silence and that makes you unpredictable.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Is that praise?
+<</speech>>
+<br>
+
+<<speech "jeral">>
+It’s fascination. Dangerous, inconvenient fascination.
+<</speech>>
+<br>
+<<elseif _i == 15>>
+<<speech "jeral">>
+I saw the way you looked at Torin today. Intense. Loyal. It made me wonder how much room there is in your world for people like me.
+<</speech>>
+<br>
+
+<<speech "mc">>
+And what kind of person are you, Jeral?
+<</speech>>
+<br>
+
+<<speech "jeral">>
+The kind who’d never die for you… but might kill for you, if you asked nicely.
+<</speech>>
+<br>
+<<elseif _i == 16>>
+<<speech "jeral">>
+You dropped a ring today by the marble stairs. I picked it up. Could’ve sold it, hidden it, claimed you never wore it. But I returned it.
+<</speech>>
+<br>
+
+<<speech "mc">>
+And why tell me all that now?
+<</speech>>
+<br>
+
+<<speech "jeral">>
+Because I want you to understand: I always notice what falls from your hands… and what you might be about to lose.
+<</speech>>
+<br>
+<<elseif _i == 17>>
+<<speech "jeral">>
+The nobles think they can mold you into a queen of their liking. Decorative. Obedient. Predictable. But I’ve read your letters. I know better.
+<</speech>>
+<br>
+
+<<speech "mc">>
+You read my letters?
+<</speech>>
+<br>
+
+<<speech "jeral">>
+I serve the crown. And sometimes… I serve something closer to my heart.
+<</speech>>
+<br>
+<<elseif _i == 18>>
+<<speech "jeral">>
+I once thought loyalty was a transaction services rendered, benefits received. Then I met you… and now I find myself defending you even when no one’s listening.
+<</speech>>
+<br>
+
+<<speech "mc">>
+You’re not the sentimental type, Jeral.
+<</speech>>
+<br>
+
+<<speech "jeral">>
+No. But I am the type who knows when something rare is walking beside me.
+<</speech>>
+<br>
+<<elseif _i == 19>>
+<<speech "jeral">>
+If I ever betrayed you, it wouldn’t be for coin. Or power. It would be because you stopped looking at me the way you do now like I matter.
+<</speech>>
+<br>
+
+<<speech "mc">>
+You think I look at you that way?
+<</speech>>
+<br>
+
+<<speech "jeral">>
+Sometimes. And gods help us both if I start needing it.
+<</speech>>
+<br>
+<</if>>
+[[Leave Jeral|jeral_chamber_map_select]] |<br><br>
+[[Leave Jeral's Chamber|bed_chamber_male]] |<br><br>
+[[Leave Maid Room Corridor|castle_map_back_select]]
+<</nobr>>

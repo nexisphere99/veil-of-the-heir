@@ -1,0 +1,1965 @@
+
+
+:: crotch
+<<nobr>>
+<<set $user_stats.gender_Identity -= 2>>
+<<set $curr_potion = setup.crotch_forward_potions>>
+<<if State.variables.direction == "reverse">>
+    <<set $curr_potion = setup.crotch_reverse_potions>>
+<</if>>
+<<set $curr_potion_selected = $curr_potion[$userBody.crotch.curr_crotch]>>
+/* <pre><<=JSON.stringify($curr_potion_selected, null, 2)>></pre> */
+<<if $curr_potion_selected == undefined>>
+    <p style="color: red;">You do not have any crotch potions available for your current crotch version to transform.</p>
+    <<link "Leave Potion Scroll Selection">><<goto "veil_tower">><</link>> |
+    <<link "Leave Veil Tower">><<goto "castle_map_back_select">><</link>> |
+    <<link "Try another Potion Scroll">><<goto "potion_lab">><</link>>
+<<else>>
+/* <pre><<= JSON.stringify($userBody.crotch, null, 2)>></pre> */
+/* <pre><<= JSON.stringify($curr_potion_selected, null, 2)>></pre> */
+/* <pre><<= JSON.stringify($userItems, null, 2)>></pre> */
+<<set $ingredient = {}>>
+<span style="font-family: 'Papyrus', serif; font-size: 22px; color: #8b5e3c;">
+<b>✦ Ancient Alchemical Recipe ✦</b><br><br>
+
+<b>Potion:</b> <<=$curr_potion_selected.name>><br>
+<b>Purpose:</b> <<=$curr_potion_selected.purpose>><br><br>
+
+<b>🜃 Ingredients:</b><br>
+<ol>
+<<for _item, _value range $curr_potion_selected.ingredients>>
+  <li><<=$userItems[_item].name>>: _value <<=$userItems[_item].unit>></li>
+  <<set $ingredient[_item] = {amount: $userItems[_item].amount, needed: _value, unit: $userItems[_item].unit}>>
+<</for>>
+</ol>
+<<set _potion = $curr_potion_selected>>
+/* <<set $currentObjectives = 'Create Potion: ' + _potion.name + '. Ingredients are: '>>
+
+<<for _item, _value range _potion.ingredients>>
+  <<set $currentObjectives += $userItems[_item].name + ': ' + _value + ' ' + $userItems[_item].unit + ', '>>
+<</for>>
+
+<<replace "#objectives-text" t8n>>
+  <<=$currentObjectives>>
+<</replace>> */
+
+<b>⤐ Function:</b><br>
+<i><<=$curr_potion_selected.function>></i><br><br>
+
+<b>⚠ Side Effects:</b><br>
+<i><<=$curr_potion_selected.sideEffects>></i>
+</span>
+/* <pre><<= JSON.stringify($ingredient, null, 2)>></pre> */
+<<set $ingredinetAvailable = true>>
+<<for _key, _data range $ingredient>>
+    <<if $ingredient[_key].amount < $ingredient[_key].needed>>
+        <p style="color: red;">
+        You do not have enough <<=$userItems[_key].name>>. You need <<=$ingredient[_key].needed>> 
+        <<=$userItems[_key].unit>>, but you have only <<=$ingredient[_key].amount>> <<=$userItems[_key].unit>>.</p>
+        <<set $ingredinetAvailable = false>>
+    <<else>>
+        <p style="color: green;">
+        You have enough <<=$userItems[_key].name>>. You need <<=$ingredient[_key].needed>> 
+        <<=$userItems[_key].unit>>, you have only <<=$ingredient[_key].amount>> <<=$userItems[_key].unit>>.</p>
+    <</if>>
+<</for>>
+<<if $currentArc["main_arc"] == 3>>
+    <<link "Refer Another Potion Scroll">><<goto "potion_lab">><</link>>
+<<elseif $ingredinetAvailable>>
+    <p style="color: green;">You have all the ingredients needed to make the potion.</p>
+    <<link "Make Potion">><<goto "potion_create_crotch">><</link>>
+    <<link "Try another Potion Scroll">><<goto "potion_lab">><</link>>
+<<else>>
+    <p style="color: red;">You do not have all the ingredients needed to make the potion.</p>
+    <<link "Leave Potion Scroll Selection">><<goto "veil_tower">><</link>> |
+    <<link "Leave Veil Tower">><<goto "castle_map_back_select">><</link>> |
+    <<link "Try another Potion Scroll">><<goto "potion_lab">><</link>>
+<</if>>
+<<set $potion = $curr_potion_selected>>
+<<set $potionInventory = {}>>
+<<for _item, _needed range $potion.ingredients>>
+    <<set $potionInventory[_item] = 0>>
+<</for>>
+<</if>>
+<</nobr>>
+
+
+:: potion_create_crotch
+<<nobr>>
+
+<span style="font-family: 'Papyrus', serif; font-size: 22px; color: #8b5e3c;">
+<b>🧪 Assembling: <span style="color: #5a2e13"><<=$potion.name>></span></b><br>
+<i>Match the exact ingredients to brew this potion:</i><br><br>
+<div class="item-grid">
+	<<for _item, _needed range $potion.ingredients>>
+			<div class="item-card">
+                <<capture _item>>
+                    [img[$userItems[_item].img]]
+                    <<set $reverse_passage_ingredient = "potion_create_crotch">>
+                    <<=$userItems[_item].name>>
+                    <div class="ingredient_details"><<link "Details">><<set $selectedIngredient = _item>><<goto "IngredientDetail">><</link>></div>
+                <</capture>>
+            </div>
+	<</for>>
+</div>
+<br>
+<<for _item, _needed range $potion.ingredients>>
+  <div style="margin-bottom: 10px;">
+    <b><<=$userItems[_item].name>></b> (You have: <<=$userItems[_item].amount>> <<=$userItems[_item].unit>>)<br>
+    Needed: <<=_needed>> <<=$userItems[_item].unit>> | Added: <<=$potionInventory[_item]>> <<=$userItems[_item].unit>><br>
+
+    <<if $userItems[_item].amount > 0>>
+        <<capture _item>>
+        <<set $potion_add = "+" + $userItems[_item].min_amount + " " + $userItems[_item].unit>>
+        <<link $potion_add>>
+            <<set $potionInventory[_item] += $userItems[_item].min_amount>>
+            <<set $userItems[_item].amount -= $userItems[_item].min_amount>>
+            <<goto "potion_create_crotch">>
+        <</link>>
+        <</capture>>
+    <</if>>
+    <<if $potionInventory[_item] > 0>>
+        <<set $potion_add = "-" + $userItems[_item].min_amount + " " + $userItems[_item].unit>>
+        <<capture _item>>
+            <<link $potion_add>>
+                <<set $potionInventory[_item] -= $userItems[_item].min_amount>>
+                <<set $userItems[_item].amount += $userItems[_item].min_amount>>
+                <<goto "potion_create_crotch">>
+            <</link>>
+      <</capture>>
+    <</if>>
+  </div>
+<</for>>
+
+<<set $_matches = true>>
+<<for _item, _data range $potion.ingredients>>
+  <<if $potionInventory[_item] != $potion.ingredients[_item]>>
+    <<set $_matches = false>>
+  <</if>>
+<</for>>
+<<if $_matches>>
+  <p style="color: green;"><b>✅ All ingredients matched perfectly. Ready to brew!</b></p>
+  <<link "Brew Potion">>
+    <<goto "brew_success_potion_create_crotch">>
+  <</link>>
+<</if>>
+<<if not $_matches>>
+  <p style="color: red;"><b>⚠ Ingredient quantities do not match the recipe. Adjust to proceed.</b></p>
+<</if>>
+
+<<link "Cancel">>
+  <<for _item, _data range $potionInventory>>
+    <<set $userItems[_item].amount += $potionInventory[_item]>>
+  <</for>>
+  <<goto "potion_lab">>
+<</link>>
+</span>
+<</nobr>>
+
+
+:: brew_success_potion_create_crotch
+<<nobr>>
+<<set $_i to random(1, 4)>>
+<<set $img_path = "potion/potion_"+$_i +".gif">>
+<div style="text-align: center; "><img style="text-align: center; border-radius: 9px;
+    border: 10px ridge #8b5e3c;" @src="setup.ImagePath+$img_path"></div>
+
+/* <pre><<=JSON.stringify($curr_potion_selected, null, 2)>></pre> */
+<<set $next_passage = $curr_potion_selected.from +"_"+$curr_potion_selected.to>>
+<br>
+[[Move Forth|$next_passage]]
+<</nobr>>
+
+:: use_success_potion_create_crotch
+<<nobr>>
+/* <pre><<= JSON.stringify($userBody.crotch, null, 2)>></pre> */
+<<set $userBody.crotch.curr_crotch = $curr_potion_selected.to>>
+<<set $image_key_crotch_path = "mc/figure/" + $userBody.crotch.orig_body + "/" + $userBody.crotch.orig_body + "_" + $userBody.crotch.curr_crotch+ ".png">>
+/* <<=$image_key_crotch_path>> */
+<<set $userBody.crotch.img = $image_key_crotch_path>>
+<<set $curr_crotch = Number($userBody.crotch.curr_crotch.split("_")[1])>>
+<div style="text-align: center;">
+<div class="change_show torso">[img[setup.ImagePath+$userBody.torso.img]]</div>
+<div class="change_show head">[img[setup.ImagePath+$userBody.head.img]]</div>
+<div class="change_show right_hand">[img[setup.ImagePath+$userBody.right_hand.img]]</div>
+<div class="change_show left_hand">[img[setup.ImagePath+$userBody.left_hand.img]]</div>
+<div class="change_show left_leg">[img[setup.ImagePath+$userBody.left_leg.img]]</div>
+<div class="change_show right_leg">[img[setup.ImagePath+$userBody.right_leg.img]]</div>
+<div class="change_show chest">[img[setup.ImagePath+$userBody.chest.img]]</div>
+<div class="change_show crotch">[img[setup.ImagePath+$userBody.crotch.img]]</div>
+<div class="change_show hair">[img[setup.ImagePath+$userBody.hair.img]]</div>
+
+</div>
+<<link "Try another Potion Scroll">><<goto "potion_lab">><</link>> |
+[[Leave Veil Tower|castle_map_back_select]]
+<</nobr>>
+
+
+
+
+
+
+
+:: crotch_1_crotch_2
+<<nobr>>
+<div style="text-align: center; width: 95%;"><img style="text-align: center; border-radius: 9px;
+    border: 10px ridge #8b5e3c;width: 95%;" @src="setup.ImagePath+'map/veil_tower_mage_map.png'"></div>
+<<speech "thalara">>You have brewed the potion. Let me see it first.  Caelan Are you ready to start the process...<</speech>>
+<br>
+[[I’ve worn this form proudly. Now I need to remember what came before|crotch_1_crotch_2_1]] | <br><br>
+[[I’m not ashamed it’s just… this feels like trading one truth for another.|crotch_1_crotch_2_1]] | <br><br>
+[[No more half-measures. If I can forge forward, I can step back too.|crotch_1_crotch_2_1]] | <br><br>
+<</nobr>>
+
+:: crotch_1_crotch_2_1
+<<nobr>>
+<br>
+<<speech "thalara">>Reversal is not denial. It is reflection a chance to see what has shifted in the light of morning.<</speech>><br>
+
+<<speech "mc">>I’ve lived these last days in a shape I claimed as mine. But part of me wonders if I’m rushing the journey.<</speech>><br>
+
+<<speech "thalara">>Every path deserves its pauses. It is wise to breathe, look back, then decide which step to take next.<</speech>><br>
+
+<<speech "mc">>This potion… it will reshape me again. Bring back the form I left behind yesterday.<</speech>><br>
+
+[[Move Forth|crotch_1_crotch_2_2]]
+<</nobr>>
+
+:: crotch_1_crotch_2_2
+<<nobr>>
+
+<<speech "thalara">>It will restore what you relinquished not to trap you, but to remind you of your fullness in both forms.<</speech>><br>
+
+<<speech "mc">>Will I feel… fragmented? Or more whole?<</speech>><br>
+
+<<speech "thalara">>Perhaps both. Integration often feels like two melodies weaving into harmony each distinct, each necessary.<</speech>><br>
+
+<<speech "mc">>I choose harmony.<</speech>><br>
+
+[[Move Forth|crotch_1_crotch_2_3]]
+<</nobr>>
+
+:: crotch_1_crotch_2_3
+<<nobr>>
+
+<<speech "mc">>It’s familiar… and new.<</speech>><br>
+
+<<speech "thalara">>You carry both shapes within you now. Neither defines you alone. What matters is how you combine their strengths.<</speech>><br>
+
+<<speech "mc">>I feel grounded… like my center shifts with choice, not with circumstance.<</speech>><br>
+
+<<speech "thalara">>Then let your choices continue to shape you. Morning returns each day so too can the forms you walk in, as long as they serve your truth.<</speech>><br>
+
+[[Move Forth|crotch_1_crotch_2_4]]
+<</nobr>>
+
+:: crotch_1_crotch_2_4
+<<nobr>>
+<<speech "mc">>Thank you, Thalara. For guiding me both forward and back.<</speech>><br>
+
+<<speech "thalara">>You are your own compass, Caelan. I merely help you read the stars.<</speech>><br>
+[[I feel the potion working in my crotch|use_success_potion_create_crotch]]
+<</nobr>>
+
+
+
+
+
+
+
+
+
+:: crotch_2_crotch_1
+<<nobr>>
+<div style="text-align: center; width: 95%;"><img style="text-align: center; border-radius: 9px;
+    border: 10px ridge #8b5e3c;width: 95%;" @src="setup.ImagePath+'map/veil_tower_mage_map.png'"></div>
+<<speech "thalara">>You have brewed the potion. Let me see it first.  Caelan Are you ready to start the process...<</speech>>
+<br>
+[[I’ve surrendered what was. Now I’m ready to embrace what is.|crotch_2_crotch_1_1]] | <br><br>
+[[I know this is the last shift. I’m… nervous. But I came here for it.|crotch_2_crotch_1_1]] | <br><br>
+[[This was never about comfort. Do your magic let’s finish this.|crotch_2_crotch_1_1]] | <br><br>
+<</nobr>>
+
+:: crotch_2_crotch_1_1
+<<nobr>>
+<<speech "thalara">>Here we stand at the threshold of your becoming. The final threshold.<</speech>><br>
+
+<<speech "mc">>All the petals before me… each session felt like shedding a layer. This one feels like blooming.<</speech>><br>
+
+<<speech "thalara">>Because it is. Each flower here opened in moonlight, just as you have. Today’s elixir completes what has been forming within you.<</speech>><br>
+
+<<speech "mc">>I’ve feared this moment worried it might feel hollow. But I also know I’ve arrived at it by choice.<</speech>><br>
+
+[[Move Forth|crotch_2_crotch_1_2]]
+<</nobr>>
+
+:: crotch_2_crotch_1_2
+<<nobr>>
+
+<<speech "thalara">>This potion carries lunar oils softening, deepening, refining. It doesn’t erase the journey; it honors it.<</speech>><br>
+
+<<speech "mc">>I’m ready… I think.<</speech>><br>
+
+<<speech "thalara">>Then let us begin. Remember: you do not become less. You become more whole.<</speech>><br>
+
+<<speech "thalara">>It’s… alive. Not just a shape, but a presence. I can feel depth I never knew existed.<</speech>><br>
+
+[[Move Forth|crotch_2_crotch_1_3]]
+<</nobr>>
+
+:: crotch_2_crotch_1_3
+<<nobr>>
+
+<<speech "thalara">>Your body has been a canvas. Tonight, it paints itself into form soft, strong, authentic. This is not completion it is emergence.<</speech>><br>
+
+<<speech "mc">>I don’t recognize all of me yet. But I recognize this me. And she feels... right.<</speech>><br>
+
+<<speech "thalara">>She is you. Not a copy, not a hiding. A true shape of your truth, born from choice and courage.<</speech>><br>
+
+<<speech "mc">>Every session felt like loss of power, of identity. But this… this feels like reclaiming power I never had.<</speech>><br>
+
+[[Move Forth|crotch_2_crotch_1_4]]
+<</nobr>>
+
+:: crotch_2_crotch_1_4
+<<nobr>>
+
+<<speech "thalara">>Power that flows from authenticity is stronger than any inherited throne or blade. You have crafted it yourself.<</speech>><br>
+
+<<speech "mc">>I’m afraid of what comes next. Courtly eyes, politics... the crown.<</speech>><br>
+
+<<speech "thalara">>You will walk among them as your true self. Some will marvel. Some will fear. But none can deny the grace of someone who stands in her own form.<</speech>><br>
+
+<<speech "mc">>Then I will walk that path. Not as a prince, not as a man. But as who I have chosen to be.<</speech>><br>
+
+[[Move Forth|crotch_2_crotch_1_5]]
+<</nobr>>
+
+:: crotch_2_crotch_1_5
+<<nobr>>
+
+<<speech "thalara">>And that choice is your legacy. May it guide you far beyond these walls.<</speech>><br>
+[[I feel the potion working in my crotch|use_success_potion_create_crotch]]
+<</nobr>>
+
+
+
+
+
+
+
+
+:: crotch_2_crotch_3
+<<nobr>>
+<div style="text-align: center; width: 95%;"><img style="text-align: center; border-radius: 9px;
+    border: 10px ridge #8b5e3c;width: 95%;" @src="setup.ImagePath+'map/veil_tower_mage_map.png'"></div>
+<<speech "thalara">>You have brewed the potion. Let me see it first.  Caelan Are you ready to start the process...<</speech>>
+<br>
+[[This is a course correction. Not shame. Not regret.|crotch_2_crotch_3_1]] | <br><br>
+[[I didn’t think I’d come back here. But maybe I need to understand what I left behind.|crotch_2_crotch_3_1]] | <br><br>
+[[If this body’s mine, then I have the right to decide its shape again.|crotch_2_crotch_3_1]] | <br><br>
+<</nobr>>
+
+:: crotch_2_crotch_3_1
+<<nobr>>
+<<speech "thalara">>Your path is yours, Caelan. Not because you chose it once, but because you keep choosing it again and again.<</speech>><br>
+
+<<speech "mc">>I thought I crossed a line I couldn’t return from. But lately... I feel like something in me is adrift. Like I stepped forward before I understood what I was leaving behind.<</speech>><br>
+
+<<speech "thalara">>That is not failure. That is wisdom in motion. You gave something up. And now you feel its echo calling back to you.<</speech>><br>
+
+<<speech "mc">>Will this feel like betrayal? To the part of me that accepted the change?<</speech>><br>
+
+[[Move Forth|crotch_2_crotch_3_2]]
+<</nobr>>
+
+:: crotch_2_crotch_3_2
+<<nobr>>
+
+<<speech "thalara">>It will feel like integration. You’re not undoing anything you’re acknowledging that you are not a single truth. You are a story still being written.<</speech>><br>
+
+<<speech "mc">>I remember the silence after that last transformation. Not just on the outside inside too. It was like a chapter ended... but the next one didn’t start.<</speech>><br>
+
+<<speech "thalara">>Then let this be punctuation. Not a period. Not a reversal. A pause. A chance to breathe between sentences.<</speech>><br>
+
+<<speech "mc">>You always make it sound poetic. But this feels… personal.<</speech>><br>
+
+[[Move Forth|crotch_2_crotch_3_3]]
+<</nobr>>
+
+:: crotch_2_crotch_3_3
+<<nobr>>
+
+<<speech "thalara">>That’s because it is. Every shape you wear is a conversation between your soul and your skin. And you, brave one, are still listening.<</speech>><br>
+
+<<speech "mc">>Will it hurt?<</speech>><br>
+
+<<speech "thalara">>No. But it may feel. And that’s the point.<</speech>><br>
+
+<<speech "mc">>It’s strange. It’s me, and it isn’t.<</speech>><br>
+
+[[Move Forth|crotch_2_crotch_3_4]]
+<</nobr>>
+
+:: crotch_2_crotch_3_4
+<<nobr>>
+
+<<speech "thalara">>That’s how you know you’re growing. You are meeting a version of yourself you hadn’t seen in a while.<</speech>><br>
+
+<<speech "mc">>Will this confuse people?<</speech>><br>
+
+<<speech "thalara">>They’ll wonder. They may question. But they will see you. Because you are not the transformation you are the chooser of it.<</speech>><br>
+
+<<speech "mc">>I don’t know if I’ll stay here. But for now... it feels better.<</speech>><br>
+
+[[Move Forth|crotch_2_crotch_3_5]]
+
+<</nobr>>
+
+:: crotch_2_crotch_3_5
+<<nobr>>
+
+<<speech "thalara">>Then that is all that matters. You are not wrong to seek what you need, even if what you need shifts with the seasons of your heart.<</speech>><br>
+[[I feel the potion working in my crotch|use_success_potion_create_crotch]]
+<</nobr>>
+
+
+
+
+
+
+
+
+:: crotch_3_crotch_2
+<<nobr>>
+<div style="text-align: center; width: 95%;"><img style="text-align: center; border-radius: 9px;
+    border: 10px ridge #8b5e3c;width: 95%;" @src="setup.ImagePath+'map/veil_tower_mage_map.png'"></div>
+<<speech "thalara">>You have brewed the potion. Let me see it first.  Caelan Are you ready to start the process...<</speech>>
+<br>
+[[I’ve let go of what I was. I’m ready to create what comes next.|crotch_3_crotch_2_1]] | <br><br>
+[[This part feels... heavier. Like something I can't undo.|crotch_3_crotch_2_1]] | <br><br>
+[[So this is it. No going back after this, is there?|crotch_3_crotch_2_1]] | <br><br>
+<</nobr>>
+
+:: crotch_3_crotch_2_1
+<<nobr>>
+<<speech "thalara">>No going back? Perhaps. But going forward truly forward was never meant to be without weight.<</speech>><br>
+
+<<speech "mc">>Everything until now felt like subtraction. This... this feels different.<</speech>><br>
+
+<<speech "thalara">>Because it is. Until now, the body made room. Today, it begins to build. This is not just transformation it is genesis.<</speech>><br>
+
+<<speech "mc">>I didn’t think creation would feel like this. Like I’m standing on the edge of a cliff, and I’m the one who has to step off.<</speech>><br>
+
+[[Move Forth|crotch_3_crotch_2_2]]
+<</nobr>>
+
+:: crotch_3_crotch_2_2
+<<nobr>>
+
+<<speech "thalara">>It’s not a fall. It’s a release. And wings often sprout after the leap.<</speech>><br>
+
+<<speech "mc">>You always have a metaphor ready.<</speech>><br>
+
+<<speech "thalara">>Old mages speak in riddles when truth is too sharp. But I won’t lie to you. This potion ends something final. Not because it erases it replaces. What follows may feel foreign at first. But foreignness is not the same as wrongness.<</speech>><br>
+
+<<speech "mc">>What does it feel like? Afterward?<</speech>><br>
+
+[[Move Forth|crotch_3_crotch_2_3]]
+<</nobr>>
+
+:: crotch_3_crotch_2_3
+<<nobr>>
+
+<<speech "thalara">>New. Tender. Sometimes confusing. But also... aligned. Like the body stops resisting itself.<</speech>><br>
+
+<<speech "mc">>It doesn’t look like much. Just liquid. Just light.<</speech>><br>
+
+<<speech "thalara">>And yet in it is a world waiting to shape itself around you. A foundation not borrowed from your past but crafted for your future.<</speech>><br>
+
+<<speech "mc">>I always thought this moment would feel violent. But it doesn’t. It feels... quiet.<</speech>><br>
+
+[[Move Forth|crotch_3_crotch_2_4]]
+<</nobr>>
+
+:: crotch_3_crotch_2_4
+<<nobr>>
+
+<<speech "thalara">>The loudest changes happen in silence. The earth shifts beneath roots before the flower ever blooms.<</speech>><br>
+
+<<speech "mc">>There’s an ache. Not sharp, but deep. Like something’s opening, or reaching…<</speech>><br>
+
+<<speech "thalara">>That’s because it is. Your body is listening to a new song now. One it hasn’t heard before, but somehow remembers.<</speech>><br>
+
+<<speech "mc">>I don’t know what I’m becoming. But I know I’m not who I was.<</speech>><br>
+
+[[Move Forth|crotch_3_crotch_2_5]]
+<</nobr>>
+
+:: crotch_3_crotch_2_5
+<<nobr>>
+
+<<speech "thalara">>Then you’re on the right path. This form the one beginning to take shape it isn’t a mask. It’s yours. Not inherited, not imposed. Chosen.<</speech>><br>
+
+<<speech "mc">>What if I don’t know how to live in it yet?<</speech>><br>
+
+<<speech "thalara">>Then we’ll teach it together. And in time, you’ll stop noticing where you end and your truth begins.<</speech>><br>
+[[I feel the potion working in my crotch|use_success_potion_create_crotch]]
+<</nobr>>
+
+
+
+
+
+
+
+:: crotch_3_crotch_4
+<<nobr>>
+<div style="text-align: center; width: 95%;"><img style="text-align: center; border-radius: 9px;
+    border: 10px ridge #8b5e3c;width: 95%;" @src="setup.ImagePath+'map/veil_tower_mage_map.png'"></div>
+<<speech "thalara">>You have brewed the potion. Let me see it first.  Caelan Are you ready to start the process...<</speech>>
+<br>
+[[I’ve been at the edge… and I need to step back. Just one step.|crotch_3_crotch_4_1]] | <br><br>
+[[This feels like turning the tide. I don’t know if it’s right|crotch_3_crotch_4_1]] | <br><br>
+[[Maybe I was wrong to let it go completely.|crotch_3_crotch_4_1]] | <br><br>
+<</nobr>>
+
+:: crotch_3_crotch_4_1
+<<nobr>>
+<<speech "thalara">>You return to reclaim something. A fragment. A feeling. That is not weakness it is awareness.<</speech>><br>
+
+<<speech "mc">>It's not about reclaiming pride, or power. Not entirely. It's about feeling whole again even if that wholeness means reaching backward.<</speech>><br>
+
+<<speech "thalara">>Then do so mindfully. Do not grasp from fear. Let it be a hand extended to your past self, not a rejection of the woman you are becoming.<</speech>><br>
+
+<<speech "mc">>When I passed through that last threshold… I thought I’d feel complete. Instead, I felt… erased. Like my foundation had vanished, and nothing had replaced it yet.<</speech>><br>
+
+[[Move Forth|crotch_3_crotch_4_2]]
+<</nobr>>
+
+:: crotch_3_crotch_4_2
+<<nobr>>
+<<speech "thalara">>Even nature doesn’t skip the dawn. The light returns slowly, one hue at a time. What you lost was not wrong to surrender. But regrowth can be part of the truth too.<</speech>><br>
+
+<<speech "mc">>So this doesn’t undo the path. It just… breathes into it again.<</speech>><br>
+
+<<speech "thalara">>Exactly. The form you shape is not a verdict. It is a living sculpture, always evolving. You’ve earned the right to change forward or back.<</speech>><br>
+
+<<speech "mc">>I won’t lie. Part of me feels ashamed. Like I’m not brave enough to finish the journey.<</speech>><br>
+
+[[Move Forth|crotch_3_crotch_4_3]]
+<</nobr>>
+
+:: crotch_3_crotch_4_3
+<<nobr>>
+
+<<speech "thalara">>Shame is a shadow of others' expectations. You are not reversing you're realigning. Sometimes, the soul whispers for balance. And balance may not look like anyone else’s ending.<</speech>><br>
+
+<<speech "mc">>It’s strange. I thought it would feel like stepping away from myself. But it feels like… I’m stepping toward something I still care about.<</speech>><br>
+
+<<speech "thalara">>Then it was the right choice. Sometimes the tiniest part holds the deepest root.<</speech>><br>
+
+<<speech "mc">>Will I have to explain this? Defend it?<</speech>><br>
+
+[[Move Forth|crotch_3_crotch_4_4]]
+<</nobr>>
+
+:: crotch_3_crotch_4_4
+<<nobr>>
+
+<<speech "thalara">>Only to those who confuse transition with surrender. And you, my prince my queen in bloom owe them no clarity but your own.<</speech>><br>
+
+<<speech "mc">>I’m beginning to understand… this journey doesn’t move in a straight line.<</speech>><br>
+
+<<speech "thalara">>No. It spirals. And in that spiral, you are always arriving. Always becoming.<</speech>><br>
+[[I feel the potion working in my crotch|use_success_potion_create_crotch]]
+<</nobr>>
+
+
+
+
+
+
+
+
+:: crotch_4_crotch_3
+<<nobr>>
+<div style="text-align: center; width: 95%;"><img style="text-align: center; border-radius: 9px;
+    border: 10px ridge #8b5e3c;width: 95%;" @src="setup.ImagePath+'map/veil_tower_mage_map.png'"></div>
+<<speech "thalara">>You have brewed the potion. Let me see it first.  Caelan Are you ready to start the process...<</speech>>
+<br>
+[[This one matters, doesn’t it? Let’s finish what we started.|crotch_4_crotch_3_1]] | <br><br>
+[[This is harder than I expected. I don’t know if I’m ready… but I came.|crotch_4_crotch_3_1]] | <br><br>
+[[You’re going to say it’s ‘necessary.’ I’m not sure I believe you anymore.|crotch_4_crotch_3_1]] | <br><br>
+<</nobr>>
+
+:: crotch_4_crotch_3_1
+<<nobr>>
+<<speech "thalara">>I won’t offer hollow comforts, Caelan. Not today. This session… is quiet. But not simple.<</speech>><br>
+
+<<speech "mc">>I thought I’d feel triumphant. Lighter. But instead, I feel like I’m watching myself disappear one breath at a time.<</speech>><br>
+
+<<speech "thalara">>You are not disappearing. You are distilling. When water becomes mist, it doesn’t lose itself it rises.<</speech>><br>
+
+<<speech "mc">>Then why does each step feel like grief? Like I’m mourning something… even as I choose to let it go?<</speech>><br>
+
+[[Move Forth|crotch_4_crotch_3_2]]
+<</nobr>>
+
+:: crotch_4_crotch_3_2
+<<nobr>>
+
+<<speech "thalara">>Because part of you is grieving. Not for what’s lost, but for how it once defined you. This final trace of manhood… it has echoed in your posture, your fear, your pride. And now, it will become silence.<</speech>><br>
+
+<<speech "mc">>And after that silence? What am I?<</speech>><br>
+
+<<speech "thalara">>You are what you decide to become. This potion clears the canvas. What you paint next is yours alone. The body will no longer speak in old symbols. The world may try but you will define what your shape means.<</speech>><br>
+
+<<speech "mc">>It’s so small now… barely even real. I used to think it meant strength. Manhood. All those old things I clung to.<</speech>><br>
+
+[[Move Forth|crotch_4_crotch_3_3]]
+<</nobr>>
+
+:: crotch_4_crotch_3_3
+<<nobr>>
+
+<<speech "thalara">>And now?<</speech>><br>
+
+<<speech "mc">>Now it just feels like… a leftover. Something that doesn’t belong in the life I’m trying to live.<</speech>><br>
+
+<<speech "thalara">>Then let it go with purpose. Don’t let it shrink from shame let it recede with dignity. You are not shedding failure. You are rising into power shaped for you.<</speech>><br>
+
+<<speech "mc">>That’s it, then. The last thread.<</speech>><br>
+
+[[Move Forth|crotch_4_crotch_3_4]]
+<</nobr>>
+
+:: crotch_4_crotch_3_4
+<<nobr>>
+
+<<speech "thalara">>Yes. What remains now is a body that listens for what you wish to become. The masculine root has been softened to its edge. The womb of possibility lies ahead.<</speech>><br>
+
+<<speech "mc">>It’s strange… I expected to feel emptier. But I think I feel lighter instead.<</speech>><br>
+
+<<speech "thalara">>You’ve carried more than flesh, Caelan. Expectations, pride, fear. Now, there’s space for truth. The form that once declared ‘who you had to be’ no longer shouts over who you choose to be.<</speech>><br>
+
+<<speech "mc">>I’m not a queen yet. But I’m something closer than I was yesterday.<</speech>><br>
+
+[[Move Forth|crotch_4_crotch_3_5]]
+<</nobr>>
+
+:: crotch_4_crotch_3_5
+<<nobr>>
+
+<<speech "thalara">>And every step you take, no matter how small, is a coronation of your becoming.<</speech>><br>
+[[I feel the potion working in my crotch|use_success_potion_create_crotch]]
+<</nobr>>
+
+
+
+
+
+
+
+:: crotch_4_crotch_5
+<<nobr>>
+<div style="text-align: center; width: 95%;"><img style="text-align: center; border-radius: 9px;
+    border: 10px ridge #8b5e3c;width: 95%;" @src="setup.ImagePath+'map/veil_tower_mage_map.png'"></div>
+<<speech "thalara">>You have brewed the potion. Let me see it first.  Caelan Are you ready to start the process...<</speech>>
+<br>
+[[I’m not reversing everything. I just need to breathe again to feel more like me.|crotch_4_crotch_5_1]] | <br><br>
+[[I’m not even sure what I want anymore. But I know I can’t keep moving forward on empty.|crotch_4_crotch_5_1]] | <br><br>
+[[This was supposed to be my transformation. Not erasure.|crotch_4_crotch_5_1]] | <br><br>
+<</nobr>>
+
+:: crotch_4_crotch_5_1
+<<nobr>>
+<<speech "thalara">>The sky doesn’t punish the moon for waxing after it wanes. Why should you feel guilt for returning to fullness?<</speech>><br>
+
+<<speech "mc">>It’s not guilt. Not exactly. It’s… fear. That I’ve come too far to turn back. That going back is weakness.<</speech>><br>
+
+<<speech "thalara">>No. Weakness would be to keep shrinking when your spirit is crying out to expand.<</speech>><br>
+
+<<speech "mc">>When I left after the last session, I told myself the reduction was necessary. A step toward something greater. But I keep waking up with silence where there used to be presence. It's not right. Not yet.<</speech>><br>
+
+[[Move Forth|crotch_4_crotch_5_2]]
+<</nobr>>
+
+:: crotch_4_crotch_5_2
+<<nobr>>
+<<speech "thalara">>This dose won’t make you what you once were. But it will return some of what was lost. Not in defiance of your journey but in service to it.<</speech>><br>
+
+<<speech "mc">>So this isn’t a failure?<</speech>><br>
+
+<<speech "thalara">>Correction is not failure. Rebalancing is not betrayal. You are sculpting a self, not tracing a blueprint.<</speech>><br>
+
+<<speech "mc">>I’ve tried to honor this path, truly. But I can’t rule or lead if I feel fragmented.<</speech>><br>
+
+[[Move Forth|crotch_4_crotch_5_3]]
+<</nobr>>
+
+:: crotch_4_crotch_5_3
+<<nobr>>
+
+<<speech "thalara">>And so, you honor yourself by reclaiming what you need. This body is yours. The throne will not judge your proportions.<</speech>><br>
+
+<<speech "mc">>That’s it? No tugging, no ache? Just... calm?<</speech>><br>
+
+<<speech "thalara">>Not all returns must come with violence. Sometimes, regrowth is quiet.<</speech>><br>
+
+<<speech "mc">>Will I have to explain this? To the court? To my mother?<</speech>><br>
+
+[[Move Forth|crotch_4_crotch_5_4]]
+<</nobr>>
+
+:: crotch_4_crotch_5_4
+<<nobr>>
+
+<<speech "thalara">>If they ask, tell them the truth: that you chose clarity over pride, wholeness over silence.<</speech>><br>
+
+<<speech "mc">>That’s a queen’s answer.<</speech>><br>
+
+<<speech "thalara">>Then perhaps you’re already becoming one on your own terms.<</speech>><br>
+[[I feel the potion working in my crotch|use_success_potion_create_crotch]]
+<</nobr>>
+
+
+
+
+
+
+
+
+:: crotch_5_crotch_4
+<<nobr>>
+<div style="text-align: center; width: 95%;"><img style="text-align: center; border-radius: 9px;
+    border: 10px ridge #8b5e3c;width: 95%;" @src="setup.ImagePath+'map/veil_tower_mage_map.png'"></div>
+<<speech "thalara">>You have brewed the potion. Let me see it first.  Caelan Are you ready to start the process...<</speech>>
+<br>
+[[This one… it’s close to the end, isn’t it? Let’s see it through.|crotch_5_crotch_4_1]] | <br><br>
+[[There’s barely anything left of what I used to be. But I’m still not sure what I’m becoming.|crotch_5_crotch_4_1]] | <br><br>
+[[So, another piece of me goes today? I hope whatever’s left is enough to be heard.|crotch_5_crotch_4_1]] | <br><br>
+<</nobr>>
+
+:: crotch_5_crotch_4_1
+<<nobr>>
+<<speech "thalara">>You came without summons. That tells me you’ve been thinking.<</speech>><br>
+
+<<speech "mc">>Hard not to think when the changes echo louder than my heartbeat.<</speech>><br>
+
+<<speech "thalara">>This session is delicate. What remains now is slight yet stubborn. The tiniest stone can still anchor a mountain.<</speech>><br>
+
+<<speech "mc">>Then I suppose I’m down to the pebble that used to be a tower.<</speech>><br>
+
+[[Move Forth|crotch_5_crotch_4_2]]
+<</nobr>>
+
+:: crotch_5_crotch_4_2
+<<nobr>>
+
+<<speech "thalara">>You’re not broken, Caelan. You’re reshaping. This piece this sliver is only a symbol. One you may let go of, or hold onto longer. But today’s dose will begin the final tapering.<</speech>><br>
+
+<<speech "mc">>It used to be the center of everything. Pride. Power. Even shame. And now… it’s barely a whisper of who I was.<</speech>><br>
+
+<<speech "thalara">>And still, you’re here. Still speaking. Still you. You’ve proven, over and over, that identity isn’t pinned to flesh.<</speech>><br>
+
+<<speech "mc">>Try convincing my reflection of that.<</speech>><br>
+
+[[Move Forth|crotch_5_crotch_4_3]]
+<</nobr>>
+
+:: crotch_5_crotch_4_3
+<<nobr>>
+
+<<speech "thalara">>Look again, not just at the body. See what’s emerging behind the eyes. You’ve carried doubt, but also grace. Fragility, but also fire. These mirrors don’t lie.<</speech>><br>
+
+<<speech "mc">>I didn’t think it would get this far. I thought maybe I’d stop go halfway, hold the line. But the line keeps moving.<</speech>><br>
+
+<<speech "thalara">>Transformation is not a road with clear borders. It’s a sea, and you’re building the boat as you cross it. The fact that you still pause, question, feel that’s not weakness. It’s wisdom.<</speech>><br>
+
+<<speech "mc">>Is it strange I feel more fear now than I did when it all began?<</speech>><br>
+
+[[Move Forth|crotch_5_crotch_4_4]]
+<</nobr>>
+
+:: crotch_5_crotch_4_4
+<<nobr>>
+
+<<speech "thalara">>Not strange. You’re not afraid of losing what you were you’re afraid of not recognizing what you’ll become. That’s the hardest part.<</speech>><br>
+
+<<speech "mc">>I can barely feel anything now. Like it’s fading into dream.<</speech>><br>
+
+<<speech "thalara">>And soon, the body will no longer need that shape to define its strength. You are not hollowing you are refining.<</speech>><br>
+
+<<speech "mc">>Will people still see me as whole?<</speech>><br>
+
+[[Move Forth|crotch_5_crotch_4_5]]
+<</nobr>>
+
+:: crotch_5_crotch_4_5
+<<nobr>>
+
+<<speech "thalara">>The ones who matter will see you as more than whole. They will see you as true.<</speech>><br>
+
+<<speech "mc">>I don’t know what kind of queen I’ll make… but I’m starting to believe I might still be one.<</speech>><br>
+
+<<speech "thalara">>That belief is your crown’s foundation. And every session, every step you’ve taken willingly or not has carved space for it to rest.<</speech>><br>
+[[I feel the potion working in my crotch|use_success_potion_create_crotch]]
+<</nobr>>
+
+
+
+
+
+
+
+
+:: crotch_5_crotch_6
+<<nobr>>
+<div style="text-align: center; width: 95%;"><img style="text-align: center; border-radius: 9px;
+    border: 10px ridge #8b5e3c;width: 95%;" @src="setup.ImagePath+'map/veil_tower_mage_map.png'"></div>
+<<speech "thalara">>You have brewed the potion. Let me see it first.  Caelan Are you ready to start the process...<</speech>>
+<br>
+[[I need to feel a part of myself return. Not all, just… enough.|crotch_5_crotch_6_1]] | <br><br>
+[[I don’t know if this is the right choice. But it’s the only one that feels… mine.|crotch_5_crotch_6_1]] | <br><br>
+[[You said I wouldn’t be trapped. Prove it.|crotch_5_crotch_6_1]] | <br><br>
+<</nobr>>
+
+:: crotch_5_crotch_6_1
+<<nobr>>
+<<speech "thalara">>There is strength in changing course. Even fire knows when to shift direction with the wind.<</speech>><br>
+
+<<speech "mc">>Everything I was felt like it burned away in that last session. I walked out of here feeling hollow. Almost… erased.<</speech>><br>
+
+<<speech "thalara">>Transformation asks much of us. But it should never ask for our soul. If what you lost was too much then this step back is a step toward yourself.<</speech>><br>
+
+<<speech "mc">>It’s not about undoing everything. I just… I need to feel solid again. To walk without wondering if something essential has vanished.<</speech>><br>
+[[Move Forth|crotch_5_crotch_6_2]]
+<</nobr>>
+
+:: crotch_5_crotch_6_2
+<<nobr>>
+
+<<speech "thalara">>This potion will restore what was reduced. Not to its peak, but to presence. It will return a shape not to defy who you were becoming, but to remind you of who you’ve always been.<</speech>><br>
+
+<<speech "mc">>You don’t judge me for this? Wanting some of it back?<</speech>><br>
+
+<<speech "thalara">>I would only judge you if you stopped listening to yourself. This path you walk is not one-directional. Real becoming is messy, sacred, and entirely yours.<</speech>><br>
+
+<<speech "mc">>I thought I was ready to let go. I told myself it was just flesh. But I’ve felt… unbalanced since.<</speech>><br>
+
+[[Move Forth|crotch_5_crotch_6_3]]
+<</nobr>>
+
+:: crotch_5_crotch_6_3
+<<nobr>>
+
+<<speech "thalara">>Then reclaim your balance. Your body is not a symbol of loyalty or rebellion. It is your anchor. If that anchor feels too light, you are allowed to add weight again.<</speech>><br>
+
+<<speech "mc">>It feels… right. Like a missing note sliding back into a melody.<</speech>><br>
+
+<<speech "thalara">>That is your body remembering itself. You gave something up before you were truly ready. Now, you take back only what you need.<</speech>><br>
+
+<<speech "mc">>So I’m a patchwork prince-turned-princess now?<</speech>><br>
+
+[[Move Forth|crotch_5_crotch_6_4]]
+<</nobr>>
+
+:: crotch_5_crotch_6_4
+<<nobr>>
+
+<<speech "thalara">>You are not patchwork. You are process. You are possibility. No queen is forged in a single mold.<</speech>><br>
+
+<<speech "mc">>Thank you… for making this feel like a choice.<</speech>><br>
+
+<<speech "thalara">>It always was. And it always will be.<</speech>><br>
+[[I feel the potion working in my crotch|use_success_potion_create_crotch]]
+<</nobr>>
+
+
+
+
+
+
+
+
+:: crotch_6_crotch_5
+<<nobr>>
+<div style="text-align: center; width: 95%;"><img style="text-align: center; border-radius: 9px;
+    border: 10px ridge #8b5e3c;width: 95%;" @src="setup.ImagePath+'map/veil_tower_mage_map.png'"></div>
+<<speech "thalara">>You have brewed the potion. Let me see it first.  Caelan Are you ready to start the process...<</speech>>
+<br>
+[[Another step… closer. I don’t flinch anymore but that doesn’t mean it’s easy.|crotch_6_crotch_5_1]] | <br><br>
+[[I thought by now I’d stop feeling this knot in my chest. But it’s still there… tight.|crotch_6_crotch_5_1]] | <br><br>
+[[What’s left of me now, Thalara? A ghost of a man? Let’s finish the carving, then.|crotch_6_crotch_5_1]] | <br><br>
+<</nobr>>
+
+:: crotch_6_crotch_5_1
+<<nobr>>
+<<speech "thalara">>There you are. The echoes of your steps were different tonight.<</speech>><br>
+
+<<speech "mc">>Each step takes more of me with it.<</speech>><br>
+
+<<speech "thalara">>Or perhaps, each step brings more of you into view. Like mist parting to reveal the river beneath.<</speech>><br>
+
+<<speech "mc">>Are you ever not poetic?<</speech>><br>
+
+[[Move Forth|crotch_6_crotch_5_2]]
+<</nobr>>
+
+:: crotch_6_crotch_5_2
+<<nobr>>
+
+<<speech "thalara">>Only when the moment doesn’t deserve it. This one does.<</speech>><br>
+
+<<speech "mc">>It’s getting harder to look down. Not from fear. Just… discomfort. There’s almost nothing left of what I knew.<</speech>><br>
+
+<<speech "thalara">>Yes. This phase is called The Hollowing. The time where space is made not just lost. As your form shrinks, the vessel begins to prepare.<</speech>><br>
+
+<<speech "mc">>Very small, huh? Soon it won’t even be worth noticing.<</speech>><br>
+
+[[Move Forth|crotch_6_crotch_5_3]]
+
+<</nobr>>
+
+:: crotch_6_crotch_5_3
+<<nobr>>
+
+<<speech "thalara">>Not to the world, perhaps. But to you? Even a nub can echo with memory. It is not shameful to mourn what you had, even as you reshape what you are.<</speech>><br>
+
+<<speech "mc">>You know, when I was younger… I thought my size was my power. That I could charm, control, intimidate, even seduce, just by what I carried between my legs.<</speech>><br>
+
+<<speech "thalara">>Many believe that. Especially those raised as heirs, warriors, or kings. But true power never rests in flesh. It rests in how you wield yourself.<</speech>><br>
+
+<<speech "mc">>I don’t feel like I’m wielding anything anymore.<</speech>><br>
+
+[[Move Forth|crotch_6_crotch_5_4]]
+
+<</nobr>>
+
+:: crotch_6_crotch_5_4
+<<nobr>>
+
+<<speech "thalara">>Then rest. Let this moment be what it is: a letting go. You’re not expected to feel triumphant. Not today.<</speech>><br>
+
+<<speech "mc">>What if I’m not strong enough to keep letting go?<</speech>><br>
+
+<<speech "thalara">>Then let me hold the space until you are. You’re not alone in this. You never were.<</speech>><br>
+
+<<speech "mc">>It’s strange. I used to look down and feel pride. Now I look down and feel… silence. Like the part of me that used to speak so loudly has gone mute.<</speech>><br>
+
+[[Move Forth|crotch_6_crotch_5_5]]
+<</nobr>>
+
+:: crotch_6_crotch_5_5
+<<nobr>>
+<<speech "thalara">>Then listen to the silence. There’s a new voice emerging beneath it. It hasn’t learned to speak yet but it will.<</speech>><br>
+
+<<speech "mc">>It’s… barely there.<</speech>><br>
+
+<<speech "thalara">>Yes. This stage brings you to the edge. Beyond it, a new path begins. But for now, rest in this in-between.<</speech>><br>
+
+<<speech "mc">>It doesn’t even feel like me anymore. Not even the memory of me.<</speech>><br>
+
+[[Move Forth|crotch_6_crotch_5_6]]
+<</nobr>>
+
+:: crotch_6_crotch_5_6
+<<nobr>>
+
+<<speech "thalara">>Because a memory is still a kind of shadow. You are light now, not shadow. That means leaving old silhouettes behind.<</speech>><br>
+
+<<speech "mc">>What happens if I regret going this far?<</speech>><br>
+
+<<speech "thalara">>Then we stop. Or we go back. You are never trapped, Caelan. Only transformed. And all transformations are choices, even when they’re made slowly.<</speech>><br>
+
+<<speech "mc">>I don’t know if I want to move forward… or run.<</speech>><br>
+
+[[Move Forth|crotch_6_crotch_5_7]]
+<</nobr>>
+
+:: crotch_6_crotch_5_7
+<<nobr>>
+
+<<speech "thalara">>Then stay still for a while. You don’t have to choose everything tonight.<</speech>><br>
+
+<<speech "mc">>Is this what being queen means? Hollowing out until only duty remains?<</speech>><br>
+
+<<speech "thalara">>No. Being queen means reshaping yourself so that your truth can rule not your fears. That truth doesn’t have to look like anyone else’s.<</speech>><br>
+[[I feel the potion working in my crotch|use_success_potion_create_crotch]]
+<</nobr>>
+
+
+
+
+
+
+
+
+:: crotch_6_crotch_7
+<<nobr>>
+<div style="text-align: center; width: 95%;"><img style="text-align: center; border-radius: 9px;
+    border: 10px ridge #8b5e3c;width: 95%;" @src="setup.ImagePath+'map/veil_tower_mage_map.png'"></div>
+<<speech "thalara">>You have brewed the potion. Let me see it first.  Caelan Are you ready to start the process...<</speech>>
+<br>
+[[I want to feel fuller again. To remember the way it used to be.|crotch_6_crotch_7_1]] | <br><br>
+[[I didn’t think I’d come back here. But… something’s missing. And I need to feel whole again.|crotch_6_crotch_7_1]] | <br><br>
+[[Let’s just get this over with. I’m not here to explain myself.|crotch_6_crotch_7_1]] | <br><br>
+<</nobr>>
+
+:: crotch_6_crotch_7_1
+<<nobr>>
+<<speech "thalara">>Time brings many of us back to doors we once closed with certainty.<</speech>><br>
+
+<<speech "mc">>Maybe the door wasn’t locked. Just… ignored.<</speech>><br>
+
+<<speech "thalara">>Or perhaps you always knew where it was. You just needed a reason to open it again.<</speech>><br>
+
+<<speech "mc">>It’s not about regret. It’s about... recalibration.<</speech>><br>
+
+[[Move Forth|crotch_6_crotch_7_2]]
+<</nobr>>
+
+:: crotch_6_crotch_7_2
+<<nobr>>
+
+<<speech "thalara">>A fair word. So many think transformation is linear forward, forward, forward. But even the stars loop back in their sky. You are not retreating. You are realigning.<</speech>><br>
+
+<<speech "mc">>When I looked down this morning… and saw what I had left, I didn’t feel proud. I felt… erased. Like part of me had vanished, and I wasn’t sure if I gave permission for that.<</speech>><br>
+
+<<speech "thalara">>The body sometimes speaks truths our minds haven’t admitted yet. Tell me, Caelan what is it you hope to reclaim with this session?<</speech>><br>
+
+<<speech "mc">>Presence. Solidity. I need to feel grounded in myself again. I miss the weight of who I was.<</speech>><br>
+
+[[Move Forth|crotch_6_crotch_7_3]]
+
+<</nobr>>
+
+:: crotch_6_crotch_7_3
+<<nobr>>
+
+<<speech "thalara">>Then this blend will serve you. It calls back what was reduced not in defiance of change, but in honor of balance. You will regain size, proportion, and sensation. The body remembers… and welcomes back what once belonged.<</speech>><br>
+
+<<speech "mc">>And what if I come to regret it again later?<</speech>><br>
+
+<<speech "thalara">>Then you return again. You adjust. This journey was never a single path. It is a spiral, and you are allowed to turn.<</speech>><br>
+
+<<speech "mc">>You always make it sound so poetic.<</speech>><br>
+
+[[Move Forth|crotch_6_crotch_7_4]]
+<</nobr>>
+
+:: crotch_6_crotch_7_4
+<<nobr>>
+
+<<speech "thalara">>It is poetic. Every time you choose to listen to your truth, even when it contradicts yesterday’s truth you’re writing a living poem.<</speech>><br>
+
+<<speech "mc">>This’ll bring me back to where I was before? Not all the way, just… more?<</speech>><br>
+
+<<speech "thalara">>Yes. From small to moderate. It will lengthen and thicken your form, enough that it regains prominence. Enough that you feel it again not just as a memory, but as part of your being.<</speech>><br>
+
+<<speech "mc">>Alright.<</speech>><br>
+
+[[Move Forth|crotch_6_crotch_7_5]]
+<</nobr>>
+
+
+:: crotch_6_crotch_7_5
+<<nobr>>
+
+<<speech "mc">>It’s coming back. Gods, I didn’t realize how much I missed this until now…<</speech>><br>
+
+<<speech "thalara">>And how does it feel? To stand with what you once laid down?<</speech>><br>
+
+<<speech "mc">>Strange. Familiar. Like a name I hadn’t spoken in months… but still remember how to write.<</speech>><br>
+
+<<speech "thalara">>You are not betraying the path by walking backward a step. You are learning its full shape. No crown should demand the sacrifice of selfhood.<</speech>><br>
+[[Move Forth|crotch_6_crotch_7_6]]
+<</nobr>>
+
+:: crotch_6_crotch_7_6
+<<nobr>>
+
+<<speech "mc">>I don’t know what this makes me now. I’m not sure where I’m heading anymore.<</speech>><br>
+
+<<speech "thalara">>Then allow that unknowing to be your compass. You do not need to rush toward a fixed version of yourself. You only need to walk truthfully.<</speech>><br>
+
+<<speech "mc">>Just one step at a time, huh?<</speech>><br>
+
+<<speech "thalara">>And today, that step brought you back. Tomorrow… it may take you forward again. What matters is that it’s yours.<</speech>><br>
+[[I feel the potion working in my crotch|use_success_potion_create_crotch]]
+<</nobr>>
+
+
+
+
+
+
+
+
+:: crotch_7_crotch_6
+<<nobr>>
+<div style="text-align: center; width: 95%;"><img style="text-align: center; border-radius: 9px;
+    border: 10px ridge #8b5e3c;width: 95%;" @src="setup.ImagePath+'map/veil_tower_mage_map.png'"></div>
+<<speech "thalara">>You have brewed the potion. Let me see it first.  Caelan Are you ready to start the process...<</speech>>
+<br>
+[[Strange how I used to dread this, and now it almost feels like… progress.|crotch_7_crotch_6_1]] | <br><br>
+[[I keep thinking this will get easier, but… I’m still not sure how to feel.|crotch_7_crotch_6_1]] | <br><br>
+[[Fine. Another step down. Another chip off the old manhood.|crotch_7_crotch_6_1]] | <br><br>
+<</nobr>>
+
+:: crotch_7_crotch_6_1
+<<nobr>>
+<<speech "thalara">>You speak as though you’re losing battles, Caelan. But this isn’t war. It’s weathering.<</speech>><br>
+
+<<speech "mc">>Then why does each session feel like erosion? Like I’m being worn smooth.<</speech>><br>
+
+<<speech "thalara">>Because smoothing isn’t erasure. It’s refinement. You aren’t being erased. You’re being reshaped.<</speech>><br>
+
+<<speech "mc">>This one feels… different already. I can tell.<</speech>><br>
+
+[[Move Forth|crotch_7_crotch_6_2]]
+<</nobr>>
+
+:: crotch_7_crotch_6_2
+<<nobr>>
+
+<<speech "thalara">>It is. Today’s blend carries lighter properties gentler agents but deeper reach. It draws in, tucks close. This isn’t about power anymore. It’s about presence.<</speech>><br>
+
+<<speech "mc">>Presence. That’s one word for it. I used to walk into a room and know I owned the space. Even if I said nothing. That part of me did the talking.<</speech>><br>
+
+<<speech "thalara">>And now?<</speech>><br>
+
+<<speech "mc">>Now I feel like the room is looking through me, not at me. And I hate that it matters this much.<</speech>><br>
+
+[[Move Forth|crotch_7_crotch_6_3]]
+<</nobr>>
+
+
+:: crotch_7_crotch_6_3
+<<nobr>>
+
+<<speech "thalara">>Most things we grieve aren’t what they are but what they meant. You’re not grieving inches. You’re grieving attention. Assertion. Identity.<</speech>><br>
+
+<<speech "mc">>Isn’t that what I was? Am?<</speech>><br>
+
+<<speech "thalara">>You were bold. Loud. Proud. And those things can remain even when the instrument that sang them grows quieter.<</speech>><br>
+
+<<speech "mc">>That’s poetic. But let’s not pretend that a small cock commands the same reverence a big one does. There’s no poetry in shrinkage.<</speech>><br>
+
+[[Move Forth|crotch_7_crotch_6_4]]
+<</nobr>>
+
+:: crotch_7_crotch_6_4
+<<nobr>>
+
+<<speech "thalara">>No. But there is poetry in humility. In transformation. In choosing to walk forward even when what made you bold begins to fall away.<</speech>><br>
+
+<<speech "mc">>Maybe it’s not falling away. Maybe it’s being peeled away.<</speech>><br>
+
+<<speech "thalara">>Then take this, and peel. Shed. Discover what lies underneath the armor of flesh.<</speech>><br>
+
+<<speech "mc">>I used to be able to wrap my hand around it and feel… powerful. Now? It’s barely there.<</speech>><br>
+
+[[Move Forth|crotch_7_crotch_6_5]]
+<</nobr>>
+
+:: crotch_7_crotch_6_5
+<<nobr>>
+<<speech "thalara">>And yet, you are still here. That’s the power that matters. This this is simply form. You are spirit. Will. Future.<</speech>><br>
+
+<<speech "mc">>It looks… fragile. I feel fragile.<</speech>><br>
+
+<<speech "thalara">>Not fragile. Vulnerable. There’s a difference. Vulnerability is where strength is born not hidden behind size, but revealed in truth.<</speech>><br>
+
+<<speech "mc">>I don’t know if I’ll ever get used to seeing less of myself.<</speech>><br>
+
+[[Move Forth|crotch_7_crotch_6_6]]
+<</nobr>>
+
+:: crotch_7_crotch_6_6
+<<nobr>>
+
+<<speech "thalara">>Maybe you’re not seeing less. Maybe you’re seeing what was always underneath waiting to matter.<</speech>><br>
+
+<<speech "mc">>What if I miss it later? Miss how it felt to take up space?<</speech>><br>
+
+<<speech "thalara">>Then remember it with gratitude. But do not chase shadows of your former self. You are not fading. You’re evolving.<</speech>><br>
+
+<<speech "mc">>It’s strange. I feel a bit more me… and a bit less me. Like two threads pulling in different directions.<</speech>><br>
+
+[[Move Forth|crotch_7_crotch_6_7]]
+<</nobr>>
+
+:: crotch_7_crotch_6_7
+<<nobr>>
+
+<<speech "thalara">>Then braid them. Make them part of the same tapestry. You were never meant to be one thing forever.<</speech>><br>
+[[I feel the potion working in my crotch|use_success_potion_create_crotch]]
+<</nobr>>
+
+
+
+
+
+
+
+
+:: crotch_7_crotch_8
+<<nobr>>
+<div style="text-align: center; width: 95%;"><img style="text-align: center; border-radius: 9px;
+    border: 10px ridge #8b5e3c;width: 95%;" @src="setup.ImagePath+'map/veil_tower_mage_map.png'"></div>
+<<speech "thalara">>You have brewed the potion. Let me see it first.  Caelan Are you ready to start the process...<</speech>>
+<br>
+[[I’m not hiding from what I want anymore. Let’s bring it back.|crotch_7_crotch_8_1]] | <br><br>
+[[This might be a mistake… but I need to feel myself again.|crotch_7_crotch_8_1]] | <br><br>
+[[Let them whisper. Let them stare. I won’t disappear just to make them comfortable.|crotch_7_crotch_8_1]] | <br><br>
+<</nobr>>
+
+:: crotch_7_crotch_8_1
+<<nobr>>
+<<speech "thalara">>So. You wish to rise again.<</speech>><br>
+
+<<speech "mc">>Let’s not dress it in mystery. You know why I’m here.<</speech>><br>
+
+<<speech "thalara">>I know many reasons you could be here. Not all of them will serve you.<</speech>><br>
+
+<<speech "mc">>I thought letting go was what I wanted. That if I shrank enough, I’d finally fit the mold they made for me.<</speech>><br>
+
+[[Move Forth|crotch_7_crotch_8_2]]
+<</nobr>>
+
+:: crotch_7_crotch_8_2
+<<nobr>>
+
+<<speech "thalara">>And you found emptiness in that absence?<</speech>><br>
+
+<<speech "mc">>I found silence. Not peace. And silence… silence hurts.<</speech>><br>
+
+<<speech "thalara">>The quiet after a storm can seem like mourning, especially if the storm defined you.<</speech>><br>
+
+<<speech "mc">>Call it what you will. But I miss the presence. The command. That part of me felt like an anchor. And now I feel like I’m floating… fading.<</speech>><br>
+[[Move Forth|crotch_7_crotch_8_3]]
+<</nobr>>
+
+:: crotch_7_crotch_8_3
+<<nobr>>
+
+<<speech "thalara">>Are you sure you aren’t simply afraid of being seen differently? That what’s inside won’t be taken as seriously without what once stood outside?<</speech>><br>
+
+<<speech "mc">>I’m afraid of not recognizing myself in the mirror. And I’m tired of pretending that doesn’t matter.<</speech>><br>
+
+<<speech "thalara">>There is no shame in reclaiming what once gave you strength. But if you’re only doing this to resist your path, it will not hold. This must be your choice, not your rebellion.<</speech>><br>
+
+<<speech "mc">>It is. I need this not to prove a point. To remember that I can still take up space.<</speech>><br>
+
+[[Move Forth|crotch_7_crotch_8_4]]
+<</nobr>>
+
+:: crotch_7_crotch_8_4
+<<nobr>>
+<<speech "thalara">>Then know this: What grows back will feel… heavier than before. Not just in size, but in consequence. This is not a denial of the feminine path but a re-centering of your own narrative.<</speech>><br>
+
+<<speech "mc">>Then let me feel that weight again.<</speech>><br>
+
+<<speech "thalara">>This blend reignites what was reduced. It stirs dormant essence. You’ll feel blood thrum with returning force. Girth and length will stretch again your body recalling its former shape, with renewed vigor. It may ache. That is memory taking root.<</speech>><br>
+
+<<speech "mc">>Let it ache. At least I’ll feel real.<</speech>><br>
+
+[[Move Forth|crotch_7_crotch_8_5]]
+<</nobr>>
+
+:: crotch_7_crotch_8_5
+<<nobr>>
+
+<<speech "mc">>Gods… it’s back. It’s really back.<</speech>><br>
+
+<<speech "thalara">>And does it still define you? Or simply remind you?<</speech>><br>
+
+<<speech "mc">>It reminds me I’m not gone. That I still have weight. That when I speak, I don’t have to wonder if they’re looking past me.<</speech>><br>
+
+<<speech "thalara">>And when you walk forward… will it be in resistance, or in awareness?<</speech>><br>
+
+[[Move Forth|crotch_7_crotch_8_6]]
+<</nobr>>
+
+:: crotch_7_crotch_8_6
+<<nobr>>
+
+<<speech "mc">>In awareness. I’m not abandoning the journey. I’m just… taking a firmer step.<</speech>><br>
+
+<<speech "thalara">>Then let it hold you. But know this: the more you reclaim, the more carefully you must ask why. This form carries old habits. Old privileges. Use them wisely or let them go, when the time is right.<</speech>><br>
+
+<<speech "mc">>I will. But for now… this is what I need.<</speech>><br>
+
+<<speech "thalara">>Then walk as you are, Prince. And let no crown past or future dictate the shape of your truth.<</speech>><br>
+[[I feel the potion working in my crotch|use_success_potion_create_crotch]]
+<</nobr>>
+
+
+
+
+
+
+
+
+:: crotch_8_crotch_7
+<<nobr>>
+<div style="text-align: center; width: 95%;"><img style="text-align: center; border-radius: 9px;
+    border: 10px ridge #8b5e3c;width: 95%;" @src="setup.ImagePath+'map/veil_tower_mage_map.png'"></div>
+<<speech "thalara">>You have brewed the potion. Let me see it first.  Caelan Are you ready to start the process...<</speech>>
+<br>
+[[I’m starting to understand why each session feels heavier than the last.|crotch_8_crotch_7_1]] | <br><br>
+[[Every time it changes, I feel a little less certain.|crotch_8_crotch_7_1]] | <br><br>
+[[Let’s just get this over with. I'm done pretending this isn’t absurd.|crotch_8_crotch_7_1]] | <br><br>
+<</nobr>>
+
+:: crotch_8_crotch_7_1
+<<nobr>>
+<<speech "thalara">>Absurd or not, you returned. That’s the only part that matters today.<</speech>><br>
+
+<<speech "mc">>I suppose I did.<</speech>><br>
+
+<<speech "thalara">>This session marks a turning. You won’t feel the pull of visibility the same way after this. Not the way you used to.<</speech>><br>
+
+<<speech "mc">>So I go from ‘very large’ to just… ‘large.’ Imposing to impressive. Not sure that counts as transformation.<</speech>><br>
+
+[[Move Forth|crotch_8_crotch_7_2]]
+<</nobr>>
+
+:: crotch_8_crotch_7_2
+<<nobr>>
+
+<<speech "thalara">>But it does. Monument to landmark. The difference between casting a shadow and standing tall. This is where size begins to lose its power and identity starts to take its place.<</speech>><br>
+
+<<speech "mc">>Funny. When I was younger, that size was power. Boys envied it. Lovers praised it. I thought it made me unshakable.<</speech>><br>
+
+<<speech "thalara">>And yet here you are. Choosing to let it go.<</speech>><br>
+
+<<speech "mc">>Not because I want to be lesser. But because I need to be more than just that. I just… don’t know what comes next.<</speech>><br>
+
+[[Move Forth|crotch_8_crotch_7_3]]
+<</nobr>>
+
+:: crotch_8_crotch_7_3
+<<nobr>>
+
+<<speech "thalara">>What comes next is understanding you are not reduced you are refined. Power does not vanish. It merely shifts.<</speech>><br>
+
+<<speech "mc">>There’s still a sting, you know. Watching it shrink. Feeling the ache after. Like part of me is resisting like it knows it's being rewritten.<</speech>><br>
+
+<<speech "thalara">>That ache is not pain. It’s memory unraveling. Muscles remembering their shape, nerves recalibrating. A farewell whispered by the flesh.<</speech>><br>
+
+<<speech "mc">>And what if I miss it? What if I don’t feel whole without that… that dominance?<</speech>><br>
+
+[[Move Forth|crotch_8_crotch_7_4]]
+<</nobr>>
+
+:: crotch_8_crotch_7_4
+<<nobr>>
+
+<<speech "thalara">>Then mourn it. Respect it. But do not worship it. You are not the weight between your legs. You are the will behind your choices.<</speech>><br>
+
+<<speech "mc">>It’s not gone. But it’s… quieter. Less boastful.<</speech>><br>
+
+<<speech "thalara">>And does that frighten you?<</speech>><br>
+
+<<speech "mc">>Maybe. Or maybe I’m just afraid I liked being loud.<</speech>><br>
+
+[[Move Forth|crotch_8_crotch_7_5]]
+<</nobr>>
+
+:: crotch_8_crotch_7_5
+<<nobr>>
+
+<<speech "thalara">>Then learn to speak in different volumes. The crown will not care about your size. The court will not measure your worth in inches. But you must not silence yourself where it matters.<</speech>><br>
+
+<<speech "mc">>You always make it sound noble. Like this is part of some sacred calling.<</speech>><br>
+
+<<speech "thalara">>It is, Caelan. Not just for Velmoria. For you. To become who you were meant to be, not who your body once declared you were.<</speech>><br>
+
+<<speech "mc">>Still feels strange. How something I once guarded like treasure now slips away without a fight.<</speech>><br>
+
+[[Move Forth|crotch_8_crotch_7_6]]
+<</nobr>>
+
+:: crotch_8_crotch_7_6
+<<nobr>>
+
+<<speech "thalara">>Because the treasure was never in the size. It was in the meaning you gave it. And meanings evolve.<</speech>><br>
+
+<<speech "mc">>Then I suppose I’ll need to find new ones.<</speech>><br>
+
+<<speech "thalara">>And you will. There are still many sessions to come. And many versions of you waiting to be discovered.<</speech>><br>
+[[I feel the potion working in my crotch|use_success_potion_create_crotch]]
+<</nobr>>
+
+
+
+
+
+
+
+
+:: crotch_8_crotch_9
+<<nobr>>
+<div style="text-align: center; width: 95%;"><img style="text-align: center; border-radius: 9px;
+    border: 10px ridge #8b5e3c;width: 95%;" @src="setup.ImagePath+'map/veil_tower_mage_map.png'"></div>
+<<speech "thalara">>You have brewed the potion. Let me see it first.  Caelan Are you ready to start the process...<</speech>>
+<br>
+[[This time, I won’t question it. I want more of myself back.|crotch_8_crotch_9_1]] | <br><br>
+[[I can’t tell if this is a retreat or a pause. But I… I need to feel it again.|crotch_8_crotch_9_1]] | <br><br>
+[[I’m done pretending this doesn't matter. If they want me small, they can deal with this.|crotch_8_crotch_9_1]] | <br><br>
+<</nobr>>
+
+:: crotch_8_crotch_9_1
+<<nobr>>
+<<speech "thalara">>The balance tilts again, I see. You return not as the same man who left this room before.<</speech>><br>
+
+<<speech "mc">>I haven’t been the same for a while, Thalara.<</speech>><br>
+
+<<speech "thalara">>No one ever is. Every transformation, forward or back, leaves a mark. Even reversals echo louder than we expect.<</speech>><br>
+
+<<speech "mc">>This one… it puts me back into something more visible. Heavier. Sharper in the world’s eyes.<</speech>><br>
+
+[[Move Forth|crotch_8_crotch_9_2]]
+<</nobr>>
+
+:: crotch_8_crotch_9_2
+<<nobr>>
+
+<<speech "thalara">>You’ll notice it more than they do. But yes this grants you volume again. Command. The kind that doesn't ask for space it takes it.<</speech>><br>
+
+<<speech "mc">>I thought I was getting used to it… being lighter. Less there. But after that last session... it was like part of me went silent.<</speech>><br>
+
+<<speech "thalara">>And now you want the noise back?<</speech>><br>
+
+<<speech "mc">>No. Not noise. I want a presence I recognize. Something I can feel without questioning if it’s still mine.<</speech>><br>
+
+[[Move Forth|crotch_8_crotch_9_3]]
+<</nobr>>
+
+:: crotch_8_crotch_9_3
+<<nobr>>
+
+<<speech "thalara">>This session won’t bring back the full flame. But the heat will rise again. You’ll feel the pull. The heft. The press of something undeniably male returning.<</speech>><br>
+
+<<speech "mc">>I remember when I thought I’d never want to feel that again. But I miss it. Even if I still want to change… I need to pause in something familiar.<</speech>><br>
+
+<<speech "thalara">>There is no shame in reclaiming a shape you once trusted. Growth isn’t always forward. Sometimes, we grow roots before we bloom.<</speech>><br>
+
+<<speech "mc">>What if I’m just being selfish? Undoing what others sacrificed so much to build?<</speech>><br>
+
+[[Move Forth|crotch_8_crotch_9_4]]
+<</nobr>>
+
+
+:: crotch_8_crotch_9_4
+<<nobr>>
+
+<<speech "thalara">>Then good. Be selfish. Let your body be yours before it belongs to titles, crowns, or counsel. Let no one steal your becoming not even for noble reasons.<</speech>><br>
+
+<<speech "mc">>I’m not ready to let it all go. Not yet.<</speech>><br>
+
+<<speech "thalara">>Then don’t. Take what you need to remember your center. Even if it swells you back into old shapes. What matters is that you decide the rhythm.<</speech>><br>
+
+<<speech "mc">>What should I expect?<</speech>><br>
+
+[[Move Forth|crotch_8_crotch_9_5]]
+
+<</nobr>>
+
+:: crotch_8_crotch_9_5
+<<nobr>>
+
+<<speech "thalara">>A deep rush. Tissue awakening. Expansion that comes with heat. You’ll feel full again weight redistributes, veins pulse wider, and sensitivity sharpens. It is not painful… but it will not be quiet.<</speech>><br>
+
+<<speech "mc">>Good. Let it roar a little.<</speech>><br>
+[[I feel the potion working in my crotch|use_success_potion_create_crotch]]
+<</nobr>>
+
+
+
+
+
+
+
+
+:: crotch_9_crotch_8
+<<nobr>>
+<div style="text-align: center; width: 95%;"><img style="text-align: center; border-radius: 9px;
+    border: 10px ridge #8b5e3c;width: 95%;" @src="setup.ImagePath+'map/veil_tower_mage_map.png'"></div>
+<<speech "thalara">>You have brewed the potion. Let me see it first.  Caelan Are you ready to start the process...<</speech>>
+<br>
+[[I think I’m ready for this one. Less fire this time. More quiet.|crotch_9_crotch_8_1]] | <br><br>
+[[It’s starting to feel too real… and I’m not sure I know what that means anymore.|crotch_9_crotch_8_1]] | <br><br>
+[[Still think this is ridiculous. But I’m here. Let’s do it.|crotch_9_crotch_8_1]] | <br><br>
+<</nobr>>
+
+:: crotch_9_crotch_8_1
+<<nobr>>
+<<speech "thalara">>You walked lighter today. Not sure-footed, but quieter. The way someone walks into a temple they don’t believe in... yet still enters.<</speech>><br>
+
+<<speech "mc">>I guess it’s getting harder to pretend that this isn’t changing me.<</speech>><br>
+
+<<speech "thalara">>Because it is. Each measure rebalances the scales inside you. Today’s potion won’t roar. It will whisper.<</speech>><br>
+
+<<speech "mc">>Is it strange that I’m almost more afraid of that?<</speech>><br>
+
+[[Move Forth|crotch_9_crotch_8_2]]
+<</nobr>>
+
+:: crotch_9_crotch_8_2
+<<nobr>>
+
+<<speech "thalara">>No. Dramatic change gives you something to push against. But this… this is subtle. It sinks in, unnoticed. It’s how the deepest parts of identity are rewritten.<</speech>><br>
+
+<<speech "mc">>This one brings me… to average, right? Not small. Not imposing. Just… forgettable.<</speech>><br>
+
+<<speech "thalara">>Neutral. Not invisible. Just no longer the center of everything. A body without dominance, but not without presence.<</speech>><br>
+
+<<speech "mc">>You know… growing up, that was the thing. Every bathhouse whisper. Every noble sneer. Every moment I was measured it was by this. And now it’s slipping out of focus.<</speech>><br>
+[[Move Forth|crotch_9_crotch_8_3]]
+
+<</nobr>>
+
+:: crotch_9_crotch_8_3
+<<nobr>>
+
+<<speech "thalara">>That is not loss, Caelan. That is release. Your manhood once declared your arrival in every room before your voice could. But soon, it is your voice that must carry your presence.<</speech>><br>
+
+<<speech "mc">>So I’m supposed to just... blend now?<</speech>><br>
+
+<<speech "thalara">>Not blend. Balance. You are being sculpted not erased. The extremes of masculinity are being worn into neutrality. A center from which you may still lean in either direction.<</speech>><br>
+
+<<speech "mc">>I don’t know how I’ll feel afterward. Like something is missing, or like a weight I didn't know I was carrying is gone.<</speech>><br>
+[[Move Forth|crotch_9_crotch_8_4]]
+<</nobr>>
+
+:: crotch_9_crotch_8_4
+<<nobr>>
+
+<<speech "thalara">>Likely both. You may grieve a little. You may also breathe easier.<</speech>><br>
+
+<<speech "mc">>Lovely. Emotional whiplash served warm.<</speech>><br>
+
+<<speech "thalara">>Change is always a little mad. But there is grace in choosing it.<</speech>><br>
+
+<<speech "mc">>You’ve said before this isn’t about becoming less… but it feels like subtraction every time. Inch by inch, until I don’t know what’s left.<</speech>><br>
+[[Move Forth|crotch_9_crotch_8_5]]
+
+<</nobr>>
+
+:: crotch_9_crotch_8_5
+<<nobr>>
+
+<<speech "thalara">>Then let me ask you this: What part of you cannot be measured?<</speech>><br>
+
+<<speech "mc">>My… choices, I guess.<</speech>><br>
+
+<<speech "thalara">>Exactly. And what you choose today says as much about your strength as any sword you’ve lifted or bed you’ve conquered.<</speech>><br>
+
+<<speech "mc">>I’m not sure who I’m becoming, Thalara. Not anymore.<</speech>><br>
+
+[[Move Forth|crotch_9_crotch_8_6]]
+
+<</nobr>>
+
+:: crotch_9_crotch_8_6
+<<nobr>>
+
+<<speech "thalara">>Then you are exactly where you need to be.<</speech>><br>
+
+<<speech "mc">>It’s smaller after this?<</speech>><br>
+
+<<speech "thalara">>Yes. Medium. Common. Nothing extraordinary in size but the act of choosing it? That’s rare.<</speech>><br>
+
+<<speech "mc">>Cheers to being… statistically average.<</speech>><br>
+
+[[Move Forth|crotch_9_crotch_8_7]]
+<</nobr>>
+
+:: crotch_9_crotch_8_7
+<<nobr>>
+
+<<speech "thalara">>Cheers to clarity.<</speech>><br>
+
+[[I feel the potion working in my crotch|use_success_potion_create_crotch]]
+<</nobr>>
+
+
+
+
+
+
+
+
+:: crotch_9_crotch_10
+<<nobr>>
+<div style="text-align: center; width: 95%;"><img style="text-align: center; border-radius: 9px;
+    border: 10px ridge #8b5e3c;width: 95%;" @src="setup.ImagePath+'map/veil_tower_mage_map.png'"></div>
+<<speech "thalara">>You have brewed the potion. Let me see it first.  Caelan Are you ready to start the process...<</speech>>
+<br>
+[[I know what I’m doing. I want this… I need it.|crotch_9_crotch_10_1]] | <br><br>
+[[I don’t know if this is right, but... something inside says I need to feel whole again.|crotch_9_crotch_10_1]] | <br><br>
+[[Sick of this back-and-forth. If I'm going to be pulled in all directions, I choose this one today.|crotch_9_crotch_10_1]] | <br><br>
+<</nobr>>
+
+:: crotch_9_crotch_10_1
+<<nobr>>
+<<speech "thalara">>I felt you coming before the door opened. The air thickened. Intention returns with a scent all its own.<</speech>><br>
+
+<<speech "mc">>I thought I was past this. Thought I could keep going. Shrinking. Changing. Letting go.<</speech>><br>
+
+<<speech "thalara">>But something called you back.<</speech>><br>
+
+<<speech "mc">>Not something. Me. I called me back.<</speech>><br>
+
+[[Move Forth|crotch_9_crotch_10_2]]
+<</nobr>>
+
+:: crotch_9_crotch_10_2
+<<nobr>>
+
+<<speech "thalara">>You’ve made progress. Real change. Do you understand what this reversal means?<</speech>><br>
+
+<<speech "mc">>It means I’m taking back something. Not because I hate where I was going. But because I’m not done being who I was.<</speech>><br>
+
+<<speech "thalara">>That’s not weakness. It’s clarity. Every step must be owned. If you move forward too fast without belief, you fracture. And I will not let you shatter, Caelan.<</speech>><br>
+
+<<speech "mc">>I never thought I'd want this back. The weight. The pull. But after that last session, everything felt... too quiet. Too small. I looked down and felt like I’d erased a chapter before I was ready.<</speech>><br>
+[[Move Forth|crotch_9_crotch_10_3]]
+
+<</nobr>>
+
+:: crotch_9_crotch_10_3
+<<nobr>>
+
+<<speech "thalara">>You felt like a guest in your own skin. That is no place from which to rule or evolve.<</speech>><br>
+
+<<speech "mc">>So this’ll bring it back? Not all the way… but more?<</speech>><br>
+
+<<speech "thalara">>Yes. From where you were very large to where you once stood with pride. The potion restores what has receded. Blood will rush. Tissue will swell. Veins awaken. You’ll feel heavy again, not only in body, but in presence.<</speech>><br>
+
+<<speech "mc">>I missed that word. Presence.<</speech>><br>
+
+[[Move Forth|crotch_9_crotch_10_4]]
+<</nobr>>
+
+:: crotch_9_crotch_10_4
+<<nobr>>
+
+<<speech "thalara">>Presence does not only come from parts, Caelan. But reclaiming them can be a declaration, if done knowingly.<</speech>><br>
+
+<<speech "mc">>And if this becomes a cycle? Back and forth forever. Do I just keep undoing myself?<</speech>><br>
+
+<<speech "thalara">>No. The cycle ends when you end it. Not when the potions do. If this is what brings your truth closer, then it is not regression. It’s refinement.<</speech>><br>
+
+<<speech "mc">>My mother wouldn’t approve. She thinks every drop I take should go in the other direction.<</speech>><br>
+[[Move Forth|crotch_9_crotch_10_5]]
+<</nobr>>
+
+:: crotch_9_crotch_10_5
+<<nobr>>
+
+<<speech "thalara">>Your mother sees a queen. I see a soul in flux. Only you see who you are becoming. Or should. If this reversal helps you see it more clearly, it’s worth it.<</speech>><br>
+
+<<speech "mc">>I need this. Not forever. But today.<</speech>><br>
+
+<<speech "thalara">>Then take it. Feel the return not of manhood, but of something you feared had vanished without your say.<</speech>><br>
+
+<<speech "mc">>I won’t apologize for reclaiming myself.<</speech>><br>
+
+[[Move Forth|crotch_9_crotch_10_6]]
+<</nobr>>
+
+:: crotch_9_crotch_10_6
+<<nobr>>
+
+<<speech "thalara">>You never have to.<</speech>><br>
+[[I feel the potion working in my crotch|use_success_potion_create_crotch]]
+<</nobr>>
+
+
+
+
+
+
+
+
+:: crotch_10_crotch_9
+<<nobr>>
+<div style="text-align: center; width: 95%;"><img style="text-align: center; border-radius: 9px;
+    border: 10px ridge #8b5e3c;width: 95%;" @src="setup.ImagePath+'map/veil_tower_mage_map.png'"></div>
+<<speech "thalara">>You have brewed the potion. Let me see it first.  Caelan Are you ready to start the process...<</speech>>
+<br>
+[[Let’s continue. I expected worse, honestly. I can handle this.|crotch_10_crotch_9_1]] | <br><br>
+[[Still not sure how I feel about all this… but I didn’t come to turn back.|crotch_10_crotch_9_1]] | <br><br>
+[[Whatever. If we’re doing this, let’s just get it over with.|crotch_10_crotch_9_1]] | <br><br>
+<</nobr>>
+
+:: crotch_10_crotch_9_1
+<<nobr>>
+<<speech "thalara">>You wear different masks each time you arrive, Caelan. Strength, fear, apathy. They all speak to the same truth: you’re still deciding who you want to be.<</speech>><br>
+
+<<speech "mc">>I don’t need a speech. I need to know what this dose is going to take from me.<</speech>><br>
+
+<<speech "thalara">>Not take. Ease. Reduce. Allow to let go. You’ll feel another shift smaller again, just enough to notice. Less girth, less weight. Less commanding.<</speech>><br>
+
+<<speech "mc">>Great. I always wanted to be less commanding in the bathhouse.<</speech>><br>
+
+[[Move Forth|crotch_10_crotch_9_2]]
+<</nobr>>
+
+:: crotch_10_crotch_9_2
+<<nobr>>
+
+<<speech "thalara">>You still can be just in other ways. Presence is not always measured in inches.<</speech>><br>
+
+<<speech "mc">>Easy for you to say. You’ve never had to say goodbye to a part of yourself that announced you when you entered a room.<</speech>><br>
+
+<<speech "thalara">>No, but I’ve helped others do it. There’s grief in every transformation. Even those that are chosen freely. Even in joy, there is loss. That is the price of becoming something new.<</speech>><br>
+
+<<speech "mc">>And if I don’t want to become something new? What then?<</speech>><br>
+
+[[Move Forth|crotch_10_crotch_9_3]]
+<</nobr>>
+
+:: crotch_10_crotch_9_3
+<<nobr>>
+
+<<speech "thalara">>Then you remain exactly as you are. But you came here, again. You stood still for the first draft of change. That means something. Whether you admit it or not.<</speech>><br>
+
+<<speech "mc">>It’s strange. It’s not pain that bothers me it’s watching it happen in stages. Like I’m being unraveled bit by bit.<</speech>><br>
+
+<<speech "thalara">>Yes. It’s a long undoing of threads stitched into your life since birth. Masculinity sewn into flesh, sewn into expectation. But you are not your expectations, Caelan.<</speech>><br>
+
+<<speech "mc">>I used to think it made me powerful. That this body gave me leverage. And now it’s… less. Not useless, but less certain.<</speech>><br>
+[[Move Forth|crotch_10_crotch_9_4]]
+<</nobr>>
+
+:: crotch_10_crotch_9_4
+<<nobr>>
+
+<<speech "thalara">>It gave you one kind of power. But not the only kind. The weight between your legs can shape how others see you. But the weight behind your words your choices that’s what rules nations.<</speech>><br>
+
+<<speech "mc">>Spoken like a woman who’s never needed to piss standing up to get respect.<</speech>><br>
+
+<<speech "thalara">>Oh, I’ve wielded more authority seated on a stool than most men do on horseback.<</speech>><br>
+
+<<speech "mc">>Fine. Point taken.<</speech>><br>
+
+[[Move Forth|crotch_10_crotch_9_5]]
+<</nobr>>
+
+:: crotch_10_crotch_9_5
+<<nobr>>
+
+<<speech "thalara">>This one will be warmer than before. Gentle, but undeniable. Your body will sigh away another layer. You may feel heat along the base, a hollowing in your groin. The muscle will shrink; the veins will quiet. Your form will simplify.<</speech>><br>
+
+<<speech "mc">>Is there a point where it stops feeling like I’m losing… and starts feeling like I’m becoming?<</speech>><br>
+
+<<speech "thalara">>Yes. But no one can tell you when. It’s different for every soul.<</speech>><br>
+
+<<speech "mc">>And what if I still don’t know if I want to be a queen?<</speech>><br>
+
+[[Move Forth|crotch_10_crotch_9_6]]
+<</nobr>>
+
+:: crotch_10_crotch_9_6
+<<nobr>>
+
+<<speech "thalara">>Then be Caelan. Fully, fiercely. And when the crown comes, you’ll know whether to wear it or cast it aside.<</speech>><br>
+
+<<speech "mc">>Cheers to uncertainty, then.<</speech>><br>
+
+<<speech "thalara">>To transformation, however it unfolds.<</speech>><br>
+[[I feel the potion working in my crotch|use_success_potion_create_crotch]]
+<</nobr>>
+
+
+
+
+
+
+
+
+:: crotch_10_crotch_11
+<<nobr>>
+<div style="text-align: center; width: 95%;"><img style="text-align: center; border-radius: 9px;
+    border: 10px ridge #8b5e3c;width: 95%;" @src="setup.ImagePath+'map/veil_tower_mage_map.png'"></div>
+<<speech "thalara">>You have brewed the potion. Let me see it first.  Caelan Are you ready to start the process...<</speech>>
+<br>
+[[I’ve made my choice. I want it back. All of it.|crotch_10_crotch_11_1]] | <br><br>
+[[I’m not sure if this is right… but I need to feel like myself again. Even if only for now.|crotch_10_crotch_11_1]] | <br><br>
+[[I never wanted this change in the first place. I’m done pretending. Give me back what was mine.|crotch_10_crotch_11_1]] | <br><br>
+<</nobr>>
+
+:: crotch_10_crotch_11_1
+<<nobr>>
+<<speech "thalara">>…So. You seek to walk backward down a path others rarely even survive going forward.<</speech>><br>
+
+<<speech "mc">>I didn’t come to be judged. I came to be restored.<</speech>><br>
+
+<<speech "thalara">>I do not judge. I warn. This potion is not like the others. Feminine alchemy eases, reshapes, persuades. But masculine magic... it demands. It returns power, yes but it comes clawing.<</speech>><br>
+
+<<speech "mc">>Good. I want it to claw. I want to feel like I belong in my skin again. I want to stop shrinking.<</speech>><br>
+
+[[Move Forth|crotch_10_crotch_11_2]]
+<</nobr>>
+
+:: crotch_10_crotch_11_2
+<<nobr>>
+
+<<speech "thalara">>And yet, just a session ago, you allowed that part of yourself to begin fading. What changed, Caelan?<</speech>><br>
+
+<<speech "mc">>Everything. Or maybe nothing. I looked at myself. And I didn’t recognize who I was becoming. I thought I could bend for the crown. But I’m not sure if I’m bending, or breaking.<</speech>><br>
+
+<<speech "thalara">>There is no shame in fear. And there is no disgrace in retreat. The body your body is a battlefield of meanings. No spell undoes that struggle.<</speech>><br>
+
+<<speech "mc">>This… isn’t about rebelling. It’s about remembering. I need to feel like I exist again. That my body is still mine. That there’s still something left.<</speech>><br>
+
+[[Move Forth|crotch_10_crotch_11_3]]
+<</nobr>>
+
+:: crotch_10_crotch_11_3
+<<nobr>>
+
+<<speech "thalara">>The potion will restore what was lost perhaps more. Your endowment will swell past what it was, rising to its previous form. You may feel heat, throbbing, discomfort. Masculine hunger returns with the flesh. Be prepared to hold it.<</speech>><br>
+
+<<speech "mc">>And emotionally? What happens then?<</speech>><br>
+
+<<speech "thalara">>You will feel power rush back in and the old identity may surge with it. Dominance. Urgency. Cravings long muted. But it won’t fill the hollow. Only delay the reckoning. You cannot un-know who you've begun to become.<</speech>><br>
+
+<<speech "mc">>Then let it be my reckoning. I just want to stand tall again.<</speech>><br>
+
+[[Move Forth|crotch_10_crotch_11_4]]
+<</nobr>>
+
+:: crotch_10_crotch_11_4
+<<nobr>>
+
+<<speech "thalara">>I’ll grant you the form, but not the illusion. If you believe this makes you whole, drink. If you believe this makes you safe, wait. You cannot drink both destinies.<</speech>><br>
+
+<<speech "mc">>I’m not asking for forever. Just a moment to feel real again.<</speech>><br>
+
+<<speech "thalara">>Then take it, and know the weight of what returns.<</speech>><br>
+
+<<speech "mc">>It’s back…<</speech>><br>
+
+[[Move Forth|crotch_10_crotch_11_5]]
+<</nobr>>
+
+:: crotch_10_crotch_11_5
+<<nobr>>
+
+<<speech "thalara">>Yes. But so are the doubts that made you leave it behind.<</speech>><br>
+
+<<speech "mc">>Then maybe I have to lose it all again… just to know which version of me can survive.<</speech>><br>
+[[I feel the potion working in my crotch|use_success_potion_create_crotch]]
+<</nobr>>
+
+
+
+
+
+
+
+
+:: crotch_11_crotch_10
+<<nobr>>
+<div style="text-align: center; width: 95%;"><img style="text-align: center; border-radius: 9px;
+    border: 10px ridge #8b5e3c;width: 95%;" @src="setup.ImagePath+'map/veil_tower_mage_map.png'"></div>
+<<speech "thalara">>You have brewed the potion. Let me see it first.  Caelan Are you ready to start the process...<</speech>>
+<br>
+[[I’m ready, Thalara. I’ve made peace with this. Just… guide me through it.|crotch_11_crotch_10_1]] | <br><br>
+[[I don’t know how to feel about this… but I’ll go through with it. For the Queen. For the kingdom.|crotch_11_crotch_10_1]] | <br><br>
+[[Let’s get this over with. I’m not doing this because I want to. I’m doing it because I have to.|crotch_11_crotch_10_1]] | <br><br>
+<</nobr>>
+
+:: crotch_11_crotch_10_1
+<<nobr>>
+<<speech "thalara">>One beginning. Willing, unsure, or rebellious it matters not. The body will respond, and the spirit will follow… in time.<</speech>><br>
+
+<<speech "mc">>How can you speak about this like it’s a rite of passage and not… erasing who I am?<</speech>><br>
+
+<<speech "thalara">>Because it is a rite of passage, Caelan. But not one that erases it redefines. Transforms. Like a blade reforged in fire, you are being reshaped, not destroyed.<</speech>><br>
+
+<<speech "mc">>I was proud of who I was. Of my body. I don’t know how I’m supposed to let go of that without losing something.<</speech>><br>
+
+[[Move Forth|crotch_11_crotch_10_2]]
+<</nobr>>
+
+:: crotch_11_crotch_10_2
+<<nobr>>
+
+<<speech "thalara">>You should be proud. Your form, your strength none of it is shameful. But pride need not be bound to flesh. Pride can live in resilience, in adaptation… in what you choose to become, not just what you were born as.<</speech>><br>
+
+<<speech "mc">>And if I don’t want to become something else?<</speech>><br>
+
+<<speech "thalara">>Then your resistance will shape the path differently. You need not surrender instantly. But know this change has already begun. Within you, and around you. The kingdom has chosen. Your mother has chosen. The only one who hasn’t… is you.<</speech>><br>
+
+<<speech "mc">>And this… potion. What exactly will it do to me?<</speech>><br>
+
+[[Move Forth|crotch_11_crotch_10_3]]
+<</nobr>>
+
+:: crotch_11_crotch_10_3
+<<nobr>>
+
+<<speech "thalara">>In this first stage? Only a gentle contraction. Your… current endowment will begin to reduce slowly. From what it is, to something slightly less. No pain. Just heat. Pressure. Perhaps an ache you won’t know how to describe.<</speech>><br>
+
+<<speech "mc">>That’s still my body you’re talking about.<</speech>><br>
+
+<<speech "thalara">>Of course it is. It remains yours. Even when it changes, it belongs to you. This is not theft, Caelan it’s alchemy guided by intent. Your intent, if you will let it be.<</speech>><br>
+
+<<speech "mc">>What if I change my mind? Or stop halfway?<</speech>><br>
+
+[[Move Forth|crotch_11_crotch_10_4]]
+<</nobr>>
+
+:: crotch_11_crotch_10_4
+<<nobr>>
+
+<<speech "thalara">>Then we adjust. The process is not a prison. There is room for pause. Reassessment. Even retreat though the deeper you go, the harder it becomes to reverse. Not impossible, but costly.<</speech>><br>
+
+<<speech "mc">>And you’ve done this before? Changed others?<</speech>><br>
+
+<<speech "thalara">>Only a few. This magic is sacred. It’s not done lightly. But each who walked the path before you found their truth some in becoming, some in choosing to remain between.<</speech>><br>
+
+<<speech "mc">>I don’t want to lose… all of me.<</speech>><br>
+
+[[Move Forth|crotch_11_crotch_10_5]]
+<</nobr>>
+
+:: crotch_11_crotch_10_5
+<<nobr>>
+
+<<speech "thalara">>Then don’t. Keep what matters. Let the rest evolve. This is not about losing. It’s about crafting a shape that holds your purpose your strength as a queen, if you wish to be one.<</speech>><br>
+
+<<speech "mc">>What happens when I drink it?<</speech>><br>
+
+<<speech "thalara">>You’ll feel a pull inward. A soft unraveling of what anchors you to maleness. Not all at once. Just a first nudge. Your body will shift slightly enough to know this is real.<</speech>><br>
+
+<<speech "mc">>And you’ll be here the whole time?<</speech>><br>
+
+[[Move Forth|crotch_11_crotch_10_6]]
+<</nobr>>
+
+:: crotch_11_crotch_10_6
+<<nobr>>
+
+<<speech "thalara">>From first drop to final form. I do not abandon those I guide, Caelan. Whether you come to me proud, scared, or spitting fire you are not alone in this.<</speech>><br>
+
+<<speech "mc">>…Then let’s begin.<</speech>><br>
+[[I feel the potion working in my crotch|use_success_potion_create_crotch]]
+<</nobr>>
+
+
+
+
+
+
+
+
+

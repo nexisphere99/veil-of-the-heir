@@ -1,0 +1,397 @@
+
+
+:: interact_with_halda
+<<nobr>>
+<<set _i to random(0, 19)>>
+<<if _i == 0>>
+<<speech "halda">>
+Sit your royal backside down, child. You look like you haven’t eaten since the last full moon. One more skipped meal and I’ll drag you in by your ear like I did the pageboy last winter.
+<</speech>>
+<br>
+
+<<speech "mc">>
+I wasn’t trying to skip  training ran long, and I just forgot.
+<</speech>>
+<br>
+
+<<speech "halda">>
+Training or not, no heir of Velmoria will walk around looking like a starved crow. Now, eat this stew before I feed it to the hounds and tell them you insulted their mother.
+<</speech>>
+<br>
+<<elseif _i == 1>>
+<<speech "halda">>
+I see more bones than belly in that tunic. Are they putting you on a battlefield or a catwalk? Either way, you need strength in your arms and starch in your soul.
+<</speech>>
+<br>
+
+<<speech "mc">>
+They keep saying I’m changing, but no one mentioned how much hungrier I’d feel.
+<</speech>>
+<br>
+
+<<speech "halda">>
+Aye, that’s because real change burns fuel, darling. Now hush and try the honeyed roast. I laced it with love and just a whisper of rebellion.
+<</speech>>
+<br>
+<<elseif _i == 2>>
+<<speech "halda">>
+I added extra butter to your morning rolls. Don’t you dare insult my kitchen by pretending you didn’t want them.
+<</speech>>
+<br>
+
+<<speech "mc">>
+I was trying to be disciplined… but they do smell divine.
+<</speech>>
+<br>
+
+<<speech "halda">>
+Discipline is for drills. Breakfast is sacred. Now bite before it bites back.
+<</speech>>
+<br>
+<<elseif _i == 3>>
+<<speech "halda">>
+Come closer, Caelan. No, closer. You smell like sword oil and sorrow. You need soup.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Is soup your answer to everything?
+<</speech>>
+<br>
+
+<<speech "halda">>
+Yes. And it’s never failed me, a single soul, or a broken bone. Now, open wide or I’ll spoon it into your princely mouth myself.
+<</speech>>
+<br>
+<<elseif _i == 4>>
+<<speech "halda">>
+I noticed the new waist on your dress robes. Pretty, but thin doesn’t win wars  or wear crowns without fainting.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Are you calling me too delicate now?
+<</speech>>
+<br>
+
+<<speech "halda">>
+I’m calling you a royal rose that needs roots, not just petals. Eat your lentils, Caelan.
+<</speech>>
+<br>
+<<elseif _i == 5>>
+<<speech "halda">>
+That scowl tells me someone dared suggest you skip dessert. Was it the mage or the mistress of lace?
+<</speech>>
+<br>
+
+<<speech "mc">>
+Veletia. She says cream cakes puff the wrong parts of me.
+<</speech>>
+<br>
+
+<<speech "halda">>
+Tell her the queen's hips are no accident and the kingdom runs on pastries. Have seconds. I insist.
+<</speech>>
+<br>
+<<elseif _i == 6>>
+<<speech "halda">>
+I baked those honeyfig tarts you liked last month. Ate one myself just to be sure the magic held.
+<</speech>>
+<br>
+
+<<speech "mc">>
+You test your food like a royal poisoner.
+<</speech>>
+<br>
+
+<<speech "halda">>
+That’s because love can be lethal, dear. And nothing’s deadlier than hunger ignored.
+<</speech>>
+<br>
+<<elseif _i == 7>>
+<<speech "halda">>
+You’ve been pacing like a starving wolf. Sit. Chew. Talk after.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Is it that obvious?
+<</speech>>
+<br>
+
+<<speech "halda">>
+Only to someone who’s fed every nervous wreck in this castle. Bite, then breathe.
+<</speech>>
+<br>
+
+
+<<elseif _i == 8>>
+<<speech "halda">>
+You passed by the kitchen thrice and didn’t step in. That’s a crime in seven provinces, you know.
+<</speech>>
+<br>
+
+<<speech "mc">>
+I wasn’t sure I was hungry...
+<</speech>>
+<br>
+
+<<speech "halda">>
+Darling, hunger isn’t always in the belly. Sometimes, it’s in the soul. And stew helps both.
+<</speech>>
+<br>
+<<elseif _i == 9>>
+<<speech "halda">>
+No one commands the kitchen like me, child. But you  you're the only one I’ve ever offered seconds to without a bribe.
+<</speech>>
+<br>
+
+<<speech "mc">>
+I feel honored... and slightly threatened.
+<</speech>>
+<br>
+
+<<speech "halda">>
+Good. That’s how you know it’s real love. Now, don’t make me ladle threats.
+<</speech>>
+<br>
+<<elseif _i == 10>>
+<<speech "halda">>
+You’ve got that look again  like a goose who forgot how to fly. Sit. I've got peppered parsnip pie and opinions to share.
+<</speech>>
+<br>
+
+<<speech "mc">>
+That’s a dangerous combination. Should I prepare for a lecture or a feast?
+<</speech>>
+<br>
+
+<<speech "halda">>
+Both. And if you don’t clear that plate, I’ll chase you with a ladle and a long list of worries.
+<</speech>>
+<br>
+<<elseif _i == 11>>
+<<speech "halda">>
+I stitched this apron for you. Not to cook in, mind  just to remind you you’ve got a home in this kitchen.
+<</speech>>
+<br>
+
+<<speech "mc">>
+You sewed this? That’s… oddly touching, Halda.
+<</speech>>
+<br>
+
+<<speech "halda">>
+Don’t get used to it. I cry once a decade, and you’re two crumbs away from seeing it early.
+<</speech>>
+<br>
+<<elseif _i == 12>>
+<<speech "halda">>
+If you keep strutting around in corsets and skirts without eating enough, you’ll faint on your way to the throne.
+<</speech>>
+<br>
+
+<<speech "mc">>
+I’m trying to look the part, Halda.
+<</speech>>
+<br>
+
+<<speech "halda">>
+Then look it with strength, child. Queens don’t sway in the wind  they bend it. Now eat your baked roots.
+<</speech>>
+<br>
+<<elseif _i == 13>>
+<<speech "halda">>
+I saw your reflection in the pot lid. That new blush shade suits you, but it won’t feed your blood.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Is that your way of saying I’m looking pale?
+<</speech>>
+<br>
+
+<<speech "halda">>
+I’m saying even a rose needs meat on its stem to bloom. Here  roast duck with plum glaze.
+<</speech>>
+<br>
+<<elseif _i == 14>>
+<<speech "halda">>
+You dream of ruling, but forget ruling starts with breakfast. Have you ever seen a starving lion give orders?
+<</speech>>
+<br>
+
+<<speech "mc">>
+Lions also don’t wear heels, Halda.
+<</speech>>
+<br>
+
+<<speech "halda">>
+Then be the first. Just don’t do it hungry.
+<</speech>>
+<br>
+<<elseif _i == 15>>
+<<speech "halda">>
+Your spine’s straight, your voice is stronger… but your plate’s still half full. That’s a betrayal in my house.
+<</speech>>
+<br>
+
+<<speech "mc">>
+I’m nervous, Halda. It dulls my appetite.
+<</speech>>
+<br>
+
+<<speech "halda">>
+Then chew through your nerves like a good roast  slow and steady. One bite at a time, child.
+<</speech>>
+<br>
+<<elseif _i == 16>>
+<<speech "halda">>
+You passed your etiquette lesson? Good. Now pass the gravy and tell me what you really think of the queen’s new plan.
+<</speech>>
+<br>
+
+<<speech "mc">>
+It’s terrifying. But I can’t say that in court.
+<</speech>>
+<br>
+
+<<speech "halda">>
+Then say it in stew. Fear cooks down sweeter than you think.
+<</speech>>
+<br>
+
+
+<<elseif _i == 17>>
+<<speech "halda">>
+Your cheekbones are looking sharp again  like you’ve been living on nerves and air. Unacceptable.
+<</speech>>
+<br>
+
+<<speech "mc">>
+You notice everything, don’t you?
+<</speech>>
+<br>
+
+<<speech "halda">>
+It’s my job to feed more than bellies, dear. Now hush. The bread’s still warm, and I made extra honey butter.
+<</speech>>
+<br>
+<<elseif _i == 18>>
+<<speech "halda">>
+Tried a new stew  spiced it with hope and a hint of rebellion. Thought it matched your mood.
+<</speech>>
+<br>
+
+<<speech "mc">>
+You read me better than the court seer.
+<</speech>>
+<br>
+
+<<speech "halda">>
+That’s because I listen with a spoon. Now eat up before hope goes cold.
+<</speech>>
+<br>
+
+
+<<elseif _i == 19>>
+<<speech "halda">>
+One day, you’ll sit the throne and recall the scent of fresh garlic and broth. Mark me, child  this kitchen builds empires.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Then I owe more to you than the council.
+<</speech>>
+<br>
+
+<<speech "halda">>
+Aye, but I’ll settle for an honest appetite and a clean bowl. Now dig in, heir of Velmoria.
+<</speech>>
+<br>
+<</if>>
+<<link "Eat Something in the Desk">>
+    <<set $user_stats["energy"] to 90>>
+    <<goto "royal_kitchen">>
+<</link>> |<br><br>
+[[Ask Halda cook soemthing|ask_halda_cook_something]] |<br><br>
+[[Leave Cookmaster Halda Brox|royal_kitchen]] |<br><br>
+[[Leave Royal Kitchen|castle_map_front_select]]
+<</nobr>>
+
+
+
+
+:: ask_halda_cook_something
+<<nobr>>
+<<set _dish to random(1, 5)>>
+
+<<switch _dish>>
+	<<case 1>>
+		<<set _dishName to "Spiced Hare Pie">>
+		<<set _haldaLine1 to "Spiced hare pie? Oho! Someone’s feeling noble or suicidal today. Did your mother put you up to this? Or did your stomach rebel on its own?">>
+		<<set _haldaLine2 to "Let me tell you, lad, skinning a hare is art. Seasoning it with flame-root and crushed ruby peppers? That’s war. But I’ll win it for you.">>
+		<<set _haldaLine3 to "Now be a dear and fetch me some dried sunberries and dragon salt. Unless you want your taste buds to curse your entire bloodline.">>
+	<<case 2>>
+		<<set _dishName to "Goldenroot Stew">>
+		<<set _haldaLine1 to "Goldenroot stew? Trying to impress the court or just hoping your guts stop growling like a direwolf?">>
+		<<set _haldaLine2 to "This stuff’ll melt your pride and rebuild your spine. They say it was once a king’s last meal before he surrendered to a smiling queen. Coincidence? I think not.">>
+		<<set _haldaLine3 to "Toss me three knobs of thunder tuber and a splash of echo oil. And don’t sniff the root raw unless you want to dream about flying goats.">>
+	<<case 3>>
+		<<set _dishName to "Fireberry Glazed Duck">>
+		<<set _haldaLine1 to "Fireberry duck, is it? Fancy. Regal. Dangerous. Just like you’re supposed to be, someday. But today? You look more like burnt toast with legs.">>
+		<<set _haldaLine2 to "No matter. I’ll glaze that duck so perfectly your tongue will bow in gratitude. But you’re plucking the feathers. That’s the price of royalty, sweetheart.">>
+		<<set _haldaLine3 to "Fetch me a handful of fireberries and a pinch of phoenix ash. Carefully. That ash sparks if you sigh too loudly near it.">>
+	<<case 4>>
+		<<set _dishName to "Stonebread with Honey Butter">>
+		<<set _haldaLine1 to "Stonebread again? Either you’re preparing for battle or you miss chewing your feelings.">>
+		<<set _haldaLine2 to "Nothing soft about this dish, boy. It’s tougher than a queen’s marriage vows and half as forgiving. But I’ll knead it until it surrenders.">>
+		<<set _haldaLine3 to "Now get me the thistle flour and the hive-butter from the cold box. And wear gloves this time. I’m still scrubbing honey out of the walls from last week.">>
+	<<case 5>>
+		<<set _dishName to "Lavender Trout with Frostmint">>
+		<<set _haldaLine1 to "Lavender trout, eh? You trying to smell like a garden while eating like a river god? Bold. I like it.">>
+		<<set _haldaLine2 to "This dish needs precision, patience, and a trout that hasn’t cursed your name. So let’s hope the last one you insulted wasn’t aquatic.">>
+		<<set _haldaLine3 to "Hand me fresh frostmint leaves and that bottle of moon-vine oil. Oh, and no sneezing in the lavender. I’ll taste it in the sauce, I swear on my ladle.">>
+<</switch>>
+<<speech "mc">>
+Halda, I’m craving something different today. Could you make me… <<=_dishName>>?
+<</speech>>
+<br>
+<<speech "halda">>
+<<= _haldaLine1>>
+<</speech>>
+<br>
+
+<<speech "mc">>
+Well, I figured if I’m going to be dragged through transformations and etiquette drills, I might as well enjoy something that tastes like rebellion.
+<</speech>>
+<br>
+
+<<speech "halda">>
+<<=_haldaLine2>>
+<</speech>>
+<br>
+
+<<speech "mc">>
+You know, I’m starting to think you care more about the food than my noble future.
+<</speech>>
+<br>
+
+<<speech "halda">>
+Care more? Boy, food IS your future! You think rulers earn loyalty with speeches and crowns? No! They win hearts with taste and tables. And today, your royal behind is going to help cook. 
+<</speech>>
+<br>
+
+<<speech "mc">>
+Fine. What do you need me to do?
+<</speech>>
+<br>
+
+<<speech "halda">>
+<<=_haldaLine3>>
+<</speech>><br>
+
+<<set $user_stats["energy"] to 90>>
+
+[[Leave Halda|royal_kitchen]]
+<</nobr>>

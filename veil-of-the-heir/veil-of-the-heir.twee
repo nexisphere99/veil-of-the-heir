@@ -1,0 +1,716 @@
+:: StoryTitle
+Veil of the Heir
+
+:: StoryData
+{
+	"ifid": "27FA6D7B-4709-4B3D-9797-F5BF92C9430B",
+	"format": "SugarCube",
+	"format-version": "2.37.3",
+	"start": "startup",
+	"zoom": 0.6
+}
+
+
+
+:: Story Stylesheet [stylesheet]
+/* <!--interact_with_mage_2 --> */
+
+:: Story JavaScript [script]
+
+:: startup
+<<nobr>>
+<!-- Fullscreen Intro Page for Kingdom of Velmoria -->
+<div id="velmoria-intro" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background-color: #f5f0dc; display: flex; align-items: center; justify-content: center; z-index: 9999;">
+  <div style="font-family: 'Papyrus', serif; font-size: 20px; color: #8b5e3c; background-color: #f5f0dc; border: 2px solid #a58b5c; padding: 18px; border-radius: 10px; box-shadow: 3px 3px 8px rgba(0,0,0,0.2); max-width: 700px; text-align: center;">
+
+    <h1 style="font-size: 36px; color: #5c3b1e; margin-bottom: 10px;">👑 Kingdom of Velmoria</h1>
+    <h3 style="font-size: 22px; color: #7a4c29;">An Interactive Gender Bender Fantasy Story</h3>
+    <p><strong>(18+ Mature Content)</strong></p>
+    <hr style="margin: 10px 0; border-color: #a58b5c;">
+    
+    <p><strong>Warning:</strong> This story contains themes of <em>gender transformation</em>, <em>magical body alteration</em>, erotic fantasy, and political intrigue.</p>
+    <p>This is a <strong>gender bender game</strong>. If you are not comfortable with these themes, please <strong>do not proceed</strong>.</p>
+
+    <p>In the kingdom of Velmoria, to rule is to be Queen. You are Prince Caelan, the sole heir about to undergo a mystical transformation to inherit your birthright... or reject it entirely.</p>
+    
+    <p><em>Your destiny begins now.</em></p>
+
+    <button id="enterGame" style="margin-top: 20px; padding: 10px 20px; font-size: 18px; font-family: 'Papyrus', serif; color: #fff; background-color: #8b5e3c; border: none; border-radius: 6px; cursor: pointer; transition: background-color 0.3s;">Enter</button>
+
+  </div>
+</div>
+<</nobr>>
+
+:: intro
+<<nobr>>
+<div id="velmoria-intro-2">
+<h1 style="font-size: 32px; color: #6e421c;">👑 *Kingdom of Velmoria* 👑</h1>
+<p><strong>Genre:</strong> Medieval Fantasy · Interactive Story · Gender Transformation</p>
+<hr style="margin: 20px 0; border: 0; height: 2px; background: #a58b5c;">
+
+<p>
+  Beyond the emerald hills and silver rivers lies <strong>Velmoria</strong>, a kingdom steeped in magic and ruled by generations of powerful queens. Its strength flows not from swords alone, but from ancient rites, arcane wisdom, and the unbroken legacy of matriarchal rule.
+</p>
+
+<p>
+  For centuries, only daughters born of royal blood have ascended to the throne. But fate has played a curious hand: the Queen's only heir is a prince.
+</p>
+
+<p>
+  You are <strong>Prince Caelan</strong> noble by birth, burdened by destiny. Raised in the art of battle, tutored in courtly manners, and shadowed by expectations you were never meant to bear. Yet, the throne calls for a queen… and Velmoria’s survival demands transformation.
+</p>
+
+<p>
+  Under the guidance of the Royal Mage, the kingdom’s ancient feminine rites will remake you. Your journey will be one of magic, discovery, and desire reshaping not just your body, but your identity and purpose.
+</p>
+
+<p style="color: crimson; font-weight: bold; margin-top: 15px;">
+  ⚠️ Mature Content Ahead: This story features magical gender transformation, feminization themes, and adult choices. Proceed only if you are comfortable with such content.
+</p>
+
+<button id="enter-relam" style="margin-top: 25px; font-size: 20px; padding: 10px 20px; background-color: #a58b5c; color: white; border: none; border-radius: 8px; cursor: pointer;">Enter the Realm</button>
+</div>
+<</nobr>>
+
+:: body_choice
+<<nobr>>
+<h3 style="text-align: center;">Choose your starting character</h3>
+<div class="item-grid">
+	<div class="item-card" style="width: 90%; ">
+        <div class="choice-layers">
+            <div class="choice-layer">[img[setup.ImagePath+'mc/figure/ms/ms_full.png']]</div>
+            <div class="choice-layer">[img[setup.ImagePath+'mc/figure/ms/ms_bottom_underwear_1.png']]</div>
+            <div class="choice-layer">[img[setup.ImagePath+'mc/figure/ms/ms_top_wear_1.png']]</div>
+        </div>
+        [[Lean|Lean]]
+    </div>
+    <div class="item-card" style="width: 90%; ">
+        <div class="choice-layers">
+            <div class="choice-layer">[img[setup.ImagePath+'mc/figure/mm/mm_full.png']]</div>
+            <div class="choice-layer">[img[setup.ImagePath+'mc/figure/mm/mm_bottom_underwear_1.png']]</div>
+            <div class="choice-layer">[img[setup.ImagePath+'mc/figure/mm/mm_top_wear_1.png']]</div>
+        </div>
+        [[Muscular|Muscular]]
+    </div>
+    <div class="item-card" style="width: 90%;">
+        <div class="choice-layers">
+            <div class="choice-layer">[img[setup.ImagePath+'mc/figure/ml/ml_full.png']]</div>
+            <div class="choice-layer">[img[setup.ImagePath+'mc/figure/ml/ml_bottom_underwear_1.png']]</div>
+            <div class="choice-layer">[img[setup.ImagePath+'mc/figure/ml/ml_top_wear_1.png']]</div>
+        </div>
+        [[Ultra Muscular|Ultra Muscular]]
+    </div>
+</div>
+<</nobr>>
+
+:: Lean
+<<nobr>>
+<<set $user_stats.gender_Identity = 60>>
+<<set $user_stats.dominance_level = 60>>
+<div class="item-grid">
+    <br>
+	<div class="item-card" style="width: 90%;">
+		<div class="choice-layers">
+            <div class="choice-layer">[img[setup.ImagePath+'mc/figure/ms/ms_full.png']]</div>
+            <div class="choice-layer">[img[setup.ImagePath+'mc/figure/ms/ms_bottom_underwear_1.png']]</div>
+            <div class="choice-layer">[img[setup.ImagePath+'mc/figure/ms/ms_top_wear_1.png']]</div>
+        </div>
+    </div>
+</div>
+<div style="font-family: 'Papyrus', serif; font-size: 20px; color: #8b5e3c; background-color: #f5f0dc; border: 2px solid #a58b5c; padding: 18px; border-radius: 10px; box-shadow: 3px 3px 8px rgba(0,0,0,0.2); max-width: 700px; margin: 20px auto;">
+
+  <b style="font-size: 24px;">✦ A Soft Frame to Shape ✦</b><br><br>
+
+  You begin your journey with a lean, wiry build neither imposing nor fragile. Your chest is flat, your muscles are modest, and your manhood, though present, is unremarkable in size. This body, while male, offers little resistance to the subtle reshaping of magic. There’s little bulk to shed, few hard edges to soften, and no overwhelming masculinity to subdue. In many ways, you are already half sculpted clay ripe for refinement. Feminine potions will take quickly to your form, molding your curves with grace and ease.<br><br>
+
+  💠 <b>Transformation Difficulty:</b> Low<br>
+  💠 <b>Key Challenge:</b> Internal acceptance rather than physical resistance
+
+</div>
+<<for _key, _data range setup.msBodyParts>>
+    <<if _key == "torso" || _key == "crotch" || _key == "chest" || _key == "top_underwear" || _key == "bottom_underwear" || _key == "top_wear" || _key == "bottom_wear">>
+		<<if _data.img != "">>
+			<<set $key_img_path = "mc/figure/" + _data.curr_body + "/" + _data.orig_body + "_" + _data.img>>
+		<<else>>
+			<<set $key_img_path = "">>
+		<</if>>
+        <<set $userBody[_key] to {
+        img: $key_img_path,
+		orig_body: _data.orig_body,
+		curr_body: _data.curr_body,
+		curr_hair: _data.curr_hair,
+		curr_crotch: _data.curr_crotch,
+		curr_head: _data.curr_head,
+		curr_chest: _data.curr_chest,
+    curr_top_underwear: _data.curr_top_underwear,
+		curr_bottom_underwear: _data.curr_bottom_underwear,
+		curr_top_wear: _data.curr_top_wear,
+		curr_bottom_wear: _data.curr_bottom_wear,
+    	}>>
+	<<else>>
+		<<set $userBody[_key] to {
+			img: "mc/figure/" + _data.curr_body + "/" + _data.orig_body + "/" + _data.curr_body + "_" + _data.orig_body + "_" + _data.img,
+			orig_body: _data.orig_body,
+			curr_body: _data.curr_body,
+			curr_hair: _data.curr_hair,
+			curr_crotch: _data.curr_crotch,
+			curr_head: _data.curr_head,
+			curr_chest: _data.curr_chest,
+		}>>
+	<</if>>
+<</for>>
+<<set $curr_crotch = 3>>
+<<set $curr_chest = 3>>
+/* <pre><<= JSON.stringify($userBody, null, 2)>></pre> */
+<br>
+<br>
+<<if $veil_of_the_heir>>
+[[Start Journey|notice]] |
+<<else>>
+Lean Mode - Patreon Only
+<p><a href="https://www.patreon.com/c/nexispheregames" target="_blank" style="color:#0af;text-decoration:underline;">Support us on Patreon</a></p>
+In public mode only the muscular body type is available.
+<br>
+<br>
+<</if>>
+[[Back Choose Character|body_choice]]
+<</nobr>>
+
+:: Muscular
+<<nobr>>
+<<set $user_stats.gender_Identity = 80>>
+<<set $user_stats.dominance_level = 80>>
+<div class="item-grid">
+    <br>
+	<div class="item-card" style="width: 90%;">
+		<div class="choice-layers">
+            <div class="choice-layer">[img[setup.ImagePath+'mc/figure/mm/mm_full.png']]</div>
+            <div class="choice-layer">[img[setup.ImagePath+'mc/figure/mm/mm_bottom_underwear_1.png']]</div>
+            <div class="choice-layer">[img[setup.ImagePath+'mc/figure/mm/mm_top_wear_1.png']]</div>
+        </div>
+    </div>
+</div>
+<div style="font-family: 'Papyrus', serif; font-size: 20px; color: #8b5e3c; background-color: #f5f0dc; border: 2px solid #a58b5c; padding: 18px; border-radius: 10px; box-shadow: 3px 3px 8px rgba(0,0,0,0.2); max-width: 700px; margin: 20px auto;">
+
+  <b style="font-size: 24px;">✦ A Body of Strength, A Test of Change ✦</b><br><br>
+
+  Years of training, battles, or discipline have sculpted your body into a strong and well defined form. Your pectorals are solid, your arms powerful, and your manhood bold and assertive. This is the body of a warrior or a proud prince a figure of undeniable masculinity. Magic will struggle here, not just to soften your muscles, but to coax them into yielding. Breasts will have to rise from a firm chest, curves must battle with sinew, and your sex must be reimagined against stubborn flesh. The path ahead will test not only your body’s pliability, but your will to surrender control.<br><br>
+
+  💠 <b>Transformation Difficulty:</b> Moderate<br>
+  💠 <b>Key Challenge:</b> Physical resistance and sexual pride
+
+</div>
+<<for _key, _data range setup.mmBodyParts>>
+    <<if _key == "torso" || _key == "crotch" || _key == "chest" || _key == "top_underwear" || _key == "bottom_underwear" || _key == "top_wear" || _key == "bottom_wear">>
+		<<if _data.img != "">>
+			<<set $key_img_path = "mc/figure/" + _data.curr_body + "/" + _data.orig_body + "_" + _data.img>>
+		<<else>>
+			<<set $key_img_path = "">>
+		<</if>>
+        <<set $userBody[_key] to {
+        img: $key_img_path,
+		orig_body: _data.orig_body,
+		curr_body: _data.curr_body,
+		curr_hair: _data.curr_hair,
+		curr_crotch: _data.curr_crotch,
+		curr_head: _data.curr_head,
+		curr_chest: _data.curr_chest,
+    curr_top_underwear: _data.curr_top_underwear,
+		curr_bottom_underwear: _data.curr_bottom_underwear,
+		curr_top_wear: _data.curr_top_wear,
+		curr_bottom_wear: _data.curr_bottom_wear,
+    	}>>
+	<<else>>
+		<<set $userBody[_key] to {
+			img: "mc/figure/" + _data.curr_body + "/" + _data.orig_body + "/" + _data.curr_body + "_" + _data.orig_body + "_" + _data.img,
+			orig_body: _data.orig_body,
+			curr_body: _data.curr_body,
+			curr_hair: _data.curr_hair,
+			curr_crotch: _data.curr_crotch,
+			curr_head: _data.curr_head,
+			curr_chest: _data.curr_chest,
+		}>>
+	<</if>>
+<</for>>
+/* <pre><<= JSON.stringify($userBody, null, 2)>></pre> */
+<br>
+<br>
+<<set $curr_crotch = 5>>
+<<set $curr_chest = 2>>
+[[Start Journey|notice]] |
+[[Back Choose Character|body_choice]]
+<</nobr>>
+
+
+:: Ultra Muscular
+<<nobr>>
+<<set $user_stats.gender_Identity = 100>>
+<<set $user_stats.dominance_level = 100>>
+<div class="item-grid">
+    <br>
+	<div class="item-card" style="width: 90%;">
+		<div class="choice-layers">
+            <div class="choice-layer">[img[setup.ImagePath+'mc/figure/ml/ml_full.png']]</div>
+            <div class="choice-layer">[img[setup.ImagePath+'mc/figure/ml/ml_bottom_underwear_1.png']]</div>
+            <div class="choice-layer">[img[setup.ImagePath+'mc/figure/ml/ml_top_wear_1.png']]</div>
+        </div>
+    </div>
+</div>
+<div style="font-family: 'Papyrus', serif; font-size: 20px; color: #8b5e3c; background-color: #f5f0dc; border: 2px solid #a58b5c; padding: 18px; border-radius: 10px; box-shadow: 3px 3px 8px rgba(0,0,0,0.2); max-width: 700px; margin: 20px auto;">
+
+  <b style="font-size: 24px;">✦ A Monument to Masculinity ✦</b><br><br>
+
+  You are the pinnacle of the male form massive, carved, and unrelenting. Your chest is thick with muscle, your limbs packed with raw strength, and your manhood... a challenge unto itself. Every inch of you screams dominance and virility. Magic doesn’t flow easily through such resistance it has to break before it can reshape. Feminization will be a slow, often painful unmaking of a body that was built to resist change. The potions must work harder, longer, and more intensely. Progress may come with setbacks. But perhaps, the greater the monument, the more glorious its transformation.<br><br>
+
+  💠 <b>Transformation Difficulty:</b> High<br>
+  💠 <b>Key Challenge:</b> Total deconstruction of hypermasculinity before rebirth
+
+</div>
+<<for _key, _data range setup.mlBodyParts>>
+    <<if _key == "torso" || _key == "crotch" || _key == "chest" || _key == "top_underwear" || _key == "bottom_underwear" || _key == "top_wear" || _key == "bottom_wear">>
+		<<if _data.img != "">>
+			<<set $key_img_path = "mc/figure/" + _data.curr_body + "/" + _data.orig_body + "_" + _data.img>>
+		<<else>>
+			<<set $key_img_path = "">>
+		<</if>>
+        <<set $userBody[_key] to {
+        img: $key_img_path,
+		orig_body: _data.orig_body,
+		curr_body: _data.curr_body,
+		curr_hair: _data.curr_hair,
+		curr_crotch: _data.curr_crotch,
+		curr_head: _data.curr_head,
+		curr_chest: _data.curr_chest,
+    curr_top_underwear: _data.curr_top_underwear,
+		curr_bottom_underwear: _data.curr_bottom_underwear,
+		curr_top_wear: _data.curr_top_wear,
+		curr_bottom_wear: _data.curr_bottom_wear,
+    	}>>
+	<<else>>
+		<<set $userBody[_key] to {
+			img: "mc/figure/" + _data.curr_body + "/" + _data.orig_body + "/" + _data.curr_body + "_" + _data.orig_body + "_" + _data.img,
+			orig_body: _data.orig_body,
+			curr_body: _data.curr_body,
+			curr_hair: _data.curr_hair,
+			curr_crotch: _data.curr_crotch,
+			curr_head: _data.curr_head,
+			curr_chest: _data.curr_chest,
+		}>>
+	<</if>>
+<</for>>
+/* <pre><<= JSON.stringify($userBody, null, 2)>></pre> */
+<br>
+<br>
+<<set $curr_crotch = 7>>
+<<set $curr_chest = 1>>
+
+<<if $veil_of_the_heir>>
+[[Start Journey|notice]] |
+<<else>>
+Ultra Muscular Mode - Patreon Only
+<p><a href="https://www.patreon.com/c/nexispheregames" target="_blank" style="color:#0af;text-decoration:underline;">Support us on Patreon</a></p>
+In public mode only the muscular body type is available.
+<br>
+<br>
+<</if>>
+[[Back Choose Character|body_choice]]
+<</nobr>>
+
+
+:: notice
+<<nobr>>
+<<set $currentObjectives = "The Council Convenes">>
+<<set $locationName = 'Castle'>>
+<<set $locationImage = setup.ImagePath + 'location/council_room.png'>>
+<div style="font-family: 'Papyrus', serif; font-size: 20px; color: #8b5e3c; background-color: #f5f0dc; border: 2px solid #a58b5c; padding: 18px; border-radius: 10px; box-shadow: 3px 3px 8px rgba(0,0,0,0.2); max-width: 700px; margin: 20px auto;">
+
+<h1 style="font-size: 28px; color: #6e421c;">⚖️ The Council Convenes ⚖️</h1>
+
+<p>
+  The grand hall of Velmoria's royal palace is adorned with banners bearing the sigil of the lioness, symbol of the matriarchal lineage. As Prince Caelan enters, the murmurs of the assembled nobles hush. At the head of the chamber sits Queen Alinora, her gaze steady and resolute.
+</p>
+
+<p>
+  "Prince Caelan," she begins, her voice echoing through the hall, "you have reached the age of twenty, a milestone that brings with it the weight of destiny. Our kingdom stands at a crossroads, and your path must be chosen with care."
+</p>
+
+<p>
+  The Queen gestures to the assembled council: Lady Serelyne Virellis, High Counselor, Archmage Thalara Moonveil, Sir Aldric Vornhelm, Commander of the Royal Guard, Lord Malrec Thorne, Master of Statecraft, and Mistress Veletia Roswyn, Royal Clothier.
+</p>
+
+<p>
+  "Tradition dictates that the throne passes through the queen's bloodline. With no daughters to inherit, we face a dilemma. Two paths lie before you:"
+</p>
+
+<ol>
+  <li><strong>Remain as you are</strong>, marry a noblewoman of suitable standing, and she shall ascend as queen while you serve as king consort.</li>
+  <li><strong>Undergo the sacred transformation</strong>, embracing the essence of our foremothers, and ascend as queen in your own right, preserving the unbroken matrilineal line.</li>
+</ol>
+
+<p>
+  The chamber falls silent, all eyes upon Caelan as the weight of choice settles upon him.
+</p>
+[[Contemplate Your Path|Contemplate_Your_Path]]
+</div>
+<</nobr>>
+
+:: Contemplate_Your_Path
+<<nobr>>
+<<speech "malrec">>
+Your Majesty, may I commend the clarity of your decree. The boy ahem, the Prince deserves to understand the weight of such a crossroads. Rare it is for a ruler to offer choice when the throne’s need is clear.
+<</speech>>
+<br>
+<<speech "serelyne">>
+It is not a choice, Lord Malrec. It is destiny guided by wisdom. Caelan is not just a son. He is Velmoria’s lifeblood our hope of continuation.
+<</speech>>
+<br>
+<<speech "aldric">>
+Speak plainly. You mean to bend the boy into a queen? Swap steel for silk? His sword arm is untested, but not unworthy.
+<</speech>>
+<br>
+<<speech "alinora">>
+Enough. This is not a debate of worth. My son was born of my womb, he carries the lineage of the High Matrons. What flows in his veins is more sacred than tradition.
+<</speech>>
+<br>
+[[Move forth|into_1]]
+<</nobr>>
+
+:: into_1
+<<nobr>>
+<<speech "mc">>
+...May I speak, Mother?
+<</speech>>
+<br>
+<<speech "alinora">>
+You may speak as heir apparent, Caelan. Until now, you’ve been shielded from council. No longer.
+<</speech>>
+<br>
+<<speech "mc">>
+Then let me say this, You ask much. You ask that I lay down not just my name and title, but... my self. My shape. My manhood. And you call it duty. How can I choose without losing something I’ve not yet had the chance to understand?
+<</speech>>
+<br>
+<<speech "therion">>
+You speak well, my son. Or perhaps... my daughter in waiting. Know this, Your truth need not die, even if your form changes. I lost much to become consort. But I gained a peace I did not know was possible.
+<</speech>>
+<br>
+[[Move forth|into_2]]
+<</nobr>>
+
+:: into_2
+<<nobr>>
+<<speech "veletia">>
+And what a divine peace it could be! Imagine, Caelan silk draped on strong shoulders, a crown resting on freshly curled hair, eyes like yours commanding hearts and thrones alike!
+<</speech>>
+<br>
+<<speech "aldric">>
+Not the time, Veletia.
+<</speech>>
+<br>
+<<speech "serelyne">>
+You fear the unknown. So did I when I entered court. So did your mother when she first killed a rebel prince at sixteen. This is not a loss, my Prince. It is an ascension, one only the worthy may undertake.
+<</speech>>
+<br>
+<<speech "mc">>
+And if I say no? If I take a wife and let her rule? Will you all stand by me then?
+<</speech>>
+<br>
+[[Move forth|into_3]]
+<</nobr>>
+
+:: into_3
+<<nobr>>
+<<speech "alinora">>
+I will stand beside you. But not behind you. A queen leads. A consort supports. The throne demands its sovereign to be sovereign not through marriage, but through birth... and rebirth.
+<</speech>>
+<br>
+<<speech "thalara">>
+I have shaped flesh before, Caelan. With consent. With care. You would not become a stranger, but rather... a clearer version of yourself. If there is womanhood in you, I will draw it out like a jewel from the earth.
+<</speech>>
+<br>
+<<speech "mc">>
+You all speak as though you know me better than I know myself. But you’ve never asked: Do I want this?
+<</speech>>
+<br>
+<<speech "alinora">>
+Then ask yourself, my child. Do you want to be queen? To rule with the strength of your mother and the wisdom of your ancestors? Or do you wish to remain a prince, bound by tradition and expectation?
+<</speech>>
+<br>
+[[If the throne demands a princess, then I shall become her|into_4]] |
+<br>
+<br>
+[[No crown is worth losing myself. I will take a wife, not a new form|into_5]]
+<</nobr>>
+
+:: into_4
+<<nobr>>
+<<speech "mc">>
+I have never feared duty. And though this path is strange, even frightening... if my body must change to match the crown, then let it be so. If being a princess means protecting our bloodline, our realm then I will embrace that role, fully and without shame.
+<</speech>>
+<br>
+<<speech "alinora">>
+Then rise, my daughter-to-be. You shall be shaped by the finest magics, trained in poise, grace, and might. Velmoria shall know a queen forged not only by blood... but by choice.
+<</speech>>
+<br>
+<strong>High Counselor Serelyne Virellis</strong> rose from her seat, her silk robes whispering as she stepped forward. Her eyes, sharp as daggers yet dignified, settled on Caelan with solemn approval.
+<br>
+<<speech "serelyne">>
+Then it is decided. From this day forth, you shall begin the Rite of Three Pillars sacred to our bloodline, essential to the making of a Queen. It is no simple affair, my prince... or perhaps I should say, my lady-to-be.
+<</speech>>
+<br>
+Queen Alinora gave a faint smile.
+<br>
+<<speech "alinora">>
+You will not walk this path alone. Each pillar of your transformation will be guided by a master in their field. These trials will shape you not only in body, but in mind and bearing so that no soul in Velmoria shall doubt your right to rule.
+<</speech>>
+<br>
+<br>
+<strong>The Three Pillars of Transformation:</strong>
+<ul>
+  <li><strong>Mental Conversion</strong> — to teach you to think, speak, and judge as a queen.</li>
+  <li><strong>Physical Conversion</strong> — to shape your body into the vessel of a ruling woman.</li>
+  <li><strong>Training for Rule and Survival</strong> — to ensure you can protect, lead, and inspire.</li>
+</ul>
+<br>
+Caelan’s heart beat like a war drum. This was no coronation. It was a reforging of the self.
+<br>
+<br>
+[[Begin with the First Pillar: Mental Conversion|mental_conversion]]
+
+<</nobr>>
+
+:: into_5
+<<nobr>>
+<br>
+<br>
+<strong>Dev Message - Not Implemented this path yet..</strong>
+<br>
+<br>
+[[Go Back|into_3]]
+<</nobr>>
+
+:: mental_conversion
+<<nobr>>
+<<set $currentObjectives = "Listen to Mental Conversion">>
+<div style="font-family: 'Papyrus', serif; font-size: 20px; color: #8b5e3c; background-color: #f5f0dc; border: 2px solid #a58b5c; padding: 18px; border-radius: 10px; box-shadow: 3px 3px 8px rgba(0,0,0,0.2); max-width: 700px; margin: 20px auto;">
+<p><strong>Lady Serelyne Virellis</strong> stepped forward, her expression unreadable.</p>
+
+<<speech "serelyne">>
+The crown sits not just on the brow it molds the mind beneath it. You, Caelan, shall think not as a prince, nor even as a man, but as the sovereign woman this realm demands.
+<</speech>>
+
+<p>She detailed the process: days spent in discourse, etiquette drills, court simulations, and reflections designed to dissolve and rebuild habits, instincts, and internal beliefs. Each session will challenge how Caelan views himself and others.</p>
+
+<p><strong>Gameplay Focus:</strong></p>
+<ul>
+  <li>Debates and dialogue choices that affect Caelan’s evolving personality.</li>
+  <li>Mental tasks that explore femininity, leadership, diplomacy, and empathy.</li>
+  <li>Results vary, Caelan might fully embrace his femininity, or merely adopt it outwardly.</li>
+</ul>
+
+<<speech "serelyne">>
+You may struggle, But should you succeed, the court will not see a transformed man pretending at queenship. They will see <em>a queen</em> born and bred.
+<</speech>>
+<br>
+[[Proceed to the Second Pillar: Physical Conversion|physical_conversion]]
+</div>
+<</nobr>>
+
+
+:: physical_conversion
+<<nobr>>
+<<set $currentObjectives = "Listen to Physical Conversion">>
+<div style="font-family: 'Papyrus', serif; font-size: 20px; color: #8b5e3c; background-color: #f5f0dc; border: 2px solid #a58b5c; padding: 18px; border-radius: 10px; box-shadow: 3px 3px 8px rgba(0,0,0,0.2); max-width: 700px; margin: 20px auto;">
+<p><strong>Archmage Thalara Moonveil</strong> stood with staff in hand, her silver hair glowing faintly under the chandelier's light.</p>
+
+<<speech "thalara">>
+Your form shall match your future, and for that, we invoke the Old Alchemy. You learn how to make potions and will drink of ancient potions ones that change sinew and spirit alike.
+<</speech>>
+
+<p>She explained that Caelan would undergo a gradual transformation: the shrinking and rearrangement of his body, growth of feminine features, voice and scent alterations all modifiable by the player through quest progress and potion crafting.</p>
+
+<p><strong>Gameplay Focus:</strong></p>
+<ul>
+  <li>Potion brewing mini-games and ingredient collection quests.</li>
+  <li>Options to control speed and extent of transformation (fully feminine, androgynous, etc.).</li>
+  <li>Caelan can resist, embrace, or customize his transformation journey.</li>
+</ul>
+
+<<speech "thalara">>
+The body is clay in the hands of will and magic, But it is <em>you</em> who must decide its final shape.
+<</speech>>
+<br>
+[[Proceed to the Third Pillar: Rule and Survival|rule_and_survival]]
+</div>
+<</nobr>>
+
+:: rule_and_survival
+<<nobr>>
+<<set $currentObjectives = "Listen to Rule and Survival">>
+<div style="font-family: 'Papyrus', serif; font-size: 20px; color: #8b5e3c; background-color: #f5f0dc; border: 2px solid #a58b5c; padding: 18px; border-radius: 10px; box-shadow: 3px 3px 8px rgba(0,0,0,0.2); max-width: 700px; margin: 20px auto;">
+<p><strong>Queen Alinora</strong> herself rose now, her voice strong with pride.</p>
+
+<<speech "alinora">>
+A ruler is more than a mind and a form. She must wield power, charm lords, quiet dissent, ride into war if needed, and dazzle her court with presence.
+<</speech>>
+<p><strong>Caelan’s Training Will Include:</strong></p>
+
+<ul>
+  <li><strong>Combat:</strong> With Sir Aldric Vornhelm, learning swordplay, archery, and mounted combat.</li>
+  <li><strong>Politics:</strong> With Lord Malrec Thorne ruthless diplomacy, law, and espionage.</li>
+  <li><strong>Feminine Arts:</strong> With Mistress Veletia Roswyn fashion, allure, and court poise.</li>
+</ul>
+
+<p><strong>Gameplay Focus:</strong></p>
+<ul>
+  <li>Daily schedules and time management mechanics.</li>
+  <li>Mini-games (duels, debates, wardrobe challenges).</li>
+  <li>Reputation systems: how nobles, knights, and commoners perceive Caelan.</li>
+</ul>
+
+<<speech "alinora">>
+You must earn the kingdom’s love and fear, Caelan," the Queen declared. "Only then will the crown truly be yours.
+<</speech>>
+
+<br>
+[[Move forth|into_6]]
+</div>
+
+<</nobr>>
+
+:: into_6
+<<nobr>>
+<<speech "mc">>
+Then I accept the Rite of Three Pillars. I will reshape myself, body and soul, for the sake of Velmoria. 
+I only ask to understand what lies ahead, from those who will guide me.
+<</speech>> <br>
+Queen Alinora nodded solemnly, gesturing toward the seated figures flanking the long marble table. <br>
+<<speech "alinora">>
+Then let your mentors speak, so you know what awaits you when the sun next rises.
+<</speech>> <br> 
+<strong>Lady Serelyne Virellis</strong> stepped forward first, hands folded neatly before her. 
+Her voice was crisp, yet carried a warmth hidden beneath years of diplomacy. <br>
+<<speech "serelyne">>
+Prince Caelan, soon to be Princess Caelan, you will be entrusted into my care for the shaping of your mind. 
+Many believe a crown rests on the head... I say it rests upon the soul. 
+To lead Velmoria, you must <strong>think</strong> as she does. Not merely as a woman, but as a queen.
+<</speech>> <br>
+<<speech "mc">>
+You speak of thoughts and instincts... but how does one change those?
+<</speech>> <br>
+[[Move forth|into_7]]
+<</nobr>>
+
+:: into_7
+<<nobr>>
+<<speech "serelyne">>
+Through observation. Discipline. Trial and test. You will spend days in court, mimicking our customs. 
+You will learn to speak softly, but with power. To smile in silence and command a room. 
+I will challenge how you view status, beauty, ambition even vulnerability. 
+You will leave behind your princehood not as a denial, but as a foundation.
+<</speech>> <br>
+She leaned closer, her voice lowering. <br>
+<<speech "serelyne">>
+And know this many rulers have sat on thrones. 
+But only those who understand the art of being perceived as more than mortal… truly rule.
+<</speech>> <br>
+Next, the air seemed to shift as <strong>Archmage Thalara Moonveil</strong> rose, her silver robes glowing faintly in the firelight. <br>
+<<speech "thalara">>
+And I shall craft your form, dear heir. 
+With ancient alchemy and divine threads of change, your flesh shall become as soft silk woven anew. 
+But make no mistake this is not a costume. It is rebirth.
+<</speech>> <br>
+<<speech "mc">>
+Will it hurt? Will I lose who I am?
+<</speech>> <br>
+[[Move forth|into_8]]
+<</nobr>>
+
+:: into_8
+<<nobr>>
+<<speech "thalara">>
+Pain, yes... in moments. But more than pain, there is uncertainty. 
+Your form will shift slowly organs altered, voice softened, curves blooming where none were before. 
+You may choose the pace swift and intense, or gentle like river stones worn by time. 
+I will guide your hand in crafting the vessel that reflects your future self.
+<</speech>> <br>
+She smiled with a strange, motherly sorrow. <br>
+<<speech "thalara">>
+But who you are, Caelan... that is not so easily lost. It will be reshaped, not erased.
+<</speech>> <br>
+Finally, <strong>Sir Aldric Vornhelm</strong> rose like a mountain of armor and gruff resolve. <br>
+<<speech "aldric">>
+You won’t rule from silken cushions. 
+Queens ride to war, give judgment from steel thrones, and sometimes kill with their bare hands. 
+You’ll wield a blade, just like a prince. 
+You’ll fall off a horse, bruise, sweat, bleed... until you ride like fire and strike like justice.
+<</speech>> <br>
+<<speech "mc">>
+Even after I become... physically different?
+<</speech>> <br>
+[[Move forth|into_9]]
+<</nobr>>
+
+
+:: into_9
+<<nobr>>
+<<speech "aldric">>
+Especially then. The sword don’t care what’s between your legs. 
+Neither do enemies. 
+Strength is earned, not given by potions or pretty words.
+<</speech>> <br>
+Sir Aldric returned to his place, crossing his arms. 
+Then came <strong>Lord Malrec Thorne</strong>, his hands clasped behind his back like a spider with manners. <br>
+<<speech "malrec">>
+And I shall teach you the shadows behind the throne. 
+Espionage. Law. The weight of secrets and the price of keeping them. 
+You will sit through simulations of rebellion, court betrayal, and assassination trials. 
+You will learn to lie with elegance, to charm enemies, to punish with grace.
+<</speech>> <br>
+<<speech "mc">>
+How can I be sure I won’t lose myself to these games?
+<</speech>> <br>
+<<speech "malrec">>
+You can’t. You will be shaped by them. And one day, you may wake up wondering if the mask became your face. 
+But such is rule an artful performance of truth and deceit. I will teach you both.
+<</speech>> <br>
+[[Move forth|into_10]]
+<</nobr>>
+
+:: into_10
+<<nobr>>
+Then, in a sudden flourish of silk and laughter, <strong>Mistress Veletia Roswyn</strong> swept into the center like a flame in human form. <br>
+<<speech "veletia">>
+And I, darling, shall make you <strong>divine</strong>. 
+You will move with poise, speak with elegance, dress with meaning. 
+Corsets, gowns, veils each stitch shall speak for your soul. You’ll walk into a hall and silence will follow, not from fear... but from awe.
+<</speech>> <br>
+<<speech "mc">>
+All from clothing?
+<</speech>> <br>
+<<speech "veletia">>
+Clothing is not cloth. It is language. 
+It is armor. It is spellwork. 
+And you, my dear Caelan, will become the most enchanting vision this kingdom has ever dared to imagine.
+<</speech>> <br>
+[[Move forth|into_11]]
+<</nobr>>
+
+:: into_11
+<<nobr>>
+As the final words settled into the warm silence of the chamber, the great bell of the royal tower tolled twice, signaling the descent of evening. <br><br>
+Queen Alinora stood once more, her face unreadable. <br>
+<<speech "alinora">>
+The day is late. You will begin tomorrow, with the dawn. 
+For now, rest. Consider what you have heard. 
+Your journey does not begin with your first lesson. it begins with your first dream as one destined to change.
+<</speech>> <br>
+<<speech "mc">>
+Thank you... all of you. I don’t know what tomorrow brings. But I will rise to meet it.
+<</speech>> <br>
+Caelan bowed. The great doors opened silently. 
+As he exited the chamber, his boots echoed down the hallway, carrying with them the weight of a new destiny. <br><br>
+The night was still, and the stars above Velmoria shimmered like the eyes of forgotten queens, watching.
+<</nobr>>
+<<set $currentObjectives = "Go to Caelan's Chamber in Serene Wing">>
+<<set $currentArc["main_arc"] = 1>>
+[[Leave Council Room|castle_map_front_select]]

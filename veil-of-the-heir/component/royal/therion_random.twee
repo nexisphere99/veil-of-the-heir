@@ -1,0 +1,344 @@
+
+
+
+
+:: interact_with_king_random
+<<nobr>>
+<<set _i to random(0, 19)>>
+<<if _i == 0>>
+    <<speech "therion">>
+I heard the court whispering today… they see your changes, yes but none of them can see the courage it takes to become something new while the world watches. I see it, my child. And I am awed.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Sometimes I wish I didn’t have to be brave.
+<</speech>>
+<br>
+
+<<speech "therion">>
+Even a flower opens with trembling petals, Caelan. Bravery isn’t the absence of fear it’s what you do while shaking.
+<</speech>>
+<br>
+<<elseif _i == 1>>
+<<speech "therion">>
+I finished the painting today the one of the orchard in autumn. I left a space in the center, blank and glowing. It’s for you. I don’t yet know what colors to use.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Why paint me at all? I’m not finished.
+<</speech>>
+<br>
+
+<<speech "therion">>
+Precisely. That’s when we’re most beautiful when we are still becoming.
+<</speech>>
+<br>
+<<elseif _i == 2>>
+<<speech "therion">>
+Your mother teaches you how to stand like stone. I only ask that you remember how to bend like a reed. In time, storms pass but those who cannot bend are the ones who break.
+<</speech>>
+<br>
+
+<<speech "mc">>
+I don’t know which one I’m supposed to be.
+<</speech>>
+<br>
+
+<<speech "therion">>
+Both. You are your mother’s steel and my song. Let neither silence the other.
+<</speech>>
+<br>
+<<elseif _i == 3>>
+<<speech "therion">>
+They dressed you in velvet and expectation today. I could see it how tightly it fit. Do not let the costume consume the actor, Caelan. Wear the role, but never forget the soul inside it.
+<</speech>>
+<br>
+
+<<speech "mc">>
+What if the soul inside is changing, too?
+<</speech>>
+<br>
+
+<<speech "therion">>
+Then let it. The wind never asks permission to shift. And yet it shapes everything in time.
+<</speech>>
+<br>
+
+
+<<elseif _i == 4>>
+<<speech "therion">>
+I keep the letters you wrote as a child. The ones where you asked me if dragons were real, or if flowers could sing. You haven’t asked such things in years.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Because I learned they don’t.
+<</speech>>
+<br>
+
+<<speech "therion">>
+Ah, but that’s where you’re wrong. You just stopped listening.
+<</speech>>
+<br>
+<<elseif _i == 5>>
+<<speech "therion">>
+When I married your mother, they told me I was weak. That art had no place beside a throne. But I chose love over power and I choose it still, every time I sit beside you.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Did you ever regret not ruling in your own right?
+<</speech>>
+<br>
+
+<<speech "therion">>
+Never. I found power in gentleness and in the garden, where even the softest hands can pull out thorns.
+<</speech>>
+<br>
+
+
+<<elseif _i == 6>>
+<<speech "therion">>
+Your voice it's changing. Not just in sound, but in weight. It no longer asks to be heard. It expects to be. That is something no crown can teach.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Do you think they’ll ever truly listen to me?
+<</speech>>
+<br>
+
+<<speech "therion">>
+They will. But first, you must listen to yourself and believe every word.
+<</speech>>
+<br>
+<<elseif _i == 7>>
+<<speech "therion">>
+Today in the garden, a night blooming vine opened in daylight. No one knows why. I named it after you because you, too, bloom in defiance of expectation.
+<</speech>>
+<br>
+
+<<speech "mc">>
+I don’t feel like I’m blooming. I feel like I’m tearing apart.
+<</speech>>
+<br>
+
+<<speech "therion">>
+Even the seed must split before the flower is born. Pain is not the end it is the signal of transformation.
+<</speech>>
+<br>
+<<elseif _i == 8>>
+<<speech "therion">>
+Your hands used to tremble when holding a sword. Now, they tremble when holding a teacup in public. Isn’t that strange? What we fear says much about who we are becoming.
+<</speech>>
+<br>
+
+<<speech "mc">>
+I’m afraid of being watched. Judged.
+<</speech>>
+<br>
+
+<<speech "therion">>
+Then let them watch. But give them a performance worth remembering.
+<</speech>>
+<br>
+<<elseif _i == 9>>
+<<speech "therion">>
+They may crown you with flowers or thorns, Caelan but I will always see the child who danced barefoot in the rain and asked me what joy tasted like.
+<</speech>>
+<br>
+
+<<speech "mc">>
+What does it taste like?
+<</speech>>
+<br>
+
+<<speech "therion">>
+Like warm bread, soft laughter, and your name whispered in pride. And yes, I still taste it, even now.
+<</speech>>
+<br>
+<<elseif _i == 10>>
+<<speech "therion">>
+You stood in front of the nobles today like a storm in silk calm above, trembling beneath. But even a trembling storm moves mountains, Caelan. Never forget that.
+<</speech>>
+<br>
+
+<<speech "mc">>
+I thought they saw through me.
+<</speech>>
+<br>
+
+<<speech "therion">>
+Perhaps they did. But even a mask gains power if you wear it long enough with purpose.
+<</speech>>
+<br>
+<<elseif _i == 11>>
+<<speech "therion">>
+I composed a melody this morning. It reminded me of you soft at the start, uncertain, but then it builds. Not into triumph, no… into clarity. That’s rarer, and far more precious.
+<</speech>>
+<br>
+
+<<speech "mc">>
+You make it sound like I already know who I am.
+<</speech>>
+<br>
+
+<<speech "therion">>
+You know the questions. The answers come later, like echoes returning from deep places.
+<</speech>>
+<br>
+<<elseif _i == 12>>
+<<speech "therion">>
+I once thought love meant protecting you from pain. But I’ve learned it means sitting beside you through it, saying: 'You are not alone.'
+<</speech>>
+<br>
+
+<<speech "mc">>
+Even when you don’t agree with what I’m becoming?
+<</speech>>
+<br>
+
+<<speech "therion">>
+Especially then. Agreement is politics. Love is presence.
+<</speech>>
+<br>
+<<elseif _i == 13>>
+<<speech "therion">>
+I saw you in the mirror today no, not your reflection, but the posture. The way you tilted your chin. You looked like someone becoming proud of their shape, not just enduring it.
+<</speech>>
+<br>
+
+<<speech "mc">>
+It didn’t feel like pride. It felt like… resignation.
+<</speech>>
+<br>
+
+<<speech "therion">>
+Even resignation has grace. And grace, when repeated, grows into confidence.
+<</speech>>
+<br>
+<<elseif _i == 14>>
+<<speech "therion">>
+The roses bloomed out of season again. A strange omen, perhaps but I think it’s just the garden reminding us that life never obeys the old calendars. Neither should you.
+<</speech>>
+<br>
+
+<<speech "mc">>
+I worry what traditions I’m breaking.
+<</speech>>
+<br>
+
+<<speech "therion">>
+Only brittle traditions snap. The living ones bend around you and grow stronger for it.
+<</speech>>
+<br>
+<<elseif _i == 15>>
+<<speech "therion">>
+Your mother builds thrones. I build sanctuary. When you tire of the world's demands, come here. Let your soul breathe where no eyes judge you.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Sometimes I don’t know which world is real anymore this quiet one, or the loud one with crowns and knives.
+<</speech>>
+<br>
+
+<<speech "therion">>
+They’re both real. But only one deserves to hold your heart.
+<</speech>>
+<br>
+<<elseif _i == 16>>
+<<speech "therion">>
+You asked me once if a soft heart could rule. I didn’t answer then. But now I will: a soft heart does not rule by command it leads by inspiration. That is the rarer throne.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Will they follow someone who feels more than they fight?
+<</speech>>
+<br>
+
+<<speech "therion">>
+They will, when they realize that kind of strength doesn’t rust or shatter. It endures.
+<</speech>>
+<br>
+<<elseif _i == 17>>
+<<speech "therion">>
+I found one of your childhood sketches. It was a bird with antlers half beast, half dream. You drew it when you were six and told me, “This is who I am.” I didn’t understand then. I think I do now.
+<</speech>>
+<br>
+
+<<speech "mc">>
+That creature was never meant to fly.
+<</speech>>
+<br>
+
+<<speech "therion">>
+Ah, but it tried anyway. And in trying, became something no one had seen before.
+<</speech>>
+<br>
+<<elseif _i == 18>>
+<<speech "therion">>
+I know I’m not the kind of father songs are written about. I did not teach you to ride or fight. But I hope, in quieter ways, I taught you how to see beauty where others see threat.
+<</speech>>
+<br>
+
+<<speech "mc">>
+You taught me how to hope. That may be harder than any sword lesson.
+<</speech>>
+<br>
+
+<<speech "therion">>
+Then I’ve done my part. Hope is the seed of every new beginning. And you are becoming one.
+<</speech>>
+<br>
+<<elseif _i == 19>>
+<<speech "therion">>
+You are not a puzzle to be solved, Caelan. You are a poem still being written. Some stanzas will contradict others. Let them. That’s how truth lives between lines.
+<</speech>>
+<br>
+
+<<speech "mc">>
+But what if no one understands it in the end?
+<</speech>>
+<br>
+
+<<speech "therion">>
+Then let it be misunderstood. A true soul doesn’t owe clarity to anyone but itself.
+<</speech>>
+<br>
+<</if>>
+[[Leave King Therion|royal_leasure_room]] |<br><br>
+[[Leave Royal Bed Chamber|castle_map_back_select]]
+<</nobr>>
+
+
+:: interact_with_queen_random_1
+<<nobr>>
+<<set _i to random(0, 18)>>
+<<if _i == 0>>
+<<elseif _i == 1>>
+<<elseif _i == 2>>
+<<elseif _i == 3>>
+<<elseif _i == 4>>
+<<elseif _i == 5>>
+<<elseif _i == 6>>
+<<elseif _i == 7>>
+<<elseif _i == 8>>
+<<elseif _i == 9>>
+<<elseif _i == 10>>
+<<elseif _i == 11>>
+<<elseif _i == 12>>
+<<elseif _i == 13>>
+<<elseif _i == 14>>
+<<elseif _i == 15>>
+<<elseif _i == 16>>
+<<elseif _i == 17>>
+<<elseif _i == 18>>
+<<elseif _i == 19>>
+<</if>>
+[[Leave Queen Alinora|royal_bed_chamber]] |<br><br>
+[[Leave Royal Bed Chamber|castle_map_back_select]]
+<</nobr>>

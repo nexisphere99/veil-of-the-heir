@@ -1,0 +1,123 @@
+
+
+
+:: mc_bed_chamber
+<<nobr>>
+<<set $locationImage = setup.ImagePath + 'location/mc_bed_chamber_img.png'>>
+<<if $currentArc["main_arc"] == 1>>
+<<set $currentObjectives = "You are in your bed chamber. You need to sleep">>
+<</if>>
+<h3 style="text-align: center;">Caelan Bed Chamber</h3>
+<<if $alert_message>>
+  <h3 style="text-align: center; color: red;">$alert_message</h3>
+<</if>>
+<div style="position: relative; width: 100%; max-width: 700px; margin: 0 auto; aspect-ratio: 7 / 5;">
+  <img src="veil-of-the-heir/images/map/mc_bed_chamber_map.png" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" />
+  <svg viewBox="0 0 700 500"
+       preserveAspectRatio="none"
+       style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+    <polygon id="mc_bed" 
+             points="74,379,72,344,74,311,72,248,75,235,79,245,83,265,96,246,120,229,135,226,137,210,141,228,151,230,169,239,182,259,195,270,204,281,212,291,228,302,260,305,291,307,321,306,345,308,369,311,381,315,392,347,397,365,259,423,225,420,196,432,170,412,149,409,110,401" 
+             class="mc_bed_chamber_map" 
+             data-passage="mc_bed" />
+    <polygon id="mc_bed_chamber_toilet" 
+             points="666,369,665,289,670,260,670,191,670,165,699,165,697,371" 
+             class="mc_bed_chamber_map" 
+             data-passage="mc_bed_chamber_toilet" />
+    <polygon id="mc_table" 
+             points="451,354,452,340,446,315,437,299,486,291,497,271,551,256,606,273,609,292,611,332,583,356,539,373,454,359" 
+             class="mc_bed_chamber_map" 
+             data-passage="mc_table" />
+    <polygon id="mc_window" 
+             points="348,278,348,184,354,178,363,147,380,190,381,274" 
+             class="mc_bed_chamber_map" 
+             data-passage="mc_window" />
+    <polygon id="mc_wardrobe" 
+             points="1,283,51,361,67,368,75,423,64,442,64,498,2,498" 
+             class="mc_bed_chamber_map" 
+             data-passage="mc_wardrobe" />
+  </svg>
+</div>
+<br>
+[[Leave Bed Chamber|castle_map_back_select]]
+<</nobr>>
+
+:: mc_bed
+<<nobr>>
+<<set $user_stats.energy = 60>>
+<<set $alert_message = "">>
+<<if $currentArc["main_arc"] == 1>>
+<div id="gif_pop_up">
+  <img src="veil-of-the-heir/images/gif/night_1.gif" alt="Sleeping" style="max-width:80%; height:auto; border: 5px solid white;">
+  <button id="closeBtn" style="margin-top: 15px; padding: 10px 20px;">Close</button>
+</div>
+The morning sun filtered through the tall arched windows of the my bedchamber, casting honeyed light across velvet drapes and ornate stone columns. 
+For the first time in my life, I awoke not as a boy of blood and heritage, but as an heir choosing transformation.
+I blinked slowly, as if even sleep had been cautious to let go. 
+The silken sheets rustled as I sat up, bare chest rising and falling with a strange, quiet weight.
+<br><br>
+<<speech "mc">>
+Today... it begins.
+<</speech>>
+<br>
+The words were barely more than a whisper, yet they felt carved into the morning itself.
+Emotions tangled within me like ivy climbing a wall anxious knots of fear, tendrils of hope, branches of quiet resolve. 
+My body was the same, but my future now felt utterly unfamiliar. Would I still feel like myself a week from now? A month? Would the mirror know me?
+Images from the night before returned in fragments the Queen’s fierce pride, 
+Serelyne’s piercing gaze, Thalara’s haunting reassurance, Aldric’s gruff approval, and the way Veletia spoke of beauty like it was both art and war.
+<br><br>
+<<speech "mc">>
+No more delaying. No more wondering. I chose this... I wanted this.
+<</speech>>
+<br>
+<<speech "mc">>
+I will become the queen this realm deserves.
+<</speech>>
+<br>
+<<set $currentObjectives = "Go and see the Queen. Its better If I use Privies before going outside. Queen normally at the throne room (great hall) or council chamber.">>
+<<set $currentArc["main_arc"] = 2>>
+<<set $day_number += 1>>
+[[Wake Up|mc_bed_chamber]]
+<<else>>
+<div id="gif_pop_up">
+  <img src="veil-of-the-heir/images/gif/night_1.gif" alt="Sleeping" style="max-width:80%; height:auto; border: 5px solid white;">
+  <button id="closeBtn" style="margin-top: 15px; padding: 10px 20px;">Close</button>
+</div>
+[img[veil-of-the-heir/images/location/mc_bed_img.png]]<br><br>
+<<set $day_number += 1>>
+<<set $riddleLimit = 3>>
+<<set $riddleAttempts = 0>>
+<<set $hasIngredientAccess = false>>
+<<set $ingredientChoices to 0>>
+<<set $riddleSuccess = false>>
+[[Get up From Bed|mc_bed_chamber]]
+<</if>>
+<</nobr>>
+
+:: mc_table
+<<nobr>>
+[img[veil-of-the-heir/images/location/mc_table_img.png]]<br><br>
+Nothing on the table.
+<br><br>
+[[Move Away from Table|mc_bed_chamber]]
+<</nobr>>
+
+
+:: mc_window
+<<nobr>>
+<div id="gif_pop_up">
+  <img src="veil-of-the-heir/images/gif/lake_1.gif" alt="Sleeping" style="max-width:80%; height:auto; border: 5px solid white;">
+  <button id="closeBtn" style="margin-top: 15px; padding: 10px 20px;">Close</button>
+</div>
+[img[setup.ImagePath+'gif/lake_1.gif']]
+<br><br>
+[[Move Away from Window|mc_bed_chamber]]
+<</nobr>>
+
+:: mc_wardrobe
+<<nobr>>
+[img[veil-of-the-heir/images/location/mc_wardrobe_img.png]]<br><br>
+Wardrobe function coming soon.
+<br><br>
+[[Move Away from Wardrobe|mc_bed_chamber]]
+<</nobr>>

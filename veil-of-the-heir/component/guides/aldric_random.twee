@@ -1,0 +1,598 @@
+
+
+
+:: interact_with_aldric
+<<nobr>>
+<<set _i to random(0, 19)>>
+<<if _i == 0>>
+    <<speech "aldric">>
+You’re late. In a real skirmish, that’s the difference between standing and bleeding out in the mud.
+<</speech>>
+<br>
+
+<<speech "mc">>
+And in court, it’s the difference between making an entrance and being forgotten.
+<</speech>>
+<br>
+
+<<speech "aldric">>
+Hmph. Let’s hope you don’t plan to curtsy your way out of a blade swing. Draw.
+<</speech>>
+<br>
+<<elseif _i == 1>>
+<<speech "aldric">>
+Hold the bow like it’s your last hope, not like it’s a damn feather duster.
+<</speech>>
+<br>
+
+<<speech "mc">>
+It looks easy when you do it.
+<</speech>>
+<br>
+
+<<speech "aldric">>
+That’s because I’ve bled for every arrow I ever loosed. You want elegance? Earn it in sweat.
+<</speech>>
+<br>
+<<elseif _i == 2>>
+<<speech "aldric">>
+You’re moving like a noble at a feast. Too slow, too polished. The battlefield won’t clap for posture.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Maybe I’m trying not to look like a brute with a blade.
+<</speech>>
+<br>
+
+<<speech "aldric">>
+Then you’ll look very pretty... while dying. Get ugly. Get angry. Then swing.
+<</speech>>
+<br>
+<<elseif _i == 3>>
+<<speech "aldric">>
+Frostfang weighs more than your whole frame. But if you can lift it, I’ll let you name my next scar.
+<</speech>>
+<br>
+
+<<speech "mc">>
+That’s either a threat or the strangest honor I’ve been offered.
+<</speech>>
+<br>
+
+<<speech "aldric">>
+You’re in my yard now, Caelan. Out here, scars are the ceremony.
+<</speech>>
+<br>
+<<elseif _i == 4>>
+<<speech "aldric">>
+Every cut you take is a lesson. Every bruise, a reminder. Stop flinching you want to be queen, not porcelain.
+<</speech>>
+<br>
+
+<<speech "mc">>
+I’m still standing, aren’t I?
+<</speech>>
+<br>
+
+<<speech "aldric">>
+Barely. But you’re standing. That’s... something. Again.
+<</speech>>
+<br>
+<<elseif _i == 5>>
+<<speech "aldric">>
+Grip tighter. Your sword’s not a dance partner it’s your only damn friend in a kill zone.
+<</speech>>
+<br>
+
+<<speech "mc">>
+You sure know how to inspire loyalty.
+<</speech>>
+<br>
+
+<<speech "aldric">>
+I’m not here to inspire. I’m here to make sure you don’t die looking fashionable.
+<</speech>>
+<br>
+<<elseif _i == 6>>
+<<speech "aldric">>
+The way you turned that parry... that wasn’t bad. Almost clever.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Is that praise I hear, or am I hallucinating from fatigue?
+<</speech>>
+<br>
+
+<<speech "aldric">>
+You’ll know it’s praise when I stop barking. For now less talking, more dodging.
+<</speech>>
+<br>
+<<elseif _i == 7>>
+<<speech "aldric">>
+You hesitated. Again. Hesitation gets you gutted, no matter how royal your blood is.
+<</speech>>
+<br>
+
+<<speech "mc">>
+I was thinking. Calculating my strike.
+<</speech>>
+<br>
+
+<<speech "aldric">>
+Overthink out here, and your thoughts will leak out through your neck. React. Trust the blade.
+<</speech>>
+<br>
+<<elseif _i == 8>>
+<<speech "aldric">>
+Ever seen a soldier cry on the battlefield? No. They scream, they bleed, then they rise or rot. Learn that rhythm.
+<</speech>>
+<br>
+
+<<speech "mc">>
+I wasn’t raised to rot.
+<</speech>>
+<br>
+
+<<speech "aldric">>
+Good. Then act like it. Again. From the top.
+<</speech>>
+<br>
+<<elseif _i == 9>>
+<<speech "aldric">>
+You want respect from the guard? Earn it with your blade, not your title.
+<</speech>>
+<br>
+
+<<speech "mc">>
+I’m not expecting anyone to bow out here, Aldric. Just not stab me in the back.
+<</speech>>
+<br>
+
+<<speech "aldric">>
+Then stop presenting your back like an invitation. Rotate your stance now.
+<</speech>>
+<br>
+<<elseif _i == 10>>
+<<speech "aldric">>
+You’re breathing too hard. That’s not fatigue, that’s fear. Control it, or it’ll control you.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Hard not to be afraid when you’re swinging a blade like it owes you blood.
+<</speech>>
+<br>
+
+<<speech "aldric">>
+Good. Fear keeps you alive. Just don’t let it make decisions for you. That’s your job.
+<</speech>>
+<br>
+
+
+<<elseif _i == 11>>
+<<speech "aldric">>
+Did you polish your boots before training? Gods help me, you really are royalty.
+<</speech>>
+<br>
+
+<<speech "mc">>
+I figured I’d try bleeding in style today.
+<</speech>>
+<br>
+
+<<speech "aldric">>
+Keep that wit sharp if only your sword matched it. Again.
+<</speech>>
+<br>
+<<elseif _i == 12>>
+<<speech "aldric">>
+Step. Parry. Slash. Don’t think. Don’t blink. Just move.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Easier said than done when your opponent is a walking fortress.
+<</speech>>
+<br>
+
+<<speech "aldric">>
+Then aim for the cracks. Even fortresses crumble when you strike the right fault line.
+<</speech>>
+<br>
+<<elseif _i == 13>>
+<<speech "aldric">>
+You keep dropping your guard. One day I won’t be the one testing you.
+<</speech>>
+<br>
+
+<<speech "mc">>
+And when that day comes, I won’t be the same person standing here.
+<</speech>>
+<br>
+
+<<speech "aldric">>
+That better be a promise, not a poetic excuse.
+<</speech>>
+<br>
+<<elseif _i == 14>>
+<<speech "aldric">>
+You look at a sword like it’s going to whisper court secrets. It won’t. It only speaks in pain.
+<</speech>>
+<br>
+
+<<speech "mc">>
+I’m trying to learn the language.
+<</speech>>
+<br>
+
+<<speech "aldric">>
+Then listen with your arms, not your ears. Blade up.
+<</speech>>
+<br>
+<<elseif _i == 15>>
+<<speech "aldric">>
+If you fall in the mud, don’t lie in it. Get up, wipe the dirt from your mouth, and swing.
+<</speech>>
+<br>
+
+<<speech "mc">>
+What if the fall breaks more than my pride?
+<</speech>>
+<br>
+
+<<speech "aldric">>
+Then crawl. Limp. Spit blood. But don’t stop. Queens don’t die easy.
+<</speech>>
+<br>
+<<elseif _i == 16>>
+<<speech "aldric">>
+Most nobles fear calluses. You should earn them. They’re proof of effort.
+<</speech>>
+<br>
+
+<<speech "mc">>
+And here I was hoping my manicure might survive this week.
+<</speech>>
+<br>
+
+<<speech "aldric">>
+If your enemies pause to admire your nails, I’ve trained you wrong.
+<</speech>>
+<br>
+<<elseif _i == 17>>
+<<speech "aldric">>
+Sword in hand. Spine straight. Eyes forward. That’s how leaders walk into battle.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Funny. I thought leaders had others do the walking for them.
+<</speech>>
+<br>
+
+<<speech "aldric">>
+Not in Velmoria. Here, you lead with steel or you don’t lead at all.
+<</speech>>
+<br>
+<<elseif _i == 18>>
+<<speech "aldric">>
+Every warrior here bled for the right to be called that. They won’t follow silk and perfume.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Then I’ll bleed too, if that’s the price.
+<</speech>>
+<br>
+
+<<speech "aldric">>
+Spoken like a soldier. Let’s see if your blade matches your words.
+<</speech>>
+<br>
+<<elseif _i == 19>>
+<<speech "aldric">>
+I’ve seen lords fall crying in battle. You’ve got more spine than most already.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Did you just... compliment me?
+<</speech>>
+<br>
+
+<<speech "aldric">>
+Don’t get used to it. I expect twice the effort tomorrow.
+<</speech>>
+<br>
+<</if>>
+[[Sword Training|sword_train_1]] |<br><br>
+[[Archery Training|archery_train_1]] |<br><br>
+[[Leave Sir Aldric Vornhelm|iron_garden]] |<br><br>
+[[Leave Royal Iron Garden|castle_map_front_select]]
+<</nobr>>
+
+
+
+:: sword_train_1
+<<nobr>>
+<style>
+#training-area {
+  position: relative;
+  height: 500px;
+  width: 300px;
+  border: 1px solid black;
+  margin: 20px auto; /* auto left/right margin centers it */
+  background-color: #f9f9f9;
+}
+
+#target-image {
+  position: absolute;
+  /* top: 80px; */
+  /* left: 135px; */
+  width: 512px;
+  height: auto;
+  z-index: 0;
+  pointer-events: none;
+}
+
+
+#dummy {
+  width: 20px;
+  height: 20px;
+  background: red;
+  position: absolute;
+  top: 100px;
+  left: 0px;
+  border-radius: 50%;
+}
+
+/* Strike zone lines */
+.strike-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: green;
+  opacity: 0.5;
+}
+
+/* Left and right strike line positions */
+#strike-left {
+  left: 120px;
+}
+
+#strike-right {
+  left: 180px;
+}
+</style>
+
+<div id="training-area">
+  <div id="strike-left" class="strike-line"></div>
+  <div id="strike-right" class="strike-line"></div>
+
+  <!-- Dummy image target between strike lines -->
+  <img id="target-image" @src="setup.ImagePath +'train/sword_dummy.png'" alt="Training Dummy" />
+
+  <!-- Red dot (moving strike indicator) -->
+  <div id="dummy"></div>
+</div>
+
+<button onclick="checkStrike()">Strike!</button>
+<div id="result" style="margin-top: 10px;"></div>
+<<if $swordhitCount >= 3>>
+    <div id="leave-button" style="text-align: center; margin-top: 15px;">
+    <<link "Leave Sword Training">>
+      <<goto "iron_garden">>
+    <</link>>
+  </div>
+<</if>>
+<</nobr>>
+
+
+<<script>>
+$(document).on(':passagerender', function () {
+  // Initialize variables if they don't exist
+  if (typeof window.dummyPosition === 'undefined') {
+    window.dummyPosition = 0;
+    window.dummyDirection = 1;
+  }
+  
+  // if (typeof State.variables.swordhitCount === 'undefined') {
+  State.variables.swordhitCount = 0;
+
+  
+  // Clear any existing interval to prevent duplicates
+  if (window.dummyInterval) {
+    clearInterval(window.dummyInterval);
+  }
+  
+  // Set up the movement interval
+  window.dummyInterval = setInterval(() => {
+    const dummy = document.getElementById('dummy');
+    if (!dummy) return;
+    window.dummyPosition += 10 * window.dummyDirection;
+    if (window.dummyPosition >= 280 || window.dummyPosition <= 0) {
+      window.dummyDirection *= -1;
+    }
+    dummy.style.left = window.dummyPosition + "px";
+  }, 100);
+
+  window.checkStrike = function() {
+    let position = window.dummyPosition;
+    let result = document.getElementById("result");
+    if (position > 120 && position < 180) {
+      State.variables.swordhitCount = (State.variables.swordhitCount || 0) + 1;
+      if (State.variables.swordhitCount >= 3) {
+        setTimeout(() => Engine.show(passage()), 50);
+        State.variables.user_stats["combat_ability"] += 1;
+      }
+      result.innerHTML = `<span style='color: green;'>Hit ${State.variables.swordhitCount}! Excellent reflex.</span>`;
+    } else {
+      result.innerHTML = "<span style='color: red;'>Missed! Try again.</span>";
+    }
+  };
+});
+<</script>>
+
+
+
+
+:: archery_train_1
+<style>
+#archery-area {
+  position: relative; /* essential */
+  width: 500px;
+  height: 300px;
+  border: 1px solid black;
+  margin: 20px auto;
+  background-image: url("veil-of-the-heir/images/train/archery_target.png");
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+#target {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  top: 120px;
+  left: 220px;
+  background: url("images/target.png") no-repeat center center;
+  background-size: contain;
+  border-radius: 0;
+  z-index: 2;
+}
+
+#target, #aim {
+  position: absolute; /* absolutely positioned inside archery-area */
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  top: 130px; /* fixed vertical position */
+  z-index: 2;
+}
+
+#target {
+  background: red;
+  left: 240px; /* fixed target position */
+  z-index: 2;
+}
+
+#aim {
+  background: blue;
+  left: 240px; /* initial aim position to match target */
+  z-index: 3;
+}
+
+</style>
+
+<div id="archery-area">
+  <div id="target"></div>
+  <div id="aim"></div>
+</div>
+
+<div style="text-align: center;">
+  <button id="shootButton">Shoot</button>
+  <div id="archeryResult" style="margin-top: 10px;"></div>
+</div>
+<<if $archeryhitCount >= 9>>
+    <div id="leave-button" style="text-align: center; margin-top: 15px;">
+    <<link "Leave Archery Training">>
+      <<goto "iron_garden">>
+    <</link>>
+  </div>
+<</if>>
+
+<<script>>
+$(document).on(':passagerender', function () {
+  State.variables.archeryhitCount = 0;  
+  let aim, area, target, shootBtn, result;
+  let aimInterval = null;
+  const range = 100; // how far left/right from center the blue dot moves
+  let targetLeft = 240; // fixed value matching CSS
+
+  function startAimMovement() {
+    if (!aim || !target || !area) return;
+
+    let position = targetLeft;  // start at center
+    let direction = 1;
+
+    aim.style.left = position + "px";
+    aim.dataset.position = position;
+    aim.dataset.target = targetLeft;
+
+    if (aimInterval) clearInterval(aimInterval);
+
+    aimInterval = setInterval(() => {
+      position += 10 * direction;
+
+      if (position >= targetLeft + range || position <= targetLeft - range) {
+        direction *= -1;
+      }
+
+      aim.style.left = position + "px";
+      aim.dataset.position = position;
+      aim.dataset.target = targetLeft;
+    }, 100);
+  }
+
+  setTimeout(() => {
+    aim = document.getElementById('aim');
+    area = document.getElementById('archery-area');
+    target = document.getElementById('target');
+    shootBtn = document.getElementById("shootButton");
+    result = document.getElementById("archeryResult");
+
+    if (!aim || !area || !target || !shootBtn || !result) {
+      console.error("Archery setup failed");
+      return;
+    }
+
+    // Make sure aim starts aligned with target visually
+    aim.style.left = targetLeft + "px";
+
+    startAimMovement();
+
+    shootBtn.onclick = function () {
+      clearInterval(aimInterval);
+
+      const aimX = parseFloat(aim.style.left);
+      const diff = Math.abs(aimX - targetLeft);
+
+      if (diff <= 10) {
+        State.variables.archeryhitCount = (State.variables.archeryhitCount || 0) + 3;
+        result.innerHTML = "<span style='color: green;'>Bullseye! Point: "+State.variables.archeryhitCount+"/9</span>";
+      } else if (diff <= 30) {
+        State.variables.archeryhitCount = (State.variables.archeryhitCount || 0) + 2;
+        result.innerHTML = "<span style='color: yellow;'>Close shot! Point: "+State.variables.archeryhitCount+"/9</span>";
+      } else {
+        State.variables.archeryhitCount = (State.variables.archeryhitCount || 0) + 1;
+        result.innerHTML = "<span style='color: red;'>Missed the target. Point: "+State.variables.archeryhitCount+"/9</span>";
+      }
+
+      if (State.variables.archeryhitCount >= 9) {
+        State.variables.user_stats["archery_ability"] += 1
+        // Refresh passage to show the leave button
+        setTimeout(() => Engine.show(passage()), 50);
+    }
+
+      shootBtn.disabled = true;
+
+      setTimeout(() => {
+        shootBtn.disabled = false;
+        startAimMovement(); // restart movement
+      }, 1000);
+    };
+  }, 50);
+});
+
+<</script>>
+
+
+
+
+
+
+

@@ -1,0 +1,387 @@
+
+
+:: castle_map_front_select
+<<nobr>>
+  <<if $user_stats.energy >= 10>>
+  <<set $user_stats.energy -= 10>>
+<<elseif $user_stats.energy > 0>>
+  <<set $user_stats.energy = 0>>
+<</if>>
+<<if $user_stats.energy < 10>>
+  <<set $alert_message = "Your Energy is very Low. Need to sleep">>
+  <<goto "mc_bed_chamber">>
+<</if>>
+<h3 style="text-align: center;">Castle Sovereign Wing Map</h3>
+<<set $locationImage = setup.ImagePath + 'location/castle.png'>>
+<div style="position: relative; width: 100%; max-width: 700px; margin: 0 auto; aspect-ratio: 7 / 5;">
+  <img src="veil-of-the-heir/images/map/castle_map_front.png" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" />
+  <svg viewBox="0 0 700 500"
+       preserveAspectRatio="none"
+       style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+    <polygon id="castle_map_back_select" 
+             points="40,369,4,410,4,458,76,457,79,410,45,410" 
+             class="castle_front_map" 
+             data-passage="castle_map_back_select" />
+    <polygon id="council_chamber" 
+             points="120,237,293,236,294,303,121,303" 
+             class="castle_front_map" 
+             data-passage="council_chamber" />
+    <polygon id="east_wing" 
+             points="55,306,55,264,58,253,67,243,83,239,99,243,110,254,112,271,111,305" 
+             class="castle_front_map" 
+             data-passage="east_wing" />
+    <polygon id="dressing_bloom" 
+             points="49,380,47,339,53,324,66,315,87,311,99,315,110,326,115,344,115,372,114,382" 
+             class="castle_front_map" 
+             data-passage="dressing_bloom" />
+    <polygon id="thrones_mirror" 
+             points="250,377,249,338,255,322,270,313,287,311,302,320,312,335,312,356,311,378" 
+             class="castle_front_map" 
+             data-passage="thrones_mirror" />
+    <polygon id="iron_garden" 
+             points="493,470,492,377,505,363,523,350,540,352,553,357,560,367,571,368,582,368,590,363,606,352,629,351,638,358,645,361,662,366,699,380,699,484,641,486,591,464,555,471" 
+             class="castle_front_map" 
+             data-passage="iron_garden" />
+    <polygon id="great_hall" 
+             points="122,227,117,156,102,157,183,87,265,157,246,154,245,227" 
+             class="castle_front_map" 
+             data-passage="great_hall" />
+    <polygon id="great_library" 
+             points="120,378,119,312,246,312,244,377" 
+             class="castle_front_map" 
+             data-passage="great_library" />
+    <polygon id="royal_kitchen" 
+             points="78,457,79,397,121,388,149,390,170,399,178,410,197,413,217,393,252,387,271,392,284,398,292,406,295,430,292,456" 
+             class="castle_front_map" 
+             data-passage="royal_kitchen" />
+    <polygon id="royal_garden" 
+             points="3,460,1,499,699,500,698,486,641,487,591,467,557,473,493,472,431,475,374,476,278,475,192,476,103,478,90,459" 
+             class="castle_front_map" 
+             data-passage="royal_garden" />
+    <polygon id="out_side" 
+             points="422,297,415,237,414,205,525,198,527,238,514,306,501,304,454,305" 
+             class="castle_front_map" 
+             data-passage="out_side" /> 
+  </svg>
+</div>
+<</nobr>>
+
+:: great_hall
+<<nobr>>
+<h3 style="text-align: center;">Great Hall</h3><br>
+<<set $locationImage = setup.ImagePath + 'location/great_hall_img.png'>>
+[img[setup.ImagePath + 'location/great_hall_img.png']]
+<br><br>
+[[Leave Great Hall|castle_map_front_select]]
+<</nobr>>
+
+:: council_chamber
+<<nobr>>
+<<if $currentArc["main_arc"] == 2>>
+<h3 style="text-align: center;">Council Chamber</h3><br>
+<<set $locationImage = setup.ImagePath + 'location/council_room.png'>>
+<div style="position: relative; width: 100%; max-width: 700px; margin: 0 auto; aspect-ratio: 7 / 5;">
+  <img src="veil-of-the-heir/images/map/council_chamber_queen_only_map.png" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" />
+  <svg viewBox="0 0 700 500"
+       preserveAspectRatio="none"
+       style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+    <polygon id="interact_with_queen" 
+             points="221,382,237,373,248,315,246,294,246,277,247,256,259,247,261,221,270,218,277,223,281,247,295,271,291,306,292,335,300,373,316,382,278,387,261,387" 
+             class="castle_front_map" 
+             data-passage="interact_with_queen" />
+  </svg>
+</div>
+<br><br>
+[[Leave Council Chamber|castle_map_front_select]]
+<<else>>
+<h3 style="text-align: center;">Council Chamber</h3><br>
+[img[setup.ImagePath + 'location/council_room.png']]
+<br>
+<br>
+[[Leave Council Chamber|castle_map_front_select]]
+<</if>>
+<</nobr>>
+
+:: interact_with_queen
+<<nobr>>
+<br> <strong><em>The Morning After — Council Chamber, Midmorning</em></strong> <br><br>
+<<speech "mc">>
+Good morning, Mother. I... slept, though my dreams were strange. I suppose I now stand upon the first step of the path we discussed.
+<</speech>>
+<br>
+
+<<speech "alinora">>
+Indeed you do, my child. The moment you rose from that council seat, your fate shifted like the winds of prophecy. 
+And now, we must shape you to match the crown you are to bear.
+<</speech>>
+<br>
+
+<<speech "mc">>
+I am ready... or I wish to be. You spoke of three pillars, and I still remember their names. But which one must I begin with?
+<</speech>>
+<br>
+
+<<speech "alinora">>
+Each pillar is vital, but one must come first to anchor the rest. 
+The court may overlook uncertain manners or political missteps... but they will not overlook a prince in a dress.
+<</speech>>
+<br>
+[[Move Forth|interact_with_queen_1]]
+<</nobr>>
+
+:: interact_with_queen_1
+<<nobr>>
+She stood and moved toward the window, where sunlight spilled across the velvet floor. 
+Her eyes, clear as carved sapphire, regarded her child not unkindly.
+<br>
+<br>
+<<speech "alinora">>
+Thus, your body must change first. Slowly, carefully. The illusion must not be illusion. It must be truth bone, skin, breath, and form.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Then I will face it head on. Is there someone to guide me?
+<</speech>>
+<br>
+
+<<speech "alinora">>
+There is. You shall meet Archmage Thalara Moonveil, Mistress of Essence and Change. 
+She has served this house longer than you’ve drawn breath and has mastered arts few dare name aloud.
+<</speech>>
+<br>
+<<speech "mc">>
+Will it hurt?
+<</speech>>
+<br>
+[[Move Forth|interact_with_queen_2]]
+<</nobr>>
+
+:: interact_with_queen_2
+<<nobr>>
+<<speech "alinora">>
+It will challenge you. Pain may come, though not always in ways you expect. 
+But Thalara is gentle, when she wishes to be. And she understands the weight of what you are to become.
+<</speech>>
+<br>
+
+She steps closer now, placing one gloved hand against Caelan’s cheek.
+
+<br>
+<<speech "alinora">>
+Remember, daughter-to-be... this is not punishment. This is ascension.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Where will I find her?
+<</speech>>
+<br>
+
+<<speech "alinora">>
+In the Moonspire Atelier - Veil Tower, high in the east tower. She prefers her solitude, so knock only once. 
+She’ll know you’ve come before you touch the door.
+<</speech>>
+<br>
+<<set $currentObjectives = "Go to Veil tower and meet Archmage Thalara Moonveil at Moonspire Atelier">>
+<<speech "mc">>
+I’ll go now.
+<</speech>>
+<br>
+
+<<speech "alinora">>
+One last word, Trust her, Caelan. Let her magic shape you, but hold tight to your spirit. The body bends... but the soul must choose its own form.
+<</speech>>
+<br>
+<<set $currentArc["main_arc"] = 3>>
+[[Go Outside|castle_map_front_select]]
+<</nobr>>
+
+
+
+
+:: out_side
+<<nobr>>
+<<if $user_stats.energy >= 10>>
+  <<set $user_stats.energy -= 10>>
+<<elseif $user_stats.energy > 0>>
+  <<set $user_stats.energy = 0>>
+<</if>>
+<<if $user_stats.energy < 10>>
+  <<set $alert_message = "Your Energy is very Low. Need to sleep">>
+  <<goto "mc_bed_chamber">>
+<</if>>
+<h3 style="text-align: center;">Casle Front Gate</h3><br>
+<<set $locationImage = setup.ImagePath + 'location/outside_img.png'>>
+<div style="position: relative; width: 100%; max-width: 700px; margin: 0 auto; aspect-ratio: 7 / 5;">
+  <img @src="setup.ImagePath +'map/outside_map.png'" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" />
+  <svg viewBox="0 0 700 500"
+       preserveAspectRatio="none"
+       style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+    <polygon id="castle_map_front_select" 
+             points="175,271,174,241,183,214,187,218,192,197,201,198,209,183,224,216,234,239,245,225,242,190,264,188,278,165,291,181,299,183,299,129,293,114,295,99,302,62,305,68,312,48,319,56,325,37,341,71,348,36,357,62,359,102,357,133,367,131,370,135,376,123,399,123,402,112,412,129,423,132,437,151,446,166,462,175,463,195,464,258,453,296,462,330,395,317,354,343,321,345,271,337" 
+             class="castle_front_map" 
+             data-passage="castle_map_front_select" />
+    <polygon id="lake_map_select" 
+             points="358,343,396,318,460,329,482,304,507,308,535,296,557,322,573,342,582,349,608,363,627,373,622,396,571,392,567,383,555,385,528,391,493,387,445,378,391,367" 
+             class="castle_front_map" 
+             data-passage="lake_map_select" />
+    <polygon id="castle_map_back_select" 
+             points="422,129,430,113,436,97,442,113,456,106,461,89,467,100,484,103,477,80,486,67,483,38,494,36,497,47,506,29,517,47,526,61,534,74,546,76,542,97,543,137,557,168,550,172,558,192,569,195,569,186,575,174,583,185,585,197,587,212,590,241,599,247,602,235,614,259,619,290,632,310,608,304,574,340,538,298,509,306,483,302,461,325,455,296,466,256,464,174,447,165" 
+             class="castle_front_map" 
+             data-passage="castle_map_back_select" />
+  </svg>
+</div>
+<br><br>
+[[Back to Castle|castle_map_front_select]]
+<</nobr>>
+
+
+
+
+:: iron_garden
+<<nobr>>
+<h3 style="text-align: center;">Royal Iron Garden</h3><br>
+<<set $locationImage = setup.ImagePath + 'location/iron_garden_img.png'>>
+<div style="position: relative; width: 100%; max-width: 700px; margin: 0 auto; aspect-ratio: 7 / 5;">
+  <img @src="setup.ImagePath +'map/iron_garden_map.png'" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" />
+  <svg viewBox="0 0 700 500"
+       preserveAspectRatio="none"
+       style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+    <polygon id="interact_with_aldric" 
+             points="150,476,163,463,172,443,168,406,147,381,157,326,160,279,180,221,146,213,140,202,143,178,154,137,175,119,192,113,201,109,208,97,210,72,220,60,230,58,238,63,246,73,247,90,246,105,257,110,272,115,288,131,300,150,309,180,312,202,316,223,316,238,314,259,310,276,303,291,290,293,293,314,298,347,309,380,293,404,291,427,291,445,299,478,290,483,278,477,272,451,265,426,256,400,251,387,249,372,205,370,206,390,199,413,195,442,195,465,186,473,169,481,155,483" 
+             class="castle_front_map" 
+             data-passage="interact_with_aldric" />
+  </svg>
+</div>
+<br><br>
+[[Leave Iron Garden|castle_map_front_select]]
+<</nobr>>
+
+
+
+:: east_wing
+<<nobr>>
+<h3 style="text-align: center;">Castle East Wing</h3><br>
+<<set $locationImage = setup.ImagePath + 'location/east_wing_img.png'>>
+<div style="position: relative; width: 100%; max-width: 700px; margin: 0 auto; aspect-ratio: 7 / 5;">
+  <img @src="setup.ImagePath +'map/east_wing_map.png'" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" />
+  <svg viewBox="0 0 700 500"
+       preserveAspectRatio="none"
+       style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+    <polygon id="interact_with_serelyne" 
+             points="365,468,394,461,401,435,408,380,403,365,402,356,411,315,406,302,416,278,424,274,421,248,425,237,436,232,446,238,451,248,447,266,455,273,462,279,467,302,466,309,473,352,471,362,468,375,470,401,472,424,479,450,484,460,507,468,485,472,476,476,464,471,455,476,444,478,438,480,422,472,410,475,391,473" 
+             class="castle_front_map" 
+             data-passage="interact_with_serelyne" />
+  </svg>
+</div>
+<br><br>
+[[Leave East Wing|castle_map_front_select]]
+<</nobr>>
+
+
+
+
+:: dressing_bloom
+<<nobr>>
+<h3 style="text-align: center;">Royal Dressing Bloom</h3><br>
+<<set $locationImage = setup.ImagePath + 'location/dressing_bloom_img.png'>>
+<div style="position: relative; width: 100%; max-width: 700px; margin: 0 auto; aspect-ratio: 7 / 5;">
+  <img @src="setup.ImagePath +'map/dressing_bloom_map.png'" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" />
+  <svg viewBox="0 0 700 500"
+       preserveAspectRatio="none"
+       style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+    <polygon id="interact_with_veletia" 
+             points="156,487,169,485,174,476,186,479,193,466,200,436,202,402,203,366,202,356,190,346,190,329,177,324,182,297,184,272,195,248,210,221,207,211,206,197,213,187,220,175,231,163,246,158,258,158,275,174,282,187,282,214,288,227,305,246,316,260,296,291,287,296,293,315,293,343,293,377,295,419,297,454,304,476,319,478,330,486,306,489,277,484,276,491,254,496,226,490,214,486,192,492" 
+             class="castle_front_map" 
+             data-passage="interact_with_veletia" />
+  </svg>
+</div>
+<br><br>
+[[Leave Royal Dressing Bloom|castle_map_front_select]]
+<</nobr>>
+
+
+
+:: thrones_mirror
+<<nobr>>
+<h3 style="text-align: center;">Royal Throne Mirror Chamber</h3><br>
+<<set $locationImage = setup.ImagePath + 'location/thrones_mirror_img.png'>>
+<div style="position: relative; width: 100%; max-width: 700px; margin: 0 auto; aspect-ratio: 7 / 5;">
+  <img @src="setup.ImagePath +'map/thrones_mirror_map.png'" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" />
+  <svg viewBox="0 0 700 500"
+       preserveAspectRatio="none"
+       style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+    <polygon id="interact_with_marlec" 
+             points="237,468,252,460,258,449,255,430,244,423,237,424,235,442,216,427,226,375,229,340,227,333,230,322,227,284,220,282,224,261,223,253,230,224,239,217,252,214,258,201,252,180,259,167,269,166,278,167,286,179,282,196,286,205,284,213,301,217,315,223,315,231,322,258,325,279,320,283,315,316,312,329,309,340,323,414,320,423,318,429,311,435,311,458,322,471,312,474,301,462,294,432,284,428,280,421,276,427,269,428,270,459,255,470" 
+             class="castle_front_map" 
+             data-passage="interact_with_marlec" />
+  </svg>
+</div>
+<br><br>
+[[Leave Royal Throne Mirror Chamber|castle_map_front_select]]
+<</nobr>>
+
+
+
+:: great_library
+<<nobr>>
+<h3 style="text-align: center;">Royal Great Library</h3><br>
+<<set $locationImage = setup.ImagePath + 'location/royal_library_img.png'>>
+<div style="position: relative; width: 100%; max-width: 700px; margin: 0 auto; aspect-ratio: 7 / 5;">
+  <img @src="setup.ImagePath +'map/royal_library_map.png'" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" />
+  <svg viewBox="0 0 700 500"
+       preserveAspectRatio="none"
+       style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+    <polygon id="interact_with_anthos" 
+             points="491,478,508,472,516,467,525,445,529,423,534,392,531,379,524,359,528,339,526,332,538,318,538,310,535,304,549,301,555,293,561,287,560,271,563,266,571,260,577,264,581,269,581,278,581,287,590,298,605,305,601,312,613,338,617,347,614,361,611,380,608,394,617,459,630,475,646,482,640,488,632,492,618,488,608,489,603,480,595,476,598,486,590,487,581,478,568,477,561,483,551,486,539,486,545,479,534,479,518,483,507,485" 
+             class="castle_front_map" 
+             data-passage="interact_with_anthos" />
+  </svg>
+</div>
+<br><br>
+[[Leave Great Library|castle_map_front_select]]
+<</nobr>>
+
+
+
+:: royal_kitchen
+<<nobr>>
+<h3 style="text-align: center;">Royal Kitchen</h3><br>
+<<set $locationImage = setup.ImagePath + 'location/royal_kitchen_img.png'>>
+<div style="position: relative; width: 100%; max-width: 700px; margin: 0 auto; aspect-ratio: 7 / 5;">
+  <img @src="setup.ImagePath +'map/royal_kitchen_map.png'" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" />
+  <svg viewBox="0 0 700 500"
+       preserveAspectRatio="none"
+       style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+    <polygon id="interact_with_halda" 
+             points="372,459,384,455,406,458,405,475,409,493,429,492,428,477,429,457,439,434,438,408,435,365,446,358,445,339,429,323,454,312,459,295,450,275,438,258,423,244,414,239,409,222,405,205,394,192,376,190,363,200,362,225,349,242,334,253,315,270,306,282,317,300,331,310,335,319,330,328,319,334,316,349,302,359,309,373,313,385,325,380,322,399,321,412,323,426,321,441,338,451,341,460,351,465,350,476,337,483,345,489,353,492,364,489,372,482" 
+             class="castle_front_map" 
+             data-passage="interact_with_halda" />
+  </svg>
+</div>
+<br><br>
+[[Leave Royal Kitchen|castle_map_front_select]]
+<</nobr>>
+
+
+
+
+:: royal_garden
+<<nobr>>
+<h3 style="text-align: center;">Royal Garden</h3><br>
+<<set $locationImage = setup.ImagePath + 'location/royal_garden_img.png'>>
+<div style="position: relative; width: 100%; max-width: 700px; margin: 0 auto; aspect-ratio: 7 / 5;">
+  <img @src="setup.ImagePath +'map/royal_garden_map.png'" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" />
+  <svg viewBox="0 0 700 500"
+       preserveAspectRatio="none"
+       style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+    <polygon id="interact_with_edran" 
+             points="100,494,100,486,112,480,109,460,99,467,88,459,83,441,83,409,83,381,87,345,81,331,83,319,80,305,74,296,84,248,92,216,103,207,109,203,117,181,121,163,138,154,147,153,155,162,161,179,169,195,174,204,187,213,187,227,192,253,202,275,205,293,199,297,200,318,202,329,192,344,191,357,198,383,205,408,206,424,197,440,189,453,173,455,175,469,185,482,186,488,176,491,165,487,156,477,152,461,140,458,140,471,134,480,122,490,113,497" 
+             class="castle_front_map" 
+             data-passage="interact_with_edran" />
+  </svg>
+</div>
+<br><br>
+[[Leave Royal Garden|castle_map_front_select]]
+<</nobr>>

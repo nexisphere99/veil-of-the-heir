@@ -1,0 +1,44 @@
+:: ingredient_selection
+<<nobr>>>>
+<<if $ingredientChoices >= $maxChoices>>
+	<<speech "malgros">>You have already selected your three ingredients. Go away thats all you getting today<</speech>>
+	<br><br>
+	<<link "Leave Essence Vault">><<goto "castle_map_back_select">><</link>>
+<<else>>
+	<h3 style="text-align: center;">Choose your ingredient (<<= $ingredientChoices>>/<<= $maxChoices>> chosen)</h3>
+    /* <pre><<= JSON.stringify($userItems, null, 2)>></pre> */
+	<div class="item-grid">
+	<<for _key, _data range setup.storeItems>>
+		<<set _current = $userItems[_key]["amount"] || 0>>
+			<div class="item-card">
+            <<capture _key _data>>
+				[img[_data.img]]
+				<<set $reverse_passage_ingredient = "ingredient_selection">>
+				<div class="ingredient_details"><<link _data.name>><<set $selectedIngredient = _key>><<goto "IngredientDetail">><</link>></div>
+				<<link "Pick">>
+					<<set $userItems[_key]["amount"] += _data.value>>
+					<<set $ingredientChoices += 1>>
+					<p>You added 10<<= _data.unit>> of <<= _data.name>>.</p>
+					<<goto "ingredient_selection">>
+				<</link>>
+            <</capture>>
+        </div>
+	<</for>>
+	</div>
+    <br><br>
+	<<link "Leave Essence Vault">><<goto "castle_map_back_select">><</link>>
+<</if>>
+<</nobr>>
+
+:: IngredientDetail
+<<nobr>>
+<<set _item = setup.storeItems[$selectedIngredient]>>
+<h3 style="text-align: center;"><<=_item.name>></h3>
+<div style="text-align: center;" class="ingredients-main-img">[img[_item.img]]</div>
+<div style="font-family: 'Papyrus', serif; font-size: 22px; color: #8b5e3c;">
+<p><<=_item.effect>></p>
+<p><<=_item.description>></p>
+<p>Serving amount: <<=_item.min_amount>><<=_item.unit>></p>
+[[Close the Ingredinet Details|$reverse_passage_ingredient]]
+</div>
+<</nobr>>

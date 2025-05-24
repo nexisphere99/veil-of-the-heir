@@ -1,0 +1,741 @@
+
+
+
+:: interact_with_veletia
+<<nobr>>
+<<set _i to random(0, 19)>>
+<<if _i == 0>>
+<<speech "veletia">>
+Oh, you poor thing those sleeves are a tragedy, and that posture? Criminal. Come in, darling, I’m about to rescue your future.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Can I at least breathe while I’m being saved?
+<</speech>>
+<br>
+
+<<speech "veletia">>
+Only if you're planning to exhale confidence. Now off with the dull, on with the divine!
+<</speech>>
+<br>
+<<elseif _i == 1>>
+<<speech "veletia">>
+Did you bring that tunic from the battlefield or the broom closet? Because either way, it’s not meeting royalty today.
+<</speech>>
+<br>
+
+<<speech "mc">>
+It’s comfortable. Is that such a crime?
+<</speech>>
+<br>
+
+<<speech "veletia">>
+Comfort is for bedchambers, darling. Out here, we command with fabric.
+<</speech>>
+<br>
+<<elseif _i == 2>>
+<<speech "veletia">>
+Today, we drape you in midnight blue. Sensual, mysterious, devastating. Like a rumor in silk.
+<</speech>>
+<br>
+
+<<speech "mc">>
+I was aiming for ‘competent ruler,’ but sure let’s start with ‘rumor in silk.’
+<</speech>>
+<br>
+
+<<speech "veletia">>
+Oh, but a ruler who turns heads rules twice. Trust me.
+<</speech>>
+<br>
+<<elseif _i == 3>>
+<<speech "veletia">>
+Lift your chin, relax your fingers, walk like the world owes you a bow. That’s how queens move.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Feels more like acting than walking.
+<</speech>>
+<br>
+
+<<speech "veletia">>
+Every great performance begins on a stage. Eventually, it becomes who you are.
+<</speech>>
+<br>
+<<elseif _i == 4>>
+<<speech "veletia">>
+This fabric was stitched with moonlight, darling. One twirl and you’ll outshine prophecy itself.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Do I get a sword with that or just stares?
+<</speech>>
+<br>
+
+<<speech "veletia">>
+Why not both? Slay with style, I always say.
+<</speech>>
+<br>
+<<elseif _i == 5>>
+<<speech "veletia">>
+Try this corset. It teaches posture, mystery, and patience all in one wicked squeeze.
+<</speech>>
+<br>
+
+<<speech "mc">>
+I think it just taught me regret.
+<</speech>>
+<br>
+
+<<speech "veletia">>
+Pain is temporary. Beauty? Oh, that’s remembered in paintings.
+<</speech>>
+<br>
+<<elseif _i == 6>>
+<<speech "veletia">>
+There’s power in a perfect fit. Threads that embrace instead of armor that hides.
+<</speech>>
+<br>
+
+<<speech "mc">>
+And what if I’m still figuring out who I am beneath all these threads?
+<</speech>>
+<br>
+
+<<speech "veletia">>
+Then let the fabric show you. Sometimes silk knows before the soul does.
+<</speech>>
+<br>
+<<elseif _i == 7>>
+<<speech "veletia">>
+That sway of your hips was accidental, wasn’t it? Good. It means your body is listening to me.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Or protesting in confusion. Hard to tell with hips.
+<</speech>>
+<br>
+
+<<speech "veletia">>
+Confusion is just transformation in motion. You’re on the right path, my dear.
+<</speech>>
+<br>
+<<elseif _i == 8>>
+<<speech "veletia">>
+I dreamed of you last night in emerald, draped in defiance, with a crown of fire. It was divine.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Sounds dramatic. Do I survive the dream?
+<</speech>>
+<br>
+
+<<speech "veletia">>
+Oh yes. But only after making half the court swoon and the other half burn with envy.
+<</speech>>
+<br>
+<<elseif _i == 9>>
+<<speech "veletia">>
+One last touch… there. Now you’re no longer just a royal you’re a vision.
+<</speech>>
+<br>
+
+<<speech "mc">>
+I’m not sure I recognize myself.
+<</speech>>
+<br>
+
+<<speech "veletia">>
+Good. That means we’ve found something new. Something extraordinary.
+<</speech>>
+<br>
+<<elseif _i == 10>>
+<<speech "veletia">>
+Darling, if eyes don’t follow you across the ballroom like sunflowers chasing light, then I’ve failed you utterly.
+<</speech>>
+<br>
+
+<<speech "mc">>
+I was hoping for grace, not gawking.
+<</speech>>
+<br>
+
+<<speech "veletia">>
+Grace is the art of commanding a gaze without ever begging for it. You’re learning.
+<</speech>>
+<br>
+
+
+<<elseif _i == 11>>
+<<speech "veletia">>
+Mmm, this silk clings like a lover's promise. Tell me, Caelan, are you brave enough to wear temptation itself?
+<</speech>>
+<br>
+
+<<speech "mc">>
+Only if it doesn't whisper too loudly in council meetings.
+<</speech>>
+<br>
+
+<<speech "veletia">>
+Oh, it will whisper. But that’s half the fun power dressed as poetry.
+<</speech>>
+<br>
+<<elseif _i == 12>>
+<<speech "veletia">>
+I see the curve of your shoulders softening beautiful, like dusk melting into night.
+<</speech>>
+<br>
+
+<<speech "mc">>
+You make it sound like I’m vanishing.
+<</speech>>
+<br>
+
+<<speech "veletia">>
+No, darling. You're becoming inevitable.
+<</speech>>
+<br>
+
+
+<<elseif _i == 13>>
+<<speech "veletia">>
+Step, turn, pause your hips are beginning to sing. Now let’s teach them the whole aria.
+<</speech>>
+<br>
+
+<<speech "mc">>
+I swear these heels are a form of warfare.
+<</speech>>
+<br>
+
+<<speech "veletia">>
+Exactly. And you, my dear, are learning to conquer in silence and satin.
+<</speech>>
+<br>
+<<elseif _i == 14>>
+<<speech "veletia">>
+Oh, Caelan… in this gown, you don’t enter a room you rewrite it.
+<</speech>>
+<br>
+
+<<speech "mc">>
+And yet I still feel like I’m playing dress-up.
+<</speech>>
+<br>
+
+<<speech "veletia">>
+Then play it beautifully, until the mirror stops laughing and starts applauding.
+<</speech>>
+<br>
+<<elseif _i == 15>>
+<<speech "veletia">>
+Tell me, sweetling does it thrill you a little, knowing how dangerous you’ll look in velvet and pearl?
+<</speech>>
+<br>
+
+<<speech "mc">>
+Dangerous or ridiculous? I'm never quite sure with you.
+<</speech>>
+<br>
+
+<<speech "veletia">>
+Then you're standing at the perfect edge. Now lean into it.
+<</speech>>
+<br>
+<<elseif _i == 16>>
+<<speech "veletia">>
+A soft touch here, a cinch there oh, if only diplomacy were as easy as corsetry.
+<</speech>>
+<br>
+
+<<speech "mc">>
+At least corsets don’t lie to your face.
+<</speech>>
+<br>
+
+<<speech "veletia">>
+They do, darling. They just lie charmingly.
+<</speech>>
+<br>
+<<elseif _i == 17>>
+<<speech "veletia">>
+Let them whisper, let them stare because the future queen walks on whispers and drowns them in presence.
+<</speech>>
+<br>
+
+<<speech "mc">>
+You make scandal sound like a royal accessory.
+<</speech>>
+<br>
+
+<<speech "veletia">>
+It is, dear. The crown is heavy but the drama? That’s where the sparkle lives.
+<</speech>>
+<br>
+<<elseif _i == 18>>
+<<speech "veletia">>
+A little lace at the wrist, a slit in the right place… balance, my dear, is everything.
+<</speech>>
+<br>
+
+<<speech "mc">>
+This balance feels like standing on a dagger’s point.
+<</speech>>
+<br>
+
+<<speech "veletia">>
+Exactly! Now smile like you enjoy the edge.
+<</speech>>
+<br>
+<<elseif _i == 19>>
+<<speech "veletia">>
+When I’m done with you, even the gods will look twice and wonder whose side you’re on.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Hopefully mine. I could use the divine backup.
+<</speech>>
+<br>
+
+<<speech "veletia">>
+Oh no, darling. You will be the divine backup.
+<</speech>>
+<br>
+<</if>>
+<<if $curr_crotch < 3 && !$female_underwear_1>>
+[[Ask for Female Underwear|female_underwear_1]] | <br><br>
+<<else>>
+You still dont need Female underwear.
+<</if>>
+[[Leave Mistress Veletia Roswyn|dressing_bloom]] |<br><br>
+[[Leave Royal Dressing Bloom|castle_map_front_select]]
+<</nobr>>
+
+
+:: female_underwear_1
+<<nobr>>
+<<set $female_underwear_1 = true>>
+<<speech "veletia">>Ah, my favorite new bloom. So, today’s the day you come to me not as a prince, but as something a little more… delicate?<</speech>><br>
+
+<<speech   "mc">>I… yes. Archmage Moonveil said I’m ready now. I just finished. Now I am having female fold between my legs<</speech>><br>
+
+<<speech "veletia">>Mmm. So the royal garden now has its prettiest flower finally budding between the thighs. I must admit  I’ve been waiting for this.<</speech>><br>
+
+<<speech   "mc">>Waiting for…?<</speech>><br>
+
+[[Move Forth|female_underwear_1_1]]
+<</nobr>>
+
+:: female_underwear_1_1
+<<nobr>>
+Veletia circled me slowly, trailing a finger down my arm.<br><br>
+
+<<speech "veletia">>To see how silk clings to soft, bare femininity. Now, disrobe for me, darling. Everything.<</speech>><br>
+
+<<speech   "mc">>E-everything?<</speech>><br>
+
+<<speech "veletia">>You don’t expect me to measure hips and cheeks and sacred folds through royal armor, do you?<</speech>><br>
+
+I hesitated, then began to undress. My cheeks flushed as cool air kissed new, tender skin.<br><br>
+
+<<speech   "mc">>This is… strange. Exposing myself like this.<</speech>><br>
+
+[[Move Forth|female_underwear_1_2]]
+<</nobr>>
+
+:: female_underwear_1_2
+<<nobr>>
+
+<<speech "veletia">>Not strange. Natural. Beautiful. You're not shedding armor, my dear  you're shedding boyhood.<</speech>><br>
+
+I stood naked. Veletia’s gaze softened, clinical yet reverent.<br><br>
+
+<<speech "veletia">>Turn for me. Slowly.<</speech>><br>
+
+<<speech   "mc">>Like… this?<</speech>><br>
+
+[[Move Forth|female_underwear_1_3]]
+<</nobr>>
+
+:: female_underwear_1_3
+<<nobr>>
+<<speech "veletia">>Mmm, yes. Look at that curve starting to bloom. The potions worked their quiet miracle.<</speech>><br>
+
+<<speech   "mc">>It… tingles when I move. Everything is so sensitive now.<</speech>><br>
+
+<<speech "veletia">>That’s because it’s alive. Hungry for sensation. For silk. For heat.<</speech>><br>
+
+<<speech   "mc">>Mistress, please...<</speech>><br>
+
+[[Move Forth|female_underwear_1_4]]
+<</nobr>>
+
+
+:: female_underwear_1_4
+<<nobr>>
+Veletia knelt behind me, hands finding new hips, warm and sure.<br><br>
+
+<<speech "veletia">>Hips are still shy. But they’ll flare in time. Let me measure.<</speech>><br>
+
+<<speech   "mc">>Your hands are so warm…<</speech>><br>
+
+<<speech "veletia">>You’ll find women warm in all the right places. There. 34 inches… for now.<</speech>><br>
+
+She moved to my front, lifting a soft pink measuring tape around my waist.<br><br>
+
+<<speech "veletia">>Relax your stomach, darling. We want the underwear to kiss, not strangle.<</speech>><br>
+
+[[Move Forth|female_underwear_1_5]]
+<</nobr>>
+
+:: female_underwear_1_5
+<<nobr>>
+
+<<speech   "mc">>It's… hard to relax when you're staring at me like that.<</speech>><br>
+
+<<speech "veletia">>I stare because I admire. This is holy work, Caelan. The birth of a queen.<</speech>><br>
+
+<<speech   "mc">>Do you say that to all your clients?<</speech>><br>
+
+<<speech "veletia">>Only the ones I want to keep measuring again and again.<</speech>><br>
+
+[[Move Forth|female_underwear_1_6]]
+<</nobr>>
+
+:: female_underwear_1_6
+<<nobr>>
+
+She turned to her rack of silks, choosing a blush pink pair trimmed in lace.<br><br>
+
+<<speech "veletia">>This one. The First Silken Secret. Perfect for your debut.<</speech>><br>
+
+<<speech   "mc">>It looks so… small.<</speech>><br>
+
+<<speech "veletia">>That’s the idea. It hugs, not hides.<</speech>><br>
+
+<<speech   "mc">>Will it… fit?<</speech>><br>
+
+[[Move Forth|female_underwear_1_7]]
+<</nobr>>
+
+
+:: female_underwear_1_7
+<<nobr>>
+<<speech "veletia">>Let’s find out, shall we?<</speech>><br>
+
+She held it open. I stepped forward, placing each foot into the silken trap.<br><br>
+
+<<speech   "mc">>Gods… it's soft.<</speech>><br>
+
+<<speech "veletia">>Glide it up slowly. Let it caress you. Savor the contact.<</speech>><br>
+
+I pulled the panties up, the snug pressure a thrilling revelation.<br><br>
+<<set $key_img_path = "mc/figure/" + $userBody["torso"].orig_body + "/" + $userBody["torso"].orig_body + "_" + "bottom_underwear_2.png">>
+/* <<=$key_img_path>> */
+<<set $userBody["bottom_underwear"] to {
+        img: $key_img_path,
+		curr_bottom_underwear: "bottom_underwear_2",
+        curr_body: $userBody["torso"].orig_body
+    	}>>
+
+<<speech   "mc">>Ah…! It’s so… snug.<</speech>><br>
+
+[[Move Forth|female_underwear_1_8]]
+<</nobr>>
+
+
+:: female_underwear_1_8
+<<nobr>>
+<<speech "veletia">>Mmm, feel that? That’s femininity wrapping itself around your most secret self.<</speech>><br>
+
+<<speech   "mc">>It’s… warm. I feel… covered and naked at the same time.<</speech>><br>
+
+<<speech "veletia">>That’s the magic of silk, darling. It doesn’t hide you. It celebrates you.<</speech>><br>
+
+<<speech   "mc">>I think… I like it.<</speech>><br>
+
+[[Move Forth|female_underwear_1_9]]
+<</nobr>>
+
+
+:: female_underwear_1_9
+<<nobr>>
+<<speech "veletia">>Of course you do. Now walk a bit. Let me see how it moves with you.<</speech>><br>
+
+<<speech   "mc">>Walk? Like… around the room?<</speech>><br>
+
+<<speech "veletia">>Exactly. Hips loose. Let the lace know who’s queen.<</speech>><br>
+
+I walked. The panties brushed between my thighs, each step electric.<br><br>
+
+<<speech   "mc">>Oh gods… every step…<</speech>><br>
+
+[[Move Forth|female_underwear_1_10]]
+<</nobr>>
+
+
+:: female_underwear_1_10
+<<nobr>>
+<<speech "veletia">>Tell me what it feels like.<</speech>><br>
+
+<<speech   "mc">>Like… like I’m being stroked. Lightly. Teased.<</speech>><br>
+
+<<speech "veletia">>Now imagine stockings. Corsets. Dresses cut to reveal, not conceal.<</speech>><br>
+
+<<speech   "mc">>I’m not sure I’d survive it.<</speech>><br>
+
+[[Move Forth|female_underwear_1_11]]
+<</nobr>>
+
+
+:: female_underwear_1_11
+<<nobr>>
+<<speech "veletia">>Oh, you will. And you’ll crave it.<</speech>><br>
+
+<<speech   "mc">>Is it normal to feel… aroused?<</speech>><br>
+
+<<speech "veletia">>Perfectly. Your body is new, but it already knows what it wants.<</speech>><br>
+
+<<speech   "mc">>This… this lace on my thighs. It's tickling.<</speech>><br>
+
+[[Move Forth|female_underwear_1_12]]
+<</nobr>>
+
+
+:: female_underwear_1_12
+<<nobr>>
+<<speech "veletia">>It's flirting with you.<</speech>><br>
+
+<<speech   "mc">>My… my new lips feel wet. Is that normal?<</speech>><br>
+
+<<speech "veletia">>That’s your body whispering. Telling you it's ready for pleasures still to come.<</speech>><br>
+
+<<speech   "mc">>Mistress, I’m embarrassed…<</speech>><br>
+
+[[Move Forth|female_underwear_1_13]]
+<</nobr>>
+
+
+:: female_underwear_1_13
+<<nobr>>
+<<speech "veletia">>No, dear. You're radiant. Stand tall. Own that silk like a crown.<</speech>><br>
+
+<<speech   "mc">>I never imagined… it would feel this good.<</speech>><br>
+
+<<speech "veletia">>Transformation is more than potions. It’s sensation. Emotion. Temptation.<</speech>><br>
+
+<<speech   "mc">>And these panties… they’re mine?<</speech>><br>
+
+[[Move Forth|female_underwear_1_14]]
+<</nobr>>
+
+
+:: female_underwear_1_14
+<<nobr>>
+<<speech "veletia">>Of course. The first of many. I’ll craft sets for every occasion. Court. Dance. Private audience.<</speech>><br>
+
+<<speech   "mc">>Private?<</speech>><br>
+
+<<speech "veletia">>For when you wish to tempt a knight… or command a chamber.<</speech>><br>
+
+<<speech   "mc">>You think I could… tempt someone?<</speech>><br>
+
+[[Move Forth|female_underwear_1_15]]
+<</nobr>>
+
+
+:: female_underwear_1_15
+<<nobr>>
+<<speech "veletia">>Darling, you already are. You just haven’t looked in a mirror yet.<</speech>><br>
+
+<<speech   "mc">>Mirror?<</speech>><br>
+
+<<speech "veletia">>Over there. Go look.<</speech>><br>
+
+I stepped in front of the mirror. The silk hugged me like a lover. My reflection stared back  soft, sensual, startlingly new.<br><br>
+
+<<speech   "mc">>That’s… me?<</speech>><br>
+
+[[Move Forth|female_underwear_1_16]]
+<</nobr>>
+
+
+:: female_underwear_1_16
+<<nobr>>
+<<speech "veletia">>Yes. And it’s only the beginning.<</speech>><br>
+
+<<speech   "mc">>I look… pretty.<</speech>><br>
+
+<<speech "veletia">>You look like power cloaked in lace.<</speech>><br>
+
+<<speech   "mc">>My nipples are hard…<</speech>><br>
+
+[[Move Forth|female_underwear_1_17]]
+<</nobr>>
+
+
+:: female_underwear_1_17
+<<nobr>>
+<<speech "veletia">>That’s your body begging for satin.<</speech>><br>
+
+<<speech   "mc">>There’s a hunger building. Not just down there… everywhere.<</speech>><br>
+
+<<speech "veletia">>That’s your femininity waking up, finally unbound.<</speech>><br>
+
+<<speech   "mc">>Can I try another pair?<</speech>><br>
+
+[[Move Forth|female_underwear_1_18]]
+<</nobr>>
+
+
+:: female_underwear_1_18
+<<nobr>>
+<<speech "veletia">>Of course. Here  midnight silk. Barely there cut. Naughty royalty.<</speech>><br>
+
+I slipped them on. Tighter. Riskier. The ache bloomed deeper.<br><br>
+<<set $key_img_path = "mc/figure/" + $userBody["torso"].orig_body + "/" + $userBody["torso"].orig_body + "_" + "bottom_underwear_3.png">>
+/* <<=$key_img_path>> */
+<<set $userBody["bottom_underwear"] to {
+        img: $key_img_path,
+		curr_bottom_underwear: "bottom_underwear_3",
+        curr_body: $userBody["torso"].orig_body
+    	}>>
+
+<<speech   "mc">>Oh gods…<</speech>><br>
+
+<<speech "veletia">>Say it, Caelan. Say how it feels.<</speech>><br>
+
+<<speech   "mc">>Like I want to be touched. Explored.<</speech>><br>
+
+[[Move Forth|female_underwear_1_19]]
+<</nobr>>
+
+
+:: female_underwear_1_19
+<<nobr>>
+<<speech "veletia">>And you will be. But first  more silk.<</speech>><br>
+
+<<speech   "mc">>I didn’t think underwear would make me feel… alive.<</speech>><br>
+
+<<speech "veletia">>You’re not wearing underwear. You’re wearing invitation.<</speech>><br>
+
+<<speech   "mc">>I want to wear this forever.<</speech>><br>
+
+[[Move Forth|female_underwear_1_20]]
+<</nobr>>
+
+
+:: female_underwear_1_20
+<<nobr>>
+<<speech "veletia">>You will. And once the court sees you, they'll kneel to your curves.<</speech>><br>
+
+<<speech   "mc">>Mistress… can you teach me to walk like I deserve this?<</speech>><br>
+
+<<speech "veletia">>Oh, darling. I’ll teach you to glide, to sway, to command with a glance and ruin with a smile.<</speech>><br>
+
+<<speech   "mc">>What about other things?<</speech>><br>
+
+[[Move Forth|female_underwear_1_21]]
+<</nobr>>
+
+
+:: female_underwear_1_21
+<<nobr>>
+<<speech "veletia">>After panties come powder. Then lipstick. Then seduction.<</speech>><br>
+
+<<speech   "mc">>Will I still be me?<</speech>><br>
+
+<<speech "veletia">>You’ll be the truest version of you.<</speech>><br>
+
+<<speech   "mc">>I want that. I want more.<</speech>><br>
+
+[[Move Forth|female_underwear_1_22]]
+<</nobr>>
+
+
+:: female_underwear_1_22
+<<nobr>>
+<<speech "veletia">>Then undress, my flower. Let me dress you again  this time in something daring.<</speech>><br>
+
+<<speech   "mc">>Even more daring?<</speech>><br>
+
+<<speech "veletia">>Royal daring. Court-whisper daring. Let me lace you into a future no one dares to imagine.<</speech>><br>
+
+<<speech   "mc">>What if I enjoy it too much?<</speech>><br>
+
+[[Move Forth|female_underwear_1_23]]
+<</nobr>>
+
+
+:: female_underwear_1_23
+<<nobr>>
+<<speech "veletia">>Then you’re exactly who the kingdom needs.<</speech>><br>
+
+<<speech   "mc">>And what if I want someone to see?<</speech>><br>
+
+<<speech "veletia">>Then we make sure they’re worth the view.<</speech>><br>
+
+<<speech   "mc">>I feel… powerful. Sexy.<</speech>><br>
+
+[[Purple Silk Panty|purple_panty]] |<br><br>
+[[White Slik Panty|white_panty]]
+
+<</nobr>>
+
+
+:: purple_panty
+<<nobr>>
+
+<<set $key_img_path = "mc/figure/" + $userBody["torso"].orig_body + "/" + $userBody["torso"].orig_body + "_" + "bottom_underwear_2.png">>
+/* <<=$key_img_path>> */
+<<set $userBody["bottom_underwear"] to {
+        img: $key_img_path,
+		curr_bottom_underwear: "bottom_underwear_2",
+        curr_body: $userBody["torso"].orig_body
+    	}>>
+<<speech "veletia">>You should. You’re silk and fire.<</speech>><br>
+
+<<speech   "mc">>Will you always be here?<</speech>><br>
+
+<<speech "veletia">>Always. Every lace, every whisper, every new curve… I’ll be here to celebrate.<</speech>><br>
+
+<<speech   "mc">>Then let’s begin.<</speech>><br>
+
+<<speech "veletia">>Welcome, princess. Time to dress the queen within.<</speech>><br>
+<<set $user_stats.gender_Identity -= 4>>
+[[Leave Mistress Veletia Roswyn|dressing_bloom]] |<br><br>
+[[Leave Royal Dressing Bloom|castle_map_front_select]]
+<</nobr>>
+
+
+
+:: white_panty
+<<nobr>>
+
+<<set $key_img_path = "mc/figure/" + $userBody["torso"].orig_body + "/" + $userBody["torso"].orig_body + "_" + "bottom_underwear_3.png">>
+/* <<=$key_img_path>> */
+<<set $userBody["bottom_underwear"] to {
+        img: $key_img_path,
+		curr_bottom_underwear: "bottom_underwear_3",
+        curr_body: $userBody["torso"].orig_body
+    	}>>
+<<speech "veletia">>You should. You’re silk and fire.<</speech>><br>
+
+<<speech   "mc">>Will you always be here?<</speech>><br>
+
+<<speech "veletia">>Always. Every lace, every whisper, every new curve… I’ll be here to celebrate.<</speech>><br>
+
+<<speech   "mc">>Then let’s begin.<</speech>><br>
+
+<<speech "veletia">>Welcome, princess. Time to dress the queen within.<</speech>><br>
+<<set $user_stats.gender_Identity -= 4>>
+[[Leave Mistress Veletia Roswyn|dressing_bloom]] |<br><br>
+[[Leave Royal Dressing Bloom|castle_map_front_select]]
+<</nobr>>

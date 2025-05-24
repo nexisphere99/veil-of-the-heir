@@ -1,0 +1,665 @@
+
+
+
+:: interact_with_serelyne
+<<nobr>>
+<<set _i to random(0, 19)>>
+<<if _i == 0>>
+<<speech "serelyne">>
+Sit straight, shoulders low, voice steady. A queen does not fidget she curates silence like it’s a blade.
+<</speech>>
+<br>
+
+<<speech "mc">>
+You make ruling sound like a performance rather than a birthright.
+<</speech>>
+<br>
+
+<<speech "serelyne">>
+It is both. But only one of those will keep your head above the tide when the court smells weakness.
+<</speech>>
+<br>
+<<elseif _i == 1>>
+<<speech "serelyne">>
+You hesitated before responding to the duke. Hesitation invites doubt, and doubt spreads like plague.
+<</speech>>
+<br>
+
+<<speech "mc">>
+I was trying to be polite, not domineering.
+<</speech>>
+<br>
+
+<<speech "serelyne">>
+Then you must learn the art of command through courtesy. It’s not softness it’s velvet over steel.
+<</speech>>
+<br>
+
+
+<<elseif _i == 2>>
+<<speech "serelyne">>
+Your posture betrays you femininity is not weakness, Caelan. It is the presentation of grace masking calculated control.
+<</speech>>
+<br>
+
+<<speech "mc">>
+So every gesture must be rehearsed?
+<</speech>>
+<br>
+
+<<speech "serelyne">>
+Not rehearsed. Mastered. Spontaneity is for peasants.
+<</speech>>
+<br>
+<<elseif _i == 3>>
+<<speech "serelyne">>
+When a man speaks over you, do not raise your voice. Lower it and make him lean in. That is power.
+<</speech>>
+<br>
+
+<<speech "mc">>
+You really think silence can defeat arrogance?
+<</speech>>
+<br>
+
+<<speech "serelyne">>
+Not just defeat it. Humiliate it. Quiet queens are remembered longer than loud fools.
+<</speech>>
+<br>
+<<elseif _i == 4>>
+<<speech "serelyne">>
+You touched your throat again. Nervous gesture. A princess touches her pearls. A queen touches nothing.
+<</speech>>
+<br>
+
+<<speech "mc">>
+It’s hard to ignore discomfort when I barely feel like myself.
+<</speech>>
+<br>
+
+<<speech "serelyne">>
+Then become someone better. Transformation is not erasure it is refinement.
+<</speech>>
+<br>
+<<elseif _i == 5>>
+<<speech "serelyne">>
+Tell me, Caelan do you want to rule, or merely survive the throne handed to you?
+<</speech>>
+<br>
+
+<<speech "mc">>
+I’m not sure I see the difference yet.
+<</speech>>
+<br>
+
+<<speech "serelyne">>
+Then I suggest you open your eyes. Rulers shape the storm. Survivors drown beneath it.
+<</speech>>
+<br>
+<<elseif _i == 6>>
+<<speech "serelyne">>
+Stop speaking with “I think.” A queen knows. Or pretends to. That’s half the crown.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Pretending feels dishonest.
+<</speech>>
+<br>
+
+<<speech "serelyne">>
+All power is artifice. Only peasants demand authenticity.
+<</speech>>
+<br>
+<<elseif _i == 7>>
+<<speech "serelyne">>
+Today’s lesson is restraint: in gesture, in tone, in vengeance. A queen does not flinch she remembers.
+<</speech>>
+<br>
+
+<<speech "mc">>
+And what if remembering becomes a weight?
+<</speech>>
+<br>
+
+<<speech "serelyne">>
+Then you wear it like a crown. Gracefully, and with your chin high.
+<</speech>>
+<br>
+<<elseif _i == 8>>
+<<speech "serelyne">>
+Your mind is still loud with rebellion. That’s not strength, Caelan it’s wasted noise.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Rebellion is all I’ve known.
+<</speech>>
+<br>
+
+<<speech "serelyne">>
+Then let me teach you the power of quiet defiance calculated, unspoken, undeniable.
+<</speech>>
+<br>
+<<elseif _i == 9>>
+<<speech "serelyne">>
+You are not abandoning your self you are shaping it. Queens are not born, Caelan. They are forged.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Then who am I, once you’ve finished forging me?
+<</speech>>
+<br>
+
+<<speech "serelyne">>
+Someone who survives every room she enters. And commands it by simply existing.
+<</speech>>
+<br>
+<<elseif _i == 10>>
+<<speech "serelyne">>
+You paused when they called you “my lady.” That hesitation is a crack. Close it, or they will pry it open.
+<</speech>>
+<br>
+
+<<speech "mc">>
+It still feels like armor that doesn’t fit.
+<</speech>>
+<br>
+
+<<speech "serelyne">>
+Then wear it until it shapes to you and no one remembers it was ever different.
+<</speech>>
+<br>
+<<elseif _i == 11>>
+<<speech "serelyne">>
+Speak with your eyes before your lips. A glance can cut deeper than a sword.
+<</speech>>
+<br>
+
+<<speech "mc">>
+So now even looking has rules?
+<</speech>>
+<br>
+
+<<speech "serelyne">>
+Everything has rules. But the queen rewrites them once she learns to master her own gaze.
+<</speech>>
+<br>
+<<elseif _i == 12>>
+<<speech "serelyne">>
+The crown does not care who you were. It only rewards who you become.
+<</speech>>
+<br>
+
+<<speech "mc">>
+And if I become someone I don’t recognize?
+<</speech>>
+<br>
+
+<<speech "serelyne">>
+Then you’ve finally succeeded. Ruling demands sacrifice even of the self.
+<</speech>>
+<br>
+<<elseif _i == 13>>
+<<speech "serelyne">>
+Power is not in shouting. It’s in the pause that follows your silence when they wonder what you’re thinking.
+<</speech>>
+<br>
+
+<<speech "mc">>
+But what if they see through it?
+<</speech>>
+<br>
+
+<<speech "serelyne">>
+Then you smile. Let them see but never confirm what’s real. Doubt is its own kind of leash.
+<</speech>>
+<br>
+<<elseif _i == 14>>
+<<speech "serelyne">>
+You cannot lead if you need to be liked. Charm is useful, but respect must be engineered.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Sometimes I still crave approval.
+<</speech>>
+<br>
+
+<<speech "serelyne">>
+Crave results instead. Adoration fades. Control... endures.
+<</speech>>
+<br>
+<<elseif _i == 15>>
+<<speech "serelyne">>
+You carry yourself like a question. A queen is always the answer.
+<</speech>>
+<br>
+
+<<speech "mc">>
+But I still have questions of my own.
+<</speech>>
+<br>
+
+<<speech "serelyne">>
+Then ask them in private. In public, you are certainty. No exceptions.
+<</speech>>
+<br>
+<<elseif _i == 16>>
+<<speech "serelyne">>
+This room will strip you down not your clothes, but your illusions. Are you ready for that?
+<</speech>>
+<br>
+
+<<speech "mc">>
+I don’t know anymore.
+<</speech>>
+<br>
+
+<<speech "serelyne">>
+Good. Doubt is a chisel. Let it carve the falsehoods away.
+<</speech>>
+<br>
+<<elseif _i == 17>>
+<<speech "serelyne">>
+I saw the way you flinched when addressed as “Highness.” That’s not humility it’s refusal.
+<</speech>>
+<br>
+
+<<speech "mc">>
+It’s habit. I’m still learning to accept all this.
+<</speech>>
+<br>
+
+<<speech "serelyne">>
+Then unlearn quickly. The court won’t wait for your comfort. It only devours those who hesitate.
+<</speech>>
+<br>
+<<elseif _i == 18>>
+<<speech "serelyne">>
+You are not being feminized, Caelan. You are being weaponized elegantly.
+<</speech>>
+<br>
+
+<<speech "mc">>
+That’s an unsettling way to put it.
+<</speech>>
+<br>
+
+<<speech "serelyne">>
+Good. The most dangerous weapons are the ones they never see coming.
+<</speech>>
+<br>
+<<elseif _i == 19>>
+<<speech "serelyne">>
+This voice of yours it must become melody and command in equal measure. Practice until words become music with edge.
+<</speech>>
+<br>
+
+<<speech "mc">>
+I still sound like myself.
+<</speech>>
+<br>
+
+<<speech "serelyne">>
+Then it’s time to let yourself evolve into the self you must be. One syllable at a time.
+<</speech>>
+<br>
+<</if>>
+<<if $currentArc["main_arc"] == 6>>
+[[Attend the first session|serelyne_session_1]] |<br><br>
+<</if>>
+[[Leave Lady Serelyne Virellis|east_wing]] |<br><br>
+[[Leave Castle East Wing|castle_map_front_select]]
+<</nobr>>
+
+
+
+:: serelyne_session_1
+<<nobr>>
+The incense clung to the air like secrets rose, myrrh, and something deeper I couldn’t name. 
+The velvet of the chamber in east wing swallowed sound. Shadows stretched long from the candelabras, gilding the room in amber and scarlet.<br><br>
+
+Lady Serelyne stood before me in her usual serenity, hands clasped, posture unnervingly perfect, her silhouette sharp as a dagger sheathed in silk.<br><br>
+
+<<speech "serelyne">>Remove your cloak. The weight of it carries pride, and that is the first burden to go.<</speech>><br>
+
+Her voice was quiet, but it rooted into my spine like an order from the gods. I hesitated.<br><br>
+
+<<speech "serelyne">>You did not hesitate when marching into battle, did you?<</speech>><br>
+
+My fingers found the clasp. I let the cloak fall from my shoulders. 
+It hit the floor with a weight I’d never noticed before. 
+She didn’t look at the garment she looked at me.<br><br>
+
+<<speech "serelyne">>Now the boots. With reverence. Not defiance.<</speech>><br>
+
+[[Move Forth|serelyne_session_1_1]]
+<</nobr>>
+
+:: serelyne_session_1_1
+<<nobr>>
+I knelt, unstrapping each boot slowly, awkwardly aware of how my legs looked under the velvet scrutiny of the room. 
+As I placed them beside the cloak, she stepped forward, her heels clicking softly on the marble in a rhythm that made my heart skip.
+She circled me.<br><br>
+
+<<speech "serelyne">>The belt.<</speech>><br>
+
+Her voice was a whisper just behind my ear. 
+My hands shook slightly as I undid the buckle. 
+The leather slid from my waist like a serpent. I offered it to her.<br><br>
+
+She simply nodded to the run -marked chest behind her.<br><br>
+
+<<speech "serelyne">>You must place it inside. Willingly.<</speech>><br>
+
+I walked barefoot to the chest. 
+It radiated cool, pulsing magic restrained, feminine, hungry. 
+I placed the belt inside, and it sealed itself with a soft sigh of wind.<br><br>
+
+<<speech "serelyne">>Good. Now… the ring. Your signet. Your name.<</speech>><br>
+
+[[Move Forth|serelyne_session_1_2]]
+<</nobr>>
+
+:: serelyne_session_1_2
+<<nobr>>
+
+That one hurt more. I hesitated. She saw it of course she did.<br><br>
+
+<<speech "serelyne">>You will not need it where we are going. You will build a new name with your actions, not your crest.<</speech>><br>
+
+I slipped it from my finger. My hand felt strangely bare. 
+I placed the ring into the chest. It glowed faintly as the lid closed again.<br><br>
+
+<<speech "serelyne">>Look at me.<</speech>><br>
+
+I turned. She was close now closer than before. 
+I could see the faint shimmer of runes etched into her earrings, the gloss of rose oil on her lips.<br><br>
+
+<<speech "serelyne">>Now, undress.<</speech>><br>
+
+<<speech "mc">>I… I thought I already had.<</speech>><br>
+
+[[Move Forth|serelyne_session_1_3]]
+<</nobr>>
+
+:: serelyne_session_1_3
+<<nobr>>
+
+<<speech "serelyne">>No. You’ve removed your symbols. But not your armor.<</speech>><br>
+
+I swallowed. My fingers moved to the buttons of my tunic. 
+Slowly, one by one, I undid them. Her eyes never left my hands.<br><br>
+
+<<speech "serelyne">>Slower. This is not haste. This is unmaking.<</speech>><br>
+
+Each button felt heavier.
+ As the tunic slid off, I felt the cool air kiss my skin. I stood in just my undergarments.<br><br>
+
+She studied me as though I were a specimen.<br><br>
+
+<<speech "serelyne">>Back straight. Hands at your sides. Feet together. Yes… like that.<</speech>><br>
+
+[[Move Forth|serelyne_session_1_4]]
+<</nobr>>
+
+:: serelyne_session_1_4
+<<nobr>>
+
+I adjusted under her gaze.<br><br>
+
+<<speech "serelyne">>You’ve trained your body to command. To take space. I see it in your stance, in the tension of your shoulders. But a queen does not impose. She invites.<</speech>><br>
+
+She circled again, trailing her fingers near me but never quite touching. My skin shivered anyway.<br><br>
+
+<<speech "serelyne">>Posture.<</speech>><br>
+
+I straightened.<br><br>
+
+<<speech "serelyne">>Better.<</speech>><br>
+
+[[Move Forth|serelyne_session_1_5]]
+<</nobr>>
+
+:: serelyne_session_1_5
+<<nobr>>
+
+Then, her hand touched my chin cool, precise and tilted my face upward.<br><br>
+
+<<speech "serelyne">>What do you feel right now?<</speech>><br>
+
+<<speech "mc">>Exposed.<</speech>><br>
+
+<<speech "serelyne">>And?<</speech>><br>
+
+<<speech "mc">>…small.<</speech>><br>
+
+[[Move Forth|serelyne_session_1_6]]
+<</nobr>>
+
+:: serelyne_session_1_6
+<<nobr>>
+
+<<speech "serelyne">>Good. There is power in smallness. In stillness. You will learn that.<</speech>><br>
+
+She gestured to a low stool in front of the mirror.<br><br>
+
+<<speech "serelyne">>Sit. Watch yourself.<</speech>><br>
+
+I obeyed, lowering myself slowly. 
+The mirror reflected my half-naked form broad shoulders, tense jaw, confused eyes. Masculinity, still clinging.<br><br>
+
+She stepped behind me, hands resting on my shoulders. Her nails gently dug in.<br><br>
+
+<<speech "serelyne">>You see a prince. But I see scaffolding. Something ready to be rebuilt.<</speech>><br>
+
+[[Move Forth|serelyne_session_1_7]]
+<</nobr>>
+
+:: serelyne_session_1_7
+<<nobr>>
+
+She leaned down, breath hot against my ear.<br><br>
+
+<<speech "serelyne">>What do you want to see?<</speech>><br>
+
+I didn’t answer. My body ached with uncertainty.<br><br>
+
+She straightened and walked to the chest again. Her fingers hovered over its surface.<br><br>
+
+<<speech "serelyne">>Do you want to know what I see when I look at you now?<</speech>><br>
+
+
+<<speech "serelyne">>A frightened boy, pretending to be a man. 
+A puppet of lineage. But… I also see something soft beneath the stone. Something I could shape.<</speech>><br>
+
+I dared to meet her gaze in the mirror. My throat was dry.<br><br>
+
+[[Move Forth|serelyne_session_1_8]]
+
+<</nobr>>
+
+:: serelyne_session_1_8
+<<nobr>>
+
+<<speech "mc">>I want to be more.<</speech>><br>
+
+<<speech "serelyne">>Then stand.<</speech>><br>
+
+<<speech "serelyne">>Spread your arms. Show me everything. Show me that you trust me enough to be seen.<</speech>><br>
+
+I obeyed, even as shame and heat flushed through me. 
+My arousal twitched, half-stirred by her presence, by the submission. She noticed of course she did.<br><br>
+
+<<speech "serelyne">>Ah. Still ruled by that. How predictable.<</speech>><br>
+
+[[Move Forth|serelyne_session_1_9]]
+<</nobr>>
+
+:: serelyne_session_1_9
+<<nobr>>
+Her fingers brushed the hem of my undergarments.
+
+<<speech "serelyne">>Shall I remove these as well?<</speech>><br>
+
+<<speech "mc">>I…<</speech>><br>
+
+She waited, poised, her expression unreadable.<br><br>
+
+<<speech "mc">>Yes.<</speech>><br>
+
+She slid them down with a slow elegance, baring me completely. I stood, utterly vulnerable.<br><br>
+
+<<speech "serelyne">>Now breathe.<</speech>><br>
+
+[[Move Forth|serelyne_session_1_10]]
+<</nobr>>
+
+:: serelyne_session_1_10
+<<nobr>>
+
+I exhaled shakily. The air felt different on bare skin. My hands twitched to cover myself.<br><br>
+
+<<speech "serelyne">>Don’t. Let yourself be seen.<</speech>><br>
+
+I forced myself to stillness.<br><br>
+
+She stepped back to admire the result.<br><br>
+
+<<speech "serelyne">>Now, tell me: What does this moment feel like?<</speech>><br>
+
+<<speech "mc">>Like… surrender.<</speech>><br>
+
+[[Move Forth|serelyne_session_1_11]]
+<</nobr>>
+
+:: serelyne_session_1_11
+<<nobr>>
+<<speech "serelyne">>And what is the difference between surrender and weakness?<</speech>><br>
+
+<<speech "mc">>One is given. The other is taken.<</speech>><br>
+
+<<speech "serelyne">>Excellent.<</speech>><br>
+
+She circled behind me once more, her voice low and honeyed.<br><br>
+
+<<speech "serelyne">>This body has been taught to lead, to fight, to claim. In time, it will learn how to yield, how to host, how to ache for approval.<</speech>><br>
+
+[[Move Forth|serelyne_session_1_12]]
+<</nobr>>
+
+
+:: serelyne_session_1_12
+<<nobr>>
+Her breath ghosted over my spine.<br><br>
+
+<<speech "serelyne">>And you will beg for more of this.<</speech>><br>
+
+She stepped in front of me again.<br><br>
+
+<<speech "serelyne">>You may dress now. Slowly. You’ve earned back your undergarments. But nothing more.<</speech>><br>
+
+I obeyed. She waited, then gestured for me to kneel again, hands in my lap.<br><br>
+
+<<speech "serelyne">>Now… answer these questions, my little prince.<</speech>><br>
+
+[[Move Forth|serelyne_session_1_13]]
+
+<</nobr>>
+
+:: serelyne_session_1_13
+<<nobr>>
+
+
+Lady Serelyne’s fingers trailed one last time along my jaw before she turned, walking with slow, silken confidence back toward the altar where the rune-marked chest sat sealed. 
+She paused there, her back to me, voice even.<br><br>
+
+<<speech "serelyne">>You have taken the first step, little prince. But disrobing pride is only the beginning.<</speech>><br>
+
+She faced me again, her eyes sharp.<br><br>
+
+<<speech "serelyne">>Your body has only known one path to pleasure one that asserts, conquers, possesses. But a queen must know the other path. The receptive path. The path of yielding.<</speech>><br>
+
+I swallowed. My breath was shallow. She stepped closer, eyes glittering.<br><br>
+
+<<speech "serelyne">>From this night on, you will not seek the pleasure of domination. That privilege is behind you now. Instead, you will learn to receive. To crave surrender not just in posture or word, but in the heat of your own flesh.<</speech>><br>
+
+[[Move Forth|serelyne_session_1_14]]
+<</nobr>>
+
+:: serelyne_session_1_14
+<<nobr>>
+Her voice darkened warm, commanding.<br><br>
+
+<<speech "serelyne">>You will not spill from being stroked or worshipped. You will not rut. You will not command another’s mouth.<</speech>><br>
+
+She stepped into my space.<br><br>
+
+<<speech "serelyne">>Instead, you will kneel. You will ache. And you will learn what it means to be filled, not fulfilled.<</speech>><br>
+
+My stomach tightened. Her presence was absolute.<br><br>
+
+<<speech "serelyne">>To this end, you will begin tonight. Your bodyguard, Torin, has been informed. He is loyal, disciplined, and already bound to your service. Now, he will serve a deeper role one you will not control.<</speech>><br>
+
+[[Move Forth|serelyne_session_1_15]]
+<</nobr>>
+
+:: serelyne_session_1_15
+<<nobr>>
+I stiffened shocked, but not entirely repelled. Confused. Afraid. Aroused. She reached out and traced a single nail along my collarbone.<br><br>
+
+<<speech "serelyne">>He will not kneel to you. You will kneel to him. You will offer. You will be claimed, not as a prince, but as a vessel. You must understand how it feels to receive and crave… without command.<</speech>><br>
+
+I shivered. My voice barely surfaced.<br><br>
+
+<<speech "mc">>You’re serious.<</speech>><br>
+
+Her smile was velvet and venom.<br><br>
+
+<<speech "serelyne">>This is your calling. You must learn to feel through surrender. And you will learn to please… as a woman must please.<</speech>><br>
+
+[[Move Forth|serelyne_session_1_16]]
+
+<</nobr>>
+
+:: serelyne_session_1_16
+<<nobr>>
+She paused, letting the weight of it sink in.<br><br>
+
+<<speech "serelyne">>You will not penetrate. You will not climax from a man’s service. Instead, you will offer yourself. Mouth and body. You will open, not take. Give, not demand.<</speech>><br>
+
+My breath hitched. A flush of something dark and heady rushed through me.<br><br>
+
+<<speech "serelyne">>You will begin with your mouth. You will kneel before him. You will serve him. Not as a prince but as a student. Do you understand?<</speech>><br>
+
+<<speech "mc">>Yes.<</speech>><br>
+
+<<speech "serelyne">>And later… you will offer your rear. It is not yet your womanhood, but it will be your training ground. Your softness will be born there, shaped there.<</speech>><br>
+
+[[Move Forth|serelyne_session_1_17]]
+
+<</nobr>>
+
+:: serelyne_session_1_17
+<<nobr>>
+She stepped away, her hand briefly brushing my chest.<br><br>
+
+<<speech "serelyne">>Torin waits in the his chamber. He has been given instructions. He will not hurt you unless you crave that pain. He will not force you unless you beg to be overpowered. But he will take what you offer… and in doing so, you will feel what it means to be taken.<</speech>><br>
+
+I swallowed hard, body trembling.<br><br>
+
+She moved to the door and opened it, light spilling into the shadowed chamber. She did not look at me when she spoke again.<br><br>
+
+<<speech "serelyne">>Go to him. Let this be your second act of relinquishment.<</speech>><br>
+<<set $currentObjectives = "Go to meet Torin in the his chember, There are sides objectives with transformations with Maera, Nyssa and Marda also. Also Mistress Veletia will able to give you female underwears if needed">>
+<<set $currentArc["main_arc"] = 7>>
+I stood. My legs were weak, my breath unsteady but I obeyed. And as I crossed the threshold into the waiting dark, I knew something had shifted.
+I was no longer the one who sought control.
+I was the one learning how to surrender.<br><br>
+<<set $user_stats.gender_Identity -= 4>>
+<<set $user_stats.dominance_level -= 4>>
+[[Leave Lady Serelyne Virellis|east_wing]] |<br><br>
+[[Leave Castle East Wing|castle_map_front_select]]
+<</nobr>>

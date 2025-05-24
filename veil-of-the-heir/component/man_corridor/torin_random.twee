@@ -1,0 +1,434 @@
+
+
+:: interact_with_torin
+<<nobr>>
+<<set _i to random(0, 20)>>
+<<if _i == 0>>
+<<speech "torin">>
+You shouldn't walk alone at night, even within palace walls. Not all threats carry blades… some wear silk and smiles.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Are you worried for my safety, or jealous of who I might meet in the dark?
+<</speech>>
+<br>
+
+<<speech "torin">>
+Does it matter? Either way, I’ll be the shadow at your back… and the hand that draws steel if they get too close.
+<</speech>>
+<br>
+<<elseif _i == 2>>
+<<speech "torin">>
+I memorized every blind spot in this wing. If someone meant to harm you, they wouldn’t get two paces.
+<</speech>>
+<br>
+
+<<speech "mc">>
+You know my every escape… do you ever think about using them?
+<</speech>>
+<br>
+
+<<speech "torin">>
+Only if it was to take you somewhere no one could ever hurt you again.
+<</speech>>
+<br>
+<<elseif _i == 3>>
+<<speech "torin">>
+When the wind shifts, I can hear every loose hinge in this corridor. I lie awake counting them until I know you’re safe.
+<</speech>>
+<br>
+
+<<speech "mc">>
+You don’t have to protect me every hour of the day.
+<</speech>>
+<br>
+
+<<speech "torin">>
+I don’t have to. I choose to.
+<</speech>>
+<br>
+<<elseif _i == 4>>
+<<speech "torin">>
+Your voice carries differently when you're afraid. Softer. Like you’re trying not to be heard by your own doubts.
+<</speech>>
+<br>
+
+<<speech "mc">>
+You hear that too?
+<</speech>>
+<br>
+
+<<speech "torin">>
+I hear everything about you. Even the things you don’t say.
+<</speech>>
+<br>
+<<elseif _i == 5>>
+<<speech "torin">>
+Someone left a flower at your door. I moved it. Could’ve been a message… or a trap.
+<</speech>>
+<br>
+
+<<speech "mc">>
+And if it was just a gift from someone who cares?
+<</speech>>
+<br>
+
+<<speech "torin">>
+Then I envy them for being bold enough to leave something.
+<</speech>>
+<br>
+<<elseif _i == 6>>
+<<speech "torin">>
+You smiled at a visiting noble today. It unsettled me more than any drawn sword ever has.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Jealousy doesn’t suit your armor, Torin.
+<</speech>>
+<br>
+
+<<speech "torin">>
+Neither does silence when I want to scream that you belong nowhere near people who see you as conquest.
+<</speech>>
+<br>
+<<elseif _i == 7>>
+<<speech "torin">>
+Your cloak slipped during council. You were exposed, and no one moved to fix it but me.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Did that bother you?
+<</speech>>
+<br>
+
+<<speech "torin">>
+It infuriated me. Because I wanted to touch you longer than duty allowed.
+<</speech>>
+<br>
+<<elseif _i == 8>>
+<<speech "torin">>
+I carved a new rune into my vambrace last night. It’s for protection. Yours.
+<</speech>>
+<br>
+
+<<speech "mc">>
+You’ve etched your devotion into steel… but never into words. Why?
+<</speech>>
+<br>
+
+<<speech "torin">>
+Because armor doesn’t betray. Words sometimes do.
+<</speech>>
+<br>
+<<elseif _i == 9>>
+<<speech "torin">>
+When I was ordered to guard you, I thought it was just another post. Then I learned how soft you speak when you're tired.
+<</speech>>
+<br>
+
+<<speech "mc">>
+And that changed your duty?
+<</speech>>
+<br>
+
+<<speech "torin">>
+No. But it changed me.
+<</speech>>
+<br>
+<<elseif _i == 10>>
+<<speech "torin">>
+If I could take your pain into my chest and lock it behind my ribs, I would gladly.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Even if it crushed you?
+<</speech>>
+<br>
+
+<<speech "torin">>
+Especially then. Some burdens are worth being broken for.
+<</speech>>
+<br>
+<<elseif _i == 11>>
+<<speech "torin">>
+When you took that blade during training, I couldn’t breathe. Not because I feared for the heir… but because I imagined a world without your voice in it.
+<</speech>>
+<br>
+
+<<speech "mc">>
+I thought you didn’t care for theatrics.
+<</speech>>
+<br>
+
+<<speech "torin">>
+I don’t. But losing you would be the one drama I couldn’t survive.
+<</speech>>
+<br>
+<<elseif _i == 12>>
+<<speech "torin">>
+They call me a shield. A blade. A ghost of war. But when you touch my arm even in passing I feel more human than I ever have.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Then why do you always step back when I try to get closer?
+<</speech>>
+<br>
+
+<<speech "torin">>
+Because if I step forward… I won’t stop until I’ve claimed more than I should.
+<</speech>>
+<br>
+<<elseif _i == 13>>
+<<speech "torin">>
+I watched you dance tonight. Not because I was on duty but because every step you took made the world quieter. Like even danger held its breath.
+<</speech>>
+<br>
+
+<<speech "mc">>
+You hide behind duty, but you always see me.
+<</speech>>
+<br>
+
+<<speech "torin">>
+I see you more clearly than anyone. That’s what terrifies me.
+<</speech>>
+<br>
+<<elseif _i == 14>>
+<<speech "torin">>
+You once asked me why I never smile. It’s because the only time I feel that kind of warmth… is when I think of you safe, asleep, and unburdened.
+<</speech>>
+<br>
+
+<<speech "mc">>
+That’s a lonely kind of joy.
+<</speech>>
+<br>
+
+<<speech "torin">>
+It is. But loving you in silence is still better than not loving you at all.
+<</speech>>
+<br>
+<<elseif _i == 15>>
+<<speech "torin">>
+You fell asleep at your writing desk. I stood there an hour, watching the candlelight on your face and wondering if I’d ever be brave enough to reach for you.
+<</speech>>
+<br>
+
+<<speech "mc">>
+You could’ve touched me. I wouldn’t have woken.
+<</speech>>
+<br>
+
+<<speech "torin">>
+That’s exactly why I didn’t. Because I would’ve never pulled my hand back.
+<</speech>>
+<br>
+<<elseif _i == 16>>
+<<speech "torin">>
+There are nights when the walls of this castle feel tighter. Like they know the things we’re not allowed to say.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Then say it now. Just once.
+<</speech>>
+<br>
+
+<<speech "torin">>
+I would burn this entire kingdom down if it meant seeing you free and smiling.
+<</speech>>
+<br>
+<<elseif _i == 17>>
+<<speech "torin">>
+Sometimes I wake from dreams where you’re screaming, and I can’t reach you. I check your door five times before the fear fades.
+<</speech>>
+<br>
+
+<<speech "mc">>
+You guard more than just my body, don’t you?
+<</speech>>
+<br>
+
+<<speech "torin">>
+Yes. I guard every broken part of you like it’s sacred. Because to me… it is.
+<</speech>>
+<br>
+<<elseif _i == 18>>
+<<speech "torin">>
+When your voice shakes in council meetings, I grip the hilt of my sword not to strike, but because it keeps me from reaching for your hand.
+<</speech>>
+<br>
+
+<<speech "mc">>
+And if I reached for yours first?
+<</speech>>
+<br>
+
+<<speech "torin">>
+Then gods help me, I wouldn’t let go. Not even for the queen’s command.
+<</speech>>
+<br>
+<<elseif _i == 19>>
+<<speech "torin">>
+If we were born different me noble, you free do you think we’d be allowed to be something more?
+<</speech>>
+<br>
+
+<<speech "mc">>
+I think we already are. Just no one dares say it.
+<</speech>>
+<br>
+
+<<speech "torin">>
+Then let me say it now: I would give up my sword, my post, and my name… just to be yours.
+<</speech>>
+<br>
+<<elseif _i == 20>>
+<<speech "torin">>
+They all look at you like a ruler. But I… I see the scars you hide beneath the silks. The exhaustion in your smile. And the strength in your softness.
+<</speech>>
+<br>
+
+<<speech "mc">>
+And what do you want from me, Torin?
+<</speech>>
+<br>
+
+<<speech "torin">>
+Only what you’re willing to give… and maybe a little more, if you whisper it in the dark.
+<</speech>>
+<br>
+<</if>>
+<<if $currentArc["main_arc"] >= 7 >>
+    [[Ask about the session|torin_sex_1]] |<br><br>
+<</if>>
+[[Leave Torin|torin_chamber_map_select]] |<br><br>
+[[Leave Torin's Chamber|bed_chamber_male]] |<br><br>
+[[Leave Maid Room Corridor|castle_map_back_select]]
+<</nobr>>
+
+
+:: torin_sex_1
+<<nobr>>
+<<speech "torin">>You ready, Caelan? This is new for both of us.<</speech>><br>
+
+<<speech "mc">>I... I don’t know. It feels strange, unfamiliar.<</speech>><br>
+
+<<speech "torin">>It will be. But I’m here. I won’t push you beyond what you can take.<</speech>><br>
+
+<<speech "mc">>Lady Serelyne said... I have to learn... to feel differently.<</speech>><br>
+
+[[Move Forth|torin_sex_1_1]]
+<</nobr>>
+
+:: torin_sex_1_1
+<<nobr>>
+I opened the door and stepped inside.<br><br>
+
+He stood by the hearth, shadows flickering across his bare chest. Most of his armor was gone only the greaves remained, a silent symbol of his duty. His storm-gray eyes locked onto mine.<br><br>
+
+<<speech "mc">>I… I’m here.<</speech>><br><br>
+
+He didn’t answer. He didn’t need to.<br><br>
+
+Torin stepped closer, his calloused fingers brushing along my jaw. I flinched not from fear, but from the sudden charge that surged through me. It wasn’t soft, like a woman’s touch. It was firm. Commanding. Real.<br><br>
+
+Then his lips were on mine, and it was like falling into deep water. I parted my lips instinctively, every muscle tense with confusion. I wasn’t meant for this. I was a prince. I was supposed to command not... melt.<br><br>
+
+But his taste smoke, spice, steel stirred something buried inside me.<br><br>
+
+My knees weakened as his mouth claimed mine again, deeper this time. My cock twitched, smaller than it once was, the potions already thinning my pride. It didn’t feel like mine anymore.<br><br>
+
+I pulled away, panting.<br><br>
+[[Move Forth|torin_sex_1_2]]
+<</nobr>>
+
+
+:: torin_sex_1_2
+<<nobr>>
+<<speech "mc">>I’m not ready for this.<</speech>><br><br>
+
+<<speech "torin">>You came anyway.<</speech>><br><br>
+
+Damn him. He was right.<br><br>
+
+He guided me to the bed, hands on my shoulders. I sank to my knees not in obedience, not yet but something close. Confusion? Curiosity? Desire? I looked up, breath catching as he unfastened his breeches. What I saw made my throat tighten.<br><br>
+
+<<speech "mc">>I’ve never… done this. Not to a man.<</speech>><br><br>
+
+[[Move Forth|torin_sex_1_3]]
+<</nobr>>
+
+
+:: torin_sex_1_3
+<<nobr>>
+<<set $user_stats.gender_Identity -= 4>>
+<<set $user_stats.dominance_level -= 4>>
+<<speech "torin">>You’re learning.<</speech>><br><br>
+
+Learning to be what? A queen? A woman? A plaything?<br><br>
+
+I leaned in, my lips grazing the inside of his thigh. The muscle was taut under my kiss. I moved higher, then lower, letting my tongue trace his skin. I imagined how a woman would do this soft, yielding, eager to please. My face flushed at the thought… but I didn’t stop.<br><br>
+
+This is what she wants. What the Kingdom demands.<br><br>
+
+I licked higher, letting my tongue curl over his hip. My fingers wrapped around his shaft it twitched in my palm. A surge of power ran through me. I brought the head of his cock to my lips, kissed it, then slowly took it into my mouth.<br><br>
+
+It was unfamiliar. Thick. Strange. But not repulsive. Strangely… intoxicating.<br><br>
+
+My jaw strained as I tried to mimic what I’d seen from women in brothels. My tongue swirled around his cock, teasing. He groaned, low and deep.<br><br>
+
+That sound thrilled me. I wanted to hear more. I wanted to please him.<br><br>
+
+His fingers tangled in my hair longer now than it used to be. My body pulsed with heat. My hips shifted with need. My nipples tingled, breasts not yet formed, but the skin was sensitive, swollen. My whole body felt wrong and right at once.<br><br>
+
+I was hard… but not like before. It wasn’t about dominance. It was about… giving. Serving.<br><br>
+
+[[Move Forth|torin_sex_1_4]]
+<</nobr>>
+
+
+:: torin_sex_1_4
+<<nobr>>
+He pulled me to my feet. I stumbled slightly, dazed. My anal hole clenched in anticipation, unbidden. I shouldn’t want this.<br><br>
+
+But I turned, bent forward over the bed, and gripped the sheets.<br><br>
+
+When he pushed into my anal hole, I gasped. My whole body went stiff. The pressure was overwhelming. I bit my lip hard.<br><br>
+
+<<speech "mc">>It hurts.<</speech>><br><br>
+
+<<speech "torin">>You’ll learn. You’ll learn how good it can feel.<</speech>><br><br>
+
+And I did.<br><br>
+
+The pain gave way to warmth, then heat. His thrusts found something deep inside me I hadn’t known existed. My cock tiny now, leaking was forgotten. Useless.<br><br>
+
+My breath came in ragged moans. My spine arched. I began pressing back into him, chasing something I couldn’t name. This wasn’t male pleasure. It wasn’t mine. It was hers.<br><br>
+
+The woman I was becoming.<br><br>
+
+[[Move Forth|torin_sex_1_5]]
+<</nobr>>
+
+
+:: torin_sex_1_5
+<<nobr>>
+I moaned loud, desperate, wanton. My hole clenched around him, greedy. His hands held my hips tight, grounding me in the rhythm. His groans joined mine, echoing in the room like sacred chants.<br><br>
+
+Something inside me cracked. Or maybe something inside me awakened.<br><br>
+
+I wasn’t just letting it happen.<br><br>
+
+I wanted it.<br><br>
+
+
+[[Leave Torin|torin_chamber_map_select]] |<br><br>
+[[Leave Torin's Chamber|bed_chamber_male]] |<br><br>
+[[Leave Maid Room Corridor|castle_map_back_select]]
+<</nobr>>
