@@ -4,6 +4,9 @@ const path = require('path');
 const app = express();
 const PORT = 5001;
 
+// Serve the entire project directory as static
+app.use(express.static(path.join(__dirname)));
+
 // Serve the HTML file
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
