@@ -6,7 +6,7 @@ const PORT = 5000;
 
 // Serve the HTML file
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'veil-of-the-heir/veil-of-the-heir.html'));
+  res.sendFile(path.join(__dirname, 'veil-of-the-heir.html'));
 });
 
 // Start the server
