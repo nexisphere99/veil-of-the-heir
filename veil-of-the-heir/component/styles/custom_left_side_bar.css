@@ -1,0 +1,137 @@
+/* Custom Left Sidebar */
+#custom-left-bar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 22%;
+    height: 100%;
+    background: #190f02;
+    color: #f5deb3;
+    border-right: 4px solid #8b5e3c;
+    font-family: 'Cinzel Decorative', serif;
+    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.5);
+    /* overflow-y: auto; */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Top Section: Player Image & Stats */
+#left-top-container {
+    margin-top: 10px;
+    width: 80%;
+    aspect-ratio: 1 / 1; /* Keeps it square */
+    overflow: hidden;
+    position: relative;
+    background: linear-gradient(#2e1a0f, #1a0e06); /* Dark wood gradient */
+    border: 10px ridge #8b5e3c;  /* Textured outer border */
+    border-radius: 14px;
+    box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.5);
+    align-self: center;
+}
+
+/* Player Image (Left) */
+.player-image {
+    position: absolute;
+    border-radius: 10px;
+    /* background: tan; */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    transform: scale(1.5); /* 200% zoom */
+    margin-top: 10%;
+}
+
+/* Player Stats (Right) */
+#player-stats {
+    width: 62%;
+    height: 88%;
+    padding: 2%;
+    margin-top: 2%;
+    margin-right: 2%;
+    background: rgba(50, 50, 50, 0.8);
+    text-align: center;
+    border-radius: 10px;
+    color: white;
+}
+
+/* Bottom Section: Player Location */
+#player-map {
+    position: absolute;
+    bottom: 10px;
+    width: 94%;
+    /* height: 30%; */
+    margin-left: 2%;
+    margin-right: 2%;
+    text-align: center;
+    padding: 1%;
+    border-radius: 10px;
+    color: white;
+}
+
+#player-map img {
+    width: 100%;
+    height: 100%;
+    border-radius: 9px;
+    border: 10px ridge #8b5e3c;  /* Textured outer border */
+}
+
+
+
+
+/* Overlay background */
+#image-popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(20, 10, 5, 0.8);
+    z-index: 1000;
+}
+
+/* Popup container */
+#image-popup-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 10px solid #7b4e1d;
+    box-shadow: 0 0 30px #000;
+    background: #fffbe6;
+    padding: 10px;
+    max-width: 90%;
+    max-height: 90%;
+    /* border-image: url('your-medieval-frame.png') 30 round; */
+}
+
+/* Popup image */
+#popup-image {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin: auto;
+}
+
+#image-popup-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 28px;
+    color: #7b4e1d;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1001;
+    background-color: #f8e4c4;
+    border: 2px solid #7b4e1d;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    line-height: 28px;
+    box-shadow: 2px 2px 4px #000;
+}
+#image-popup-close:hover {
+    background-color: #e6d2b5;
+}

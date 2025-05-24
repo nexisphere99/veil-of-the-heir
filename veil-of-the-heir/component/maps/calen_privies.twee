@@ -3,7 +3,7 @@
 <<set $locationImage = setup.ImagePath + 'map/mc_bed_chamber_toilet_map.png'>>
 <h3 style="text-align: center;">Caelan Bed Chamber Toilet</h3>
 <div style="position: relative; width: 100%; max-width: 700px; margin: 0 auto; aspect-ratio: 7 / 5;">
-  <img src="veil-of-the-heir/images/map/mc_bed_chamber_toilet_map.png" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" />
+  <img src="images/map/mc_bed_chamber_toilet_map.png" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" />
   <svg viewBox="0 0 700 500"
        preserveAspectRatio="none"
        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">

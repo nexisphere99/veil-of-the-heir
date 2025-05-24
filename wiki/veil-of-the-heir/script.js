@@ -553,21 +553,21 @@ function goTo(passageName) {
             <tbody>
                 <!-- Begin Ingredient Loop -->
                 <tr>
-                <td><img src="veil-of-the-heir/images/ingredients/moonpetal_extract.png" alt="Moonpetal Extract"></td>
+                <td><img src="images/ingredients/moonpetal_extract.png" alt="Moonpetal Extract"></td>
                 <td><strong>Moonpetal Extract</strong><br><em>Silvery nectar harvested from a rare flower that blooms only under full moons.</em></td>
                 <td>tsp</td>
                 <td>1</td>
                 <td>Deeply enhances femininity and emotional openness. Essential for internal rewiring during genital changes and emotional softening during transformation.</td>
                 </tr>
                 <tr>
-                <td><img src="veil-of-the-heir/images/ingredients/velmorian_honey.png" alt="Velmorian Honey"></td>
+                <td><img src="images/ingredients/velmorian_honey.png" alt="Velmorian Honey"></td>
                 <td><strong>Velmorian Honey</strong><br><em>Golden sap from enchanted forest beehives, rich with dream pollen.</em></td>
                 <td>ml</td>
                 <td>10</td>
                 <td>Smooths transitional phases, adds sweetness to scent and aura, used as a base in softening brews.</td>
                 </tr>
                 <tr>
-                <td><img src="veil-of-the-heir/images/ingredients/glowleaf_powder.png" alt="Glowleaf Powder"></td>
+                <td><img src="images/ingredients/glowleaf_powder.png" alt="Glowleaf Powder"></td>
                 <td><strong>Glowleaf Powder</strong><br><em>Crushed leaves of the glowing duskplant, harvested at twilight.</em></td>
                 <td>pinch</td>
                 <td>1</td>

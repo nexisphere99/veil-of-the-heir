@@ -12,7 +12,7 @@
   <h3 style="text-align: center; color: red;">$alert_message</h3>
 <</if>>
 <div style="position: relative; width: 100%; max-width: 700px; margin: 0 auto; aspect-ratio: 7 / 5;">
-  <img src="veil-of-the-heir/images/map/mc_bed_chamber_map.png" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" />
+  <img src="images/map/mc_bed_chamber_map.png" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" />
   <svg viewBox="0 0 700 500"
        preserveAspectRatio="none"
        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
@@ -48,7 +48,7 @@
 <<set $alert_message = "">>
 <<if $currentArc["main_arc"] == 1>>
 <div id="gif_pop_up">
-  <img src="veil-of-the-heir/images/gif/night_1.gif" alt="Sleeping" style="max-width:80%; height:auto; border: 5px solid white;">
+  <img src="images/gif/night_1.gif" alt="Sleeping" style="max-width:80%; height:auto; border: 5px solid white;">
   <button id="closeBtn" style="margin-top: 15px; padding: 10px 20px;">Close</button>
 </div>
 The morning sun filtered through the tall arched windows of the my bedchamber, casting honeyed light across velvet drapes and ornate stone columns. 
@@ -80,10 +80,10 @@ I will become the queen this realm deserves.
 [[Wake Up|mc_bed_chamber]]
 <<else>>
 <div id="gif_pop_up">
-  <img src="veil-of-the-heir/images/gif/night_1.gif" alt="Sleeping" style="max-width:80%; height:auto; border: 5px solid white;">
+  <img src="images/gif/night_1.gif" alt="Sleeping" style="max-width:80%; height:auto; border: 5px solid white;">
   <button id="closeBtn" style="margin-top: 15px; padding: 10px 20px;">Close</button>
 </div>
-[img[veil-of-the-heir/images/location/mc_bed_img.png]]<br><br>
+[img[images/location/mc_bed_img.png]]<br><br>
 <<set $day_number += 1>>
 <<set $riddleLimit = 3>>
 <<set $riddleAttempts = 0>>
@@ -96,7 +96,7 @@ I will become the queen this realm deserves.
 
 :: mc_table
 <<nobr>>
-[img[veil-of-the-heir/images/location/mc_table_img.png]]<br><br>
+[img[images/location/mc_table_img.png]]<br><br>
 Nothing on the table.
 <br><br>
 [[Move Away from Table|mc_bed_chamber]]
@@ -106,7 +106,7 @@ Nothing on the table.
 :: mc_window
 <<nobr>>
 <div id="gif_pop_up">
-  <img src="veil-of-the-heir/images/gif/lake_1.gif" alt="Sleeping" style="max-width:80%; height:auto; border: 5px solid white;">
+  <img src="images/gif/lake_1.gif" alt="Sleeping" style="max-width:80%; height:auto; border: 5px solid white;">
   <button id="closeBtn" style="margin-top: 15px; padding: 10px 20px;">Close</button>
 </div>
 [img[setup.ImagePath+'gif/lake_1.gif']]
@@ -116,7 +116,7 @@ Nothing on the table.
 
 :: mc_wardrobe
 <<nobr>>
-[img[veil-of-the-heir/images/location/mc_wardrobe_img.png]]<br><br>
+[img[images/location/mc_wardrobe_img.png]]<br><br>
 Wardrobe function coming soon.
 <br><br>
 [[Move Away from Wardrobe|mc_bed_chamber]]

@@ -72,7 +72,7 @@
 
 <<set $gold = 100>>
 <<set $health = 100>>
-<<set $veil_of_the_heir = true>>
+<<set $veil_of_the_heir = false>>
 
 <<set $user_stats = {
 	gender_Identity: 95,

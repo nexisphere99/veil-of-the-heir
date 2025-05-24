@@ -447,7 +447,7 @@ $(document).on(':passagerender', function () {
   height: 300px;
   border: 1px solid black;
   margin: 20px auto;
-  background-image: url("veil-of-the-heir/images/train/archery_target.png");
+  background-image: url("images/train/archery_target.png");
   background-size: cover;
   background-position: center;
   overflow: hidden;
