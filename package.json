@@ -1,0 +1,23 @@
+{
+  "name": "veil-of-the-heir",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nexisphere99/veil-of-the-heir.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nexisphere99/veil-of-the-heir/issues"
+  },
+  "homepage": "https://github.com/nexisphere99/veil-of-the-heir#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
