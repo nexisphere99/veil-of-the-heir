@@ -10185,6 +10185,22 @@ royal_bed_chamber
 &lt;/div&gt;
 &lt;br&gt;&lt;br&gt;
 [[Leave Veil Tower|castle_map_back_select]]
+&lt;&lt;elseif $currentArc[&quot;main_arc&quot;] &gt; 6&gt;&gt;
+&lt;h3 style=&quot;text-align: center;&quot;&gt;Moonspire Atelier — Veil Tower&lt;/h3&gt;&lt;br&gt;
+&lt;&lt;set $locationImage = setup.ImagePath + &#39;location/veil_tower_img.png&#39;&gt;&gt;
+&lt;div style=&quot;position: relative; width: 100%; max-width: 700px; margin: 0 auto; aspect-ratio: 7 / 5;&quot;&gt;
+  &lt;img src=&quot;images/map/veil_tower_mage_map.png&quot; style=&quot;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&quot; /&gt;
+  &lt;svg viewBox=&quot;0 0 700 500&quot;
+       preserveAspectRatio=&quot;none&quot;
+       style=&quot;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&quot;&gt;
+    &lt;polygon id=&quot;interact_with_mage_random&quot; 
+             points=&quot;380,446,371,420,384,375,374,357,361,365,360,354,371,348,390,308,399,285,406,268,414,271,420,288,427,301,433,313,445,342,455,351,452,357,446,355,436,367,453,415,446,429,447,439,429,452,405,454,386,453&quot; 
+             class=&quot;castle_front_map&quot; 
+             data-passage=&quot;interact_with_mage_random&quot; /&gt;
+  &lt;/svg&gt;
+&lt;/div&gt;
+&lt;br&gt;&lt;br&gt;
+[[Leave Veil Tower|castle_map_back_select]]
 &lt;&lt;else&gt;&gt;
 &lt;h3 style=&quot;text-align: center;&quot;&gt;Moonspire Atelier — Veil Tower&lt;/h3&gt;&lt;br&gt;
 &lt;&lt;set $locationImage = setup.ImagePath + &#39;location/veil_tower_img.png&#39;&gt;&gt;

@@ -127,6 +127,22 @@ royal_bed_chamber
 </div>
 <br><br>
 [[Leave Veil Tower|castle_map_back_select]]
+<<elseif $currentArc["main_arc"] > 6>>
+<h3 style="text-align: center;">Moonspire Atelier — Veil Tower</h3><br>
+<<set $locationImage = setup.ImagePath + 'location/veil_tower_img.png'>>
+<div style="position: relative; width: 100%; max-width: 700px; margin: 0 auto; aspect-ratio: 7 / 5;">
+  <img src="images/map/veil_tower_mage_map.png" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" />
+  <svg viewBox="0 0 700 500"
+       preserveAspectRatio="none"
+       style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+    <polygon id="interact_with_mage_random" 
+             points="380,446,371,420,384,375,374,357,361,365,360,354,371,348,390,308,399,285,406,268,414,271,420,288,427,301,433,313,445,342,455,351,452,357,446,355,436,367,453,415,446,429,447,439,429,452,405,454,386,453" 
+             class="castle_front_map" 
+             data-passage="interact_with_mage_random" />
+  </svg>
+</div>
+<br><br>
+[[Leave Veil Tower|castle_map_back_select]]
 <<else>>
 <h3 style="text-align: center;">Moonspire Atelier — Veil Tower</h3><br>
 <<set $locationImage = setup.ImagePath + 'location/veil_tower_img.png'>>
