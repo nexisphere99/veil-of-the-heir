@@ -75,9 +75,10 @@
 <<set $veil_of_the_heir = false>>
 
 <<set $user_stats = {
+	gender_appearance: 94.9,
 	gender_Identity: 95,
 	dominance_level: 95,
-	confidence: 50,
+	/* confidence: 50, */
 	leadership: 40,
 	archery_ability: 20,
 	combat_ability: 20,

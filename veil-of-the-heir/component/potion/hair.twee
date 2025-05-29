@@ -85,7 +85,6 @@
 
 :: potion_create_hair
 <<nobr>>
-<<set $user_stats.gender_Identity -= 1>>
 <span style="font-family: 'Papyrus', serif; font-size: 22px; color: #8b5e3c;">
 <b>🧪 Assembling: <span style="color: #5a2e13"><<=$potion.name>></span></b><br>
 <i>Match the exact ingredients to brew this potion:</i><br><br>
@@ -116,6 +115,22 @@
             <<goto "potion_create_hair">>
         <</link>>
         <</capture>>
+        <<capture _item>>
+        <<set $potion_add = "+" + $userItems[_item].min_amount*2 + " " + $userItems[_item].unit>>
+        <<link $potion_add>>
+            <<set $potionInventory[_item] += $userItems[_item].min_amount*2>>
+            <<set $userItems[_item].amount -= $userItems[_item].min_amount*2>>
+            <<goto "potion_create_hair">>
+        <</link>>
+        <</capture>>
+        <<capture _item>>
+        <<set $potion_add = "+" + $userItems[_item].min_amount*5 + " " + $userItems[_item].unit>>
+        <<link $potion_add>>
+            <<set $potionInventory[_item] += $userItems[_item].min_amount*5>>
+            <<set $userItems[_item].amount -= $userItems[_item].min_amount*5>>
+            <<goto "potion_create_hair">>
+        <</link>>
+        <</capture>>
     <</if>>
     <<if $potionInventory[_item] > 0>>
         <<set $potion_add = "-" + $userItems[_item].min_amount + " " + $userItems[_item].unit>>
@@ -125,7 +140,27 @@
                 <<set $userItems[_item].amount += $userItems[_item].min_amount>>
                 <<goto "potion_create_hair">>
             <</link>>
-      <</capture>>
+        <</capture>>
+        <<if $potionInventory[_item] >= $userItems[_item].min_amount*2>>
+        <<set $potion_add = "-" + $userItems[_item].min_amount*2 + " " + $userItems[_item].unit>>
+            <<capture _item>>
+                <<link $potion_add>>
+                    <<set $potionInventory[_item] -= $userItems[_item].min_amount*2>>
+                    <<set $userItems[_item].amount += $userItems[_item].min_amount*2>>
+                    <<goto "potion_create_hair">>
+                <</link>>
+        <</capture>>
+        <</if>>
+        <<if $potionInventory[_item] >= $userItems[_item].min_amount*5>>
+        <<set $potion_add = "-" + $userItems[_item].min_amount*5 + " " + $userItems[_item].unit>>
+            <<capture _item>>
+                <<link $potion_add>>
+                    <<set $potionInventory[_item] -= $userItems[_item].min_amount*5>>
+                    <<set $userItems[_item].amount += $userItems[_item].min_amount*5>>
+                    <<goto "potion_create_hair">>
+                <</link>>
+        <</capture>>
+        <</if>>
     <</if>>
   </div>
 <</for>>
@@ -171,9 +206,14 @@
 
 :: use_success_potion_create_hair
 <<nobr>>
+<<if State.variables.direction == "reverse">>
+    <<set $user_stats.gender_appearance += 1.5>>
+<<else>>
+    <<set $user_stats.gender_appearance -= 1.5>>
+<</if>>
 /* <pre><<= JSON.stringify($userBody.hair, null, 2)>></pre> */
 <<set $userBody.hair.curr_hair = $curr_potion_selected.to>>
-<<set $image_key_hair_path = "mc/figure/" + $userBody.head.curr_body + "/" + $userBody.head.curr_head + "/" + $userBody.head.curr_body + "_" + $userBody.head.curr_head + "_" + $userBody.hair.curr_hair+ ".png">>
+<<set $image_key_hair_path = "mc/figure/" + $userBody.torso.orig_body + "/" + $userBody.head.curr_head + "/" + $userBody.torso.orig_body + "_" + $userBody.head.curr_head + "_" + $userBody.hair.curr_hair+ ".png">>
 /* <<=$image_key_hair_path>> */
 <<set $userBody.hair.img = $image_key_hair_path>>
 <div style="text-align: center;">

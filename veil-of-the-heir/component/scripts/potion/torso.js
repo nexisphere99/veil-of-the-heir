@@ -5,7 +5,7 @@ setup.torso_forward_potions = {
 		from: "ml",
 		to: "mm",
 		name: "Softshape Draught",
-		purpose: "Male Lean Torso ➝ Male Muscular Torso",
+		purpose: "Male Ultra Muscular Torso ➝ Male Muscular Torso",
 		ingredients: {
 			"softroot_essence": 1,
 			"thornberry_juice": 10,
@@ -19,7 +19,7 @@ setup.torso_forward_potions = {
 		from: "mm",
 		to: "ms",
 		name: "Waistbind Elixir",
-		purpose: "Male Muscular Torso ➝ Male Ultra Muscular Torso",
+		purpose: "Male Muscular Torso ➝ Male Lean Torso",
 		ingredients: {
 			"ashfern_flakes": 5,
 			"dragonmoss_resin": 10,
@@ -33,7 +33,7 @@ setup.torso_forward_potions = {
 		from: "ms",
 		to: "fs",
 		name: "Curvature Serum",
-		purpose: "Male Ultra Muscular Torso ➝ Female Slim Torso",
+		purpose: "Male Lean Torso ➝ Female Slim Torso",
 		ingredients: {
 			"vinesilk_essence": 10,
 			"seraphmilk": 15,
@@ -108,7 +108,7 @@ setup.torso_reverse_potions = {
 		from: "fs",
 		to: "ms",
 		name: "Hardshape Serum",
-		purpose: "Female Slim Torso ➝ Male Ultra Muscular Torso",
+		purpose: "Female Slim Torso ➝ Male Lean Torso",
 		ingredients: {
 			"vinesilk_essence": 10,
 			"lilywhisper_nectar": 2,
@@ -122,7 +122,7 @@ setup.torso_reverse_potions = {
 		from: "ms",
 		to: "mm",
 		name: "Masculinize Draught",
-		purpose: "Male Ultra Muscular Torso ➝ Male Muscular Torso",
+		purpose: "Male Lean Torso ➝ Male Muscular Torso",
 		ingredients: {
 			"nullroot_dust": 30,
 			"seraphmilk": 5,
@@ -136,7 +136,7 @@ setup.torso_reverse_potions = {
 		from: "mm",
 		to: "ml",
 		name: "Uncurve Elixir",
-		purpose: "Male Muscular Torso ➝ Male Lean Torso",
+		purpose: "Male Muscular Torso ➝ Male Ultra Muscular Torso",
 		ingredients: {
 			"dragonmoss_resin": 2,
 			"thornberry_juice": 10,

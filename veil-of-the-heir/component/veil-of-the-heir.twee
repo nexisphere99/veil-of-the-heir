@@ -106,6 +106,7 @@ Veil of the Heir
 :: Lean
 <<nobr>>
 <<set $user_stats.gender_Identity = 60>>
+<<set $user_stats.gender_appearance = 64.5>>
 <<set $user_stats.dominance_level = 60>>
 <div class="item-grid">
     <br>
@@ -179,6 +180,7 @@ In public mode only the muscular body type is available.
 :: Muscular
 <<nobr>>
 <<set $user_stats.gender_Identity = 80>>
+<<set $user_stats.gender_appearance = 80>>
 <<set $user_stats.dominance_level = 80>>
 <div class="item-grid">
     <br>
@@ -245,6 +247,7 @@ In public mode only the muscular body type is available.
 :: Ultra Muscular
 <<nobr>>
 <<set $user_stats.gender_Identity = 100>>
+<<set $user_stats.gender_appearance = 94.9>>
 <<set $user_stats.dominance_level = 100>>
 <div class="item-grid">
     <br>

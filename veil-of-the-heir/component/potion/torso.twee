@@ -85,7 +85,6 @@
 
 :: potion_create_torso
 <<nobr>>
-<<set $user_stats.gender_Identity -= 2>>
 <span style="font-family: 'Papyrus', serif; font-size: 22px; color: #8b5e3c;">
 <b>🧪 Assembling: <span style="color: #5a2e13"><<=$potion.name>></span></b><br>
 <i>Match the exact ingredients to brew this potion:</i><br><br>
@@ -116,6 +115,22 @@
             <<goto "potion_create_torso">>
         <</link>>
         <</capture>>
+        <<capture _item>>
+        <<set $potion_add = "+" + $userItems[_item].min_amount*2 + " " + $userItems[_item].unit>>
+        <<link $potion_add>>
+            <<set $potionInventory[_item] += $userItems[_item].min_amount*2>>
+            <<set $userItems[_item].amount -= $userItems[_item].min_amount*2>>
+            <<goto "potion_create_torso">>
+        <</link>>
+        <</capture>>
+        <<capture _item>>
+        <<set $potion_add = "+" + $userItems[_item].min_amount*5 + " " + $userItems[_item].unit>>
+        <<link $potion_add>>
+            <<set $potionInventory[_item] += $userItems[_item].min_amount*5>>
+            <<set $userItems[_item].amount -= $userItems[_item].min_amount*5>>
+            <<goto "potion_create_torso">>
+        <</link>>
+        <</capture>>
     <</if>>
     <<if $potionInventory[_item] > 0>>
         <<set $potion_add = "-" + $userItems[_item].min_amount + " " + $userItems[_item].unit>>
@@ -125,7 +140,27 @@
                 <<set $userItems[_item].amount += $userItems[_item].min_amount>>
                 <<goto "potion_create_torso">>
             <</link>>
-      <</capture>>
+        <</capture>>
+        <<if $potionInventory[_item] >= $userItems[_item].min_amount*2>>
+        <<set $potion_add = "-" + $userItems[_item].min_amount*2 + " " + $userItems[_item].unit>>
+            <<capture _item>>
+                <<link $potion_add>>
+                    <<set $potionInventory[_item] -= $userItems[_item].min_amount*2>>
+                    <<set $userItems[_item].amount += $userItems[_item].min_amount*2>>
+                    <<goto "potion_create_torso">>
+                <</link>>
+        <</capture>>
+        <</if>>
+        <<if $potionInventory[_item] >= $userItems[_item].min_amount*5>>
+        <<set $potion_add = "-" + $userItems[_item].min_amount*5 + " " + $userItems[_item].unit>>
+            <<capture _item>>
+                <<link $potion_add>>
+                    <<set $potionInventory[_item] -= $userItems[_item].min_amount*5>>
+                    <<set $userItems[_item].amount += $userItems[_item].min_amount*5>>
+                    <<goto "potion_create_torso">>
+                <</link>>
+        <</capture>>
+        <</if>>
     <</if>>
   </div>
 <</for>>
@@ -171,6 +206,11 @@
 
 :: use_success_potion_create_torso
 <<nobr>>
+<<if State.variables.direction == "reverse">>
+    <<set $user_stats.gender_appearance += 2.5>>
+<<else>>
+    <<set $user_stats.gender_appearance -= 2.5>>
+<</if>>
 /* <pre><<= JSON.stringify($userBody, null, 2)>></pre> */
 <<set $userBody.left_leg.orig_body = $curr_potion_selected.to>>
 <<set $userBody.right_leg.orig_body = $curr_potion_selected.to>>

@@ -154,6 +154,12 @@ background-color: rgba(20, 20, 30, 0.95); border: 2px solid #aaa; border-radius:
         </div>
       <</if>>
 
+      <<if _key == "gender_appearance">>
+        <div style="display: flex; justify-content: space-between; font-size: 0.75em; color: #aaa;">
+          <span>Feminine</span><span>Masculine</span>
+        </div>
+      <</if>>
+
     </div>
   <</for>>
 </div>
