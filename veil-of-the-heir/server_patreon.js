@@ -4,9 +4,14 @@ const path = require('path');
 const app = express();
 const PORT = 5002;
 
-// Middleware: Allow only users coming from Patreon
+// Middleware: Allow only users coming from Patreon for non-static file requests
 app.use((req, res, next) => {
   const referer = req.get('Referer') || '';
+
+  // Allow static files to be served without checking Referer
+  if (req.url.startsWith('/static/') || req.url.match(/\.(css|js|png|jpg|jpeg|gif|svg)$/)) {
+    return next();
+  }
 
   // Allow if referer contains "patreon.com"
   if (referer.includes('patreon.com')) {
