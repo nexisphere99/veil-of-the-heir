@@ -2,7 +2,6 @@
 
 :: right_leg
 <<nobr>>
-<<set $user_stats.gender_Identity -= 1>>
 <<set $curr_potion = setup.leg_forward_potions>>
 /* <pre><<=JSON.stringify($curr_potion, null, 2)>></pre> */
 <<if State.variables.direction == "reverse">>
@@ -62,7 +61,7 @@
     <<else>>
         <p style="color: green;">
         You have enough <<=$userItems[_key].name>>. You need <<=$ingredient[_key].needed>> 
-        <<=$userItems[_key].unit>>, you have only <<=$ingredient[_key].amount>> <<=$userItems[_key].unit>>.</p>
+        <<=$userItems[_key].unit>>, you have <<=$ingredient[_key].amount>> <<=$userItems[_key].unit>>. It is more than enough!!</p>
     <</if>>
 <</for>>
 <<if $currentArc["main_arc"] == 3>>
@@ -88,7 +87,7 @@
 
 :: potion_create_right_leg
 <<nobr>>
-
+<<set $user_stats.gender_Identity -= 1>>
 <span style="font-family: 'Papyrus', serif; font-size: 22px; color: #8b5e3c;">
 <b>🧪 Assembling: <span style="color: #5a2e13"><<=$potion.name>></span></b><br>
 <i>Match the exact ingredients to brew this potion:</i><br><br>
@@ -172,7 +171,7 @@
 [[Move Forth|$next_passage]]
 <</nobr>>
 
-::use_success_potion_create_right_leg
+:: use_success_potion_create_right_leg
 <<nobr>>
 /* <<=>> */
 /* <pre><<= JSON.stringify($userBody.right_leg, null, 2)>></pre> */

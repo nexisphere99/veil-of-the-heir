@@ -1,10 +1,13 @@
 
 :: castle_map_back_select
 <<nobr>>
-<<if $user_stats.energy >= 10>>
+<<if $user_stats.energy >= 10 && !$coming_from_chamber>>
   <<set $user_stats.energy -= 10>>
-<<elseif $user_stats.energy > 0>>
+<<elseif $user_stats.energy > 0 && !$coming_from_chamber>>
   <<set $user_stats.energy = 0>>
+<</if>>
+<<if $coming_from_chamber>>
+  <<set $coming_from_chamber = false>>
 <</if>>
 <<if $user_stats.energy < 10>>
   <<set $alert_message = "Your Energy is very Low. Need to sleep">>

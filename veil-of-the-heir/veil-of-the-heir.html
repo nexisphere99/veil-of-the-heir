@@ -151,6 +151,7 @@ var LZString=function(){var r=String.fromCharCode,o="ABCDEFGHIJKLMNOPQRSTUVWXYZa
 .character-text {
     font-size: 18px;
     line-height: 1.5;
+	padding-right: 20px;
 }
 
 /* Optional medieval decoration */
@@ -351,6 +352,30 @@ var LZString=function(){var r=String.fromCharCode,o="ABCDEFGHIJKLMNOPQRSTUVWXYZa
 }
 .edran::after {
 	content: "🌿";
+	position: absolute;
+	top: -12px;
+	right: -12px;
+	background-color: #f5f0dc;
+	border: 2px solid #a58b5c;
+	border-radius: 50%;
+	padding: 5px;
+	font-size: 18px;
+	box-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+}
+.torin::after {
+	content: "🛡️";
+	position: absolute;
+	top: -12px;
+	right: -12px;
+	background-color: #f5f0dc;
+	border: 2px solid #a58b5c;
+	border-radius: 50%;
+	padding: 5px;
+	font-size: 18px;
+	box-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+}
+.jeral::after {
+	content: "📘";
 	position: absolute;
 	top: -12px;
 	right: -12px;
@@ -3150,7 +3175,7 @@ setup.hand_forward_potions = {
 		from: "ml",
 		to: "mm",
 		name: "Silkweave Tincture",
-		purpose: "Male Lean Hands ➝ Male Muscular Hands",
+		purpose: "Male Ultra Muscular Hands ➝ Male Muscular Hands",
 		ingredients: {
 			"softroot_essence": 1,
 			"starblossom_pollen": 1,
@@ -3164,7 +3189,7 @@ setup.hand_forward_potions = {
 		from: "mm",
 		to: "ms",
 		name: "Fingerspring Draught",
-		purpose: "Male Muscular Hands ➝ Male Ultra Muscular Hands",
+		purpose: "Male Muscular Hands ➝ Male Lean Hands",
 		ingredients: {
 			"glowleaf_powder": 1,
 			"velvetgrove_essence": 2,
@@ -3178,7 +3203,7 @@ setup.hand_forward_potions = {
 		from: "ms",
 		to: "fs",
 		name: "Delicaflow Elixir",
-		purpose: "Male Ultra Muscular Hands ➝ Female Slim Hands",
+		purpose: "Male Lean Hands ➝ Female Slim Hands",
 		ingredients: {
 			"seraphmilk": 10,
 			"feylace_petal": 1,
@@ -3252,7 +3277,7 @@ setup.hand_reverse_potions = {
 		from: "fs",
 		to: "ms",
 		name: "Roughenstride Elixir",
-		purpose: "Female Slim Hands ➝ Male Ultra Muscular Hands",
+		purpose: "Female Slim Hands ➝ Male Lean Hands",
 		ingredients: {
 			"glowleaf_powder": 1,
 			"frostvine_elixir": 30,
@@ -3266,7 +3291,7 @@ setup.hand_reverse_potions = {
 		from: "ms",
 		to: "mm",
 		name: "Gripstone Infusion",
-		purpose: "Male Ultra Muscular Hands ➝ Muscular Male Hands",
+		purpose: "Male Lean Hands ➝ Muscular Male Hands",
 		ingredients: {
 			"dragonmoss_resin": 2,
 			"frostvine_elixir": 5,
@@ -3280,7 +3305,7 @@ setup.hand_reverse_potions = {
 		from: "mm",
 		to: "ml",
 		name: "Ironbark Serum",
-		purpose: "Muscular Male Hands ➝ Male Lean Hands",
+		purpose: "Muscular Male Hands ➝ Male Ultra Muscular Hands",
 		ingredients: {
 			"nullroot_dust": 1,
 			"ashfern_flakes": 1,
@@ -3449,7 +3474,7 @@ setup.leg_forward_potions = {
 		from: "ml",
 		to: "mm",
 		name: "Silkenstride Draught",
-		purpose: "Male Lean Legs ➝ Male Muscular Legs",
+		purpose: "Male Ultra Muscular Legs ➝ Male Muscular Legs",
 		ingredients: {
 			"glowleaf_powder": 2,
 			"thornberry_juice": 10,
@@ -3463,7 +3488,7 @@ setup.leg_forward_potions = {
 		from: "mm",
 		to: "ms",
 		name: "Velvetfoot Elixir",
-		purpose: "Male Muscular Legs ➝ Male Ultra Muscular Legs",
+		purpose: "Male Muscular Legs ➝ Male Lean Legs",
 		ingredients: {
 			"starblossom_pollen": 2,
 			"dragonmoss_resin": 2,
@@ -3477,7 +3502,7 @@ setup.leg_forward_potions = {
 		from: "ms",
 		to: "fs",
 		name: "Languidstep Serum",
-		purpose: "Male Ultra Muscular Legs ➝ Female Slim Legs",
+		purpose: "Male Lean Legs ➝ Female Slim Legs",
 		ingredients: {
 			"moonpetal_extract": 4,
 			"softroot_essence": 2,
@@ -3551,7 +3576,7 @@ setup.leg_reverse_potions = {
 		from: "fs",
 		to: "ms",
 		name: "Ironstep Tonic",
-		purpose: "Female Slim Legs ➝ Male Ultra Muscular Legs",
+		purpose: "Female Slim Legs ➝ Male Lean Legs",
 		ingredients: {
 			"dragonmoss_resin": 3,
 			"ashfern_flakes": 1,
@@ -3565,7 +3590,7 @@ setup.leg_reverse_potions = {
 		from: "ms",
 		to: "mm",
 		name: "Hearthstride Mixture",
-		purpose: "Male Ultra Muscular Legs ➝ Male Muscular Legs",
+		purpose: "Male Lean Legs ➝ Male Muscular Legs",
 		ingredients: {
 			"velvetgrove_essence": 2,
 			"thornberry_juice": 10,
@@ -3579,7 +3604,7 @@ setup.leg_reverse_potions = {
 		from: "mm",
 		to: "ml",
 		name: "Brawnwalk Elixir",
-		purpose: "Male Muscular Legs ➝ Male Lean Legs",
+		purpose: "Male Muscular Legs ➝ Male Ultra Muscular Legs",
 		ingredients: {
 			"glowleaf_powder": 4,
 			"nightshade_bloom": 3,
@@ -5224,7 +5249,7 @@ Most nobles fear calluses. You should earn them. They’re proof of effort.
 &lt;br&gt;
 
 &lt;&lt;speech &quot;mc&quot;&gt;&gt;
-And here I was hoping my manicure might survive this week.
+And here I was hoping my nice soft fingers might survive this week.
 &lt;&lt;/speech&gt;&gt;
 &lt;br&gt;
 
@@ -9806,13 +9831,14 @@ Only what you’re willing to give… and maybe a little more, if you whisper it
 &lt;&lt;/speech&gt;&gt;
 &lt;br&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;if $currentArc[&quot;main_arc&quot;] &gt;= 7 &gt;&gt;
+&lt;&lt;if $currentArc[&quot;main_arc&quot;] &gt;= 7 &amp;&amp; !$torin_sex_1&gt;&gt;
     [[Ask about the session|torin_sex_1]] |&lt;br&gt;&lt;br&gt;
 &lt;&lt;/if&gt;&gt;
 [[Leave Torin|torin_chamber_map_select]] |&lt;br&gt;&lt;br&gt;
 [[Leave Torin&#39;s Chamber|bed_chamber_male]] |&lt;br&gt;&lt;br&gt;
 [[Leave Maid Room Corridor|castle_map_back_select]]
 &lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="153" name="torin_sex_1" tags="" position="350,1975" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;set $torin_sex_1 = true&gt;&gt;
 &lt;&lt;speech &quot;torin&quot;&gt;&gt;You ready, Caelan? This is new for both of us.&lt;&lt;/speech&gt;&gt;&lt;br&gt;
 
 &lt;&lt;speech &quot;mc&quot;&gt;&gt;I... I don’t know. It feels strange, unfamiliar.&lt;&lt;/speech&gt;&gt;&lt;br&gt;
@@ -9854,8 +9880,8 @@ He guided me to the bed, hands on my shoulders. I sank to my knees not in obedie
 
 [[Move Forth|torin_sex_1_3]]
 &lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="156" name="torin_sex_1_3" tags="" position="725,1975" size="100,100">&lt;&lt;nobr&gt;&gt;
-&lt;&lt;set $user_stats.gender_Identity -= 4&gt;&gt;
-&lt;&lt;set $user_stats.dominance_level -= 4&gt;&gt;
+&lt;&lt;set $user_stats.gender_Identity -= 3&gt;&gt;
+&lt;&lt;set $user_stats.dominance_level -= 3&gt;&gt;
 &lt;&lt;speech &quot;torin&quot;&gt;&gt;You’re learning.&lt;&lt;/speech&gt;&gt;&lt;br&gt;&lt;br&gt;
 
 Learning to be what? A queen? A woman? A plaything?&lt;br&gt;&lt;br&gt;
@@ -9947,9 +9973,10 @@ I wanted it.&lt;br&gt;&lt;br&gt;
   &lt;/svg&gt;
 &lt;/div&gt;
 &lt;br&gt;
+&lt;&lt;set $coming_from_chamber = true&gt;&gt;
 [[Leave Bed Chamber|castle_map_back_select]]
 &lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="160" name="mc_bed" tags="" position="1225,1975" size="100,100">&lt;&lt;nobr&gt;&gt;
-&lt;&lt;set $user_stats.energy = 60&gt;&gt;
+&lt;&lt;set $user_stats.energy = 70&gt;&gt;
 &lt;&lt;set $alert_message = &quot;&quot;&gt;&gt;
 &lt;&lt;if $currentArc[&quot;main_arc&quot;] == 1&gt;&gt;
 &lt;div id=&quot;gif_pop_up&quot;&gt;
@@ -10063,10 +10090,13 @@ Wardrobe function coming soon.
 [[Leave Privies|mc_bed_chamber]] |
 [[Move Away from Toilet|mc_bed_chamber_toilet]]
 &lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="167" name="castle_map_back_select" tags="" position="850,2100" size="100,100">&lt;&lt;nobr&gt;&gt;
-&lt;&lt;if $user_stats.energy &gt;= 10&gt;&gt;
+&lt;&lt;if $user_stats.energy &gt;= 10 &amp;&amp; !$coming_from_chamber&gt;&gt;
   &lt;&lt;set $user_stats.energy -= 10&gt;&gt;
-&lt;&lt;elseif $user_stats.energy &gt; 0&gt;&gt;
+&lt;&lt;elseif $user_stats.energy &gt; 0 &amp;&amp; !$coming_from_chamber&gt;&gt;
   &lt;&lt;set $user_stats.energy = 0&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $coming_from_chamber&gt;&gt;
+  &lt;&lt;set $coming_from_chamber = false&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;if $user_stats.energy &lt; 10&gt;&gt;
   &lt;&lt;set $alert_message = &quot;Your Energy is very Low. Need to sleep&quot;&gt;&gt;
@@ -13312,7 +13342,6 @@ Aye, by the spirit of bad taste. But you pulled it off  like a peacock in a swor
 [[Leave Stable Keeper|stable]] |&lt;br&gt;&lt;br&gt;
 [[Leave Stable|castle_map_back_select]]
 &lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="240" name="chest" tags="" position="1225,2975" size="100,100">&lt;&lt;nobr&gt;&gt;
-&lt;&lt;set $user_stats.gender_Identity -= 2&gt;&gt;
 &lt;&lt;set $curr_potion = setup.chest_forward_potions&gt;&gt;
 &lt;&lt;if State.variables.direction == &quot;reverse&quot;&gt;&gt;
     &lt;&lt;set $curr_potion = setup.chest_reverse_potions&gt;&gt;
@@ -13370,7 +13399,7 @@ Aye, by the spirit of bad taste. But you pulled it off  like a peacock in a swor
     &lt;&lt;else&gt;&gt;
         &lt;p style=&quot;color: green;&quot;&gt;
         You have enough &lt;&lt;=$userItems[_key].name&gt;&gt;. You need &lt;&lt;=$ingredient[_key].needed&gt;&gt; 
-        &lt;&lt;=$userItems[_key].unit&gt;&gt;, you have only &lt;&lt;=$ingredient[_key].amount&gt;&gt; &lt;&lt;=$userItems[_key].unit&gt;&gt;.&lt;/p&gt;
+        &lt;&lt;=$userItems[_key].unit&gt;&gt;, you have &lt;&lt;=$ingredient[_key].amount&gt;&gt; &lt;&lt;=$userItems[_key].unit&gt;&gt;. It is more than enough!!&lt;/p&gt;
     &lt;&lt;/if&gt;&gt;
 &lt;&lt;/for&gt;&gt;
 &lt;&lt;if $currentArc[&quot;main_arc&quot;] == 3&gt;&gt;
@@ -13392,7 +13421,7 @@ Aye, by the spirit of bad taste. But you pulled it off  like a peacock in a swor
 &lt;&lt;/for&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="241" name="potion_create_chest" tags="" position="100,3100" size="100,100">&lt;&lt;nobr&gt;&gt;
-
+&lt;&lt;set $user_stats.gender_Identity -= 2&gt;&gt;
 &lt;span style=&quot;font-family: &#39;Papyrus&#39;, serif; font-size: 22px; color: #8b5e3c;&quot;&gt;
 &lt;b&gt;🧪 Assembling: &lt;span style=&quot;color: #5a2e13&quot;&gt;&lt;&lt;=$potion.name&gt;&gt;&lt;/span&gt;&lt;/b&gt;&lt;br&gt;
 &lt;i&gt;Match the exact ingredients to brew this potion:&lt;/i&gt;&lt;br&gt;&lt;br&gt;
@@ -14839,7 +14868,6 @@ He sighs. &quot;I thought I&#39;d feel powerful. Instead, I feel... swallowed.&l
 &lt;&lt;speech &quot;thalara&quot;&gt;&gt;Then say it with your chest. It listens.&lt;&lt;/speech&gt;&gt;&lt;br&gt;
 [[I feel the potion working in my breast|use_success_potion_create_chest]]
 &lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="393" name="crotch" tags="" position="350,4975" size="100,100">&lt;&lt;nobr&gt;&gt;
-&lt;&lt;set $user_stats.gender_Identity -= 2&gt;&gt;
 &lt;&lt;set $curr_potion = setup.crotch_forward_potions&gt;&gt;
 &lt;&lt;if State.variables.direction == &quot;reverse&quot;&gt;&gt;
     &lt;&lt;set $curr_potion = setup.crotch_reverse_potions&gt;&gt;
@@ -14897,7 +14925,7 @@ He sighs. &quot;I thought I&#39;d feel powerful. Instead, I feel... swallowed.&l
     &lt;&lt;else&gt;&gt;
         &lt;p style=&quot;color: green;&quot;&gt;
         You have enough &lt;&lt;=$userItems[_key].name&gt;&gt;. You need &lt;&lt;=$ingredient[_key].needed&gt;&gt; 
-        &lt;&lt;=$userItems[_key].unit&gt;&gt;, you have only &lt;&lt;=$ingredient[_key].amount&gt;&gt; &lt;&lt;=$userItems[_key].unit&gt;&gt;.&lt;/p&gt;
+        &lt;&lt;=$userItems[_key].unit&gt;&gt;, you have &lt;&lt;=$ingredient[_key].amount&gt;&gt; &lt;&lt;=$userItems[_key].unit&gt;&gt;. It is more than enough!!&lt;/p&gt;
     &lt;&lt;/if&gt;&gt;
 &lt;&lt;/for&gt;&gt;
 &lt;&lt;if $currentArc[&quot;main_arc&quot;] == 3&gt;&gt;
@@ -14919,7 +14947,7 @@ He sighs. &quot;I thought I&#39;d feel powerful. Instead, I feel... swallowed.&l
 &lt;&lt;/for&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="394" name="potion_create_crotch" tags="" position="475,4975" size="100,100">&lt;&lt;nobr&gt;&gt;
-
+&lt;&lt;set $user_stats.gender_Identity -= 2&gt;&gt;
 &lt;span style=&quot;font-family: &#39;Papyrus&#39;, serif; font-size: 22px; color: #8b5e3c;&quot;&gt;
 &lt;b&gt;🧪 Assembling: &lt;span style=&quot;color: #5a2e13&quot;&gt;&lt;&lt;=$potion.name&gt;&gt;&lt;/span&gt;&lt;/b&gt;&lt;br&gt;
 &lt;i&gt;Match the exact ingredients to brew this potion:&lt;/i&gt;&lt;br&gt;&lt;br&gt;
@@ -16255,7 +16283,6 @@ He sighs. &quot;I thought I&#39;d feel powerful. Instead, I feel... swallowed.&l
 &lt;&lt;speech &quot;mc&quot;&gt;&gt;…Then let’s begin.&lt;&lt;/speech&gt;&gt;&lt;br&gt;
 [[I feel the potion working in my crotch|use_success_potion_create_crotch]]
 &lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="525" name="hair" tags="" position="600,6600" size="100,100">&lt;&lt;nobr&gt;&gt;
-&lt;&lt;set $user_stats.gender_Identity -= 1&gt;&gt;
 &lt;&lt;set $curr_potion = setup.hair_forward_potions&gt;&gt;
 &lt;&lt;if State.variables.direction == &quot;reverse&quot;&gt;&gt;
     &lt;&lt;set $curr_potion = setup.hair_reverse_potions&gt;&gt;
@@ -16313,7 +16340,7 @@ He sighs. &quot;I thought I&#39;d feel powerful. Instead, I feel... swallowed.&l
     &lt;&lt;else&gt;&gt;
         &lt;p style=&quot;color: green;&quot;&gt;
         You have enough &lt;&lt;=$userItems[_key].name&gt;&gt;. You need &lt;&lt;=$ingredient[_key].needed&gt;&gt; 
-        &lt;&lt;=$userItems[_key].unit&gt;&gt;, you have only &lt;&lt;=$ingredient[_key].amount&gt;&gt; &lt;&lt;=$userItems[_key].unit&gt;&gt;.&lt;/p&gt;
+        &lt;&lt;=$userItems[_key].unit&gt;&gt;, you have &lt;&lt;=$ingredient[_key].amount&gt;&gt; &lt;&lt;=$userItems[_key].unit&gt;&gt;. It is more than enough!!&lt;/p&gt;
     &lt;&lt;/if&gt;&gt;
 &lt;&lt;/for&gt;&gt;
 &lt;&lt;if $currentArc[&quot;main_arc&quot;] == 3&gt;&gt;
@@ -16335,7 +16362,7 @@ He sighs. &quot;I thought I&#39;d feel powerful. Instead, I feel... swallowed.&l
 &lt;&lt;/for&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="526" name="potion_create_hair" tags="" position="725,6600" size="100,100">&lt;&lt;nobr&gt;&gt;
-
+&lt;&lt;set $user_stats.gender_Identity -= 1&gt;&gt;
 &lt;span style=&quot;font-family: &#39;Papyrus&#39;, serif; font-size: 22px; color: #8b5e3c;&quot;&gt;
 &lt;b&gt;🧪 Assembling: &lt;span style=&quot;color: #5a2e13&quot;&gt;&lt;&lt;=$potion.name&gt;&gt;&lt;/span&gt;&lt;/b&gt;&lt;br&gt;
 &lt;i&gt;Match the exact ingredients to brew this potion:&lt;/i&gt;&lt;br&gt;&lt;br&gt;
@@ -17369,7 +17396,6 @@ He sighs. &quot;I thought I&#39;d feel powerful. Instead, I feel... swallowed.&l
 
 [[I feel the potion working in my head and hair|use_success_potion_create_hair]]
 &lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="626" name="head" tags="" position="725,7850" size="100,100">&lt;&lt;nobr&gt;&gt;
-&lt;&lt;set $user_stats.gender_Identity -= 2&gt;&gt;
 &lt;&lt;set $curr_potion = setup.head_forward_potions&gt;&gt;
 
 &lt;&lt;if State.variables.direction == &quot;reverse&quot;&gt;&gt;
@@ -17428,7 +17454,7 @@ He sighs. &quot;I thought I&#39;d feel powerful. Instead, I feel... swallowed.&l
     &lt;&lt;else&gt;&gt;
         &lt;p style=&quot;color: green;&quot;&gt;
         You have enough &lt;&lt;=$userItems[_key].name&gt;&gt;. You need &lt;&lt;=$ingredient[_key].needed&gt;&gt; 
-        &lt;&lt;=$userItems[_key].unit&gt;&gt;, you have only &lt;&lt;=$ingredient[_key].amount&gt;&gt; &lt;&lt;=$userItems[_key].unit&gt;&gt;.&lt;/p&gt;
+        &lt;&lt;=$userItems[_key].unit&gt;&gt;, you have &lt;&lt;=$ingredient[_key].amount&gt;&gt; &lt;&lt;=$userItems[_key].unit&gt;&gt;. It is more than enough!!&lt;/p&gt;
     &lt;&lt;/if&gt;&gt;
 &lt;&lt;/for&gt;&gt;
 &lt;&lt;if $currentArc[&quot;main_arc&quot;] == 3&gt;&gt;
@@ -17450,7 +17476,7 @@ He sighs. &quot;I thought I&#39;d feel powerful. Instead, I feel... swallowed.&l
 &lt;&lt;/for&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="627" name="potion_create_head" tags="" position="850,7850" size="100,100">&lt;&lt;nobr&gt;&gt;
-
+&lt;&lt;set $user_stats.gender_Identity -= 2&gt;&gt;
 &lt;span style=&quot;font-family: &#39;Papyrus&#39;, serif; font-size: 22px; color: #8b5e3c;&quot;&gt;
 &lt;b&gt;🧪 Assembling: &lt;span style=&quot;color: #5a2e13&quot;&gt;&lt;&lt;=$potion.name&gt;&gt;&lt;/span&gt;&lt;/b&gt;&lt;br&gt;
 &lt;i&gt;Match the exact ingredients to brew this potion:&lt;/i&gt;&lt;br&gt;&lt;br&gt;
@@ -18269,7 +18295,6 @@ He sighs. &quot;I thought I&#39;d feel powerful. Instead, I feel... swallowed.&l
 &lt;&lt;speech &quot;thalara&quot;&gt;&gt;And the world will learn to bow not to perfection, but to truth. That truth is you.&lt;&lt;/speech&gt;&gt;&lt;br&gt;
 [[I feel the potion working in my body|use_success_potion_create_head]]
 &lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="704" name="left_hand" tags="" position="475,8850" size="100,100">&lt;&lt;nobr&gt;&gt;
-&lt;&lt;set $user_stats.gender_Identity -= 1&gt;&gt;
 &lt;&lt;set $curr_potion = setup.hand_forward_potions&gt;&gt;
 /* &lt;pre&gt;&lt;&lt;=JSON.stringify($curr_potion, null, 2)&gt;&gt;&lt;/pre&gt; */
 &lt;&lt;if State.variables.direction == &quot;reverse&quot;&gt;&gt;
@@ -18329,7 +18354,7 @@ He sighs. &quot;I thought I&#39;d feel powerful. Instead, I feel... swallowed.&l
     &lt;&lt;else&gt;&gt;
         &lt;p style=&quot;color: green;&quot;&gt;
         You have enough &lt;&lt;=$userItems[_key].name&gt;&gt;. You need &lt;&lt;=$ingredient[_key].needed&gt;&gt; 
-        &lt;&lt;=$userItems[_key].unit&gt;&gt;, you have only &lt;&lt;=$ingredient[_key].amount&gt;&gt; &lt;&lt;=$userItems[_key].unit&gt;&gt;.&lt;/p&gt;
+        &lt;&lt;=$userItems[_key].unit&gt;&gt;, you have &lt;&lt;=$ingredient[_key].amount&gt;&gt; &lt;&lt;=$userItems[_key].unit&gt;&gt;. It is more than enough!!&lt;/p&gt;
     &lt;&lt;/if&gt;&gt;
 &lt;&lt;/for&gt;&gt;
 &lt;&lt;if $currentArc[&quot;main_arc&quot;] == 3&gt;&gt;
@@ -18351,7 +18376,7 @@ He sighs. &quot;I thought I&#39;d feel powerful. Instead, I feel... swallowed.&l
 &lt;&lt;/for&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="705" name="potion_create_left_hand" tags="" position="600,8850" size="100,100">&lt;&lt;nobr&gt;&gt;
-
+&lt;&lt;set $user_stats.gender_Identity -= 1&gt;&gt;
 &lt;span style=&quot;font-family: &#39;Papyrus&#39;, serif; font-size: 22px; color: #8b5e3c;&quot;&gt;
 &lt;b&gt;🧪 Assembling: &lt;span style=&quot;color: #5a2e13&quot;&gt;&lt;&lt;=$potion.name&gt;&gt;&lt;/span&gt;&lt;/b&gt;&lt;br&gt;
 &lt;i&gt;Match the exact ingredients to brew this potion:&lt;/i&gt;&lt;br&gt;&lt;br&gt;
@@ -18935,7 +18960,6 @@ This hand now holds influence, not just iron.&lt;&lt;/speech&gt;&gt;&lt;br&gt;
 &lt;&lt;speech &quot;thalara&quot;&gt;&gt;Because the hand acts. It touches. It leads. And now, it reflects not who you were told to be… but who you choose to be.&lt;&lt;/speech&gt;&gt;&lt;br&gt;
 [[I feel the potion working in my left hand|use_success_potion_create_left_hand]]
 &lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="759" name="left_leg" tags="" position="1100,9475" size="100,100">&lt;&lt;nobr&gt;&gt;
-&lt;&lt;set $user_stats.gender_Identity -= 1&gt;&gt;
 &lt;&lt;set $curr_potion = setup.leg_forward_potions&gt;&gt;
 /* &lt;pre&gt;&lt;&lt;=JSON.stringify($curr_potion, null, 2)&gt;&gt;&lt;/pre&gt; */
 &lt;&lt;if State.variables.direction == &quot;reverse&quot;&gt;&gt;
@@ -18995,7 +19019,7 @@ This hand now holds influence, not just iron.&lt;&lt;/speech&gt;&gt;&lt;br&gt;
     &lt;&lt;else&gt;&gt;
         &lt;p style=&quot;color: green;&quot;&gt;
         You have enough &lt;&lt;=$userItems[_key].name&gt;&gt;. You need &lt;&lt;=$ingredient[_key].needed&gt;&gt; 
-        &lt;&lt;=$userItems[_key].unit&gt;&gt;, you have only &lt;&lt;=$ingredient[_key].amount&gt;&gt; &lt;&lt;=$userItems[_key].unit&gt;&gt;.&lt;/p&gt;
+        &lt;&lt;=$userItems[_key].unit&gt;&gt;, you have &lt;&lt;=$ingredient[_key].amount&gt;&gt; &lt;&lt;=$userItems[_key].unit&gt;&gt;. It is more than enough!!&lt;/p&gt;
     &lt;&lt;/if&gt;&gt;
 &lt;&lt;/for&gt;&gt;
 &lt;&lt;if $currentArc[&quot;main_arc&quot;] == 3&gt;&gt;
@@ -19017,7 +19041,7 @@ This hand now holds influence, not just iron.&lt;&lt;/speech&gt;&gt;&lt;br&gt;
 &lt;&lt;/for&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="760" name="potion_create_left_leg" tags="" position="1225,9475" size="100,100">&lt;&lt;nobr&gt;&gt;
-
+&lt;&lt;set $user_stats.gender_Identity -= 1&gt;&gt;
 &lt;span style=&quot;font-family: &#39;Papyrus&#39;, serif; font-size: 22px; color: #8b5e3c;&quot;&gt;
 &lt;b&gt;🧪 Assembling: &lt;span style=&quot;color: #5a2e13&quot;&gt;&lt;&lt;=$potion.name&gt;&gt;&lt;/span&gt;&lt;/b&gt;&lt;br&gt;
 &lt;i&gt;Match the exact ingredients to brew this potion:&lt;/i&gt;&lt;br&gt;&lt;br&gt;
@@ -20208,7 +20232,6 @@ That’s the transformation I treasure most the shift from resistance to curiosi
 &lt;br&gt;
 [[Choose Potion|potion_lab]] | [[Leave Veil Tower|castle_map_back_select]]
 &lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="815" name="right_hand" tags="" position="600,10225" size="100,100">&lt;&lt;nobr&gt;&gt;
-&lt;&lt;set $user_stats.gender_Identity -= 1&gt;&gt;
 &lt;&lt;set $curr_potion = setup.hand_forward_potions&gt;&gt;
 /* &lt;pre&gt;&lt;&lt;=JSON.stringify($curr_potion, null, 2)&gt;&gt;&lt;/pre&gt; */
 &lt;&lt;if State.variables.direction == &quot;reverse&quot;&gt;&gt;
@@ -20268,7 +20291,7 @@ That’s the transformation I treasure most the shift from resistance to curiosi
     &lt;&lt;else&gt;&gt;
         &lt;p style=&quot;color: green;&quot;&gt;
         You have enough &lt;&lt;=$userItems[_key].name&gt;&gt;. You need &lt;&lt;=$ingredient[_key].needed&gt;&gt; 
-        &lt;&lt;=$userItems[_key].unit&gt;&gt;, you have only &lt;&lt;=$ingredient[_key].amount&gt;&gt; &lt;&lt;=$userItems[_key].unit&gt;&gt;.&lt;/p&gt;
+        &lt;&lt;=$userItems[_key].unit&gt;&gt;, you have &lt;&lt;=$ingredient[_key].amount&gt;&gt; &lt;&lt;=$userItems[_key].unit&gt;&gt;. It is more than enough!!&lt;/p&gt;
     &lt;&lt;/if&gt;&gt;
 &lt;&lt;/for&gt;&gt;
 &lt;&lt;if $currentArc[&quot;main_arc&quot;] == 3&gt;&gt;
@@ -20290,7 +20313,7 @@ That’s the transformation I treasure most the shift from resistance to curiosi
 &lt;&lt;/for&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="816" name="potion_create_right_hand" tags="" position="725,10225" size="100,100">&lt;&lt;nobr&gt;&gt;
-
+&lt;&lt;set $user_stats.gender_Identity -= 1&gt;&gt;
 &lt;span style=&quot;font-family: &#39;Papyrus&#39;, serif; font-size: 22px; color: #8b5e3c;&quot;&gt;
 &lt;b&gt;🧪 Assembling: &lt;span style=&quot;color: #5a2e13&quot;&gt;&lt;&lt;=$potion.name&gt;&gt;&lt;/span&gt;&lt;/b&gt;&lt;br&gt;
 &lt;i&gt;Match the exact ingredients to brew this potion:&lt;/i&gt;&lt;br&gt;&lt;br&gt;
@@ -20988,7 +21011,6 @@ That’s the transformation I treasure most the shift from resistance to curiosi
 
 [[I feel the potion working in my right hand|use_success_potion_create_right_hand]]
 &lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="882" name="right_leg" tags="" position="225,11100" size="100,100">&lt;&lt;nobr&gt;&gt;
-&lt;&lt;set $user_stats.gender_Identity -= 1&gt;&gt;
 &lt;&lt;set $curr_potion = setup.leg_forward_potions&gt;&gt;
 /* &lt;pre&gt;&lt;&lt;=JSON.stringify($curr_potion, null, 2)&gt;&gt;&lt;/pre&gt; */
 &lt;&lt;if State.variables.direction == &quot;reverse&quot;&gt;&gt;
@@ -21048,7 +21070,7 @@ That’s the transformation I treasure most the shift from resistance to curiosi
     &lt;&lt;else&gt;&gt;
         &lt;p style=&quot;color: green;&quot;&gt;
         You have enough &lt;&lt;=$userItems[_key].name&gt;&gt;. You need &lt;&lt;=$ingredient[_key].needed&gt;&gt; 
-        &lt;&lt;=$userItems[_key].unit&gt;&gt;, you have only &lt;&lt;=$ingredient[_key].amount&gt;&gt; &lt;&lt;=$userItems[_key].unit&gt;&gt;.&lt;/p&gt;
+        &lt;&lt;=$userItems[_key].unit&gt;&gt;, you have &lt;&lt;=$ingredient[_key].amount&gt;&gt; &lt;&lt;=$userItems[_key].unit&gt;&gt;. It is more than enough!!&lt;/p&gt;
     &lt;&lt;/if&gt;&gt;
 &lt;&lt;/for&gt;&gt;
 &lt;&lt;if $currentArc[&quot;main_arc&quot;] == 3&gt;&gt;
@@ -21070,7 +21092,7 @@ That’s the transformation I treasure most the shift from resistance to curiosi
 &lt;&lt;/for&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="883" name="potion_create_right_leg" tags="" position="350,11100" size="100,100">&lt;&lt;nobr&gt;&gt;
-
+&lt;&lt;set $user_stats.gender_Identity -= 1&gt;&gt;
 &lt;span style=&quot;font-family: &#39;Papyrus&#39;, serif; font-size: 22px; color: #8b5e3c;&quot;&gt;
 &lt;b&gt;🧪 Assembling: &lt;span style=&quot;color: #5a2e13&quot;&gt;&lt;&lt;=$potion.name&gt;&gt;&lt;/span&gt;&lt;/b&gt;&lt;br&gt;
 &lt;i&gt;Match the exact ingredients to brew this potion:&lt;/i&gt;&lt;br&gt;&lt;br&gt;
@@ -21898,7 +21920,6 @@ Then drink deeply, Caelan. The unmaking is as vital as the making. Your journey 
 &lt;&lt;/speech&gt;&gt;&lt;br&gt;
 [[I feel the potion working in my right leg|use_success_potion_create_right_leg]]
 &lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="941" name="torso" tags="" position="100,11850" size="100,100">&lt;&lt;nobr&gt;&gt;
-&lt;&lt;set $user_stats.gender_Identity -= 2&gt;&gt;
 &lt;&lt;set $curr_potion = setup.torso_forward_potions&gt;&gt;
 &lt;&lt;if State.variables.direction == &quot;reverse&quot;&gt;&gt;
     &lt;&lt;set $curr_potion = setup.torso_reverse_potions&gt;&gt;
@@ -21956,7 +21977,7 @@ Then drink deeply, Caelan. The unmaking is as vital as the making. Your journey 
     &lt;&lt;else&gt;&gt;
         &lt;p style=&quot;color: green;&quot;&gt;
         You have enough &lt;&lt;=$userItems[_key].name&gt;&gt;. You need &lt;&lt;=$ingredient[_key].needed&gt;&gt; 
-        &lt;&lt;=$userItems[_key].unit&gt;&gt;, you have only &lt;&lt;=$ingredient[_key].amount&gt;&gt; &lt;&lt;=$userItems[_key].unit&gt;&gt;.&lt;/p&gt;
+        &lt;&lt;=$userItems[_key].unit&gt;&gt;, you have &lt;&lt;=$ingredient[_key].amount&gt;&gt; &lt;&lt;=$userItems[_key].unit&gt;&gt;. It is more than enough!!&lt;/p&gt;
     &lt;&lt;/if&gt;&gt;
 &lt;&lt;/for&gt;&gt;
 &lt;&lt;if $currentArc[&quot;main_arc&quot;] == 3&gt;&gt;
@@ -21978,7 +21999,7 @@ Then drink deeply, Caelan. The unmaking is as vital as the making. Your journey 
 &lt;&lt;/for&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="942" name="potion_create_torso" tags="" position="225,11850" size="100,100">&lt;&lt;nobr&gt;&gt;
-
+&lt;&lt;set $user_stats.gender_Identity -= 2&gt;&gt;
 &lt;span style=&quot;font-family: &#39;Papyrus&#39;, serif; font-size: 22px; color: #8b5e3c;&quot;&gt;
 &lt;b&gt;🧪 Assembling: &lt;span style=&quot;color: #5a2e13&quot;&gt;&lt;&lt;=$potion.name&gt;&gt;&lt;/span&gt;&lt;/b&gt;&lt;br&gt;
 &lt;i&gt;Match the exact ingredients to brew this potion:&lt;/i&gt;&lt;br&gt;&lt;br&gt;

@@ -4,7 +4,7 @@ setup.hand_forward_potions = {
 		from: "ml",
 		to: "mm",
 		name: "Silkweave Tincture",
-		purpose: "Male Lean Hands ➝ Male Muscular Hands",
+		purpose: "Male Ultra Muscular Hands ➝ Male Muscular Hands",
 		ingredients: {
 			"softroot_essence": 1,
 			"starblossom_pollen": 1,
@@ -18,7 +18,7 @@ setup.hand_forward_potions = {
 		from: "mm",
 		to: "ms",
 		name: "Fingerspring Draught",
-		purpose: "Male Muscular Hands ➝ Male Ultra Muscular Hands",
+		purpose: "Male Muscular Hands ➝ Male Lean Hands",
 		ingredients: {
 			"glowleaf_powder": 1,
 			"velvetgrove_essence": 2,
@@ -32,7 +32,7 @@ setup.hand_forward_potions = {
 		from: "ms",
 		to: "fs",
 		name: "Delicaflow Elixir",
-		purpose: "Male Ultra Muscular Hands ➝ Female Slim Hands",
+		purpose: "Male Lean Hands ➝ Female Slim Hands",
 		ingredients: {
 			"seraphmilk": 10,
 			"feylace_petal": 1,
@@ -106,7 +106,7 @@ setup.hand_reverse_potions = {
 		from: "fs",
 		to: "ms",
 		name: "Roughenstride Elixir",
-		purpose: "Female Slim Hands ➝ Male Ultra Muscular Hands",
+		purpose: "Female Slim Hands ➝ Male Lean Hands",
 		ingredients: {
 			"glowleaf_powder": 1,
 			"frostvine_elixir": 30,
@@ -120,7 +120,7 @@ setup.hand_reverse_potions = {
 		from: "ms",
 		to: "mm",
 		name: "Gripstone Infusion",
-		purpose: "Male Ultra Muscular Hands ➝ Muscular Male Hands",
+		purpose: "Male Lean Hands ➝ Muscular Male Hands",
 		ingredients: {
 			"dragonmoss_resin": 2,
 			"frostvine_elixir": 5,
@@ -134,7 +134,7 @@ setup.hand_reverse_potions = {
 		from: "mm",
 		to: "ml",
 		name: "Ironbark Serum",
-		purpose: "Muscular Male Hands ➝ Male Lean Hands",
+		purpose: "Muscular Male Hands ➝ Male Ultra Muscular Hands",
 		ingredients: {
 			"nullroot_dust": 1,
 			"ashfern_flakes": 1,

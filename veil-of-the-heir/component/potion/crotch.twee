@@ -2,7 +2,6 @@
 
 :: crotch
 <<nobr>>
-<<set $user_stats.gender_Identity -= 2>>
 <<set $curr_potion = setup.crotch_forward_potions>>
 <<if State.variables.direction == "reverse">>
     <<set $curr_potion = setup.crotch_reverse_potions>>
@@ -60,7 +59,7 @@
     <<else>>
         <p style="color: green;">
         You have enough <<=$userItems[_key].name>>. You need <<=$ingredient[_key].needed>> 
-        <<=$userItems[_key].unit>>, you have only <<=$ingredient[_key].amount>> <<=$userItems[_key].unit>>.</p>
+        <<=$userItems[_key].unit>>, you have <<=$ingredient[_key].amount>> <<=$userItems[_key].unit>>. It is more than enough!!</p>
     <</if>>
 <</for>>
 <<if $currentArc["main_arc"] == 3>>
@@ -86,7 +85,7 @@
 
 :: potion_create_crotch
 <<nobr>>
-
+<<set $user_stats.gender_Identity -= 2>>
 <span style="font-family: 'Papyrus', serif; font-size: 22px; color: #8b5e3c;">
 <b>🧪 Assembling: <span style="color: #5a2e13"><<=$potion.name>></span></b><br>
 <i>Match the exact ingredients to brew this potion:</i><br><br>

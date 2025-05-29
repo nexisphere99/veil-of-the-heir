@@ -345,7 +345,7 @@ You will be a queen who rules with both heart and steel.<</speech>><br>
 <<speech "mc">>"queen." You... you understand, Maera?<</speech>><br>
 <<speech "maera">>I've been your shadow since we were children, Caelan. 
 I know you better than you know yourself. And I know you're not ready to let the world see the real you yet.<</speech>><br>
-<<speech "maera">>You've always been my rock, Maera. My confidante, my protector.<</speech>><br>
+<<speech "mc">>You've always been my rock, Maera. My confidante, my protector.<</speech>><br>
 [[Move Forth|maera_blow_job_1_2]]
 <</nobr>>
 

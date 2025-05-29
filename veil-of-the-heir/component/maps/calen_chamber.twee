@@ -39,12 +39,13 @@
   </svg>
 </div>
 <br>
+<<set $coming_from_chamber = true>>
 [[Leave Bed Chamber|castle_map_back_select]]
 <</nobr>>
 
 :: mc_bed
 <<nobr>>
-<<set $user_stats.energy = 60>>
+<<set $user_stats.energy = 70>>
 <<set $alert_message = "">>
 <<if $currentArc["main_arc"] == 1>>
 <div id="gif_pop_up">

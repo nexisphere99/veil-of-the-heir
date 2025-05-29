@@ -5,7 +5,7 @@ setup.leg_forward_potions = {
 		from: "ml",
 		to: "mm",
 		name: "Silkenstride Draught",
-		purpose: "Male Lean Legs ➝ Male Muscular Legs",
+		purpose: "Male Ultra Muscular Legs ➝ Male Muscular Legs",
 		ingredients: {
 			"glowleaf_powder": 2,
 			"thornberry_juice": 10,
@@ -19,7 +19,7 @@ setup.leg_forward_potions = {
 		from: "mm",
 		to: "ms",
 		name: "Velvetfoot Elixir",
-		purpose: "Male Muscular Legs ➝ Male Ultra Muscular Legs",
+		purpose: "Male Muscular Legs ➝ Male Lean Legs",
 		ingredients: {
 			"starblossom_pollen": 2,
 			"dragonmoss_resin": 2,
@@ -33,7 +33,7 @@ setup.leg_forward_potions = {
 		from: "ms",
 		to: "fs",
 		name: "Languidstep Serum",
-		purpose: "Male Ultra Muscular Legs ➝ Female Slim Legs",
+		purpose: "Male Lean Legs ➝ Female Slim Legs",
 		ingredients: {
 			"moonpetal_extract": 4,
 			"softroot_essence": 2,
@@ -107,7 +107,7 @@ setup.leg_reverse_potions = {
 		from: "fs",
 		to: "ms",
 		name: "Ironstep Tonic",
-		purpose: "Female Slim Legs ➝ Male Ultra Muscular Legs",
+		purpose: "Female Slim Legs ➝ Male Lean Legs",
 		ingredients: {
 			"dragonmoss_resin": 3,
 			"ashfern_flakes": 1,
@@ -121,7 +121,7 @@ setup.leg_reverse_potions = {
 		from: "ms",
 		to: "mm",
 		name: "Hearthstride Mixture",
-		purpose: "Male Ultra Muscular Legs ➝ Male Muscular Legs",
+		purpose: "Male Lean Legs ➝ Male Muscular Legs",
 		ingredients: {
 			"velvetgrove_essence": 2,
 			"thornberry_juice": 10,
@@ -135,7 +135,7 @@ setup.leg_reverse_potions = {
 		from: "mm",
 		to: "ml",
 		name: "Brawnwalk Elixir",
-		purpose: "Male Muscular Legs ➝ Male Lean Legs",
+		purpose: "Male Muscular Legs ➝ Male Ultra Muscular Legs",
 		ingredients: {
 			"glowleaf_powder": 4,
 			"nightshade_bloom": 3,

@@ -44,6 +44,7 @@
 .character-text {
     font-size: 18px;
     line-height: 1.5;
+	padding-right: 20px;
 }
 
 /* Optional medieval decoration */
@@ -244,6 +245,30 @@
 }
 .edran::after {
 	content: "🌿";
+	position: absolute;
+	top: -12px;
+	right: -12px;
+	background-color: #f5f0dc;
+	border: 2px solid #a58b5c;
+	border-radius: 50%;
+	padding: 5px;
+	font-size: 18px;
+	box-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+}
+.torin::after {
+	content: "🛡️";
+	position: absolute;
+	top: -12px;
+	right: -12px;
+	background-color: #f5f0dc;
+	border: 2px solid #a58b5c;
+	border-radius: 50%;
+	padding: 5px;
+	font-size: 18px;
+	box-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+}
+.jeral::after {
+	content: "📘";
 	position: absolute;
 	top: -12px;
 	right: -12px;

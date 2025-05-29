@@ -304,7 +304,7 @@ Only what you’re willing to give… and maybe a little more, if you whisper it
 <</speech>>
 <br>
 <</if>>
-<<if $currentArc["main_arc"] >= 7 >>
+<<if $currentArc["main_arc"] >= 7 && !$torin_sex_1>>
     [[Ask about the session|torin_sex_1]] |<br><br>
 <</if>>
 [[Leave Torin|torin_chamber_map_select]] |<br><br>
@@ -315,6 +315,7 @@ Only what you’re willing to give… and maybe a little more, if you whisper it
 
 :: torin_sex_1
 <<nobr>>
+<<set $torin_sex_1 = true>>
 <<speech "torin">>You ready, Caelan? This is new for both of us.<</speech>><br>
 
 <<speech "mc">>I... I don’t know. It feels strange, unfamiliar.<</speech>><br>
@@ -367,8 +368,8 @@ He guided me to the bed, hands on my shoulders. I sank to my knees not in obedie
 
 :: torin_sex_1_3
 <<nobr>>
-<<set $user_stats.gender_Identity -= 4>>
-<<set $user_stats.dominance_level -= 4>>
+<<set $user_stats.gender_Identity -= 3>>
+<<set $user_stats.dominance_level -= 3>>
 <<speech "torin">>You’re learning.<</speech>><br><br>
 
 Learning to be what? A queen? A woman? A plaything?<br><br>
