@@ -22,7 +22,7 @@ app.use(express.static(path.join(__dirname)));
 
 // Serve the main HTML game file
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'veil-of-the-heir.html'));
+  res.sendFile(path.join(__dirname, 'veil-of-the-heir-patreon.html'));
 });
 
 // Start the server
