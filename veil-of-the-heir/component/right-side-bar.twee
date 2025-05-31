@@ -2,10 +2,16 @@
 
 :: StoryRightSidebar
 <<nobr>>
-<div id="right-sidebar" style="display: flex; flex-direction: column; height: 100vh; width: 20%; position: fixed; right: 0; top: 0; background-color: #1a0f0f; overflow: hidden;">
+<button id="mobile-sidebar-toggle" onclick="$('#right-sidebar').addClass('mobile-visible'); $(this).hide();">
+  R☰
+</button>
+<div id="right-sidebar">
+<button onclick="$('#right-sidebar').removeClass('mobile-visible'); $('#mobile-sidebar-toggle').show();" class="mobile-close-btn">
+  ✖
+</button>
 <div style="display: flex; justify-content: space-between;">
 <div title="Show without Cloths">
-<<button "🚫👔👗">>
+<<button "🚫🧥👗">>
   <<set $showWear to not $showWear>>
   <<replace "#wear-status">>
     <div class="avatar torso">[img[setup.ImagePath+$userBody.torso.img]]</div>
@@ -38,7 +44,7 @@
 <</button>>
 </div>
 <div title="Show without Underwears">
-<<button "🚫🩲👙">>
+<<button "🚫🩲👙🩳">>
   /* <<set $showWear to not $showWear>> */
   <<set $showUnderwear to not $showUnderwear>>
   <<replace "#wear-status">>
@@ -71,8 +77,7 @@
 <</button>>
 </div>
 <div title="Show inventroy items">
-<button onclick="$('#inventory-popup').fadeIn()" style="position: absolute; right: 0px; top: 0px;">
-📦</button>
+<button onclick="$('#inventory-popup').fadeIn()" style="cursor: url('images/game/pointer.png') 2 2, pointer;">📦🗃️</button>
 </div>
 </div>
 <div style="display: flex; width: 100%; height: auto;">

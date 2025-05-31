@@ -53,7 +53,7 @@ button,
 	background: linear-gradient(to bottom, #d2b48c, #a0522d);
 	border: 3px solid #5c3317;
 	border-radius: 12px;
-	padding: 10px 20px;
+	padding: 10px 10px;
 	font-family: 'Cinzel Decorative', serif;
 	font-size: 1.1em;
 	color: #fff8dc;
@@ -127,7 +127,13 @@ a:hover {
 }
 
 
-
+@media (max-width: 768px) {
+	.item-grid {
+		display: grid;
+		grid-template-columns: repeat(1, 1fr) !important;
+		gap: 1em;
+	}
+}
 
 
 .item-grid {
@@ -216,6 +222,12 @@ button,
 	box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
 }
 
+@media (max-width: 768px) {
+	#custom-popup-1 {
+		width: 70vw;
+	}
+}
+
 #custom-popup-1 li{
 	border: none !important;
 }
@@ -249,7 +261,6 @@ button,
 	padding: 8px 15px;
 	background: #a54c4c;
 	color: white;
-	cursor: pointer;
 	border: none;
 	border-radius: 5px;
 	text-align: center;
@@ -265,7 +276,6 @@ button,
 	color: white;
 	padding: 8px 12px;
 	border: none;
-	cursor: pointer;
 	z-index: 1001;
 	font-size: 18px;
 	border-radius: 5px;
@@ -279,4 +289,47 @@ button,
 
 .choice-layer {
 	grid-area: 1 / 1;
+}
+
+
+
+@media (max-width: 768px) {
+	#passages {
+		width: 70vw;
+		margin: 0px;
+	}
+
+	#story {
+		margin-left: 0px;
+		width: 70vw;
+	}
+
+	.passage {
+		font-size: smaller !important;
+	}
+}
+
+.topic-head {
+	font-size: 24px;
+	color: #6e421c;
+}
+
+@media (max-width: 768px) {
+	body {
+		font-size: smaller;
+	}
+
+	.character-text {
+		font-size: smaller;
+	}
+
+	button, .link-internal, .macro-link {
+		font-size: 60%;
+		padding: 7px 5px;
+	}
+
+	.topic-head {
+		font-size: large;
+		color: #6e421c;
+	}
 }

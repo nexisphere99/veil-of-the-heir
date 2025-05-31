@@ -2,3 +2,35 @@
     border-radius: 10px;
     border: 2px solid #8b5e3c;
 }
+
+.ingredient_text{
+    font-family: 'Papyrus', 
+    serif; font-size: 22px; 
+    color: #8b5e3c;
+}
+
+@media (max-width: 768px) {
+    #passage-ingredient-selection .item-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+        justify-content: center;
+    }
+
+    .ingredient_text{
+        font-family: 'Papyrus', 
+        serif; font-size: small; 
+        color: #8b5e3c;
+    }
+
+    .item-card .macro-link {
+        padding: 4px 6px !important;
+    }
+
+    #passage-potion-create-hair .item-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+        justify-content: center;
+    }
+
+    .item-card img {
+        width: 50px !important;
+    }
+}

@@ -320,5 +320,18 @@
     pointer-events: none;
 }
 
+@media (max-width: 768px) {
+	.character-image-dialog{
+		width: 60px;
+		height: 60px;
+	}
+	.character-column{
+		width: 60px;
+	}
+	.character-name {
+		font-size: x-small;
+	}
+}
+
 
 

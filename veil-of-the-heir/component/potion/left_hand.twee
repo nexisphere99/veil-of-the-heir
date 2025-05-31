@@ -20,7 +20,7 @@
 /* <pre><<= JSON.stringify($curr_potion_selected, null, 2)>></pre> */
 /* <pre><<= JSON.stringify($userItems, null, 2)>></pre> */
 <<set $ingredient = {}>>
-<span style="font-family: 'Papyrus', serif; font-size: 22px; color: #8b5e3c;">
+<span class="ingredient_text">
 <b>✦ Ancient Alchemical Recipe ✦</b><br><br>
 
 <b>Potion:</b> <<=$curr_potion_selected.name>><br>
@@ -87,7 +87,7 @@
 
 :: potion_create_left_hand
 <<nobr>>
-<span style="font-family: 'Papyrus', serif; font-size: 22px; color: #8b5e3c;">
+<span class="ingredient_text">
 <b>🧪 Assembling: <span style="color: #5a2e13"><<=$potion.name>></span></b><br>
 <i>Match the exact ingredients to brew this potion:</i><br><br>
 <div class="item-grid">
@@ -117,22 +117,26 @@
             <<goto "potion_create_left_hand">>
         <</link>>
         <</capture>>
-        <<capture _item>>
-        <<set $potion_add = "+" + $userItems[_item].min_amount*2 + " " + $userItems[_item].unit>>
-        <<link $potion_add>>
-            <<set $potionInventory[_item] += $userItems[_item].min_amount*2>>
-            <<set $userItems[_item].amount -= $userItems[_item].min_amount*2>>
-            <<goto "potion_create_left_hand">>
-        <</link>>
-        <</capture>>
-        <<capture _item>>
-        <<set $potion_add = "+" + $userItems[_item].min_amount*5 + " " + $userItems[_item].unit>>
-        <<link $potion_add>>
-            <<set $potionInventory[_item] += $userItems[_item].min_amount*5>>
-            <<set $userItems[_item].amount -= $userItems[_item].min_amount*5>>
-            <<goto "potion_create_left_hand">>
-        <</link>>
-        <</capture>>
+        <<if $userItems[_item].amount > $userItems[_item].min_amount*2>>
+            <<capture _item>>
+            <<set $potion_add = "+" + $userItems[_item].min_amount*2 + " " + $userItems[_item].unit>>
+            <<link $potion_add>>
+                <<set $potionInventory[_item] += $userItems[_item].min_amount*2>>
+                <<set $userItems[_item].amount -= $userItems[_item].min_amount*2>>
+                <<goto "potion_create_hair">>
+            <</link>>
+            <</capture>>
+        <</if>>
+        <<if $userItems[_item].amount > $userItems[_item].min_amount*5>>
+            <<capture _item>>
+            <<set $potion_add = "+" + $userItems[_item].min_amount*5 + " " + $userItems[_item].unit>>
+            <<link $potion_add>>
+                <<set $potionInventory[_item] += $userItems[_item].min_amount*5>>
+                <<set $userItems[_item].amount -= $userItems[_item].min_amount*5>>
+                <<goto "potion_create_hair">>
+            <</link>>
+            <</capture>>
+        <</if>>
     <</if>>
     <<if $potionInventory[_item] > 0>>
         <<set $potion_add = "-" + $userItems[_item].min_amount + " " + $userItems[_item].unit>>

@@ -1,5 +1,5 @@
 :: ingredient_selection
-<<nobr>>>>
+<<nobr>>
 <<if $ingredientChoices >= $maxChoices>>
 	<<speech "malgros">>You have already selected your three ingredients. Go away thats all you getting today<</speech>>
 	<br><br>
@@ -35,7 +35,7 @@
 <<set _item = setup.storeItems[$selectedIngredient]>>
 <h3 style="text-align: center;"><<=_item.name>></h3>
 <div style="text-align: center;" class="ingredients-main-img">[img[_item.img]]</div>
-<div style="font-family: 'Papyrus', serif; font-size: 22px; color: #8b5e3c;">
+<div class="ingredient_text">
 <p><<=_item.effect>></p>
 <p><<=_item.description>></p>
 <p>Serving amount: <<=_item.min_amount>><<=_item.unit>></p>

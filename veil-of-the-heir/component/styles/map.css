@@ -2,7 +2,6 @@ polygon.bodypart {
 	fill: transparent;
 	stroke: gold;
 	stroke-width: 2;
-	cursor: pointer;
 	transition: all 0.3s ease;
 }
 
@@ -22,7 +21,6 @@ polygon.castle_back_map {
 	fill: transparent;
 	stroke: gold;
 	stroke-width: 2;
-	cursor: pointer;
 	transition: all 0.3s ease;
 }
 
@@ -42,7 +40,6 @@ polygon.castle_front_map {
 	fill: transparent;
 	stroke: gold;
 	stroke-width: 2;
-	cursor: pointer;
 	transition: all 0.3s ease;
 }
 
@@ -62,7 +59,6 @@ polygon.mc_bed_chamber_map {
 	fill: transparent;
 	stroke: gold;
 	stroke-width: 2;
-	cursor: pointer;
 	transition: all 0.3s ease;
 }
 

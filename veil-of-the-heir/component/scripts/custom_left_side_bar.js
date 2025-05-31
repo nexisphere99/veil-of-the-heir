@@ -1,7 +1,9 @@
 $(document).ready(function () {
     // Create the Custom Left Sidebar
     $("body").append(`
+        <div id="menu-toggle" class="mobile-only">L☰</div>
         <div id="custom-left-bar">
+            <div id="sidebar-close" class="mobile-only">✖</div>
             <h1 style="margin: 15% 0 0 0; text-align: center;">Veil of the Heir</h1>
             <h3 style="margin: 0px; text-align: center;">by Nexisphere Games</h3>
             <div id="left-top-container" class="image-crop">
@@ -95,6 +97,19 @@ $(document).ready(function () {
         $("#day_number").text(State.variables.day_number || "0");
 
     }
+
+        // Mobile menu open
+        $("#menu-toggle").on("click", function () {
+            $("#custom-left-bar").fadeIn();
+            $("#menu-toggle").hide();
+        });
+    
+        // Mobile menu close
+        $("#sidebar-close").on("click", function () {
+            $("#custom-left-bar").fadeOut();
+            $("#menu-toggle").fadeIn();
+        });
+    
 
     // Ensure the popup opens properly
     function showPopup(content) {

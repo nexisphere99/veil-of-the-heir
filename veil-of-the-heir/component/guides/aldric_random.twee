@@ -453,6 +453,33 @@ $(document).on(':passagerender', function () {
   overflow: hidden;
 }
 
+@media (max-width: 768px) {
+  #archery-area {
+    position: relative; /* essential */
+    width: 100%;
+    height: 300px;
+    border: 1px solid black;
+    margin: 20px auto;
+    background-image: url("images/train/archery_target.png");
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+  }
+
+  #target {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: 120px;
+    left: 220px;
+    background: url("images/target.png") no-repeat center center;
+    background-size: contain;
+    border-radius: 0;
+    z-index: 2;
+  }
+}
+
+
 #target {
   position: absolute;
   width: 60px;
@@ -473,16 +500,22 @@ $(document).on(':passagerender', function () {
   top: 130px; /* fixed vertical position */
   z-index: 2;
 }
-
 #target {
   background: red;
   left: 240px; /* fixed target position */
   z-index: 2;
 }
+@media (max-width: 768px) {
+  #target {
+    background: red;
+    left: 140px; /* fixed target position */
+    z-index: 2;
+  }
+}
 
 #aim {
   background: blue;
-  left: 240px; /* initial aim position to match target */
+  left: 140px; /* initial aim position to match target */
   z-index: 3;
 }
 
@@ -511,7 +544,7 @@ $(document).on(':passagerender', function () {
   let aim, area, target, shootBtn, result;
   let aimInterval = null;
   const range = 100; // how far left/right from center the blue dot moves
-  let targetLeft = 240; // fixed value matching CSS
+  let targetLeft = window.innerWidth <= 768 ? 140 : 240; // 140px for mobile view, otherwise keep it fixed
 
   function startAimMovement() {
     if (!aim || !target || !area) return;

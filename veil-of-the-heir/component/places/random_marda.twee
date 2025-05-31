@@ -309,10 +309,10 @@ No, Caelan. I know it is. And I’ll make you feel it in every inch of your skin
 <br>
 <</if>>
 <<if !$marda_session_1>>
-[[Have Conversayion with Marda 1|marda_session_1]] |<br><br>
+[[Have Conversation with Marda 1|marda_session_1]] |<br><br>
 <</if>>
 <<if $marda_session_1 && !$marda_session_2>>
-[[Have Conversayion with Marda 2|marda_session_2]] |<br><br>
+[[Have Conversation with Marda 2|marda_session_2]] |<br><br>
 <</if>>
 [[Leave Dungeon Keeper|dungeon]] |<br><br>
 [[Leave Dungeon|castle_map_back_select]]

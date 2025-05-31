@@ -20,31 +20,72 @@ Veil of the Heir
 :: startup
 <<nobr>>
 <!-- Fullscreen Intro Page for Kingdom of Velmoria -->
-<div id="velmoria-intro" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background-color: #f5f0dc; display: flex; align-items: center; justify-content: center; z-index: 9999;">
-  <div style="font-family: 'Papyrus', serif; font-size: 20px; color: #8b5e3c; background-color: #f5f0dc; border: 2px solid #a58b5c; padding: 18px; border-radius: 10px; box-shadow: 3px 3px 8px rgba(0,0,0,0.2); max-width: 700px; text-align: center;">
+<div id="velmoria-intro" style="
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #f5f0dc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  overflow: auto;
+  padding: 20px;
+  box-sizing: border-box;
+">
+  <div style="
+    font-family: 'Papyrus', serif;
+    font-size: 1em;
+    color: #8b5e3c;
+    background-color: #f5f0dc;
+    border: 2px solid #a58b5c;
+    padding: 1.2em;
+    border-radius: 10px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+    max-width: 700px;
+    width: 100%;
+    text-align: center;
+  ">
 
-    <h1 style="font-size: 36px; color: #5c3b1e; margin-bottom: 10px;">👑 Kingdom of Velmoria</h1>
-    <h3 style="font-size: 22px; color: #7a4c29;">An Interactive Gender Bender Fantasy Story</h3>
+    <h1 style="
+      font-size: 2em;
+      color: #5c3b1e;
+      margin-bottom: 0.5em;
+    ">👑 Kingdom of Velmoria</h1>
+
+    <h3 style="font-size: 1.2em; color: #7a4c29;">An Interactive Gender Bender Fantasy Story</h3>
     <p><strong>(18+ Mature Content)</strong></p>
     <hr style="margin: 10px 0; border-color: #a58b5c;">
-    
+
     <p><strong>Warning:</strong> This story contains themes of <em>gender transformation</em>, <em>magical body alteration</em>, erotic fantasy, and political intrigue.</p>
     <p>This is a <strong>gender bender game</strong>. If you are not comfortable with these themes, please <strong>do not proceed</strong>.</p>
 
     <p>In the kingdom of Velmoria, to rule is to be Queen. You are Prince Caelan, the sole heir about to undergo a mystical transformation to inherit your birthright... or reject it entirely.</p>
-    
+
     <p><em>Your destiny begins now.</em></p>
 
-    <button id="enterGame" style="margin-top: 20px; padding: 10px 20px; font-size: 18px; font-family: 'Papyrus', serif; color: #fff; background-color: #8b5e3c; border: none; border-radius: 6px; cursor: pointer; transition: background-color 0.3s;">Enter</button>
-
+    <button id="enterGame" style="
+      margin-top: 1.5em;
+      padding: 0.8em 1.5em;
+      font-size: 1em;
+      font-family: 'Papyrus', serif;
+      color: #fff;
+      background-color: #8b5e3c;
+      border: none;
+      border-radius: 6px;
+      transition: background-color 0.3s;
+    ">Enter</button>
   </div>
 </div>
+
 <</nobr>>
 
 :: intro
 <<nobr>>
 <div id="velmoria-intro-2">
-<h1 style="font-size: 32px; color: #6e421c;">👑 *Kingdom of Velmoria* 👑</h1>
+<h1 class='topic-head'>👑 *Kingdom of Velmoria* 👑</h1>
 <p><strong>Genre:</strong> Medieval Fantasy · Interactive Story · Gender Transformation</p>
 <hr style="margin: 20px 0; border: 0; height: 2px; background: #a58b5c;">
 
@@ -68,7 +109,7 @@ Veil of the Heir
   ⚠️ Mature Content Ahead: This story features magical gender transformation, feminization themes, and adult choices. Proceed only if you are comfortable with such content.
 </p>
 
-<button id="enter-relam" style="margin-top: 25px; font-size: 20px; padding: 10px 20px; background-color: #a58b5c; color: white; border: none; border-radius: 8px; cursor: pointer;">Enter the Realm</button>
+<button id="enter-relam" style="margin-top: 25px; padding: 10px 20px; background-color: #a58b5c; color: white; border: none; border-radius: 8px;">Enter the Realm</button>
 </div>
 <</nobr>>
 
@@ -118,9 +159,9 @@ Veil of the Heir
         </div>
     </div>
 </div>
-<div style="font-family: 'Papyrus', serif; font-size: 20px; color: #8b5e3c; background-color: #f5f0dc; border: 2px solid #a58b5c; padding: 18px; border-radius: 10px; box-shadow: 3px 3px 8px rgba(0,0,0,0.2); max-width: 700px; margin: 20px auto;">
+<div style="font-family: 'Papyrus', serif; potion_create_torso color: #8b5e3c; background-color: #f5f0dc; border: 2px solid #a58b5c; padding: 18px; border-radius: 10px; box-shadow: 3px 3px 8px rgba(0,0,0,0.2); max-width: 700px; margin: 20px auto;">
 
-  <b style="font-size: 24px;">✦ A Soft Frame to Shape ✦</b><br><br>
+  <b class='topic-head'>✦ A Soft Frame to Shape ✦</b><br><br>
 
   You begin your journey with a lean, wiry build neither imposing nor fragile. Your chest is flat, your muscles are modest, and your manhood, though present, is unremarkable in size. This body, while male, offers little resistance to the subtle reshaping of magic. There’s little bulk to shed, few hard edges to soften, and no overwhelming masculinity to subdue. In many ways, you are already half sculpted clay ripe for refinement. Feminine potions will take quickly to your form, molding your curves with grace and ease.<br><br>
 
@@ -192,9 +233,9 @@ In public mode only the muscular body type is available.
         </div>
     </div>
 </div>
-<div style="font-family: 'Papyrus', serif; font-size: 20px; color: #8b5e3c; background-color: #f5f0dc; border: 2px solid #a58b5c; padding: 18px; border-radius: 10px; box-shadow: 3px 3px 8px rgba(0,0,0,0.2); max-width: 700px; margin: 20px auto;">
+<div style="font-family: 'Papyrus', serif; potion_create_torso color: #8b5e3c; background-color: #f5f0dc; border: 2px solid #a58b5c; padding: 18px; border-radius: 10px; box-shadow: 3px 3px 8px rgba(0,0,0,0.2); max-width: 700px; margin: 20px auto;">
 
-  <b style="font-size: 24px;">✦ A Body of Strength, A Test of Change ✦</b><br><br>
+  <b class='topic-head'>✦ A Body of Strength, A Test of Change ✦</b><br><br>
 
   Years of training, battles, or discipline have sculpted your body into a strong and well defined form. Your pectorals are solid, your arms powerful, and your manhood bold and assertive. This is the body of a warrior or a proud prince a figure of undeniable masculinity. Magic will struggle here, not just to soften your muscles, but to coax them into yielding. Breasts will have to rise from a firm chest, curves must battle with sinew, and your sex must be reimagined against stubborn flesh. The path ahead will test not only your body’s pliability, but your will to surrender control.<br><br>
 
@@ -259,9 +300,9 @@ In public mode only the muscular body type is available.
         </div>
     </div>
 </div>
-<div style="font-family: 'Papyrus', serif; font-size: 20px; color: #8b5e3c; background-color: #f5f0dc; border: 2px solid #a58b5c; padding: 18px; border-radius: 10px; box-shadow: 3px 3px 8px rgba(0,0,0,0.2); max-width: 700px; margin: 20px auto;">
+<div style="font-family: 'Papyrus', serif; potion_create_torso color: #8b5e3c; background-color: #f5f0dc; border: 2px solid #a58b5c; padding: 18px; border-radius: 10px; box-shadow: 3px 3px 8px rgba(0,0,0,0.2); max-width: 700px; margin: 20px auto;">
 
-  <b style="font-size: 24px;">✦ A Monument to Masculinity ✦</b><br><br>
+  <b class='topic-head'>✦ A Monument to Masculinity ✦</b><br><br>
 
   You are the pinnacle of the male form massive, carved, and unrelenting. Your chest is thick with muscle, your limbs packed with raw strength, and your manhood... a challenge unto itself. Every inch of you screams dominance and virility. Magic doesn’t flow easily through such resistance it has to break before it can reshape. Feminization will be a slow, often painful unmaking of a body that was built to resist change. The potions must work harder, longer, and more intensely. Progress may come with setbacks. But perhaps, the greater the monument, the more glorious its transformation.<br><br>
 
@@ -325,9 +366,9 @@ In public mode only the muscular body type is available.
 <<set $currentObjectives = "The Council Convenes">>
 <<set $locationName = 'Castle'>>
 <<set $locationImage = setup.ImagePath + 'location/council_room.png'>>
-<div style="font-family: 'Papyrus', serif; font-size: 20px; color: #8b5e3c; background-color: #f5f0dc; border: 2px solid #a58b5c; padding: 18px; border-radius: 10px; box-shadow: 3px 3px 8px rgba(0,0,0,0.2); max-width: 700px; margin: 20px auto;">
+<div style="font-family: 'Papyrus', serif; potion_create_torso color: #8b5e3c; background-color: #f5f0dc; border: 2px solid #a58b5c; padding: 18px; border-radius: 10px; box-shadow: 3px 3px 8px rgba(0,0,0,0.2); max-width: 700px; margin: 20px auto;">
 
-<h1 style="font-size: 28px; color: #6e421c;">⚖️ The Council Convenes ⚖️</h1>
+<h1 class="topic-head">⚖️ The Council Convenes ⚖️</h1>
 
 <p>
   The grand hall of Velmoria's royal palace is adorned with banners bearing the sigil of the lioness, symbol of the matriarchal lineage. As Prince Caelan enters, the murmurs of the assembled nobles hush. At the head of the chamber sits Queen Alinora, her gaze steady and resolute.
@@ -494,7 +535,7 @@ Caelan’s heart beat like a war drum. This was no coronation. It was a reforgin
 :: mental_conversion
 <<nobr>>
 <<set $currentObjectives = "Listen to Mental Conversion">>
-<div style="font-family: 'Papyrus', serif; font-size: 20px; color: #8b5e3c; background-color: #f5f0dc; border: 2px solid #a58b5c; padding: 18px; border-radius: 10px; box-shadow: 3px 3px 8px rgba(0,0,0,0.2); max-width: 700px; margin: 20px auto;">
+<div style="font-family: 'Papyrus', serif; potion_create_torso color: #8b5e3c; background-color: #f5f0dc; border: 2px solid #a58b5c; padding: 18px; border-radius: 10px; box-shadow: 3px 3px 8px rgba(0,0,0,0.2); max-width: 700px; margin: 20px auto;">
 <p><strong>Lady Serelyne Virellis</strong> stepped forward, her expression unreadable.</p>
 
 <<speech "serelyne">>
@@ -522,7 +563,7 @@ You may struggle, But should you succeed, the court will not see a transformed m
 :: physical_conversion
 <<nobr>>
 <<set $currentObjectives = "Listen to Physical Conversion">>
-<div style="font-family: 'Papyrus', serif; font-size: 20px; color: #8b5e3c; background-color: #f5f0dc; border: 2px solid #a58b5c; padding: 18px; border-radius: 10px; box-shadow: 3px 3px 8px rgba(0,0,0,0.2); max-width: 700px; margin: 20px auto;">
+<div style="font-family: 'Papyrus', serif; potion_create_torso color: #8b5e3c; background-color: #f5f0dc; border: 2px solid #a58b5c; padding: 18px; border-radius: 10px; box-shadow: 3px 3px 8px rgba(0,0,0,0.2); max-width: 700px; margin: 20px auto;">
 <p><strong>Archmage Thalara Moonveil</strong> stood with staff in hand, her silver hair glowing faintly under the chandelier's light.</p>
 
 <<speech "thalara">>
@@ -549,7 +590,7 @@ The body is clay in the hands of will and magic, But it is <em>you</em> who must
 :: rule_and_survival
 <<nobr>>
 <<set $currentObjectives = "Listen to Rule and Survival">>
-<div style="font-family: 'Papyrus', serif; font-size: 20px; color: #8b5e3c; background-color: #f5f0dc; border: 2px solid #a58b5c; padding: 18px; border-radius: 10px; box-shadow: 3px 3px 8px rgba(0,0,0,0.2); max-width: 700px; margin: 20px auto;">
+<div style="font-family: 'Papyrus', serif; potion_create_torso color: #8b5e3c; background-color: #f5f0dc; border: 2px solid #a58b5c; padding: 18px; border-radius: 10px; box-shadow: 3px 3px 8px rgba(0,0,0,0.2); max-width: 700px; margin: 20px auto;">
 <p><strong>Queen Alinora</strong> herself rose now, her voice strong with pride.</p>
 
 <<speech "alinora">>
