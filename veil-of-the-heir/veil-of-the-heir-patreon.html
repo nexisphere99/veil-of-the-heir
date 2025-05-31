@@ -13777,7 +13777,7 @@ Aye, by the spirit of bad taste. But you pulled it off  like a peacock in a swor
             &lt;&lt;link $potion_add&gt;&gt;
                 &lt;&lt;set $potionInventory[_item] += $userItems[_item].min_amount*2&gt;&gt;
                 &lt;&lt;set $userItems[_item].amount -= $userItems[_item].min_amount*2&gt;&gt;
-                &lt;&lt;goto &quot;potion_create_hair&quot;&gt;&gt;
+                &lt;&lt;goto &quot;potion_create_chest&quot;&gt;&gt;
             &lt;&lt;/link&gt;&gt;
             &lt;&lt;/capture&gt;&gt;
         &lt;&lt;/if&gt;&gt;
@@ -13787,7 +13787,7 @@ Aye, by the spirit of bad taste. But you pulled it off  like a peacock in a swor
             &lt;&lt;link $potion_add&gt;&gt;
                 &lt;&lt;set $potionInventory[_item] += $userItems[_item].min_amount*5&gt;&gt;
                 &lt;&lt;set $userItems[_item].amount -= $userItems[_item].min_amount*5&gt;&gt;
-                &lt;&lt;goto &quot;potion_create_hair&quot;&gt;&gt;
+                &lt;&lt;goto &quot;potion_create_chest&quot;&gt;&gt;
             &lt;&lt;/link&gt;&gt;
             &lt;&lt;/capture&gt;&gt;
         &lt;&lt;/if&gt;&gt;
@@ -15348,7 +15348,7 @@ He sighs. &quot;I thought I&#39;d feel powerful. Instead, I feel... swallowed.&l
             &lt;&lt;link $potion_add&gt;&gt;
                 &lt;&lt;set $potionInventory[_item] += $userItems[_item].min_amount*2&gt;&gt;
                 &lt;&lt;set $userItems[_item].amount -= $userItems[_item].min_amount*2&gt;&gt;
-                &lt;&lt;goto &quot;potion_create_hair&quot;&gt;&gt;
+                &lt;&lt;goto &quot;potion_create_crotch&quot;&gt;&gt;
             &lt;&lt;/link&gt;&gt;
             &lt;&lt;/capture&gt;&gt;
         &lt;&lt;/if&gt;&gt;
@@ -15358,7 +15358,7 @@ He sighs. &quot;I thought I&#39;d feel powerful. Instead, I feel... swallowed.&l
             &lt;&lt;link $potion_add&gt;&gt;
                 &lt;&lt;set $potionInventory[_item] += $userItems[_item].min_amount*5&gt;&gt;
                 &lt;&lt;set $userItems[_item].amount -= $userItems[_item].min_amount*5&gt;&gt;
-                &lt;&lt;goto &quot;potion_create_hair&quot;&gt;&gt;
+                &lt;&lt;goto &quot;potion_create_crotch&quot;&gt;&gt;
             &lt;&lt;/link&gt;&gt;
             &lt;&lt;/capture&gt;&gt;
         &lt;&lt;/if&gt;&gt;
@@ -17965,7 +17965,7 @@ He sighs. &quot;I thought I&#39;d feel powerful. Instead, I feel... swallowed.&l
             &lt;&lt;link $potion_add&gt;&gt;
                 &lt;&lt;set $potionInventory[_item] += $userItems[_item].min_amount*2&gt;&gt;
                 &lt;&lt;set $userItems[_item].amount -= $userItems[_item].min_amount*2&gt;&gt;
-                &lt;&lt;goto &quot;potion_create_hair&quot;&gt;&gt;
+                &lt;&lt;goto &quot;potion_create_head&quot;&gt;&gt;
             &lt;&lt;/link&gt;&gt;
             &lt;&lt;/capture&gt;&gt;
         &lt;&lt;/if&gt;&gt;
@@ -17975,7 +17975,7 @@ He sighs. &quot;I thought I&#39;d feel powerful. Instead, I feel... swallowed.&l
             &lt;&lt;link $potion_add&gt;&gt;
                 &lt;&lt;set $potionInventory[_item] += $userItems[_item].min_amount*5&gt;&gt;
                 &lt;&lt;set $userItems[_item].amount -= $userItems[_item].min_amount*5&gt;&gt;
-                &lt;&lt;goto &quot;potion_create_hair&quot;&gt;&gt;
+                &lt;&lt;goto &quot;potion_create_head&quot;&gt;&gt;
             &lt;&lt;/link&gt;&gt;
             &lt;&lt;/capture&gt;&gt;
         &lt;&lt;/if&gt;&gt;
@@ -18044,6 +18044,7 @@ He sighs. &quot;I thought I&#39;d feel powerful. Instead, I feel... swallowed.&l
 
 /* &lt;pre&gt;&lt;&lt;=JSON.stringify($curr_potion_selected, null, 2)&gt;&gt;&lt;/pre&gt; */
 &lt;&lt;set $next_passage = &quot;head_&quot;+$curr_potion_selected.from +&quot;_&quot;+ &quot;head_&quot; + $curr_potion_selected.to&gt;&gt;
+/* &lt;&lt;=$next_passage&gt;&gt; */
 &lt;br&gt;
 [[Move Forth|$next_passage]]
 &lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="629" name="use_success_potion_create_head" tags="" position="1100,7850" size="100,100">&lt;&lt;nobr&gt;&gt;
@@ -18909,7 +18910,7 @@ He sighs. &quot;I thought I&#39;d feel powerful. Instead, I feel... swallowed.&l
             &lt;&lt;link $potion_add&gt;&gt;
                 &lt;&lt;set $potionInventory[_item] += $userItems[_item].min_amount*2&gt;&gt;
                 &lt;&lt;set $userItems[_item].amount -= $userItems[_item].min_amount*2&gt;&gt;
-                &lt;&lt;goto &quot;potion_create_hair&quot;&gt;&gt;
+                &lt;&lt;goto &quot;potion_create_left_hand&quot;&gt;&gt;
             &lt;&lt;/link&gt;&gt;
             &lt;&lt;/capture&gt;&gt;
         &lt;&lt;/if&gt;&gt;
@@ -18919,7 +18920,7 @@ He sighs. &quot;I thought I&#39;d feel powerful. Instead, I feel... swallowed.&l
             &lt;&lt;link $potion_add&gt;&gt;
                 &lt;&lt;set $potionInventory[_item] += $userItems[_item].min_amount*5&gt;&gt;
                 &lt;&lt;set $userItems[_item].amount -= $userItems[_item].min_amount*5&gt;&gt;
-                &lt;&lt;goto &quot;potion_create_hair&quot;&gt;&gt;
+                &lt;&lt;goto &quot;potion_create_left_hand&quot;&gt;&gt;
             &lt;&lt;/link&gt;&gt;
             &lt;&lt;/capture&gt;&gt;
         &lt;&lt;/if&gt;&gt;
@@ -19618,7 +19619,7 @@ This hand now holds influence, not just iron.&lt;&lt;/speech&gt;&gt;&lt;br&gt;
             &lt;&lt;link $potion_add&gt;&gt;
                 &lt;&lt;set $potionInventory[_item] += $userItems[_item].min_amount*2&gt;&gt;
                 &lt;&lt;set $userItems[_item].amount -= $userItems[_item].min_amount*2&gt;&gt;
-                &lt;&lt;goto &quot;potion_create_hair&quot;&gt;&gt;
+                &lt;&lt;goto &quot;potion_create_left_leg&quot;&gt;&gt;
             &lt;&lt;/link&gt;&gt;
             &lt;&lt;/capture&gt;&gt;
         &lt;&lt;/if&gt;&gt;
@@ -19628,7 +19629,7 @@ This hand now holds influence, not just iron.&lt;&lt;/speech&gt;&gt;&lt;br&gt;
             &lt;&lt;link $potion_add&gt;&gt;
                 &lt;&lt;set $potionInventory[_item] += $userItems[_item].min_amount*5&gt;&gt;
                 &lt;&lt;set $userItems[_item].amount -= $userItems[_item].min_amount*5&gt;&gt;
-                &lt;&lt;goto &quot;potion_create_hair&quot;&gt;&gt;
+                &lt;&lt;goto &quot;potion_create_left_leg&quot;&gt;&gt;
             &lt;&lt;/link&gt;&gt;
             &lt;&lt;/capture&gt;&gt;
         &lt;&lt;/if&gt;&gt;
@@ -20934,7 +20935,7 @@ That’s the transformation I treasure most the shift from resistance to curiosi
             &lt;&lt;link $potion_add&gt;&gt;
                 &lt;&lt;set $potionInventory[_item] += $userItems[_item].min_amount*2&gt;&gt;
                 &lt;&lt;set $userItems[_item].amount -= $userItems[_item].min_amount*2&gt;&gt;
-                &lt;&lt;goto &quot;potion_create_hair&quot;&gt;&gt;
+                &lt;&lt;goto &quot;potion_create_right_hand&quot;&gt;&gt;
             &lt;&lt;/link&gt;&gt;
             &lt;&lt;/capture&gt;&gt;
         &lt;&lt;/if&gt;&gt;
@@ -20944,7 +20945,7 @@ That’s the transformation I treasure most the shift from resistance to curiosi
             &lt;&lt;link $potion_add&gt;&gt;
                 &lt;&lt;set $potionInventory[_item] += $userItems[_item].min_amount*5&gt;&gt;
                 &lt;&lt;set $userItems[_item].amount -= $userItems[_item].min_amount*5&gt;&gt;
-                &lt;&lt;goto &quot;potion_create_hair&quot;&gt;&gt;
+                &lt;&lt;goto &quot;potion_create_right_hand&quot;&gt;&gt;
             &lt;&lt;/link&gt;&gt;
             &lt;&lt;/capture&gt;&gt;
         &lt;&lt;/if&gt;&gt;
@@ -21757,7 +21758,7 @@ That’s the transformation I treasure most the shift from resistance to curiosi
             &lt;&lt;link $potion_add&gt;&gt;
                 &lt;&lt;set $potionInventory[_item] += $userItems[_item].min_amount*2&gt;&gt;
                 &lt;&lt;set $userItems[_item].amount -= $userItems[_item].min_amount*2&gt;&gt;
-                &lt;&lt;goto &quot;potion_create_hair&quot;&gt;&gt;
+                &lt;&lt;goto &quot;potion_create_right_leg&quot;&gt;&gt;
             &lt;&lt;/link&gt;&gt;
             &lt;&lt;/capture&gt;&gt;
         &lt;&lt;/if&gt;&gt;
@@ -21767,7 +21768,7 @@ That’s the transformation I treasure most the shift from resistance to curiosi
             &lt;&lt;link $potion_add&gt;&gt;
                 &lt;&lt;set $potionInventory[_item] += $userItems[_item].min_amount*5&gt;&gt;
                 &lt;&lt;set $userItems[_item].amount -= $userItems[_item].min_amount*5&gt;&gt;
-                &lt;&lt;goto &quot;potion_create_hair&quot;&gt;&gt;
+                &lt;&lt;goto &quot;potion_create_right_leg&quot;&gt;&gt;
             &lt;&lt;/link&gt;&gt;
             &lt;&lt;/capture&gt;&gt;
         &lt;&lt;/if&gt;&gt;
@@ -22708,7 +22709,7 @@ Then drink deeply, Caelan. The unmaking is as vital as the making. Your journey 
             &lt;&lt;link $potion_add&gt;&gt;
                 &lt;&lt;set $potionInventory[_item] += $userItems[_item].min_amount*2&gt;&gt;
                 &lt;&lt;set $userItems[_item].amount -= $userItems[_item].min_amount*2&gt;&gt;
-                &lt;&lt;goto &quot;potion_create_hair&quot;&gt;&gt;
+                &lt;&lt;goto &quot;potion_create_torso&quot;&gt;&gt;
             &lt;&lt;/link&gt;&gt;
             &lt;&lt;/capture&gt;&gt;
         &lt;&lt;/if&gt;&gt;
@@ -22718,7 +22719,7 @@ Then drink deeply, Caelan. The unmaking is as vital as the making. Your journey 
             &lt;&lt;link $potion_add&gt;&gt;
                 &lt;&lt;set $potionInventory[_item] += $userItems[_item].min_amount*5&gt;&gt;
                 &lt;&lt;set $userItems[_item].amount -= $userItems[_item].min_amount*5&gt;&gt;
-                &lt;&lt;goto &quot;potion_create_hair&quot;&gt;&gt;
+                &lt;&lt;goto &quot;potion_create_torso&quot;&gt;&gt;
             &lt;&lt;/link&gt;&gt;
             &lt;&lt;/capture&gt;&gt;
         &lt;&lt;/if&gt;&gt;

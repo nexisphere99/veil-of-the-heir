@@ -123,7 +123,7 @@
             <<link $potion_add>>
                 <<set $potionInventory[_item] += $userItems[_item].min_amount*2>>
                 <<set $userItems[_item].amount -= $userItems[_item].min_amount*2>>
-                <<goto "potion_create_hair">>
+                <<goto "potion_create_right_leg">>
             <</link>>
             <</capture>>
         <</if>>
@@ -133,7 +133,7 @@
             <<link $potion_add>>
                 <<set $potionInventory[_item] += $userItems[_item].min_amount*5>>
                 <<set $userItems[_item].amount -= $userItems[_item].min_amount*5>>
-                <<goto "potion_create_hair">>
+                <<goto "potion_create_right_leg">>
             <</link>>
             <</capture>>
         <</if>>

@@ -122,7 +122,7 @@
             <<link $potion_add>>
                 <<set $potionInventory[_item] += $userItems[_item].min_amount*2>>
                 <<set $userItems[_item].amount -= $userItems[_item].min_amount*2>>
-                <<goto "potion_create_hair">>
+                <<goto "potion_create_head">>
             <</link>>
             <</capture>>
         <</if>>
@@ -132,7 +132,7 @@
             <<link $potion_add>>
                 <<set $potionInventory[_item] += $userItems[_item].min_amount*5>>
                 <<set $userItems[_item].amount -= $userItems[_item].min_amount*5>>
-                <<goto "potion_create_hair">>
+                <<goto "potion_create_head">>
             <</link>>
             <</capture>>
         <</if>>
@@ -205,6 +205,7 @@
 
 /* <pre><<=JSON.stringify($curr_potion_selected, null, 2)>></pre> */
 <<set $next_passage = "head_"+$curr_potion_selected.from +"_"+ "head_" + $curr_potion_selected.to>>
+/* <<=$next_passage>> */
 <br>
 [[Move Forth|$next_passage]]
 <</nobr>>
