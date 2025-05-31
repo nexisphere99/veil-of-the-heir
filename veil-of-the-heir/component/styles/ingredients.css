@@ -30,7 +30,7 @@
         justify-content: center;
     }
 
-    .item-card img {
+    #passage-potion-create-hair .item-card img {
         width: 50px !important;
     }
 }

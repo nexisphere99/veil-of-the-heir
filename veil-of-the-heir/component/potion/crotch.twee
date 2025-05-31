@@ -115,7 +115,7 @@
             <<goto "potion_create_crotch">>
         <</link>>
         <</capture>>
-        <<if $userItems[_item].amount > $userItems[_item].min_amount*2>>
+        <<if $userItems[_item].amount >= $userItems[_item].min_amount*2>>
             <<capture _item>>
             <<set $potion_add = "+" + $userItems[_item].min_amount*2 + " " + $userItems[_item].unit>>
             <<link $potion_add>>
@@ -125,7 +125,7 @@
             <</link>>
             <</capture>>
         <</if>>
-        <<if $userItems[_item].amount > $userItems[_item].min_amount*5>>
+        <<if $userItems[_item].amount >= $userItems[_item].min_amount*5>>
             <<capture _item>>
             <<set $potion_add = "+" + $userItems[_item].min_amount*5 + " " + $userItems[_item].unit>>
             <<link $potion_add>>

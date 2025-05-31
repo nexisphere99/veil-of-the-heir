@@ -314,6 +314,20 @@ button,
 	color: #6e421c;
 }
 
+
+#intro {
+    font-family: 'Papyrus', serif;
+    font-size: 20px;
+    color: #8b5e3c;
+    background-color: #f5f0dc;
+    border: 2px solid #a58b5c;
+    padding: 18px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+    max-width: 700px;
+    text-align: center;
+}
+
 @media (max-width: 768px) {
 	body {
 		font-size: smaller;
@@ -331,5 +345,20 @@ button,
 	.topic-head {
 		font-size: large;
 		color: #6e421c;
+	}
+
+
+	#intro {
+		font-family: 'Papyrus', serif;
+		font-size: 1em;
+		color: #8b5e3c;
+		background-color: #f5f0dc;
+		border: 2px solid #a58b5c;
+		padding: 1.2em;
+		border-radius: 10px;
+		box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+		max-width: 700px;
+		width: 100%;
+		text-align: center;
 	}
 }
