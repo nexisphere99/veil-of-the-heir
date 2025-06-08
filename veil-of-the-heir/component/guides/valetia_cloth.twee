@@ -1,0 +1,1850 @@
+
+
+
+
+:: valetia_bloom_room
+<<nobr>>
+<<set _i to random(0, 79)>>
+<<if _i == 0>>
+<<speech "veletia">>
+Oh, you poor thing those sleeves are a tragedy, and that posture? Criminal. Come in, darling, I’m about to rescue your future.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Can I at least breathe while I’m being saved?
+<</speech>>
+<br>
+
+<<speech "veletia">>
+Only if you're planning to exhale confidence. Now off with the dull, on with the divine!
+<</speech>>
+<br>
+<<elseif _i == 1>>
+<<speech "veletia">>
+Did you bring that tunic from the battlefield or the broom closet? Because either way, it’s not meeting royalty today.
+<</speech>>
+<br>
+
+<<speech "mc">>
+It’s comfortable. Is that such a crime?
+<</speech>>
+<br>
+
+<<speech "veletia">>
+Comfort is for bedchambers, darling. Out here, we command with fabric.
+<</speech>>
+<br>
+<<elseif _i == 2>>
+<<speech "veletia">>
+Today, we drape you in midnight blue. Sensual, mysterious, devastating. Like a rumor in silk.
+<</speech>>
+<br>
+
+<<speech "mc">>
+I was aiming for ‘competent ruler,’ but sure let’s start with ‘rumor in silk.’
+<</speech>>
+<br>
+
+<<speech "veletia">>
+Oh, but a ruler who turns heads rules twice. Trust me.
+<</speech>>
+<br>
+<<elseif _i == 3>>
+<<speech "veletia">>
+Lift your chin, relax your fingers, walk like the world owes you a bow. That’s how queens move.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Feels more like acting than walking.
+<</speech>>
+<br>
+
+<<speech "veletia">>
+Every great performance begins on a stage. Eventually, it becomes who you are.
+<</speech>>
+<br>
+<<elseif _i == 4>>
+<<speech "veletia">>
+This fabric was stitched with moonlight, darling. One twirl and you’ll outshine prophecy itself.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Do I get a sword with that or just stares?
+<</speech>>
+<br>
+
+<<speech "veletia">>
+Why not both? Slay with style, I always say.
+<</speech>>
+<br>
+<<elseif _i == 5>>
+<<speech "veletia">>
+Try this corset. It teaches posture, mystery, and patience all in one wicked squeeze.
+<</speech>>
+<br>
+
+<<speech "mc">>
+I think it just taught me regret.
+<</speech>>
+<br>
+
+<<speech "veletia">>
+Pain is temporary. Beauty? Oh, that’s remembered in paintings.
+<</speech>>
+<br>
+<<elseif _i == 6>>
+<<speech "veletia">>
+There’s power in a perfect fit. Threads that embrace instead of armor that hides.
+<</speech>>
+<br>
+
+<<speech "mc">>
+And what if I’m still figuring out who I am beneath all these threads?
+<</speech>>
+<br>
+
+<<speech "veletia">>
+Then let the fabric show you. Sometimes silk knows before the soul does.
+<</speech>>
+<br>
+<<elseif _i == 7>>
+<<speech "veletia">>
+That sway of your hips was accidental, wasn’t it? Good. It means your body is listening to me.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Or protesting in confusion. Hard to tell with hips.
+<</speech>>
+<br>
+
+<<speech "veletia">>
+Confusion is just transformation in motion. You’re on the right path, my dear.
+<</speech>>
+<br>
+<<elseif _i == 8>>
+<<speech "veletia">>
+I dreamed of you last night in emerald, draped in defiance, with a crown of fire. It was divine.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Sounds dramatic. Do I survive the dream?
+<</speech>>
+<br>
+
+<<speech "veletia">>
+Oh yes. But only after making half the court swoon and the other half burn with envy.
+<</speech>>
+<br>
+<<elseif _i == 9>>
+<<speech "veletia">>
+One last touch… there. Now you’re no longer just a royal you’re a vision.
+<</speech>>
+<br>
+
+<<speech "mc">>
+I’m not sure I recognize myself.
+<</speech>>
+<br>
+
+<<speech "veletia">>
+Good. That means we’ve found something new. Something extraordinary.
+<</speech>>
+<br>
+<<elseif _i == 10>>
+<<speech "veletia">>
+Darling, if eyes don’t follow you across the ballroom like sunflowers chasing light, then I’ve failed you utterly.
+<</speech>>
+<br>
+
+<<speech "mc">>
+I was hoping for grace, not gawking.
+<</speech>>
+<br>
+
+<<speech "veletia">>
+Grace is the art of commanding a gaze without ever begging for it. You’re learning.
+<</speech>>
+<br>
+
+
+<<elseif _i == 11>>
+<<speech "veletia">>
+Mmm, this silk clings like a lover's promise. Tell me, Caelan, are you brave enough to wear temptation itself?
+<</speech>>
+<br>
+
+<<speech "mc">>
+Only if it doesn't whisper too loudly in council meetings.
+<</speech>>
+<br>
+
+<<speech "veletia">>
+Oh, it will whisper. But that’s half the fun power dressed as poetry.
+<</speech>>
+<br>
+<<elseif _i == 12>>
+<<speech "veletia">>
+I see the curve of your shoulders softening beautiful, like dusk melting into night.
+<</speech>>
+<br>
+
+<<speech "mc">>
+You make it sound like I’m vanishing.
+<</speech>>
+<br>
+
+<<speech "veletia">>
+No, darling. You're becoming inevitable.
+<</speech>>
+<br>
+
+
+<<elseif _i == 13>>
+<<speech "veletia">>
+Step, turn, pause your hips are beginning to sing. Now let’s teach them the whole aria.
+<</speech>>
+<br>
+
+<<speech "mc">>
+I swear these heels are a form of warfare.
+<</speech>>
+<br>
+
+<<speech "veletia">>
+Exactly. And you, my dear, are learning to conquer in silence and satin.
+<</speech>>
+<br>
+<<elseif _i == 14>>
+<<speech "veletia">>
+Oh, Caelan… in this gown, you don’t enter a room you rewrite it.
+<</speech>>
+<br>
+
+<<speech "mc">>
+And yet I still feel like I’m playing dress up.
+<</speech>>
+<br>
+
+<<speech "veletia">>
+Then play it beautifully, until the mirror stops laughing and starts applauding.
+<</speech>>
+<br>
+<<elseif _i == 15>>
+<<speech "veletia">>
+Tell me, sweetling does it thrill you a little, knowing how dangerous you’ll look in velvet and pearl?
+<</speech>>
+<br>
+
+<<speech "mc">>
+Dangerous or ridiculous? I'm never quite sure with you.
+<</speech>>
+<br>
+
+<<speech "veletia">>
+Then you're standing at the perfect edge. Now lean into it.
+<</speech>>
+<br>
+<<elseif _i == 16>>
+<<speech "veletia">>
+A soft touch here, a cinch there oh, if only diplomacy were as easy as corsetry.
+<</speech>>
+<br>
+
+<<speech "mc">>
+At least corsets don’t lie to your face.
+<</speech>>
+<br>
+
+<<speech "veletia">>
+They do, darling. They just lie charmingly.
+<</speech>>
+<br>
+<<elseif _i == 17>>
+<<speech "veletia">>
+Let them whisper, let them stare because the future queen walks on whispers and drowns them in presence.
+<</speech>>
+<br>
+
+<<speech "mc">>
+You make scandal sound like a royal accessory.
+<</speech>>
+<br>
+
+<<speech "veletia">>
+It is, dear. The crown is heavy but the drama? That’s where the sparkle lives.
+<</speech>>
+<br>
+<<elseif _i == 18>>
+<<speech "veletia">>
+A little lace at the wrist, a slit in the right place… balance, my dear, is everything.
+<</speech>>
+<br>
+
+<<speech "mc">>
+This balance feels like standing on a dagger’s point.
+<</speech>>
+<br>
+
+<<speech "veletia">>
+Exactly! Now smile like you enjoy the edge.
+<</speech>>
+<br>
+<<elseif _i == 19>>
+<<speech "veletia">>
+When I’m done with you, even the gods will look twice and wonder whose side you’re on.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Hopefully mine. I could use the divine backup.
+<</speech>>
+<br>
+
+<<speech "veletia">>
+Oh no, darling. You will be the divine backup.
+<</speech>>
+<br>
+<<elseif _i == 20>>
+<<speech "veletia">>
+Here we are your very first lingerie set. Rose pink lace, soft and sheer. The bra is lightly padded to encourage your budding breasts to rest properly... and the panties? Trimmed to fit that little gap you're starting to form.
+<</speech>>
+<br>
+
+<<speech "mc">>
+It’s... delicate. And tiny. Why do I feel more naked <strong style="color: pink;">wearing </strong>this than wearing nothing at all?
+<</speech>>
+<br>
+
+<<speech "veletia">>
+Because this isn't just fabric. It's invitation. It draws attention to what you've become what you're still becoming. Every thread whispers femininity against your skin. And soon, you’ll crave how it clings and flatters.
+<</speech>>
+<br>
+
+<<elseif _i == 21>>
+<<speech "veletia">>
+These silk stockings were enchanted to stay smooth no matter how your thighs move. But to hold them up, we’ll fasten this garter belt around your waist. You’ll learn soon that there’s something... thrilling... about being bound so gently.
+<</speech>>
+<br>
+
+<<speech "mc">>
+I can feel the clips tugging each time I shift. It’s... distracting.
+<</speech>>
+<br>
+
+<<speech "veletia">>
+Good. Your body <strong style="color: pink;">should </strong>be distracting now. You’ll walk differently in these. Sit more carefully. Every movement a silent reminder: you're not him anymore. You're soft, shaped, and sensual.
+<</speech>>
+<br>
+
+<<elseif _i == 22>>
+<<speech "veletia">>
+Tonight, you’ll wear these. A pair of midnight black lace panties stitched with sensitivity runes. They'll warm when you’re aroused... and cool when you lie about it.
+<</speech>>
+<br>
+
+<<speech "mc">>
+That’s... devious. You’re saying these panties will betray me?
+<</speech>>
+<br>
+
+<<speech "veletia">>
+No, sweetling. They’ll reveal you. Every blush, every twitch, every lingering look it’s part of your training. Queens must know their desires, not hide from them. These just... speed that awareness along.
+<</speech>>
+<br>
+
+<<elseif _i == 23>>
+<<speech "veletia">>
+This corset is a marvel. Bone ribbed, pearl trimmed, and laced tight to reshape your figure. But more than that it teaches you to breathe like a lady: shallow, graceful, and teasing.
+<</speech>>
+<br>
+
+<<speech "mc">>
+It’s hard to inhale all the way. Every breath makes my breasts rise. Is that on purpose?
+<</speech>>
+<br>
+
+<<speech "veletia">>
+Of course. Let them watch your chest rise and fall, slow and soft. Let them listen to your breath when you speak. A queen seduces with subtlety. Your corset becomes your voice before your lips even move.
+<</speech>>
+<br>
+
+<<elseif _i == 24>>
+<<speech "veletia">>
+Slip into this gown. A whisper of lavender mesh with lace along the hem. It won't hide anything, but that’s the beauty. It’s what noble daughters wear while being taught their nightly duties.
+<</speech>>
+<br>
+
+<<speech "mc">>
+So this is meant to be seen through? Even in candlelight?
+<</speech>>
+<br>
+
+<<speech "veletia">>
+Especially in candlelight. Let your silhouette tease and taunt. Let your nipples show beneath the gauze. The dressing gown isn’t meant for sleep. It’s meant for anticipation. And obedience.
+<</speech>>
+<br>
+
+<<elseif _i == 25>>
+<<speech "veletia">>
+This padded bra isn’t just decorative it’s designed to <strong style="color: pink;">guide </strong>your growth. Your nipples will be held gently, your chest lifted and rounded. It’s soft. Supportive. But also shaping.
+<</speech>>
+<br>
+
+<<speech "mc">>
+When I put it on, it’s like... I can see what I’ll become. And it’s... not bad.
+<</speech>>
+<br>
+
+<<speech "veletia">>
+That’s the spirit, darling. Let the padding cradle what’s emerging. Let it hint at curves that will someday be real. For now, it’s promise. Soon, it will be truth.
+<</speech>>
+<br>
+
+<<elseif _i == 26>>
+<<speech "veletia">>
+These panties are woven with a subtle enchantment activated by your own pleasure. The more aroused you become, the more they cling... and stimulate. Meant to train your sensitivity.
+<</speech>>
+<br>
+
+<<speech "mc">>
+That’s... a dangerous game. What if someone sees me reacting?
+<</speech>>
+<br>
+
+<<speech "veletia">>
+Then let them. A queen doesn’t apologize for her desire. She <strong style="color: pink;">controls </strong>it. These teach you restraint and surrender. Both are tools of power. And you will master both.
+<</speech>>
+<br>
+
+<<elseif _i == 27>>
+<<speech "veletia">>
+This chemise is ceremonial meant for those in the final stages of their transformation. Softest silk, cut to flutter over your new hips and thighs. Barely touches the skin... yet it drives the body wild.
+<</speech>>
+<br>
+
+<<speech "mc">>
+When I move, it glides between my legs. It’s... intimate. Embarrassingly so.
+<</speech>>
+<br>
+
+<<speech "veletia">>
+That’s the beauty of it. The chemise doesn’t <strong style="color: pink;">hide </strong>you it accents you. Reminds you. Your legs, your thighs, the place that’s growing into womanhood <strong style="color: pink;">all of it </strong>deserves attention now.
+<</speech>>
+<br>
+
+<<elseif _i == 28>>
+<<speech "veletia">>
+These are special. Cut low in the front, and open below. They allow access for continued transformation while maintaining appearance. Sometimes, function and seduction walk hand in hand.
+<</speech>>
+<br>
+
+<<speech "mc">>
+I can’t wear that in front of anyone. I’d feel completely exposed.
+<</speech>>
+<br>
+
+<<speech "veletia">>
+And yet, that’s the point. Exposure builds confidence. You won’t always be able to hide what you’re becoming. Better to choose what they see... than to let shame control the view.
+<</speech>>
+<br>
+
+<<elseif _i == 29>>
+<<speech "veletia">>
+This bodice is treated with aromatics subtle oils that warm with your skin and enhance scent. When worn, your body becomes... persuasive. You won’t just look feminine. You’ll <strong style="color: pink;">smell </strong>inviting.
+<</speech>>
+<br>
+
+<<speech "mc">>
+It’s tingling already. My skin feels warmer. It’s... hard to concentrate.
+<</speech>>
+<br>
+
+<<speech "veletia">>
+Good. Your body is learning to <strong style="color: pink;">respond*. These oils unlock your senses, and those around you will respond in kind. When you walk through the court, they’ll remember your presence before they even hear your name.
+<</speech>>
+<br>
+
+<<elseif _i == 30>>
+<<speech "veletia">>
+This, my dear, is your first court dress. Sky blue silk, tightly cinched at the waist to show your blooming figure. The sleeves are sheer, the neckline dipped just enough to draw the eye but not enough to offend.
+<</speech>>
+<br>
+
+<<speech "mc">>
+I never imagined myself in something so... visible. I feel like I’m being watched.
+<</speech>>
+<br>
+
+<<speech "veletia">>
+That’s the point. Queens are watched. You’ll learn to draw attention and wield it like a blade. Now twirl. Let the fabric whisper around your thighs. Good feel the power in that rustle.
+<</speech>>
+<br>
+
+<<elseif _i == 31>>
+<<speech "veletia">>
+This one’s for late feasts and soft music golden fabric laced with starlight thread. In candlelight, your curves will shimmer. It clings to your hips... then flows like liquid fire.
+<</speech>>
+<br>
+
+<<speech "mc">>
+It’s almost too flattering. I can feel the fabric shift over every part of me.
+<</speech>>
+<br>
+
+<<speech "veletia">>
+That’s exactly why you’ll wear it. Let the nobles see the queen you’re becoming. Let them talk about the sway of your hips, the shape of your silhouette. A ruler who haunts their dreams before their minds.
+<</speech>>
+<br>
+
+<<elseif _i == 32>>
+<<speech "veletia">>
+This tunic is for posture training. Corset integrated, short hemline. Every time you slouch, it digs in slightly. Posture is power, dear. Even when fetching scrolls or practicing your curtsy.
+<</speech>>
+<br>
+
+<<speech "mc">>
+It's snug... very snug. I can barely bend.
+<</speech>>
+<br>
+
+<<speech "veletia">>
+Precisely. You’ll stand straight, walk with poise, and breathe with grace. Even your discomfort becomes beautiful. Embrace the discipline it will show in every regal step.
+<</speech>>
+<br>
+
+<<elseif _i == 33>>
+<<speech "veletia">>
+This backless gown is a statement. When you glide across the floor, it reveals the dip of your spine, the shape of your waist... a soft, vulnerable line that draws attention to your femininity.
+<</speech>>
+<br>
+
+<<speech "mc">>
+It feels like I’m baring too much. Shouldn’t royalty cover more?
+<</speech>>
+<br>
+
+<<speech "veletia">>
+Royalty commands attention. You don’t <strong style="color: pink;">hide </strong>power, you display it with elegance. This gown says: I am not a man to be feared. I am a woman to be <strong style="color: pink;">followed </strong>and <strong style="color: pink;">desired*.
+<</speech>>
+<br>
+
+<<elseif _i == 34>>
+<<speech "veletia">>
+A simpler piece for garden strolls. Light cotton, pastel florals, lace trimming. It flares just enough to catch the breeze and flirt with your legs. Feminine, approachable, charming.
+<</speech>>
+<br>
+
+<<speech "mc">>
+This one feels... innocent. Almost playful.
+<</speech>>
+<br>
+
+<<speech "veletia">>
+Good. A queen must know when to be intimidating and when to appear harmless. This dress disarms. It softens your masculinity and lets others lower their guard around you. A gentle weapon in silk disguise.
+<</speech>>
+<br>
+
+<<elseif _i == 35>>
+<<speech "veletia">>
+This velvet gown carries enchantments that respond to your mood. A touch darker when you’re cross, warmer when aroused. You’ll find it clings more when you try to hide emotion. Useful, don’t you think?
+<</speech>>
+<br>
+
+<<speech "mc">>
+So it betrays my feelings to anyone watching?
+<</speech>>
+<br>
+
+<<speech "veletia">>
+No, darling it teaches you to master them. You’ll learn grace under fire, calm in lust. Wear it until you no longer fear your feelings showing... because you'll control them all.
+<</speech>>
+<br>
+
+<<elseif _i == 36>>
+<<speech "veletia">>
+This tunic appears simple, but there are subtle slits beneath the arms and along the thighs. Laces are threaded inside tightening with every gesture out of posture. It’s a lesson stitched in restraint.
+<</speech>>
+<br>
+
+<<speech "mc">>
+You’re dressing me in... punishment?
+<</speech>>
+<br>
+
+<<speech "veletia">>
+Not punishment. Correction. You’ll carry yourself like a queen... or the dress will teach you to. Many noble girls learn this way. Now it’s your turn.
+<</speech>>
+<br>
+
+<<elseif _i == 37>>
+<<speech "veletia">>
+This bodice was designed to lift and press the bust together slightly. It encourages you to be proud of your development. The color? Wine red luxurious, regal, and a bit... indulgent.
+<</speech>>
+<br>
+
+<<speech "mc">>
+My chest looks... full. Almost like it doesn’t belong to me.
+<</speech>>
+<br>
+
+<<speech "veletia">>
+Oh, but it does. Every inch you see, every curve that fills this fabric it’s yours. Claimed by choice or fate, it matters not. You will learn to adore what you see reflected.
+<</speech>>
+<br>
+
+<<elseif _i == 38>>
+<<speech "veletia">>
+Tonight, you wear this. A flowing gown with a thigh high slit. When you step, the slit parts... revealing glimpses of your soft thighs. You’ll feel vulnerable at first but admired by all.
+<</speech>>
+<br>
+
+<<speech "mc">>
+It almost feels... dangerous to wear. Like I’ll reveal too much.
+<</speech>>
+<br>
+
+<<speech "veletia">>
+That’s what makes it powerful. A queen’s allure is part mystique, part control. This gown flirts, but only you decide how far. And trust me they’ll all be waiting to see more.
+<</speech>>
+<br>
+
+<<elseif _i == 39>>
+<<speech "veletia">>
+Every queen must know how to grieve with grace. This mourning gown is black silk with pearl detailing. Modest, but hauntingly beautiful. When you wear it, your body becomes poetry in sadness.
+<</speech>>
+<br>
+
+<<speech "mc">>
+It feels heavy. Like wearing emotion.
+<</speech>>
+<br>
+
+<<speech "veletia">>
+Precisely. Let the fabric carry your sorrow. Let your femininity express even in grief. You’ll learn that beauty and pain are sisters... and that queens do not hide either.
+<</speech>>
+<br>
+
+<<elseif _i == 40>>
+<<speech "veletia">>
+Now this is ironic... crimson velvet, flowing and rich. A little joke from me to you. Fitting, don’t you think? You’ll soon understand the importance of choosing dark shades at the right time of month.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Wait are you implying I’ll... actually have to worry about that?
+<</speech>>
+<br>
+
+<<speech "veletia">>
+Oh darling, we’re not dressing a doll. You’re becoming a woman. And women bleed. Magic or not, you’ll have to learn the art of discreet elegance even when your insides are staging a rebellion.
+<</speech>>
+<br>
+
+<<elseif _i == 41>>
+<<speech "veletia">>
+This tunic has an extra padded lining. Not for cold but for emergencies. Once your cycle begins, you’ll thank me. Bleeding through a diplomatic gown is… let’s say, memorable in the wrong way.
+<</speech>>
+<br>
+
+<<speech "mc">>
+You’re seriously telling me I’ll have to wear <strong style="color: pink;">padding </strong>now?
+<</speech>>
+<br>
+
+<<speech "veletia">>
+Every queen does. Even empresses stain their thrones from time to time. The key is making sure no one ever knows. Welcome to real royalty, love.
+<</speech>>
+<br>
+
+<<elseif _i == 42>>
+<<speech "veletia">>
+This fabric’s been spellwoven stain resistant, odor absorbing, and entirely discreet. The first time you bleed in silk, you’ll panic. Best to have a dress that doesn’t betray your secrets.
+<</speech>>
+<br>
+
+<<speech "mc">>
+I thought the mage would make it painless…
+<</speech>>
+<br>
+
+<<speech "veletia">>
+She’ll make it magical, not merciful. Being a woman isn’t all gowns and perfume. Sometimes, it’s cramps, emotional chaos, and wishing you could throttle the moon.
+<</speech>>
+<br>
+
+<<elseif _i == 43>>
+<<speech "veletia">>
+Notice the sash on this gown? Red silk, tied right at the waist. I call it my ‘monthly warning’ look. Every maid in the palace knows not to test my temper when I wear it.
+<</speech>>
+<br>
+
+<<speech "mc">>
+So you’re warning people… with a ribbon?
+<</speech>>
+<br>
+
+<<speech "veletia">>
+Exactly. Fashion is communication. Someday you’ll storm the council chamber in this, and every man will suddenly remember urgent errands elsewhere. It’s power, darling.
+<</speech>>
+<br>
+
+<<elseif _i == 44>>
+<<speech "veletia">>
+This soft gown is designed for when your body begins to shift inside. Flows loose, nothing too tight. When your first moon comes, you’ll want something that doesn’t pinch.
+<</speech>>
+<br>
+
+<<speech "mc">>
+I… didn’t expect it to feel real until it started happening.
+<</speech>>
+<br>
+
+<<speech "veletia">>
+It always feels real when the cramping starts. Don’t worry I’ve stitched a charm in the hem for comfort. Also, there’s a tiny pocket... for chocolates.
+<</speech>>
+<br>
+
+<<elseif _i == 45>>
+<<speech "veletia">>
+This gown pairs with heels and mood swings. You’ll teeter on stilettos <strong style="color: pink;">and </strong>emotional cliffs. Why not embrace both? Being dramatic is part of the charm.
+<</speech>>
+<br>
+
+<<speech "mc">>
+You’re saying I’ll cry because of… shoes?
+<</speech>>
+<br>
+
+<<speech "veletia">>
+No because of hormones, bloating, and someone looking at you the wrong way. The shoes just complete the ensemble.
+<</speech>>
+<br>
+
+<<elseif _i == 46>>
+<<speech "veletia">>
+This travel tunic? Designed for surprise bleed days. Stretchy, high hemmed, easy to wash. I call it the ‘Oops Tunic.’ Keep one in your chambers. Trust me.
+<</speech>>
+<br>
+
+<<speech "mc">>
+You’re making this sound like I’ll need a disaster kit…
+<</speech>>
+<br>
+
+<<speech "veletia">>
+You absolutely will. And emergency undergarments. And herbs. And possibly a servant who brings you hot towels and wine. You’ll love womanhood eventually.
+<</speech>>
+<br>
+
+<<elseif _i == 47>>
+<<speech "veletia">>
+This ceremonial robe? Worn only once a month by the queen herself. A tradition. Scarlet lining, gold threads. The palace pretends it’s about lunar harmony, but really, it’s just a clever way to stay regal while miserable.
+<</speech>>
+<br>
+
+<<speech "mc">>
+So… the entire court just pretends?
+<</speech>>
+<br>
+
+<<speech "veletia">>
+Of course. We bleed in silence, smile in pain, and rule in heels. Get used to it.
+<</speech>>
+<br>
+
+<<elseif _i == 48>>
+<<speech "veletia">>
+This corset will teach you discipline, but don’t wear it during your first bleed. There’s no glory in fainting from cramps <strong style="color: pink;">and </strong>compression.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Do you all <strong style="color: pink;">really </strong>go through this every month?
+<</speech>>
+<br>
+
+<<speech "veletia">>
+Yes. And we survive it. Sometimes with wine, sometimes with tears, and often while smiling at nobles who deserve a dagger to the eye.
+<</speech>>
+<br>
+
+<<elseif _i == 49>>
+<<speech "veletia">>
+This is tradition. Every young noblewoman wears white silk the day after her first blood. It’s a statement of maturity, power, and yes... fertility. We’ll dye it pale rose afterward to keep as memory.
+<</speech>>
+<br>
+
+<<speech "mc">>
+You mean I’ll have to <strong style="color: pink;">announce </strong>it?
+<</speech>>
+<br>
+
+<<speech "veletia">>
+Not announce. Just... appear. Radiant, glowing, a little pale. And when the older women smile and nod, you’ll know you’ve joined a sisterhood that no man can ever understand.
+<</speech>>
+<br>
+<<elseif _i == 50>>
+<<speech "veletia">>
+This lace isn’t just for looks it’s crafted to tease. It brushes against your thighs when you walk, when you shift, when you breathe. You'll soon understand how your skin <strong style="color: pink;">hungers </strong>for sensation in ways it never did before.
+<</speech>>
+<br>
+
+<<speech "mc">>
+You make it sound like... every little movement will turn me on.
+<</speech>>
+<br>
+
+<<speech "veletia">>
+Oh sweetling, it might. Female pleasure is patient and deep it builds, tingles, lingers. It doesn't strike like lightning, it <strong style="color: pink;">blooms </strong>like fire beneath the skin.
+<</speech>>
+<br>
+
+<<elseif _i == 51>>
+<<speech "veletia">>
+This silk chemise clings in all the right places. Once your body awakens, the sensation of silk between your thighs will become... addictive. You’ll feel things no man’s ever felt.
+<</speech>>
+<br>
+
+<<speech "mc">>
+You keep hinting that it’s... better than what I know.
+<</speech>>
+<br>
+
+<<speech "veletia">>
+Because it <strong style="color: pink;">is*. Your new body won’t climax like a man’s. It’ll <strong style="color: pink;">swell </strong>into pleasure, <strong style="color: pink;">quake </strong>with need, and leave you panting, aching for more... long after it ends.
+<</speech>>
+<br>
+
+<<elseif _i == 52>>
+<<speech "veletia">>
+When your breasts grow in, even the gentlest touch can steal your breath. A soft caress... a teasing flick. You'll learn how sensitive nipples can be how they <strong style="color: pink;">burn </strong>for attention.
+<</speech>>
+<br>
+
+<<speech "mc">>
+That sounds... distracting.
+<</speech>>
+<br>
+
+<<speech "veletia">>
+Oh, it is. It’s maddening. It’s <strong style="color: pink;">glorious*. You’ll realize pleasure isn’t just release it’s the build up, the ache, the anticipation that melts your spine and makes your thoughts stutter.
+<</speech>>
+<br>
+
+<<elseif _i == 53>>
+<<speech "veletia">>
+Soon, you'll carry your pleasure deep within. Not on the surface like a man. Inside you, there's a place that aches to be touched, stretched, filled. And once awakened… it never forgets.
+<</speech>>
+<br>
+
+<<speech "mc">>
+That sounds... overwhelming.
+<</speech>>
+<br>
+
+<<speech "veletia">>
+It is. But it's beautiful. A man may spend his lust in moments. But a woman oh, she can <strong style="color: pink;">drown </strong>in waves of bliss, one after another, like tides pulling her under.
+<</speech>>
+<br>
+
+<<elseif _i == 54>>
+<<speech "veletia">>
+Try this gown open at the back, tight at the hips. When your pleasure voice awakens, even a moan will sound different. Softer, breathier, <strong style="color: pink;">hungry*.
+<</speech>>
+<br>
+
+<<speech "mc">>
+My voice will change that much?
+<</speech>>
+<br>
+
+<<speech "veletia">>
+Yes, darling. You won’t grunt anymore. You’ll gasp. Whimper. <strong style="color: pink;">Sing*. A woman’s pleasure echoes in her throat and thighs and fingertips. It’s music. And you’ll learn the notes soon enough.
+<</speech>>
+<br>
+
+<<elseif _i == 55>>
+<<speech "veletia">>
+One day, you’ll lie in your bed, brush a hand between your legs, and the world will <strong style="color: pink;">stop*. You’ll shudder. You’ll gasp. You’ll want more. And more. And you’ll finally <strong style="color: pink;">understand </strong>what it means to be touched as a woman.
+<</speech>>
+<br>
+
+<<speech "mc">>
+You're sure it’ll feel that... intense?
+<</speech>>
+<br>
+
+<<speech "veletia">>
+Oh, it's not just intensity. It's <strong style="color: pink;">depth*. You’ll feel it in your toes, your chest, your heart. Like lightning in a bottle, but the bottle is <strong style="color: pink;">you*.
+<</speech>>
+<br>
+
+<<elseif _i == 56>>
+<<speech "veletia">>
+This gown swings with your hips for a reason. Once you’ve fully transformed, every sway will feel <strong style="color: pink;">different*. You'll feel heat, friction, hunger just from how fabric slides over your curves.
+<</speech>>
+<br>
+
+<<speech "mc">>
+You mean clothes can make me feel... aroused?
+<</speech>>
+<br>
+
+<<speech "veletia">>
+Every hem that brushes your thighs, every breeze under your skirt. The female body is alive with nerve and desire. You’ll be a symphony of need and you’ll love every note.
+<</speech>>
+<br>
+
+<<elseif _i == 57>>
+<<speech "veletia">>
+Men feel lust like fire in the belly. Quick, dirty, gone. Women… we ache. We <strong style="color: pink;">simmer*. It starts in the thighs, drips into the core, coils into something slow and deep and <strong style="color: pink;">hungry*.
+<</speech>>
+<br>
+
+<<speech "mc">>
+And that’s... better?
+<</speech>>
+<br>
+
+<<speech "veletia">>
+Infinitely. When you come as a woman, it’s not just release. It’s <strong style="color: pink;">surrender*. And sometimes, you’ll be trembling long after, still aching, still <strong style="color: pink;">wanting*. It’s exquisite.
+<</speech>>
+<br>
+
+<<elseif _i == 58>>
+<<speech "veletia">>
+Your body will learn to <strong style="color: pink;">blush </strong>with arousal wet, soft, and ready. That first slickness between your legs? It’ll frighten you. Then it’ll <strong style="color: pink;">thrill </strong>you. You’ll crave the feeling.
+<</speech>>
+<br>
+
+<<speech "mc">>
+I’ve never imagined being... wet.
+<</speech>>
+<br>
+
+<<speech "veletia">>
+It’s not imagined. It’s experienced. And once you feel the heat rising from within, spreading across your thighs... oh darling, you’ll realize how sweet surrender can taste.
+<</speech>>
+<br>
+
+<<elseif _i == 59>>
+<<speech "veletia">>
+Female pleasure isn’t shameful. It’s sacred. It’s <strong style="color: pink;">power*. Men might boast of conquest, but a woman’s pleasure is her <strong style="color: pink;">throne*. You’ll command your own desires soon.
+<</speech>>
+<br>
+
+<<speech "mc">>
+You really think I’ll want it? Crave it?
+<</speech>>
+<br>
+
+<<speech "veletia">>
+You won’t just crave it, my lovely. You’ll <strong style="color: pink;">worship </strong>it. Because once you know how a woman’s body sings, you’ll never miss the blunt rhythm of male pleasure again.
+<</speech>>
+<br>
+
+<<elseif _i == 60>>
+<<speech "veletia">>
+Once your body is complete, you’ll discover something glorious orgasms aren’t a singular event for us. They're <strong style="color: pink;">layers*. One crashes into the next. Sometimes three, four, before your breath even returns.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Four? That’s… gods, that’s not even possible for a man.
+<</speech>>
+<br>
+
+<<speech "veletia">>
+Exactly, darling. The male peak is a summit. The female one? A <strong style="color: pink;">storm*. A rhythm. And once you learn your rhythm... you’ll never want to stop dancing.
+<</speech>>
+<br>
+
+<<elseif _i == 61>>
+<<speech "veletia">>
+Try this corset. Laced tight, curves spilling, pressing your breasts upward. Now imagine a whisper of touch, just above your navel. You’ll <strong style="color: pink;">throb*, Caelan. That kind of tightness doesn’t just shape it <strong style="color: pink;">stimulates*.
+<</speech>>
+<br>
+
+<<speech "mc">>
+I can feel it already. It’s like... I can’t breathe, and yet I don’t want it to stop.
+<</speech>>
+<br>
+
+<<speech "veletia">>
+Exactly. Sometimes being aroused as a woman feels like suffocating in silk. A sweet, <strong style="color: pink;">delicious </strong>ache that you welcome again and again.
+<</speech>>
+<br>
+
+<<elseif _i == 62>>
+<<speech "veletia">>
+These thigh highs are enchanted to caress you with every step. The lace top tickles the softest part of your thighs. You’ll learn the torment of desire building <strong style="color: pink;">with every movement*.
+<</speech>>
+<br>
+
+<<speech "mc">>
+You mean I’ll get aroused just walking?
+<</speech>>
+<br>
+
+<<speech "veletia">>
+Oh yes. And when you cross your legs, you’ll feel the fabric press just there. It won’t take much, sweetling. Not once your folds begin to <strong style="color: pink;">flutter </strong>and pulse with need.
+<</speech>>
+<br>
+
+<<elseif _i == 63>>
+<<speech "veletia">>
+You’ll need these spare lace panties... the first time your new body leaks with need, you’ll soak through. That wetness? It’s <strong style="color: pink;">pure readiness*. And it’s beyond your control.
+<</speech>>
+<br>
+
+<<speech "mc">>
+So I won’t even choose when it happens?
+<</speech>>
+<br>
+
+<<speech "veletia">>
+No, darling. Your body <strong style="color: pink;">chooses you*. A scent, a breeze, a brush of silk and suddenly, you’ll be wet, aching, and <strong style="color: pink;">throbbing*. And you’ll thank the gods for every drop.
+<</speech>>
+<br>
+
+<<elseif _i == 64>>
+<<speech "veletia">>
+This backless gown is stitched from whisper silk. One breeze and your nipples will pebble, your thighs will tremble. It’s designed not just to reveal but to <strong style="color: pink;">arouse*.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Wearing this outside would be... torture.
+<</speech>>
+<br>
+
+<<speech "veletia">>
+And pleasure. Remember, dear women feel arousal as tension and vulnerability. We get wet from a <strong style="color: pink;">glance*, a compliment, even a lingering look. And your new body? It will drink in every gaze like wine.
+<</speech>>
+<br>
+
+<<elseif _i == 65>>
+<<speech "veletia">>
+Your hips are blooming beautifully. Wider now. They sway when you walk. You’ll learn how to use them not just for display, but to <strong style="color: pink;">devour </strong>attention. And pleasure will <strong style="color: pink;">curl </strong>from there inward.
+<</speech>>
+<br>
+
+<<speech "mc">>
+I didn’t think hips could feel... sexual.
+<</speech>>
+<br>
+
+<<speech "veletia">>
+Oh, they do. Your pelvis will rock with each wave. You’ll grind and pulse and <strong style="color: pink;">feel everything </strong>from your hips down. And when the orgasm hits, it’ll spread through every <strong style="color: pink;">curve you’ve earned*.
+<</speech>>
+<br>
+
+<<elseif _i == 66>>
+<<speech "veletia">>
+The female body remembers pleasure. It lingers. A single stroke, and hours later your folds may still twitch. The memory of touch <strong style="color: pink;">it haunts you </strong>in the most exquisite way.
+<</speech>>
+<br>
+
+<<speech "mc">>
+So I won’t just feel it... I’ll <strong style="color: pink;">relive </strong>it?
+<</speech>>
+<br>
+
+<<speech "veletia">>
+Exactly. Female pleasure is memory, mood, and magic. You’ll lie in bed, flushed, pulsing, remembering that kiss on your inner thigh. And you’ll <strong style="color: pink;">need </strong>another.
+<</speech>>
+<br>
+
+<<elseif _i == 67>>
+<<speech "veletia">>
+When your new core blossoms, you’ll feel things so <strong style="color: pink;">deep </strong>you won’t know where the pleasure ends and <strong style="color: pink;">you </strong>begin. Being filled, dear <strong style="color: pink;">truly filled </strong>will make you weep and moan and shudder in ways you can’t yet imagine.
+<</speech>>
+<br>
+
+<<speech "mc">>
+I never thought of... being filled as something to want.
+<</speech>>
+<br>
+
+<<speech "veletia">>
+You will. It’s not just about being taken it’s about <strong style="color: pink;">claiming joy*, from the inside out. And with the right rhythm, your body won’t just orgasm it’ll <strong style="color: pink;">sing*.
+<</speech>>
+<br>
+
+<<elseif _i == 68>>
+<<speech "veletia">>
+You’ll soon understand the power in letting go. Male climax feels like control. But female pleasure? It’s surrender. Your body writhes, clenches, pulses <strong style="color: pink;">without permission*. And it’s beautiful.
+<</speech>>
+<br>
+
+<<speech "mc">>
+You make losing control sound... holy.
+<</speech>>
+<br>
+
+<<speech "veletia">>
+Because it is. There’s <strong style="color: pink;">divinity </strong>in it. In your trembling limbs, your curling toes, your open mouth gasping for more. It’s the most honest version of yourself you’ll ever meet.
+<</speech>>
+<br>
+
+<<elseif _i == 69>>
+<<speech "veletia">>
+This gown has six layers of chiffon and lace, each stitched to <strong style="color: pink;">kiss </strong>your skin. You’ll sweat inside it. You’ll squirm. And when you’re aroused, each layer becomes a secret lover, brushing just the right spot.
+<</speech>>
+<br>
+
+<<speech "mc">>
+It sounds maddening.
+<</speech>>
+<br>
+
+<<speech "veletia">>
+It is. But you’ll <strong style="color: pink;">crave </strong>it. You’ll beg for one more brush, one more stroke, one more slow pull of fabric across your slick folds. Because with this body, pleasure won’t just be felt it will <strong style="color: pink;">envelop </strong>you.
+<</speech>>
+<br>
+
+<<elseif _i == 70>>
+<<speech "veletia">>
+It’s strange at first, isn’t it? How a soft fabric brushing your inner thighs can leave your whole body tingling. That’s the gift of a woman’s skin it listens.
+<</speech>>
+<br>
+
+<<speech "mc">>
+It’s overwhelming. I used to barely notice clothes. Now it’s like... every seam whispers secrets.
+<</speech>>
+<br>
+
+<<speech "veletia">>
+Exactly. You don’t just wear things now you feel them. Intimately. That’s not weakness, my dear. That’s your new strength.
+<</speech>>
+<br>
+<<elseif _i == 71>>
+<<speech "veletia">>
+Men chase climax like a sword thrust. Direct. Fast. Done. But you, sweet Caelan... you’ll learn to build your pleasure. Layer by layer, like embroidery.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Sometimes I tremble and I haven’t even touched myself yet...
+<</speech>>
+<br>
+
+<<speech "veletia">>
+Then you’re already awakening. Trust me when you finally do, it will feel like lightning up your spine.
+<</speech>>
+<br>
+<<elseif _i == 72>>
+<<speech "veletia">>
+Have you noticed the way people look at you when you walk past now? Even without perfume? That’s your new scent, darling. Subtle, but impossible to ignore.
+<</speech>>
+<br>
+
+<<speech "mc">>
+You’re saying... I smell like a woman now?
+<</speech>>
+<br>
+
+<<speech "veletia">>
+No. I’m saying you smell like desire.
+<</speech>>
+<br>
+
+
+<<elseif _i == 73>>
+<<speech "veletia">>
+Before, you moved with force. Now, you’ll move with invitation. Let your hips tell stories. Let your eyes make promises.
+<</speech>>
+<br>
+
+<<speech "mc">>
+I never knew walking could make me feel... exposed.
+<</speech>>
+<br>
+
+<<speech "veletia">>
+It’s not exposure, love. It’s radiance. Own it.
+<</speech>>
+<br>
+<<elseif _i == 74>>
+<<speech "veletia">>
+Male climax is a single flame. Bright, but brief. Ours? We’re the hearth. We burn, flicker, build, explode and then burn again. Sometimes... endlessly.
+<</speech>>
+<br>
+
+<<speech "mc">>
+You mean I could... finish... more than once?
+<</speech>>
+<br>
+
+<<speech "veletia">>
+You’ll laugh the first time it happens. Then you’ll cry. And then you’ll beg for more.
+<</speech>>
+<br>
+<<elseif _i == 75>>
+<<speech "veletia">>
+They say being taken is submissive. But those who’ve been inside a woman know the truth we pull them in. They surrender. That’s our power.
+<</speech>>
+<br>
+
+<<speech "mc">>
+That makes me feel... warm. Like I hold something sacred now.
+<</speech>>
+<br>
+
+<<speech "veletia">>
+You do. The softest flesh holds the fiercest magic.
+<</speech>>
+<br>
+<<elseif _i == 76>>
+<<speech "veletia">>
+When your first moon cycle arrives, it will feel like chaos. Desire, hunger, tears... and a heat that burns low and deep.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Will it hurt?
+<</speech>>
+<br>
+
+<<speech "veletia">>
+Some days, yes. But many nights... it will make you feel like a goddess.
+<</speech>>
+<br>
+
+
+<<elseif _i == 77>>
+<<speech "veletia">>
+Your lips are softer now. Your voice carries a tremble men find irresistible. Use them. A whisper can disarm more kings than any blade.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Even just talking feels different. Like... I’m heard differently.
+<</speech>>
+<br>
+
+<<speech "veletia">>
+You’re not heard, darling. You’re felt.
+<</speech>>
+<br>
+<<elseif _i == 78>>
+<<speech "mc">>
+Why do I cry so easily now? It never used to be like this. It just... comes over me, like a storm I didn’t see coming.
+<</speech>>
+<br>
+
+<<speech "veletia">>
+Because your heart has stopped hiding behind armor. Being male often means being taught to silence emotion. But womanhood? Oh, we feel everything. Deeper. Sharper. Softer.
+<</speech>>
+<br>
+
+<<speech "mc">>
+It’s frightening. I can feel my voice shake when I speak sometimes. And yet... it also feels honest, like something I never allowed myself.
+<</speech>>
+<br>
+
+<<speech "veletia">>
+That’s the truth of it, Caelan. A woman’s heart is not fragile it’s vast. We laugh harder, grieve fuller, love fiercer. Your tears are not weakness. They’re proof that you are blooming.
+<</speech>>
+<br>
+
+<<speech "mc">>
+I didn’t expect feeling more would make me more. I thought... I’d be smaller, somehow.
+<</speech>>
+<br>
+
+<<speech "veletia">>
+No, my darling. You’re not becoming less. You’re becoming whole.
+<</speech>>
+<br>
+<<elseif _i == 79>>
+<<speech "mc">>
+My breasts ache sometimes... like they’re alive. It’s a strange feeling sometimes tender, sometimes almost electric.
+<</speech>>
+<br>
+
+<<speech "veletia">>
+That’s because they are alive, Caelan. Breasts are not just flesh they are powerful centers of sensation and magic. They respond to your emotions, to touch, even to the phases of the moon.
+<</speech>>
+<br>
+
+<<speech "mc">>
+It’s like they have a mind of their own. When someone looks at me or brushes against me, it sends a shiver through my whole body.
+<</speech>>
+<br>
+
+<<speech "veletia">>
+Exactly. They’re like oracles, whispering secrets of your desire and your power. When you learn to listen and care for them, they can awaken pleasures you never dreamed possible.
+<</speech>>
+<br>
+
+<<speech "mc">>
+I’m beginning to understand... they’re not just for show, are they?
+<</speech>>
+<br>
+
+<<speech "veletia">>
+No, beloved. They’re a gateway to your sensuality, your confidence, and your feminine strength. Embrace them, and they’ll guide you through every step of your transformation.
+<</speech>>
+<br>
+<</if>>
+/* [[Attend Session One|valetia_session_1]] |<br><br> */
+<strong style="color: red;">This will enable in Version 0.0.3</strong>
+[[Leave Mistress Veletia Roswyn|dressing_bloom]] |<br><br>
+[[Leave Royal Dressing Bloom|castle_map_front_select]]
+<</nobr>>
+
+
+:: valetia_session_1
+<<nobr>>
+I should’ve known what was coming when Mistress Veletia Roswyn greeted me in her usual Attire. 
+Beneath it, nothing but bare skin gleamed under the candlelight. 
+Her feet were bare but adorned in anklets that jingled when she moved, chimes of unspoken ritual.<br><br>
+
+She didn’t speak at first. Only walked toward me, circling me once as if I were a bolt of cloth on her cutting table. 
+Her eyes held none of the amusement they sometimes wore when I’d muttered protestations over corsets or hair oils. 
+This time, there was only gravity. Precision.
+Then came the word. No greeting. No room for resistance.<br><br>
+<<speech "veletia">>Off. All of it,<</speech>><br>
+She said. Her voice was smooth as honeyed wine and twice as deadly.<br><br>
+<<speech "veletia">>Even what you thought was enough.<</speech>><br>
+My throat tightened. I had worn the panties and the bra she insisted on the last time we met silk, trimmed with gold thread. 
+I had hoped it would suffice. Hoped I could somehow just slip through this session, 
+show willing obedience without diving headfirst into what I knew waited beneath her command. But she wasn’t here for half measures today.<br><br>
+[[Move Forth|valetia_session_1_1]]
+<</nobr>>
+
+:: valetia_session_1_1
+<<nobr>>
+<<speech "mc">>Veletia…<</speech>><br>
+I tried, but my voice caught. Her name came out smaller than I liked. Not like a prince. Not like someone trained in steel.
+She didn’t flinch.<br><br>
+<<speech "veletia">>From this moment on,<</speech>><br>
+She said, stepping closer until I felt the warmth of her body radiating against mine,<br><br>
+<<speech "veletia">>there will be no compromises. Not in fabric. Not in poise. 
+Not in you. Either you become the vision, or you walk away unfinished, unseen, unworthy.<</speech>><br>
+She led me wordless now, hand firm around my wrist to the full ritual mirror that stood in the corner of her chamber. 
+It wasn’t just glass. The frame was carved from glimmering duskwood, ancient enough 
+to ripple when you stared too long, laced with tiny ivory roses that bloomed and withered across its trim. 
+It whispered, soft breaths I could almost hear if I tilted my head just so.
+And there I stood.<br><br>
+[[Move Forth|valetia_session_1_2]]
+<</nobr>>
+
+:: valetia_session_1_2
+<<nobr>>
+Caelan. No longer crowned with boyhood. 
+My cock was long gone now, replaced by the heat and delicate folds of a narrow slit that still tingled when 
+I looked too long, a gentle ache that pulsed if I breathed wrong. 
+My breasts round, high, full rose and fell with each shallow breath. <br><br>
+My hips had bloomed like the curves of those carved marble goddesses in the Hall of First Queens. 
+My hair, once cropped for ease beneath a helmet, now curled like spun flax to my lower back, silky and maddening.
+Still… I stood rigid. Bound in that bra. Wearing those panties like a shield.
+Veletia stepped behind me, breath warm against my ear.<br><br>
+<<speech "veletia">>You’ve come to the edge of the mirror. Now either break the illusion… or break yourself into it.<</speech>><br>
+I swallowed hard. My hands trembled as they found the ties. 
+First the bra, untwisting it from around my chest, breath catching as the pressure eased and my breasts my breasts spilled into open air. 
+Then the panties, fingers fumbling against the delicate lace. 
+A thousand memories of battle flashed in my head, training yard bruises, sword pommels in sweaty palms, the weight of armor. 
+None of them prepared me for this.
+The panties dropped to the floor.
+I stood naked. Entirely. Fully female.<br><br>
+She made me stand there, bare and silent, as she circled me. Her touch was reverent and maddening. 
+Fingertips tracing the soft inner curve of my thighs, the rising swell of my hips, the taper of my back.
+ Her gaze was not lewd. Not mocking. She studied me like an artist considers the negative space of a canvas.<br><br>
+<<speech "veletia">>Today,<</speech>><br>
+[[Move Forth|valetia_session_1_3]]
+<</nobr>>
+
+:: valetia_session_1_3
+<<nobr>>
+<<speech "veletia">>we begin with the sacred art of being seen.<</speech>><br>
+<<speech "mc">>Why is that sacred?<</speech>><br>
+I asked, voice shaky, eyes fixed on my reflection.<br><br>
+<<speech "mc">>Being seen isn’t strength.<</speech>><br>
+<<speech "veletia">>No,<</speech>><br>
+She said, stepping to my side, her hands cupping my shoulders from behind.<br><br>
+[[Move Forth|valetia_session_1_4]]
+<</nobr>>
+
+:: valetia_session_1_4
+<<nobr>>
+<<speech "veletia">>But it’s power.<</speech>><br>
+She turned me toward her dressing pedestal. 
+Ornate and lit with dozens of candles in mirrored sconces, the air heavy with florals ylang ylang, white rose, saffron oil.<br><br>
+<<speech "veletia">>Sit.<</speech>><br>
+I did, gingerly, feeling the strange vulnerability of skin on velvet. 
+She took a slender brush from her belt gilded bone handle, horsehair tip and dipped it into a dish of powdered pearl. Then she began.
+She started at my throat, painting the shimmer across my collarbones, 
+down to the tops of my breasts, tracing light into the places moonlight would kiss.<br><br>
+<<speech "veletia">>You’re no longer a shape to be hidden beneath leathers and chains,<</speech>><br>
+[[Move Forth|valetia_session_1_5]]
+<</nobr>>
+
+:: valetia_session_1_5
+<<nobr>>
+<<speech "veletia">>Your body is a palace. A poem.<</speech>><br>
+<<speech "mc">>That’s not who I am,<</speech>><br>
+I said, barely above a breath.<br><br>
+<<speech "veletia">>It is now,<</speech>><br>
+<<speech "veletia">>And I will teach you how to write that poem in silk, paint it in rouge, wield it like a blade.<</speech>><br>
+[[Move Forth|valetia_session_1_6]]
+<</nobr>>
+
+:: valetia_session_1_6
+<<nobr>>
+<<speech "veletia">>Raise your arms.<</speech>><br>
+I did, reluctantly. She slid delicate filigree cuffs onto each wrist, cold against my veins.<br><br>
+<<speech "mc">>Jewels?<</speech>><br>
+I asked, tone dry.<br><br>
+<<speech "veletia">>Symbols,<</speech>><br>
+She corrected.<br><br>
+[[Move Forth|valetia_session_1_7]]
+<</nobr>>
+
+:: valetia_session_1_7
+<<nobr>>
+<<speech "veletia">>Of your station, of your softness, of your deliberate choosing.<</speech>><br>
+<<speech "mc">>I didn’t choose this.<</speech>><br>
+<<speech "veletia">>Didn’t you?<</speech>><br>
+She asked, raising an eyebrow.<br><br>
+<<speech "veletia">>You could have refused the mirror. You could have fled.<</speech>><br>
+[[Move Forth|valetia_session_1_8]]
+<</nobr>>
+
+:: valetia_session_1_8
+<<nobr>>
+<<speech "mc">>Or been exiled.<</speech>><br>
+<<speech "veletia">>So you made a political decision. Queens do that.<</speech>><br>
+I hated that she was right.<br><br>
+<<speech "veletia">>Now,<</speech>><br>
+She said, lifting a corset swan white and embroidered in crimson vine work <br><br>
+[[Move Forth|valetia_session_1_9]]
+<</nobr>>
+
+:: valetia_session_1_9
+<<nobr>>
+<<speech "veletia">>we begin your lesson in constraint.<</speech>><br>
+<<speech "mc">>It looks torturous.<</speech>><br>
+<<speech "veletia">>It is,<</speech>><br>
+She said with a smile.<br><br>
+<<speech "veletia">>And that’s the point.<</speech>><br>
+[[Move Forth|valetia_session_1_10]]
+<</nobr>>
+
+:: valetia_session_1_10
+<<nobr>>
+She bound me in white first always white for beginnings, she said. 
+The corset was stiffened with boning that arched my back subtly, raising my chest, 
+narrowing my waist until my breathing came in shallow rhythms and I felt like an offering on an altar.
+<<speech "mc">>I thought the point was to dress me,<</speech>><br>
+I muttered, voice strained as she laced the final eyelets behind my back.
+<<speech "veletia">>Oh, it is,<</speech>><br>
+Veletia said, her fingers working fast, nimble, uncannily precise.
+<<speech "veletia">>But first we alter posture. Then breath. Then balance. You can’t simply look like a queen, Caelan. You must be sculpted into one.<</speech>><br>
+[[Move Forth|valetia_session_1_8]]
+<</nobr>>
+
+:: valetia_session_1
+<<nobr>>
+<<speech "mc">>I thought that’s what the mage did,<</speech>><br>
+I shot back.
+She paused. Then leaned close, her lips at my ear.
+<<speech "veletia">>Thalara molds flesh. I mold presence. And presence wins battles without a sword drawn.<</speech>><br>
+I bit the inside of my cheek, choking down my usual retort. My ribs creaked with every inhale. 
+The corset was relentless. I wasn’t just standing taller I was standing differently, 
+my center shifted, my hips instinctively canting forward to keep balance. 
+I felt like a statue being shaped, spine forcibly elegant.
+But she wasn’t done.
+Veletia stepped to a wardrobe that stretched to the ceiling. 
+She drew open tall double doors and revealed a riot of colors: silks the hue of new bruises, chiffon in shades of sunrise, 
+velvets as dark as blood and storm clouds. Each gown was a statement. Not mere clothing, but war banners.
+<<speech "veletia">>I’ve prepared six for this session. 
+[[Move Forth|valetia_session_1_8]]
+<</nobr>>
+
+:: valetia_session_1
+<<nobr>>
+You’ll wear three. Walk in them. Sit in them. 
+Rehearse entrances, exits, receiving line poses, the practiced gestures of benevolence, command, and flirtation. 
+The first gown is your test. The second, your weapon. The third <</speech>><br>
+Her lips curled.
+<<speech "veletia">> your coronation prototype.<</speech>><br>
+My brows shot up.
+<<speech "mc">>Coronation <</speech>><br>
+[[Move Forth|valetia_session_1_8]]
+<</nobr>>
+
+:: valetia_session_1
+<<nobr>>
+<<speech "veletia">>Do not presume I plan for failure, my dear,<</speech>><br>
+She cut in, smiling, eyes sharp.
+The First Dress: Test of Silk
+It was deceptively simple. Pale gold, high collared, sleeveless, trimmed in white and copper thread. 
+It shimmered like the interior of a goblet, clung at the waist and hips but flowed below the knees. 
+She dressed me herself, sliding it over my head, tugging it down the curve of my breasts and over the cinched middle.
+Then came the shoes. Heels. Bone white, etched with curling vines at the arch. 
+I stared at them like one might a strange animal.
+<<speech "mc">>You’ve got to be joking,<</speech>><br>
+I said flatly.
+<<speech "veletia">>Does it look like I joke about footwear?<</speech>><br>
+Veletia returned.
+[[Move Forth|valetia_session_1_8]]
+<</nobr>>
+
+:: valetia_session_1
+<<nobr>>
+I sat. She knelt, guiding my feet into the heels, one at a time. 
+Her fingers lingered at my ankles painting powder across the tops, smoothing lotion up to my calves. 
+The shoes fit like a glove.
+When I stood, I nearly stumbled.
+<<speech "veletia">>Balance from the hips. Step with intent. Not heel first. 
+Roll the foot. Do not stomp like a prince. Glide like a storm that knows its destination.<</speech>><br>
+I took three steps. Wobbled on the fourth. Nearly fell on the fifth.
+She caught me under the arm, surprisingly strong.
+<<speech "veletia">>That,<</speech>><br>
+She said with no malice,
+<<speech "veletia">>was the step of a noble’s bastard, not a sovereign.<</speech>><br>
+[[Move Forth|valetia_session_1_8]]
+<</nobr>>
+
+:: valetia_session_1
+<<nobr>>
+I gritted my teeth.
+<<speech "mc">>It’s a damn shoe.<</speech>><br>
+<<speech "veletia">>It’s your future. Shall I fetch your boots again, little prince?<</speech>><br>
+<<speech "mc">>No.<</speech>><br>
+She nodded.
+<<speech "veletia">>Good. Again.<</speech>><br>
+We spent what felt like an hour on pacing. Walking, turning, pausing. I had to learn how fabric swayed, how to turn so the slit of a gown suggested without exposing, how to stand without fidgeting.
+<<speech "veletia">>Queens must never fidget. Stillness is more terrifying than violence. A still queen is a calculating queen.<</speech>><br>
+<<speech "mc">>And if my leg itches?<</speech>><br>
+<<speech "veletia">>You’ll learn to endure,<</speech>><br>
+She said, tone neutral.
+<<speech "veletia">>Or I’ll teach you how to scratch like royalty.<</speech>><br>
+Dialogues: Long Exchanges
+<<speech "veletia">>Tell me what you see in the mirror,<</speech>><br>
+Veletia said as I stood again before the full ritual glass.
+I hesitated.
+<<speech "mc">>A puppet in gold.<</speech>><br>
+Her face didn’t flicker.
+<<speech "veletia">>That’s what the world sees until you prove otherwise.<</speech>><br>
+I turned to her.
+<<speech "mc">>Is that what you think I am?<</speech>><br>
+<<speech "veletia">>I think,<</speech>><br>
+She said, stepping closer,
+<<speech "veletia">>that you haven’t decided whether this is performance or awakening. And until you do, you’ll flail between both.<</speech>><br>
+<<speech "mc">>I’m not a girl,<</speech>><br>
+I muttered.
+<<speech "veletia">>You have a pussy now.<</speech>><br>
+<<speech "mc">>That doesn’t change who I am.<</speech>><br>
+<<speech "veletia">>Doesn’t it?<</speech>><br>
+She reached up, cupping my cheek.
+<<speech "veletia">>You don’t flinch when I say the word anymore. You don’t look away from the mirror. You walked in heels. You’re fighting yes but you’re no longer running.<</speech>><br>
+I hated her for being right.
+The Second Gown: Weapon of a Queen
+She chose it with reverence. Black and scarlet, the color of House Velmoria’s battle sigil. It hugged my figure like temptation and flowed behind like a silken shadow. Off the shoulder, tightly laced, it left my throat and collarbones bare.
+<<speech "veletia">>Now we learn presence,<</speech>><br>
+She said, sitting me down before a new mirror this one rimmed with candles.
+She produced kohl, rouge, a dozen brushes.
+<<speech "veletia">>Face as armor. Every line deliberate.<</speech>><br>
+<<speech "mc">>I don’t know how to do this.<</speech>><br>
+<<speech "veletia">>You’ll learn. You must. Your face tells stories even when your lips don’t move.<</speech>><br>
+Her fingers guided mine as I practiced the motions: tracing eyeliner, darkening lashes, coloring lips. She demonstrated, then forced me to repeat it until I stopped shaking. The final result was… breathtaking. I looked fierce. Not delicate. Not broken. Powerful. Strange. Me, and not me.
+<<speech "veletia">>Now,<</speech>><br>
+She said, circling behind,
+<<speech "veletia">>speak.<</speech>><br>
+<<speech "mc">>What?<</speech>><br>
+<<speech "veletia">>Command. In your new skin.<</speech>><br>
+I tried. My voice cracked. I coughed, reset. Tried again.
+<<speech "mc">>Guards, bring the ambassador to heel.<</speech>><br>
+<<speech "veletia">>Good,<</speech>><br>
+She murmured.
+<<speech "veletia">>Again. Seduce this time.<</speech>><br>
+<<speech "mc">>Come closer, my sweet…<</speech>><br>
+Her hand brushed the small of my back.
+<<speech "veletia">>Yes. Like that.<</speech>><br>
+Dialogues: The Push and the Pull
+<<speech "mc">>What if I fail?<</speech>><br>
+I asked quietly as she re laced the gown after our twelfth pose lesson.
+<<speech "veletia">>You won’t.<</speech>><br>
+<<speech "mc">>You say that as if it’s guaranteed.<</speech>><br>
+<<speech "veletia">>It is.<</speech>><br>
+<<speech "mc">>I don’t feel like a queen.<</speech>><br>
+<<speech "veletia">>You don’t need to feel like one. You need to act like one. Feelings come later.<</speech>><br>
+I turned to face her.
+<<speech "mc">>Have you done this before? Transformed someone?<</speech>><br>
+She paused. For the first time all day, she hesitated.
+<<speech "veletia">>Not like this.<</speech>><br>
+<<speech "mc">>So I’m your masterpiece.<</speech>><br>
+<<speech "veletia">>You are,<</speech>><br>
+She said.
+<<speech "veletia">>And if you succeed, I become legend.<</speech>><br>
+<<speech "mc">>No pressure then.<</speech>><br>
+<<speech "veletia">>None at all,<</speech>><br>
+She said sweetly, tightening the corset a half inch.
+The Final Dress: Prototype of Ascension
+Unlike the others, this one came with a veil. Veletia laid it across my arms like an offering.
+White again, but iridescent. Shot through with thread of moon silver. Slitted up both legs. A high collar that flared like wings. It felt alive when it touched me warmed by the room or by magic, I couldn’t tell.
+She whispered while she dressed me.
+<<speech "veletia">>Every great queen knows when to conceal and when to reveal. You will be both weapon and sanctuary.<</speech>><br>
+She bound a circlet to my brow, gently kissed each of my fingers as she slid on gloves.
+<<speech "veletia">>You’re beautiful,<</speech>><br>
+She said quietly.
+<<speech "veletia">>Do you see it yet?<</speech>><br>
+I looked. Really looked. Not just the body, or the poise, or the echo of old names lost in lace.
+<<speech "mc">>Yes,<</speech>><br>
+I whispered.
+<<speech "mc">>I think I do.<</speech>><br>
+She bound me in white first always white for beginnings, she said. The corset was stiffened with boning that arched my back subtly, raising my chest, narrowing my waist until my breathing came in shallow rhythms and I felt like an offering on an altar.
+<<speech "mc">>I thought the point was to dress me,<</speech>><br>
+I muttered, voice strained as she laced the final eyelets behind my back.
+<<speech "veletia">>Oh, it is,<</speech>><br>
+Veletia said, her fingers working fast, nimble, uncannily precise.
+<<speech "veletia">>But first we alter posture. Then breath. Then balance. You can’t simply look like a queen, Caelan. You must be sculpted into one.<</speech>><br>
+<<speech "mc">>I thought that’s what the mage did,<</speech>><br>
+I shot back.
+She paused. Then leaned close, her lips at my ear.
+<<speech "veletia">>Thalara molds flesh. I mold presence. And presence wins battles without a sword drawn.<</speech>><br>
+I bit the inside of my cheek, choking down my usual retort. My ribs creaked with every inhale. The corset was relentless. I wasn’t just standing taller I was standing differently, my center shifted, my hips instinctively canting forward to keep balance. I felt like a statue being shaped, spine forcibly elegant.
+But she wasn’t done.
+Veletia stepped to a wardrobe that stretched to the ceiling. She drew open tall double doors and revealed a riot of colors: silks the hue of new bruises, chiffon in shades of sunrise, velvets as dark as blood and storm clouds. Each gown was a statement. Not mere clothing, but war banners.
+<<speech "veletia">>I’ve prepared six for this session. You’ll wear three. Walk in them. Sit in them. Rehearse entrances, exits, receiving line poses, the practiced gestures of benevolence, command, and flirtation. The first gown is your test. The second, your weapon. The third <</speech>><br>
+Her lips curled.
+<<speech "veletia">> your coronation prototype.<</speech>><br>
+My brows shot up.
+<<speech "mc">>Coronation <</speech>><br>
+<<speech "veletia">>Do not presume I plan for failure, my dear,<</speech>><br>
+She cut in, smiling, eyes sharp.
+
+The First Dress: Test of Silk
+It was deceptively simple. Pale gold, high collared, sleeveless, trimmed in white and copper thread. It shimmered like the interior of a goblet, clung at the waist and hips but flowed below the knees. She dressed me herself, sliding it over my head, tugging it down the curve of my breasts and over the cinched middle.
+Then came the shoes. Heels. Bone white, etched with curling vines at the arch. I stared at them like one might a strange animal.
+<<speech "mc">>You’ve got to be joking,<</speech>><br>
+I said flatly.
+<<speech "veletia">>Does it look like I joke about footwear?<</speech>><br>
+Veletia returned.
+I sat. She knelt, guiding my feet into the heels, one at a time. Her fingers lingered at my ankles painting powder across the tops, smoothing lotion up to my calves. The shoes fit like a glove.
+When I stood, I nearly stumbled.
+<<speech "veletia">>Balance from the hips. Step with intent. Not heel first. Roll the foot. Do not stomp like a prince. Glide like a storm that knows its destination.<</speech>><br>
+I took three steps. Wobbled on the fourth. Nearly fell on the fifth.
+She caught me under the arm, surprisingly strong.
+<<speech "veletia">>That,<</speech>><br>
+She said with no malice,
+<<speech "veletia">>was the step of a noble’s bastard, not a sovereign.<</speech>><br>
+I gritted my teeth.
+<<speech "mc">>It’s a damn shoe.<</speech>><br>
+<<speech "veletia">>It’s your future. Shall I fetch your boots again, little prince?<</speech>><br>
+<<speech "mc">>No.<</speech>><br>
+She nodded.
+<<speech "veletia">>Good. Again.<</speech>><br>
+We spent what felt like an hour on pacing. Walking, turning, pausing. I had to learn how fabric swayed, how to turn so the slit of a gown suggested without exposing, how to stand without fidgeting.
+<<speech "veletia">>Queens must never fidget. Stillness is more terrifying than violence. A still queen is a calculating queen.<</speech>><br>
+<<speech "mc">>And if my leg itches?<</speech>><br>
+<<speech "veletia">>You’ll learn to endure,<</speech>><br>
+She said, tone neutral.
+<<speech "veletia">>Or I’ll teach you how to scratch like royalty.<</speech>><br>
+
+Dialogues: Long Exchanges
+<<speech "veletia">>Tell me what you see in the mirror,<</speech>><br>
+Veletia said as I stood again before the full ritual glass.
+I hesitated.
+<<speech "mc">>A puppet in gold.<</speech>><br>
+Her face didn’t flicker.
+<<speech "veletia">>That’s what the world sees until you prove otherwise.<</speech>><br>
+I turned to her.
+<<speech "mc">>Is that what you think I am?<</speech>><br>
+<<speech "veletia">>I think,<</speech>><br>
+She said, stepping closer,
+<<speech "veletia">>that you haven’t decided whether this is performance or awakening. And until you do, you’ll flail between both.<</speech>><br>
+<<speech "mc">>I’m not a girl,<</speech>><br>
+I muttered.
+<<speech "veletia">>You have a pussy now.<</speech>><br>
+<<speech "mc">>That doesn’t change who I am.<</speech>><br>
+<<speech "veletia">>Doesn’t it?<</speech>><br>
+She reached up, cupping my cheek.
+<<speech "veletia">>You don’t flinch when I say the word anymore. You don’t look away from the mirror. You walked in heels. You’re fighting yes but you’re no longer running.<</speech>><br>
+I hated her for being right.
+
+The Second Gown: Weapon of a Queen
+She chose it with reverence. Black and scarlet, the color of House Velmoria’s battle sigil. It hugged my figure like temptation and flowed behind like a silken shadow. Off the shoulder, tightly laced, it left my throat and collarbones bare.
+<<speech "veletia">>Now we learn presence,<</speech>><br>
+She said, sitting me down before a new mirror this one rimmed with candles.
+She produced kohl, rouge, a dozen brushes.
+<<speech "veletia">>Face as armor. Every line deliberate.<</speech>><br>
+<<speech "mc">>I don’t know how to do this.<</speech>><br>
+<<speech "veletia">>You’ll learn. You must. Your face tells stories even when your lips don’t move.<</speech>><br>
+Her fingers guided mine as I practiced the motions: tracing eyeliner, darkening lashes, coloring lips. She demonstrated, then forced me to repeat it until I stopped shaking. The final result was… breathtaking. I looked fierce. Not delicate. Not broken. Powerful. Strange. Me, and not me.
+<<speech "veletia">>Now,<</speech>><br>
+She said, circling behind,
+<<speech "veletia">>speak.<</speech>><br>
+<<speech "mc">>What?<</speech>><br>
+<<speech "veletia">>Command. In your new skin.<</speech>><br>
+I tried. My voice cracked. I coughed, reset. Tried again.
+<<speech "mc">>Guards, bring the ambassador to heel.<</speech>><br>
+<<speech "veletia">>Good,<</speech>><br>
+She murmured.
+<<speech "veletia">>Again. Seduce this time.<</speech>><br>
+<<speech "mc">>Come closer, my sweet…<</speech>><br>
+Her hand brushed the small of my back.
+<<speech "veletia">>Yes. Like that.<</speech>><br>
+
+Dialogues: The Push and the Pull
+<<speech "mc">>What if I fail?<</speech>><br>
+I asked quietly as she re laced the gown after our twelfth pose lesson.
+<<speech "veletia">>You won’t.<</speech>><br>
+<<speech "mc">>You say that as if it’s guaranteed.<</speech>><br>
+<<speech "veletia">>It is.<</speech>><br>
+<<speech "mc">>I don’t feel like a queen.<</speech>><br>
+<<speech "veletia">>You don’t need to feel like one. You need to act like one. Feelings come later.<</speech>><br>
+I turned to face her.
+<<speech "mc">>Have you done this before? Transformed someone?<</speech>><br>
+She paused. For the first time all day, she hesitated.
+<<speech "veletia">>Not like this.<</speech>><br>
+<<speech "mc">>So I’m your masterpiece.<</speech>><br>
+<<speech "veletia">>You are,<</speech>><br>
+She said.
+<<speech "veletia">>And if you succeed, I become legend.<</speech>><br>
+<<speech "mc">>No pressure then.<</speech>><br>
+<<speech "veletia">>None at all,<</speech>><br>
+She said sweetly, tightening the corset a half inch.
+
+The Final Dress: Prototype of Ascension
+Unlike the others, this one came with a veil. Veletia laid it across my arms like an offering.
+White again, but iridescent. Shot through with thread of moon silver. Slitted up both legs. A high collar that flared like wings. It felt alive when it touched me warmed by the room or by magic, I couldn’t tell.
+She whispered while she dressed me.
+<<speech "veletia">>Every great queen knows when to conceal and when to reveal. You will be both weapon and sanctuary.<</speech>><br>
+She bound a circlet to my brow, gently kissed each of my fingers as she slid on gloves.
+<<speech "veletia">>You’re beautiful. Do you see it yet?<</speech>><br>
+I looked. Really looked. Not just the body, or the poise, or the echo of old names lost in lace.
+<<speech "mc">>Yes,<</speech>><br>
+I whispered.
+<<speech "mc">>I think I do.<</speech>><br>
+The carriage bumped along the stone causeway leading from the inner castle to the southern garden halls refitted tonight into a mirror palace of light and laughter. A masquerade. Noblewomen from every court in the Velmorian fold had gathered, summoned not by invitation but by the Queen’s silent decree: Come see the future. Come judge the future.
+I sat across from Veletia in the velvet lined cab, dressed in the veil gown, with silver ribbons threaded through my golden hair, my lips the color of crushed berries, my lashes fluttering under the weight of kohl. The circlet rested just above my brow. Not a crown not yet but its suggestion clung to my every gesture.
+Beneath the gown, I wore nothing. She said the gown itself was the message: a queen needs no armor when she is the battlefield.
+<<speech "veletia">>Tonight,<</speech>><br>
+Veletia said, her gloved hand resting on my bare knee,
+<<speech "veletia">>you will be seen. Entirely. And no one must see the prince.<</speech>><br>
+<<speech "mc">>I’m not sure they ever did,<</speech>><br>
+I said, voice barely above a breath.
+She smiled faintly.
+<<speech "veletia">>Then let’s ensure they only remember the queen.<</speech>><br>
+
+The Arrival: A Corridor of Mirrors
+The entrance was a tunnel of polished glass and dancing flame. Masked noblewomen lined either side, their silks whispering, their eyes sharp behind gold and gemstone. I stepped down from the carriage on trembling heels. The moment my foot touched marble, every eye turned.
+I felt their gaze like hands on my thighs, lips on my neck, steel at my spine.
+They studied me. The swing of my hips. The measured steps. The rise and fall of my breasts beneath the iridescent veil. The tilt of my head.
+<<speech "veletia">>Be neither submissive nor stiff,<</speech>><br>
+Veletia had instructed in the dressing chamber.
+<<speech "veletia">>You are not prey. You are not stone. You are the flame drawing the moths.<</speech>><br>
+I walked, each step a deliberate decision. Chin high. Eyes scanning. I did not smile.
+Until I reached the dais at the center of the marble floor.
+Veletia waited there, already unmasked. She extended a hand. I took it, the silk of my glove whispering against hers.
+<<speech "veletia">>Now,<</speech>><br>
+She said softly, audible only to me,
+<<speech "veletia">>dance.<</speech>><br>
+
+The Dance: A Stage of Queens
+This was no ball of waltzes and husband hunting.
+In Velmoria, the Masque of Flame was a test of dominance. It began as dance but quickly became theater.
+Noblewomen approached. One in sapphire with eyes like knives. Another in crimson, her mask feathered in peacock plumes. They circled. They bowed. And then they began to test me.
+<<speech "noblewoman 1">>How lovely your hips have become, Lady Caelan,<</speech>><br>
+Said one, drawing close, her breath perfumed with plum wine.
+<<speech "noblewoman 1">>Are they as soft as your politics?<</speech>><br>
+I smiled, slow and dangerous.
+<<speech "mc">>You’re welcome to press them and find out.<</speech>><br>
+Laughter rippled. My heart thundered.
+Another slid behind me, tracing a finger along my spine through the gown’s sheer back.
+<<speech "noblewoman 2">>Have you yet learned how to sway votes the way you sway these silks?<</speech>><br>
+<<speech "mc">>I only sway when I want someone watching,<</speech>><br>
+I replied, turning to meet her gaze.
+<<speech "mc">>And you haven’t earned the privilege.<</speech>><br>
+Veletia clapped once, light and amused.
+<<speech "veletia">>She cuts well, doesn’t she?<</speech>><br>
+<<speech "noblewoman 3">>She?<</speech>><br>
+One said, but the word sounded hollow now.
+They circled tighter. The next test came with the next dance.
+
+Dialogues in Circles of Intrigue
+They moved with me. The music swelled stringed instruments and pipes weaving a hypnotic, breathless rhythm. And the court grew drunk on spectacle.
+<<speech "lady theria">>Lady Caelan,<</speech>><br>
+A voice purred at my ear. I turned. Lady Theria of Northgrove bare shoulders, dusky skin, lips stained coral.
+<<speech "lady theria">>Will you sit beside me? The night is long and you must be tired.<</speech>><br>
+I smiled but tilted my head.
+<<speech "mc">>Tired is not a queen’s excuse. But if you wish for me to grace your seat…<</speech>><br>
+<<speech "lady theria">>Not a seat. A lap.<</speech>><br>
+The audacity of it. The challenge.
+I walked forward. Sat beside her not on her lap but leaning close. Our thighs touched.
+<<speech "mc">>Do you want my attention, Lady Theria?<</speech>><br>
+I asked.
+<<speech "lady theria">>I want your weakness.<</speech>><br>
+<<speech "mc">>Then you’ll die wanting.<</speech>><br>
+Her gaze flared but behind it… respect. Approval.
+The nobles weren’t finished. One by one, they tested my poise.
+<<speech "noblewoman 4">>How do you sit with such grace after only months?<</speech>><br>
+<<speech "mc">>Pain teaches fast. Corsets do not lie.<</speech>><br>
+<<speech "noblewoman 5">>What will you do when the border dukes contest your right?<</speech>><br>
+<<speech "mc">>Remind them they already kneel to my mother’s blood and my blade.<</speech>><br>
+<<speech "noblewoman 6">>What kind of queen do you plan to be?<</speech>><br>
+Veletia answered before I could. She stood at my shoulder, gaze steady.
+<<speech "veletia">>A queen who wears fire and silk both. Who wields her body, her smile, her silence, with the same precision as a general wields formations.<</speech>><br>
+
+The Dressing Room Interlude: Touches Beneath the Veil
+At midnight, I was taken briefly to the retreat chamber a mirrored alcove hidden by ivy curtains and glowing crystal sconces. Veletia followed, silent as a shadow.
+I sat, exhaling slowly. My feet ached. My thighs burned. But I’d held. I’d held.
+She approached from behind, undid the circlet. Her fingers stroked through my hair, separating strands, smoothing the sweat at my temples.
+<<speech "veletia">>You wore it well,<</speech>><br>
+She whispered.
+<<speech "mc">>It?<</speech>><br>
+<<speech "veletia">>Your mask. Your power. Your pussy.<</speech>><br>
+I turned.
+<<speech "mc">>You enjoy this, don’t you? Watching me bend into your vision.<</speech>><br>
+She laughed softly, tugging my veil loose.
+<<speech "veletia">>No, Caelan. I enjoy watching you become what you were always meant to be.<</speech>><br>
+I stood then, pushed the gown down let it fall to my feet. Veletia’s eyes drank in the sight without comment. My breasts full, flushed from the heat. My thighs. The glistening folds between them, wet with sweat and something deeper.
+<<speech "veletia">>You’re beautiful,<</speech>><br>
+She murmured.
+<<speech "mc">>I’m a weapon,<</speech>><br>
+I corrected.
+<<speech "veletia">>Yes. And beautiful.<</speech>><br>
+
+Return to the Masquerade: The Final Revelation
+When I stepped out again, I wore only the veil, re fastened across my shoulders. My breasts were bare now, nipples erect in the candlelight. My pussy glistened between bare thighs. The heels still adorned my feet, clicking sharply on the marble.
+Gasps echoed.
+But no one turned away.
+They watched.
+Lady Serelyne, the High Counselor, approached. Her mask was gold filigree. She bowed slightly.
+<<speech "lady serelyne">>Queen Alinora will receive your performance report in the morning,<</speech>><br>
+She said.
+<<speech "mc">>And what will you say?<</speech>><br>
+I asked.
+<<speech "lady serelyne">>I will say you burned. And everyone else warmed themselves at your fire.<</speech>><br>
+
+Closing Dialogues
+Back in the carriage, Veletia didn’t speak for a while. I rested against the velvet cushion, feeling oddly… full. Not with desire. Not with ego.
+With knowing.
+<<speech "mc">>I passed,<</speech>><br>
+I said softly.
+<<speech "veletia">>You claimed,<</speech>><br>
+She corrected.
+<<speech "mc">>That was dangerous. What I did.<</speech>><br>
+<<speech "veletia">>That’s why they believed it.<</speech>><br>
+I turned to her.
+<<speech "mc">>Is this how you teach all your girls?<</speech>><br>
+She looked at me, slowly, intimately.
+<<speech "veletia">>I don’t have other girls. You’re my first. My only.<</speech>><br>
+The carriage bumped once. Her hand reached across and laced into mine.
+<<speech "veletia">>And you’ll be the last,<</speech>><br>
+She said,
+<<speech "veletia">>because when I’m done… no other will need to follow.<</speech>><br>
+
+Session End:
+Caelan’s femininity now commands space. Her body fully changed. Her mind sharpened. The court has seen her desired her, feared her, whispered about her all through the corridors of fire and silk. But she has one final challenge next: taking her seat at the council table.
+Would you like to begin Session II: The Court of Iron and Lace, where Caelan must face the Queen’s full council, dress in the regalia of command, speak policy, outwit nobles, and navigate personal lusts hidden beneath diplomacy? Or would you like an interlude scene perhaps Veletia visiting Caelan late at night, touching more than just silks?
+<</nobr>>

@@ -109,6 +109,7 @@ Veil of the Heir
         <div class="choice-layers">
             <div class="choice-layer">[img[setup.ImagePath+'mc/figure/ms/ms_full.png']]</div>
             <div class="choice-layer">[img[setup.ImagePath+'mc/figure/ms/ms_bottom_underwear_1.png']]</div>
+            <div class="choice-layer">[img[setup.ImagePath+'mc/figure/ms/ms_shoe_1.png']]</div>
             <div class="choice-layer">[img[setup.ImagePath+'mc/figure/ms/ms_top_wear_1.png']]</div>
         </div>
         [[Lean|Lean]]
@@ -117,6 +118,7 @@ Veil of the Heir
         <div class="choice-layers">
             <div class="choice-layer">[img[setup.ImagePath+'mc/figure/mm/mm_full.png']]</div>
             <div class="choice-layer">[img[setup.ImagePath+'mc/figure/mm/mm_bottom_underwear_1.png']]</div>
+            <div class="choice-layer">[img[setup.ImagePath+'mc/figure/mm/mm_shoe_1.png']]</div>
             <div class="choice-layer">[img[setup.ImagePath+'mc/figure/mm/mm_top_wear_1.png']]</div>
         </div>
         [[Muscular|Muscular]]
@@ -125,6 +127,7 @@ Veil of the Heir
         <div class="choice-layers">
             <div class="choice-layer">[img[setup.ImagePath+'mc/figure/ml/ml_full.png']]</div>
             <div class="choice-layer">[img[setup.ImagePath+'mc/figure/ml/ml_bottom_underwear_1.png']]</div>
+            <div class="choice-layer">[img[setup.ImagePath+'mc/figure/ml/ml_shoe_1.png']]</div>
             <div class="choice-layer">[img[setup.ImagePath+'mc/figure/ml/ml_top_wear_1.png']]</div>
         </div>
         [[Ultra Muscular|Ultra Muscular]]
@@ -143,6 +146,7 @@ Veil of the Heir
 		<div class="choice-layers">
             <div class="choice-layer">[img[setup.ImagePath+'mc/figure/ms/ms_full.png']]</div>
             <div class="choice-layer">[img[setup.ImagePath+'mc/figure/ms/ms_bottom_underwear_1.png']]</div>
+            <div class="choice-layer">[img[setup.ImagePath+'mc/figure/ms/ms_shoe_1.png']]</div>
             <div class="choice-layer">[img[setup.ImagePath+'mc/figure/ms/ms_top_wear_1.png']]</div>
         </div>
     </div>
@@ -158,7 +162,7 @@ Veil of the Heir
 
 </div>
 <<for _key, _data range setup.msBodyParts>>
-    <<if _key == "torso" || _key == "crotch" || _key == "chest" || _key == "top_underwear" || _key == "bottom_underwear" || _key == "top_wear" || _key == "bottom_wear">>
+    <<if _key == "torso" || _key == "crotch" || _key == "chest" || _key == "top_underwear" || _key == "bottom_underwear" || _key == "top_wear" || _key == "bottom_wear" || _key == "top_middlewear" || _key == "bottom_middlewear" || _key == "shoes">>
 		<<if _data.img != "">>
 			<<set $key_img_path = "mc/figure/" + _data.curr_body + "/" + _data.orig_body + "_" + _data.img>>
 		<<else>>
@@ -176,6 +180,9 @@ Veil of the Heir
 		curr_bottom_underwear: _data.curr_bottom_underwear,
 		curr_top_wear: _data.curr_top_wear,
 		curr_bottom_wear: _data.curr_bottom_wear,
+    curr_top_middlewear: _data.curr_top_middlewear,
+    curr_bottom_middlewear: _data.curr_bottom_middlewear,
+    curr_shoes: _data.curr_shoes
     	}>>
 	<<else>>
 		<<set $userBody[_key] to {
@@ -217,6 +224,7 @@ In public mode only the muscular body type is available.
 		<div class="choice-layers">
             <div class="choice-layer">[img[setup.ImagePath+'mc/figure/mm/mm_full.png']]</div>
             <div class="choice-layer">[img[setup.ImagePath+'mc/figure/mm/mm_bottom_underwear_1.png']]</div>
+            <div class="choice-layer">[img[setup.ImagePath+'mc/figure/mm/mm_shoe_1.png']]</div>
             <div class="choice-layer">[img[setup.ImagePath+'mc/figure/mm/mm_top_wear_1.png']]</div>
         </div>
     </div>
@@ -232,7 +240,7 @@ In public mode only the muscular body type is available.
 
 </div>
 <<for _key, _data range setup.mmBodyParts>>
-    <<if _key == "torso" || _key == "crotch" || _key == "chest" || _key == "top_underwear" || _key == "bottom_underwear" || _key == "top_wear" || _key == "bottom_wear">>
+    <<if _key == "torso" || _key == "crotch" || _key == "chest" || _key == "top_underwear" || _key == "bottom_underwear" || _key == "top_wear" || _key == "bottom_wear"  || _key == "top_middlewear" || _key == "bottom_middlewear" || _key == "shoes">>
 		<<if _data.img != "">>
 			<<set $key_img_path = "mc/figure/" + _data.curr_body + "/" + _data.orig_body + "_" + _data.img>>
 		<<else>>
@@ -250,6 +258,9 @@ In public mode only the muscular body type is available.
 		curr_bottom_underwear: _data.curr_bottom_underwear,
 		curr_top_wear: _data.curr_top_wear,
 		curr_bottom_wear: _data.curr_bottom_wear,
+    curr_top_middlewear: _data.curr_top_middlewear,
+    curr_bottom_middlewear: _data.curr_bottom_middlewear,
+    curr_shoes: _data.curr_shoes
     	}>>
 	<<else>>
 		<<set $userBody[_key] to {
@@ -284,6 +295,7 @@ In public mode only the muscular body type is available.
 		<div class="choice-layers">
             <div class="choice-layer">[img[setup.ImagePath+'mc/figure/ml/ml_full.png']]</div>
             <div class="choice-layer">[img[setup.ImagePath+'mc/figure/ml/ml_bottom_underwear_1.png']]</div>
+            <div class="choice-layer">[img[setup.ImagePath+'mc/figure/ml/ml_shoe_1.png']]</div>
             <div class="choice-layer">[img[setup.ImagePath+'mc/figure/ml/ml_top_wear_1.png']]</div>
         </div>
     </div>
@@ -299,7 +311,7 @@ In public mode only the muscular body type is available.
 
 </div>
 <<for _key, _data range setup.mlBodyParts>>
-    <<if _key == "torso" || _key == "crotch" || _key == "chest" || _key == "top_underwear" || _key == "bottom_underwear" || _key == "top_wear" || _key == "bottom_wear">>
+    <<if _key == "torso" || _key == "crotch" || _key == "chest" || _key == "top_underwear" || _key == "bottom_underwear" || _key == "top_wear" || _key == "bottom_wear"  || _key == "top_middlewear" || _key == "bottom_middlewear" || _key == "shoes">>
 		<<if _data.img != "">>
 			<<set $key_img_path = "mc/figure/" + _data.curr_body + "/" + _data.orig_body + "_" + _data.img>>
 		<<else>>
@@ -317,6 +329,9 @@ In public mode only the muscular body type is available.
 		curr_bottom_underwear: _data.curr_bottom_underwear,
 		curr_top_wear: _data.curr_top_wear,
 		curr_bottom_wear: _data.curr_bottom_wear,
+    curr_top_middlewear: _data.curr_top_middlewear,
+    curr_bottom_middlewear: _data.curr_bottom_middlewear,
+    curr_shoes: _data.curr_shoes
     	}>>
 	<<else>>
 		<<set $userBody[_key] to {
@@ -383,6 +398,7 @@ In public mode only the muscular body type is available.
   The chamber falls silent, all eyes upon Caelan as the weight of choice settles upon him.
 </p>
 [[Contemplate Your Path|Contemplate_Your_Path]]
+[[Skip Intro|into_11]]
 </div>
 <</nobr>>
 

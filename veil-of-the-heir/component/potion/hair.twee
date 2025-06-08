@@ -205,7 +205,8 @@
 /* <pre><<=JSON.stringify($curr_potion_selected, null, 2)>></pre> */
 <<set $next_passage = $curr_potion_selected.from +"_"+$curr_potion_selected.to>>
 <br>
-[[Move Forth|$next_passage]]
+[[Move Forth|$next_passage]] | <br><br>
+[[Skip Conversation with Thalara|use_success_potion_create_hair]]
 <</nobr>>
 
 :: use_success_potion_create_hair

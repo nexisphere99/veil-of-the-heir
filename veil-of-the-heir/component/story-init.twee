@@ -3,7 +3,7 @@
 :: StoryInit
 <<set $userBody = {}>>
 <<for _key, _data range setup.msBodyParts>>
-	<<if _key == "torso" || _key == "crotch" || _key == "chest" || _key == "top_underwear" || _key == "bottom_underwear" || _key == "top_wear" || _key == "bottom_wear">>
+	<<if _key == "torso" || _key == "crotch" || _key == "chest" || _key == "top_underwear" || _key == "bottom_underwear" || _key == "top_wear" || _key == "bottom_wear" || _key == "top_middlewear" || _key == "bottom_middlewear" || _key == "shoes">>
 		<<if _data.img != "">>
 			<<set $key_img_path = "mc/figure/" + _data.curr_body + "/" + _data.orig_body + "_" + _data.img>>
 		<<else>>
@@ -21,6 +21,9 @@
 		curr_bottom_underwear: _data.curr_bottom_underwear,
 		curr_top_wear: _data.curr_top_wear,
 		curr_bottom_wear: _data.curr_bottom_wear,
+		curr_top_middlewear: _data.curr_top_middlewear,
+    curr_bottom_middlewear: _data.curr_bottom_middlewear,
+    curr_shoes: _data.curr_shoes
     	}>>
 	<<else>>
 		<<set $userBody[_key] to {
@@ -82,5 +85,28 @@
 	leadership: 40,
 	archery_ability: 20,
 	combat_ability: 20,
-	energy: 70
+	energy: 80
+}>>
+
+<<set $wardrobe = {
+	top_wear: [
+		{
+			img: "top_wear_1.png",
+			key: "top_wear_1"
+		}
+	],
+	bottom_wear: [],
+	top_underwear: [],
+	bottom_underwear: [
+		{
+			img: "bottom_underwear_1.png",
+			key: "bottom_underwear_1"
+		}
+	],
+	shoes: [
+		{
+			img: "shoe_1.png",
+			key: "shoe_1"
+		}
+	]
 }>>

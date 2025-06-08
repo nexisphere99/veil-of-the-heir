@@ -284,6 +284,28 @@ One last word, Trust her, Caelan. Let her magic shape you, but hold tight to you
 
 :: dressing_bloom
 <<nobr>>
+/* <<set $bloom_room_enable = true>> */
+<<if $bloom_room_enable>>
+<h3 style="text-align: center;">Royal Dressing Bloom</h3><br>
+<<set $locationImage = setup.ImagePath + 'location/dressing_bloom_img.png'>>
+<div style="position: relative; width: 100%; max-width: 700px; margin: 0 auto; aspect-ratio: 7 / 5;">
+  <img @src="setup.ImagePath +'map/dressing_bloom_map.png'" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" />
+  <svg viewBox="0 0 700 500"
+       preserveAspectRatio="none"
+       style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+    <polygon id="interact_with_veletia" 
+             points="156,487,169,485,174,476,186,479,193,466,200,436,202,402,203,366,202,356,190,346,190,329,177,324,182,297,184,272,195,248,210,221,207,211,206,197,213,187,220,175,231,163,246,158,258,158,275,174,282,187,282,214,288,227,305,246,316,260,296,291,287,296,293,315,293,343,293,377,295,419,297,454,304,476,319,478,330,486,306,489,277,484,276,491,254,496,226,490,214,486,192,492" 
+             class="castle_front_map" 
+             data-passage="interact_with_veletia" />
+    <polygon id="interact_with_bloom_room" 
+             points="347,338,340,289,336,234,333,168,334,119,353,79,373,57,395,42,426,41,448,58,459,98,465,157,467,209,462,276,457,327,462,354,346,351" 
+             class="castle_front_map" 
+             data-passage="bloom_room" />
+  </svg>
+</div>
+<br><br>
+[[Leave Royal Dressing Bloom|castle_map_front_select]]
+<<else>>
 <h3 style="text-align: center;">Royal Dressing Bloom</h3><br>
 <<set $locationImage = setup.ImagePath + 'location/dressing_bloom_img.png'>>
 <div style="position: relative; width: 100%; max-width: 700px; margin: 0 auto; aspect-ratio: 7 / 5;">
@@ -299,8 +321,23 @@ One last word, Trust her, Caelan. Let her magic shape you, but hold tight to you
 </div>
 <br><br>
 [[Leave Royal Dressing Bloom|castle_map_front_select]]
+<</if>>
 <</nobr>>
 
+:: bloom_room
+<h3 style="text-align: center;">Bloom Room</h3><br>
+<<set $locationImage = setup.ImagePath + 'location/bloom_room.png'>>
+<div style="position: relative; width: 100%; max-width: 700px; margin: 0 auto; aspect-ratio: 7 / 5;">
+  <img @src="setup.ImagePath +'map/bloom_room_map.png'" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" />
+  <svg viewBox="0 0 700 500"
+       preserveAspectRatio="none"
+       style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+    <polygon id="valetia_bloom_room" 
+             points="122,477,127,471,136,472,147,469,160,450,163,418,164,396,164,369,162,357,153,342,151,332,142,328,145,308,148,281,161,252,168,235,165,215,172,206,178,204,184,188,192,179,204,176,211,176,220,182,229,193,240,209,238,228,247,240,259,254,270,268,271,291,274,311,267,313,254,305,247,298,240,301,244,313,247,329,248,346,247,367,248,390,249,421,251,450,256,465,265,469,271,469,286,478,275,478,263,477,252,473,237,476,231,482,207,485,181,481,165,478,149,483,136,480" 
+             class="castle_front_map" 
+             data-passage="valetia_bloom_room" />
+  </svg>
+</div>
 
 
 :: thrones_mirror

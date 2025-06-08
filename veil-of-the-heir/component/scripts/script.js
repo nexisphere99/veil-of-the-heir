@@ -179,3 +179,22 @@ setup.bath_thoughts = [
         "The water embraces me better each day… as if the tub knows I’m not the same body that entered weeks ago."
     ]
 ]
+
+
+
+
+Macro.add('passage_img', {
+    tags: null,
+    handler() {
+      const imagePath = this.args[0]; // Get the image path from the macro arguments
+      if (!imagePath) {
+        return this.error('No image path provided.');
+      }
+      // Generate the HTML for the image
+      const html = `<div style="text-align: center;">
+                      <img style="border-radius: 9px; border: 10px ridge #8b5e3c; width: 50%;" src="${setup.ImagePath + imagePath}" alt="Image">
+                    </div><br><br>`;
+      // Output the HTML
+      $(this.output).append(html);
+    }
+  });

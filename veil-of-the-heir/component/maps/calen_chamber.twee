@@ -40,12 +40,16 @@
 </div>
 <br>
 <<set $coming_from_chamber = true>>
+<<if $userBody["top_wear"].img != "" || $userBody["bottom_wear"].img != "">>
 [[Leave Bed Chamber|castle_map_back_select]]
+<<else>>
+<strong style="color: red;">I need to wear some thing before go outside</strong>
+<</if>>
 <</nobr>>
 
 :: mc_bed
 <<nobr>>
-<<set $user_stats.energy = 70>>
+<<set $user_stats.energy = 80>>
 <<set $alert_message = "">>
 <<if $currentArc["main_arc"] == 1>>
 <div id="gif_pop_up">
@@ -117,8 +121,173 @@ Nothing on the table.
 
 :: mc_wardrobe
 <<nobr>>
-[img[images/location/mc_wardrobe_img.png]]<br><br>
-Wardrobe function coming soon.
-<br><br>
+  /* <<=$userBody["bottom_underwear"].img>> */
+<<set $locationImage = setup.ImagePath + 'location/mc_wardrobe_img.png'>>
+<div style="position: relative; width: 100%; max-width: 700px; margin: 0 auto; aspect-ratio: 7 / 5;">
+  <img src="images/map/wardrobe_map.png" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" />
+  <svg viewBox="0 0 700 500"
+       preserveAspectRatio="none"
+       style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+    <polygon id="mc_bed" 
+             points="2,1,459,3,463,369,3,369" 
+             class="mc_bed_chamber_map" 
+             data-passage="wear" />
+    <polygon id="mc_bed_chamber_toilet" 
+             points="4,371,463,371,464,497,4,499" 
+             class="mc_bed_chamber_map" 
+             data-passage="shoes" />
+    <polygon id="mc_table" 
+             points="460,5,698,5,697,497,467,498" 
+             class="mc_bed_chamber_map" 
+             data-passage="underwear" />
+  </svg>
+</div><br><br>
 [[Move Away from Wardrobe|mc_bed_chamber]]
+<</nobr>>
+
+:: wear
+<<nobr>>
+<h2>Wear</h2>
+<strong>Top Wear:</strong><br>
+<div class="item-grid">
+	<<for _item range $wardrobe.top_wear>>
+    <div class="item-card">
+          <<capture _key _dat $key_img_path>>
+            <<set $key_img_path = "mc/figure/" + $userBody["torso"].orig_body + "/" + $userBody["torso"].orig_body + "_" + _item.img>>
+            [img[setup.ImagePath + $key_img_path]]
+            /* <div class="view_cloth"><<link _item.key>><<set $selectedcloth = _item.key>><<goto "view_cloth">><</link>></div> */
+            <<link "Equip">>
+              
+              /* <<=$key_img_path>> */
+              <<set $userBody["top_wear"] to {
+                      img: $key_img_path,
+                      curr_top_wear: _item.key,
+                      curr_body: $userBody["torso"].orig_body
+                    }>>
+              <<goto "mc_wardrobe">>
+            <</link>>
+            <<link "Unequip">>
+              
+              /* <<=$key_img_path>> */
+              <<set $userBody["top_wear"] to {
+                      img: "",
+                      curr_top_wear: "",
+                      curr_body: $userBody["torso"].orig_body
+                    }>>
+              <<goto "wear">>
+            <</link>>
+          <</capture>>
+    </div>
+	<</for>>
+	</div><br><br>
+[[Back|mc_wardrobe]]
+<</nobr>>
+
+:: underwear
+<<nobr>>
+<h2>UnderWear</h2>
+/* <strong>Top Wear:</strong><br> */
+<div class="item-grid">
+	<<for _item range $wardrobe.top_underwear>>
+    <div class="item-card">
+          <<capture _key _data $key_img_path>>
+            <<set $key_img_path = "mc/figure/" + $userBody["torso"].orig_body + "/" + $userBody["torso"].orig_body + "_" + _item.img>>
+            [img[setup.ImagePath + $key_img_path]]
+            /* <div class="view_cloth"><<link _item.key>><<set $selectedcloth = _item.key>><<goto "view_cloth">><</link>></div> */
+            <<link "Equip">>
+              
+              /* <<=$key_img_path>> */
+              <<set $userBody["top_underwear"] to {
+                      img: $key_img_path,
+                      curr_top_underwear: _item.key,
+                      curr_body: $userBody["torso"].orig_body
+                    }>>
+              <<goto "mc_wardrobe">>
+            <</link>>
+            <<link "Unequip">>
+              
+              /* <<=$key_img_path>> */
+              <<set $userBody["top_underwear"] to {
+                      img: "",
+                      curr_top_underwear: "",
+                      curr_body: $userBody["torso"].orig_body
+                    }>>
+              <<goto "underwear">>
+            <</link>>
+          <</capture>>
+    </div>
+	<</for>>
+	</div><br><br>
+<div class="item-grid">
+	<<for _item range $wardrobe.bottom_underwear>>
+    <div class="item-card">
+          <<capture _key _data $key_img_path>>
+            <<set $key_img_path = "mc/figure/" + $userBody["torso"].orig_body + "/" + $userBody["torso"].orig_body + "_" + _item.img>>
+            [img[setup.ImagePath + $key_img_path]]
+            /* <div class="view_cloth"><<link _item.key>><<set $selectedcloth = _item.key>><<goto "view_cloth">><</link>></div> */
+            <<link "Equip">>
+              
+              /* <<=$key_img_path>> */
+              <<set $userBody["bottom_underwear"] to {
+                      img: $key_img_path,
+                      curr_bottom_underwear: _item.key,
+                      curr_body: $userBody["torso"].orig_body
+                    }>>
+              <<goto "mc_wardrobe">>
+            <</link>>
+            <<link "Unequip">>
+              
+              /* <<=$key_img_path>> */
+              <<set $userBody["bottom_underwear"] to {
+                      img: "",
+                      curr_bottom_underwear: "",
+                      curr_body: $userBody["torso"].orig_body
+                    }>>
+              <<goto "underwear">>
+            <</link>>
+          <</capture>>
+    </div>
+	<</for>>
+	</div><br><br>
+[[Back|mc_wardrobe]]
+<</nobr>>
+
+
+
+:: shoes
+<<nobr>>
+<h2>Shoes</h2>
+/* <strong>Shoe Wear:</strong><br> */
+<div class="item-grid">
+	<<for _item range $wardrobe.shoes>>
+    <div class="item-card">
+          <<capture _key _data $key_img_path>>
+            <<set $key_img_path = "mc/figure/" + $userBody["torso"].orig_body + "/" + $userBody["torso"].orig_body + "_" + _item.img>>
+            [img[setup.ImagePath + $key_img_path]]
+            /* <div class="view_cloth"><<link _item.key>><<set $selectedcloth = _item.key>><<goto "view_cloth">><</link>></div> */
+            <<link "Equip">>
+              
+              /* <<=$key_img_path>> */
+              <<set $userBody["shoes"] to {
+                      img: $key_img_path,
+                      curr_shoe: _item.key,
+                      curr_body: $userBody["torso"].orig_body
+                    }>>
+              <<goto "mc_wardrobe">>
+            <</link>>
+            <<link "Unequip">>
+              
+              /* <<=$key_img_path>> */
+              <<set $userBody["shoes"] to {
+                      img: "",
+                      curr_shoes: "",
+                      curr_body: $userBody["torso"].orig_body
+                    }>>
+              <<goto "shoes">>
+            <</link>>
+          <</capture>>
+    </div>
+	<</for>>
+	</div><br><br>
+[[Back|mc_wardrobe]]
 <</nobr>>

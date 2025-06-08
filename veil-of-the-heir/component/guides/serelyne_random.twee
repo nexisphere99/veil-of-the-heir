@@ -653,7 +653,7 @@ I swallowed hard, body trembling.<br><br>
 She moved to the door and opened it, light spilling into the shadowed chamber. She did not look at me when she spoke again.<br><br>
 
 <<speech "serelyne">>Go to him. Let this be your second act of relinquishment.<</speech>><br>
-<<set $currentObjectives = "Go to meet Torin in the his chember, There are sides objectives with transformations with Maera, Nyssa and Marda also. Also Mistress Veletia will able to give you female underwears if needed">>
+<<set $currentObjectives = "Explore the World as you like...">>
 <<set $currentArc["main_arc"] = 7>>
 I stood. My legs were weak, my breath unsteady but I obeyed. And as I crossed the threshold into the waiting dark, I knew something had shifted.
 I was no longer the one who sought control.

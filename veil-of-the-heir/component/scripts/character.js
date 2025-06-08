@@ -119,6 +119,9 @@ Macro.add("speech", {
             }else if (charKey == "edran") {
                 image_path = setup.ImagePath + "character/edran/edran.png";
                 charName = "Royal Gardener Edran";
+            } else if (charKey == "gisela") {
+                image_path = setup.ImagePath + "character/gisela/gisela.png";
+                charName = "Lady Gisela";
             } else {
                 // image_path = setup.ImagePath + "character/queen/avatar.png";
                 charName = charKey

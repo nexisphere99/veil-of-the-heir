@@ -1,0 +1,530 @@
+:: craft_underwear
+<<nobr>>
+<h2 style="text-align: center;">Top Underwear</h2>
+<<set $_missingTopUnderwear = []>>
+/* <pre><<=JSON.stringify(setup.crafts.top_underwear, null, 2)>></pre> */
+/* <pre><<=JSON.stringify($wardrobe.top_underwear, null, 2)>></pre> */
+<<for _craftItem range setup.crafts.top_underwear>>
+	<<set $_found = false>>
+  /* <pre><<=JSON.stringify(_craftItem, null, 2)>></pre> */
+	<<for _wardrobeItem range $wardrobe.top_underwear>>
+    /* <pre><<=JSON.stringify(_wardrobeItem, null, 2)>></pre> */
+		<<if _craftItem.key == _wardrobeItem.key>>
+      /* <pre><<=JSON.stringify(_wardrobeItem, null, 2)>></pre> */
+			<<set $_found = true>>
+		<</if>>
+	<</for>>
+  /* <<=$_found>> */
+	<<if not $_found>>
+		<<run $_missingTopUnderwear.push(_craftItem)>>
+	<</if>>
+<</for>>
+<div class="item-grid">
+	<<for _item range $_missingTopUnderwear>>
+    <div class="item-card">
+          <<capture _key _data $key_img_path _item>>
+            <<set $key_img_path = "mc/figure/" + $userBody["torso"].orig_body + "/" + $userBody["torso"].orig_body + "_" + _item.img>>
+            [img[setup.ImagePath + $key_img_path]]
+            /* <div class="view_cloth"><<link _item.key>><<set $selectedcloth = _item.key>><<goto "view_cloth">><</link>></div> */
+            <<link "Craft">>
+              
+              /* <<=$key_img_path>> */
+              <<set $cloth_path = _item.path>>
+              <<set $cloth_img = _item.img>>
+              <<set $cloth_key = _item.key>>
+              <<set $cloth_type = "top_underwear">>
+              <<goto "cloth">>
+            <</link>>
+          <</capture>>
+    </div>
+	<</for>>
+	</div><br><br>
+<h2 style="text-align: center;">Bottom Underwear</h2>
+<<set $_missingBottomUnderwear = []>>
+/* <pre><<=JSON.stringify(setup.crafts.bottom_underwear, null, 2)>></pre> */
+/* <pre><<=JSON.stringify($wardrobe.bottom_underwear, null, 2)>></pre> */
+<<for _craftItem range setup.crafts.bottom_underwear>>
+	<<set $_found = false>>
+  /* <pre><<=JSON.stringify(_craftItem, null, 2)>></pre> */
+	<<for _wardrobeItem range $wardrobe.bottom_underwear>>
+    /* <pre><<=JSON.stringify(_wardrobeItem, null, 2)>></pre> */
+		<<if _craftItem.key == _wardrobeItem.key>>
+      /* <pre><<=JSON.stringify(_wardrobeItem, null, 2)>></pre> */
+			<<set $_found = true>>
+		<</if>>
+	<</for>>
+  /* <<=$_found>> */
+	<<if not $_found>>
+		<<run $_missingBottomUnderwear.push(_craftItem)>>
+	<</if>>
+<</for>>
+/* <pre><<=JSON.stringify($_missingBottomUnderwear, null, 2)>></pre> */
+<div class="item-grid">
+	<<for _item range $_missingBottomUnderwear>>
+    <div class="item-card">
+          <<capture _key _data $key_img_path _item>>
+            <<set $key_img_path = "mc/figure/" + $userBody["torso"].orig_body + "/" + $userBody["torso"].orig_body + "_" + _item.img>>
+            [img[setup.ImagePath + $key_img_path]]
+            /* <div class="view_cloth"><<link _item.key>><<set $selectedcloth = _item.key>><<goto "view_cloth">><</link>></div> */
+            <<link "Craft">>
+              
+              /* <<=$key_img_path>> */
+              <<set $cloth_path = _item.path>>
+              <<set $cloth_img = _item.img>>
+              <<set $cloth_key = _item.key>>
+              <<set $cloth_type = "bottom_underwear">>
+              <<goto "cloth">>
+            <</link>>
+          <</capture>>
+    </div>
+	<</for>>
+	</div><br><br>
+[[Move Back|interact_with_veletia_for_cloth_craft]]
+<</nobr>>
+
+
+
+:: craft_wear
+<<nobr>>
+<h2 style="text-align: center;">Top Wear</h2>
+<<set $_missingTopWear = []>>
+/* <pre><<=JSON.stringify(setup.crafts.top_wear, null, 2)>></pre> */
+/* <pre><<=JSON.stringify($wardrobe.top_wear, null, 2)>></pre> */
+<<for _craftItem range setup.crafts.top_wear>>
+	<<set $_found = false>>
+  /* <pre><<=JSON.stringify(_craftItem, null, 2)>></pre> */
+	<<for _wardrobeItem range $wardrobe.top_wear>>
+    /* <pre><<=JSON.stringify(_wardrobeItem, null, 2)>></pre> */
+		<<if _craftItem.key == _wardrobeItem.key>>
+      /* <pre><<=JSON.stringify(_wardrobeItem, null, 2)>></pre> */
+			<<set $_found = true>>
+		<</if>>
+	<</for>>
+  /* <<=$_found>> */
+	<<if not $_found>>
+		<<run $_missingTopWear.push(_craftItem)>>
+	<</if>>
+<</for>>
+<div class="item-grid">
+	<<for _item range $_missingTopWear>>
+    <div class="item-card">
+          <<capture _key _data $key_img_path _item>>
+            <<set $key_img_path = "mc/figure/" + $userBody["torso"].orig_body + "/" + $userBody["torso"].orig_body + "_" + _item.img>>
+            [img[setup.ImagePath + $key_img_path]]
+            /* <div class="view_cloth"><<link _item.key>><<set $selectedcloth = _item.key>><<goto "view_cloth">><</link>></div> */
+            <<link "Craft">>
+              
+              /* <<=$key_img_path>> */
+              <<set $cloth_path = _item.path>>
+              <<set $cloth_img = _item.img>>
+              <<set $cloth_key = _item.key>>
+              <<set $cloth_type = "top_wear">>
+              <<goto "cloth">>
+            <</link>>
+          <</capture>>
+    </div>
+	<</for>>
+	</div><br><br>
+<h2 style="text-align: center;">Bottom Wear</h2>
+<<set $_missingBottomWear = []>>
+/* <pre><<=JSON.stringify(setup.crafts.bottom_wear, null, 2)>></pre> */
+/* <pre><<=JSON.stringify($wardrobe.bottom_wear, null, 2)>></pre> */
+<<for _craftItem range setup.crafts.bottom_wear>>
+	<<set $_found = false>>
+  /* <pre><<=JSON.stringify(_craftItem, null, 2)>></pre> */
+	<<for _wardrobeItem range $wardrobe.bottom_wear>>
+    /* <pre><<=JSON.stringify(_wardrobeItem, null, 2)>></pre> */
+		<<if _craftItem.key == _wardrobeItem.key>>
+      /* <pre><<=JSON.stringify(_wardrobeItem, null, 2)>></pre> */
+			<<set $_found = true>>
+		<</if>>
+	<</for>>
+  /* <<=$_found>> */
+	<<if not $_found>>
+		<<run $_missingBottomWear.push(_craftItem)>>
+	<</if>>
+<</for>>
+/* <pre><<=JSON.stringify($_missingBottomUnderwear, null, 2)>></pre> */
+<div class="item-grid">
+	<<for _item range $_missingBottomWear>>
+    <div class="item-card">
+          <<capture _key _data $key_img_path _item>>
+            <<set $key_img_path = "mc/figure/" + $userBody["torso"].orig_body + "/" + $userBody["torso"].orig_body + "_" + _item.img>>
+            [img[setup.ImagePath + $key_img_path]]
+            /* <div class="view_cloth"><<link _item.key>><<set $selectedcloth = _item.key>><<goto "view_cloth">><</link>></div> */
+            <<link "Craft">>
+              
+              /* <<=$key_img_path>> */
+              <<set $cloth_path = _item.path>>
+              <<set $cloth_img = _item.img>>
+              <<set $cloth_key = _item.key>>
+              <<set $cloth_type = "bottom_wear">>
+              <<goto "cloth">>
+            <</link>>
+          <</capture>>
+    </div>
+	<</for>>
+	</div><br><br>
+[[Move Back|interact_with_veletia_for_cloth_craft]]
+<</nobr>>
+
+
+
+:: craft_shoe
+<<nobr>>
+<h2 style="text-align: center;">Shoes</h2>
+<<set $_missingShoes = []>>
+/* <pre><<=JSON.stringify(setup.crafts.shoes, null, 2)>></pre> */
+/* <pre><<=JSON.stringify($wardrobe.shoes, null, 2)>></pre> */
+<<for _craftItem range setup.crafts.shoes>>
+	<<set $_found = false>>
+  /* <pre><<=JSON.stringify(_craftItem, null, 2)>></pre> */
+	<<for _wardrobeItem range $wardrobe.shoes>>
+    /* <pre><<=JSON.stringify(_wardrobeItem, null, 2)>></pre> */
+		<<if _craftItem.key == _wardrobeItem.key>>
+      /* <pre><<=JSON.stringify(_wardrobeItem, null, 2)>></pre> */
+			<<set $_found = true>>
+		<</if>>
+	<</for>>
+  /* <<=$_found>> */
+	<<if not $_found>>
+		<<run $_missingShoes.push(_craftItem)>>
+	<</if>>
+<</for>>
+<div class="item-grid">
+	<<for _item range $_missingShoes>>
+    <div class="item-card">
+          <<capture _key _data $key_img_path _item>>
+            <<set $key_img_path = "mc/figure/" + $userBody["torso"].orig_body + "/" + $userBody["torso"].orig_body + "_" + _item.img>>
+            [img[setup.ImagePath + $key_img_path]]
+            /* <div class="view_cloth"><<link _item.key>><<set $selectedcloth = _item.key>><<goto "view_cloth">><</link>></div> */
+            <<link "Craft">>
+              
+              /* <<=$key_img_path>> */
+              <<set $cloth_path = _item.path>>
+              <<set $cloth_img = _item.img>>
+              <<set $cloth_key = _item.key>>
+              <<set $cloth_type = "shoes">>
+              <<goto "cloth">>
+            <</link>>
+          <</capture>>
+    </div>
+	<</for>>
+	</div><br><br>
+[[Move Back|interact_with_veletia_for_cloth_craft]]
+<</nobr>>
+
+:: cloth
+/* <<nobr>> */
+/* <<=$cloth_path>> */
+<<script>>
+  // Make the variable available to JS
+  window.clothPath = State.variables.cloth_path;
+<</script>>
+<style>
+  svg {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    border: 1.5px solid #ccc;
+    background: grey;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    user-select: none;
+    aspect-ratio: 5 / 5;
+    touch-action: none; /* Prevents scrolling during touch dragging */
+  }
+
+  polygon.target {
+    fill: none;
+    stroke: blue;
+    stroke-width: 2;
+    stroke-dasharray: 6 3;
+  }
+
+  polygon.user {
+    fill: rgba(255, 105, 180, 0.5);
+    stroke: deeppink;
+    stroke-width: 2;
+  }
+
+  circle.handle {
+    stroke-width: 2;
+    cursor: pointer;
+  }
+
+  circle.target-point {
+    stroke-width: 1.5;
+    stroke-dasharray: 2 2;
+  }
+
+  #instructions {
+    margin-bottom: 1em;
+  }
+
+  button {
+    font-size: 1.2em;
+    padding: 0.5em 1.2em;
+    cursor: pointer;
+  }
+
+  #result {
+    margin-top: 1.2em;
+    font-weight: bold;
+    font-size: 1.2em;
+  }
+</style>
+
+<div id="panty-container">
+  <svg id="pantySVG" viewBox="0 0 500 500" aria-label="Panty polygon adjustment"></svg>
+  <button id="checkFitBtn">Check Fit</button>
+  <div id="result" aria-live="polite"></div><br><br>
+  <<link "Move Back">><<goto "interact_with_veletia_for_cloth_craft">><</link>>
+  <div id="leave-button-cloth" style="text-align: center; margin-top: 15px; display:none;">
+    <<link "Finish the Craft">><<goto "get_the_craft">><</link>>
+  </div>
+</div>
+
+<script>
+// console.log($cloth_path);
+(() => {
+  const targetPolygons = window.clothPath;
+
+  const svg = document.getElementById('pantySVG');
+  const dragRadius = 7;
+  const scaleFactor = 1;
+  const pointColors = [];
+
+  function offsetPolygon(coords, maxOffset=15, viewBoxWidth=500, viewBoxHeight=500) {
+    let offsetCoords = [];
+    for (let i=0; i < coords.length; i += 2) {
+      let x = coords[i];
+      let y = coords[i+1];
+      const ox = (Math.random() * 2 - 1) * maxOffset;
+      const oy = (Math.random() * 2 - 1) * maxOffset;
+      let nx = x + ox;
+      let ny = y + oy;
+      nx = Math.min(Math.max(nx, 0), viewBoxWidth);
+      ny = Math.min(Math.max(ny, 0), viewBoxHeight);
+      offsetCoords.push(nx, ny);
+    }
+    return offsetCoords;
+  }
+
+  let userPolygons = targetPolygons.map(poly => offsetPolygon(poly, 15, 500, 500));
+
+  function toPointsArray(coords) {
+    let points = [];
+    for (let i=0; i < coords.length; i+=2) {
+      points.push([coords[i]*scaleFactor, coords[i+1]*scaleFactor]);
+    }
+    return points;
+  }
+
+  function pointsToString(points) {
+    return points.map(p => p[0] + ',' + p[1]).join(' ');
+  }
+
+  function createPolygon(points, className) {
+    const polygon = document.createElementNS("http://www.w3.org/2000/svg", "polygon");
+    polygon.setAttribute("points", pointsToString(points));
+    polygon.setAttribute("class", className);
+    return polygon;
+  }
+
+  function getRandomColor() {
+    const hue = Math.floor(Math.random() * 360);
+    return `hsl(${hue}, 70%, 65%)`;
+  }
+
+  function createTargetPointDots(points, colors) {
+    points.forEach((pt, i) => {
+      const circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+      circle.setAttribute("cx", pt[0]);
+      circle.setAttribute("cy", pt[1]);
+      circle.setAttribute("r", 4);
+      circle.setAttribute("class", "target-point");
+      circle.setAttribute("stroke", colors[i]);
+      circle.setAttribute("fill", colors[i]);
+      svg.appendChild(circle);
+    });
+  }
+
+  function createHandles(points, polygonIndex, colors) {
+    let handles = [];
+    points.forEach((pt, idx) => {
+      const circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+      circle.setAttribute("cx", pt[0]);
+      circle.setAttribute("cy", pt[1]);
+      circle.setAttribute("r", dragRadius);
+      circle.setAttribute("class", "handle");
+      circle.dataset.polyIndex = polygonIndex;
+      circle.dataset.pointIndex = idx;
+      circle.setAttribute("fill", colors[idx]);
+      circle.setAttribute("stroke", "#fff");
+      svg.appendChild(circle);
+      handles.push(circle);
+    });
+    return handles;
+  }
+
+  let targetElems = [], userElems = [], handleElems = [];
+  let dragging = null;
+
+  function init() {
+    // targetPolygons = State.variables.cloth_path;
+    // userPolygons = targetPolygons.map(poly => offsetPolygon(poly, 15, 500, 500));
+    targetElems = [];
+    userElems = [];
+    handleElems = [];
+    svg.innerHTML = '';
+    pointColors.length = 0;
+
+    for (let i = 0; i < targetPolygons.length; i++) {
+      let targetPts = toPointsArray(targetPolygons[i]);
+      let userPts = toPointsArray(userPolygons[i]);
+
+      const polyColors = targetPts.map(() => getRandomColor());
+      pointColors.push(polyColors);
+
+      const targetPoly = createPolygon(targetPts, 'target');
+      svg.appendChild(targetPoly);
+      targetElems.push(targetPoly);
+
+      createTargetPointDots(targetPts, polyColors);
+
+      const userPoly = createPolygon(userPts, 'user');
+      svg.appendChild(userPoly);
+      userElems.push(userPoly);
+
+      const handles = createHandles(userPts, i, polyColors);
+      handleElems.push(handles);
+    }
+  }
+
+  function getSVGCoords(e) {
+    const pt = svg.createSVGPoint();
+    if (e.touches && e.touches.length > 0) {
+      pt.x = e.touches[0].clientX;
+      pt.y = e.touches[0].clientY;
+    } else {
+      pt.x = e.clientX;
+      pt.y = e.clientY;
+    }
+    return pt.matrixTransform(svg.getScreenCTM().inverse());
+  }
+
+  function startDrag(e) {
+    if (e.target.classList.contains('handle')) {
+      dragging = e.target;
+      e.preventDefault();
+    }
+  }
+
+  function moveDrag(e) {
+    if (dragging) {
+      const svgP = getSVGCoords(e);
+      const polyIndex = parseInt(dragging.dataset.polyIndex);
+      const pointIndex = parseInt(dragging.dataset.pointIndex);
+
+      userPolygons[polyIndex][pointIndex*2] = svgP.x / scaleFactor;
+      userPolygons[polyIndex][pointIndex*2 + 1] = svgP.y / scaleFactor;
+
+      dragging.setAttribute('cx', svgP.x);
+      dragging.setAttribute('cy', svgP.y);
+
+      const userPts = toPointsArray(userPolygons[polyIndex]);
+      userElems[polyIndex].setAttribute('points', pointsToString(userPts));
+      e.preventDefault();
+    }
+  }
+
+  function endDrag(e) {
+    dragging = null;
+  }
+
+  // Attach both mouse and touch events
+  svg.addEventListener('mousedown', startDrag);
+  svg.addEventListener('mousemove', moveDrag);
+  svg.addEventListener('mouseup', endDrag);
+  svg.addEventListener('mouseleave', endDrag);
+
+  svg.addEventListener('touchstart', startDrag, { passive: false });
+  svg.addEventListener('touchmove', moveDrag, { passive: false });
+  svg.addEventListener('touchend', endDrag);
+  svg.addEventListener('touchcancel', endDrag);
+
+  function checkFit() {
+    let totalDist = 0;
+    let totalPoints = 0;
+
+    for (let i = 0; i < targetPolygons.length; i++) {
+      const targetPts = toPointsArray(targetPolygons[i]);
+      const userPts = toPointsArray(userPolygons[i]);
+
+      for (let j = 0; j < targetPts.length; j++) {
+        const dx = userPts[j][0] - targetPts[j][0];
+        const dy = userPts[j][1] - targetPts[j][1];
+        totalDist += Math.sqrt(dx * dx + dy * dy);
+      }
+      totalPoints += targetPts.length;
+    }
+
+    const avgDist = totalDist / totalPoints;
+    const result = document.getElementById('result');
+    result.innerHTML = '';
+
+    const leaveBtn = document.getElementById('leave-button-cloth');
+
+    if (avgDist < 5) {
+      result.style.color = "green";
+      result.textContent = "🎉 Great fit! The panty is stitched perfectly.";
+      if (leaveBtn) leaveBtn.style.display = 'block';
+    } else if (avgDist < 10) {
+      result.style.color = "orange";
+      result.textContent = "👌 Close! A few more tweaks will do.";
+      if (leaveBtn) leaveBtn.style.display = 'none';
+    } else {
+      result.style.color = "red";
+      result.textContent = "❌ The pieces don't match well. Keep adjusting.";
+      if (leaveBtn) leaveBtn.style.display = 'none';
+    }
+  }
+
+  document.getElementById('checkFitBtn').onclick = checkFit;
+  window.pantyGameInit = init;
+})();
+
+$(document).on(':passagedisplay', function () {
+  // console.log(State.variables.cloth_path);
+  if (document.getElementById('pantySVG')) {
+    window.pantyGameInit();
+  }
+});
+</script>
+/* <</nobr>> */
+
+
+:: get_the_craft
+<<nobr>>
+<h2 style="text-align: center;">You got the Craft!!!!</h2>
+/* <<=$cloth_type>>
+<<=$cloth_path>>
+<<=$cloth_img>>
+<<=$cloth_key>> */
+/* <pre><<=JSON.stringify($wardrobe[$cloth_type], null, 2)>></pre> */
+<<run $wardrobe[$cloth_type].push({
+	img: $cloth_img,
+	key: $cloth_key
+})>>
+<</nobr>>
+/* <pre><<=JSON.stringify($wardrobe[$cloth_type], null, 2)>></pre> */
+<div class="item-grid">
+    <div class="item-card">
+        <<set $key_img_path = "mc/figure/" + $userBody["torso"].orig_body + "/" + $userBody["torso"].orig_body + "_" + $cloth_img>>
+        [img[setup.ImagePath + $key_img_path]]
+    </div>
+</div><br><br>
+[[Leave|dressing_bloom]]
+/* <</nobr>> */

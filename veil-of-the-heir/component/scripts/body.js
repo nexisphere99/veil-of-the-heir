@@ -74,6 +74,24 @@ setup.fsBodyParts = {
         "orig_body": "fs",
         "curr_body": "fs",
         "curr_bottom_wear": "bottom_wear_1"
+    },
+    "top_middlewear": {
+        "img": "top_middlewear_1.png",
+        "orig_body": "fs",
+        "curr_body": "fs",
+        "curr_top_middlewear": "top_middlewear_1"
+    },
+    "bottom_middle_wear": {
+        "img": "bottom_middle_wear_1.png",
+        "orig_body": "fs",
+        "curr_body": "fs",
+        "curr_bottom_middlewear": "bottom_middle_wear_1"
+    },
+    "shoes": {
+        "img": "shoe_1.png",
+        "orig_body": "fs",
+        "curr_body": "fs",
+        "curr_shoes": "shoe_1"
     }
 }
 
@@ -150,6 +168,24 @@ setup.msBodyParts = {
         "orig_body": "ms",
         "curr_body": "ms",
         "curr_bottom_wear": ""
+    },
+    "top_middlewear": {
+        "img": "",
+        "orig_body": "ms",
+        "curr_body": "ms",
+        "curr_top_middlewear": ""
+    },
+    "bottom_middlewear": {
+        "img": "",
+        "orig_body": "ms",
+        "curr_body": "ms",
+        "curr_bottom_middlewear": ""
+    },
+    "shoes": {
+        "img": "shoe_1.png",
+        "orig_body": "ms",
+        "curr_body": "ms",
+        "curr_shoes": "shoe_1"
     }
 }
 
@@ -226,6 +262,24 @@ setup.mmBodyParts = {
         "orig_body": "mm",
         "curr_body": "mm",
         "curr_bottom_wear": ""
+    },
+    "top_middlewear": {
+        "img": "",
+        "orig_body": "mm",
+        "curr_body": "mm",
+        "curr_top_middlewear": ""
+    },
+    "bottom_middlewear": {
+        "img": "",
+        "orig_body": "mm",
+        "curr_body": "mm",
+        "curr_bottom_middlewear": ""
+    },
+    "shoes": {
+        "img": "shoe_1.png",
+        "orig_body": "mm",
+        "curr_body": "mm",
+        "curr_shoes": "shoe_1"
     }
 }
 
@@ -302,5 +356,23 @@ setup.mlBodyParts = {
         "orig_body": "ml",
         "curr_body": "ml",
         "curr_bottom_wear": ""
+    },
+    "top_middlewear": {
+        "img": "",
+        "orig_body": "ml",
+        "curr_body": "ml",
+        "curr_top_middlewear": ""
+    },
+    "bottom_middlewear": {
+        "img": "",
+        "orig_body": "ml",
+        "curr_body": "ml",
+        "curr_bottom_middlewear": ""
+    },
+    "shoes": {
+        "img": "shoe_1.png",
+        "orig_body": "ml",
+        "curr_body": "ml",
+        "curr_shoes": "shoe_1"
     }
 }

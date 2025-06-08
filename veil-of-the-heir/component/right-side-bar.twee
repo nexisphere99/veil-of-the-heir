@@ -32,7 +32,12 @@
     <<if $showUnderwear and $userBody.bottom_underwear.img>>
     <div class="avatar bottom_underwear">[img[setup.ImagePath+$userBody.bottom_underwear.img]]</div>
     <</if>>
-
+    <<if $showMidWear and $userBody.top_middlewear.img>>
+    <div class="avatar top_middlewear">[img[setup.ImagePath+$userBody.top_middlewear.img]]</div>
+    <</if>>
+    <<if $showMidWear and $userBody.bottom_middlewear.img>>
+    <div class="avatar bottom_middlewear">[img[setup.ImagePath+$userBody.bottom_middlewear.img]]</div>
+    <</if>>
     <<if $showWear and $userBody.top_wear.img>>
     <div class="avatar top_wear">[img[setup.ImagePath+$userBody.top_wear.img]]</div>
     <</if>>
@@ -40,9 +45,55 @@
     <<if $showWear and $userBody.bottom_wear.img>>
     <div class="avatar bottom_wear">[img[setup.ImagePath+$userBody.bottom_wear.img]]</div>
     <</if>>
+
+    <<if $showWear and $userBody.shoes.img>>
+    <div class="avatar shoes">[img[setup.ImagePath+$userBody.shoes.img]]</div>
+    <</if>>
   <</replace>>
 <</button>>
 </div>
+/* <div title="Show without Middle Cloths">
+<<button "🚫Mid">>
+  <<set $showMidWear to not $showMidWear>>
+  <<replace "#wear-status">>
+    <div class="avatar torso">[img[setup.ImagePath+$userBody.torso.img]]</div>
+    <div class="avatar head">[img[setup.ImagePath+$userBody.head.img]]</div>
+    <div class="avatar right_hand">[img[setup.ImagePath+$userBody.right_hand.img]]</div>
+    <div class="avatar left_hand">[img[setup.ImagePath+$userBody.left_hand.img]]</div>
+    <div class="avatar left_leg">[img[setup.ImagePath+$userBody.left_leg.img]]</div>
+    <div class="avatar right_leg">[img[setup.ImagePath+$userBody.right_leg.img]]</div>
+    <div class="avatar hair">[img[setup.ImagePath+$userBody.hair.img]]</div>
+    <div class="avatar crotch">[img[setup.ImagePath+$userBody.crotch.img]]</div>
+    <div class="avatar chest">[img[setup.ImagePath+$userBody.chest.img]]</div>
+
+
+    <<if $showUnderwear and $userBody.top_underwear.img>>
+    <div class="avatar top_underwear">[img[setup.ImagePath+$userBody.top_underwear.img]]</div>
+    <</if>>
+
+    <<if $showUnderwear and $userBody.bottom_underwear.img>>
+    <div class="avatar bottom_underwear">[img[setup.ImagePath+$userBody.bottom_underwear.img]]</div>
+    <</if>>
+    <<if $showMidWear and $userBody.top_middlewear.img>>
+    <div class="avatar top_middlewear">[img[setup.ImagePath+$userBody.top_middlewear.img]]</div>
+    <</if>>
+    <<if $showMidWear and $userBody.bottom_middlewear.img>>
+    <div class="avatar bottom_middlewear">[img[setup.ImagePath+$userBody.bottom_middlewear.img]]</div>
+    <</if>>
+    <<if $showWear and $userBody.top_wear.img>>
+    <div class="avatar top_wear">[img[setup.ImagePath+$userBody.top_wear.img]]</div>
+    <</if>>
+
+    <<if $showWear and $userBody.bottom_wear.img>>
+    <div class="avatar bottom_wear">[img[setup.ImagePath+$userBody.bottom_wear.img]]</div>
+    <</if>>
+
+    <<if $showWear and $userBody.shoes.img>>
+    <div class="avatar shoes">[img[setup.ImagePath+$userBody.shoes.img]]</div>
+    <</if>>
+  <</replace>>
+<</button>>
+</div> */
 <div title="Show without Underwears">
 <<button "🚫🩲👙🩳">>
   /* <<set $showWear to not $showWear>> */
@@ -65,13 +116,22 @@
     <<if $showUnderwear and $userBody.bottom_underwear.img>>
     <div class="avatar bottom_underwear">[img[setup.ImagePath+$userBody.bottom_underwear.img]]</div>
     <</if>>
-
+    <<if $showMidWear and $userBody.top_middlewear.img>>
+    <div class="avatar top_middlewear">[img[setup.ImagePath+$userBody.top_middlewear.img]]</div>
+    <</if>>
+    <<if $showMidWear and $userBody.bottom_middlewear.img>>
+    <div class="avatar bottom_middlewear">[img[setup.ImagePath+$userBody.bottom_middlewear.img]]</div>
+    <</if>>
     <<if $showWear and $userBody.top_wear.img>>
     <div class="avatar top_wear">[img[setup.ImagePath+$userBody.top_wear.img]]</div>
     <</if>>
 
     <<if $showWear and $userBody.bottom_wear.img>>
     <div class="avatar bottom_wear">[img[setup.ImagePath+$userBody.bottom_wear.img]]</div>
+    <</if>>
+
+    <<if $showWear and $userBody.shoes.img>>
+    <div class="avatar shoes">[img[setup.ImagePath+$userBody.shoes.img]]</div>
     <</if>>
   <</replace>>
 <</button>>
@@ -107,6 +167,10 @@
 
     <<if $showWear and $userBody.bottom_wear.img>>
     <div class="avatar bottom_wear">[img[setup.ImagePath+$userBody.bottom_wear.img]]</div>
+    <</if>>
+    /* <<=$userBody.shoes.img>> */
+    <<if $showWear and $userBody.shoes.img>>
+    <div class="avatar shoes">[img[setup.ImagePath+$userBody.shoes.img]]</div>
     <</if>>
 </span>
 </div>

@@ -63,7 +63,7 @@
 }
 
 .avatar.head {
-  z-index: 2;
+  z-index: 2005;
 }
 
 .avatar.hair {
@@ -105,6 +105,13 @@
 .avatar.bottom_underwear {
   z-index: 100;
 }
+.avatar.top_middlewear {
+  z-index: 195;
+}
+
+.avatar.bottom_middlewear {
+  z-index: 195;
+}
 
 .avatar.top_wear {
   z-index: 200;
@@ -112,6 +119,10 @@
 
 .avatar.bottom_wear {
   z-index: 200;
+}
+
+.avatar.shoes {
+  z-index: 199;
 }
 
 .avatar img {
