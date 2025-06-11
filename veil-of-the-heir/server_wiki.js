@@ -9,7 +9,7 @@ app.use(express.static(path.join(__dirname)));
 
 // Serve the HTML file
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'index.html'));
+  res.sendFile(path.join(__dirname, 'veil-of-the-heir-wiki.html'));
 });
 
 // Start the server
