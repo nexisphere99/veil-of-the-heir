@@ -84,10 +84,6 @@ I will become the queen this realm deserves.
 <<set $day_number += 1>>
 [[Wake Up|mc_bed_chamber]]
 <<else>>
-<div id="gif_pop_up">
-  <img src="images/gif/night_1.gif" alt="Sleeping" style="max-width:80%; height:auto; border: 5px solid white;">
-  <button id="closeBtn" style="margin-top: 15px; padding: 10px 20px;">Close</button>
-</div>
 [img[images/location/mc_bed_img.png]]<br><br>
 <<set $day_number += 1>>
 <<set $riddleLimit = 3>>
@@ -95,6 +91,9 @@ I will become the queen this realm deserves.
 <<set $hasIngredientAccess = false>>
 <<set $ingredientChoices to 0>>
 <<set $riddleSuccess = false>>
+<<set _i to random(1, 3)>>
+<<set $dream_num = "dream_" + _i>>
+[[Dream|$dream_num]] | <br><br>
 [[Get up From Bed|mc_bed_chamber]]
 <</if>>
 <</nobr>>

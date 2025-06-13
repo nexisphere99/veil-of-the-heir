@@ -193,7 +193,7 @@ Macro.add('passage_img', {
       // Generate the HTML for the image
       const html = `<div style="text-align: center;">
                       <img style="border-radius: 9px; border: 10px ridge #8b5e3c; width: 50%;" src="${setup.ImagePath + imagePath}" alt="Image">
-                    </div><br><br>`;
+                    </div>`;
       // Output the HTML
       $(this.output).append(html);
     }
