@@ -5,10 +5,9 @@ const fs = require('fs');
 const app = express();
 const PORT = 5000;
 
-// Middleware to log external traffic details
+// Middleware to log fetching of veil-of-the-heir.html
 app.use((req, res, next) => {
-  const localIPs = ['127.0.0.1', '::1', '::ffff:127.0.0.1'];
-  if (!localIPs.includes(req.ip)) {
+  if (req.url === '/' && req.method === 'GET') {
     const logEntry = `${new Date().toISOString()} - ${req.method} ${req.url} - ${req.ip}\n`;
     fs.appendFile('server-traffic.log', logEntry, (err) => {
       if (err) {
