@@ -5,14 +5,17 @@ const fs = require('fs');
 const app = express();
 const PORT = 5000;
 
-// Middleware to log traffic details
+// Middleware to log external traffic details
 app.use((req, res, next) => {
-  const logEntry = `${new Date().toISOString()} - ${req.method} ${req.url} - ${req.ip}\n`;
-  fs.appendFile('server-traffic.log', logEntry, (err) => {
-    if (err) {
-      console.error('Failed to write to log file:', err);
-    }
-  });
+  const localIPs = ['127.0.0.1', '::1', '::ffff:127.0.0.1'];
+  if (!localIPs.includes(req.ip)) {
+    const logEntry = `${new Date().toISOString()} - ${req.method} ${req.url} - ${req.ip}\n`;
+    fs.appendFile('server-traffic.log', logEntry, (err) => {
+      if (err) {
+        console.error('Failed to write to log file:', err);
+      }
+    });
+  }
   next();
 });
 
