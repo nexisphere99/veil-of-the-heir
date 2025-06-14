@@ -5,10 +5,14 @@ const fs = require('fs');
 const app = express();
 const PORT = 5000;
 
+// Trust the proxy to get the real client IP
+app.set('trust proxy', true);
+
 // Middleware to log fetching of veil-of-the-heir.html
 app.use((req, res, next) => {
   if (req.url === '/' && req.method === 'GET') {
-    const logEntry = `${new Date().toISOString()} - ${req.method} ${req.url} - ${req.ip}\n`;
+    const clientIp = req.ip; // Now this will resolve to the real client IP
+    const logEntry = `${new Date().toISOString()} - ${req.method} ${req.url} - ${clientIp}\n`;
     fs.appendFile('server-traffic.log', logEntry, (err) => {
       if (err) {
         console.error('Failed to write to log file:', err);
