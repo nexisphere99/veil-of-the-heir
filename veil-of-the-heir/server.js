@@ -1,8 +1,20 @@
 const express = require('express');
 const path = require('path');
+const fs = require('fs');
 
 const app = express();
 const PORT = 5000;
+
+// Middleware to log traffic details
+app.use((req, res, next) => {
+  const logEntry = `${new Date().toISOString()} - ${req.method} ${req.url} - ${req.ip}\n`;
+  fs.appendFile('server-traffic.log', logEntry, (err) => {
+    if (err) {
+      console.error('Failed to write to log file:', err);
+    }
+  });
+  next();
+});
 
 // Serve the entire project directory as static
 app.use(express.static(path.join(__dirname)));
