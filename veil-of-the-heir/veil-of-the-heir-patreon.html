@@ -838,7 +838,7 @@ polygon.mc_bed_chamber_map.active {
 }
 
 .avatar.head {
-  z-index: 2005;
+  z-index: 190;
 }
 
 .avatar.hair {
@@ -25561,6 +25561,28 @@ He sighs. &quot;I thought I&#39;d feel powerful. Instead, I feel... swallowed.&l
     &lt;&lt;link &quot;Leave Veil Tower&quot;&gt;&gt;&lt;&lt;goto &quot;castle_map_back_select&quot;&gt;&gt;&lt;&lt;/link&gt;&gt; |
     &lt;&lt;link &quot;Try another Potion Scroll&quot;&gt;&gt;&lt;&lt;goto &quot;potion_lab&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;&lt;else&gt;&gt;
+
+&lt;&lt;set $body_stage to [&quot;ml&quot;, &quot;mm&quot;, &quot;ms&quot;, &quot;fs&quot;, &quot;fm&quot;, &quot;fl&quot;]&gt;&gt;
+&lt;&lt;set $index to -1&gt;&gt;
+&lt;&lt;set _i to 0&gt;&gt;
+&lt;&lt;for _item range $body_stage&gt;&gt;
+    &lt;&lt;if _item.includes($userBody.head.curr_head) and $index is -1&gt;&gt;
+        &lt;&lt;set $index to _i&gt;&gt;
+    &lt;&lt;/if&gt;&gt;
+    &lt;&lt;set _i to _i + 1&gt;&gt;
+&lt;&lt;/for&gt;&gt;
+&lt;&lt;if State.variables.direction == &quot;reverse&quot;&gt;&gt;
+&lt;&lt;set $possible_changes to [$body_stage[$index], $body_stage[$index-1]]&gt;&gt;
+/* &lt;&lt;=$possible_changes&gt;&gt; */
+&lt;&lt;if 
+$possible_changes.includes($userBody.left_hand.curr_body) &amp;&amp; 
+$possible_changes.includes($userBody.right_hand.curr_body) &amp;&amp;
+$possible_changes.includes($userBody.head.curr_head) &amp;&amp; 
+$possible_changes.includes($userBody.left_leg.curr_body) &amp;&amp;
+$possible_changes.includes($userBody.right_leg.curr_body) &amp;&amp;
+$possible_changes.includes($userBody.torso.orig_body)
+&gt;&gt;
+
 /* &lt;pre&gt;&lt;&lt;= JSON.stringify($userBody.head, null, 2)&gt;&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;&lt;= JSON.stringify($curr_potion_selected, null, 2)&gt;&gt;&lt;/pre&gt; */
 /* &lt;pre&gt;&lt;&lt;= JSON.stringify($userItems, null, 2)&gt;&gt;&lt;/pre&gt; */
@@ -25626,6 +25648,110 @@ He sighs. &quot;I thought I&#39;d feel powerful. Instead, I feel... swallowed.&l
 &lt;&lt;for _item, _needed range $potion.ingredients&gt;&gt;
     &lt;&lt;set $potionInventory[_item] = 0&gt;&gt;
 &lt;&lt;/for&gt;&gt;
+&lt;&lt;else&gt;&gt;
+&lt;p style=&quot;color: red; font-size: 1.2em; font-weight: bolder;&quot;&gt;Your other parts (Head, Hands, Legs or Body) are not in required stage to proceed with this transformation.&lt;/p&gt;
+&lt;p style=&quot;color: red; font-size: 1.2em; font-weight: bolder;&quot;&gt;***Body parts are not in the same level, so clothes won&#39;t fit. Please adjust the body parts to the same level soon.&lt;/p&gt;
+&lt;p style=&quot;color: red; font-size: 1em;&quot;&gt;Head Level: &lt;&lt;=$body_level_map[$userBody.head.curr_head]&gt;&gt;&lt;/p&gt;
+&lt;p style=&quot;color: red; font-size: 1em;&quot;&gt;Body Level: &lt;&lt;=$body_level_map[$userBody.torso.orig_body]&gt;&gt;&lt;/p&gt;
+&lt;p style=&quot;color: red; font-size: 1em;&quot;&gt;Left Hand Level: &lt;&lt;=$body_level_map[$userBody.left_hand.curr_body]&gt;&gt;&lt;/p&gt;
+&lt;p style=&quot;color: red; font-size: 1em;&quot;&gt;Right Hand Level: &lt;&lt;=$body_level_map[$userBody.right_hand.curr_body]&gt;&gt;&lt;/p&gt;
+&lt;p style=&quot;color: red; font-size: 1em;&quot;&gt;Left Leg Level: &lt;&lt;=$body_level_map[$userBody.left_leg.curr_body]&gt;&gt;&lt;/p&gt;
+&lt;p style=&quot;color: red; font-size: 1em;&quot;&gt;Right Leg Level: &lt;&lt;=$body_level_map[$userBody.right_leg.curr_body]&gt;&gt;&lt;/p&gt; 
+    &lt;&lt;link &quot;Leave Potion Scroll Selection&quot;&gt;&gt;&lt;&lt;goto &quot;veil_tower&quot;&gt;&gt;&lt;&lt;/link&gt;&gt; |
+    &lt;&lt;link &quot;Leave Veil Tower&quot;&gt;&gt;&lt;&lt;goto &quot;castle_map_back_select&quot;&gt;&gt;&lt;&lt;/link&gt;&gt; |
+    &lt;&lt;link &quot;Try another Potion Scroll&quot;&gt;&gt;&lt;&lt;goto &quot;potion_lab&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+&lt;&lt;else&gt;&gt;
+&lt;&lt;set $possible_changes to [$body_stage[$index], $body_stage[$index+1]]&gt;&gt;
+/* &lt;&lt;=$possible_changes&gt;&gt; */
+&lt;&lt;if 
+$possible_changes.includes($userBody.left_hand.curr_body) &amp;&amp; 
+$possible_changes.includes($userBody.right_hand.curr_body) &amp;&amp;
+$possible_changes.includes($userBody.head.curr_head) &amp;&amp; 
+$possible_changes.includes($userBody.left_leg.curr_body) &amp;&amp;
+$possible_changes.includes($userBody.right_leg.curr_body) &amp;&amp;
+$possible_changes.includes($userBody.torso.orig_body)
+&gt;&gt;
+/* &lt;pre&gt;&lt;&lt;= JSON.stringify($userBody.head, null, 2)&gt;&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;&lt;= JSON.stringify($curr_potion_selected, null, 2)&gt;&gt;&lt;/pre&gt; */
+/* &lt;pre&gt;&lt;&lt;= JSON.stringify($userItems, null, 2)&gt;&gt;&lt;/pre&gt; */
+&lt;&lt;set $ingredient = {}&gt;&gt;
+&lt;span class=&quot;ingredient_text&quot;&gt;
+&lt;b&gt;✦ Ancient Alchemical Recipe ✦&lt;/b&gt;&lt;br&gt;&lt;br&gt;
+
+&lt;b&gt;Potion:&lt;/b&gt; &lt;&lt;=$curr_potion_selected.name&gt;&gt;&lt;br&gt;
+&lt;b&gt;Purpose:&lt;/b&gt; &lt;&lt;=$curr_potion_selected.purpose&gt;&gt;&lt;br&gt;&lt;br&gt;
+
+&lt;b&gt;🜃 Ingredients:&lt;/b&gt;&lt;br&gt;
+&lt;ol&gt;
+&lt;&lt;for _item, _value range $curr_potion_selected.ingredients&gt;&gt;
+  &lt;li&gt;&lt;&lt;=$userItems[_item].name&gt;&gt;: _value &lt;&lt;=$userItems[_item].unit&gt;&gt;&lt;/li&gt;
+  &lt;&lt;set $ingredient[_item] = {amount: $userItems[_item].amount, needed: _value, unit: $userItems[_item].unit}&gt;&gt;
+&lt;&lt;/for&gt;&gt;
+&lt;/ol&gt;
+&lt;&lt;set _potion = $curr_potion_selected&gt;&gt;
+/* &lt;&lt;set $currentObjectives = &#39;Create Potion: &#39; + _potion.name + &#39;. Ingredients are: &#39;&gt;&gt;
+
+&lt;&lt;for _item, _value range _potion.ingredients&gt;&gt;
+  &lt;&lt;set $currentObjectives += $userItems[_item].name + &#39;: &#39; + _value + &#39; &#39; + $userItems[_item].unit + &#39;, &#39;&gt;&gt;
+&lt;&lt;/for&gt;&gt;
+
+&lt;&lt;replace &quot;#objectives-text&quot; t8n&gt;&gt;
+  &lt;&lt;=$currentObjectives&gt;&gt;
+&lt;&lt;/replace&gt;&gt; */
+
+&lt;b&gt;⤐ Function:&lt;/b&gt;&lt;br&gt;
+&lt;i&gt;&lt;&lt;=$curr_potion_selected.function&gt;&gt;&lt;/i&gt;&lt;br&gt;&lt;br&gt;
+
+&lt;b&gt;⚠ Side Effects:&lt;/b&gt;&lt;br&gt;
+&lt;i&gt;&lt;&lt;=$curr_potion_selected.sideEffects&gt;&gt;&lt;/i&gt;
+&lt;/span&gt;
+/* &lt;pre&gt;&lt;&lt;= JSON.stringify($ingredient, null, 2)&gt;&gt;&lt;/pre&gt; */
+&lt;&lt;set $ingredinetAvailable = true&gt;&gt;
+&lt;&lt;for _key, _data range $ingredient&gt;&gt;
+    &lt;&lt;if $ingredient[_key].amount &lt; $ingredient[_key].needed&gt;&gt;
+        &lt;p style=&quot;color: red;&quot;&gt;
+        You do not have enough &lt;&lt;=$userItems[_key].name&gt;&gt;. You need &lt;&lt;=$ingredient[_key].needed&gt;&gt; 
+        &lt;&lt;=$userItems[_key].unit&gt;&gt;, but you have only &lt;&lt;=$ingredient[_key].amount&gt;&gt; &lt;&lt;=$userItems[_key].unit&gt;&gt;.&lt;/p&gt;
+        &lt;&lt;set $ingredinetAvailable = false&gt;&gt;
+    &lt;&lt;else&gt;&gt;
+        &lt;p style=&quot;color: green;&quot;&gt;
+        You have enough &lt;&lt;=$userItems[_key].name&gt;&gt;. You need &lt;&lt;=$ingredient[_key].needed&gt;&gt; 
+        &lt;&lt;=$userItems[_key].unit&gt;&gt;, you have &lt;&lt;=$ingredient[_key].amount&gt;&gt; &lt;&lt;=$userItems[_key].unit&gt;&gt;. It is more than enough!!&lt;/p&gt;
+    &lt;&lt;/if&gt;&gt;
+&lt;&lt;/for&gt;&gt;
+&lt;&lt;if $currentArc[&quot;main_arc&quot;] == 3&gt;&gt;
+    &lt;&lt;link &quot;Refer Another Potion Scroll&quot;&gt;&gt;&lt;&lt;goto &quot;potion_lab&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;&lt;elseif $ingredinetAvailable&gt;&gt;
+    &lt;p style=&quot;color: green;&quot;&gt;You have all the ingredients needed to make the potion.&lt;/p&gt;
+    &lt;&lt;link &quot;Make Potion&quot;&gt;&gt;&lt;&lt;goto &quot;potion_create_head&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
+    &lt;&lt;link &quot;Try another Potion Scroll&quot;&gt;&gt;&lt;&lt;goto &quot;potion_lab&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;&lt;else&gt;&gt;
+    &lt;p style=&quot;color: red;&quot;&gt;You do not have all the ingredients needed to make the potion.&lt;/p&gt;
+    &lt;&lt;link &quot;Leave Potion Scroll Selection&quot;&gt;&gt;&lt;&lt;goto &quot;veil_tower&quot;&gt;&gt;&lt;&lt;/link&gt;&gt; |
+    &lt;&lt;link &quot;Leave Veil Tower&quot;&gt;&gt;&lt;&lt;goto &quot;castle_map_back_select&quot;&gt;&gt;&lt;&lt;/link&gt;&gt; |
+    &lt;&lt;link &quot;Try another Potion Scroll&quot;&gt;&gt;&lt;&lt;goto &quot;potion_lab&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+&lt;&lt;set $potion = $curr_potion_selected&gt;&gt;
+&lt;&lt;set $potionInventory = {}&gt;&gt;
+&lt;&lt;for _item, _needed range $potion.ingredients&gt;&gt;
+    &lt;&lt;set $potionInventory[_item] = 0&gt;&gt;
+&lt;&lt;/for&gt;&gt;
+&lt;&lt;else&gt;&gt;
+&lt;p style=&quot;color: red; font-size: 1.2em; font-weight: bolder;&quot;&gt;Your other parts (Head, Hands, Legs or Body) are not in required stage to proceed with this transformation.&lt;/p&gt;
+&lt;p style=&quot;color: red; font-size: 1.2em; font-weight: bolder;&quot;&gt;***Body parts are not in the same level, so clothes won&#39;t fit. Please adjust the body parts to the same level soon.&lt;/p&gt;
+&lt;p style=&quot;color: red; font-size: 1em;&quot;&gt;Head Level: &lt;&lt;=$body_level_map[$userBody.head.curr_head]&gt;&gt;&lt;/p&gt;
+&lt;p style=&quot;color: red; font-size: 1em;&quot;&gt;Body Level: &lt;&lt;=$body_level_map[$userBody.torso.orig_body]&gt;&gt;&lt;/p&gt;
+&lt;p style=&quot;color: red; font-size: 1em;&quot;&gt;Left Hand Level: &lt;&lt;=$body_level_map[$userBody.left_hand.curr_body]&gt;&gt;&lt;/p&gt;
+&lt;p style=&quot;color: red; font-size: 1em;&quot;&gt;Right Hand Level: &lt;&lt;=$body_level_map[$userBody.right_hand.curr_body]&gt;&gt;&lt;/p&gt;
+&lt;p style=&quot;color: red; font-size: 1em;&quot;&gt;Left Leg Level: &lt;&lt;=$body_level_map[$userBody.left_leg.curr_body]&gt;&gt;&lt;/p&gt;
+&lt;p style=&quot;color: red; font-size: 1em;&quot;&gt;Right Leg Level: &lt;&lt;=$body_level_map[$userBody.right_leg.curr_body]&gt;&gt;&lt;/p&gt; 
+    &lt;&lt;link &quot;Leave Potion Scroll Selection&quot;&gt;&gt;&lt;&lt;goto &quot;veil_tower&quot;&gt;&gt;&lt;&lt;/link&gt;&gt; |
+    &lt;&lt;link &quot;Leave Veil Tower&quot;&gt;&gt;&lt;&lt;goto &quot;castle_map_back_select&quot;&gt;&gt;&lt;&lt;/link&gt;&gt; |
+    &lt;&lt;link &quot;Try another Potion Scroll&quot;&gt;&gt;&lt;&lt;goto &quot;potion_lab&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="804" name="potion_create_head" tags="" position="475,10100" size="100,100">&lt;&lt;nobr&gt;&gt;
 &lt;span class=&quot;ingredient_text&quot;&gt;
@@ -26507,6 +26633,28 @@ He sighs. &quot;I thought I&#39;d feel powerful. Instead, I feel... swallowed.&l
     &lt;&lt;link &quot;Leave Veil Tower&quot;&gt;&gt;&lt;&lt;goto &quot;castle_map_back_select&quot;&gt;&gt;&lt;&lt;/link&gt;&gt; |
     &lt;&lt;link &quot;Try another Potion Scroll&quot;&gt;&gt;&lt;&lt;goto &quot;potion_lab&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;&lt;else&gt;&gt;
+
+
+&lt;&lt;set $body_stage to [&quot;ml&quot;, &quot;mm&quot;, &quot;ms&quot;, &quot;fs&quot;, &quot;fm&quot;, &quot;fl&quot;]&gt;&gt;
+&lt;&lt;set $index to -1&gt;&gt;
+&lt;&lt;set _i to 0&gt;&gt;
+&lt;&lt;for _item range $body_stage&gt;&gt;
+    &lt;&lt;if _item.includes($userBody.left_hand.curr_body) and $index is -1&gt;&gt;
+        &lt;&lt;set $index to _i&gt;&gt;
+    &lt;&lt;/if&gt;&gt;
+    &lt;&lt;set _i to _i + 1&gt;&gt;
+&lt;&lt;/for&gt;&gt;
+&lt;&lt;if State.variables.direction == &quot;reverse&quot;&gt;&gt;
+&lt;&lt;set $possible_changes to [$body_stage[$index], $body_stage[$index-1]]&gt;&gt;
+/* &lt;&lt;=$possible_changes&gt;&gt; */
+&lt;&lt;if 
+$possible_changes.includes($userBody.left_hand.curr_body) &amp;&amp; 
+$possible_changes.includes($userBody.right_hand.curr_body) &amp;&amp;
+$possible_changes.includes($userBody.head.curr_head) &amp;&amp; 
+$possible_changes.includes($userBody.left_leg.curr_body) &amp;&amp;
+$possible_changes.includes($userBody.right_leg.curr_body) &amp;&amp;
+$possible_changes.includes($userBody.torso.orig_body)
+&gt;&gt;
 /* &lt;pre&gt;&lt;&lt;= JSON.stringify($userBody.left_hand, null, 2)&gt;&gt;&lt;/pre&gt; */
 /* &lt;pre&gt;&lt;&lt;= JSON.stringify($curr_potion_selected, null, 2)&gt;&gt;&lt;/pre&gt; */
 /* &lt;pre&gt;&lt;&lt;= JSON.stringify($userItems, null, 2)&gt;&gt;&lt;/pre&gt; */
@@ -26572,6 +26720,110 @@ He sighs. &quot;I thought I&#39;d feel powerful. Instead, I feel... swallowed.&l
 &lt;&lt;for _item, _needed range $potion.ingredients&gt;&gt;
     &lt;&lt;set $potionInventory[_item] = 0&gt;&gt;
 &lt;&lt;/for&gt;&gt;
+&lt;&lt;else&gt;&gt;
+&lt;p style=&quot;color: red; font-size: 1.2em; font-weight: bolder;&quot;&gt;Your other parts (Head, Hands, Legs or Body) are not in required stage to proceed with this transformation.&lt;/p&gt;
+&lt;p style=&quot;color: red; font-size: 1.2em; font-weight: bolder;&quot;&gt;***Body parts are not in the same level, so clothes won&#39;t fit. Please adjust the body parts to the same level soon.&lt;/p&gt;
+&lt;p style=&quot;color: red; font-size: 1em;&quot;&gt;Head Level: &lt;&lt;=$body_level_map[$userBody.head.curr_head]&gt;&gt;&lt;/p&gt;
+&lt;p style=&quot;color: red; font-size: 1em;&quot;&gt;Body Level: &lt;&lt;=$body_level_map[$userBody.torso.orig_body]&gt;&gt;&lt;/p&gt;
+&lt;p style=&quot;color: red; font-size: 1em;&quot;&gt;Left Hand Level: &lt;&lt;=$body_level_map[$userBody.left_hand.curr_body]&gt;&gt;&lt;/p&gt;
+&lt;p style=&quot;color: red; font-size: 1em;&quot;&gt;Right Hand Level: &lt;&lt;=$body_level_map[$userBody.right_hand.curr_body]&gt;&gt;&lt;/p&gt;
+&lt;p style=&quot;color: red; font-size: 1em;&quot;&gt;Left Leg Level: &lt;&lt;=$body_level_map[$userBody.left_leg.curr_body]&gt;&gt;&lt;/p&gt;
+&lt;p style=&quot;color: red; font-size: 1em;&quot;&gt;Right Leg Level: &lt;&lt;=$body_level_map[$userBody.right_leg.curr_body]&gt;&gt;&lt;/p&gt;     &lt;&lt;link &quot;Leave Potion Scroll Selection&quot;&gt;&gt;&lt;&lt;goto &quot;veil_tower&quot;&gt;&gt;&lt;&lt;/link&gt;&gt; |
+    &lt;&lt;link &quot;Leave Veil Tower&quot;&gt;&gt;&lt;&lt;goto &quot;castle_map_back_select&quot;&gt;&gt;&lt;&lt;/link&gt;&gt; |
+    &lt;&lt;link &quot;Try another Potion Scroll&quot;&gt;&gt;&lt;&lt;goto &quot;potion_lab&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+&lt;&lt;else&gt;&gt;
+&lt;&lt;set $possible_changes to [$body_stage[$index], $body_stage[$index+1]]&gt;&gt;
+/* &lt;&lt;=$possible_changes&gt;&gt; */
+&lt;&lt;if 
+$possible_changes.includes($userBody.left_hand.curr_body) &amp;&amp; 
+$possible_changes.includes($userBody.right_hand.curr_body) &amp;&amp;
+$possible_changes.includes($userBody.head.curr_head) &amp;&amp; 
+$possible_changes.includes($userBody.left_leg.curr_body) &amp;&amp;
+$possible_changes.includes($userBody.right_leg.curr_body) &amp;&amp;
+$possible_changes.includes($userBody.torso.orig_body)
+&gt;&gt;
+/* &lt;pre&gt;&lt;&lt;= JSON.stringify($userBody.left_hand, null, 2)&gt;&gt;&lt;/pre&gt; */
+/* &lt;pre&gt;&lt;&lt;= JSON.stringify($curr_potion_selected, null, 2)&gt;&gt;&lt;/pre&gt; */
+/* &lt;pre&gt;&lt;&lt;= JSON.stringify($userItems, null, 2)&gt;&gt;&lt;/pre&gt; */
+&lt;&lt;set $ingredient = {}&gt;&gt;
+&lt;span class=&quot;ingredient_text&quot;&gt;
+&lt;b&gt;✦ Ancient Alchemical Recipe ✦&lt;/b&gt;&lt;br&gt;&lt;br&gt;
+
+&lt;b&gt;Potion:&lt;/b&gt; &lt;&lt;=$curr_potion_selected.name&gt;&gt;&lt;br&gt;
+&lt;b&gt;Purpose:&lt;/b&gt; &lt;&lt;=$curr_potion_selected.purpose&gt;&gt;&lt;br&gt;&lt;br&gt;
+
+&lt;b&gt;🜃 Ingredients:&lt;/b&gt;&lt;br&gt;
+&lt;ol&gt;
+&lt;&lt;for _item, _value range $curr_potion_selected.ingredients&gt;&gt;
+  &lt;li&gt;&lt;&lt;=$userItems[_item].name&gt;&gt;: _value &lt;&lt;=$userItems[_item].unit&gt;&gt;&lt;/li&gt;
+  &lt;&lt;set $ingredient[_item] = {amount: $userItems[_item].amount, needed: _value, unit: $userItems[_item].unit}&gt;&gt;
+&lt;&lt;/for&gt;&gt;
+&lt;/ol&gt;
+&lt;&lt;set _potion = $curr_potion_selected&gt;&gt;
+/* &lt;&lt;set $currentObjectives = &#39;Create Potion: &#39; + _potion.name + &#39;. Ingredients are: &#39;&gt;&gt;
+
+&lt;&lt;for _item, _value range _potion.ingredients&gt;&gt;
+  &lt;&lt;set $currentObjectives += $userItems[_item].name + &#39;: &#39; + _value + &#39; &#39; + $userItems[_item].unit + &#39;, &#39;&gt;&gt;
+&lt;&lt;/for&gt;&gt;
+
+&lt;&lt;replace &quot;#objectives-text&quot; t8n&gt;&gt;
+  &lt;&lt;=$currentObjectives&gt;&gt;
+&lt;&lt;/replace&gt;&gt; */
+
+&lt;b&gt;⤐ Function:&lt;/b&gt;&lt;br&gt;
+&lt;i&gt;&lt;&lt;=$curr_potion_selected.function&gt;&gt;&lt;/i&gt;&lt;br&gt;&lt;br&gt;
+
+&lt;b&gt;⚠ Side Effects:&lt;/b&gt;&lt;br&gt;
+&lt;i&gt;&lt;&lt;=$curr_potion_selected.sideEffects&gt;&gt;&lt;/i&gt;
+&lt;/span&gt;
+/* &lt;pre&gt;&lt;&lt;= JSON.stringify($ingredient, null, 2)&gt;&gt;&lt;/pre&gt; */
+&lt;&lt;set $ingredinetAvailable = true&gt;&gt;
+&lt;&lt;for _key, _data range $ingredient&gt;&gt;
+    &lt;&lt;if $ingredient[_key].amount &lt; $ingredient[_key].needed&gt;&gt;
+        &lt;p style=&quot;color: red;&quot;&gt;
+        You do not have enough &lt;&lt;=$userItems[_key].name&gt;&gt;. You need &lt;&lt;=$ingredient[_key].needed&gt;&gt; 
+        &lt;&lt;=$userItems[_key].unit&gt;&gt;, but you have only &lt;&lt;=$ingredient[_key].amount&gt;&gt; &lt;&lt;=$userItems[_key].unit&gt;&gt;.&lt;/p&gt;
+        &lt;&lt;set $ingredinetAvailable = false&gt;&gt;
+    &lt;&lt;else&gt;&gt;
+        &lt;p style=&quot;color: green;&quot;&gt;
+        You have enough &lt;&lt;=$userItems[_key].name&gt;&gt;. You need &lt;&lt;=$ingredient[_key].needed&gt;&gt; 
+        &lt;&lt;=$userItems[_key].unit&gt;&gt;, you have &lt;&lt;=$ingredient[_key].amount&gt;&gt; &lt;&lt;=$userItems[_key].unit&gt;&gt;. It is more than enough!!&lt;/p&gt;
+    &lt;&lt;/if&gt;&gt;
+&lt;&lt;/for&gt;&gt;
+&lt;&lt;if $currentArc[&quot;main_arc&quot;] == 3&gt;&gt;
+    &lt;&lt;link &quot;Refer Another Potion Scroll&quot;&gt;&gt;&lt;&lt;goto &quot;potion_lab&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;&lt;elseif $ingredinetAvailable&gt;&gt;
+    &lt;p style=&quot;color: green;&quot;&gt;You have all the ingredients needed to make the potion.&lt;/p&gt;
+    &lt;&lt;link &quot;Make Potion&quot;&gt;&gt;&lt;&lt;goto &quot;potion_create_left_hand&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
+    &lt;&lt;link &quot;Try another Potion Scroll&quot;&gt;&gt;&lt;&lt;goto &quot;potion_lab&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;&lt;else&gt;&gt;
+    &lt;p style=&quot;color: red;&quot;&gt;You do not have all the ingredients needed to make the potion.&lt;/p&gt;
+    &lt;&lt;link &quot;Leave Potion Scroll Selection&quot;&gt;&gt;&lt;&lt;goto &quot;veil_tower&quot;&gt;&gt;&lt;&lt;/link&gt;&gt; |
+    &lt;&lt;link &quot;Leave Veil Tower&quot;&gt;&gt;&lt;&lt;goto &quot;castle_map_back_select&quot;&gt;&gt;&lt;&lt;/link&gt;&gt; |
+    &lt;&lt;link &quot;Try another Potion Scroll&quot;&gt;&gt;&lt;&lt;goto &quot;potion_lab&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+&lt;&lt;set $potion = $curr_potion_selected&gt;&gt;
+&lt;&lt;set $potionInventory = {}&gt;&gt;
+&lt;&lt;for _item, _needed range $potion.ingredients&gt;&gt;
+    &lt;&lt;set $potionInventory[_item] = 0&gt;&gt;
+&lt;&lt;/for&gt;&gt;
+&lt;&lt;else&gt;&gt;
+&lt;p style=&quot;color: red; font-size: 1.2em; font-weight: bolder;&quot;&gt;Your other parts (Head, Hands, Legs or Body) are not in required stage to proceed with this transformation.&lt;/p&gt;
+&lt;p style=&quot;color: red; font-size: 1.2em; font-weight: bolder;&quot;&gt;***Body parts are not in the same level, so clothes won&#39;t fit. Please adjust the body parts to the same level soon.&lt;/p&gt;
+&lt;p style=&quot;color: red; font-size: 1em;&quot;&gt;Head Level: &lt;&lt;=$body_level_map[$userBody.head.curr_head]&gt;&gt;&lt;/p&gt;
+&lt;p style=&quot;color: red; font-size: 1em;&quot;&gt;Body Level: &lt;&lt;=$body_level_map[$userBody.torso.orig_body]&gt;&gt;&lt;/p&gt;
+&lt;p style=&quot;color: red; font-size: 1em;&quot;&gt;Left Hand Level: &lt;&lt;=$body_level_map[$userBody.left_hand.curr_body]&gt;&gt;&lt;/p&gt;
+&lt;p style=&quot;color: red; font-size: 1em;&quot;&gt;Right Hand Level: &lt;&lt;=$body_level_map[$userBody.right_hand.curr_body]&gt;&gt;&lt;/p&gt;
+&lt;p style=&quot;color: red; font-size: 1em;&quot;&gt;Left Leg Level: &lt;&lt;=$body_level_map[$userBody.left_leg.curr_body]&gt;&gt;&lt;/p&gt;
+&lt;p style=&quot;color: red; font-size: 1em;&quot;&gt;Right Leg Level: &lt;&lt;=$body_level_map[$userBody.right_leg.curr_body]&gt;&gt;&lt;/p&gt; 
+    &lt;&lt;link &quot;Leave Potion Scroll Selection&quot;&gt;&gt;&lt;&lt;goto &quot;veil_tower&quot;&gt;&gt;&lt;&lt;/link&gt;&gt; |
+    &lt;&lt;link &quot;Leave Veil Tower&quot;&gt;&gt;&lt;&lt;goto &quot;castle_map_back_select&quot;&gt;&gt;&lt;&lt;/link&gt;&gt; |
+    &lt;&lt;link &quot;Try another Potion Scroll&quot;&gt;&gt;&lt;&lt;goto &quot;potion_lab&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+
+
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="882" name="potion_create_left_hand" tags="" position="225,11100" size="100,100">&lt;&lt;nobr&gt;&gt;
 &lt;span class=&quot;ingredient_text&quot;&gt;
@@ -27217,6 +27469,30 @@ This hand now holds influence, not just iron.&lt;&lt;/speech&gt;&gt;&lt;br&gt;
     &lt;&lt;link &quot;Leave Veil Tower&quot;&gt;&gt;&lt;&lt;goto &quot;castle_map_back_select&quot;&gt;&gt;&lt;&lt;/link&gt;&gt; |
     &lt;&lt;link &quot;Try another Potion Scroll&quot;&gt;&gt;&lt;&lt;goto &quot;potion_lab&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;&lt;else&gt;&gt;
+
+
+
+
+&lt;&lt;set $body_stage to [&quot;ml&quot;, &quot;mm&quot;, &quot;ms&quot;, &quot;fs&quot;, &quot;fm&quot;, &quot;fl&quot;]&gt;&gt;
+&lt;&lt;set $index to -1&gt;&gt;
+&lt;&lt;set _i to 0&gt;&gt;
+&lt;&lt;for _item range $body_stage&gt;&gt;
+    &lt;&lt;if _item.includes($userBody.left_leg.curr_body) and $index is -1&gt;&gt;
+        &lt;&lt;set $index to _i&gt;&gt;
+    &lt;&lt;/if&gt;&gt;
+    &lt;&lt;set _i to _i + 1&gt;&gt;
+&lt;&lt;/for&gt;&gt;
+&lt;&lt;if State.variables.direction == &quot;reverse&quot;&gt;&gt;
+&lt;&lt;set $possible_changes to [$body_stage[$index], $body_stage[$index-1]]&gt;&gt;
+/* &lt;&lt;=$possible_changes&gt;&gt; */
+&lt;&lt;if 
+$possible_changes.includes($userBody.left_hand.curr_body) &amp;&amp; 
+$possible_changes.includes($userBody.right_hand.curr_body) &amp;&amp;
+$possible_changes.includes($userBody.head.curr_head) &amp;&amp; 
+$possible_changes.includes($userBody.left_leg.curr_body) &amp;&amp;
+$possible_changes.includes($userBody.right_leg.curr_body) &amp;&amp;
+$possible_changes.includes($userBody.torso.orig_body)
+&gt;&gt;
 /* &lt;pre&gt;&lt;&lt;= JSON.stringify($userBody.left_leg, null, 2)&gt;&gt;&lt;/pre&gt; */
 /* &lt;pre&gt;&lt;&lt;= JSON.stringify($curr_potion_selected, null, 2)&gt;&gt;&lt;/pre&gt; */
 /* &lt;pre&gt;&lt;&lt;= JSON.stringify($userItems, null, 2)&gt;&gt;&lt;/pre&gt; */
@@ -27282,6 +27558,111 @@ This hand now holds influence, not just iron.&lt;&lt;/speech&gt;&gt;&lt;br&gt;
 &lt;&lt;for _item, _needed range $potion.ingredients&gt;&gt;
     &lt;&lt;set $potionInventory[_item] = 0&gt;&gt;
 &lt;&lt;/for&gt;&gt;
+
+&lt;&lt;else&gt;&gt;
+&lt;p style=&quot;color: red; font-size: 1.2em; font-weight: bolder;&quot;&gt;Your other parts (Head, Hands, Legs or Body) are not in required stage to proceed with this transformation.&lt;/p&gt;
+&lt;p style=&quot;color: red; font-size: 1.2em; font-weight: bolder;&quot;&gt;***Body parts are not in the same level, so clothes won&#39;t fit. Please adjust the body parts to the same level soon.&lt;/p&gt;
+&lt;p style=&quot;color: red; font-size: 1em;&quot;&gt;Head Level: &lt;&lt;=$body_level_map[$userBody.head.curr_head]&gt;&gt;&lt;/p&gt;
+&lt;p style=&quot;color: red; font-size: 1em;&quot;&gt;Body Level: &lt;&lt;=$body_level_map[$userBody.torso.orig_body]&gt;&gt;&lt;/p&gt;
+&lt;p style=&quot;color: red; font-size: 1em;&quot;&gt;Left Hand Level: &lt;&lt;=$body_level_map[$userBody.left_hand.curr_body]&gt;&gt;&lt;/p&gt;
+&lt;p style=&quot;color: red; font-size: 1em;&quot;&gt;Right Hand Level: &lt;&lt;=$body_level_map[$userBody.right_hand.curr_body]&gt;&gt;&lt;/p&gt;
+&lt;p style=&quot;color: red; font-size: 1em;&quot;&gt;Left Leg Level: &lt;&lt;=$body_level_map[$userBody.left_leg.curr_body]&gt;&gt;&lt;/p&gt;
+&lt;p style=&quot;color: red; font-size: 1em;&quot;&gt;Right Leg Level: &lt;&lt;=$body_level_map[$userBody.right_leg.curr_body]&gt;&gt;&lt;/p&gt; 
+    &lt;&lt;link &quot;Leave Potion Scroll Selection&quot;&gt;&gt;&lt;&lt;goto &quot;veil_tower&quot;&gt;&gt;&lt;&lt;/link&gt;&gt; |
+    &lt;&lt;link &quot;Leave Veil Tower&quot;&gt;&gt;&lt;&lt;goto &quot;castle_map_back_select&quot;&gt;&gt;&lt;&lt;/link&gt;&gt; |
+    &lt;&lt;link &quot;Try another Potion Scroll&quot;&gt;&gt;&lt;&lt;goto &quot;potion_lab&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+&lt;&lt;else&gt;&gt;
+&lt;&lt;set $possible_changes to [$body_stage[$index], $body_stage[$index+1]]&gt;&gt;
+/* &lt;&lt;=$possible_changes&gt;&gt; */
+&lt;&lt;if 
+$possible_changes.includes($userBody.left_hand.curr_body) &amp;&amp; 
+$possible_changes.includes($userBody.right_hand.curr_body) &amp;&amp;
+$possible_changes.includes($userBody.head.curr_head) &amp;&amp; 
+$possible_changes.includes($userBody.left_leg.curr_body) &amp;&amp;
+$possible_changes.includes($userBody.right_leg.curr_body) &amp;&amp;
+$possible_changes.includes($userBody.torso.orig_body)
+&gt;&gt;
+/* &lt;pre&gt;&lt;&lt;= JSON.stringify($userBody.left_leg, null, 2)&gt;&gt;&lt;/pre&gt; */
+/* &lt;pre&gt;&lt;&lt;= JSON.stringify($curr_potion_selected, null, 2)&gt;&gt;&lt;/pre&gt; */
+/* &lt;pre&gt;&lt;&lt;= JSON.stringify($userItems, null, 2)&gt;&gt;&lt;/pre&gt; */
+&lt;&lt;set $ingredient = {}&gt;&gt;
+&lt;span class=&quot;ingredient_text&quot;&gt;
+&lt;b&gt;✦ Ancient Alchemical Recipe ✦&lt;/b&gt;&lt;br&gt;&lt;br&gt;
+
+&lt;b&gt;Potion:&lt;/b&gt; &lt;&lt;=$curr_potion_selected.name&gt;&gt;&lt;br&gt;
+&lt;b&gt;Purpose:&lt;/b&gt; &lt;&lt;=$curr_potion_selected.purpose&gt;&gt;&lt;br&gt;&lt;br&gt;
+
+&lt;b&gt;🜃 Ingredients:&lt;/b&gt;&lt;br&gt;
+&lt;ol&gt;
+&lt;&lt;for _item, _value range $curr_potion_selected.ingredients&gt;&gt;
+  &lt;li&gt;&lt;&lt;=$userItems[_item].name&gt;&gt;: _value &lt;&lt;=$userItems[_item].unit&gt;&gt;&lt;/li&gt;
+  &lt;&lt;set $ingredient[_item] = {amount: $userItems[_item].amount, needed: _value, unit: $userItems[_item].unit}&gt;&gt;
+&lt;&lt;/for&gt;&gt;
+&lt;/ol&gt;
+&lt;&lt;set _potion = $curr_potion_selected&gt;&gt;
+/* &lt;&lt;set $currentObjectives = &#39;Create Potion: &#39; + _potion.name + &#39;. Ingredients are: &#39;&gt;&gt;
+
+&lt;&lt;for _item, _value range _potion.ingredients&gt;&gt;
+  &lt;&lt;set $currentObjectives += $userItems[_item].name + &#39;: &#39; + _value + &#39; &#39; + $userItems[_item].unit + &#39;, &#39;&gt;&gt;
+&lt;&lt;/for&gt;&gt;
+
+&lt;&lt;replace &quot;#objectives-text&quot; t8n&gt;&gt;
+  &lt;&lt;=$currentObjectives&gt;&gt;
+&lt;&lt;/replace&gt;&gt; */
+
+&lt;b&gt;⤐ Function:&lt;/b&gt;&lt;br&gt;
+&lt;i&gt;&lt;&lt;=$curr_potion_selected.function&gt;&gt;&lt;/i&gt;&lt;br&gt;&lt;br&gt;
+
+&lt;b&gt;⚠ Side Effects:&lt;/b&gt;&lt;br&gt;
+&lt;i&gt;&lt;&lt;=$curr_potion_selected.sideEffects&gt;&gt;&lt;/i&gt;
+&lt;/span&gt;
+/* &lt;pre&gt;&lt;&lt;= JSON.stringify($ingredient, null, 2)&gt;&gt;&lt;/pre&gt; */
+&lt;&lt;set $ingredinetAvailable = true&gt;&gt;
+&lt;&lt;for _key, _data range $ingredient&gt;&gt;
+    &lt;&lt;if $ingredient[_key].amount &lt; $ingredient[_key].needed&gt;&gt;
+        &lt;p style=&quot;color: red;&quot;&gt;
+        You do not have enough &lt;&lt;=$userItems[_key].name&gt;&gt;. You need &lt;&lt;=$ingredient[_key].needed&gt;&gt; 
+        &lt;&lt;=$userItems[_key].unit&gt;&gt;, but you have only &lt;&lt;=$ingredient[_key].amount&gt;&gt; &lt;&lt;=$userItems[_key].unit&gt;&gt;.&lt;/p&gt;
+        &lt;&lt;set $ingredinetAvailable = false&gt;&gt;
+    &lt;&lt;else&gt;&gt;
+        &lt;p style=&quot;color: green;&quot;&gt;
+        You have enough &lt;&lt;=$userItems[_key].name&gt;&gt;. You need &lt;&lt;=$ingredient[_key].needed&gt;&gt; 
+        &lt;&lt;=$userItems[_key].unit&gt;&gt;, you have &lt;&lt;=$ingredient[_key].amount&gt;&gt; &lt;&lt;=$userItems[_key].unit&gt;&gt;. It is more than enough!!&lt;/p&gt;
+    &lt;&lt;/if&gt;&gt;
+&lt;&lt;/for&gt;&gt;
+&lt;&lt;if $currentArc[&quot;main_arc&quot;] == 3&gt;&gt;
+    &lt;&lt;link &quot;Refer Another Potion Scroll&quot;&gt;&gt;&lt;&lt;goto &quot;potion_lab&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;&lt;elseif $ingredinetAvailable&gt;&gt;
+    &lt;p style=&quot;color: green;&quot;&gt;You have all the ingredients needed to make the potion.&lt;/p&gt;
+    &lt;&lt;link &quot;Make Potion&quot;&gt;&gt;&lt;&lt;goto &quot;potion_create_left_leg&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
+    &lt;&lt;link &quot;Try another Potion Scroll&quot;&gt;&gt;&lt;&lt;goto &quot;potion_lab&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;&lt;else&gt;&gt;
+    &lt;p style=&quot;color: red;&quot;&gt;You do not have all the ingredients needed to make the potion.&lt;/p&gt;
+    &lt;&lt;link &quot;Leave Potion Scroll Selection&quot;&gt;&gt;&lt;&lt;goto &quot;veil_tower&quot;&gt;&gt;&lt;&lt;/link&gt;&gt; |
+    &lt;&lt;link &quot;Leave Veil Tower&quot;&gt;&gt;&lt;&lt;goto &quot;castle_map_back_select&quot;&gt;&gt;&lt;&lt;/link&gt;&gt; |
+    &lt;&lt;link &quot;Try another Potion Scroll&quot;&gt;&gt;&lt;&lt;goto &quot;potion_lab&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+&lt;&lt;set $potion = $curr_potion_selected&gt;&gt;
+&lt;&lt;set $potionInventory = {}&gt;&gt;
+&lt;&lt;for _item, _needed range $potion.ingredients&gt;&gt;
+    &lt;&lt;set $potionInventory[_item] = 0&gt;&gt;
+&lt;&lt;/for&gt;&gt;
+&lt;&lt;else&gt;&gt;
+&lt;p style=&quot;color: red; font-size: 1.2em; font-weight: bolder;&quot;&gt;Your other parts (Head, Hands, Legs or Body) are not in required stage to proceed with this transformation.&lt;/p&gt;
+&lt;p style=&quot;color: red; font-size: 1.2em; font-weight: bolder;&quot;&gt;***Body parts are not in the same level, so clothes won&#39;t fit. Please adjust the body parts to the same level soon.&lt;/p&gt;
+&lt;p style=&quot;color: red; font-size: 1em;&quot;&gt;Head Level: &lt;&lt;=$body_level_map[$userBody.head.curr_head]&gt;&gt;&lt;/p&gt;
+&lt;p style=&quot;color: red; font-size: 1em;&quot;&gt;Body Level: &lt;&lt;=$body_level_map[$userBody.torso.orig_body]&gt;&gt;&lt;/p&gt;
+&lt;p style=&quot;color: red; font-size: 1em;&quot;&gt;Left Hand Level: &lt;&lt;=$body_level_map[$userBody.left_hand.curr_body]&gt;&gt;&lt;/p&gt;
+&lt;p style=&quot;color: red; font-size: 1em;&quot;&gt;Right Hand Level: &lt;&lt;=$body_level_map[$userBody.right_hand.curr_body]&gt;&gt;&lt;/p&gt;
+&lt;p style=&quot;color: red; font-size: 1em;&quot;&gt;Left Leg Level: &lt;&lt;=$body_level_map[$userBody.left_leg.curr_body]&gt;&gt;&lt;/p&gt;
+&lt;p style=&quot;color: red; font-size: 1em;&quot;&gt;Right Leg Level: &lt;&lt;=$body_level_map[$userBody.right_leg.curr_body]&gt;&gt;&lt;/p&gt; 
+    &lt;&lt;link &quot;Leave Potion Scroll Selection&quot;&gt;&gt;&lt;&lt;goto &quot;veil_tower&quot;&gt;&gt;&lt;&lt;/link&gt;&gt; |
+    &lt;&lt;link &quot;Leave Veil Tower&quot;&gt;&gt;&lt;&lt;goto &quot;castle_map_back_select&quot;&gt;&gt;&lt;&lt;/link&gt;&gt; |
+    &lt;&lt;link &quot;Try another Potion Scroll&quot;&gt;&gt;&lt;&lt;goto &quot;potion_lab&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="937" name="potion_create_left_leg" tags="" position="850,11725" size="100,100">&lt;&lt;nobr&gt;&gt;
 &lt;span class=&quot;ingredient_text&quot;&gt;
@@ -28537,6 +28918,29 @@ That’s the transformation I treasure most the shift from resistance to curiosi
 /* &lt;pre&gt;&lt;&lt;= JSON.stringify($userBody.right_hand, null, 2)&gt;&gt;&lt;/pre&gt; */
 /* &lt;pre&gt;&lt;&lt;= JSON.stringify($curr_potion_selected, null, 2)&gt;&gt;&lt;/pre&gt; */
 /* &lt;pre&gt;&lt;&lt;= JSON.stringify($userItems, null, 2)&gt;&gt;&lt;/pre&gt; */
+
+
+
+&lt;&lt;set $body_stage to [&quot;ml&quot;, &quot;mm&quot;, &quot;ms&quot;, &quot;fs&quot;, &quot;fm&quot;, &quot;fl&quot;]&gt;&gt;
+&lt;&lt;set $index to -1&gt;&gt;
+&lt;&lt;set _i to 0&gt;&gt;
+&lt;&lt;for _item range $body_stage&gt;&gt;
+    &lt;&lt;if _item.includes($userBody.right_hand.curr_body) and $index is -1&gt;&gt;
+        &lt;&lt;set $index to _i&gt;&gt;
+    &lt;&lt;/if&gt;&gt;
+    &lt;&lt;set _i to _i + 1&gt;&gt;
+&lt;&lt;/for&gt;&gt;
+&lt;&lt;if State.variables.direction == &quot;reverse&quot;&gt;&gt;
+&lt;&lt;set $possible_changes to [$body_stage[$index], $body_stage[$index-1]]&gt;&gt;
+/* &lt;&lt;=$possible_changes&gt;&gt; */
+&lt;&lt;if 
+$possible_changes.includes($userBody.left_hand.curr_body) &amp;&amp; 
+$possible_changes.includes($userBody.right_hand.curr_body) &amp;&amp;
+$possible_changes.includes($userBody.head.curr_head) &amp;&amp; 
+$possible_changes.includes($userBody.left_leg.curr_body) &amp;&amp;
+$possible_changes.includes($userBody.right_leg.curr_body) &amp;&amp;
+$possible_changes.includes($userBody.torso.orig_body)
+&gt;&gt;
 &lt;&lt;set $ingredient = {}&gt;&gt;
 &lt;span class=&quot;ingredient_text&quot;&gt;
 &lt;b&gt;✦ Ancient Alchemical Recipe ✦&lt;/b&gt;&lt;br&gt;&lt;br&gt;
@@ -28599,6 +29003,107 @@ That’s the transformation I treasure most the shift from resistance to curiosi
 &lt;&lt;for _item, _needed range $potion.ingredients&gt;&gt;
     &lt;&lt;set $potionInventory[_item] = 0&gt;&gt;
 &lt;&lt;/for&gt;&gt;
+&lt;&lt;else&gt;&gt;
+    &lt;p style=&quot;color: red; font-size: 1.2em; font-weight: bolder;&quot;&gt;Your other parts (Head, Hands, Legs or Body) are not in required stage to proceed with this transformation.&lt;/p&gt;
+&lt;p style=&quot;color: red; font-size: 1.2em; font-weight: bolder;&quot;&gt;***Body parts are not in the same level, so clothes won&#39;t fit. Please adjust the body parts to the same level soon.&lt;/p&gt;
+&lt;p style=&quot;color: red; font-size: 1em;&quot;&gt;Head Level: &lt;&lt;=$body_level_map[$userBody.head.curr_head]&gt;&gt;&lt;/p&gt;
+&lt;p style=&quot;color: red; font-size: 1em;&quot;&gt;Body Level: &lt;&lt;=$body_level_map[$userBody.torso.orig_body]&gt;&gt;&lt;/p&gt;
+&lt;p style=&quot;color: red; font-size: 1em;&quot;&gt;Left Hand Level: &lt;&lt;=$body_level_map[$userBody.left_hand.curr_body]&gt;&gt;&lt;/p&gt;
+&lt;p style=&quot;color: red; font-size: 1em;&quot;&gt;Right Hand Level: &lt;&lt;=$body_level_map[$userBody.right_hand.curr_body]&gt;&gt;&lt;/p&gt;
+&lt;p style=&quot;color: red; font-size: 1em;&quot;&gt;Left Leg Level: &lt;&lt;=$body_level_map[$userBody.left_leg.curr_body]&gt;&gt;&lt;/p&gt;
+&lt;p style=&quot;color: red; font-size: 1em;&quot;&gt;Right Leg Level: &lt;&lt;=$body_level_map[$userBody.right_leg.curr_body]&gt;&gt;&lt;/p&gt; 
+    &lt;&lt;link &quot;Leave Potion Scroll Selection&quot;&gt;&gt;&lt;&lt;goto &quot;veil_tower&quot;&gt;&gt;&lt;&lt;/link&gt;&gt; |
+    &lt;&lt;link &quot;Leave Veil Tower&quot;&gt;&gt;&lt;&lt;goto &quot;castle_map_back_select&quot;&gt;&gt;&lt;&lt;/link&gt;&gt; |
+    &lt;&lt;link &quot;Try another Potion Scroll&quot;&gt;&gt;&lt;&lt;goto &quot;potion_lab&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+&lt;&lt;else&gt;&gt;
+&lt;&lt;set $possible_changes to [$body_stage[$index], $body_stage[$index+1]]&gt;&gt;
+/* &lt;&lt;=$possible_changes&gt;&gt; */
+&lt;&lt;if 
+$possible_changes.includes($userBody.left_hand.curr_body) &amp;&amp; 
+$possible_changes.includes($userBody.right_hand.curr_body) &amp;&amp;
+$possible_changes.includes($userBody.head.curr_head) &amp;&amp; 
+$possible_changes.includes($userBody.left_leg.curr_body) &amp;&amp;
+$possible_changes.includes($userBody.right_leg.curr_body) &amp;&amp;
+$possible_changes.includes($userBody.torso.orig_body)
+&gt;&gt;
+&lt;&lt;set $ingredient = {}&gt;&gt;
+&lt;span class=&quot;ingredient_text&quot;&gt;
+&lt;b&gt;✦ Ancient Alchemical Recipe ✦&lt;/b&gt;&lt;br&gt;&lt;br&gt;
+
+&lt;b&gt;Potion:&lt;/b&gt; &lt;&lt;=$curr_potion_selected.name&gt;&gt;&lt;br&gt;
+&lt;b&gt;Purpose:&lt;/b&gt; &lt;&lt;=$curr_potion_selected.purpose&gt;&gt;&lt;br&gt;&lt;br&gt;
+
+&lt;b&gt;🜃 Ingredients:&lt;/b&gt;&lt;br&gt;
+&lt;ol&gt;
+&lt;&lt;for _item, _value range $curr_potion_selected.ingredients&gt;&gt;
+  &lt;li&gt;&lt;&lt;=$userItems[_item].name&gt;&gt;: _value &lt;&lt;=$userItems[_item].unit&gt;&gt;&lt;/li&gt;
+  &lt;&lt;set $ingredient[_item] = {amount: $userItems[_item].amount, needed: _value, unit: $userItems[_item].unit}&gt;&gt;
+&lt;&lt;/for&gt;&gt;
+&lt;/ol&gt;
+&lt;&lt;set _potion = $curr_potion_selected&gt;&gt;
+/* &lt;&lt;set $currentObjectives = &#39;Create Potion: &#39; + _potion.name + &#39;. Ingredients are: &#39;&gt;&gt;
+
+&lt;&lt;for _item, _value range _potion.ingredients&gt;&gt;
+  &lt;&lt;set $currentObjectives += $userItems[_item].name + &#39;: &#39; + _value + &#39; &#39; + $userItems[_item].unit + &#39;, &#39;&gt;&gt;
+&lt;&lt;/for&gt;&gt;
+
+&lt;&lt;replace &quot;#objectives-text&quot; t8n&gt;&gt;
+  &lt;&lt;=$currentObjectives&gt;&gt;
+&lt;&lt;/replace&gt;&gt; */
+
+&lt;b&gt;⤐ Function:&lt;/b&gt;&lt;br&gt;
+&lt;i&gt;&lt;&lt;=$curr_potion_selected.function&gt;&gt;&lt;/i&gt;&lt;br&gt;&lt;br&gt;
+
+&lt;b&gt;⚠ Side Effects:&lt;/b&gt;&lt;br&gt;
+&lt;i&gt;&lt;&lt;=$curr_potion_selected.sideEffects&gt;&gt;&lt;/i&gt;
+&lt;/span&gt;
+/* &lt;pre&gt;&lt;&lt;= JSON.stringify($ingredient, null, 2)&gt;&gt;&lt;/pre&gt; */
+&lt;&lt;set $ingredinetAvailable = true&gt;&gt;
+&lt;&lt;for _key, _data range $ingredient&gt;&gt;
+    &lt;&lt;if $ingredient[_key].amount &lt; $ingredient[_key].needed&gt;&gt;
+        &lt;p style=&quot;color: red;&quot;&gt;
+        You do not have enough &lt;&lt;=$userItems[_key].name&gt;&gt;. You need &lt;&lt;=$ingredient[_key].needed&gt;&gt; 
+        &lt;&lt;=$userItems[_key].unit&gt;&gt;, but you have only &lt;&lt;=$ingredient[_key].amount&gt;&gt; &lt;&lt;=$userItems[_key].unit&gt;&gt;.&lt;/p&gt;
+        &lt;&lt;set $ingredinetAvailable = false&gt;&gt;
+    &lt;&lt;else&gt;&gt;
+        &lt;p style=&quot;color: green;&quot;&gt;
+        You have enough &lt;&lt;=$userItems[_key].name&gt;&gt;. You need &lt;&lt;=$ingredient[_key].needed&gt;&gt; 
+        &lt;&lt;=$userItems[_key].unit&gt;&gt;, you have &lt;&lt;=$ingredient[_key].amount&gt;&gt; &lt;&lt;=$userItems[_key].unit&gt;&gt;. It is more than enough!!&lt;/p&gt;
+    &lt;&lt;/if&gt;&gt;
+&lt;&lt;/for&gt;&gt;
+&lt;&lt;if $currentArc[&quot;main_arc&quot;] == 3&gt;&gt;
+    &lt;&lt;link &quot;Refer Another Potion Scroll&quot;&gt;&gt;&lt;&lt;goto &quot;potion_lab&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;&lt;elseif $ingredinetAvailable&gt;&gt;
+    &lt;p style=&quot;color: green;&quot;&gt;You have all the ingredients needed to make the potion.&lt;/p&gt;
+    &lt;&lt;link &quot;Make Potion&quot;&gt;&gt;&lt;&lt;goto &quot;potion_create_right_hand&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
+    &lt;&lt;link &quot;Try another Potion Scroll&quot;&gt;&gt;&lt;&lt;goto &quot;potion_lab&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;&lt;else&gt;&gt;
+    &lt;p style=&quot;color: red;&quot;&gt;You do not have all the ingredients needed to make the potion.&lt;/p&gt;
+    &lt;&lt;link &quot;Leave Potion Scroll Selection&quot;&gt;&gt;&lt;&lt;goto &quot;veil_tower&quot;&gt;&gt;&lt;&lt;/link&gt;&gt; |
+    &lt;&lt;link &quot;Leave Veil Tower&quot;&gt;&gt;&lt;&lt;goto &quot;castle_map_back_select&quot;&gt;&gt;&lt;&lt;/link&gt;&gt; |
+    &lt;&lt;link &quot;Try another Potion Scroll&quot;&gt;&gt;&lt;&lt;goto &quot;potion_lab&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+&lt;&lt;set $potion = $curr_potion_selected&gt;&gt;
+&lt;&lt;set $potionInventory = {}&gt;&gt;
+&lt;&lt;for _item, _needed range $potion.ingredients&gt;&gt;
+    &lt;&lt;set $potionInventory[_item] = 0&gt;&gt;
+&lt;&lt;/for&gt;&gt;
+&lt;&lt;else&gt;&gt;
+&lt;p style=&quot;color: red; font-size: 1.2em; font-weight: bolder;&quot;&gt;Your other parts (Head, Hands, Legs or Body) are not in required stage to proceed with this transformation.&lt;/p&gt;
+&lt;p style=&quot;color: red; font-size: 1.2em; font-weight: bolder;&quot;&gt;***Body parts are not in the same level, so clothes won&#39;t fit. Please adjust the body parts to the same level soon.&lt;/p&gt;
+&lt;p style=&quot;color: red; font-size: 1em;&quot;&gt;Head Level: &lt;&lt;=$body_level_map[$userBody.head.curr_head]&gt;&gt;&lt;/p&gt;
+&lt;p style=&quot;color: red; font-size: 1em;&quot;&gt;Body Level: &lt;&lt;=$body_level_map[$userBody.torso.orig_body]&gt;&gt;&lt;/p&gt;
+&lt;p style=&quot;color: red; font-size: 1em;&quot;&gt;Left Hand Level: &lt;&lt;=$body_level_map[$userBody.left_hand.curr_body]&gt;&gt;&lt;/p&gt;
+&lt;p style=&quot;color: red; font-size: 1em;&quot;&gt;Right Hand Level: &lt;&lt;=$body_level_map[$userBody.right_hand.curr_body]&gt;&gt;&lt;/p&gt;
+&lt;p style=&quot;color: red; font-size: 1em;&quot;&gt;Left Leg Level: &lt;&lt;=$body_level_map[$userBody.left_leg.curr_body]&gt;&gt;&lt;/p&gt;
+&lt;p style=&quot;color: red; font-size: 1em;&quot;&gt;Right Leg Level: &lt;&lt;=$body_level_map[$userBody.right_leg.curr_body]&gt;&gt;&lt;/p&gt; 
+    &lt;&lt;link &quot;Leave Potion Scroll Selection&quot;&gt;&gt;&lt;&lt;goto &quot;veil_tower&quot;&gt;&gt;&lt;&lt;/link&gt;&gt; |
+    &lt;&lt;link &quot;Leave Veil Tower&quot;&gt;&gt;&lt;&lt;goto &quot;castle_map_back_select&quot;&gt;&gt;&lt;&lt;/link&gt;&gt; |
+    &lt;&lt;link &quot;Try another Potion Scroll&quot;&gt;&gt;&lt;&lt;goto &quot;potion_lab&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="993" name="potion_create_right_hand" tags="" position="350,12475" size="100,100">&lt;&lt;nobr&gt;&gt;
 &lt;span class=&quot;ingredient_text&quot;&gt;
@@ -29361,6 +29866,31 @@ That’s the transformation I treasure most the shift from resistance to curiosi
 /* &lt;pre&gt;&lt;&lt;= JSON.stringify($userBody.right_leg, null, 2)&gt;&gt;&lt;/pre&gt; */
 /* &lt;pre&gt;&lt;&lt;= JSON.stringify($curr_potion_selected, null, 2)&gt;&gt;&lt;/pre&gt; */
 /* &lt;pre&gt;&lt;&lt;= JSON.stringify($userItems, null, 2)&gt;&gt;&lt;/pre&gt; */
+
+
+
+
+&lt;&lt;set $body_stage to [&quot;ml&quot;, &quot;mm&quot;, &quot;ms&quot;, &quot;fs&quot;, &quot;fm&quot;, &quot;fl&quot;]&gt;&gt;
+&lt;&lt;set $index to -1&gt;&gt;
+&lt;&lt;set _i to 0&gt;&gt;
+&lt;&lt;for _item range $body_stage&gt;&gt;
+    &lt;&lt;if _item.includes($userBody.right_leg.curr_body) and $index is -1&gt;&gt;
+        &lt;&lt;set $index to _i&gt;&gt;
+    &lt;&lt;/if&gt;&gt;
+    &lt;&lt;set _i to _i + 1&gt;&gt;
+&lt;&lt;/for&gt;&gt;
+&lt;&lt;if State.variables.direction == &quot;reverse&quot;&gt;&gt;
+&lt;&lt;set $possible_changes to [$body_stage[$index], $body_stage[$index-1]]&gt;&gt;
+/* &lt;&lt;=$possible_changes&gt;&gt; */
+&lt;&lt;if 
+$possible_changes.includes($userBody.left_hand.curr_body) &amp;&amp; 
+$possible_changes.includes($userBody.right_hand.curr_body) &amp;&amp;
+$possible_changes.includes($userBody.head.curr_head) &amp;&amp; 
+$possible_changes.includes($userBody.left_leg.curr_body) &amp;&amp;
+$possible_changes.includes($userBody.right_leg.curr_body) &amp;&amp;
+$possible_changes.includes($userBody.torso.orig_body)
+&gt;&gt;
+
 &lt;&lt;set $ingredient = {}&gt;&gt;
 &lt;span class=&quot;ingredient_text&quot;&gt;
 &lt;b&gt;✦ Ancient Alchemical Recipe ✦&lt;/b&gt;&lt;br&gt;&lt;br&gt;
@@ -29423,6 +29953,107 @@ That’s the transformation I treasure most the shift from resistance to curiosi
 &lt;&lt;for _item, _needed range $potion.ingredients&gt;&gt;
     &lt;&lt;set $potionInventory[_item] = 0&gt;&gt;
 &lt;&lt;/for&gt;&gt;
+&lt;&lt;else&gt;&gt;
+    &lt;p style=&quot;color: red; font-size: 1.2em; font-weight: bolder;&quot;&gt;Your other parts (Head, Hands, Legs or Body) are not in required stage to proceed with this transformation.&lt;/p&gt;
+&lt;p style=&quot;color: red; font-size: 1.2em; font-weight: bolder;&quot;&gt;***Body parts are not in the same level, so clothes won&#39;t fit. Please adjust the body parts to the same level soon.&lt;/p&gt;
+&lt;p style=&quot;color: red; font-size: 1em;&quot;&gt;Head Level: &lt;&lt;=$body_level_map[$userBody.head.curr_head]&gt;&gt;&lt;/p&gt;
+&lt;p style=&quot;color: red; font-size: 1em;&quot;&gt;Body Level: &lt;&lt;=$body_level_map[$userBody.torso.orig_body]&gt;&gt;&lt;/p&gt;
+&lt;p style=&quot;color: red; font-size: 1em;&quot;&gt;Left Hand Level: &lt;&lt;=$body_level_map[$userBody.left_hand.curr_body]&gt;&gt;&lt;/p&gt;
+&lt;p style=&quot;color: red; font-size: 1em;&quot;&gt;Right Hand Level: &lt;&lt;=$body_level_map[$userBody.right_hand.curr_body]&gt;&gt;&lt;/p&gt;
+&lt;p style=&quot;color: red; font-size: 1em;&quot;&gt;Left Leg Level: &lt;&lt;=$body_level_map[$userBody.left_leg.curr_body]&gt;&gt;&lt;/p&gt;
+&lt;p style=&quot;color: red; font-size: 1em;&quot;&gt;Right Leg Level: &lt;&lt;=$body_level_map[$userBody.right_leg.curr_body]&gt;&gt;&lt;/p&gt; 
+    &lt;&lt;link &quot;Leave Potion Scroll Selection&quot;&gt;&gt;&lt;&lt;goto &quot;veil_tower&quot;&gt;&gt;&lt;&lt;/link&gt;&gt; |
+    &lt;&lt;link &quot;Leave Veil Tower&quot;&gt;&gt;&lt;&lt;goto &quot;castle_map_back_select&quot;&gt;&gt;&lt;&lt;/link&gt;&gt; |
+    &lt;&lt;link &quot;Try another Potion Scroll&quot;&gt;&gt;&lt;&lt;goto &quot;potion_lab&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+&lt;&lt;else&gt;&gt;
+&lt;&lt;set $possible_changes to [$body_stage[$index], $body_stage[$index+1]]&gt;&gt;
+/* &lt;&lt;=$possible_changes&gt;&gt; */
+&lt;&lt;if 
+$possible_changes.includes($userBody.left_hand.curr_body) &amp;&amp; 
+$possible_changes.includes($userBody.right_hand.curr_body) &amp;&amp;
+$possible_changes.includes($userBody.head.curr_head) &amp;&amp; 
+$possible_changes.includes($userBody.left_leg.curr_body) &amp;&amp;
+$possible_changes.includes($userBody.right_leg.curr_body) &amp;&amp;
+$possible_changes.includes($userBody.torso.orig_body)
+&gt;&gt;
+&lt;&lt;set $ingredient = {}&gt;&gt;
+&lt;span class=&quot;ingredient_text&quot;&gt;
+&lt;b&gt;✦ Ancient Alchemical Recipe ✦&lt;/b&gt;&lt;br&gt;&lt;br&gt;
+
+&lt;b&gt;Potion:&lt;/b&gt; &lt;&lt;=$curr_potion_selected.name&gt;&gt;&lt;br&gt;
+&lt;b&gt;Purpose:&lt;/b&gt; &lt;&lt;=$curr_potion_selected.purpose&gt;&gt;&lt;br&gt;&lt;br&gt;
+
+&lt;b&gt;🜃 Ingredients:&lt;/b&gt;&lt;br&gt;
+&lt;ol&gt;
+&lt;&lt;for _item, _value range $curr_potion_selected.ingredients&gt;&gt;
+  &lt;li&gt;&lt;&lt;=$userItems[_item].name&gt;&gt;: _value &lt;&lt;=$userItems[_item].unit&gt;&gt;&lt;/li&gt;
+  &lt;&lt;set $ingredient[_item] = {amount: $userItems[_item].amount, needed: _value, unit: $userItems[_item].unit}&gt;&gt;
+&lt;&lt;/for&gt;&gt;
+&lt;/ol&gt;
+&lt;&lt;set _potion = $curr_potion_selected&gt;&gt;
+/* &lt;&lt;set $currentObjectives = &#39;Create Potion: &#39; + _potion.name + &#39;. Ingredients are: &#39;&gt;&gt;
+
+&lt;&lt;for _item, _value range _potion.ingredients&gt;&gt;
+  &lt;&lt;set $currentObjectives += $userItems[_item].name + &#39;: &#39; + _value + &#39; &#39; + $userItems[_item].unit + &#39;, &#39;&gt;&gt;
+&lt;&lt;/for&gt;&gt;
+
+&lt;&lt;replace &quot;#objectives-text&quot; t8n&gt;&gt;
+  &lt;&lt;=$currentObjectives&gt;&gt;
+&lt;&lt;/replace&gt;&gt; */
+
+&lt;b&gt;⤐ Function:&lt;/b&gt;&lt;br&gt;
+&lt;i&gt;&lt;&lt;=$curr_potion_selected.function&gt;&gt;&lt;/i&gt;&lt;br&gt;&lt;br&gt;
+
+&lt;b&gt;⚠ Side Effects:&lt;/b&gt;&lt;br&gt;
+&lt;i&gt;&lt;&lt;=$curr_potion_selected.sideEffects&gt;&gt;&lt;/i&gt;
+&lt;/span&gt;
+/* &lt;pre&gt;&lt;&lt;= JSON.stringify($ingredient, null, 2)&gt;&gt;&lt;/pre&gt; */
+&lt;&lt;set $ingredinetAvailable = true&gt;&gt;
+&lt;&lt;for _key, _data range $ingredient&gt;&gt;
+    &lt;&lt;if $ingredient[_key].amount &lt; $ingredient[_key].needed&gt;&gt;
+        &lt;p style=&quot;color: red;&quot;&gt;
+        You do not have enough &lt;&lt;=$userItems[_key].name&gt;&gt;. You need &lt;&lt;=$ingredient[_key].needed&gt;&gt; 
+        &lt;&lt;=$userItems[_key].unit&gt;&gt;, but you have only &lt;&lt;=$ingredient[_key].amount&gt;&gt; &lt;&lt;=$userItems[_key].unit&gt;&gt;.&lt;/p&gt;
+        &lt;&lt;set $ingredinetAvailable = false&gt;&gt;
+    &lt;&lt;else&gt;&gt;
+        &lt;p style=&quot;color: green;&quot;&gt;
+        You have enough &lt;&lt;=$userItems[_key].name&gt;&gt;. You need &lt;&lt;=$ingredient[_key].needed&gt;&gt; 
+        &lt;&lt;=$userItems[_key].unit&gt;&gt;, you have &lt;&lt;=$ingredient[_key].amount&gt;&gt; &lt;&lt;=$userItems[_key].unit&gt;&gt;. It is more than enough!!&lt;/p&gt;
+    &lt;&lt;/if&gt;&gt;
+&lt;&lt;/for&gt;&gt;
+&lt;&lt;if $currentArc[&quot;main_arc&quot;] == 3&gt;&gt;
+    &lt;&lt;link &quot;Refer Another Potion Scroll&quot;&gt;&gt;&lt;&lt;goto &quot;potion_lab&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;&lt;elseif $ingredinetAvailable&gt;&gt;
+    &lt;p style=&quot;color: green;&quot;&gt;You have all the ingredients needed to make the potion.&lt;/p&gt;
+    &lt;&lt;link &quot;Make Potion&quot;&gt;&gt;&lt;&lt;goto &quot;potion_create_right_leg&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
+    &lt;&lt;link &quot;Try another Potion Scroll&quot;&gt;&gt;&lt;&lt;goto &quot;potion_lab&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;&lt;else&gt;&gt;
+    &lt;p style=&quot;color: red;&quot;&gt;You do not have all the ingredients needed to make the potion.&lt;/p&gt;
+    &lt;&lt;link &quot;Leave Potion Scroll Selection&quot;&gt;&gt;&lt;&lt;goto &quot;veil_tower&quot;&gt;&gt;&lt;&lt;/link&gt;&gt; |
+    &lt;&lt;link &quot;Leave Veil Tower&quot;&gt;&gt;&lt;&lt;goto &quot;castle_map_back_select&quot;&gt;&gt;&lt;&lt;/link&gt;&gt; |
+    &lt;&lt;link &quot;Try another Potion Scroll&quot;&gt;&gt;&lt;&lt;goto &quot;potion_lab&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+&lt;&lt;set $potion = $curr_potion_selected&gt;&gt;
+&lt;&lt;set $potionInventory = {}&gt;&gt;
+&lt;&lt;for _item, _needed range $potion.ingredients&gt;&gt;
+    &lt;&lt;set $potionInventory[_item] = 0&gt;&gt;
+&lt;&lt;/for&gt;&gt;
+&lt;&lt;else&gt;&gt;
+    &lt;p style=&quot;color: red; font-size: 1.2em; font-weight: bolder;&quot;&gt;Your other parts (Head, Hands, Legs or Body) are not in required stage to proceed with this transformation.&lt;/p&gt;
+&lt;p style=&quot;color: red; font-size: 1.2em; font-weight: bolder;&quot;&gt;***Body parts are not in the same level, so clothes won&#39;t fit. Please adjust the body parts to the same level soon.&lt;/p&gt;
+&lt;p style=&quot;color: red; font-size: 1em;&quot;&gt;Head Level: &lt;&lt;=$body_level_map[$userBody.head.curr_head]&gt;&gt;&lt;/p&gt;
+&lt;p style=&quot;color: red; font-size: 1em;&quot;&gt;Body Level: &lt;&lt;=$body_level_map[$userBody.torso.orig_body]&gt;&gt;&lt;/p&gt;
+&lt;p style=&quot;color: red; font-size: 1em;&quot;&gt;Left Hand Level: &lt;&lt;=$body_level_map[$userBody.left_hand.curr_body]&gt;&gt;&lt;/p&gt;
+&lt;p style=&quot;color: red; font-size: 1em;&quot;&gt;Right Hand Level: &lt;&lt;=$body_level_map[$userBody.right_hand.curr_body]&gt;&gt;&lt;/p&gt;
+&lt;p style=&quot;color: red; font-size: 1em;&quot;&gt;Left Leg Level: &lt;&lt;=$body_level_map[$userBody.left_leg.curr_body]&gt;&gt;&lt;/p&gt;
+&lt;p style=&quot;color: red; font-size: 1em;&quot;&gt;Right Leg Level: &lt;&lt;=$body_level_map[$userBody.right_leg.curr_body]&gt;&gt;&lt;/p&gt; 
+    &lt;&lt;link &quot;Leave Potion Scroll Selection&quot;&gt;&gt;&lt;&lt;goto &quot;veil_tower&quot;&gt;&gt;&lt;&lt;/link&gt;&gt; |
+    &lt;&lt;link &quot;Leave Veil Tower&quot;&gt;&gt;&lt;&lt;goto &quot;castle_map_back_select&quot;&gt;&gt;&lt;&lt;/link&gt;&gt; |
+    &lt;&lt;link &quot;Try another Potion Scroll&quot;&gt;&gt;&lt;&lt;goto &quot;potion_lab&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1060" name="potion_create_right_leg" tags="" position="1225,13225" size="100,100">&lt;&lt;nobr&gt;&gt;
 &lt;span class=&quot;ingredient_text&quot;&gt;
@@ -30310,6 +30941,28 @@ Then drink deeply, Caelan. The unmaking is as vital as the making. Your journey 
     &lt;&lt;link &quot;Leave Veil Tower&quot;&gt;&gt;&lt;&lt;goto &quot;castle_map_back_select&quot;&gt;&gt;&lt;&lt;/link&gt;&gt; |
     &lt;&lt;link &quot;Try another Potion Scroll&quot;&gt;&gt;&lt;&lt;goto &quot;potion_lab&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;&lt;else&gt;&gt;
+
+
+&lt;&lt;set $body_stage to [&quot;ml&quot;, &quot;mm&quot;, &quot;ms&quot;, &quot;fs&quot;, &quot;fm&quot;, &quot;fl&quot;]&gt;&gt;
+&lt;&lt;set $index to -1&gt;&gt;
+&lt;&lt;set _i to 0&gt;&gt;
+&lt;&lt;for _item range $body_stage&gt;&gt;
+    &lt;&lt;if _item.includes($userBody.torso.orig_body) and $index is -1&gt;&gt;
+        &lt;&lt;set $index to _i&gt;&gt;
+    &lt;&lt;/if&gt;&gt;
+    &lt;&lt;set _i to _i + 1&gt;&gt;
+&lt;&lt;/for&gt;&gt;
+&lt;&lt;if State.variables.direction == &quot;reverse&quot;&gt;&gt;
+&lt;&lt;set $possible_changes to [$body_stage[$index], $body_stage[$index-1]]&gt;&gt;
+/* &lt;&lt;=$possible_changes&gt;&gt; */
+&lt;&lt;if 
+$possible_changes.includes($userBody.left_hand.curr_body) &amp;&amp; 
+$possible_changes.includes($userBody.right_hand.curr_body) &amp;&amp;
+$possible_changes.includes($userBody.head.curr_head) &amp;&amp; 
+$possible_changes.includes($userBody.left_leg.curr_body) &amp;&amp;
+$possible_changes.includes($userBody.right_leg.curr_body) &amp;&amp;
+$possible_changes.includes($userBody.torso.orig_body)
+&gt;&gt;
 /* &lt;pre&gt;&lt;&lt;= JSON.stringify($userBody.torso, null, 2)&gt;&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;&lt;= JSON.stringify($curr_potion_selected, null, 2)&gt;&gt;&lt;/pre&gt; */
 /* &lt;pre&gt;&lt;&lt;= JSON.stringify($userItems, null, 2)&gt;&gt;&lt;/pre&gt; */
@@ -30375,6 +31028,109 @@ Then drink deeply, Caelan. The unmaking is as vital as the making. Your journey 
 &lt;&lt;for _item, _needed range $potion.ingredients&gt;&gt;
     &lt;&lt;set $potionInventory[_item] = 0&gt;&gt;
 &lt;&lt;/for&gt;&gt;
+&lt;&lt;else&gt;&gt;
+&lt;p style=&quot;color: red; font-size: 1.2em; font-weight: bolder;&quot;&gt;Your other parts (Head, Hands, Legs or Body) are not in required stage to proceed with this transformation.&lt;/p&gt;
+&lt;p style=&quot;color: red; font-size: 1.2em; font-weight: bolder;&quot;&gt;***Body parts are not in the same level, so clothes won&#39;t fit. Please adjust the body parts to the same level soon.&lt;/p&gt;
+&lt;p style=&quot;color: red; font-size: 1em;&quot;&gt;Head Level: &lt;&lt;=$body_level_map[$userBody.head.curr_head]&gt;&gt;&lt;/p&gt;
+&lt;p style=&quot;color: red; font-size: 1em;&quot;&gt;Body Level: &lt;&lt;=$body_level_map[$userBody.torso.orig_body]&gt;&gt;&lt;/p&gt;
+&lt;p style=&quot;color: red; font-size: 1em;&quot;&gt;Left Hand Level: &lt;&lt;=$body_level_map[$userBody.left_hand.curr_body]&gt;&gt;&lt;/p&gt;
+&lt;p style=&quot;color: red; font-size: 1em;&quot;&gt;Right Hand Level: &lt;&lt;=$body_level_map[$userBody.right_hand.curr_body]&gt;&gt;&lt;/p&gt;
+&lt;p style=&quot;color: red; font-size: 1em;&quot;&gt;Left Leg Level: &lt;&lt;=$body_level_map[$userBody.left_leg.curr_body]&gt;&gt;&lt;/p&gt;
+&lt;p style=&quot;color: red; font-size: 1em;&quot;&gt;Right Leg Level: &lt;&lt;=$body_level_map[$userBody.right_leg.curr_body]&gt;&gt;&lt;/p&gt; 
+    &lt;&lt;link &quot;Leave Potion Scroll Selection&quot;&gt;&gt;&lt;&lt;goto &quot;veil_tower&quot;&gt;&gt;&lt;&lt;/link&gt;&gt; |
+    &lt;&lt;link &quot;Leave Veil Tower&quot;&gt;&gt;&lt;&lt;goto &quot;castle_map_back_select&quot;&gt;&gt;&lt;&lt;/link&gt;&gt; |
+    &lt;&lt;link &quot;Try another Potion Scroll&quot;&gt;&gt;&lt;&lt;goto &quot;potion_lab&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+&lt;&lt;else&gt;&gt;
+&lt;&lt;set $possible_changes to [$body_stage[$index], $body_stage[$index+1]]&gt;&gt;
+/* &lt;&lt;=$possible_changes&gt;&gt; */
+&lt;&lt;if 
+$possible_changes.includes($userBody.left_hand.curr_body) &amp;&amp; 
+$possible_changes.includes($userBody.right_hand.curr_body) &amp;&amp;
+$possible_changes.includes($userBody.head.curr_head) &amp;&amp; 
+$possible_changes.includes($userBody.left_leg.curr_body) &amp;&amp;
+$possible_changes.includes($userBody.right_leg.curr_body) &amp;&amp;
+$possible_changes.includes($userBody.torso.orig_body)
+&gt;&gt;
+/* &lt;pre&gt;&lt;&lt;= JSON.stringify($userBody.torso, null, 2)&gt;&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;&lt;= JSON.stringify($curr_potion_selected, null, 2)&gt;&gt;&lt;/pre&gt; */
+/* &lt;pre&gt;&lt;&lt;= JSON.stringify($userItems, null, 2)&gt;&gt;&lt;/pre&gt; */
+&lt;&lt;set $ingredient = {}&gt;&gt;
+&lt;span class=&quot;ingredient_text&quot;&gt;
+&lt;b&gt;✦ Ancient Alchemical Recipe ✦&lt;/b&gt;&lt;br&gt;&lt;br&gt;
+
+&lt;b&gt;Potion:&lt;/b&gt; &lt;&lt;=$curr_potion_selected.name&gt;&gt;&lt;br&gt;
+&lt;b&gt;Purpose:&lt;/b&gt; &lt;&lt;=$curr_potion_selected.purpose&gt;&gt;&lt;br&gt;&lt;br&gt;
+
+&lt;b&gt;🜃 Ingredients:&lt;/b&gt;&lt;br&gt;
+&lt;ol&gt;
+&lt;&lt;for _item, _value range $curr_potion_selected.ingredients&gt;&gt;
+  &lt;li&gt;&lt;&lt;=$userItems[_item].name&gt;&gt;: _value &lt;&lt;=$userItems[_item].unit&gt;&gt;&lt;/li&gt;
+  &lt;&lt;set $ingredient[_item] = {amount: $userItems[_item].amount, needed: _value, unit: $userItems[_item].unit}&gt;&gt;
+&lt;&lt;/for&gt;&gt;
+&lt;/ol&gt;
+&lt;&lt;set _potion = $curr_potion_selected&gt;&gt;
+/* &lt;&lt;set $currentObjectives = &#39;Create Potion: &#39; + _potion.name + &#39;. Ingredients are: &#39;&gt;&gt;
+
+&lt;&lt;for _item, _value range _potion.ingredients&gt;&gt;
+  &lt;&lt;set $currentObjectives += $userItems[_item].name + &#39;: &#39; + _value + &#39; &#39; + $userItems[_item].unit + &#39;, &#39;&gt;&gt;
+&lt;&lt;/for&gt;&gt;
+
+&lt;&lt;replace &quot;#objectives-text&quot; t8n&gt;&gt;
+  &lt;&lt;=$currentObjectives&gt;&gt;
+&lt;&lt;/replace&gt;&gt; */
+
+&lt;b&gt;⤐ Function:&lt;/b&gt;&lt;br&gt;
+&lt;i&gt;&lt;&lt;=$curr_potion_selected.function&gt;&gt;&lt;/i&gt;&lt;br&gt;&lt;br&gt;
+
+&lt;b&gt;⚠ Side Effects:&lt;/b&gt;&lt;br&gt;
+&lt;i&gt;&lt;&lt;=$curr_potion_selected.sideEffects&gt;&gt;&lt;/i&gt;
+&lt;/span&gt;
+/* &lt;pre&gt;&lt;&lt;= JSON.stringify($ingredient, null, 2)&gt;&gt;&lt;/pre&gt; */
+&lt;&lt;set $ingredinetAvailable = true&gt;&gt;
+&lt;&lt;for _key, _data range $ingredient&gt;&gt;
+    &lt;&lt;if $ingredient[_key].amount &lt; $ingredient[_key].needed&gt;&gt;
+        &lt;p style=&quot;color: red;&quot;&gt;
+        You do not have enough &lt;&lt;=$userItems[_key].name&gt;&gt;. You need &lt;&lt;=$ingredient[_key].needed&gt;&gt; 
+        &lt;&lt;=$userItems[_key].unit&gt;&gt;, but you have only &lt;&lt;=$ingredient[_key].amount&gt;&gt; &lt;&lt;=$userItems[_key].unit&gt;&gt;.&lt;/p&gt;
+        &lt;&lt;set $ingredinetAvailable = false&gt;&gt;
+    &lt;&lt;else&gt;&gt;
+        &lt;p style=&quot;color: green;&quot;&gt;
+        You have enough &lt;&lt;=$userItems[_key].name&gt;&gt;. You need &lt;&lt;=$ingredient[_key].needed&gt;&gt; 
+        &lt;&lt;=$userItems[_key].unit&gt;&gt;, you have &lt;&lt;=$ingredient[_key].amount&gt;&gt; &lt;&lt;=$userItems[_key].unit&gt;&gt;. It is more than enough!!&lt;/p&gt;
+    &lt;&lt;/if&gt;&gt;
+&lt;&lt;/for&gt;&gt;
+&lt;&lt;if $currentArc[&quot;main_arc&quot;] == 3&gt;&gt;
+    &lt;&lt;link &quot;Refer Another Potion Scroll&quot;&gt;&gt;&lt;&lt;goto &quot;potion_lab&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;&lt;elseif $ingredinetAvailable&gt;&gt;
+    &lt;p style=&quot;color: green;&quot;&gt;You have all the ingredients needed to make the potion.&lt;/p&gt;
+    &lt;&lt;link &quot;Make Potion&quot;&gt;&gt;&lt;&lt;goto &quot;potion_create_torso&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
+    &lt;&lt;link &quot;Try another Potion Scroll&quot;&gt;&gt;&lt;&lt;goto &quot;potion_lab&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;&lt;else&gt;&gt;
+    &lt;p style=&quot;color: red;&quot;&gt;You do not have all the ingredients needed to make the potion.&lt;/p&gt;
+    &lt;&lt;link &quot;Leave Potion Scroll Selection&quot;&gt;&gt;&lt;&lt;goto &quot;veil_tower&quot;&gt;&gt;&lt;&lt;/link&gt;&gt; |
+    &lt;&lt;link &quot;Leave Veil Tower&quot;&gt;&gt;&lt;&lt;goto &quot;castle_map_back_select&quot;&gt;&gt;&lt;&lt;/link&gt;&gt; |
+    &lt;&lt;link &quot;Try another Potion Scroll&quot;&gt;&gt;&lt;&lt;goto &quot;potion_lab&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+&lt;&lt;set $potion = $curr_potion_selected&gt;&gt;
+&lt;&lt;set $potionInventory = {}&gt;&gt;
+&lt;&lt;for _item, _needed range $potion.ingredients&gt;&gt;
+    &lt;&lt;set $potionInventory[_item] = 0&gt;&gt;
+&lt;&lt;/for&gt;&gt;
+&lt;&lt;else&gt;&gt;
+&lt;p style=&quot;color: red; font-size: 1.2em; font-weight: bolder;&quot;&gt;Your other parts (Head, Hands, Legs or Body) are not in required stage to proceed with this transformation.&lt;/p&gt;
+&lt;p style=&quot;color: red; font-size: 1.2em; font-weight: bolder;&quot;&gt;***Body parts are not in the same level, so clothes won&#39;t fit. Please adjust the body parts to the same level soon.&lt;/p&gt;
+&lt;p style=&quot;color: red; font-size: 1em;&quot;&gt;Head Level: &lt;&lt;=$body_level_map[$userBody.head.curr_head]&gt;&gt;&lt;/p&gt;
+&lt;p style=&quot;color: red; font-size: 1em;&quot;&gt;Body Level: &lt;&lt;=$body_level_map[$userBody.torso.orig_body]&gt;&gt;&lt;/p&gt;
+&lt;p style=&quot;color: red; font-size: 1em;&quot;&gt;Left Hand Level: &lt;&lt;=$body_level_map[$userBody.left_hand.curr_body]&gt;&gt;&lt;/p&gt;
+&lt;p style=&quot;color: red; font-size: 1em;&quot;&gt;Right Hand Level: &lt;&lt;=$body_level_map[$userBody.right_hand.curr_body]&gt;&gt;&lt;/p&gt;
+&lt;p style=&quot;color: red; font-size: 1em;&quot;&gt;Left Leg Level: &lt;&lt;=$body_level_map[$userBody.left_leg.curr_body]&gt;&gt;&lt;/p&gt;
+&lt;p style=&quot;color: red; font-size: 1em;&quot;&gt;Right Leg Level: &lt;&lt;=$body_level_map[$userBody.right_leg.curr_body]&gt;&gt;&lt;/p&gt;    
+&lt;&lt;link &quot;Leave Potion Scroll Selection&quot;&gt;&gt;&lt;&lt;goto &quot;veil_tower&quot;&gt;&gt;&lt;&lt;/link&gt;&gt; |
+    &lt;&lt;link &quot;Leave Veil Tower&quot;&gt;&gt;&lt;&lt;goto &quot;castle_map_back_select&quot;&gt;&gt;&lt;&lt;/link&gt;&gt; |
+    &lt;&lt;link &quot;Try another Potion Scroll&quot;&gt;&gt;&lt;&lt;goto &quot;potion_lab&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+&lt;&lt;/if&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1119" name="potion_create_torso" tags="" position="1100,13975" size="100,100">&lt;&lt;nobr&gt;&gt;
 &lt;span class=&quot;ingredient_text&quot;&gt;
@@ -31279,6 +32035,55 @@ Then drink deeply, Caelan. The unmaking is as vital as the making. Your journey 
   ✖
 &lt;/button&gt;
 &lt;div style=&quot;display: flex; justify-content: space-between;&quot;&gt;
+&lt;!-- Warning Button --&gt;
+&lt;div title=&quot;Warning&quot;&gt;
+/* &lt;&lt;set $not_match = false&gt;&gt; */
+&lt;&lt;set $is_match to (
+    $userBody.head.curr_head === $userBody.torso.orig_body &amp;&amp;
+    $userBody.head.curr_head === $userBody.left_hand.curr_body &amp;&amp;
+    $userBody.head.curr_head === $userBody.right_hand.curr_body &amp;&amp;
+    $userBody.head.curr_head === $userBody.left_leg.curr_body &amp;&amp;
+    $userBody.head.curr_head === $userBody.right_leg.curr_body
+)&gt;&gt;
+&lt;&lt;if !$is_match&gt;&gt;
+&lt;button onclick=&quot;$(&#39;#warning-popup&#39;).fadeIn()&quot; style=&quot;cursor: url(&#39;images/game/pointer.png&#39;) 2 2, pointer;&quot;&gt;⚠️&lt;/button&gt;
+&lt;&lt;else&gt;&gt;
+&lt;button onclick=&quot;$(&#39;#body-popup&#39;).fadeIn()&quot; style=&quot;cursor: url(&#39;images/game/pointer.png&#39;) 2 2, pointer;&quot;&gt;🧍‍♂️🧍‍♀️&lt;/button&gt;
+&lt;&lt;/if&gt;&gt;
+&lt;/div&gt;
+&lt;&lt;set $body_level_map = {
+  &quot;ml&quot;: &quot;Male Ultra Muscular&quot;,
+  &quot;mm&quot;: &quot;Male Muscular&quot;,
+  &quot;ms&quot;: &quot;Male Lean&quot;,
+  &quot;fs&quot;: &quot;Female Slim&quot;,
+  &quot;fm&quot;: &quot;Female Feminine&quot;,
+  &quot;fl&quot;: &quot;Female Ultra Feminine&quot;
+}&gt;&gt;
+&lt;!-- Warning Popup --&gt;
+&lt;div id=&quot;warning-popup&quot; style=&quot;display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);
+background-color: rgba(255, 50, 50, 0.95); border: 2px solid #aaa; border-radius: 12px; padding: 20px; z-index: 1000; max-width: 90vw; max-height: 80vh; overflow-y: auto; box-shadow: 0 0 12px #000;&quot;&gt;
+  &lt;button onclick=&quot;$(&#39;#warning-popup&#39;).fadeOut()&quot; style=&quot;position: absolute; top: 10px; right: 10px; background: #440000; color: white; border: none; padding: 5px 10px; border-radius: 4px;&quot;&gt;✖&lt;/button&gt;
+  &lt;h2 style=&quot;margin-top: 0; color: #f0e6d2;&quot;&gt;Warning&lt;/h2&gt;
+  &lt;p style=&quot;color: white; font-size: 1em;&quot;&gt;Body parts are not in the same level, so clothes won&#39;t fit. Please adjust the body parts to the same level soon.&lt;/p&gt;
+  &lt;p style=&quot;color: white; font-size: 1em;&quot;&gt;Head Level: &lt;&lt;=$body_level_map[$userBody.head.curr_head]&gt;&gt;&lt;/p&gt;
+  &lt;p style=&quot;color: white; font-size: 1em;&quot;&gt;Body Level: &lt;&lt;=$body_level_map[$userBody.torso.orig_body]&gt;&gt;&lt;/p&gt;
+  &lt;p style=&quot;color: white; font-size: 1em;&quot;&gt;Left Hand Level: &lt;&lt;=$body_level_map[$userBody.left_hand.curr_body]&gt;&gt;&lt;/p&gt;
+  &lt;p style=&quot;color: white; font-size: 1em;&quot;&gt;Right Hand Level: &lt;&lt;=$body_level_map[$userBody.right_hand.curr_body]&gt;&gt;&lt;/p&gt;
+  &lt;p style=&quot;color: white; font-size: 1em;&quot;&gt;Left Leg Level: &lt;&lt;=$body_level_map[$userBody.left_leg.curr_body]&gt;&gt;&lt;/p&gt;
+  &lt;p style=&quot;color: white; font-size: 1em;&quot;&gt;Right Leg Level: &lt;&lt;=$body_level_map[$userBody.right_leg.curr_body]&gt;&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&quot;body-popup&quot; style=&quot;display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);
+background-color: rgba(50, 255, 98, 0.95); border: 2px solid #aaa; border-radius: 12px; padding: 20px; z-index: 1000; max-width: 90vw; max-height: 80vh; overflow-y: auto; box-shadow: 0 0 12px #000;&quot;&gt;
+  &lt;button onclick=&quot;$(&#39;#body-popup&#39;).fadeOut()&quot; style=&quot;position: absolute; top: 10px; right: 10px; background: #440000; color: white; border: none; padding: 5px 10px; border-radius: 4px;&quot;&gt;✖&lt;/button&gt;
+  &lt;h2 style=&quot;margin-top: 0; color: black;&quot;&gt;Nice !!!&lt;/h2&gt;
+  &lt;p style=&quot;color: black; font-size: 1em;&quot;&gt;Body parts are in the same level, so clothes are fitting nicely.&lt;/p&gt;
+  &lt;p style=&quot;color: black; font-size: 1em;&quot;&gt;Head Level: &lt;&lt;=$body_level_map[$userBody.head.curr_head]&gt;&gt;&lt;/p&gt;
+  &lt;p style=&quot;color: black; font-size: 1em;&quot;&gt;Body Level: &lt;&lt;=$body_level_map[$userBody.torso.orig_body]&gt;&gt;&lt;/p&gt;
+  &lt;p style=&quot;color: black; font-size: 1em;&quot;&gt;Left Hand Level: &lt;&lt;=$body_level_map[$userBody.left_hand.curr_body]&gt;&gt;&lt;/p&gt;
+  &lt;p style=&quot;color: black; font-size: 1em;&quot;&gt;Right Hand Level: &lt;&lt;=$body_level_map[$userBody.right_hand.curr_body]&gt;&gt;&lt;/p&gt;
+  &lt;p style=&quot;color: black; font-size: 1em;&quot;&gt;Left Leg Level: &lt;&lt;=$body_level_map[$userBody.left_leg.curr_body]&gt;&gt;&lt;/p&gt;
+  &lt;p style=&quot;color: black; font-size: 1em;&quot;&gt;Right Leg Level: &lt;&lt;=$body_level_map[$userBody.right_leg.curr_body]&gt;&gt;&lt;/p&gt;
+&lt;/div&gt;
 &lt;div title=&quot;Show without Cloths&quot;&gt;
 &lt;&lt;button &quot;🚫🧥👗&quot;&gt;&gt;
   &lt;&lt;set $showWear to not $showWear&gt;&gt;

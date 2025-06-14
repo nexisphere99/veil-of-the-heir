@@ -10,6 +10,55 @@
   ✖
 </button>
 <div style="display: flex; justify-content: space-between;">
+<!-- Warning Button -->
+<div title="Warning">
+/* <<set $not_match = false>> */
+<<set $is_match to (
+    $userBody.head.curr_head === $userBody.torso.orig_body &&
+    $userBody.head.curr_head === $userBody.left_hand.curr_body &&
+    $userBody.head.curr_head === $userBody.right_hand.curr_body &&
+    $userBody.head.curr_head === $userBody.left_leg.curr_body &&
+    $userBody.head.curr_head === $userBody.right_leg.curr_body
+)>>
+<<if !$is_match>>
+<button onclick="$('#warning-popup').fadeIn()" style="cursor: url('images/game/pointer.png') 2 2, pointer;">⚠️</button>
+<<else>>
+<button onclick="$('#body-popup').fadeIn()" style="cursor: url('images/game/pointer.png') 2 2, pointer;">🧍‍♂️🧍‍♀️</button>
+<</if>>
+</div>
+<<set $body_level_map = {
+  "ml": "Male Ultra Muscular",
+  "mm": "Male Muscular",
+  "ms": "Male Lean",
+  "fs": "Female Slim",
+  "fm": "Female Feminine",
+  "fl": "Female Ultra Feminine"
+}>>
+<!-- Warning Popup -->
+<div id="warning-popup" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);
+background-color: rgba(255, 50, 50, 0.95); border: 2px solid #aaa; border-radius: 12px; padding: 20px; z-index: 1000; max-width: 90vw; max-height: 80vh; overflow-y: auto; box-shadow: 0 0 12px #000;">
+  <button onclick="$('#warning-popup').fadeOut()" style="position: absolute; top: 10px; right: 10px; background: #440000; color: white; border: none; padding: 5px 10px; border-radius: 4px;">✖</button>
+  <h2 style="margin-top: 0; color: #f0e6d2;">Warning</h2>
+  <p style="color: white; font-size: 1em;">Body parts are not in the same level, so clothes won't fit. Please adjust the body parts to the same level soon.</p>
+  <p style="color: white; font-size: 1em;">Head Level: <<=$body_level_map[$userBody.head.curr_head]>></p>
+  <p style="color: white; font-size: 1em;">Body Level: <<=$body_level_map[$userBody.torso.orig_body]>></p>
+  <p style="color: white; font-size: 1em;">Left Hand Level: <<=$body_level_map[$userBody.left_hand.curr_body]>></p>
+  <p style="color: white; font-size: 1em;">Right Hand Level: <<=$body_level_map[$userBody.right_hand.curr_body]>></p>
+  <p style="color: white; font-size: 1em;">Left Leg Level: <<=$body_level_map[$userBody.left_leg.curr_body]>></p>
+  <p style="color: white; font-size: 1em;">Right Leg Level: <<=$body_level_map[$userBody.right_leg.curr_body]>></p>
+</div>
+<div id="body-popup" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);
+background-color: rgba(50, 255, 98, 0.95); border: 2px solid #aaa; border-radius: 12px; padding: 20px; z-index: 1000; max-width: 90vw; max-height: 80vh; overflow-y: auto; box-shadow: 0 0 12px #000;">
+  <button onclick="$('#body-popup').fadeOut()" style="position: absolute; top: 10px; right: 10px; background: #440000; color: white; border: none; padding: 5px 10px; border-radius: 4px;">✖</button>
+  <h2 style="margin-top: 0; color: black;">Nice !!!</h2>
+  <p style="color: black; font-size: 1em;">Body parts are in the same level, so clothes are fitting nicely.</p>
+  <p style="color: black; font-size: 1em;">Head Level: <<=$body_level_map[$userBody.head.curr_head]>></p>
+  <p style="color: black; font-size: 1em;">Body Level: <<=$body_level_map[$userBody.torso.orig_body]>></p>
+  <p style="color: black; font-size: 1em;">Left Hand Level: <<=$body_level_map[$userBody.left_hand.curr_body]>></p>
+  <p style="color: black; font-size: 1em;">Right Hand Level: <<=$body_level_map[$userBody.right_hand.curr_body]>></p>
+  <p style="color: black; font-size: 1em;">Left Leg Level: <<=$body_level_map[$userBody.left_leg.curr_body]>></p>
+  <p style="color: black; font-size: 1em;">Right Leg Level: <<=$body_level_map[$userBody.right_leg.curr_body]>></p>
+</div>
 <div title="Show without Cloths">
 <<button "🚫🧥👗">>
   <<set $showWear to not $showWear>>
