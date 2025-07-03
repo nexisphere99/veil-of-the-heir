@@ -91,9 +91,9 @@ I will become the queen this realm deserves.
 <<set $hasIngredientAccess = false>>
 <<set $ingredientChoices to 0>>
 <<set $riddleSuccess = false>>
-<<set _i to random(1, 3)>>
+<<set _i to random(1, 10)>>
 <<set $dream_num = "dream_" + _i>>
-[[Dream|$dream_num]] | <br><br>
+[[Dream|$dream_num]] | 
 [[Get up From Bed|mc_bed_chamber]]
 <</if>>
 <</nobr>>

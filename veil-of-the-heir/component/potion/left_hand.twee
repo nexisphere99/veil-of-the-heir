@@ -338,18 +338,20 @@ $possible_changes.includes($userBody.torso.orig_body)
 
 :: use_success_potion_create_left_hand
 <<nobr>>
+
+
 <<if State.variables.direction == "reverse">>
     <<set $user_stats.gender_appearance += 1>>
 <<else>>
     <<set $user_stats.gender_appearance -= 1>>
 <</if>>
 /* <<=>> */
-/* <pre><<= JSON.stringify($userBody.left_hand, null, 2)>></pre> */
-<<set $userBody.left_hand.curr_body = $curr_potion_selected.to>>
-<<set $image_key_hand_path = "mc/figure/" + $userBody.left_hand.orig_body + "/" + $userBody.left_hand.curr_body + "/" + $userBody.left_hand.orig_body + "_" + $userBody.left_hand.curr_body + "_" + "left_hand.png">>
+/* <pre><<= JSON.stringify($userBody.right_hand, null, 2)>></pre> */
+<<set $userBody.right_hand.curr_body = $curr_potion_selected.to>>
+<<set $image_key_hand_path = "mc/figure/" + $userBody.right_hand.orig_body + "/" + $userBody.right_hand.curr_body + "/" + $userBody.right_hand.orig_body + "_" + $userBody.right_hand.curr_body + "_" + "right_hand.png">>
 /* <<=$image_key_hand_path>> */
-<<set $userBody.left_hand.img = $image_key_hand_path>>
-/* <pre><<= JSON.stringify($userBody.left_hand, null, 2)>></pre> */
+<<set $userBody.right_hand.img = $image_key_hand_path>>
+/* <pre><<= JSON.stringify($userBody.right_hand, null, 2)>></pre> */
 <div style="text-align: center;">
 <div class="change_show torso">[img[setup.ImagePath+$userBody.torso.img]]</div>
 <div class="change_show head">[img[setup.ImagePath+$userBody.head.img]]</div>

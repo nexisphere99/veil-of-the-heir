@@ -7,9 +7,9 @@ setup.torso_forward_potions = {
 		name: "Softshape Draught",
 		purpose: "Male Ultra Muscular Torso ➝ Male Muscular Torso",
 		ingredients: {
-			"softroot_essence": 1,
-			"thornberry_juice": 10,
-			"glowleaf_powder": 2
+			"velmorian_honey": 30,
+			"crimsondew_drops": 8,
+			"crimsonroot_dust": 20
 		},
 		function: "Softens and tightens the torso muscles, starts reshaping the waist, reducing broadness.",
 		sideEffects: "Mild tightness around the waist and torso, some mild discomfort as the body begins to shift."
@@ -21,9 +21,9 @@ setup.torso_forward_potions = {
 		name: "Waistbind Elixir",
 		purpose: "Male Muscular Torso ➝ Male Lean Torso",
 		ingredients: {
-			"ashfern_flakes": 5,
-			"dragonmoss_resin": 10,
-			"starblossom_pollen": 3
+			"velmorian_honey": 60,
+			"crimsondew_drops": 12,
+			"crimsonroot_dust": 30
 		},
 		function: "Focuses on slimming the waist and narrowing the shoulders, enhancing the feminine curves.",
 		sideEffects: "Soreness as the body begins narrowing; discomfort from the shifting of the waistline."
@@ -35,9 +35,9 @@ setup.torso_forward_potions = {
 		name: "Curvature Serum",
 		purpose: "Male Lean Torso ➝ Female Slim Torso",
 		ingredients: {
-			"vinesilk_essence": 10,
-			"seraphmilk": 15,
-			"feylace_petal": 15
+			"velmorian_honey": 90,
+			"crimsondew_drops": 16,
+			"crimsonroot_dust": 40
 		},
 		function: "Shifts torso to a more feminine shape, promoting hip widening and narrowing of the waist.",
 		sideEffects: "Sensation of warmth as the hips and waist begin to adjust, some temporary discomfort from changes."
@@ -49,9 +49,9 @@ setup.torso_forward_potions = {
 		name: "Hourglass Draught",
 		purpose: "Female Slim Torso ➝ Female Feminine Torso",
 		ingredients: {
-			"frostvine_elixir": 20,
-			"feylace_petal": 10,
-			"velvetgrove_essence": 20
+			"velmorian_honey": 120,
+			"crimsondew_drops": 20,
+			"crimsonroot_dust": 50
 		},
 		function: "Intensifies hip widening, enhances waist cinching, and adds softness to the belly.",
 		sideEffects: "Increased fullness in the hips, a tightening sensation around the waist, mild dizziness."
@@ -63,9 +63,9 @@ setup.torso_forward_potions = {
 		name: "Femmeshape Elixir",
 		purpose: "Female Feminine Torso ➝ Female Ultra Feminine Torso",
 		ingredients: {
-			"dragonmoss_resin": 20,
-			"nightshade_bloom": 10,
-			"sorrowseed_oil": 25
+			"velmorian_honey": 150,
+			"crimsondew_drops": 24,
+			"crimsonroot_dust": 60
 		},
 		function: "Final refinement of feminine curves, softens the torso’s appearance with full body reshaping.",
 		sideEffects: "Final changes to the body’s outline, slight tingling as the curves fully solidify into place."
@@ -82,9 +82,9 @@ setup.torso_reverse_potions = {
 		name: "Slimshape Draught",
 		purpose: "Female Ultra Feminine Torso ➝ Female Feminine Torso",
 		ingredients: {
-			"ashfern_flakes": 20,
-			"frostvine_elixir": 10,
-			"thornberry_juice": 15
+			"velmorian_honey": 30,
+			"thornberry_juice": 20,
+			"ashfern_flakes": 4
 		},
 		function: "Reduces width of hips, tightens the waist, and begins to masculinize the torso.",
 		sideEffects: "Initial tightness around the waist, temporary discomfort from narrowing of the hips."
@@ -96,9 +96,9 @@ setup.torso_reverse_potions = {
 		name: "Broadbind Elixir",
 		purpose: "Female Feminine Torso ➝ Female Slim Torso",
 		ingredients: {
-			"dragonmoss_resin": 10,
-			"sorrowseed_oil": 5,
-			"nightshade_bloom": 10
+			"velmorian_honey": 60,
+			"thornberry_juice": 40,
+			"ashfern_flakes": 8
 		},
 		function: "Begins widening the shoulders and reshapes the torso into a more angular, masculine form.",
 		sideEffects: "Muscle ache from reshaping the body; mild dizziness as the chest narrows and shoulders broaden."
@@ -110,9 +110,9 @@ setup.torso_reverse_potions = {
 		name: "Hardshape Serum",
 		purpose: "Female Slim Torso ➝ Male Lean Torso",
 		ingredients: {
-			"vinesilk_essence": 10,
-			"lilywhisper_nectar": 2,
-			"feylace_petal": 5
+			"velmorian_honey": 90,
+			"thornberry_juice": 60,
+			"ashfern_flakes": 12
 		},
 		function: "Shifts the torso back to a less curved shape, restoring the broader male torso appearance.",
 		sideEffects: "Tingling sensation in the belly and waist, slight discomfort from body hardening and broadening."
@@ -124,9 +124,9 @@ setup.torso_reverse_potions = {
 		name: "Masculinize Draught",
 		purpose: "Male Lean Torso ➝ Male Muscular Torso",
 		ingredients: {
-			"nullroot_dust": 30,
-			"seraphmilk": 5,
-			"ashfern_flakes": 10
+			"velmorian_honey": 120,
+			"thornberry_juice": 80,
+			"ashfern_flakes": 16
 		},
 		function: "Focuses on reducing the waist and narrowing the hips, restoring the male body shape.",
 		sideEffects: "Intense muscle contractions, minor soreness as the body reverts to a broader male shape."
@@ -138,14 +138,11 @@ setup.torso_reverse_potions = {
 		name: "Uncurve Elixir",
 		purpose: "Male Muscular Torso ➝ Male Ultra Muscular Torso",
 		ingredients: {
-			"dragonmoss_resin": 2,
-			"thornberry_juice": 10,
-			"velvetgrove_essence": 10
+			"velmorian_honey": 150,
+			"thornberry_juice": 100,
+			"ashfern_flakes": 20
 		},
 		function: "Finalizes the reversal, reestablishing the male body structure with broad shoulders and a flat waist.",
 		sideEffects: "A slight feeling of loss of softness, discomfort as the body expands and sharpens into a male form."
 	}
 };
-
-
-

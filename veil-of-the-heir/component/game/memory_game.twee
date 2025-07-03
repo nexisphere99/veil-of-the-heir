@@ -3,8 +3,8 @@
 <script>
 // Memory Game Configuration
 window.memoryGameConfig = {
-    gridWidth: 3,  // Number of columns
-    gridHeight: 4, // Number of rows
+    gridWidth: 10,  // Number of columns
+    gridHeight: 10, // Number of rows
     imageCount: 12, // Number of different images (must be <= (width*height)/2)
     maxWidth: getMaxWidth(),  // Maximum width of game board
     gameTime: 120   // Game time in seconds
@@ -167,9 +167,11 @@ function updateGameUI() {
   
   // Update progress
   const progress = (memoryGame.matchedPairs / memoryGame.totalPairs) * 100;
-  $('#memory-progress-bar').css('width', `${progress}%`)
-                          .text(`${memoryGame.matchedPairs}/${memoryGame.totalPairs} Pairs`);
-}
+  $('#memory-progress-bar').css({
+    'width': `${progress}%`,
+    'color': 'black'
+  }).text(`${memoryGame.matchedPairs}/${memoryGame.totalPairs} Pairs`);
+  }
 
 // Timer functions
 function startTimer() {
@@ -198,7 +200,8 @@ function endGame(win) {
 
 // Reveal all cards
 window.revealAllCards = function() {
-  // Check if all non-matched cards are already revealed
+  if (SugarCube.State.variables.veil_of_the_heir) {
+// Check if all non-matched cards are already revealed
   const allNonMatchedRevealed = memoryGame.cards.every((card, index) => 
     card === null || memoryGame.flippedCards.includes(index)
   );
@@ -217,6 +220,10 @@ window.revealAllCards = function() {
   }
   
   updateGameUI();
+  } else {
+      // Non-patreon user — show info modal instead
+      showPatreonInfo();
+  }
 };
 
 // Change settings
@@ -240,9 +247,7 @@ window.changeGameSettings = function() {
     alert('Invalid settings. Please make sure:\n- Width × Height is an even number\n- Image count ≤ (Width × Height)/2');
   }
 };
-</script>
-
-<style>
+</script><style>
 #memory-game-container {
   max-width: 600px;
   margin: 0 auto;
@@ -334,25 +339,19 @@ window.changeGameSettings = function() {
   margin: 10px 0;
 }
 </style>
-
-<div id="memory-game-container">
+<<nobr>><div id="memory-game-container">
   <h2>Memory Matching Game</h2>
-  
   <div id="memory-game-controls">
-    <button class="memory-game-button" onclick="initMemoryGame()">New Game</button>
-    <button class="memory-game-button" onclick="changeGameSettings()">Settings</button>
+    /* <button class="memory-game-button" onclick="initMemoryGame()">New Game</button> */
+    /* <button class="memory-game-button" onclick="changeGameSettings()">Settings</button> */
     <button class="memory-game-button" onclick="revealAllCards()">Reveal All</button>
   </div>
-  
   <div id="memory-progress-container">
     <div id="memory-progress-bar">0/0 Pairs</div>
   </div>
-  
   <div id="memory-timer">2:00</div>
-  
   <div id="memory-game-board"></div>
-</div>
-
+</div><</nobr>>
 <script>
 // Initialize game when passage loads
 $(document).ready(function() {

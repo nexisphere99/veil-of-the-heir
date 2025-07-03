@@ -104,7 +104,7 @@ var LZString=function(){var r=String.fromCharCode,o="ABCDEFGHIJKLMNOPQRSTUVWXYZa
 		<div id="init-lacking"><p>Browser lacks capabilities required to play.</p><p>Upgrade or switch to another browser.</p></div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<!-- UUID://27FA6D7B-4709-4B3D-9797-F5BF92C9430B// --><tw-storydata name="Veil of the Heir" startnode="17" creator="Tweego" creator-version="2.1.1+81d1d71" ifid="27FA6D7B-4709-4B3D-9797-F5BF92C9430B" zoom="0.6" format="SugarCube" format-version="2.37.3" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* twine-user-stylesheet #1: "character.css" */
+	<!-- UUID://27FA6D7B-4709-4B3D-9797-F5BF92C9430B// --><tw-storydata name="Veil of the Heir" startnode="1185" creator="Tweego" creator-version="2.1.1+81d1d71" ifid="27FA6D7B-4709-4B3D-9797-F5BF92C9430B" zoom="0.6" format="SugarCube" format-version="2.37.3" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* twine-user-stylesheet #1: "character.css" */
 /* speech */
 .speech-box {
     display: flex;
@@ -2097,7 +2097,7 @@ $(document).ready(function () {
         <div id="custom-left-bar">
             <div id="sidebar-close" class="mobile-only">✖</div>
             <h1 style="margin: 15% 0 0 0; text-align: center;">Veil of the Heir</h1>
-            <p style="margin: 0px; text-align: center;">Vesion - 0.0.2</p>
+            <p style="margin: 0px; text-align: center;">Vesion - 0.0.3</p>
             <h3 style="margin: 0px; text-align: center;">by Nexisphere Games</h3>
             <div id="left-top-container" class="image-crop">
                 <img id="player-image" class="player-image" src="" alt="Player Image">
@@ -2672,212 +2672,215 @@ $(document).on(':passagerender', function () {
 /* twine-user-script #7: "ingredients_shop.js" */
 // Store items object
 setup.storeItems = {
+	// --
 	"moonpetal_extract": { 
 		name: "Moonpetal Extract", 
 		value: 8, 
 		unit: "tsp", 
 		min_amount: 1,
 		img: "images/ingredients/moonpetal_extract.png",
-		description: "Silvery nectar harvested from a rare flower that blooms only under full moons.",
-		effect: "Deeply enhances femininity and emotional openness. Essential for internal rewiring during genital changes and emotional softening during transformation."
+		description: "Silvery nectar from moonlit flowers that bloom only under full moons. Famed for invoking emotional vulnerability and beauty, it plays a central role in facial transformation and internal genital rewiring, softening identity as much as skin.",
+		effect: "Initiates emotional and facial rewiring. Awakens face to deep magical transformation. Enhances emotional receptivity and femininity. Essential in soft genital rewiring."
 	},
+	// -
 	"velmorian_honey": { 
 		name: "Velmorian Honey", 
 		value: 30, 
 		unit: "ml", 
 		min_amount: 10,
 		img: "images/ingredients/velmorian_honey.png",
-		description: "Golden sap from enchanted forest beehives, rich with dream pollen.",
-		effect: "Smooths transitional phases by harmonizing bodily changes. Adds sweetness—both in scent and aura—to the emerging form. Often a base for softening potions."
+		description: "Golden and thick, this enchanted honey drips from forest hives nourished by dream-pollen. It harmonizes the body’s core, bringing warmth and readiness to the midsection before deeper transformation begins - sweetening posture, balance, and internal flow.",
+		effect: "Harmonizes inner tissue for transformation. Adds sweetness and fluidity to body curves or bulk."
 	},
+	// -
 	"glowleaf_powder": { 
 		name: "Glowleaf Powder", 
 		value: 3, 
 		unit: "pinch", 
 		min_amount: 1,
 		img: "images/ingredients/glowleaf_powder.png",
-		description: "Crushed leaves of the glowing duskplant, harvested at twilight.", 
-		effect: "A potent magical catalyst, essential for activating and stabilizing anatomical restructuring. Common in core transformation brews."
+		description: "A glowing dust ground from twilight-harvested leaves of the duskplant. A potent magical activator, it prepares the hair for growth, shortening, or texture change. Its shimmer pulses faintly in darkness, as if humming with potential.", 
+		effect: "Activates hair follicles. Essential catalyst for lengthening or shortening transformations."
 	},
+	// --
 	"starblossom_pollen": { 
 		name: "Starblossom Pollen", 
 		value: 5, 
 		unit: "scoop", 
 		min_amount: 1,
 		img: "images/ingredients/starblossom_pollen.png",
-		description: "Shimmering pollen from a starlit flower that only blooms on solstice nights.", 
-		effect: "Stimulates growth of feminine features, particularly breasts and hips. Promotes expansion in lower-body curves and hair development."
+		description: "Glistening pollen from the solstice-star flower. Each scoop is packed with radiant growth magic. When used in potions, it sparks lush development - causing hair to flow long and breasts to bloom fuller, radiant with enchantment.", 
+		effect: "Rapidly increases hair length, volume, and softness. Promotes shimmering strands and luster. Expands breast tissue, promotes curves, and stimulates growth in nipples and areola."
 	},
+	// -
 	"crimsondew_drops": { 
 		name: "Crimsondew Drops", 
 		value: 4, 
 		unit: "ml", 
 		min_amount: 1,
 		img: "images/ingredients/crimsondew_drops.png",
-		description: "Scarlet dewdrops collected from cliffside succulents at dawn.", 
-		effect: "Sharpens sensual receptivity and heightens erotic pleasure. Frequently added to intimate transformation potions for arousal enhancement."
+		description: "Scarlet-hued droplets collected from succulent cliffsides during dawn’s first light. Their warmth seeps into the torso, enhancing sensual receptivity and nurturing soft, feminine curves throughout the core.", 
+		effect: "Softens torso lines, narrows waist, and enhances sensual receptivity. Encourages feminine curves and flexibility."
 	},
+	// -
 	"feylace_petal": { 
 		name: "Feylace Petal", 
 		value: 3, 
 		unit: "petal", 
 		min_amount: 1,
 		img: "images/ingredients/feylace_petal.png",
-		description: "Iridescent petal plucked from a flower born at the crossing of fae realms.", 
-		effect: "Intensifies beautification and femininity, especially in facial and chest regions. Used to give delicate symmetry and ethereal glow to features."
+		description: "A radiant, opalescent petal gathered at the veil between realms. Light as a whisper and shimmering like fae wings, it is the secret to facial refinement - sharpening cheekbones, softening brows, and granting a touch of ethereal beauty.", 
+		effect: "Adds symmetry, cheekbone lift, glow, and feminine softness. Refines lips, brows, and eyes."
 	},
+	// --
 	"dragonmoss_resin": { 
 		name: "Dragonmoss Resin", 
 		value: 5, 
 		unit: "drop", 
 		min_amount: 1,
 		img: "images/ingredients/dragonmoss_resin.png",
-		description: "Thick green resin scraped from magically enriched rocks near dragon dens.", 
-		effect: "Adds physical strength and firmness to reshaped tissues. A stabilizer that prevents structural collapse during deep transformation. Fortifies muscles and tissues, restoring firmness and mass. Often used to revert delicate curves and reinforce masculine traits like jawline, shoulders, and hands."
+		description: "Sticky green resin scraped from rocks near dragon dens. It’s dense with strength. Applied in transformation, it hardens bone, thickens tissue, and restores masculine dominance to jawlines, hands, and lower anatomy.", 
+		effect: "Strengthens bone and tissue in fingers and knuckles. Increases hand size and muscular form. Reinforces jawline, brow, and nose bridge. Enhances hard masculine features. Reinforces firmness and shape in masculine genital growth. Builds structural strength."
 	},
+	// ---
 	"seraphmilk": { 
 		name: "Seraphmilk", 
 		value: 15, 
 		unit: "ml", 
 		min_amount: 5,
 		img: "images/ingredients/seraphmilk.png",
-		description: "A pearly-white, otherworldly milk obtained from blessed celestial livestock.", 
-		effect: "Refines tissue delicacy and grace. Accelerates divine-aligned transformations, often used to enhance the elegance and femininity of fingers, lips, and skin tone. Accelerates divine transformation traits, especially those aligned with purity and grace. Speeds up feminization in spiritually sensitive areas."
+		description: "A creamy white fluid gathered from sacred celestial beasts under starlight. Its divine touch is prized for refining feminine traits - smoothing fingers, lifting cheeks, and enhancing breast grace. Often used in rituals invoking purity and elegance.", 
+		effect: "Gracefully enhances fingertips, nails, and skin tone. Adds divine softness and dexterity. Adds grace and divinity to facial structure. Smooths skin and defines delicate features. Encourages delicate and divine breast development. Lifts shape and enhances sensitivity."
 	},
+	// --
 	"frostvine_elixir": { 
 		name: "Frostvine Elixir", 
 		value: 10, 
 		unit: "ml", 
 		min_amount: 5,
 		img: "images/ingredients/frostvine_elixir.png",
-		description: "Icy blue liquid distilled from creeping alpine vines.",
-		effect: "Halts expansion and softening of body tissue. Reintroduces rigidity, used in cooling draughts to restore firmness and reduce swelling or puffiness." 
+		description: "An icy blue potion from creeping alpine vines. Known for its chilling touch and sharp snap, it is used to shorten hair, tighten soft tissues, and freeze unwanted blossoming in the breasts.",
+		effect: "Halts growth and stiffens hair texture. Shortens length and coarsens appearance. Tightens chest skin, reduces puffiness. Cools and contracts breast structures." 
 	},
+	// --
 	"ashfern_flakes": { 
 		name: "Ashfern Flakes", 
 		value: 4, 
 		unit: "g", 
 		min_amount: 1,
 		img: "images/ingredients/ashfern_flakes.png",
-		description: "Powdered ash from a magically scorched fern, cold to the touch.", 
-		effect: "Inhibits and slows magical transformations, especially those related to bodily softening and reshaping. Common in base anti-potion formulas to reduce enchantment flow. Inhibits magical expansion and masculinity. Frequently used in suppressive or reversal brews to reduce unwanted male traits."
+		description: "Grey-white powder from a fern that only grows where magic has been scorched. Cold and lifeless to the touch, it’s used to flatten, dull, or regress unwanted feminine traits - especially in the torso and chest.", 
+		effect: "Inhibits magical softening in torso tissues. Promotes solid, unmoving masculine structure. Suppresses breast tissue and inhibits enchantment-based swelling. Flattens and solidifies chest."
 	},
+	// -
 	"softroot_essence": { 
 		name: "Softroot Essence", 
-		value: 7, 
+		value: 5, 
 		unit: "drop", 
 		min_amount: 1,
 		img: "images/ingredients/softroot_essence.png",
-		description: "Earthy, mellow root extract cultivated in alchemic gardens.", 
-		effect: "Makes skin and underlying tissues more malleable, especially on the hands and joints. Helps blend new shapes seamlessly during magical restructuring. Increases skin elasticity and suppleness. Integral to body-modifying draughts, especially for forming soft inner folds."
+		description: "An earthy brown extract distilled from a mellow root grown in ritual gardens. Valued for its ability to soften flesh and joint, it's a gentle initiator for transformations of the hands, easing fingers and palms into new forms.", 
+		effect: "Increases elasticity and malleability in hands and fingers. Ideal for initiating reshaping."
 	},
+	// -
 	"sorrowseed_oil": { 
 		name: "Sorrowseed Oil", 
 		value: 6, 
 		unit: "tsp", 
 		min_amount: 1,
 		img: "images/ingredients/sorrowseed_oil.png",
-		description: "Heavy, oily extract from a weeping tree that grows in mourning groves.",
-		effect: "Alters emotional thresholds and magical receptivity. Often used to mellow overstimulation and attune emotional states to the new body. Deeply softens and smooths skin, imbuing a refined texture and emotional depth. Adds subtle vulnerability to touch and expression. Suppresses heightened sensitivity and dulls tactile response. Used in potions meant to return skin and emotions to a more stoic, masculine baseline." 
+		description: "A heavy, mournful oil extracted from weeping trees in cursed groves. Applied to the legs, it dulls sensation, hardens tissue, and restores stoic, masculine posture. Leaves behind a shadowy resilience in every stride.",
+		effect: "Dulls sensation and stiffens leg tissues. Restores stoic, masculine rigidity." 
 	},
+	// -
 	"nightshade_bloom": { 
 		name: "Nightshade Bloom", 
 		value: 3, 
 		unit: "petal", 
 		min_amount: 1,
 		img: "images/ingredients/nightshade_bloom.png",
-		description: "Velvet-dark violet flower growing in shaded glens.",
-		effect: "Intensifies nerve sensitivity, particularly in intimate regions. Used with care to enhance physical receptivity and sensation during transformation. Targets and undoes delicate transformations, particularly those affecting grace, sensitivity, or feminized features. Best used in precision reversal brews." 
+		description: "Deep violet petals from a flower that opens only in the most secretive forest shadows. Used to awaken sensitivity and invite deeper transformation in the most intimate places. Infused with potent pleasure magics, it must be handled with care.",
+		effect: "Heightens nerve sensitivity and encourages softness. Stimulates formation of feminine intimate features." 
 	},
+	// -
 	"thornberry_juice": { 
 		name: "Thornberry Juice", 
 		value: 20, 
 		unit: "ml", 
 		min_amount: 5,
 		img: "images/ingredients/thornberry_juice.png",
-		description: "Bitter, stinging juice extracted from thorned bramble berries.", 
-		effect: "Stimulates toughness and coarseness in skin and tissues. Frequently used to reinforce masculine textures and combat softening agents. Triggers tissue regression and tightens base masculine traits. Initiates tension in physical structures during transformation, often used early in feminization."
+		description: "Stinging red liquid squeezed from bramble berries that resist all touch. It imbues the drinker with a rough strength - toughening skin and tightening muscle. Especially potent for rebuilding masculine power in legs and abdomen.", 
+		effect: "Tightens leg muscles, bulks thighs, and adds weight to stride. Ideal for restoring masculine force. Reinforces abdominal firmness and adds muscle density. Restores broad masculine build."
 	},
+	// -
 	"lilywhisper_nectar": { 
 		name: "Lilywhisper Nectar", 
 		value: 2, 
 		unit: "ml", 
 		min_amount: 1,
 		img: "images/ingredients/lilywhisper_nectar.png",
-		description: "A delicate, fragrant nectar gathered from white lilies touched by wind spirits.", 
-		effect: "Encourages lightness, grace, and ethereal softness in the legs. Grants a weightless, flowing sensation that enhances elegance in walking and poise."
+		description: "A delicate, wind-kissed nectar harvested from white lilies that bloom where air spirits dance. Light to the touch and fragrant like dawn mist, it's used to prepare the legs for graceful change, loosening joints and awakening the lower body's magical potential.", 
+		effect: "Prepares legs for transformation by loosening joints and softening stride. Provides lightness and receptivity to shaping magic."
 	},
+	// -
 	"vinesilk_essence": { 
 		name: "Vinesilk Essence", 
 		value: 2, 
 		unit: "ml", 
 		min_amount: 1,
 		img: "images/ingredients/vinesilk_essence.png" ,
-		description: "A transparent, silky liquid drawn from vine-threads deep in enchanted woods.",
-		effect: "Lengthens and slims limbs while softening their texture. Often used in dancer potions or to elongate legs with elegance and control."
+		description: "Drawn from silky vines that grow only in untouched glades, this transparent essence glides like liquid lace. Its magic lengthens and smooths limbs, granting the legs elegance and grace worthy of a trained dancer.",
+		effect: "Lengthens and slims legs; enhances softness and grace. Creates dancer-like flow and poise."
 	},
-	// "dragonroot_oil": { 
-	// 	name: "Dragonroot Oil", 
-	// 	value: 10, 
-	// 	unit: "ml", 
-	// 	min_amount: 1,
-	// 	img: "images/ingredients/dragonroot_oil.png",
-	// 	description: "A potent, earthy oil distilled from the roots of the fire-fed Dragonroot plant.", 
-	// 	effect: "Encourages rapid growth and fortification of hair follicles. Commonly used in transformative brews to thicken hair, boost volume, and strengthen each strand with a resilient, luxurious finish."
-	// },
-	// "sunlily_sap": { 
-	// 	name: "Sunlily Sap", 
-	// 	value: 10, 
-	// 	unit: "ml", 
-	// 	min_amount: 1,
-	// 	img: "images/ingredients/sunlily_sap.png",
-	// 	description: "Golden sap extracted from the radiant Sunlily, a flower that blooms only at sunrise.", 
-	// 	effect: "Stimulates healthy, accelerated hair growth and imbues strands with a radiant, sun-kissed glow. Frequently used in potions that enhance femininity through lush, vibrant hair transformation."
-	// },
+	// --
 	"crimsonroot_dust": { 
 		name: "Crimsonroot Dust", 
 		value: 10, 
 		unit: "g", 
 		min_amount: 1,
 		img: "images/ingredients/crimsonroot_dust.png",
-		description: "Finely ground powder from the rare Crimsonroot, known to grow only at the convergence of magical leylines.", 
-		effect: "Helps stabilize ongoing physical transformations, preventing erratic shifts. Simultaneously enhances feminine traits subtly and harmoniously, making it a favored component in balanced, full-body feminization potions."
+		description: "Pulverized from the rare crimsonroot found along leyline crossings, this powder glows faintly with internal balance. Used to stabilize chest and core transformations, it enhances femininity subtly across the entire midsection while preventing magical overload.", 
+		effect: "Enhances overall femininity subtly and harmoniously across the midsection. Balances transformations. Stabilizes breast area. Prevents erratic growth or collapse during transformations."
 	},
+	// ---
 	"velvetgrove_essence": { 
 		name: "Velvetgrove Essence", 
 		value: 2, 
 		unit: "tsp", 
 		min_amount: 1,
 		img: "images/ingredients/velvetgrove_essence.png",
-		description: "A silky green extract from deep-forest mosses and vines known for their softness.", 
-		effect: "Deeply softens skin and promotes supple textures. Favored for use in delicate-area transformations such as the hands, lips, and thighs. Smooths and softens skin across the limbs. Leaves a lasting softness perfect for feminine touch and appearance, especially on thighs, knees, and calves."
+		description: "A soft, green liquid distilled from the mossy undergrowth of ancient forests. Revered for its textural properties, it deeply softens thighs, fingers, and even hair strands, giving each a plush, feminine feel and gentle bounce.", 
+		effect: "Adds plush texture to thighs and calves. Enhances touchability and feminine bounce. Softens palm skin and thins fingers. Adds an elegant, feminine delicacy to gestures. Enhances silkiness, adds bounce, and feminizes texture."
 	},
+	// --
 	"frostleaf_crystals": {
 		name: "Frostleaf Crystals", 
 		value: 4, 
 		unit: "tsp", 
 		min_amount: 1,
 		img: "images/ingredients/frostleaf_crystals.png",
-		description: "Crystalline shards from the Frostleaf plant, known for its icy blue hue.", 
-		effect: "When ground and applied in specific anti-transformation potions, these crystals thicken and roughen the skin, reducing softness and reversing delicate feminine textures. Often used to restore a rugged or masculine exterior."
+		description: "Cold blue shards that crackle faintly when touched. When ground and brewed, they toughen skin, coarsen features, and suppress soft magical alterations - restoring rugged, masculine traits across the body.", 
+		effect: "Roughens hands, enlarges joints, and thickens skin. Restores masculine callouses and tactile grip. Coarsens skin texture, thickens brows and nose. Reduces feminine glow."
 	},
+	// -
 	"eversilk_thread": { 
 		name: "Eversilk Thread", 
 		value: 3, 
 		unit: "cm", 
 		min_amount: 1,
 		img: "images/ingredients/eversilk_thread.png",
-		description: "A rare, ethereal fiber spun by enchanted silkworms, known for its softness and enduring properties.", 
-		effect: "Dissolves into potions to aid in the formation of delicate tissues, such as vaginal lining and inner folds. Often used in transformation potions to enhance feminine anatomy with enduring softness and natural flexibility."
+		description: "A gossamer-thin fiber spun by enchanted silkworms. When dissolved into potions, it weaves the foundation of internal soft tissue - vital for either building or reshaping genitals with long-lasting flexibility and form.", 
+		effect: "Forms inner folds and soft tissues or foundational structures. Supports reshaping into any gender form."
 	},
+	// -
 	"nullroot_dust": {
 		name: "Nullroot Dust", 
 		value: 4, 
 		unit: "tsp", 
 		min_amount: 1,
 		img: "images/ingredients/nullroot_dust.png",
-		description: "A rare and potent powdered root harvested from the Nullroot plant, known for its anti-magical properties.", 
-		effect: "Halts or reverses the progress of magical transformations, effectively freezing any ongoing changes. Due to its power, it is tightly controlled and only used by mages under strict restrictions to prevent misuse."
+		description: "A dull brown dust ground from the rare Nullroot - a plant that suppresses all transformation magic. Commonly used to reverse or freeze genital or hair transformations, it is strictly controlled by arcane orders.", 
+		effect: "Reverses any magical hair change. Used to return to pre-transformation style or baldness. Reverses ongoing genital transformation. Used in male restoration or halting feminization."
 	}
 };
 /* twine-user-script #8: "map.js" */
@@ -2943,9 +2946,9 @@ setup.chest_forward_potions = {
 		name: "Subtle Bloom Tincture",
 		purpose: "Musscle Grace ➝ Man's Bud",
 		ingredients: {
-			"glowleaf_powder": 1,
-			"seraphmilk": 5,
-			"ashfern_flakes": 1
+			"crimsonroot_dust": 10,
+			"seraphmilk": 30,
+			"starblossom_pollen": 10
 		},
 		function: "Skin softens over chest, faint tingling sensation begins.",
 		sideEffects: "Increased awareness of chest, shy arousal when touched there."
@@ -2957,9 +2960,9 @@ setup.chest_forward_potions = {
 		name: "Chestwhisper Draft",
 		purpose: "Man's Bud ➝ Blossom's Stir",
 		ingredients: {
-			"velmorian_honey": 20,
-			"thornberry_juice": 10,
-			"feylace_petal": 2
+			"crimsonroot_dust": 20,
+			"seraphmilk": 45,
+			"starblossom_pollen": 15
 		},
 		function: "Areolae darken slightly, underlying glandular formation starts.",
 		sideEffects: "Tingling when in cold rooms, stronger heartbeat sensations in chest."
@@ -2971,9 +2974,9 @@ setup.chest_forward_potions = {
 		name: "Budding Curve Elixir",
 		purpose: "Blossom's Stir ➝ Petal Bloom (A)",
 		ingredients: {
-			"moonpetal_extract": 4,
-			"softroot_essence": 3,
-			"nightshade_bloom": 3
+			"crimsonroot_dust": 30,
+			"seraphmilk": 60,
+			"starblossom_pollen": 20
 		},
 		function: "Breast buds push outward, nipples gain shape and become sensitive.",
 		sideEffects: "Brief moaning during sleep, strong nipple sensitivity."
@@ -2985,9 +2988,9 @@ setup.chest_forward_potions = {
 		name: "Nectar of Early Bloom",
 		purpose: "Petal Bloom (A) ➝ Early Bloom (B)",
 		ingredients: {
-			"starblossom_pollen": 3,
-			"crimsondew_drops": 4,
-			"seraphmilk": 15
+			"crimsonroot_dust": 40,
+			"seraphmilk": 75,
+			"starblossom_pollen": 25
 		},
 		function: "Rounded shape appears, light jiggle when moving.",
 		sideEffects: "Blushing during court dances, gentle bouncing distracts Caelan."
@@ -2999,9 +3002,9 @@ setup.chest_forward_potions = {
 		name: "Curvelace Tonic",
 		purpose: "Early Bloom (B) ➝ Full Bloom (C)",
 		ingredients: {
-			"softroot_essence": 4,
-			"feylace_petal": 5,
-			"glowleaf_powder": 7
+			"crimsonroot_dust": 50,
+			"seraphmilk": 90,
+			"starblossom_pollen": 30
 		},
 		function: "Breasts swell in volume, bounce becomes visible.",
 		sideEffects: "Excitement when hugged, habit of cupping chest during thought."
@@ -3013,9 +3016,9 @@ setup.chest_forward_potions = {
 		name: "Queen's Bud Elixir",
 		purpose: "Full Bloom (C) ➝ Lush Curve (D)",
 		ingredients: {
-			"dragonmoss_resin": 9,
-			"seraphmilk": 35,
-			"velmorian_honey": 60
+			"crimsonroot_dust": 60,
+			"seraphmilk": 105,
+			"starblossom_pollen": 35
 		},
 		function: "Shape firms up and pushes forward gracefully.",
 		sideEffects: "Longing glances at other women’s figures, desire for corsetry."
@@ -3027,9 +3030,9 @@ setup.chest_forward_potions = {
 		name: "Blossombond Draft",
 		purpose: "Lush Curve (D) ➝ Lady’s Bust (E)",
 		ingredients: {
-			"moonpetal_extract": 12,
-			"starblossom_pollen": 11,
-			"sorrowseed_oil": 8
+			"crimsonroot_dust": 70,
+			"seraphmilk": 120,
+			"starblossom_pollen": 40
 		},
 		function: "Deepened cleavage, top and bottom curves round fully.",
 		sideEffects: "Lingerie starts to feel erotic, arousal from mirror reflections."
@@ -3041,9 +3044,9 @@ setup.chest_forward_potions = {
 		name: "Velvet Crest Serum",
 		purpose: "Lady’s Bust (E) ➝ Noble Crest (F)",
 		ingredients: {
-			"glowleaf_powder": 8,
-			"softroot_essence": 12,
-			"thornberry_juice": 70
+			"crimsonroot_dust": 80,
+			"seraphmilk": 135,
+			"starblossom_pollen": 45
 		},
 		function: "Breasts become full, hang with weight and softness.",
 		sideEffects: "Breast sway when walking, erotic dreams become common."
@@ -3055,9 +3058,9 @@ setup.chest_forward_potions = {
 		name: "Crownsworn Bloom",
 		purpose: "Noble Crest (F) ➝ Regal Bloom (F+)",
 		ingredients: {
-			"seraphmilk": 60,
-			"starblossom_pollen": 10,
-			"ashfern_flakes": 9
+			"crimsonroot_dust": 90,
+			"seraphmilk": 150,
+			"starblossom_pollen": 50
 		},
 		function: "Upper swell perky, breasts rest high and bounce heavily.",
 		sideEffects: "Desire to flaunt cleavage, nipples react to attention."
@@ -3069,9 +3072,9 @@ setup.chest_forward_potions = {
 		name: "Empress’s Embrace",
 		purpose: "Regal Bloom (F+) ➝ Crown's Embrace (G+ Regal)",
 		ingredients: {
-			"crimsondew_drops": 15,
-			"feylace_petal": 14,
-			"moonpetal_extract": 20
+			"crimsonroot_dust": 100,
+			"seraphmilk": 165,
+			"starblossom_pollen": 55
 		},
 		function: "Royal curve forms, fuller areolae, stretch marks vanish.",
 		sideEffects: "Dresses feel “too tight,” craving adornment."
@@ -3083,9 +3086,9 @@ setup.chest_forward_potions = {
 		name: "Royal Form Finalé",
 		purpose: "Crown's Embrace (G+ Regal) ➝ Throne’s Heirloom (G++ Queenly)",
 		ingredients: {
-			"glowleaf_powder": 20,
-			"sorrowseed_oil": 21,
-			"velmorian_honey": 100
+			"crimsonroot_dust": 110,
+			"seraphmilk": 180,
+			"starblossom_pollen": 60
 		},
 		function: "Final size locks in—voluptuous, symmetrical, and regal.",
 		sideEffects: "Accustomed to breasts' pull, constant desire for support and flirty outfits."
@@ -3101,9 +3104,9 @@ setup.chest_reverse_potions = {
 		name: "Shroud of Regality",
 		purpose: "Throne’s Heirloom (G++ Queenly) ➝ Crown's Embrace (G+ Regal)",
 		ingredients: {
-			"ashfern_flakes": 2,
-			"crimsondew_drops": 3,
-			"glowleaf_powder": 2
+			"crimsonroot_dust": 10,
+			"ashfern_flakes": 8,
+			"frostvine_elixir": 10
 		},
 		function: "Softens breast tissue, curve reduces, skin slightly sags.",
 		sideEffects: "Loss of tightness in corsets, subtle shame when undressing."
@@ -3115,9 +3118,9 @@ setup.chest_reverse_potions = {
 		name: "Elegance Receded Elixir",
 		purpose: "Crown's Embrace (G+ Regal) ➝ Regal Bloom (F+)",
 		ingredients: {
-			"moonpetal_extract": 3,
-			"sorrowseed_oil": 5,
-			"seraphmilk": 15
+			"crimsonroot_dust": 20,
+			"ashfern_flakes": 12,
+			"frostvine_elixir": 20
 		},
 		function: "Weight lessens, breasts lose royal firmness.",
 		sideEffects: "Bra feels emptier, involuntary crossing of arms over chest."
@@ -3129,9 +3132,9 @@ setup.chest_reverse_potions = {
 		name: "Crownlight Decay",
 		purpose: "Regal Bloom (F+) ➝ Noble Crest (F)",
 		ingredients: {
-			"starblossom_pollen": 10,
-			"thornberry_juice": 15,
-			"velmorian_honey": 60
+			"crimsonroot_dust": 30,
+			"ashfern_flakes": 16,
+			"frostvine_elixir": 30
 		},
 		function: "Bounce disappears, slight shrinking and lift loss.",
 		sideEffects: "Uneasy when dancing, flickers of doubt in femininity."
@@ -3143,9 +3146,9 @@ setup.chest_reverse_potions = {
 		name: "Bloomless Drift",
 		purpose: "Noble Crest (F) ➝ Lady’s Bust (E)",
 		ingredients: {
-			"feylace_petal": 3,
-			"dragonmoss_resin": 3,
-			"softroot_essence": 7
+			"crimsonroot_dust": 40,
+			"ashfern_flakes": 20,
+			"frostvine_elixir": 40
 		},
 		function: "Breast mass contracts subtly, upper roundness diminishes.",
 		sideEffects: "Chest feels “too light,” dreams of wrapping cloth tightly."
@@ -3157,9 +3160,9 @@ setup.chest_reverse_potions = {
 		name: "Fading Curve Tonic",
 		purpose: "Lady’s Bust (E) ➝ Lush Curve (D)",
 		ingredients: {
-			"crimsondew_drops": 7,
-			"starblossom_pollen": 6,
-			"seraphmilk": 20
+			"crimsonroot_dust": 50,
+			"ashfern_flakes": 24,
+			"frostvine_elixir": 50
 		},
 		function: "Side volume fades, cleavage shallows.",
 		sideEffects: "Occasional discomfort from loose-fitting tops."
@@ -3171,9 +3174,9 @@ setup.chest_reverse_potions = {
 		name: "Wilted Silk Serum",
 		purpose: "Lush Curve (D) ➝ Full Bloom (C)",
 		ingredients: {
-			"ashfern_flakes": 10,
-			"moonpetal_extract": 8,
-			"glowleaf_powder": 12
+			"crimsonroot_dust": 60,
+			"ashfern_flakes": 28,
+			"frostvine_elixir": 60
 		},
 		function: "Shape softens, slope decreases.",
 		sideEffects: "Feels naked even when clothed, attempts to hide chest."
@@ -3185,9 +3188,9 @@ setup.chest_reverse_potions = {
 		name: "Lacedown Liquor",
 		purpose: "Full Bloom (C) ➝ Early Bloom (B)",
 		ingredients: {
-			"sorrowseed_oil": 9,
-			"thornberry_juice": 10,
-			"softroot_essence": 12
+			"crimsonroot_dust": 70,
+			"ashfern_flakes": 32,
+			"frostvine_elixir": 70
 		},
 		function: "Tissue deflates modestly, nipples retract slightly.",
 		sideEffects: "Panic when breasts are not visible under clothes."
@@ -3199,9 +3202,9 @@ setup.chest_reverse_potions = {
 		name: "Breath of Modesty",
 		purpose: "Early Bloom (B) ➝ Petal Bloom (A)",
 		ingredients: {
-			"velmorian_honey": 50,
-			"feylace_petal": 12,
-			"starblossom_pollen": 9
+			"crimsonroot_dust": 80,
+			"ashfern_flakes": 36,
+			"frostvine_elixir": 80
 		},
 		function: "Volume becomes minor, tight tops hang loosely.",
 		sideEffects: "Phantom breast sensation, clinging to soft fabrics for comfort."
@@ -3213,9 +3216,9 @@ setup.chest_reverse_potions = {
 		name: "Petalfall Brew",
 		purpose: "Petal Bloom (A) ➝ Blossom's Stir",
 		ingredients: {
-			"glowleaf_powder": 14,
-			"nightshade_bloom": 10,
-			"softroot_essence": 13
+			"crimsonroot_dust": 90,
+			"ashfern_flakes": 40,
+			"frostvine_elixir": 90
 		},
 		function: "Nipples flatten, glandular mass dissolves.",
 		sideEffects: "Slight tears during bath, lingering gaze at mirrors."
@@ -3227,9 +3230,9 @@ setup.chest_reverse_potions = {
 		name: "Unflowering Draft",
 		purpose: "Blossom's Stir ➝ Man's Bud",
 		ingredients: {
-			"seraphmilk": 10,
-			"dragonmoss_resin": 11,
-			"moonpetal_extract": 8
+			"crimsonroot_dust": 100,
+			"ashfern_flakes": 44,
+			"frostvine_elixir": 100
 		},
 		function: "Skin tightens, flatness returns fully.",
 		sideEffects: "Heavy melancholy, desire for padding or binding."
@@ -3241,9 +3244,9 @@ setup.chest_reverse_potions = {
 		name: "Still Chest Elixir",
 		purpose: "Man's Bud ➝ Musscle Grace",
 		ingredients: {
-			"ashfern_flakes": 12,
-			"thornberry_juice": 25,
-			"glowleaf_powder": 15
+			"crimsonroot_dust": 110,
+			"ashfern_flakes": 48,
+			"frostvine_elixir": 110
 		},
 		function: "Full masculine flatness restored, fat and tissue erased.",
 		sideEffects: "Feels “too exposed,” chest feels cold, denial reflex intensifies."
@@ -3258,9 +3261,9 @@ setup.crotch_forward_potions = {
 		name: "Rootfade Tincture",
 		purpose: "Titanroot ➝ Drakefang",
 		ingredients: {
-			"thornberry_juice": 50,
-			"dragonmoss_resin": 1,
-			"glowleaf_powder": 3
+			"eversilk_thread": 3,
+			"nightshade_bloom": 6,
+			"moonpetal_extract": 16
 		},
 		function: "Begins the softening and shrinkage of the base shaft; loosens core masculine anchors.",
 		sideEffects: "Sudden warmth and spontaneous submissive thoughts."
@@ -3272,9 +3275,9 @@ setup.crotch_forward_potions = {
 		name: "Shaftsong Elixir",
 		purpose: "Drakefang ➝ Ironspire",
 		ingredients: {
-			"moonpetal_extract": 10,
-			"softroot_essence": 2,
-			"starblossom_pollen": 3
+			"eversilk_thread": 6,
+			"nightshade_bloom": 9,
+			"moonpetal_extract": 24
 		},
 		function: "Enhances blood redistribution and elasticity, making erections less stable and increasingly feminine.",
 		sideEffects: "Brief loss of focus and a giggling reflex."
@@ -3286,9 +3289,9 @@ setup.crotch_forward_potions = {
 		name: "Hollowstem Brew",
 		purpose: "Ironspire ➝ Stonebark",
 		ingredients: {
-			"sorrowseed_oil": 1,
-			"velmorian_honey": 30,
-			"eversilk_thread": 3
+			"eversilk_thread": 9,
+			"nightshade_bloom": 12,
+			"moonpetal_extract": 32
 		},
 		function: "Core tissues start to hollow and lose volume; the outer form becomes more neutral.",
 		sideEffects: "Increased desire to touch and explore; discomfort wearing tight clothing."
@@ -3300,9 +3303,9 @@ setup.crotch_forward_potions = {
 		name: "Gleamroot Infusion",
 		purpose: "Stonebark ➝ Oakstem",
 		ingredients: {
-			"glowleaf_powder": 2,
-			"thornberry_juice": 60,
-			"seraphmilk": 5
+			"eversilk_thread": 12,
+			"nightshade_bloom": 15,
+			"moonpetal_extract": 40
 		},
 		function: "Initiates spiritual realignment; sperm ducts begin magical re-routing into vaginal form.",
 		sideEffects: "Dreams involving feminine surrender; occasional moaning in sleep."
@@ -3314,9 +3317,9 @@ setup.crotch_forward_potions = {
 		name: "Fadebranch Draught",
 		purpose: "Oakstem ➝ Trunkrise",
 		ingredients: {
-			"dragonmoss_resin": 2,
-			"seraphmilk": 20,
-			"starblossom_pollen": 3
+			"eversilk_thread": 15,
+			"nightshade_bloom": 18,
+			"moonpetal_extract": 48
 		},
 		function: "External shrinkage continues; loss of male response; urethra starts magical division.",
 		sideEffects: "Euphoric haze during urination."
@@ -3328,9 +3331,9 @@ setup.crotch_forward_potions = {
 		name: "Whisperdew Serum",
 		purpose: "Trunkrise ➝ Branchling",
 		ingredients: {
-			"seraphmilk": 10,
-			"nightshade_bloom": 1,
-			"softroot_essence": 3
+			"eversilk_thread": 18,
+			"nightshade_bloom": 21,
+			"moonpetal_extract": 56
 		},
 		function: "Nerve endings migrate and awaken inner clitoral structures.",
 		sideEffects: "Flushed skin, giggling from light touch, erotic sensitivity spike."
@@ -3342,9 +3345,9 @@ setup.crotch_forward_potions = {
 		name: "Hollowspire Elixir",
 		purpose: "Branchling ➝ Rootlet",
 		ingredients: {
-			"sorrowseed_oil": 1,
-			"velmorian_honey": 40,
-			"eversilk_thread": 6
+			"eversilk_thread": 21,
+			"nightshade_bloom": 24,
+			"moonpetal_extract": 64
 		},
 		function: "Shaft collapses inward; genital slit begins forming magically.",
 		sideEffects: "Cravings for inner warmth; whimpering from light breeze."
@@ -3356,9 +3359,9 @@ setup.crotch_forward_potions = {
 		name: "Velvetgrove Essence",
 		purpose: "Rootlet ➝ Sproutling",
 		ingredients: {
-			"glowleaf_powder": 2,
-			"moonpetal_extract": 3,
-			"thornberry_juice": 30
+			"eversilk_thread": 24,
+			"nightshade_bloom": 27,
+			"moonpetal_extract": 72
 		},
 		function: "Final male form fades; new folds begin appearing; pink flesh emerges.",
 		sideEffects: "Constant wetness; body squirms at compliments or feminine nicknames."
@@ -3370,9 +3373,9 @@ setup.crotch_forward_potions = {
 		name: "Silkslit Nectar",
 		purpose: "Sproutling ➝ First Bloom",
 		ingredients: {
-			"eversilk_thread": 10,
-			"crimsondew_drops": 2,
-			"nightshade_bloom": 1
+			"eversilk_thread": 27,
+			"nightshade_bloom": 30,
+			"moonpetal_extract": 80
 		},
 		function: "Full canal forms; inner lips are magical constructs, but sensitive and real. It can bare child.",
 		sideEffects: "Erotic dreams; swelling from whispered words."
@@ -3384,9 +3387,9 @@ setup.crotch_forward_potions = {
 		name: "Maidenflower Tonic",
 		purpose: "First Bloom ➝ Moonborne Blossom",
 		ingredients: {
-			"moonpetal_extract": 6,
-			"seraphmilk": 20,
-			"feylace_petal": 1
+			"eversilk_thread": 30,
+			"nightshade_bloom": 33,
+			"moonpetal_extract": 88
 		},
 		function: "Fully establishes inner structure, labia, clit; functions as full feminine genitalia. Magical scent of roses. It can bare child.",
 		sideEffects: "Full arousal from gentle pressure; voice temporarily rises in pitch when flustered."
@@ -3402,9 +3405,9 @@ setup.crotch_reverse_potions = {
 		name: "Rootbend Elixir",
 		purpose: "Pussy 2 ➝ Pussy 1",
 		ingredients: {
-			"ashfern_flakes": 2,
-			"nullroot_dust": 2,
-			"thornberry_juice": 30
+			"eversilk_thread": 3,
+			"dragonmoss_resin": 5,
+			"nullroot_dust": 4
 		},
 		function: "Starts to revert vaginal tissues, narrowing the entrance and tightening inner structures.",
 		sideEffects: "Discomfort and slight cold sensation at the core."
@@ -3416,9 +3419,9 @@ setup.crotch_reverse_potions = {
 		name: "Reclaim Draught",
 		purpose: "Pussy 1 ➝ Pussy 0",
 		ingredients: {
-			"frostvine_elixir": 15,
-			"thornberry_juice": 20,
-			"dragonmoss_resin": 3
+			"eversilk_thread": 6,
+			"dragonmoss_resin": 10,
+			"nullroot_dust": 8
 		},
 		function: "Tightens the vaginal walls, solidifying the male anatomical foundation. Enhances rigidity and detachment from femininity.",
 		sideEffects: "Sensitivity loss; urge to scratch, uneasy sensations in lower body."
@@ -3430,9 +3433,9 @@ setup.crotch_reverse_potions = {
 		name: "Tightstone Brew",
 		purpose: "Pussy 0 ➝ Penis 1",
 		ingredients: {
-			"sorrowseed_oil": 1,
-			"glowleaf_powder": 1,
-			"nullroot_dust": 5
+			"eversilk_thread": 9,
+			"dragonmoss_resin": 15,
+			"nullroot_dust": 12
 		},
 		function: "Begins full restoration of the male form; shaft re-expands slowly, reshaping to previous size.",
 		sideEffects: "Emotional stress, pain in the pelvic area from muscle rewiring."
@@ -3444,9 +3447,9 @@ setup.crotch_reverse_potions = {
 		name: "Rigidbloom Elixir",
 		purpose: "Penis 1 ➝ Penis 2",
 		ingredients: {
-			"ashfern_flakes": 3,
-			"thornberry_juice": 60,
-			"frostvine_elixir": 10
+			"eversilk_thread": 12,
+			"dragonmoss_resin": 20,
+			"nullroot_dust": 16
 		},
 		function: "Prevents further softening; encourages growth of male tissue, including a gradual return of the penis to its original form.",
 		sideEffects: "Nausea or dizziness; an urge to revert to old masculine patterns."
@@ -3458,9 +3461,9 @@ setup.crotch_reverse_potions = {
 		name: "Ironroot Tincture",
 		purpose: "Penis 2 ➝ Penis 3",
 		ingredients: {
-			"frostvine_elixir": 15,
-			"thornberry_juice": 20,
-			"velvetgrove_essence": 1
+			"eversilk_thread": 15,
+			"dragonmoss_resin": 25,
+			"nullroot_dust": 20
 		},
 		function: "Increases firmness in the shaft, reasserting masculine characteristics; internal contractions begin.",
 		sideEffects: "Sudden heat flash; irritability when resisting changes."
@@ -3472,9 +3475,9 @@ setup.crotch_reverse_potions = {
 		name: "Thornshriek Serum",
 		purpose: "Penis 3 ➝ Penis 4",
 		ingredients: {
-			"seraphmilk": 20,
-			"ashfern_flakes": 2,
-			"nullroot_dust": 1
+			"eversilk_thread": 18,
+			"dragonmoss_resin": 30,
+			"nullroot_dust": 24
 		},
 		function: "Invigorates male anatomy, halting any further feminization of the tissues; begins to reshape the entire genital structure.",
 		sideEffects: "Strong sensation of disconnection with femininity; reduced libido."
@@ -3486,9 +3489,9 @@ setup.crotch_reverse_potions = {
 		name: "Stonecore Potion",
 		purpose: "Penis 4 ➝ Penis 5",
 		ingredients: {
-			"frostvine_elixir": 20,
-			"dragonmoss_resin": 3,
-			"nightshade_bloom": 1
+			"eversilk_thread": 21,
+			"dragonmoss_resin": 35,
+			"nullroot_dust": 28
 		},
 		function: "Hardens the shaft and increases rigidity. Slows the process of returning the feminine canal to male form.",
 		sideEffects: "Deep exhaustion; feeling of incomplete transformation."
@@ -3500,9 +3503,9 @@ setup.crotch_reverse_potions = {
 		name: "Regrowth Essence",
 		purpose: "Penis 5 ➝ Penis 6",
 		ingredients: {
-			"nullroot_dust": 2,
-			"seraphmilk": 30,
-			"ashfern_flakes": 4
+			"eversilk_thread": 24,
+			"dragonmoss_resin": 40,
+			"nullroot_dust": 32
 		},
 		function: "Encourages growth in the genitals, reinforcing male tissue at every stage.",
 		sideEffects: "Temporary swelling and irritation of skin."
@@ -3514,9 +3517,9 @@ setup.crotch_reverse_potions = {
 		name: "Veinroot Infusion",
 		purpose: "Penis 6 ➝ Penis 7",
 		ingredients: {
-			"dragonmoss_resin": 2,
-			"glowleaf_powder": 1,
-			"thornberry_juice": 50
+			"eversilk_thread": 27,
+			"dragonmoss_resin": 45,
+			"nullroot_dust": 36
 		},
 		function: "Ensures full expansion of male genital form; returns elasticity to the tissues.",
 		sideEffects: "Occasional muscle spasms; uncomfortable physical tightness."
@@ -3528,9 +3531,9 @@ setup.crotch_reverse_potions = {
 		name: "Masculineflare Draught",
 		purpose: "Penis 7 ➝ Penis 9",
 		ingredients: {
-			"nullroot_dust": 1,
-			"velvetgrove_essence": 2,
-			"frostvine_elixir": 25
+			"eversilk_thread": 30,
+			"dragonmoss_resin": 50,
+			"nullroot_dust": 40
 		},
 		function: "Final restoration of the penis to its original form; rejuvenates male genitalia.",
 		sideEffects: "Intense fatigue; heightened masculinity and increased desire to reclaim former identity."
@@ -3546,9 +3549,9 @@ setup.hair_forward_potions = {
 		name: "Fibrefirst Draught",
 		purpose: "Hair Level 1 ➝ Hair Level 2",
 		ingredients: {
-			"starblossom_pollen": 2,
-			"moonpetal_extract": 1,
-			"vinesilk_essence": 1
+			"glowleaf_powder": 3,
+			"starblossom_pollen": 10,
+			"velvetgrove_essence": 4
 		},
 		function: "Initiates the growth process, transforming short hair to a longer, thicker texture.",
 		sideEffects: "Mild itching or tingling in the scalp as hair begins to sprout."
@@ -3560,9 +3563,9 @@ setup.hair_forward_potions = {
 		name: "Strandgrowth Elixir",
 		purpose: "Hair Level 2 ➝ Hair Level 3",
 		ingredients: {
-			"glowleaf_powder": 5,
-			"velvetgrove_essence": 1,
-			"nightshade_bloom": 1
+			"glowleaf_powder": 6,
+			"starblossom_pollen": 15,
+			"velvetgrove_essence": 8
 		},
 		function: "Expands hair growth, providing greater volume and length, starting to touch the shoulders.",
 		sideEffects: "Light sensitivity in the scalp, slight increased heat around hair follicles as they expand."
@@ -3574,9 +3577,9 @@ setup.hair_forward_potions = {
 		name: "Tressbloom Essence",
 		purpose: "Hair Level 3 ➝ Hair Level 4",
 		ingredients: {
-			"starblossom_pollen": 3,
-			"seraphmilk": 10,
-			"feylace_petal": 8
+			"glowleaf_powder": 9,
+			"starblossom_pollen": 20,
+			"velvetgrove_essence": 16
 		},
 		function: "Lengthens hair further, starting to reach mid-neck with smooth, flowing strands.",
 		sideEffects: "Tingling sensation as hair thickens and lengthens; scalp feeling soft and slightly heavier."
@@ -3588,9 +3591,9 @@ setup.hair_forward_potions = {
 		name: "Lustreweave Tonic",
 		purpose: "Hair Level 4 ➝ Hair Level 5",
 		ingredients: {
-			"softroot_essence": 10,
-			"dragonmoss_resin": 10,
-			"nightshade_bloom": 2
+			"glowleaf_powder": 12,
+			"starblossom_pollen": 25,
+			"velvetgrove_essence": 20
 		},
 		function: "Hair reaches neck-length, becoming more voluminous and glossy, with a slightly feminine sheen.",
 		sideEffects: "Hair becoming heavier; mild scalp tightness as length increases."
@@ -3602,9 +3605,9 @@ setup.hair_forward_potions = {
 		name: "Lengthening Draught",
 		purpose: "Hair Level 5 ➝ Hair Level 6",
 		ingredients: {
-			"velvetgrove_essence": 20,
-			"starblossom_pollen": 4,
-			"glowleaf_powder": 10
+			"glowleaf_powder": 15,
+			"starblossom_pollen": 30,
+			"velvetgrove_essence": 24
 		},
 		function: "Hair grows rapidly to shoulder-length, now fuller and with a greater shine.",
 		sideEffects: "Scalp tingling intensifies as length progresses; increased hair texture softness."
@@ -3616,9 +3619,9 @@ setup.hair_forward_potions = {
 		name: "Flowbloom Elixir",
 		purpose: "Hair Level 6 ➝ Hair Level 7",
 		ingredients: {
-			"moonpetal_extract": 3,
-			"feylace_petal": 1,
-			"frostvine_elixir": 20
+			"glowleaf_powder": 18,
+			"starblossom_pollen": 35,
+			"velvetgrove_essence": 28
 		},
 		function: "Grows hair down to mid-back with a soft and flowing texture, increasing volume and luster.",
 		sideEffects: "Stronger sense of hair growth, scalp warmth as hair thickens; mild itching as hair reaches mid-back."
@@ -3630,9 +3633,9 @@ setup.hair_forward_potions = {
 		name: "Majestic Mane Draught",
 		purpose: "Hair Level 7 ➝ Hair Level 8",
 		ingredients: {
-			"seraphmilk": 15,
-			"dragonmoss_resin": 2,
-			"starblossom_pollen": 6
+			"glowleaf_powder": 21,
+			"starblossom_pollen": 40,
+			"velvetgrove_essence": 32
 		},
 		function: "Final stage of growth, hair reaches waist-length with added fullness, smooth texture, and shine.",
 		sideEffects: "Fullness around scalp, scalp heat as hair becomes long and voluminous, slight tightness."
@@ -3649,9 +3652,9 @@ setup.hair_reverse_potions = {
 		name: "Rootsnip Elixir",
 		purpose: "Hair Level 8 ➝ Hair Level 7",
 		ingredients: {
-			"ashfern_flakes": 2,
-			"nightshade_bloom": 1,
-			"frostvine_elixir": 10
+			"glowleaf_powder": 3,
+			"frostvine_elixir": 10,
+			"nullroot_dust": 4
 		},
 		function: "Begins the process of hair reduction, starting with the first stage of regrowth.",
 		sideEffects: "Mild scalp discomfort as hair retracts; slight itching as the follicles slow."
@@ -3663,9 +3666,9 @@ setup.hair_reverse_potions = {
 		name: "Tressfade Draught",
 		purpose: "Hair Level 7 ➝ Hair Level 6",
 		ingredients: {
-			"ashfern_flakes": 6,
-			"thornberry_juice": 30,
-			"nullroot_dust": 6
+			"glowleaf_powder": 6,
+			"frostvine_elixir": 20,
+			"nullroot_dust": 8
 		},
 		function: "Slows hair growth and begins to decrease volume, reducing the length from mid-back to shoulder.",
 		sideEffects: "Scalp feels light, some dryness; temporary shedding as length reduces."
@@ -3677,9 +3680,9 @@ setup.hair_reverse_potions = {
 		name: "Strandslim Essence",
 		purpose: "Hair Level 6 ➝ Hair Level 5",
 		ingredients: {
-			"ashfern_flakes": 3,
-			"nullroot_dust": 2,
-			"sorrowseed_oil": 2
+			"glowleaf_powder": 9,
+			"frostvine_elixir": 30,
+			"nullroot_dust": 12
 		},
 		function: "Reduces hair thickness and length, making hair feel thinner and shorter, reaching neck-level.",
 		sideEffects: "Scalp tightness and dryness; hair may feel thinner but also a little more fragile."
@@ -3691,9 +3694,9 @@ setup.hair_reverse_potions = {
 		name: "Snipclear Tonic",
 		purpose: "Hair Level 5 ➝ Hair Level 4",
 		ingredients: {
-			"nullroot_dust": 3,
-			"thornberry_juice": 20,
-			"frostvine_elixir": 15
+			"glowleaf_powder": 12,
+			"frostvine_elixir": 40,
+			"nullroot_dust": 16
 		},
 		function: "Shortens hair from shoulder-length to mid-neck, thinning out volume for a finer texture.",
 		sideEffects: "Tingling as hair shrinks, scalp cooling as length decreases."
@@ -3705,9 +3708,9 @@ setup.hair_reverse_potions = {
 		name: "Fadingmane Draught",
 		purpose: "Hair Level 4 ➝ Hair Level 3",
 		ingredients: {
-			"ashfern_flakes": 4,
-			"velvetgrove_essence": 2,
-			"frostvine_elixir": 10
+			"glowleaf_powder": 15,
+			"frostvine_elixir": 50,
+			"nullroot_dust": 20
 		},
 		function: "Further shortens hair to shoulder-length, smoothing out strands and reducing volume.",
 		sideEffects: "The hair may become brittle during this stage, and scalp may feel slightly raw."
@@ -3719,9 +3722,9 @@ setup.hair_reverse_potions = {
 		name: "Lankfall Elixir",
 		purpose: "Hair Level 3 ➝ Hair Level 2",
 		ingredients: {
-			"nullroot_dust": 4,
-			"ashfern_flakes": 2,
-			"thornberry_juice": 5
+			"glowleaf_powder": 18,
+			"frostvine_elixir": 60,
+			"nullroot_dust": 24
 		},
 		function: "Reduces hair from shoulder to chin-length, making it thinner and less voluminous.",
 		sideEffects: "Dryness and slight itchiness as the follicles stop producing thick strands."
@@ -3733,9 +3736,9 @@ setup.hair_reverse_potions = {
 		name: "Baldshrink Draught",
 		purpose: "Hair Level 2 ➝ Hair Level 1",
 		ingredients: {
-			"sorrowseed_oil": 3,
-			"velvetgrove_essence": 1,
-			"ashfern_flakes": 5
+			"glowleaf_powder": 21,
+			"frostvine_elixir": 70,
+			"nullroot_dust": 28
 		},
 		function: "Final reduction of hair to short stubs or full baldness, completely halting regrowth.",
 		sideEffects: "Scalp tightness; hair follicles may feel dormant; intense shedding."
@@ -3752,9 +3755,9 @@ setup.hand_forward_potions = {
 		name: "Silkweave Tincture",
 		purpose: "Male Ultra Muscular Hands ➝ Male Muscular Hands",
 		ingredients: {
-			"softroot_essence": 1,
-			"starblossom_pollen": 1,
-			"moonpetal_extract": 5
+			"softroot_essence": 5,
+			"velvetgrove_essence": 4,
+			"seraphmilk": 30
 		},
 		function: "Begins softening and lightening the skin on the hands; first stage of shaping the fingers for more delicate form.",
 		sideEffects: "Mild tingling in the fingertips; feeling of warmth and lightness."
@@ -3766,9 +3769,9 @@ setup.hand_forward_potions = {
 		name: "Fingerspring Draught",
 		purpose: "Male Muscular Hands ➝ Male Lean Hands",
 		ingredients: {
-			"glowleaf_powder": 1,
-			"velvetgrove_essence": 2,
-			"thornberry_juice": 30
+			"softroot_essence": 10,
+			"velvetgrove_essence": 8,
+			"seraphmilk": 60
 		},
 		function: "Further softens the skin, causing it to lose its roughness and gain smoother texture; the fingers begin to shorten slightly in proportion.",
 		sideEffects: "Occasional hand trembling; slight pain when gripping objects too tightly."
@@ -3780,9 +3783,9 @@ setup.hand_forward_potions = {
 		name: "Delicaflow Elixir",
 		purpose: "Male Lean Hands ➝ Female Slim Hands",
 		ingredients: {
-			"seraphmilk": 10,
-			"feylace_petal": 1,
-			"sorrowseed_oil": 1
+			"softroot_essence": 15,
+			"velvetgrove_essence": 12,
+			"seraphmilk": 90
 		},
 		function: "Shifts the structure of the hands, emphasizing more slender and graceful fingers; nails begin lengthening naturally.",
 		sideEffects: "Constant urge to caress; light sensitivity to touch, especially in fingertips."
@@ -3794,9 +3797,9 @@ setup.hand_forward_potions = {
 		name: "Petalwisp Potion",
 		purpose: "Female Slim Hands ➝ Female Feminine Hands",
 		ingredients: {
-			"starblossom_pollen": 2,
-			"glowleaf_powder": 1,
-			"velvetgrove_essence": 1
+			"softroot_essence": 20,
+			"velvetgrove_essence": 16,
+			"seraphmilk": 120
 		},
 		function: "Transforms the hands into their fully feminine shape; the fingers elongate, nails become more elegant, and the palms soften to a delicate texture.",
 		sideEffects: "Heightened sensitivity in the hands; a compulsive need to use hands for fine motor tasks (e.g., writing)."
@@ -3808,9 +3811,9 @@ setup.hand_forward_potions = {
 		name: "Lilyliss Essence",
 		purpose: "Female Feminine Hands ➝ Female Ultra Feminine Hands",
 		ingredients: {
-			"moonpetal_extract": 8,
-			"softroot_essence": 1,
-			"feylace_petal": 1
+			"softroot_essence": 25,
+			"velvetgrove_essence": 20,
+			"seraphmilk": 150
 		},
 		function: "Final stage of hand feminization; nails grow into smooth, glossy, and feminine shapes; the hands take on a more delicate, petite appearance.",
 		sideEffects: "Overwhelming urge to adjust and style nails; constant admiration of hands, subtle increase in gracefulness."
@@ -3826,9 +3829,9 @@ setup.hand_reverse_potions = {
 		name: "Roughroot Draught",
 		purpose: "Female Ultra Feminine Hands ➝ Female Feminine Hands",
 		ingredients: {
-			"ashfern_flakes": 2,
-			"nightshade_bloom": 2,
-			"frostleaf_crystals": 4
+			"softroot_essence": 5,
+			"frostleaf_crystals": 4,
+			"dragonmoss_resin": 5
 		},
 		function: "Begins the regression process, toughening the skin and starting to reassert the masculine texture.",
 		sideEffects: "Minor stinging in the fingertips; dull ache as the skin loses its softness."
@@ -3840,9 +3843,9 @@ setup.hand_reverse_potions = {
 		name: "Thorngrip Essence",
 		purpose: "Female Feminine Hands ➝ Female Slim Hands",
 		ingredients: {
-			"sorrowseed_oil": 2,
-			"ashfern_flakes": 1,
-			"thornberry_juice": 20
+			"softroot_essence": 10,
+			"frostleaf_crystals": 8,
+			"dragonmoss_resin": 10
 		},
 		function: "Reduces the softness and smoothness of the hands, subtly returning the hands to their more masculine shape and texture.",
 		sideEffects: "Hands may feel stiff or uncomfortable; slight heaviness in the fingers."
@@ -3854,9 +3857,9 @@ setup.hand_reverse_potions = {
 		name: "Roughenstride Elixir",
 		purpose: "Female Slim Hands ➝ Male Lean Hands",
 		ingredients: {
-			"glowleaf_powder": 1,
-			"frostvine_elixir": 30,
-			"nullroot_dust": 2
+			"softroot_essence": 15,
+			"frostleaf_crystals": 12,
+			"dragonmoss_resin": 15
 		},
 		function: "Promotes muscle reassertion in the hands and fingers, gradually giving the hands a more masculine appearance, reducing elegance and grace.",
 		sideEffects: "Heightened tension in the hands and fingers; discomfort when using hands for fine tasks."
@@ -3868,9 +3871,9 @@ setup.hand_reverse_potions = {
 		name: "Gripstone Infusion",
 		purpose: "Male Lean Hands ➝ Muscular Male Hands",
 		ingredients: {
-			"dragonmoss_resin": 2,
-			"frostvine_elixir": 5,
-			"ashfern_flakes": 1
+			"softroot_essence": 20,
+			"frostleaf_crystals": 16,
+			"dragonmoss_resin": 20
 		},
 		function: "Strengthens and thickens the fingers, causing them to become rougher and return to their male shape.",
 		sideEffects: "Mild pain as fingers bulk up; nails may become brittle and tough."
@@ -3882,9 +3885,9 @@ setup.hand_reverse_potions = {
 		name: "Ironbark Serum",
 		purpose: "Muscular Male Hands ➝ Male Ultra Muscular Hands",
 		ingredients: {
-			"nullroot_dust": 1,
-			"ashfern_flakes": 1,
-			"thornberry_juice": 15
+			"softroot_essence": 25,
+			"frostleaf_crystals": 20,
+			"dragonmoss_resin": 25
 		},
 		function: "Reverses the softening of the hands and nails, making them large and more rugged, returning them to the masculine level.",
 		sideEffects: "Hands may feel raw or sore, fingers losing their previous gracefulness."
@@ -3902,9 +3905,9 @@ setup.head_forward_potions = {
 		name: "Dewkiss Elixir",
 		purpose: "Male Ultra Muscular Face ➝ Male Muscular Face",
 		ingredients: {
-			"glowleaf_powder": 5,
-			"softroot_essence": 7,
 			"moonpetal_extract": 8,
+			"feylace_petal": 6,
+			"seraphmilk": 30,
 		},
 		function: "Begins to soften the jawline and smooth rough facial textures.",
 		sideEffects: "Tingling in cheeks and sudden blushes; heightened emotional awareness."
@@ -3916,9 +3919,9 @@ setup.head_forward_potions = {
 		name: "Blushweave Tincture",
 		purpose: "Male Muscular Face ➝ Male Lean Face",
 		ingredients: {
-			"feylace_petal": 5,
-			"velmorian_honey": 10,
-			"glowleaf_powder": 5
+			"moonpetal_extract": 16,
+			"feylace_petal": 12,
+			"seraphmilk": 60
 		},
 		function: "Narrows nose and enhances cheeks, reducing masculine edge.",
 		sideEffects: "Frequent blushing and subtle floral breath aroma."
@@ -3930,9 +3933,9 @@ setup.head_forward_potions = {
 		name: "Veilpetal Infusion",
 		purpose: "Male Lean Face ➝ Female Slim Face",
 		ingredients: {
-			"starblossom_pollen": 11,
-			"moonpetal_extract": 12,
-			"seraphmilk": 15
+			"moonpetal_extract": 24,
+			"feylace_petal": 18,
+			"seraphmilk": 90
 		},
 		function: "Refines eye sockets, raises brow arches, enhances lash length.",
 		sideEffects: "Eyes glimmer faintly; vision more sensitive under moonlight."
@@ -3944,9 +3947,9 @@ setup.head_forward_potions = {
 		name: "Silklip Decoction",
 		purpose: "Female Slim Face ➝ Female Feminine Face",
 		ingredients: {
-			"crimsondew_drops": 10,
-			"feylace_petal": 20,
-			"velmorian_honey": 50
+			"moonpetal_extract": 32,
+			"feylace_petal": 24,
+			"seraphmilk": 120
 		},
 		function: "Plumps lips, smooths facial lines, reshapes chin for femininity.",
 		sideEffects: "Increased lip sensitivity; slight urge to smile uncontrollably."
@@ -3958,9 +3961,9 @@ setup.head_forward_potions = {
 		name: "Starlace Serum",
 		purpose: "Female Feminine Face ➝ Female Ultra Feminine Face",
 		ingredients: {
-			"feylace_petal": 25,
-			"seraphmilk": 45,
-			"starblossom_pollen": 13
+			"moonpetal_extract": 40,
+			"feylace_petal": 30,
+			"seraphmilk": 150
 		},
 		function: "Finalizes facial feminization, enhancing glow, symmetry, and allure.",
 		sideEffects: "Strong charm aura; irresistible smiles; fits of feminine giggling."
@@ -3977,9 +3980,9 @@ setup.head_reverse_potions = {
 		name: "Grimshade Extract",
 		purpose: "Female Ultra Feminine Face ➝ Female Feminine Face",
 		ingredients: {
-			"ashfern_flakes": 2,
-			"nullroot_dust": 2,
-			"thornberry_juice": 5
+			"moonpetal_extract": 8,
+			"dragonmoss_resin": 5,
+			"frostleaf_crystals": 4
 		},
 		function: "Dulls feminine radiance, retracts symmetry and soft textures.",
 		sideEffects: "Loss of sparkle in the eyes, increased frown reflex."
@@ -3991,9 +3994,9 @@ setup.head_reverse_potions = {
 		name: "Roughskin Infusion",
 		purpose: "Female Feminine Face ➝ Female Slim Face",
 		ingredients: {
-			"thornberry_juice": 20,
-			"frostvine_elixir": 10,
-			"sorrowseed_oil": 2
+			"moonpetal_extract": 16,
+			"dragonmoss_resin": 10,
+			"frostleaf_crystals": 8
 		},
 		function: "Thickens jawline slightly, reduces lip volume and cheek softness.",
 		sideEffects: "Tight jaw feeling; reduced smile flexibility."
@@ -4005,9 +4008,9 @@ setup.head_reverse_potions = {
 		name: "Charmbreaker Tonic",
 		purpose: "Female Slim Face ➝ Male Lean Face",
 		ingredients: {
-			"ashfern_flakes": 1,
-			"nullroot_dust": 2,
-			"frostvine_elixir": 20
+			"moonpetal_extract": 24,
+			"dragonmoss_resin": 15,
+			"frostleaf_crystals": 12
 		},
 		function: "Removes residual feminizing charm, coarsens subtle details.",
 		sideEffects: "Facial expression flattens; emotional dullness."
@@ -4019,9 +4022,9 @@ setup.head_reverse_potions = {
 		name: "Bluntline Brew",
 		purpose: "Male Lean Face ➝ Male Muscular Face",
 		ingredients: {
-			"dragonmoss_resin": 1,
-			"thornberry_juice": 10,
-			"sorrowseed_oil": 1
+			"moonpetal_extract": 32,
+			"dragonmoss_resin": 20,
+			"frostleaf_crystals": 16
 		},
 		function: "Broadens nose bridge, straightens brows, coarsens skin slightly.",
 		sideEffects: "Slight facial itching; urge to grimace more often."
@@ -4033,9 +4036,9 @@ setup.head_reverse_potions = {
 		name: "Ruggedskin Tincture",
 		purpose: "Male Muscular Face ➝ Male Ultra Muscular Face",
 		ingredients: {
-			"ashfern_flakes": 2,
-			"nullroot_dust": 1,
-			"dragonmoss_resin": 2
+			"moonpetal_extract": 40,
+			"dragonmoss_resin": 25,
+			"frostleaf_crystals": 20
 		},
 		function: "Finalizes masculinization by reinforcing bone structure and roughening skin tone.",
 		sideEffects: "Harsh facial hair stubble growth, strong earthy musk emerges."
@@ -4051,9 +4054,9 @@ setup.leg_forward_potions = {
 		name: "Silkenstride Draught",
 		purpose: "Male Ultra Muscular Legs ➝ Male Muscular Legs",
 		ingredients: {
-			"glowleaf_powder": 2,
-			"thornberry_juice": 10,
-			"softroot_essence": 3
+			"lilywhisper_nectar": 2,
+			"vinesilk_essence": 4,
+			"velvetgrove_essence": 4
 		},
 		function: "Begins the softening of the legs, reducing Ultra Muscular tension and initiating the process of femininity.",
 		sideEffects: "Mild tingling sensation, subtle tightness in the calf muscles as they begin to lose their bulk."
@@ -4065,9 +4068,9 @@ setup.leg_forward_potions = {
 		name: "Velvetfoot Elixir",
 		purpose: "Male Muscular Legs ➝ Male Lean Legs",
 		ingredients: {
-			"starblossom_pollen": 2,
-			"dragonmoss_resin": 2,
-			"frostvine_elixir": 10
+			"lilywhisper_nectar": 4,
+			"vinesilk_essence": 8,
+			"velvetgrove_essence": 8
 		},
 		function: "Increases the smoothness and curvaceousness of the legs, starting the transformation of muscle into soft, feminine shapes.",
 		sideEffects: "Heightened sensitivity in the skin; legs may feel warm and sensitive to touch."
@@ -4079,9 +4082,9 @@ setup.leg_forward_potions = {
 		name: "Languidstep Serum",
 		purpose: "Male Lean Legs ➝ Female Slim Legs",
 		ingredients: {
-			"moonpetal_extract": 4,
-			"softroot_essence": 2,
-			"sorrowseed_oil": 2
+			"lilywhisper_nectar": 6,
+			"vinesilk_essence": 12,
+			"velvetgrove_essence": 12
 		},
 		function: "Shapes the legs to a more feminine form, gradually thinning the legs and giving them a gentler contour.",
 		sideEffects: "Swelling and slight stiffness as the legs adjust to the shape; tingling along the thighs."
@@ -4093,9 +4096,9 @@ setup.leg_forward_potions = {
 		name: "Feminique Elixir",
 		purpose: "Female Slim Legs ➝ Female Feminine Legs",
 		ingredients: {
-			"nightshade_bloom": 2,
-			"starblossom_pollen": 2,
-			"velvetgrove_essence": 2
+			"lilywhisper_nectar": 8,
+			"vinesilk_essence": 16,
+			"velvetgrove_essence": 16
 		},
 		function: "Focuses on smoothness and curvature, enhancing the legs’ natural feminity and curving them to a more delicate shape.",
 		sideEffects: "Sensation of lightness; legs may feel weaker or more fragile as the transformation deepens."
@@ -4107,9 +4110,9 @@ setup.leg_forward_potions = {
 		name: "Silksheen Draught",
 		purpose: "Female Feminine Legs ➝ Female Ultra Feminine Legs",
 		ingredients: {
-			"feylace_petal": 4,
-			"dragonmoss_resin": 2,
-			"glowleaf_powder": 4
+			"lilywhisper_nectar": 10,
+			"vinesilk_essence": 20,
+			"velvetgrove_essence": 20
 		},
 		function: "Finalizes the transformation, softening the muscles, enhancing shape, and giving the legs a smooth, slender, and graceful look.",
 		sideEffects: "Complete loss of muscle tension, legs feel extremely smooth and delicate, may be temporarily weaker."
@@ -4125,9 +4128,9 @@ setup.leg_reverse_potions = {
 		name: "Stonestride Draught",
 		purpose: "Female Ultra Feminine Legs ➝ Female Feminine Legs",
 		ingredients: {
-			"ashfern_flakes": 1,
-			"frostvine_elixir": 5,
-			"nullroot_dust": 2
+			"lilywhisper_nectar": 2,
+			"sorrowseed_oil": 6,
+			"thornberry_juice": 20
 		},
 		function: "Begins to harden the legs, firming up muscle tone and starting the reversal of softness.",
 		sideEffects: "Sensitivity in legs will decrease, legs may feel more rigid and less flexible, slight swelling."
@@ -4139,9 +4142,9 @@ setup.leg_reverse_potions = {
 		name: "Brutewalk Serum",
 		purpose: "Female Feminine Legs ➝ Female Slim Legs",
 		ingredients: {
-			"thornberry_juice": 15,
-			"vinesilk_essence": 2,
-			"nullroot_dust": 2
+			"lilywhisper_nectar": 4,
+			"sorrowseed_oil": 12,
+			"thornberry_juice": 40
 		},
 		function: "Further strengthens the leg muscles, initiating the return to a more masculine build, firming up the calves and thighs.",
 		sideEffects: "Feeling of tightness, slight soreness in the legs as they revert back to a less graceful form."
@@ -4153,9 +4156,9 @@ setup.leg_reverse_potions = {
 		name: "Ironstep Tonic",
 		purpose: "Female Slim Legs ➝ Male Lean Legs",
 		ingredients: {
-			"dragonmoss_resin": 3,
-			"ashfern_flakes": 1,
-			"sorrowseed_oil": 2
+			"lilywhisper_nectar": 6,
+			"sorrowseed_oil": 18,
+			"thornberry_juice": 60
 		},
 		function: "Encourages the thickening and muscle regrowth in the legs, firming them up and reversing femininity.",
 		sideEffects: "A tightening of the skin, legs may feel bulkier and heavier, discomfort in the thighs as they reassert masculinity."
@@ -4167,9 +4170,9 @@ setup.leg_reverse_potions = {
 		name: "Hearthstride Mixture",
 		purpose: "Male Lean Legs ➝ Male Muscular Legs",
 		ingredients: {
-			"velvetgrove_essence": 2,
-			"thornberry_juice": 10,
-			"frostvine_elixir": 5
+			"lilywhisper_nectar": 8,
+			"sorrowseed_oil": 24,
+			"thornberry_juice": 80
 		},
 		function: "Promotes muscle reconditioning, reducing softness and starting to return the legs to a more masculine appearance.",
 		sideEffects: "Legs may feel swollen, more muscle tension, a sense of “heaviness” in the calves and thighs."
@@ -4181,9 +4184,9 @@ setup.leg_reverse_potions = {
 		name: "Brawnwalk Elixir",
 		purpose: "Male Muscular Legs ➝ Male Ultra Muscular Legs",
 		ingredients: {
-			"glowleaf_powder": 4,
-			"nightshade_bloom": 3,
-			"dragonmoss_resin": 1
+			"lilywhisper_nectar": 10,
+			"sorrowseed_oil": 30,
+			"thornberry_juice": 100
 		},
 		function: "Final stage of muscle restoration, enhancing masculine leg features and reversing the femininity entirely.",
 		sideEffects: "Legs may feel completely rigid and firm, skin could tighten and feel rough as the transformation ends."
@@ -4199,9 +4202,9 @@ setup.torso_forward_potions = {
 		name: "Softshape Draught",
 		purpose: "Male Ultra Muscular Torso ➝ Male Muscular Torso",
 		ingredients: {
-			"softroot_essence": 1,
-			"thornberry_juice": 10,
-			"glowleaf_powder": 2
+			"velmorian_honey": 30,
+			"crimsondew_drops": 8,
+			"crimsonroot_dust": 20
 		},
 		function: "Softens and tightens the torso muscles, starts reshaping the waist, reducing broadness.",
 		sideEffects: "Mild tightness around the waist and torso, some mild discomfort as the body begins to shift."
@@ -4213,9 +4216,9 @@ setup.torso_forward_potions = {
 		name: "Waistbind Elixir",
 		purpose: "Male Muscular Torso ➝ Male Lean Torso",
 		ingredients: {
-			"ashfern_flakes": 5,
-			"dragonmoss_resin": 10,
-			"starblossom_pollen": 3
+			"velmorian_honey": 60,
+			"crimsondew_drops": 12,
+			"crimsonroot_dust": 30
 		},
 		function: "Focuses on slimming the waist and narrowing the shoulders, enhancing the feminine curves.",
 		sideEffects: "Soreness as the body begins narrowing; discomfort from the shifting of the waistline."
@@ -4227,9 +4230,9 @@ setup.torso_forward_potions = {
 		name: "Curvature Serum",
 		purpose: "Male Lean Torso ➝ Female Slim Torso",
 		ingredients: {
-			"vinesilk_essence": 10,
-			"seraphmilk": 15,
-			"feylace_petal": 15
+			"velmorian_honey": 90,
+			"crimsondew_drops": 16,
+			"crimsonroot_dust": 40
 		},
 		function: "Shifts torso to a more feminine shape, promoting hip widening and narrowing of the waist.",
 		sideEffects: "Sensation of warmth as the hips and waist begin to adjust, some temporary discomfort from changes."
@@ -4241,9 +4244,9 @@ setup.torso_forward_potions = {
 		name: "Hourglass Draught",
 		purpose: "Female Slim Torso ➝ Female Feminine Torso",
 		ingredients: {
-			"frostvine_elixir": 20,
-			"feylace_petal": 10,
-			"velvetgrove_essence": 20
+			"velmorian_honey": 120,
+			"crimsondew_drops": 20,
+			"crimsonroot_dust": 50
 		},
 		function: "Intensifies hip widening, enhances waist cinching, and adds softness to the belly.",
 		sideEffects: "Increased fullness in the hips, a tightening sensation around the waist, mild dizziness."
@@ -4255,9 +4258,9 @@ setup.torso_forward_potions = {
 		name: "Femmeshape Elixir",
 		purpose: "Female Feminine Torso ➝ Female Ultra Feminine Torso",
 		ingredients: {
-			"dragonmoss_resin": 20,
-			"nightshade_bloom": 10,
-			"sorrowseed_oil": 25
+			"velmorian_honey": 150,
+			"crimsondew_drops": 24,
+			"crimsonroot_dust": 60
 		},
 		function: "Final refinement of feminine curves, softens the torso’s appearance with full body reshaping.",
 		sideEffects: "Final changes to the body’s outline, slight tingling as the curves fully solidify into place."
@@ -4274,9 +4277,9 @@ setup.torso_reverse_potions = {
 		name: "Slimshape Draught",
 		purpose: "Female Ultra Feminine Torso ➝ Female Feminine Torso",
 		ingredients: {
-			"ashfern_flakes": 20,
-			"frostvine_elixir": 10,
-			"thornberry_juice": 15
+			"velmorian_honey": 30,
+			"thornberry_juice": 20,
+			"ashfern_flakes": 4
 		},
 		function: "Reduces width of hips, tightens the waist, and begins to masculinize the torso.",
 		sideEffects: "Initial tightness around the waist, temporary discomfort from narrowing of the hips."
@@ -4288,9 +4291,9 @@ setup.torso_reverse_potions = {
 		name: "Broadbind Elixir",
 		purpose: "Female Feminine Torso ➝ Female Slim Torso",
 		ingredients: {
-			"dragonmoss_resin": 10,
-			"sorrowseed_oil": 5,
-			"nightshade_bloom": 10
+			"velmorian_honey": 60,
+			"thornberry_juice": 40,
+			"ashfern_flakes": 8
 		},
 		function: "Begins widening the shoulders and reshapes the torso into a more angular, masculine form.",
 		sideEffects: "Muscle ache from reshaping the body; mild dizziness as the chest narrows and shoulders broaden."
@@ -4302,9 +4305,9 @@ setup.torso_reverse_potions = {
 		name: "Hardshape Serum",
 		purpose: "Female Slim Torso ➝ Male Lean Torso",
 		ingredients: {
-			"vinesilk_essence": 10,
-			"lilywhisper_nectar": 2,
-			"feylace_petal": 5
+			"velmorian_honey": 90,
+			"thornberry_juice": 60,
+			"ashfern_flakes": 12
 		},
 		function: "Shifts the torso back to a less curved shape, restoring the broader male torso appearance.",
 		sideEffects: "Tingling sensation in the belly and waist, slight discomfort from body hardening and broadening."
@@ -4316,9 +4319,9 @@ setup.torso_reverse_potions = {
 		name: "Masculinize Draught",
 		purpose: "Male Lean Torso ➝ Male Muscular Torso",
 		ingredients: {
-			"nullroot_dust": 30,
-			"seraphmilk": 5,
-			"ashfern_flakes": 10
+			"velmorian_honey": 120,
+			"thornberry_juice": 80,
+			"ashfern_flakes": 16
 		},
 		function: "Focuses on reducing the waist and narrowing the hips, restoring the male body shape.",
 		sideEffects: "Intense muscle contractions, minor soreness as the body reverts to a broader male shape."
@@ -4330,17 +4333,14 @@ setup.torso_reverse_potions = {
 		name: "Uncurve Elixir",
 		purpose: "Male Muscular Torso ➝ Male Ultra Muscular Torso",
 		ingredients: {
-			"dragonmoss_resin": 2,
-			"thornberry_juice": 10,
-			"velvetgrove_essence": 10
+			"velmorian_honey": 150,
+			"thornberry_juice": 100,
+			"ashfern_flakes": 20
 		},
 		function: "Finalizes the reversal, reestablishing the male body structure with broad shoulders and a flat waist.",
 		sideEffects: "A slight feeling of loss of softness, discomfort as the body expands and sharpens into a male form."
 	}
 };
-
-
-
 /* twine-user-script #16: "script.js" */
 if (document.location.href.toLowerCase().includes("/temp/") || document.location.href.toLowerCase().includes("/private/") || hasOwnProperty.call(window, "storyFormat")) {
     // Change this to the path where the HTML file is
@@ -7544,7 +7544,7 @@ She kept fucking me through it. Her own release came moments later.
 
 &lt;span style=&quot;color: red;&quot;&gt;&lt;strong&gt;“Uhhhhhhhhh fuck Take it. Take every drop.”&lt;/strong&gt;&lt;/span&gt;
 
-And the dream kept going. They flipped me. Took turns. They used me. Worshiped me. The final position me on all fours…
+They flipped me. Took turns. They used me. Worshiped me. The final position me on all fours…
 
 &lt;span style=&quot;color: red;&quot;&gt;&lt;strong&gt;“Fuck, he’s clenching.”&lt;/strong&gt;&lt;/span&gt;
 
@@ -7554,7 +7554,7 @@ And the dream kept going. They flipped me. Took turns. They used me. Worshiped m
 
 &lt;strong style=&quot;color: purple;&quot;&gt;“I I love being f fucked! Fucked by strong w women !”&lt;/strong&gt;
 
-They came again. So did I. Again. And again. And then I woke up. My sheets were soaked. My cock, half hard, twitched once more before going still. My body ached in ways that didn’t make sense. My breath came in pants. My thighs were damp with something that shouldn’t have been possible. But it had happened. A dream. But not just any dream. A warning? A prophecy? Or worse… a desire?
+They came again. So did I. Again and again and then I woke up. My sheets were soaked. My cock, half hard, twitched once more before going still. My body ached in ways that didn’t make sense. My breath came in pants. My thighs were damp with something that shouldn’t have been possible. But it had happened. A dream. But not just any dream. A warning? A prophecy? Or worse… a desire?
 
 [[Wake Up|mc_bed_chamber]]</tw-passagedata><tw-passagedata pid="8" name="dream_2" tags="" position="975,100" size="100,100">&lt;&lt;passage_img &quot;dream/dream_2/1.png&quot;&gt;&gt;&lt;&lt;/passage_img&gt;&gt;
 
@@ -7586,7 +7586,7 @@ A woman approached the table no, glided. Robes of deep emerald silk whispered ov
 
 She was beautiful in the way goddesses are terrifying.
 
-&lt;span style=&quot;color:  red;&quot;&gt;&lt;strong&gt;“Lady Seravelle of Alryne,”&lt;/strong&gt;&lt;/span&gt; Veletia whispered with a purr. &lt;span style=&quot;color:  red;&quot;&gt;&lt;strong&gt;“And look… she’s brought her appetite.”&lt;/strong&gt;&lt;/span&gt;
+&lt;span style=&quot;color:  red;&quot;&gt;&lt;strong&gt;“Lady Seravelle of Alryne,”&lt;/strong&gt;&lt;/span&gt; Veletia whispered with a purr. &lt;span style=&quot;color:  red;&quot;&gt;&lt;strong&gt;“and look… she’s brought her appetite.”&lt;/strong&gt;&lt;/span&gt;
 
 Seravelle stopped beside me, eyes roaming lazily over my form. She said nothing just leaned in, took my goblet, and sipped from it, her lips touching the same rim as mine had moments before. Then she set it down and licked her lips.
 
@@ -7604,7 +7604,7 @@ Seravelle stopped beside me, eyes roaming lazily over my form. She said nothing 
 
 &lt;span style=&quot;color:  red;&quot;&gt;&lt;strong&gt;“Then let us help you decide.”&lt;/strong&gt;&lt;/span&gt;
 
-Hands slid under the table. I gasped. Veletia on the left. Seravelle on the right. Both kneeling now, hidden by the long embroidered tablecloth that hung to the floor. Their hands brushed my thighs simultaneously warm, slow, exploratory. Veletia’s fingers, delicate and precise, traced lazy circles toward my inner thigh, while Seravelle’s touch was bolder calloused, possessive.
+Hands slid under the table. Veletia on the left. Seravelle on the right. Both kneeling now, hidden by the long embroidered tablecloth that hung to the floor. Their hands brushed my thighs simultaneously warm, slow, exploratory. Veletia’s fingers, delicate and precise, traced lazy circles toward my inner thigh, while Seravelle’s touch was bolder calloused, possessive.
 
 &lt;span style=&quot;color: darkgreen;&quot;&gt;&lt;strong&gt;“Let’s see what we’re working with,”&lt;/strong&gt;&lt;/span&gt; Seravelle whispered from below, lifting my tunic.
 
@@ -7618,7 +7618,7 @@ The cool air licked across my exposed groin. My cock small now, barely the size 
 
 &lt;span style=&quot;color: darkgreen;&quot;&gt;&lt;strong&gt;“Delicious,”&lt;/strong&gt;&lt;/span&gt; she murmured, licking her lips. &lt;span style=&quot;color: darkgreen;&quot;&gt;&lt;strong&gt;“So eager for a thing so small.”&lt;/strong&gt;&lt;/span&gt;
 
-&lt;span style=&quot;color:  red;&quot;&gt;&lt;strong&gt;“Let me taste,”&lt;/strong&gt;&lt;/span&gt; Veletia said. And then they were kissing mouths meeting over my cock, tongues swirling, trading saliva and groans.
+&lt;span style=&quot;color:  red;&quot;&gt;&lt;strong&gt;“Let me taste,”&lt;/strong&gt;&lt;/span&gt; Veletia said and then they were kissing mouths meeting over my cock, tongues swirling, trading saliva and groans.
 
 I lost my breath.
 
@@ -7656,7 +7656,7 @@ Her hands gripped my hips. Her throat swallowed. I exploded. My body shook. My c
 
 Seravelle stood too, undoing the sash around her robe. The fabric parted. Her cock unfurled a monstrous thing, veined and dark, head glistening with fresh arousal. It curved slightly to the left, pierced near the crown with a silver stud. Below it, her pussy was wet and flushed, lips glistening and open. She saw my stare and laughed.
 
-&lt;span style=&quot;color: darkgreen;&quot;&gt;&lt;strong&gt;“I’m perfect, little prince,”&lt;/strong&gt;&lt;/span&gt; she said. &lt;span style=&quot;color: darkgreen;&quot;&gt;&lt;strong&gt;“And tonight… so are you.”&lt;/strong&gt;&lt;/span&gt;
+&lt;span style=&quot;color: darkgreen;&quot;&gt;&lt;strong&gt;“I’m perfect, little prince,”&lt;/strong&gt;&lt;/span&gt; she said. &lt;span style=&quot;color: darkgreen;&quot;&gt;&lt;strong&gt;“and tonight… so are you.”&lt;/strong&gt;&lt;/span&gt;
 
 She grabbed my chin, turned my face toward her.
 
@@ -7708,7 +7708,7 @@ Seravelle spat into her hand, rubbed it along her shaft, then pressed her cock a
 
 &lt;span style=&quot;color: darkgreen;&quot;&gt;&lt;strong&gt;“Let me in, little queen…”&lt;/strong&gt;&lt;/span&gt;
 
-I gasped. She pushed forward. And entered. My entire body arched.
+I gasped. She pushed forward and entered. My entire body arched.
 
 &lt;strong style=&quot;color: purple;&quot;&gt;“Oh fuck! g gods!”&lt;/strong&gt;
 
@@ -7730,13 +7730,11 @@ I cried out. My body convulsed. I came again. Unbidden. Unstoppable. My new fold
 
 &lt;span style=&quot;color:  red;&quot;&gt;&lt;strong&gt;“You’re becoming, my sweet. Just let it happen.”&lt;/strong&gt;&lt;/span&gt;
 
-Seravelle howled. She came. Her cock pulsed inside me, filling me with hot, thick ropes. I felt it dripping from me before she even pulled out. And then Another noble approached. A man this time. Slender. Feminine. Dressed in velvet and pearls. When he opened his robe, he revealed a perfectly smooth cunt, wet and glistening.
+Seravelle howled. She came. Her cock pulsed inside me, filling me with hot, thick ropes. I felt it dripping from me before she even pulled out and then Another noble approached. A man this time. Slender. Feminine. Dressed in velvet and pearls. When he opened his robe, he revealed a perfectly smooth cunt, wet and glistening.
 
 &lt;&lt;passage_img &quot;dream/dream_2/4.png&quot;&gt;&gt;&lt;&lt;/passage_img&gt;&gt;
 
-&lt;span style=&quot;color: teal;&quot;&gt;&lt;strong&gt;“I want a turn,”&lt;/strong&gt;&lt;/span&gt; he said.
-
-And the dream blurred. Hands everywhere. Mouths. Cocks. Cunts. Heat and wetness. I was passed from lap to lap, each noble whispering their claim. Veletia made me straddle her face. Seravelle fed me her cock while the pearl clad noble rode my fingers.
+&lt;span style=&quot;color: teal;&quot;&gt;&lt;strong&gt;“I want a turn,”&lt;/strong&gt;&lt;/span&gt; he said and the dream blurred. Hands everywhere. Mouths. Cocks. Cunts. Heat and wetness. I was passed from lap to lap, each noble whispering their claim. Veletia made me straddle her face. Seravelle fed me her cock while the pearl clad noble rode my fingers.
 
 &lt;span style=&quot;color: orange;&quot;&gt;&lt;strong&gt;“I want to ride him.”&lt;/strong&gt;&lt;/span&gt;
 
@@ -7746,7 +7744,7 @@ And the dream blurred. Hands everywhere. Mouths. Cocks. Cunts. Heat and wetness.
 
 &lt;span style=&quot;color: red;&quot;&gt;&lt;strong&gt;“Stretch him wider. I want to feel my seed drip from his hole.”&lt;/strong&gt;&lt;/span&gt;
 
-I screamed. Came. Sobbed. Smiled. They used me. They worshiped me. They broke me. I had never been more whole. And then Silence. I sat on the throne. Legs parted. Naked. Filled. Veletia knelt before me, licking the last of Seravelle’s cum from my thighs.
+I screamed. Came. Sobbed. Smiled. They used me. They worshiped me. They broke me. I had never been more whole and then Silence. I sat on the throne. Legs parted. Naked. Filled. Veletia knelt before me, licking the last of Seravelle’s cum from my thighs.
 
 &lt;span style=&quot;color:  red;&quot;&gt;&lt;strong&gt;“You are becoming, my Queen.”&lt;/strong&gt;&lt;/span&gt;
 
@@ -7766,7 +7764,7 @@ I was naked, knees half sunk in soft mud at the pond’s edge, the surface rippl
 
 &lt;&lt;passage_img &quot;dream/dream_3/3.png&quot;&gt;&gt;&lt;&lt;/passage_img&gt;&gt;
 
-Two figures emerged from the mist. They walked barefoot and unhurried down the stone steps that led from the high altar, their white ceremonial robes barely concealing their bodies beneath the way a curtain can’t hide what it’s meant to highlight. Both of them towered over me, glowing with unearthly vitality. One had a goddess’s hips and a narrow waist, her long hair falling like waves of honey across golden shoulders. The other sharper, sleeker moved with the slow, predatory grace of a lioness who had already eaten and still hungered. And between their thighs swung thick, gorgeous cocks, semi hard already, heavy with the weight of use and purpose. They were priestesses of the fertility cult. And they had come for me.
+Two figures emerged from the mist. They walked barefoot and unhurried down the stone steps that led from the high altar, their white ceremonial robes barely concealing their bodies beneath the way a curtain can’t hide what it’s meant to highlight. Both of them towered over me, glowing with unearthly vitality. One had a goddess’s hips and a narrow waist, her long hair falling like waves of honey across golden shoulders. The other sharper, sleeker moved with the slow, predatory grace of a lioness who had already eaten and still hungered and between their thighs swung thick, gorgeous cocks, semi hard already, heavy with the weight of use and purpose. They were priestesses of the fertility cult and they had come for me.
 
 &lt;&lt;passage_img &quot;dream/dream_3/4.png&quot;&gt;&gt;&lt;&lt;/passage_img&gt;&gt;
 
@@ -7950,9 +7948,9 @@ She reached between us and stroked my tiny cock, still leaking, now dribbling we
 
 &lt;strong style=&quot;color: purple;&quot;&gt;“I’m  I’m nnnngh aaaaaAAAAH!”&lt;/strong&gt;
 
-I came. It wasn’t like the others. It didn’t burst from me in jets it rolled, rippled, soaked from within. My hole spasmed around her cock, milking it. My throat cried out like a prayer. And she came too. With a deep groan, her cock jerked inside me, pulsing again and again. I felt her seed splash against the already coated walls of my half formed womb. It didn’t drip out this time it stayed. My body drank it. Accepted it.
+I came. It wasn’t like the others. It didn’t burst from me in jets it rolled, rippled, soaked from within. My hole spasmed around her cock, milking it. My throat cried out like a prayer and she came too. With a deep groan, her cock jerked inside me, pulsing again and again. I felt her seed splash against the already coated walls of my half formed womb. It didn’t drip out this time it stayed. My body drank it. Accepted it.
 
-&lt;span style=&quot;color: blue;&quot;&gt;“Take it,”&lt;/span&gt; she growled, her mouth at my ear. &lt;span style=&quot;color: blue;&quot;&gt;“Every drop. Let it change you.”&lt;/span&gt; And I did. My belly burned, but not with pain. It glowed. As though her cum were alchemy. As though her climax was a key and I the lock, now turned. She didn’t pull out. She lay atop me, softening slowly inside, our chests pressed together, our skin slick with sweat and moss.
+&lt;span style=&quot;color: blue;&quot;&gt;“Take it,”&lt;/span&gt; she growled, her mouth at my ear. &lt;span style=&quot;color: blue;&quot;&gt;“Every drop. Let it change you.”&lt;/span&gt; and I did. My belly burned, but not with pain. It glowed. As though her cum were alchemy. As though her climax was a key and I the lock, now turned. She didn’t pull out. She lay atop me, softening slowly inside, our chests pressed together, our skin slick with sweat and moss.
 
 &lt;span style=&quot;color: blue;&quot;&gt;“You’ve been claimed,”&lt;/span&gt; she whispered. &lt;span style=&quot;color: blue;&quot;&gt;“The goddess owns you now.”&lt;/span&gt;
 
@@ -7960,7 +7958,7 @@ I came. It wasn’t like the others. It didn’t burst from me in jets it rolled
 
 She smiled. &lt;span style=&quot;color: blue;&quot;&gt;“You’re becoming who you always were.”&lt;/span&gt;
 
-The other priestess joined us, lying beside me. Her lips brushed my shoulder. &lt;span style=&quot;color: red;&quot;&gt;“And you’ve only just begun.”&lt;/span&gt;
+The other priestess joined us, lying beside me. Her lips brushed my shoulder. &lt;span style=&quot;color: red;&quot;&gt;“and you’ve only just begun.”&lt;/span&gt;
 
 &lt;strong style=&quot;color: purple;&quot;&gt;“Was that was that the ritual?”&lt;/strong&gt;
 
@@ -7970,213 +7968,187 @@ The other priestess joined us, lying beside me. Her lips brushed my shoulder. &l
 
 Their hands moved over me, caressing me again. I felt their cocks stir once more, their desire never sated.
 
-&lt;span style=&quot;color: red;&quot;&gt;“Now,”&lt;/span&gt; the first priestess said, her tongue flicking along my neck, &lt;span style=&quot;color: red;&quot;&gt;“you learn what it means to give yourself completely.”&lt;/span&gt; And they fucked me again. Over and over. The garden shrine filled with moans and prayers and the wet slap of hips and thighs. The moon passed above. My body shook with ecstasy, my voice reduced to a chorus of ahh nnnngh yes goddess more  until I no longer knew where I ended and they began. I was not prince. Not yet queen. But I was no longer who I had been. And in that sacred water, beneath the carved stone of Velmoria’s oldest altar, I came apart. And I was remade.
+&lt;span style=&quot;color: red;&quot;&gt;“Now,”&lt;/span&gt; the first priestess said, her tongue flicking along my neck, &lt;span style=&quot;color: red;&quot;&gt;“you learn what it means to give yourself completely.”&lt;/span&gt; and they fucked me again. Over and over. The garden shrine filled with moans and prayers and the wet slap of hips and thighs. The moon passed above. My body shook with ecstasy, my voice reduced to a chorus of ahh nnnngh yes goddess more  until I no longer knew where I ended and they began. I was not prince. Not yet queen. But I was no longer who I had been and in that sacred water, beneath the carved stone of Velmoria’s oldest altar, I came apart and I was remade.
 
-[[Wake Up|mc_bed_chamber]]</tw-passagedata><tw-passagedata pid="10" name="dream_4" tags="" position="1225,100" size="100,100">I woke but not truly.
-Firelight danced on the walls of my tower chamber, flickering amber and gold, fed by logs that hadn’t been there when I went to sleep. Velvet drapes stirred in a breeze that didn’t exist. The scent of night blooming roses sharp, lush, sexual hung heavy in the air. My bed felt too soft. The air, too warm.
-And then I saw her.
-She stepped from shadow like it parted to let her pass. Her cloak shimmered like starlight dark, speckled with silver patterns that moved when she moved, alive with silent constellations. Beneath its open front, her skin glowed dusky and radiant, curves soft but defined: full breasts swayed slightly with each step, and between her thighs… her cock jutted forward, thick and dark and pulsing with arousal.
-Nyssa.
-The mage’s assistant.
-No more than that. The woman who watched me during potion training with half lidded eyes, who always lingered a moment longer than necessary when adjusting a collar or pressing a vial into my hand. The one who smirked when I blushed, who whispered in riddles laced with hunger.
+[[Wake Up|mc_bed_chamber]]</tw-passagedata><tw-passagedata pid="10" name="dream_4" tags="" position="1225,100" size="100,100">&lt;&lt;passage_img &quot;dream/dream_4/4.png&quot;&gt;&gt;&lt;&lt;/passage_img&gt;&gt;
+
+I woke but not truly. Firelight danced on the walls of my tower chamber, flickering amber and gold, fed by logs that hadn’t been there when I went to sleep. Velvet drapes stirred in a breeze that didn’t exist. The scent of night blooming roses sharp, lush, sexual hung heavy in the air. My bed felt too soft. The air, too warm and then I saw her. 
+
+&lt;&lt;passage_img &quot;dream/dream_4/2.png&quot;&gt;&gt;&lt;&lt;/passage_img&gt;&gt;
+
+She stepped from shadow like it parted to let her pass. Her cloak shimmered like starlight dark, speckled with silver patterns that moved when she moved, alive with silent constellations. Beneath its open front, her skin glowed dusky and radiant, curves soft but defined full breasts swayed slightly with each step, and between her thighs… her cock jutted forward, thick and dark and pulsing with arousal. Nyssa.
+
+&lt;&lt;passage_img &quot;dream/dream_4/1.png&quot;&gt;&gt;&lt;&lt;/passage_img&gt;&gt;
+
+The mage’s assistant. No more than that. The woman who watched me during potion training with half lidded eyes, who always lingered a moment longer than necessary when adjusting a collar or pressing a vial into my hand. The one who smirked when I blushed, who whispered in riddles laced with hunger.
+
 &lt;span style=&quot;color: blue;&quot;&gt;“Don’t speak,”&lt;/span&gt; she said now, voice husky and low, &lt;span style=&quot;color: blue;&quot;&gt;“or you’ll wake up.”&lt;/span&gt;
+
 &lt;strong style=&quot;color: purple;&quot;&gt;“I’m already awake,”&lt;/strong&gt; I said, my voice ragged.
+
 &lt;span style=&quot;color: blue;&quot;&gt;“No,”&lt;/span&gt; she corrected, stepping closer. &lt;span style=&quot;color: blue;&quot;&gt;“You’re ready. That’s very different.”&lt;/span&gt;
-She let the robe slip from her shoulders. It slid down like spilled wine, pooling at her feet.
-Her skin was impossibly smooth hips wide, stomach soft, thighs thick enough to crush. Her breasts rose proudly, nipples dark and stiff. Her cock curved forward slightly, long and veined, bobbing with the beat of her heart.
-My mouth dried.
-I was already hard, my cock stiff and drooling onto my stomach, the silk sheets beneath me damp from the arousal that had dragged me halfway to climax before her voice had even stirred me. I couldn’t remember if I’d touched myself or if this need had simply built by dreaming of her.
-She climbed onto the bed like a panther graceful, hungry. I didn’t move. Couldn’t. Her thigh brushed mine, her skin hot as coals. She straddled my lap, her cock sliding alongside mine, her eyes locked on mine.
+
+She let the robe slip from her shoulders. It slid down like spilled wine, pooling at her feet. Her skin was impossibly smooth hips wide, stomach soft, thighs thick enough to crush. Her breasts rose proudly, nipples dark and stiff. Her cock curved forward slightly, long and veined, bobbing with the beat of her heart. My mouth dried.
+
+I was already hard, my cock stiff and drooling onto my stomach, the silk sheets beneath me damp from the arousal that had dragged me halfway to climax before her voice had even stirred me. I couldn’t remember if I’d touched myself or if this need had simply built by dreaming of her. She climbed onto the bed like a panther graceful, hungry. I didn’t move. Couldn’t. Her thigh brushed mine, her skin hot as coals. She straddled my lap, her cock sliding alongside mine, her eyes locked on mine.
+
+&lt;&lt;passage_img &quot;dream/dream_4/3.png&quot;&gt;&gt;&lt;&lt;/passage_img&gt;&gt;
+
 &lt;span style=&quot;color: blue;&quot;&gt;“You’ve grown,”&lt;/span&gt; she whispered, grinding softly. &lt;span style=&quot;color: blue;&quot;&gt;“Even after the potions began softening your edges. Even with your poor cock shrinking away night after night…”&lt;/span&gt;
-&lt;strong style=&quot;color: purple;&quot;&gt;I moaned as our shafts pressed together. Her weight bore down slowly, her hips circling, teasing friction that made my breath catch.&lt;/strong&gt;
-&lt;strong style=&quot;color: purple;&quot;&gt;“Y you’ve watched me,”&lt;/strong&gt; I whispered. &lt;strong style=&quot;color: purple;&quot;&gt;“You’ve been there. In the shadows.”&lt;/strong&gt;
-&lt;span style=&quot;color: blue;&quot;&gt;“I’ve guarded you,”&lt;/span&gt; she corrected, leaning in. Her lips grazed my jaw, breath warm. &lt;span style=&quot;color: blue;&quot;&gt;“I’ve seen every change. Every twitch. Every ache. You think the magic hasn’t made you beautiful? That I haven’t wanted you since the first time you cried in your sleep, leaking into your sheets from a dream like this?”&lt;/span&gt;
-Her cock throbbed against mine.
+
+I moaned as our shafts pressed together. Her weight bore down slowly, her hips circling, teasing friction that made my breath catch. &lt;strong style=&quot;color: purple;&quot;&gt;“Y you’ve watched me,”&lt;/strong&gt; I whispered. &lt;strong style=&quot;color: purple;&quot;&gt;“You’ve been there. In the shadows.”&lt;/strong&gt;
+
+&lt;span style=&quot;color: blue;&quot;&gt;“I’ve guarded you,”&lt;/span&gt; she corrected, leaning in. Her lips grazed my jaw, breath warm. &lt;span style=&quot;color: blue;&quot;&gt;“I’ve seen every change. Every twitch. Every ache. You think the magic hasn’t made you beautiful? That I haven’t wanted you since the first time you cried in your sleep, leaking into your sheets from a dream like this?”&lt;/span&gt; Her cock throbbed against mine.
+
 &lt;strong style=&quot;color: purple;&quot;&gt;“Please,”&lt;/strong&gt; I whispered, though I didn’t know what I was asking for.
+
 &lt;span style=&quot;color: blue;&quot;&gt;“Not yet,”&lt;/span&gt; she said, licking my earlobe. &lt;span style=&quot;color: blue;&quot;&gt;“I want you to remember this part. The tension. The stretch. The burn. Because one day, when your cock’s finally gone and you ache with emptiness every night… you’ll crave this feeling.”&lt;/span&gt;
+
 She reached down, lifted her shaft, and guided it between my thighs. Not into me just between the cheeks of my ass, pressing, grinding slowly, dragging the thick head against the base of my cock.
+
 &lt;span style=&quot;color: blue;&quot;&gt;“You’re so warm,”&lt;/span&gt; she murmured, kissing down my throat. &lt;span style=&quot;color: blue;&quot;&gt;“So soft back here. You’re almost ready, you know. The cleft’s already forming.”&lt;/span&gt;
+
 She leaned back slightly, looking down between us, stroking both our cocks with one hand, her palm slick with our mixed pre.
+
 &lt;span style=&quot;color: blue;&quot;&gt;“I could slide in so easy,”&lt;/span&gt; she purred. &lt;span style=&quot;color: blue;&quot;&gt;“Just part you like lips part around a tongue.”&lt;/span&gt;
-&lt;strong style=&quot;color: purple;&quot;&gt;“Then do it.”&lt;/strong&gt;
-She chuckled. &lt;span style=&quot;color: blue;&quot;&gt;“Beg first.”&lt;/span&gt;
+
+&lt;strong style=&quot;color: purple;&quot;&gt;“Then do it.”&lt;/strong&gt; She chuckled. &lt;span style=&quot;color: blue;&quot;&gt;“Beg first.”&lt;/span&gt;
+
 &lt;strong style=&quot;color: purple;&quot;&gt;“I please,”&lt;/strong&gt; I gasped. &lt;strong style=&quot;color: purple;&quot;&gt;“Put it in. I need it.”&lt;/strong&gt;
+
 &lt;span style=&quot;color: blue;&quot;&gt;“Mmm… you need it?”&lt;/span&gt; she said, grinding harder. &lt;span style=&quot;color: blue;&quot;&gt;“Say it again. Slower.”&lt;/span&gt;
+
 &lt;strong style=&quot;color: purple;&quot;&gt;“I… need your cock inside me.”&lt;/strong&gt;
+
 &lt;span style=&quot;color: blue;&quot;&gt;“Where?”&lt;/span&gt;
-&lt;strong style=&quot;color: purple;&quot;&gt;“In me. In my my hole.”&lt;/strong&gt;
-She grabbed my thighs and shoved them higher, pressing them toward my chest. My whole body folded under her.
+
+&lt;strong style=&quot;color: purple;&quot;&gt;“In me. In my my hole.”&lt;/strong&gt; She grabbed my thighs and shoved them higher, pressing them toward my chest. My whole body folded under her.
+
 &lt;span style=&quot;color: blue;&quot;&gt;“Good girl.”&lt;/span&gt;
-That name stung and thrilled. She saw it. She believed it.
-She lined up and pushed forward.
-Her cockhead pressed against the tight, sensitive cleft between my thighs slick with magic and leaking seed and slowly, painfully, slid inside.
-&lt;strong style=&quot;color: purple;&quot;&gt;I cried out, back arching.&lt;/strong&gt;
+
+That name stung and thrilled. She saw it. She believed it. She lined up and pushed forward. Her cockhead pressed against the tight, sensitive cleft between my thighs slick with magic and leaking seed and slowly, painfully, slid inside. I cried out, back arching.
+
 &lt;strong style=&quot;color: purple;&quot;&gt;“G GODS !”&lt;/strong&gt;
+
 &lt;span style=&quot;color: blue;&quot;&gt;“Yesss,”&lt;/span&gt; she moaned. &lt;span style=&quot;color: blue;&quot;&gt;“Fuck, you’re tight. Like you were sewn shut and I’m tearing you open.”&lt;/span&gt;
+
 &lt;strong style=&quot;color: purple;&quot;&gt;“You’re too big too thick !”&lt;/strong&gt;
-&lt;span style=&quot;color: blue;&quot;&gt;“And you’re just the right size to take me.”&lt;/span&gt;
-She began to thrust. Each stroke filled me, then left me gaping before sliding back in. Her cock curved perfectly against the new nerves blooming inside me. My eyes rolled back. My cock bounced uselessly against my belly, twitching, already leaking.
+
+&lt;span style=&quot;color: blue;&quot;&gt;“and you’re just the right size to take me.”&lt;/span&gt; She began to thrust. Each stroke filled me, then left me gaping before sliding back in. Her cock curved perfectly against the new nerves blooming inside me. My eyes rolled back. My cock bounced uselessly against my belly, twitching, already leaking.
+
 &lt;strong style=&quot;color: purple;&quot;&gt;“I I’m going to !”&lt;/strong&gt;
+
 &lt;span style=&quot;color: blue;&quot;&gt;“Not yet,”&lt;/span&gt; she snapped. &lt;span style=&quot;color: blue;&quot;&gt;“Hold it.”&lt;/span&gt;
+
 &lt;strong style=&quot;color: purple;&quot;&gt;“I I can’t!”&lt;/strong&gt;
-&lt;span style=&quot;color: blue;&quot;&gt;“You will. Or I stop.”&lt;/span&gt;
-I sobbed and nodded.
-She slowed, then leaned down and kissed me. Her breasts pressed to my chest, her hips grinding into me as her cock stirred every inch of my insides.
+
+&lt;span style=&quot;color: blue;&quot;&gt;“You will. Or I stop.”&lt;/span&gt; I sobbed and nodded. She slowed, then leaned down and kissed me. Her breasts pressed to my chest, her hips grinding into me as her cock stirred every inch of my insides.
+
 &lt;span style=&quot;color: blue;&quot;&gt;“You don’t understand yet,”&lt;/span&gt; she whispered, biting my lip. &lt;span style=&quot;color: blue;&quot;&gt;“But this is how queens are made. Not with crowns. With consecration. With submission. With cum.”&lt;/span&gt;
-My hole clenched at her words. I whimpered.
-She fucked me harder now. The bed shook. The firelight flickered wildly, casting shadows of her perfect body across the walls. Her moans deepened. Her balls slapped my ass. My own cock slapped wetly against her belly, dripping, untouched, achingly close.
+
+My hole clenched at her words. I whimpered. She fucked me harder now. The bed shook. The firelight flickered wildly, casting shadows of her perfect body across the walls. Her moans deepened. Her balls slapped my ass. My own cock slapped wetly against her belly, dripping, untouched, achingly close.
+
 &lt;strong style=&quot;color: purple;&quot;&gt;“I feel nnngh I feel you everywhere ”&lt;/strong&gt;
+
 &lt;span style=&quot;color: blue;&quot;&gt;“You’re mine,”&lt;/span&gt; she growled. &lt;span style=&quot;color: blue;&quot;&gt;“Say it.”&lt;/span&gt;
+
 &lt;strong style=&quot;color: purple;&quot;&gt;“I’m yours!”&lt;/strong&gt;
-&lt;span style=&quot;color: blue;&quot;&gt;“You’re my little queen cunt. Say it.”&lt;/span&gt;
-&lt;strong style=&quot;color: purple;&quot;&gt;“I’m your queen cunt!”&lt;/strong&gt;
-She roared her thrusts grew erratic. Her cock throbbed inside me, thickening 
-Then she came.
-I felt it hot, wet jets flooding my hole, spurting into me again and again until my belly felt tight and full.
-And I exploded.
-Cum shot from my cock in weak, broken spurts. My body spasmed. My legs trembled. I screamed into her mouth.
-She held me through it, rocking gently, riding me down.
-When I came back to myself, she was still inside me, softening slowly.
+
+&lt;span style=&quot;color: blue;&quot;&gt;“You’re my little princess cunt. Say it.”&lt;/span&gt;
+
+&lt;strong style=&quot;color: purple;&quot;&gt;“I’m your princess cunt!”&lt;/strong&gt;
+
+She roared her thrusts grew erratic. Her cock throbbed inside me, thickening Then she came. I felt it hot, wet jets flooding my hole, spurting into me again and again until my belly felt tight and full and I exploded. Cum shot from my cock in weak, broken spurts. My body spasmed. My legs trembled. I screamed into her mouth.
+
+She held me through it, rocking gently, riding me down. When I came back to myself, she was still inside me, softening slowly.
+
 &lt;span style=&quot;color: blue;&quot;&gt;“I’ll be back,”&lt;/span&gt; she whispered. &lt;span style=&quot;color: blue;&quot;&gt;“When the cock is gone. When you ache between your thighs and your mind is too soft to resist.”&lt;/span&gt;
-She pulled out with a slow, slick sound.
-Her cum dripped from me.
-She dressed, shadow cloaking her form again.
-And before I could stop her 
-She vanished.
 
-[[Wake Up|mc_bed_chamber]]</tw-passagedata><tw-passagedata pid="11" name="dream_5" tags="" position="100,225" size="100,100">I dreamed of sand.
+She pulled out with a slow, slick sound. Her cum dripped from me. She dressed, shadow cloaking her form again and before I could stop her She vanished.
 
-Not the soft grains of the royal gardens or the powdered marble dust of the palace baths no. This was coarse, wild sand, burnished gold by a sun that never truly set, even in sleep. The kind of sand that stuck to sweat and blood and sex.
+[[Wake Up|mc_bed_chamber]]</tw-passagedata><tw-passagedata pid="11" name="dream_5" tags="" position="100,225" size="100,100">&lt;&lt;passage_img &quot;dream/dream_5/1.png&quot;&gt;&gt;&lt;&lt;/passage_img&gt;&gt;
 
-I dreamed I was shackled.
+I dreamed of sand. Not the soft grains of the royal gardens or the powdered marble dust of the palace baths no. This was coarse, wild sand, burnished gold by a sun that never truly set, even in sleep. The kind of sand that stuck to sweat and blood and sex. I dreamed I was shackled. Arms stretched overhead, wrists encased in bronze cuffs that clinked softly when I moved. 
 
-Arms stretched overhead, wrists encased in bronze cuffs that clinked softly when I moved. Silk veils hung from the corners of a vast tent around me, dyed in ruby, coral, and burnished gold. The air was thick with incense cardamom, myrrh, and something floral I couldn’t name. A brazier in the corner cast shadows that danced across my bare skin. I was nude, oiled, my body flushed and glistening.
+&lt;&lt;passage_img &quot;dream/dream_5/5.png&quot;&gt;&gt;&lt;&lt;/passage_img&gt;&gt;
 
-And I wasn’t alone.
+Silk veils hung from the corners of a vast tent around me, dyed in ruby, coral, and burnished gold. The air was thick with incense cardamom, myrrh, and something floral I couldn’t name. A brazier in the corner cast shadows that danced across my bare skin. I was nude, oiled, my body flushed and glistening and I wasn’t alone. She entered like wind made flesh. Her skin was the color of ancient honey olive dark and luminous under the torchlight. 
 
-She entered like wind made flesh.
+&lt;&lt;passage_img &quot;dream/dream_5/7.png&quot;&gt;&gt;&lt;&lt;/passage_img&gt;&gt;
 
-Her skin was the color of ancient honey olive dark and luminous under the torchlight. She wore a robe of desert silk, open down the middle to bare her toned stomach, her wide hips, and her massive cock swaying between her thighs, adorned with gold rings and chains. Her breasts were full and high, her nipples pierced with sun shaped studs. A circlet of gold nestled against her brow, framing kohl darkened eyes that glowed with desert heat.
+She wore a robe of desert silk, open down the middle to bare her toned stomach, her wide hips, and her massive cock swaying between her thighs, adorned with gold rings and chains. Her breasts were full and high, her nipples pierced with sun shaped studs. A circlet of gold nestled against her brow, framing kohl darkened eyes that glowed with desert heat.
 
 &lt;span style=&quot;color: red;&quot;&gt;“Prince of Velmoria,”&lt;/span&gt; she said, and her voice was a caress, thick and slow. &lt;span style=&quot;color: red;&quot;&gt;“So far from your mountain cradle. So close to your blooming.”&lt;/span&gt;
 
-&lt;strong style=&quot;color: purple;&quot;&gt;I swallowed.&lt;/strong&gt;
+&lt;strong style=&quot;color: purple;&quot;&gt;“Wh who are you?”&lt;/strong&gt; She smiled, and it made something stir in my belly.
 
-&lt;strong style=&quot;color: purple;&quot;&gt;“Wh who are you?”&lt;/strong&gt;
+&lt;span style=&quot;color: red;&quot;&gt;“I am Empress Azhara, blood of flame and heir of the scorched sands and you… are my bridal gift.”&lt;/span&gt;
 
-She smiled, and it made something stir in my belly.
+&lt;strong style=&quot;color: purple;&quot;&gt;“I’m not yours,”&lt;/strong&gt; I said, though my voice cracked. &lt;strong style=&quot;color: purple;&quot;&gt;“I didn’t agree to ”&lt;/strong&gt; Her hand caught my chin. Her grip was firm. Not cruel. But commanding.
 
-&lt;span style=&quot;color: red;&quot;&gt;“I am Empress Azhara, blood of flame and heir of the scorched sands. And you… are my bridal gift.”&lt;/span&gt;
+&lt;span style=&quot;color: red;&quot;&gt;“Oh, little flower,”&lt;/span&gt; she purred. &lt;span style=&quot;color: red;&quot;&gt;“This is a dream. Agreement is irrelevant. What matters… is reaction.”&lt;/span&gt; She moved closer. I could smell her skin spiced and warm, like sun heated metal. Her cock hung inches from mine, thick and pulsing, the head already glistening. I was hard too. Shamefully so. Despite my fear. Despite the chain. Or because of it.
 
-&lt;strong style=&quot;color: purple;&quot;&gt;“I’m not yours,”&lt;/strong&gt; I said, though my voice cracked. &lt;strong style=&quot;color: purple;&quot;&gt;“I didn’t agree to ”&lt;/strong&gt;
-
-Her hand caught my chin.
-
-Her grip was firm. Not cruel. But commanding.
-
-&lt;span style=&quot;color: red;&quot;&gt;“Oh, little flower,”&lt;/span&gt; she purred. &lt;span style=&quot;color: red;&quot;&gt;“This is a dream. Agreement is irrelevant. What matters… is reaction.”&lt;/span&gt;
-
-She moved closer. I could smell her skin spiced and warm, like sun heated metal. Her cock hung inches from mine, thick and pulsing, the head already glistening. I was hard too. Shamefully so. Despite my fear. Despite the chain. Or because of it.
+&lt;&lt;passage_img &quot;dream/dream_5/3.png&quot;&gt;&gt;&lt;&lt;/passage_img&gt;&gt;
 
 &lt;span style=&quot;color: red;&quot;&gt;“You’ve changed since last we met,”&lt;/span&gt; she said, trailing a nail down my chest. &lt;span style=&quot;color: red;&quot;&gt;“Your hips… softer. Your cock… smaller.”&lt;/span&gt;
 
 &lt;strong style=&quot;color: purple;&quot;&gt;“I didn’t ask for this,”&lt;/strong&gt; I hissed.
 
-&lt;span style=&quot;color: red;&quot;&gt;“No. But you needed it.”&lt;/span&gt;
+&lt;span style=&quot;color: red;&quot;&gt;“No. But you needed it.”&lt;/span&gt; Her hand closed around my shaft.
 
-Her hand closed around my shaft. I gasped.
-
-&lt;span style=&quot;color: red;&quot;&gt;“Still so sensitive,”&lt;/span&gt; she whispered. &lt;span style=&quot;color: red;&quot;&gt;“Even when it twitches like a candle’s last flame.”&lt;/span&gt;
-
-Her other hand stroked her own cock, dragging the heavy length across my thigh. It smeared precum across my skin, leaving a hot, sticky trail.
+&lt;span style=&quot;color: red;&quot;&gt;“Still so sensitive,”&lt;/span&gt; she whispered. &lt;span style=&quot;color: red;&quot;&gt;“Even when it twitches like a candle’s last flame.”&lt;/span&gt; Her other hand stroked her own cock, dragging the heavy length across my thigh. It smeared precum across my skin, leaving a hot, sticky trail.
 
 &lt;span style=&quot;color: red;&quot;&gt;“Do you feel it, little flower?”&lt;/span&gt; she murmured, pressing our cocks together. &lt;span style=&quot;color: red;&quot;&gt;“That fire? That ache? That is what we give our brides before they bloom.”&lt;/span&gt;
 
-&lt;strong style=&quot;color: purple;&quot;&gt;“Bride?”&lt;/strong&gt; I choked. &lt;strong style=&quot;color: purple;&quot;&gt;“I’m no one’s bride.”&lt;/strong&gt;
+&lt;strong style=&quot;color: purple;&quot;&gt;“Bride?”&lt;/strong&gt; I choked. &lt;strong style=&quot;color: purple;&quot;&gt;“I’m no one’s bride.”&lt;/strong&gt; She leaned in, tongue teasing my earlobe.
 
-She leaned in, tongue teasing my earlobe.
+&lt;span style=&quot;color: red;&quot;&gt;“Oh, but you will be. Your body is being readied for it. The magic you drink. The training you endure. It all leads here to surrender. To silk. To seed.”&lt;/span&gt;
 
-&lt;span style=&quot;color: red;&quot;&gt;“Oh, but you will be. Your body is being readied for it. The magic you drink. The training you endure. It all leads here: to surrender. To silk. To seed.”&lt;/span&gt;
+&lt;strong style=&quot;color: purple;&quot;&gt;“I’m not ready,”&lt;/strong&gt; I whispered. She chuckled, deep and rich.
 
-&lt;strong style=&quot;color: purple;&quot;&gt;“I’m not ready,”&lt;/strong&gt; I whispered.
+&lt;span style=&quot;color: red;&quot;&gt;“Your cock says otherwise.”&lt;/span&gt; She began to stroke me both of us gripping our shafts in one hand, rubbing their tips together. The slick heat of her drove my senses wild. My hips rocked forward, helpless, hungry.
 
-She chuckled, deep and rich.
-
-&lt;span style=&quot;color: red;&quot;&gt;“Your cock says otherwise.”&lt;/span&gt;
-
-She began to stroke me both of us gripping our shafts in one hand, rubbing their tips together. The slick heat of her drove my senses wild. My hips rocked forward, helpless, hungry.
-
-&lt;span style=&quot;color: red;&quot;&gt;“There,”&lt;/span&gt; she whispered. &lt;span style=&quot;color: red;&quot;&gt;“Let your body speak. Words are for resistance. Your moans, though… your moans are truth.”&lt;/span&gt;
-
-I bit my lip, but still a groan escaped.
+&lt;span style=&quot;color: red;&quot;&gt;“There,”&lt;/span&gt; she whispered. &lt;span style=&quot;color: red;&quot;&gt;“Let your body speak. Words are for resistance. Your moans, though… your moans are truth.”&lt;/span&gt; I bit my lip, but still a groan escaped.
 
 &lt;span style=&quot;color: red;&quot;&gt;“You like how I feel,”&lt;/span&gt; she said. &lt;span style=&quot;color: red;&quot;&gt;“Say it.”&lt;/span&gt;
 
-&lt;strong style=&quot;color: purple;&quot;&gt;“I… I like it,”&lt;/strong&gt; I gasped.
+&lt;strong style=&quot;color: purple;&quot;&gt;“I… I like it,”&lt;/strong&gt;
 
 &lt;span style=&quot;color: red;&quot;&gt;“Do you like this?”&lt;/span&gt; she asked, thrusting her cock along mine again, her shaft grinding into my belly.
 
+&lt;&lt;passage_img &quot;dream/dream_5/4.png&quot;&gt;&gt;&lt;&lt;/passage_img&gt;&gt;
+
 &lt;strong style=&quot;color: purple;&quot;&gt;“Yes !”&lt;/strong&gt;
 
-&lt;span style=&quot;color: red;&quot;&gt;“And this?”&lt;/span&gt; She lowered her head, kissed me. Her tongue claimed my mouth with slow, sensuous power.
+&lt;span style=&quot;color: red;&quot;&gt;“and this?”&lt;/span&gt; She lowered her head, kissed me. Her tongue claimed my mouth with slow, sensuous power.
 
-&lt;strong style=&quot;color: purple;&quot;&gt;I moaned into her, my chains clinking softly above me.&lt;/strong&gt;
-
-Her hand dropped lower, fingers sliding along the cleft between my cheeks probing, teasing. I flinched.
+&lt;strong style=&quot;color: purple;&quot;&gt;I moaned into her, my chains clinking softly above me.&lt;/strong&gt; Her hand dropped lower, fingers sliding along the cleft between my cheeks probing, teasing. I flinched.
 
 &lt;strong style=&quot;color: purple;&quot;&gt;“No… wait…”&lt;/strong&gt;
 
-&lt;span style=&quot;color: red;&quot;&gt;“Hush,”&lt;/span&gt; she said. &lt;span style=&quot;color: red;&quot;&gt;“I’ll not take until you beg. But I will show you.”&lt;/span&gt;
+&lt;span style=&quot;color: red;&quot;&gt;“Hush,”&lt;/span&gt; she said. &lt;span style=&quot;color: red;&quot;&gt;“I’ll not take until you beg. But I will show you.”&lt;/span&gt; She knelt before me, lips parting around my cock. I gasped as she took me into her mouth, heat engulfing me. Her tongue flicked the head, then swirled down the shaft. She sucked me slowly, savoring, dragging every sound from my throat.
 
-She knelt before me, lips parting around my cock. I gasped as she took me into her mouth, heat engulfing me. Her tongue flicked the head, then swirled down the shaft. She sucked me slowly, savoring, dragging every sound from my throat.
+&lt;strong style=&quot;color: purple;&quot;&gt;“Azhara gods ahh, please !”&lt;/strong&gt; She pulled back.
 
-&lt;strong style=&quot;color: purple;&quot;&gt;“Azhara gods ahh, please !”&lt;/strong&gt;
-
-She pulled back.
-
-&lt;span style=&quot;color: red;&quot;&gt;“Good,”&lt;/span&gt; she said. &lt;span style=&quot;color: red;&quot;&gt;“I want you desperate. I want your body to betray every princely oath.”&lt;/span&gt;
-
-She stood again, and with one motion, bent me forward.
-
-The dream shimmered.
-
-My shackles vanished.
-
-I was on my knees.
-
-Before her cock.
-
-She gripped it and pressed it to my lips.
+&lt;span style=&quot;color: red;&quot;&gt;“Good,”&lt;/span&gt; she said. &lt;span style=&quot;color: red;&quot;&gt;“I want you desperate. I want your body to betray every princely oath.”&lt;/span&gt; She stood again, and with one motion, bent me forward. The dream shimmered. My shackles vanished. I was on my knees. Before her cock. She gripped it and pressed it to my lips.
 
 &lt;span style=&quot;color: red;&quot;&gt;“You know what to do.”&lt;/span&gt;
 
-&lt;strong style=&quot;color: purple;&quot;&gt;I looked up at her. “You’re… huge.”&lt;/strong&gt;
+&lt;&lt;passage_img &quot;dream/dream_5/6.png&quot;&gt;&gt;&lt;&lt;/passage_img&gt;&gt;
 
-&lt;span style=&quot;color: red;&quot;&gt;“And you’re hungry. Take it.”&lt;/span&gt;
+I looked up at her. &lt;strong style=&quot;color: purple;&quot;&gt;“You’re… huge.”&lt;/strong&gt;
 
-&lt;strong style=&quot;color: purple;&quot;&gt;I opened my mouth.&lt;/strong&gt;
+&lt;span style=&quot;color: red;&quot;&gt;“and you’re hungry. Take it.”&lt;/span&gt;
 
-She slid in.
+I opened my mouth. She slid in. Her cock filled my throat inch by inch. I gagged, then relaxed. She moaned above me, her hands in my hair, guiding. Not forcing. Just… leading.
 
-Her cock filled my throat inch by inch. I gagged, then relaxed. She moaned above me, her hands in my hair, guiding. Not forcing. Just… leading.
-
-&lt;span style=&quot;color: red;&quot;&gt;“Yes,”&lt;/span&gt; she said. &lt;span style=&quot;color: red;&quot;&gt;“Take me, pretty prince. Show me how badly you want to be bred.”&lt;/span&gt;
-
-I sucked her, bobbing my head, tongue pressed along the underside of her shaft. She rolled her hips, fucking my mouth with slow, heavy thrusts.
+&lt;span style=&quot;color: red;&quot;&gt;“Yes,”&lt;/span&gt; she said. &lt;span style=&quot;color: red;&quot;&gt;“Take me, pretty prince. Show me how badly you want to be bred.”&lt;/span&gt; I sucked her, bobbing my head, tongue pressed along the underside of her shaft. She rolled her hips, fucking my mouth with slow, heavy thrusts.
 
 &lt;span style=&quot;color: red;&quot;&gt;“You’re good at this,”&lt;/span&gt; she said, breath ragged. &lt;span style=&quot;color: red;&quot;&gt;“Almost like you were trained for it.”&lt;/span&gt;
 
-&lt;strong style=&quot;color: purple;&quot;&gt;I moaned around her.&lt;/strong&gt;
+I moaned around her. She pulled out with a pop.
 
-She pulled out with a pop.
-
-&lt;span style=&quot;color: red;&quot;&gt;“On the bed.”&lt;/span&gt;
-
-&lt;strong style=&quot;color: purple;&quot;&gt;I obeyed.&lt;/strong&gt;
-
-The silk was cool against my skin.
-
-She climbed over me, her cock now resting against my newly forming slit. The heat of her was unbearable. She pressed against me not entering just rubbing, teasing the entrance with steady pressure.
+&lt;span style=&quot;color: red;&quot;&gt;“On the bed.”&lt;/span&gt; I obeyed. The silk was cool against my skin. She climbed over me, her cock now resting against my newly forming slit. The heat of her was unbearable. She pressed against me not entering just rubbing, teasing the entrance with steady pressure.
 
 &lt;span style=&quot;color: red;&quot;&gt;“I want you to ask for it.”&lt;/span&gt;
 
@@ -8184,216 +8156,231 @@ She climbed over me, her cock now resting against my newly forming slit. The hea
 
 &lt;span style=&quot;color: red;&quot;&gt;“Ask.”&lt;/span&gt;
 
-&lt;strong style=&quot;color: purple;&quot;&gt;“Breed me,”&lt;/strong&gt; I whispered. &lt;strong style=&quot;color: purple;&quot;&gt;“I want it. Fill me. Make me yours.”&lt;/strong&gt;
+&lt;strong style=&quot;color: purple;&quot;&gt;“Breed me,”&lt;/strong&gt; I whispered. &lt;strong style=&quot;color: purple;&quot;&gt;“I want it. Fill me. Make me yours.”&lt;/strong&gt; Her eyes burned like dusk fire.
 
-Her eyes burned like dusk fire.
+&lt;span style=&quot;color: red;&quot;&gt;“Now you’re speaking the language of queens.”&lt;/span&gt; and she entered. Slowly. Deeply. With infinite power.
 
-&lt;span style=&quot;color: red;&quot;&gt;“Now you’re speaking the language of queens.”&lt;/span&gt;
+[[Wake Up|mc_bed_chamber]]</tw-passagedata><tw-passagedata pid="12" name="dream_6" tags="" position="225,225" size="100,100">&lt;&lt;passage_img &quot;dream/dream_6/1.png&quot;&gt;&gt;&lt;&lt;/passage_img&gt;&gt;
 
-And she entered.
+The water shimmered crimson under candlelight perfumed steam curling up in rose scented ribbons. Cinnamon lingered on the air, heavy and rich, curling in my nose and behind my eyes like memory. The marble bath stretched wide beneath me, veins of silver running like ancient script through the red stone. The tub had no edge, only a smooth lip that let water flow endlessly into the tiled floor, like blood from an open wound that never dried. I lay against the sloped back, arms draped lazily to either side, thighs parted, the warm water lapping at my hips.
 
-Slowly.
+&lt;&lt;passage_img &quot;dream/dream_6/2.png&quot;&gt;&gt;&lt;&lt;/passage_img&gt;&gt;
 
-Deeply.
+I should have been ashamed. I should have covered myself. But the dream had no space for modesty. Only sensation. Two figures moved around me with reverence. Maera my longtime attendant, with soft dark curls pinned high, her olive skin glowing in the flickering light was closest. Her robe was sheer, so thin it may as well have been fog. Her nipples peeked through the gauze like dusky buds, and when she leaned forward to pour water across my chest, her full breasts swayed softly beneath the fabric.
 
-With infinite power.
-
-[[Wake Up|mc_bed_chamber]]</tw-passagedata><tw-passagedata pid="12" name="dream_6" tags="" position="225,225" size="100,100">The water shimmered crimson under candlelight perfumed steam curling up in rose scented ribbons. Cinnamon lingered on the air, heavy and rich, curling in my nose and behind my eyes like memory.
-The marble bath stretched wide beneath me, veins of silver running like ancient script through the red stone. The tub had no edge, only a smooth lip that let water flow endlessly into the tiled floor, like blood from an open wound that never dried. I lay against the sloped back, arms draped lazily to either side, thighs parted, the warm water lapping at my hips.
-I should have been ashamed.
-I should have covered myself.
-But the dream had no space for modesty.
-Only sensation.
-Two figures moved around me with reverence.
-Maera my longtime attendant, with soft dark curls pinned high, her olive skin glowing in the flickering light was closest. Her robe was sheer, so thin it may as well have been fog. Her nipples peeked through the gauze like dusky buds, and when she leaned forward to pour water across my chest, her full breasts swayed softly beneath the fabric.
 &lt;span style=&quot;color: red;&quot;&gt;“You’re very quiet tonight, my prince,”&lt;/span&gt; she murmured, her voice like warm milk and slow kisses. &lt;span style=&quot;color: red;&quot;&gt;“Is the water too hot?”&lt;/span&gt;
-&lt;strong style=&quot;color: purple;&quot;&gt;“No,”&lt;/strong&gt; I said softly. &lt;strong style=&quot;color: purple;&quot;&gt;“It’s perfect.”&lt;/strong&gt;
-&lt;span style=&quot;color: red;&quot;&gt;“You look flushed.”&lt;/span&gt;
-&lt;strong style=&quot;color: purple;&quot;&gt;“I… feel different.”&lt;/strong&gt;
-&lt;span style=&quot;color: red;&quot;&gt;“You are,”&lt;/span&gt; she said, dipping the sponge in the water again. &lt;span style=&quot;color: red;&quot;&gt;“Different every night now. Softer. Warmer. It suits you.”&lt;/span&gt;
-I should have bristled. But the sponge brushed across my chest, and I melted instead.
-&lt;strong style=&quot;color: purple;&quot;&gt;“And who’s… the new one?”&lt;/strong&gt; I asked, as the second attendant knelt at the far end of the tub.
-She hadn’t spoken since I arrived. Her hair was raven black, long and straight, falling in a curtain down her back. Her eyes were violet unnatural, vivid, like shards of amethyst catching fire. She wore lace. Just lace. A sheer slip of black that clung to the curves of her hips and dipped just barely over her cock, which twitched visibly with every movement beneath the fabric.
-Maera smiled, dipping the sponge lower, letting it swirl across my belly.
-&lt;span style=&quot;color: red;&quot;&gt;“She’s a gift,”&lt;/span&gt; she whispered. &lt;span style=&quot;color: red;&quot;&gt;“A temporary indulgence. Her name doesn’t matter. Only her mouth.”&lt;/span&gt;
-The violet eyed girl looked up at me.
-Her lips parted, but no words came.
-Just the quiet flick of her tongue against her lower lip.
-&lt;strong style=&quot;color: purple;&quot;&gt;“She doesn’t speak?”&lt;/strong&gt; I asked.
-&lt;span style=&quot;color: red;&quot;&gt;“She hasn’t needed to,”&lt;/span&gt; Maera replied.
-Then her voice dipped lower.
-&lt;span style=&quot;color: red;&quot;&gt;“But you will.”&lt;/span&gt;
-&lt;strong style=&quot;color: purple;&quot;&gt;I gasped as the girl’s hands slid along my thighs underwater, parting them gently. Her mouth kissed the inside of my knee. Then lower. Then &lt;/strong&gt;
-&lt;strong style=&quot;color: purple;&quot;&gt;“Ohh… gods…”&lt;/strong&gt;
-Her tongue brushed the underside of my cock.
-Maera giggled softly. &lt;span style=&quot;color: red;&quot;&gt;“You’re already so sensitive. And so… small.”&lt;/span&gt;
-&lt;strong style=&quot;color: purple;&quot;&gt;I bit my lip.&lt;/strong&gt;
-&lt;strong style=&quot;color: purple;&quot;&gt;“You’ve noticed it too,”&lt;/strong&gt; I said, almost a confession.
-She nodded, her eyes kind and unashamed.
-&lt;span style=&quot;color: red;&quot;&gt;“You’re shrinking, Caelan. In all the right places.”&lt;/span&gt;
-The girl’s tongue traced a slow line up my shaft. My cock twitched in response, helpless. Her lips wrapped around the head, and I moaned softly.
-&lt;span style=&quot;color: red;&quot;&gt;“You feel no shame?”&lt;/span&gt; Maera asked.
-&lt;strong style=&quot;color: purple;&quot;&gt;“No,”&lt;/strong&gt; I whispered, panting.
-&lt;span style=&quot;color: red;&quot;&gt;“Good. That’s a queen’s first freedom. No shame in pleasure.”&lt;/span&gt;
-She let the sponge fall aside and climbed into the tub with me. Her robe clung wetly to her skin, nipples stiff against the fabric. She sat beside me, one leg draped over mine, her fingers tracing small circles around my nipple.
-The girl between my legs sucked harder now lips tight, tongue flicking slurping, wet and obscene.
-&lt;strong style=&quot;color: purple;&quot;&gt;“Fuck ahhh ”&lt;/strong&gt;
-&lt;span style=&quot;color: red;&quot;&gt;“Language,”&lt;/span&gt; Maera whispered, flicking my nipple. &lt;span style=&quot;color: red;&quot;&gt;“You’ll need to speak more like a lady soon.”&lt;/span&gt;
-&lt;strong style=&quot;color: purple;&quot;&gt;“I I can’t think ”&lt;/strong&gt;
-&lt;span style=&quot;color: red;&quot;&gt;“That’s her job.”&lt;/span&gt;
-The girl moaned around my cock, humming as she absorbed. The vibration made me buck.
-Maera leaned in, kissed my temple.
-&lt;span style=&quot;color: red;&quot;&gt;“You taste different, too,”&lt;/span&gt; she whispered. &lt;span style=&quot;color: red;&quot;&gt;“More honey than salt. More maiden than man.”&lt;/span&gt;
-&lt;strong style=&quot;color: purple;&quot;&gt;“You’ve tasted me?”&lt;/strong&gt;
-&lt;span style=&quot;color: red;&quot;&gt;“Many times. You just don’t remember. Dreams are strange like that.”&lt;/span&gt;
-The girl sucked harder now. My hands gripped the sides of the tub. Maera’s fingers pinched my nipple, rolled it between her fingers.
-&lt;strong style=&quot;color: purple;&quot;&gt;“I’m gonna g gonna come ”&lt;/strong&gt;
-Maera purred, tongue licking my earlobe.
-&lt;span style=&quot;color: red;&quot;&gt;“Then let her drink it. You’ve earned it.”&lt;/span&gt;
-I cried out, hips lifting as I spilled into the violet eyed girl’s mouth. She drank every drop, her eyes never leaving mine.
-And when I was empty 
-She kept going.
-Licking.
-Sucking.
-Teasing.
-&lt;strong style=&quot;color: purple;&quot;&gt;“Oh gods too much !”&lt;/strong&gt;
-&lt;span style=&quot;color: red;&quot;&gt;“She doesn’t stop until I tell her,”&lt;/span&gt; Maera whispered. &lt;span style=&quot;color: red;&quot;&gt;“And I haven’t.”&lt;/span&gt;
-The girl moaned again, cock now fully hard beneath the lace. It throbbed against the edge of the tub. She grinded against the marble, soft cries escaping her throat.
-Maera leaned down and kissed me on the lips.
-It wasn’t gentle.
-It was possession.
-&lt;span style=&quot;color: red;&quot;&gt;“You’re going to be beautiful,”&lt;/span&gt; she said. &lt;span style=&quot;color: red;&quot;&gt;“Your pussy will open like a rose. Your skin will glow like morning silk. And when that day comes…”&lt;/span&gt;
-She looked down at the girl between my legs.
-&lt;span style=&quot;color: red;&quot;&gt;“…she’ll fuck you properly.”&lt;/span&gt;
-The girl moaned in agreement, her tongue now tracing down lower… toward the cleft.
-Toward the new part of me.
-&lt;strong style=&quot;color: purple;&quot;&gt;My breath caught.&lt;/strong&gt;
-&lt;strong style=&quot;color: purple;&quot;&gt;“I there’s nothing there yet ”&lt;/strong&gt;
-&lt;span style=&quot;color: red;&quot;&gt;“There is,”&lt;/span&gt; Maera said, her hand now sliding between my legs. &lt;span style=&quot;color: red;&quot;&gt;“Feel it? That softness? That line forming? That warmth that wasn’t there last week?”&lt;/span&gt;
-Her fingers pressed.
-&lt;strong style=&quot;color: purple;&quot;&gt;I gasped.&lt;/strong&gt;
-&lt;strong style=&quot;color: purple;&quot;&gt;“Yes… yes I feel it…”&lt;/strong&gt;
-&lt;span style=&quot;color: red;&quot;&gt;“She’ll make love to that. Gently. And then… less gently.”&lt;/span&gt;
-&lt;strong style=&quot;color: purple;&quot;&gt;I whimpered as the girl’s tongue traced the forming slit.&lt;/strong&gt;
-Maera kissed me again.
-&lt;span style=&quot;color: red;&quot;&gt;“You’re already wet.”&lt;/span&gt;
-And I was.
 
-Maera’s breath was sweet with wine and rose. Her fingers wet from the bath, slick from my body caressed lower now. Past the base of my softening cock. Further down, between my thighs. She parted me.
-Not completely.
-Not yet.
-But enough.
-I felt the warmth again.
-The ache.
-The split.
-The place where something new had begun to form.
-A line that had deepened each week, where skin once unbroken now pulsed and throbbed with unfamiliar need.
+&lt;strong style=&quot;color: purple;&quot;&gt;“No,”&lt;/strong&gt; I said softly. &lt;strong style=&quot;color: purple;&quot;&gt;“It’s perfect.”&lt;/strong&gt;
+
+&lt;span style=&quot;color: red;&quot;&gt;“You look flushed.”&lt;/span&gt;
+
+&lt;strong style=&quot;color: purple;&quot;&gt;“I… feel different.”&lt;/strong&gt;
+
+&lt;span style=&quot;color: red;&quot;&gt;“You are,”&lt;/span&gt; she said, dipping the sponge in the water again. &lt;span style=&quot;color: red;&quot;&gt;“Different every night now. Softer. Warmer. It suits you.”&lt;/span&gt;
+
+I should have bristled. But the sponge brushed across my chest, and I melted instead.
+
+&lt;strong style=&quot;color: purple;&quot;&gt;“and who’s… the new one?”&lt;/strong&gt; I asked, as the second attendant knelt at the far end of the tub.
+
+&lt;&lt;passage_img &quot;dream/dream_6/3.png&quot;&gt;&gt;&lt;&lt;/passage_img&gt;&gt;
+
+She hadn’t spoken since I arrived. Her hair was raven black, long and straight, falling in a curtain down her back. Her eyes were violet unnatural, vivid, like shards of amethyst catching fire. She wore lace. Just lace. A sheer slip of black that clung to the curves of her hips and dipped just barely over her cock, which twitched visibly with every movement beneath the fabric. Maera smiled, dipping the sponge lower, letting it swirl across my belly.
+
+&lt;span style=&quot;color: red;&quot;&gt;“She’s a gift,”&lt;/span&gt; she whispered. &lt;span style=&quot;color: red;&quot;&gt;“A temporary indulgence. Her name doesn’t matter. Only her mouth.”&lt;/span&gt;
+
+The violet eyed girl looked up at me. Her lips parted, but no words came. Just the quiet flick of her tongue against her lower lip.
+
+&lt;strong style=&quot;color: purple;&quot;&gt;“She doesn’t speak?”&lt;/strong&gt; I asked.
+
+&lt;span style=&quot;color: red;&quot;&gt;“She hasn’t needed to,”&lt;/span&gt; Maera replied. Then her voice dipped lower.
+
+&lt;span style=&quot;color: red;&quot;&gt;“But you will.”&lt;/span&gt;
+
+I gasped as the girl’s hands slid along my thighs underwater, parting them gently. Her mouth kissed the inside of my knee. Then lower. Then &lt;strong style=&quot;color: purple;&quot;&gt;“Ohh… gods…”&lt;/strong&gt; Her tongue brushed the underside of my cock.
+
+Maera giggled softly. &lt;span style=&quot;color: red;&quot;&gt;“You’re already so sensitive. and so… small.”&lt;/span&gt;
+
+I bit my lip. &lt;strong style=&quot;color: purple;&quot;&gt;“You’ve noticed it too,”&lt;/strong&gt; I said, almost a confession. She nodded, her eyes kind and unashamed.
+
+&lt;span style=&quot;color: red;&quot;&gt;“You’re shrinking, Caelan. In all the right places.”&lt;/span&gt;
+
+The girl’s tongue traced a slow line up my shaft. My cock twitched in response, helpless. Her lips wrapped around the head, and I moaned softly.
+
+&lt;span style=&quot;color: red;&quot;&gt;“You feel no shame?”&lt;/span&gt; Maera asked.
+
+&lt;strong style=&quot;color: purple;&quot;&gt;“No,”&lt;/strong&gt; I whispered, panting.
+
+&lt;span style=&quot;color: red;&quot;&gt;“Good. That’s a queen’s first freedom. No shame in pleasure.”&lt;/span&gt; She let the sponge fall aside and climbed into the tub with me. Her robe clung wetly to her skin, nipples stiff against the fabric. She sat beside me, one leg draped over mine, her fingers tracing small circles around my nipple.
+
+The girl between my legs sucked harder now lips tight, tongue flicking slurping, wet and obscene. &lt;strong style=&quot;color: purple;&quot;&gt;“Fuck ahhh ”&lt;/strong&gt;
+
+&lt;span style=&quot;color: red;&quot;&gt;“Language,”&lt;/span&gt; Maera whispered, flicking my nipple. &lt;span style=&quot;color: red;&quot;&gt;“You’ll need to speak more like a lady soon.”&lt;/span&gt;
+
+&lt;strong style=&quot;color: purple;&quot;&gt;“I I can’t think ”&lt;/strong&gt;
+
+&lt;span style=&quot;color: red;&quot;&gt;“That’s her job.”&lt;/span&gt; The girl moaned around my cock, humming as she absorbed. The vibration made me buck. Maera leaned in, kissed my temple.
+
+&lt;span style=&quot;color: red;&quot;&gt;“You taste different, too,”&lt;/span&gt; she whispered. &lt;span style=&quot;color: red;&quot;&gt;“More honey than salt. More maiden than man.”&lt;/span&gt;
+
+&lt;strong style=&quot;color: purple;&quot;&gt;“You’ve tasted me?”&lt;/strong&gt;
+
+&lt;span style=&quot;color: red;&quot;&gt;“Many times. You just don’t remember. Dreams are strange like that.”&lt;/span&gt;
+
+The girl sucked harder now. My hands gripped the sides of the tub. Maera’s fingers pinched my nipple, rolled it between her fingers.
+
+&lt;strong style=&quot;color: purple;&quot;&gt;“I’m gonna g gonna come ”&lt;/strong&gt; Maera purred, tongue licking my earlobe.
+
+&lt;span style=&quot;color: red;&quot;&gt;“Then let her drink it. You’ve earned it.”&lt;/span&gt;
+
+I cried out, hips lifting as I spilled into the violet eyed girl’s mouth. She drank every drop, her eyes never leaving mine and when I was empty  She kept going. Licking. Sucking. Teasing.
+
+&lt;strong style=&quot;color: purple;&quot;&gt;“Oh gods too much !”&lt;/strong&gt;
+
+&lt;span style=&quot;color: red;&quot;&gt;“She doesn’t stop until I tell her,”&lt;/span&gt; Maera whispered. &lt;span style=&quot;color: red;&quot;&gt;“and I haven’t.”&lt;/span&gt;
+
+The girl moaned again, cock now fully hard beneath the lace. It throbbed against the edge of the tub. She grinded against the marble, soft cries escaping her throat. Maera leaned down and kissed me on the lips. It wasn’t gentle. It was possession.
+
+&lt;span style=&quot;color: red;&quot;&gt;“You’re going to be beautiful,”&lt;/span&gt; she said. &lt;span style=&quot;color: red;&quot;&gt;“Your pussy will open like a rose. Your skin will glow like morning silk and when that day comes…”&lt;/span&gt; She looked down at the girl between my legs.
+
+&lt;span style=&quot;color: red;&quot;&gt;“…she’ll fuck you properly.”&lt;/span&gt; The girl moaned in agreement, her tongue now tracing down lower… toward the cleft. Toward the new part of me.
+
+My breath caught. &lt;strong style=&quot;color: purple;&quot;&gt;“I there’s nothing there yet ”&lt;/strong&gt;
+
+&lt;span style=&quot;color: red;&quot;&gt;“There is,”&lt;/span&gt; Maera said, her hand now sliding between my legs. &lt;span style=&quot;color: red;&quot;&gt;“Feel it? That softness? That line forming? That warmth that wasn’t there last week?”&lt;/span&gt; Her fingers pressed.
+
+&lt;strong style=&quot;color: purple;&quot;&gt;“Yes… yes I feel it…”&lt;/strong&gt;
+
+&lt;span style=&quot;color: red;&quot;&gt;“She’ll make love to that. Gently and then… less gently.”&lt;/span&gt;
+
+&lt;strong style=&quot;color: purple;&quot;&gt;I whimpered as the girl’s tongue traced the forming slit.&lt;/strong&gt; Maera kissed me again.
+
+&lt;span style=&quot;color: red;&quot;&gt;“You’re already wet.”&lt;/span&gt; and I was.
+
+Maera’s breath was sweet with wine and rose. Her fingers wet from the bath, slick from my body caressed lower now. Past the base of my softening cock. Further down, between my thighs. She parted me. Not completely. Not yet. But enough.
+
+&lt;&lt;passage_img &quot;dream/dream_6/4.png&quot;&gt;&gt;&lt;&lt;/passage_img&gt;&gt;
+
+I felt the warmth again. The ache. The split. The place where something new had begun to form. A line that had deepened each week, where skin once unbroken now pulsed and throbbed with unfamiliar need.
+
 &lt;span style=&quot;color: red;&quot;&gt;“She’s right here,”&lt;/span&gt; Maera whispered, voice honey thick. &lt;span style=&quot;color: red;&quot;&gt;“Just beneath the surface.”&lt;/span&gt;
+
 &lt;strong style=&quot;color: purple;&quot;&gt;“I she?”&lt;/strong&gt;
+
 &lt;span style=&quot;color: red;&quot;&gt;“You,”&lt;/span&gt; Maera corrected. &lt;span style=&quot;color: red;&quot;&gt;“The real you. You’re softening in all the right ways.”&lt;/span&gt;
+
 The maid’s tongue pressed there. Lower now. Slower. She licked the line, flicked her tongue gently against it, coaxing moans from deep in my chest I didn’t recognize as mine.
+
 &lt;span style=&quot;color: blue;&quot;&gt;“You taste like a promise,”&lt;/span&gt; she said suddenly her voice dreamy, faintly accented. &lt;span style=&quot;color: blue;&quot;&gt;“Like sex that’s still becoming. I love that taste.”&lt;/span&gt;
-&lt;strong style=&quot;color: purple;&quot;&gt;I gasped.&lt;/strong&gt;
+
 &lt;strong style=&quot;color: purple;&quot;&gt;“You can… speak.”&lt;/strong&gt;
-&lt;span style=&quot;color: red;&quot;&gt;“She speaks when it matters,”&lt;/span&gt; Maera murmured. &lt;span style=&quot;color: red;&quot;&gt;“And it matters now.”&lt;/span&gt;
+
+&lt;span style=&quot;color: red;&quot;&gt;“She speaks when it matters,”&lt;/span&gt; Maera murmured. &lt;span style=&quot;color: red;&quot;&gt;“and it matters now.”&lt;/span&gt;
+
 The maid’s mouth found me again. Her tongue was insistent, wet and strong and slow. She licked between my thighs in steady circles, teasing the forming slit, sucking just under my balls. Every time she moaned, it vibrated through my hips.
-&lt;strong style=&quot;color: purple;&quot;&gt;I squirmed.&lt;/strong&gt;
-&lt;strong style=&quot;color: purple;&quot;&gt;“Fuck, that feels ah too good ”&lt;/strong&gt;
-Maera kissed my neck, then bit gently at my collarbone.
-&lt;span style=&quot;color: red;&quot;&gt;“You’ll stop saying ‘fuck’ eventually. You’ll say ‘gods’ instead. Or ‘please.’ Or nothing at all, because you’ll be too full to speak.”&lt;/span&gt;
-The maid lifted her head slightly, her lips slick with my sweat and her spit.
-&lt;span style=&quot;color: blue;&quot;&gt;“He’s already dripping,”&lt;/span&gt; she whispered. &lt;span style=&quot;color: blue;&quot;&gt;“And I haven’t even slid my cock in yet.”&lt;/span&gt;
-&lt;strong style=&quot;color: purple;&quot;&gt;I looked down.&lt;/strong&gt;
-Her cock strained against the black lace, tip already leaking. The lace was nearly transparent, soaked with her arousal.
-Maera reached down and tugged it aside.
-&lt;strong style=&quot;color: purple;&quot;&gt;“Oh gods ”&lt;/strong&gt;
-It sprang free thick, straight, veined and flushed, the head wide and flat, dark as ripe berries. She pumped it slowly, eyes half lidded, watching me writhe.
+
+&lt;strong style=&quot;color: purple;&quot;&gt;“Fuck, that feels ah too good ”&lt;/strong&gt; Maera kissed my neck, then bit gently at my collarbone.
+
+&lt;span style=&quot;color: red;&quot;&gt;“You’ll stop saying ‘fuck’ eventually. You’ll say ‘gods’ instead. Or ‘please.’ Or nothing at all, because you’ll be too full to speak.”&lt;/span&gt; The maid lifted her head slightly, her lips slick with my sweat and her spit.
+
+&lt;span style=&quot;color: blue;&quot;&gt;“He’s already dripping,”&lt;/span&gt; she whispered. &lt;span style=&quot;color: blue;&quot;&gt;“and I haven’t even slid my cock in yet.”&lt;/span&gt;
+
+Her cock strained against the black lace, tip already leaking. The lace was nearly transparent, soaked with her arousal. Maera reached down and tugged it aside.
+
+&lt;&lt;passage_img &quot;dream/dream_6/5.png&quot;&gt;&gt;&lt;&lt;/passage_img&gt;&gt;
+
+&lt;strong style=&quot;color: purple;&quot;&gt;“Oh gods ”&lt;/strong&gt; It sprang free thick, straight, veined and flushed, the head wide and flat, dark as ripe berries. She pumped it slowly, eyes half lidded, watching me writhe.
+
 &lt;span style=&quot;color: red;&quot;&gt;“She’s not going to fuck you, Caelan,”&lt;/span&gt; Maera whispered. &lt;span style=&quot;color: red;&quot;&gt;“Not unless you ask.”&lt;/span&gt;
+
 &lt;strong style=&quot;color: purple;&quot;&gt;“I don’t ”&lt;/strong&gt;
+
 &lt;span style=&quot;color: red;&quot;&gt;“Ask,”&lt;/span&gt; she repeated. &lt;span style=&quot;color: red;&quot;&gt;“This dream only goes as far as your voice allows.”&lt;/span&gt;
-&lt;strong style=&quot;color: purple;&quot;&gt;“I… I don’t know how.”&lt;/strong&gt;
-The maid knelt between my legs again, her cock brushing my thigh, painting me with precum. Her eyes were focused, but gentle.
+
+&lt;strong style=&quot;color: purple;&quot;&gt;“I… I don’t know how.”&lt;/strong&gt; The maid knelt between my legs again, her cock brushing my thigh, painting me with precum. Her eyes were focused, but gentle.
+
 &lt;span style=&quot;color: blue;&quot;&gt;“You want me to show you,”&lt;/span&gt; she said. &lt;span style=&quot;color: blue;&quot;&gt;“Say it.”&lt;/span&gt;
+
 &lt;strong style=&quot;color: purple;&quot;&gt;“I… want you to show me.”&lt;/strong&gt;
-&lt;span style=&quot;color: blue;&quot;&gt;“Where do you want me?”&lt;/span&gt;
-Maera kissed my ear.
+
+&lt;span style=&quot;color: blue;&quot;&gt;“Where do you want me?”&lt;/span&gt; Maera kissed my ear.
+
 &lt;span style=&quot;color: red;&quot;&gt;“Say it, Caelan. Where?”&lt;/span&gt;
-&lt;strong style=&quot;color: purple;&quot;&gt;I closed my eyes.&lt;/strong&gt;
-&lt;strong style=&quot;color: purple;&quot;&gt;“In my… new place. Between.”&lt;/strong&gt;
-The maid grinned.
+
+I closed my eyes. &lt;strong style=&quot;color: purple;&quot;&gt;“In my… new place. Between.”&lt;/strong&gt; The maid grinned.
+
 &lt;span style=&quot;color: blue;&quot;&gt;“Say ‘pussy.’”&lt;/span&gt;
-&lt;strong style=&quot;color: purple;&quot;&gt;I blushed.&lt;/strong&gt;
-&lt;strong style=&quot;color: purple;&quot;&gt;“I can’t.”&lt;/strong&gt;
+
+I blushed. &lt;strong style=&quot;color: purple;&quot;&gt;“I can’t.”&lt;/strong&gt;
+
 &lt;span style=&quot;color: red;&quot;&gt;“You can,”&lt;/span&gt; Maera whispered. &lt;span style=&quot;color: red;&quot;&gt;“You have one now. Even if it’s not done blooming. Even if it’s still learning what it is. Say it. Claim it.”&lt;/span&gt;
-&lt;strong style=&quot;color: purple;&quot;&gt;I opened my mouth.&lt;/strong&gt;
-&lt;strong style=&quot;color: purple;&quot;&gt;“My… pussy.”&lt;/strong&gt;
-The word fell like a stone in a still pond.
-Both women sighed.
+
+I opened my mouth. &lt;strong style=&quot;color: purple;&quot;&gt;“My… pussy.”&lt;/strong&gt; The word fell like a stone in a still pond. Both women sighed.
+
 &lt;span style=&quot;color: red;&quot;&gt;“There,”&lt;/span&gt; Maera purred. &lt;span style=&quot;color: red;&quot;&gt;“There she is.”&lt;/span&gt;
+
 The maid aligned her cock with me. I could feel it right there, thick and hot, nudging against my forming cleft. The pressure made me arch.
+
 &lt;strong style=&quot;color: purple;&quot;&gt;“I don’t think I can take it,”&lt;/strong&gt; I whispered.
-&lt;span style=&quot;color: blue;&quot;&gt;“You don’t take it,”&lt;/span&gt; the maid said. &lt;span style=&quot;color: blue;&quot;&gt;“You receive. You welcome.”&lt;/span&gt;
-Her cockhead pressed harder, parting the new folds gently.
-&lt;strong style=&quot;color: purple;&quot;&gt;And she slid inside.&lt;/strong&gt;
-&lt;strong style=&quot;color: purple;&quot;&gt;I screamed.&lt;/strong&gt;
-A high, sharp moan not pain, not entirely. Just overload.
-Every nerve exploded as she buried the head inside me.
+
+&lt;span style=&quot;color: blue;&quot;&gt;“You don’t take it,”&lt;/span&gt; the maid said. &lt;span style=&quot;color: blue;&quot;&gt;“You receive. You welcome.”&lt;/span&gt; Her cockhead pressed harder, parting the new folds gently and she slid inside.
+
+&lt;strong style=&quot;color: purple;&quot;&gt;I screamed.&lt;/strong&gt; A high, sharp moan not pain, not entirely. Just overload. Every nerve exploded as she buried the head inside me.
+
 &lt;span style=&quot;color: blue;&quot;&gt;“It’s so tight,”&lt;/span&gt; the maid gasped, holding still. &lt;span style=&quot;color: blue;&quot;&gt;“You’re already clutching me. Fuck ”&lt;/span&gt;
-Maera kissed me, long and deep. Her tongue silenced my cries. Her fingers held my thighs open as the maid began to thrust.
-Slowly.
-She rocked her hips, working inch after inch inside me, letting my body adjust.
+
+Maera kissed me, long and deep. Her tongue silenced my cries. Her fingers held my thighs open as the maid began to thrust. Slowly. She rocked her hips, working inch after inch inside me, letting my body adjust.
+
 &lt;span style=&quot;color: blue;&quot;&gt;“You’re perfect,”&lt;/span&gt; she whispered. &lt;span style=&quot;color: blue;&quot;&gt;“You’re so warm. So wet. You were made for this.”&lt;/span&gt;
+
 &lt;strong style=&quot;color: purple;&quot;&gt;“I I feel you everywhere ”&lt;/strong&gt;
+
 &lt;span style=&quot;color: blue;&quot;&gt;“You should.”&lt;/span&gt;
-Her cock slid deeper. The shape of her stretched me open in a way I didn’t know I could take. But I did. My legs trembled, my back arched. I groaned as her hips pressed flush with mine.
-Maera brushed hair from my eyes, lips brushing my cheek.
+
+Her cock slid deeper. The shape of her stretched me open in a way I didn’t know I could take. But I did. My legs trembled, my back arched. I groaned as her hips pressed flush with mine. Maera brushed hair from my eyes, lips brushing my cheek.
+
 &lt;span style=&quot;color: red;&quot;&gt;“Say it again,”&lt;/span&gt; she whispered. &lt;span style=&quot;color: red;&quot;&gt;“Say what she’s fucking.”&lt;/span&gt;
-&lt;strong style=&quot;color: purple;&quot;&gt;“My… pussy.”&lt;/strong&gt;
-Louder.
-&lt;strong style=&quot;color: purple;&quot;&gt;“My pussy.”&lt;/strong&gt;
-The maid fucked me harder.
-&lt;strong style=&quot;color: purple;&quot;&gt;My voice broke into a cry.&lt;/strong&gt;
+
+&lt;strong style=&quot;color: purple;&quot;&gt;“My… pussy.”&lt;/strong&gt; Louder.
+
+&lt;strong style=&quot;color: purple;&quot;&gt;“My pussy.”&lt;/strong&gt; The maid fucked me harder. My voice broke into a cry.
+
 I felt her cock slide against something inside me something tender and new. A place that hadn’t existed before this year. It sent lightning through my spine.
-&lt;strong style=&quot;color: purple;&quot;&gt;“There gods there!”&lt;/strong&gt;
-She found it again.
-And again.
-My pussy clenched, pulsing, spasming with raw pleasure.
+
+&lt;strong style=&quot;color: purple;&quot;&gt;“There gods there!”&lt;/strong&gt; She found it again and again. My pussy clenched, pulsing, spasming with raw pleasure.
+
 &lt;strong style=&quot;color: purple;&quot;&gt;“I’m gonna g gonna ”&lt;/strong&gt;
+
 &lt;span style=&quot;color: blue;&quot;&gt;“Come,”&lt;/span&gt; the maid said. &lt;span style=&quot;color: blue;&quot;&gt;“Come on my cock.”&lt;/span&gt;
-Maera kissed me as I screamed.
-I came.
-Not from my cock. It barely twitched, a small spurt painting my belly. But the real climax came from deeper from within. My pussy clenched, waves of release crashing over me. I cried into Maera’s mouth.
-The maid fucked me through it.
-And then she came too.
-With a low, guttural moan, she drove deep, hips jerking. Her cock pulsed inside me, flooding me with thick, hot seed. I felt it spill, then stay. My hole clung to her, keeping it in.
-She collapsed over me, face buried in my neck.
-Maera smiled.
-&lt;span style=&quot;color: red;&quot;&gt;“There,”&lt;/span&gt; she whispered. &lt;span style=&quot;color: red;&quot;&gt;“You’ve been bathed. And now you’ve been blessed.”&lt;/span&gt;
+
+Maera kissed me as I screamed. I came. Not from my cock. It barely twitched, a small spurt painting my belly. But the real climax came from deeper from within. My pussy clenched, waves of release crashing over me. I cried into Maera’s mouth.
+
+The maid fucked me through it and then she came too. With a low, guttural moan, she drove deep, hips jerking. Her cock pulsed inside me, flooding me with thick, hot seed. I felt it spill, then stay. My hole clung to her, keeping it in. She collapsed over me, face buried in my neck. Maera smiled.
+
+&lt;span style=&quot;color: red;&quot;&gt;“There,”&lt;/span&gt; she whispered. &lt;span style=&quot;color: red;&quot;&gt;“You’ve been bathed and now you’ve been blessed.”&lt;/span&gt;
+
 &lt;strong style=&quot;color: purple;&quot;&gt;“I… I can’t feel my legs.”&lt;/strong&gt;
+
 &lt;span style=&quot;color: red;&quot;&gt;“You won’t need them. You’ll be carried.”&lt;/span&gt;
-The bathwater shimmered.
-I looked down.
-My cock was smaller again.
-My new cleft swollen, lips flushed and full.
-My body… changing.
-Dreaming.
-Becoming.
-Maera held me as I faded into sleep.
+
+The bathwater shimmered. I looked down. My cock was smaller again. My new cleft swollen, lips flushed and full. My body… changing. Dreaming. Becoming. Maera held me as I faded into sleep.
+
 &lt;span style=&quot;color: red;&quot;&gt;“You’ll remember this,”&lt;/span&gt; she whispered. &lt;span style=&quot;color: red;&quot;&gt;“Every time you ache. Every time you wet your sheets. You’ll remember what it’s like to be full.”&lt;/span&gt;
-&lt;strong style=&quot;color: purple;&quot;&gt;I moaned softly, eyes closing.&lt;/strong&gt;
-And I did.
+
+&lt;strong style=&quot;color: purple;&quot;&gt;I moaned softly, eyes closing.&lt;/strong&gt; and I did.
 
 [[Wake Up|mc_bed_chamber]]</tw-passagedata><tw-passagedata pid="13" name="dream_7" tags="" position="350,225" size="100,100">&lt;&lt;passage_img &quot;dream/dream_7/1.png&quot;&gt;&gt;&lt;&lt;/passage_img&gt;&gt;
 
-The mirror loomed before me like a portal. It was impossibly tall reaching from obsidian floor to vaulted ceiling its frame carved from a single piece of lunar ivory, etched with glyphs that shimmered as if alive. It didn’t reflect the room. It reflected me. Only me. Me, naked. Me, exposed. Me, changed.
+The mirror loomed before me like a portal. It was impossibly tall reaching from obsidian floor to vaulted ceiling its frame carved from a single piece of lunar ivory, etched with glyphs that shimmered as if alive. It didn’t reflect the room. It reflected me.
 
 &lt;&lt;passage_img &quot;dream/dream_7/2.png&quot;&gt;&gt;&lt;&lt;/passage_img&gt;&gt;
 
 My chest rose and fell with shallow breaths, each exhale fogging the lower edge of the glass. I watched the vapor bloom like petals and fade just as quickly. My skin glistened with some faint oil I didn’t remember applying. My nipples were darker now, more sensitive. My waist curved. My hips, rounder. My cock… smaller.
 
-I stood at the threshold of something I couldn’t name. And then I felt her. Not saw. Felt. Heat at my back. Power curling around me like a fog of perfume and static. Her breath didn’t touch my skin but my skin ached for it. In the mirror, my reflection shimmered. And then she appeared.
+I stood at the threshold of something I couldn’t name and then I felt her. Heat at my back. Power curling around me like a fog of perfume and static. Her breath didn’t touch my skin but my skin ached for it. In the mirror, my reflection shimmered and then she appeared.
 
 Archmage stepped into view from behind my mirrored self. But I felt no footsteps. She emerged as though pulled from the glass itself. Her robes were gone, discarded like illusions. Her body was carved from radiance skin like polished bronze, runes glowing faintly down her arms and thighs, the sigils shifting when I blinked. Between her legs hung power incarnate.
+
+&lt;&lt;passage_img &quot;dream/dream_7/4.png&quot;&gt;&gt;&lt;&lt;/passage_img&gt;&gt;
 
 She radiated both woman and something more cock semi erect, thick with veins that pulsed in rhythm with my own heartbeat. I stared, breathless, helpless. She pressed against me her bare skin hot against my back, the weight of her presence anchoring me in place. Her hands slid over my shoulders, palms firm, grounding. In the mirror, her face hovered just above my own, her eyes glowing soft violet.
 
@@ -8403,7 +8390,7 @@ She radiated both woman and something more cock semi erect, thick with veins tha
 
 &lt;span style=&quot;color: blue;&quot;&gt;“Yes,”&lt;/span&gt; she said. &lt;span style=&quot;color: blue;&quot;&gt;“But dreams are only rehearsals. The real performance comes after.”&lt;/span&gt; Her hands slid down, brushing the sides of my chest, stopping just above my ribs.
 
-&lt;span style=&quot;color: blue;&quot;&gt;“I’ve watched you resist,”&lt;/span&gt; she murmured. &lt;span style=&quot;color: blue;&quot;&gt;“Every lesson. Every spell. Every potion. And still… look at you.”&lt;/span&gt; I looked. I saw the swell of my chest. The curve of my thighs. The tension in my expression caught between shame and longing.
+&lt;span style=&quot;color: blue;&quot;&gt;“I’ve watched you resist,”&lt;/span&gt; she murmured. &lt;span style=&quot;color: blue;&quot;&gt;“Every lesson. Every spell. Every potion and still… look at you.”&lt;/span&gt; I looked. I saw the swell of my chest. The curve of my thighs. The tension in my expression caught between shame and longing.
 
 &lt;span style=&quot;color: blue;&quot;&gt;“You’re scared,”&lt;/span&gt; she whispered. &lt;span style=&quot;color: blue;&quot;&gt;“That means you’re close.”&lt;/span&gt;
 
@@ -8423,8 +8410,6 @@ She radiated both woman and something more cock semi erect, thick with veins tha
 
 &lt;span style=&quot;color: blue;&quot;&gt;“Do you feel it?”&lt;/span&gt; she murmured. &lt;span style=&quot;color: blue;&quot;&gt;“The tension in your thighs. The heat between them. That ache that isn’t fear. That throb that isn’t shame.”&lt;/span&gt; Her cock pressed between my cheeks not entering. Not forcing. Just… there. Heavy. Hot. Present.
 
-&lt;strong style=&quot;color: purple;&quot;&gt;I gasped.&lt;/strong&gt;
-
 &lt;strong style=&quot;color: purple;&quot;&gt;“I feel…”&lt;/strong&gt;
 
 &lt;span style=&quot;color: blue;&quot;&gt;“Say it.”&lt;/span&gt;
@@ -8437,13 +8422,11 @@ She radiated both woman and something more cock semi erect, thick with veins tha
 
 &lt;strong style=&quot;color: purple;&quot;&gt;“Missed?”&lt;/strong&gt; I asked. She exhaled against my neck.
 
-&lt;span style=&quot;color: blue;&quot;&gt;“Your cock is fading, Caelan,”&lt;/span&gt; she whispered. &lt;span style=&quot;color: blue;&quot;&gt;“And you’ll miss it. Even when you love what you become.”&lt;/span&gt; My hips rocked involuntarily. Her body felt right against mine. Her power surged around us like an invisible tide. My reflection was trembling. Not from fear. From craving. Her hands lifted to my chest. She cupped my budding breasts, thumbs stroking my nipples.
+&lt;span style=&quot;color: blue;&quot;&gt;“Your cock is fading, Caelan,”&lt;/span&gt; she whispered. &lt;span style=&quot;color: blue;&quot;&gt;“and you’ll miss it. Even when you love what you become.”&lt;/span&gt; My hips rocked involuntarily. Her body felt right against mine. Her power surged around us like an invisible tide. My reflection was trembling. Not from fear. From craving. Her hands lifted to my chest. She cupped my budding breasts, thumbs stroking my nipples.
 
 &lt;span style=&quot;color: blue;&quot;&gt;“You’re forming. Your body is learning new pleasure. New thresholds. The king inside you was an echo. This is voice. This is your song.”&lt;/span&gt; She began to rock, her cock sliding rhythmically against me.
 
-&lt;span style=&quot;color: blue;&quot;&gt;“You’ll remember this,”&lt;/span&gt; she murmured. &lt;span style=&quot;color: blue;&quot;&gt;“Even when it’s gone. The friction. The weight. The way you opened from behind instead of welcoming. Your pussy will ache, and your mind will remember this.”&lt;/span&gt;
-
-&lt;strong style=&quot;color: purple;&quot;&gt;I cried out softly, head falling back against her shoulder.&lt;/strong&gt;
+&lt;span style=&quot;color: blue;&quot;&gt;“You’ll remember this,”&lt;/span&gt; she murmured. &lt;span style=&quot;color: blue;&quot;&gt;“Even when it’s gone. The friction. The weight. The way you opened from behind instead of welcoming. Your pussy will ache, and your mind will remember this.”&lt;/span&gt; I cried out softly, head falling back against her shoulder.
 
 &lt;strong style=&quot;color: purple;&quot;&gt;“I’m going to…”&lt;/strong&gt;
 
@@ -8453,9 +8436,11 @@ She radiated both woman and something more cock semi erect, thick with veins tha
 
 &lt;strong style=&quot;color: purple;&quot;&gt;“I…”&lt;/strong&gt;
 
-&lt;span style=&quot;color: blue;&quot;&gt;“You’re leaving it behind,”&lt;/span&gt; she whispered. &lt;span style=&quot;color: blue;&quot;&gt;“You’re not losing anything.”&lt;/span&gt; She stepped back. And I turned to face her. Naked. Open. Changed. She kissed me not with fire, but with certainty. When I looked back at the mirror I saw a girl. Soft. Wet. Panting. Me.And the mirror did not fog again.
+&lt;span style=&quot;color: blue;&quot;&gt;“You’re leaving it behind,”&lt;/span&gt; she whispered. &lt;span style=&quot;color: blue;&quot;&gt;“You’re not losing anything.”&lt;/span&gt; She stepped back and I turned to face her. Naked. Open. Changed. She kissed me not with fire, but with certainty. When I looked back at the mirror I saw a girl. Soft. Wet. Panting. Me and the mirror did not fog again.
 
-I stared at the mirror, but I didn’t recognize what stared back. Not fully. It was me. It had my eyes. My mouth. But there was a soft curve to the lips now, parted and glistening from breath and arousal. The cheeks were flushed a shade that spoke of deep blood flow beneath softening skin. The neck longer, more slender. The shoulders narrower. And below the waist I couldn’t look away.
+&lt;&lt;passage_img &quot;dream/dream_7/5.png&quot;&gt;&gt;&lt;&lt;/passage_img&gt;&gt;
+
+I stared at the mirror, but I didn’t recognize what stared back. Not fully. It was me. It had my eyes. My mouth. But there was a soft curve to the lips now, parted and glistening from breath and arousal. The cheeks were flushed a shade that spoke of deep blood flow beneath softening skin. The neck longer, more slender. The shoulders narrower and below the waist I couldn’t look away.
 
 My cock still there, but less than it had been lay draped against my thigh. Small. Damp. Dripping the last of what She had drawn from me. Beneath it, my sack had retreated slightly, the flesh between faintly parted, like lips just beginning to breathe. She stood behind me.
 
@@ -8475,7 +8460,7 @@ She was still hard. Still radiant. Still watching me like a sculptor seeing her 
 
 &lt;span style=&quot;color: blue;&quot;&gt;“There it is,”&lt;/span&gt; she said. &lt;span style=&quot;color: blue;&quot;&gt;“The first honest word from your lips since we began this long, slow blooming.”&lt;/span&gt; She stepped closer, her cock brushing my ass again.
 
-&lt;span style=&quot;color: blue;&quot;&gt;“Do you want me?”&lt;/span&gt; she asked, not a trace of teasing in her voice. I didn’t answer. I watched myself. I touched the glass. And then 
+&lt;span style=&quot;color: blue;&quot;&gt;“Do you want me?”&lt;/span&gt; she asked, not a trace of teasing in her voice. I didn’t answer. I watched myself. I touched the glass and then 
 
 &lt;strong style=&quot;color: purple;&quot;&gt;I nodded.&lt;/strong&gt; She bent slightly, her cock resting now along the cleft between my cheeks again. Her hands caressed my hips.
 
@@ -8491,13 +8476,9 @@ She was still hard. Still radiant. Still watching me like a sculptor seeing her 
 
 &lt;span style=&quot;color: blue;&quot;&gt;“I will show you another way.”&lt;/span&gt; Her cock, still slick, pressed lower not into me but beneath me. Between my thighs. She slid it forward, until the head emerged between the front of my legs, nestling against my softening cock. The size difference was staggering. Her head throbbed beside mine, veined and flushed. She rocked her hips, dragging it through the forming cleft.
 
-&lt;strong style=&quot;color: purple;&quot;&gt;I gasped.&lt;/strong&gt;
-
 Her rhythm was slow. Not to tease but to teach. My thighs closed instinctively, holding her in place. Her hands never left my hips. Her mouth brushed my shoulder.
 
 &lt;span style=&quot;color: blue;&quot;&gt;“This is how your body learns,”&lt;/span&gt; she whispered. &lt;span style=&quot;color: blue;&quot;&gt;“It’s not the thrust. Not the finish. It’s the slide. The way I move through the place where you’re changing. The place that wants more even when it’s not ready to be filled.”&lt;/span&gt;
-
-&lt;strong style=&quot;color: purple;&quot;&gt;I whimpered.&lt;/strong&gt;
 
 &lt;span style=&quot;color: blue;&quot;&gt;“You like the friction,”&lt;/span&gt; she said. &lt;span style=&quot;color: blue;&quot;&gt;“Say it.”&lt;/span&gt;
 
@@ -8531,7 +8512,7 @@ I moaned into the mirror, watching her arm move behind me. Watching her cock sli
 
 I came. Again. My cock twitched in her hand, spurting one final, thin line of release across the mirror. But it was her cock that throbbed longer, harder, pulsing as it spilled between my legs, hot and thick and endless. We both gasped. Her forehead rested against my neck. The cum ran down my thighs, pooled against my cleft, soaked the floor. In the mirror, the reflection shifted.
 
-My cock… Smaller again. The line beneath it darker. My pussy, not yet complete, now real. I looked over my shoulder. She stared at me. Her eyes weren’t glowing now. They were human. Gentle. Proud.
+My cock… Smaller again. The line beneath it darker. My pussy, not yet complete, now real. I looked over my shoulder. She stared at me. Her eyes weren’t glowing now.
 
 &lt;span style=&quot;color: blue;&quot;&gt;“This was your final dream as prince,”&lt;/span&gt; she whispered. &lt;span style=&quot;color: blue;&quot;&gt;“The next one… you wake a queen.”&lt;/span&gt;
 
@@ -8539,7 +8520,7 @@ My cock… Smaller again. The line beneath it darker. My pussy, not yet complete
 
 &lt;span style=&quot;color: blue;&quot;&gt;“Only if you call for me.”&lt;/span&gt; I turned to face her.
 
-&lt;strong style=&quot;color: purple;&quot;&gt;“Archmage…”&lt;/strong&gt; She kissed me. And vanished. The mirror rippled once. Then cracked. And the last image it showed  Was her. Me. As I would become. And I smiled.
+&lt;strong style=&quot;color: purple;&quot;&gt;“Archmage…”&lt;/strong&gt; She kissed me and vanished.
 
 [[Wake Up|mc_bed_chamber]]</tw-passagedata><tw-passagedata pid="14" name="dream_8" tags="" position="475,225" size="100,100">&lt;&lt;passage_img &quot;dream/dream_8/1.png&quot;&gt;&gt;&lt;&lt;/passage_img&gt;&gt;
 
@@ -8547,7 +8528,7 @@ The light in the grove had no sun. It came from the petals themselves from golde
 
 &lt;&lt;passage_img &quot;dream/dream_8/2.png&quot;&gt;&gt;&lt;&lt;/passage_img&gt;&gt;
 
-I stood among the blossoms barefoot, the ground impossibly soft beneath my soles. The petals brushed against my legs, against my thighs, higher like fingers curious and alive. I gasped when one brushed against the cleft forming just beneath my groin. And then… they came. Fae. Not men. Not women. Not anything mortal. They drifted into view, rising from the flowers, born of pollen and heat and silver laughter. Naked and glowing, their wings hummed like harps, catching the gold filtered breeze. 
+I stood among the blossoms barefoot, the ground impossibly soft beneath my soles. The petals brushed against my legs, against my thighs, higher like fingers curious and alive. I gasped when one brushed against the cleft forming just beneath my groin and then… they came. Fae. Not men. Not women. Not anything mortal. They drifted into view, rising from the flowers, born of pollen and heat and silver laughter. Naked and glowing, their wings hummed like harps, catching the gold filtered breeze. 
 
 &lt;&lt;passage_img &quot;dream/dream_8/3.png&quot;&gt;&gt;&lt;&lt;/passage_img&gt;&gt;
 
@@ -8579,7 +8560,7 @@ The fae behind me reached down, fingers gliding over my entrance over the not qu
 
 &lt;strong style=&quot;color: purple;&quot;&gt;“I feel… open,”&lt;/strong&gt; I whispered.
 
-&lt;span style=&quot;color: green;&quot;&gt;“You are. And one kiss from us…”&lt;/span&gt; The fae in my lap leaned in, lips brushing mine.
+&lt;span style=&quot;color: green;&quot;&gt;“You are and one kiss from us…”&lt;/span&gt; The fae in my lap leaned in, lips brushing mine.
 
 &lt;span style=&quot;color: blue;&quot;&gt;“…and your body becomes a gift.”&lt;/span&gt;
 
@@ -8623,7 +8604,7 @@ Her kiss wasn’t like any I had known. There was no breath, no tongue, not at f
 
 &lt;strong style=&quot;color: purple;&quot;&gt;&quot;Yes,&quot;&lt;/strong&gt; I breathed. &lt;strong style=&quot;color: purple;&quot;&gt;&quot;Please &quot;&lt;/strong&gt; She didn’t lower all at once. She sank down in slow, rippling waves. Her pussy took us both her cock resting atop mine as her walls enveloped us. My breath caught as she bottomed out, her warmth swallowing every inch of what I had left.
 
-&lt;span style=&quot;color: red;&quot;&gt;&quot;You’re inside her,&quot;&lt;/span&gt; whispered the fae behind me. &lt;span style=&quot;color: red;&quot;&gt;&quot;And so is she inside you.&quot;&lt;/span&gt;
+&lt;span style=&quot;color: red;&quot;&gt;&quot;You’re inside her,&quot;&lt;/span&gt; whispered the fae behind me. &lt;span style=&quot;color: red;&quot;&gt;&quot;and so is she inside you.&quot;&lt;/span&gt;
 
 &lt;strong style=&quot;color: purple;&quot;&gt;I moaned, unable to speak.&lt;/strong&gt; Her folds were tight and alive, milking me. Her inner muscles pulsed in rhythm with her wings, massaging me in undulating waves. She rolled her hips, grinding deeper.
 
@@ -8635,7 +8616,7 @@ Her kiss wasn’t like any I had known. There was no breath, no tongue, not at f
 
 &lt;strong style=&quot;color: purple;&quot;&gt;&quot;I don’t,&quot;&lt;/strong&gt; I moaned. &lt;strong style=&quot;color: purple;&quot;&gt;&quot;I can’t tell anymore &quot;&lt;/strong&gt;
 
-&lt;span style=&quot;color: blue;&quot;&gt;&quot;And you like it.&quot;&lt;/span&gt;
+&lt;span style=&quot;color: blue;&quot;&gt;&quot;and you like it.&quot;&lt;/span&gt;
 
 &lt;strong style=&quot;color: purple;&quot;&gt;&quot;I love it.&quot;&lt;/strong&gt;
 
@@ -8645,9 +8626,9 @@ Her kiss wasn’t like any I had known. There was no breath, no tongue, not at f
 
 &lt;span style=&quot;color: orange;&quot;&gt;&quot;You&#39;re feeding from us,&quot;&lt;/span&gt; said the one on my chest. &lt;span style=&quot;color: orange;&quot;&gt;&quot;Like a sapling from the roots.&quot;&lt;/span&gt;
 
-&lt;span style=&quot;color: red;&quot;&gt;&quot;And you&#39;re growing,&quot;&lt;/span&gt; said the one behind. &lt;span style=&quot;color: red;&quot;&gt;&quot;Your pussy’s swelling. It&#39;s ready.&quot;&lt;/span&gt; The fae riding me moaned low and deep, her body spasming around mine.
+&lt;span style=&quot;color: red;&quot;&gt;&quot;and you&#39;re growing,&quot;&lt;/span&gt; said the one behind. &lt;span style=&quot;color: red;&quot;&gt;&quot;Your pussy’s swelling. It&#39;s ready.&quot;&lt;/span&gt; The fae riding me moaned low and deep, her body spasming around mine.
 
-&lt;span style=&quot;color: blue;&quot;&gt;&quot;I’m going to come,&quot;&lt;/span&gt; she whispered. &lt;span style=&quot;color: blue;&quot;&gt;&quot;And when I do, you’ll feel it in your womb.&quot;&lt;/span&gt;
+&lt;span style=&quot;color: blue;&quot;&gt;&quot;I’m going to come,&quot;&lt;/span&gt; she whispered. &lt;span style=&quot;color: blue;&quot;&gt;&quot;and when I do, you’ll feel it in your womb.&quot;&lt;/span&gt;
 
 &lt;strong style=&quot;color: purple;&quot;&gt;&quot;But &quot;&lt;/strong&gt;
 
@@ -8675,15 +8656,15 @@ She came at the same moment, her pussy clenching hard, her cock spurting between
 
 &lt;span style=&quot;color: orange;&quot;&gt;&quot;You are a gift.&quot;&lt;/span&gt;
 
-&lt;span style=&quot;color: red;&quot;&gt;&quot;And one day, your gift will bear fruit.&quot;&lt;/span&gt;
+&lt;span style=&quot;color: red;&quot;&gt;&quot;and one day, your gift will bear fruit.&quot;&lt;/span&gt;
 
 [[Wake Up|mc_bed_chamber]]</tw-passagedata><tw-passagedata pid="15" name="dream_9" tags="" position="600,225" size="100,100">&lt;&lt;passage_img &quot;dream/dream_9/1.png&quot;&gt;&gt;&lt;&lt;/passage_img&gt;&gt;
 
-I didn’t remember boarding a ship. But I was on one. That much was clear. The wood creaked beneath my boots as I staggered to keep upright, the entire vessel heaving on monstrous waves. Sea spray hissed through the cracks in the bulkhead, and thunder cracked above like the laugh of some old god. Lanterns swung in wide arcs, shadows careening madly across the planks. And yet, I wasn’t afraid.
+I didn’t remember boarding a ship. But I was on one. That much was clear. The wood creaked beneath my boots as I staggered to keep upright, the entire vessel heaving on monstrous waves. Sea spray hissed through the cracks in the bulkhead, and thunder cracked above like the laugh of some old god. Lanterns swung in wide arcs, shadows careening madly across the planks and yet, I wasn’t afraid.
 
 &lt;&lt;passage_img &quot;dream/dream_9/2.png&quot;&gt;&gt;&lt;&lt;/passage_img&gt;&gt;
 
-I was aroused. Not by the storm. By what was coming below deck. I heard the voices first, rough and low, not raised in alarm but laughter. Teasing, hungry, obscene. One voice was deep and wet with a growl; the other higher, clever, laced with mischief. The door slammed open and I was pulled inside. And there they were.
+I was aroused. Not by the storm. By what was coming below deck. I heard the voices first, rough and low, not raised in alarm but laughter. Teasing, hungry, obscene. One voice was deep and wet with a growl; the other higher, clever, laced with mischief. The door slammed open and I was pulled inside and there they were.
 
 &lt;&lt;passage_img &quot;dream/dream_9/3.png&quot;&gt;&gt;&lt;&lt;/passage_img&gt;&gt;
 
@@ -8711,7 +8692,7 @@ I opened my mouth to speak, but the redhead grabbed my shirt, spun me against a 
 
 &lt;span style=&quot;color: blue;&quot;&gt;“I’m Jessa. Remember that. You’ll be screaming it soon.”&lt;/span&gt;
 
-&lt;span style=&quot;color: green;&quot;&gt;“And I’m Nyla,”&lt;/span&gt; the curvy one added as her hands reached for my belt. &lt;span style=&quot;color: green;&quot;&gt;“You’ll probably scream mine too.”&lt;/span&gt;
+&lt;span style=&quot;color: green;&quot;&gt;“and I’m Nyla,”&lt;/span&gt; the curvy one added as her hands reached for my belt. &lt;span style=&quot;color: green;&quot;&gt;“You’ll probably scream mine too.”&lt;/span&gt;
 
 My trousers hit the floor. I didn’t remember undoing them. Nyla had clever fingers, that was clear.
 
@@ -8801,11 +8782,7 @@ The ship rocked again. Jessa adjusted her angle and found something inside me th
 
 &lt;strong style=&quot;color: purple;&quot;&gt;“Please ”&lt;/strong&gt;
 
-&lt;span style=&quot;color: blue;&quot;&gt;“Cum for me.”&lt;/span&gt;
-
-&lt;strong style=&quot;color: purple;&quot;&gt;And I did.&lt;/strong&gt;
-
-My orgasm ripped through me like lightning through a mast. My cock pulsed inside Nyla, her cunt milking every drop. Jessa growled as I tightened around her, and she came too, filling me with heat, cock jerking deep inside. We collapsed in a pile. Panting. Spent. The ship rocked gently now. The storm hadn’t stopped. But the worst of it the wettest, loudest, neediest part was below deck.
+&lt;span style=&quot;color: blue;&quot;&gt;“Cum for me.”&lt;/span&gt; and I did. My orgasm ripped through me like lightning through a mast. My cock pulsed inside Nyla, her cunt milking every drop. Jessa growled as I tightened around her, and she came too, filling me with heat, cock jerking deep inside. We collapsed in a pile. Panting. Spent. The ship rocked gently now. The storm hadn’t stopped. But the worst of it the wettest, loudest, neediest part was below deck.
 
 [[Wake Up|mc_bed_chamber]]</tw-passagedata><tw-passagedata pid="16" name="dream_10" tags="" position="725,225" size="100,100">&lt;&lt;passage_img &quot;dream/dream_10/1.png&quot;&gt;&gt;&lt;&lt;/passage_img&gt;&gt;
 
@@ -8813,7 +8790,7 @@ A long corridor of shadowed marble stretched ahead, lit from nowhere, a haze of 
 
 &lt;&lt;passage_img &quot;dream/dream_10/2.png&quot;&gt;&gt;&lt;&lt;/passage_img&gt;&gt;
 
-I walked. My footsteps echoed, each one a beat in some holy drum. The marble floor beneath me held no chill. I passed one statue, a woman kneeling, her hands clasped around a sword. Her lips were parted as if caught mid prayer. Her breasts, bared above a delicate bodice of stone lace, were flawless. My fingers brushed her cheek. And warmth bloomed. She blinked. Soft lashes lifted, and her eyes, grey as stormlight, looked directly into mine. Her lips moved.
+I walked. My footsteps echoed, each one a beat in some holy drum. The marble floor beneath me held no chill. I passed one statue, a woman kneeling, her hands clasped around a sword. Her lips were parted as if caught mid prayer. Her breasts, bared above a delicate bodice of stone lace, were flawless. My fingers brushed her cheek and warmth bloomed. She blinked. Soft lashes lifted, and her eyes, grey as stormlight, looked directly into mine. Her lips moved.
 
 &lt;&lt;passage_img &quot;dream/dream_10/4.png&quot;&gt;&gt;&lt;&lt;/passage_img&gt;&gt;
 
@@ -8829,7 +8806,7 @@ But she didn’t answer. She walked past me like a queen descending to greet a s
 
 &lt;&lt;passage_img &quot;dream/dream_10/5.png&quot;&gt;&gt;&lt;&lt;/passage_img&gt;&gt;
 
-&lt;span style=&quot;color: red;&quot;&gt;“I have waited centuries,”&lt;/span&gt; she murmured, voice a soft ache, &lt;span style=&quot;color: red;&quot;&gt;“to kneel at your altar.”&lt;/span&gt; And then her mouth opened, her tongue running a slow circle around the head of my cock, which throbbed to hardness at the first touch.
+&lt;span style=&quot;color: red;&quot;&gt;“I have waited centuries,”&lt;/span&gt; she murmured, voice a soft ache, &lt;span style=&quot;color: red;&quot;&gt;“to kneel at your altar.”&lt;/span&gt; and then her mouth opened, her tongue running a slow circle around the head of my cock, which throbbed to hardness at the first touch.
 
 &lt;strong style=&quot;color: purple;&quot;&gt;“Oh fuck ”&lt;/strong&gt; I groaned, my hand bracing against the wall as her lips closed around me, warm and slow. Her stone made honey skin pressed against my thighs, arms looping around to cradle my ass, pulling me deeper into her throat. &lt;strong style=&quot;color: purple;&quot;&gt;“Fuck, you’re… You’re incredible…”&lt;/strong&gt;
 
@@ -8845,11 +8822,11 @@ She didn’t speak again just swallowed around me, moaning softly as her eyes st
 
 &lt;span style=&quot;color: blue;&quot;&gt;“Share,”&lt;/span&gt; she said softly, and the kneeling woman pulled away with a kiss to the tip and a shimmer of spit stretching between her lips and my cock. Adina knelt next, regal, composed, yet trembling with eagerness. &lt;span style=&quot;color: blue;&quot;&gt;“You’ll bless us all,”&lt;/span&gt; she whispered, before taking me into her mouth, tongue swirling. Her technique was practiced, deliberate she didn’t bob her head like the first. She worshiped.
 
-I was trembling.Another sound behind. A soft moan, and the grinding creak of movement. I turned. And saw her.
+I was trembling.Another sound behind. A soft moan, and the grinding creak of movement. I turned and saw her.
 
 &lt;&lt;passage_img &quot;dream/dream_10/6.png&quot;&gt;&gt;&lt;&lt;/passage_img&gt;&gt;
 
-She lay reclined on a marble dais, limbs splayed, one hand cupping a heavy, full breast, the other resting between her thighs. But her thighs bore more than one surprise. A cock rose stiff from her pelvis thick, veined, flushed dark with arousal. And below that, glistening lips opened in a wet invitation. Her voice cracked the ceiling.
+She lay reclined on a marble dais, limbs splayed, one hand cupping a heavy, full breast, the other resting between her thighs. But her thighs bore more than one surprise. A cock rose stiff from her pelvis thick, veined, flushed dark with arousal and below that, glistening lips opened in a wet invitation. Her voice cracked the ceiling.
 
 &lt;span style=&quot;color: green;&quot;&gt;“You worship us,”&lt;/span&gt; she thundered, but her tone was silk. &lt;span style=&quot;color: green;&quot;&gt;“Now let us worship you.”&lt;/span&gt;She sat up. &lt;span style=&quot;color: green;&quot;&gt;“Do you like what you see?”&lt;/span&gt;
 
@@ -8929,13 +8906,13 @@ I fucked one girl on her knees while her sister rode my face. I licked a virgin&
 
 I buried my face in her, licking until her legs shook and she collapsed gasping. Another dragged me up into a kiss, cunt grinding against mine, our cocks pressed together as she stroked both. &lt;strong style=&quot;color: purple;&quot;&gt;“I want to feel you shoot while I do fuck yes stroke us both, just like that ”&lt;/strong&gt; Cum sprayed her belly, mine mixing with hers.
 
-She smeared it over her breasts, panting. &lt;span style=&quot;color: darkred;&quot;&gt;“Anointed. Gods, I love you.”&lt;/span&gt; They praised me as I moved from one to the next. More than thosand voices. And more words than I could count.
+She smeared it over her breasts, panting. &lt;span style=&quot;color: darkred;&quot;&gt;“Anointed. Gods, I love you.”&lt;/span&gt; They praised me as I moved from one to the next. More than thosand voices and more words than I could count.
 
 [[Wake Up|mc_bed_chamber]]</tw-passagedata><tw-passagedata pid="17" name="MemoryGame" tags="" position="850,225" size="100,100">&lt;script&gt;
 // Memory Game Configuration
 window.memoryGameConfig = {
-    gridWidth: 3,  // Number of columns
-    gridHeight: 4, // Number of rows
+    gridWidth: 10,  // Number of columns
+    gridHeight: 10, // Number of rows
     imageCount: 12, // Number of different images (must be &lt;= (width*height)/2)
     maxWidth: getMaxWidth(),  // Maximum width of game board
     gameTime: 120   // Game time in seconds
@@ -9098,9 +9075,11 @@ function updateGameUI() {
   
   // Update progress
   const progress = (memoryGame.matchedPairs / memoryGame.totalPairs) * 100;
-  $(&#39;#memory-progress-bar&#39;).css(&#39;width&#39;, `${progress}%`)
-                          .text(`${memoryGame.matchedPairs}/${memoryGame.totalPairs} Pairs`);
-}
+  $(&#39;#memory-progress-bar&#39;).css({
+    &#39;width&#39;: `${progress}%`,
+    &#39;color&#39;: &#39;black&#39;
+  }).text(`${memoryGame.matchedPairs}/${memoryGame.totalPairs} Pairs`);
+  }
 
 // Timer functions
 function startTimer() {
@@ -9129,7 +9108,8 @@ function endGame(win) {
 
 // Reveal all cards
 window.revealAllCards = function() {
-  // Check if all non-matched cards are already revealed
+  if (SugarCube.State.variables.veil_of_the_heir) {
+// Check if all non-matched cards are already revealed
   const allNonMatchedRevealed = memoryGame.cards.every((card, index) =&gt; 
     card === null || memoryGame.flippedCards.includes(index)
   );
@@ -9148,6 +9128,10 @@ window.revealAllCards = function() {
   }
   
   updateGameUI();
+  } else {
+      // Non-patreon user — show info modal instead
+      showPatreonInfo();
+  }
 };
 
 // Change settings
@@ -9171,9 +9155,7 @@ window.changeGameSettings = function() {
     alert(&#39;Invalid settings. Please make sure:\n- Width × Height is an even number\n- Image count ≤ (Width × Height)/2&#39;);
   }
 };
-&lt;/script&gt;
-
-&lt;style&gt;
+&lt;/script&gt;&lt;style&gt;
 #memory-game-container {
   max-width: 600px;
   margin: 0 auto;
@@ -9265,25 +9247,19 @@ window.changeGameSettings = function() {
   margin: 10px 0;
 }
 &lt;/style&gt;
-
-&lt;div id=&quot;memory-game-container&quot;&gt;
+&lt;&lt;nobr&gt;&gt;&lt;div id=&quot;memory-game-container&quot;&gt;
   &lt;h2&gt;Memory Matching Game&lt;/h2&gt;
-  
   &lt;div id=&quot;memory-game-controls&quot;&gt;
-    &lt;button class=&quot;memory-game-button&quot; onclick=&quot;initMemoryGame()&quot;&gt;New Game&lt;/button&gt;
-    &lt;button class=&quot;memory-game-button&quot; onclick=&quot;changeGameSettings()&quot;&gt;Settings&lt;/button&gt;
+    /* &lt;button class=&quot;memory-game-button&quot; onclick=&quot;initMemoryGame()&quot;&gt;New Game&lt;/button&gt; */
+    /* &lt;button class=&quot;memory-game-button&quot; onclick=&quot;changeGameSettings()&quot;&gt;Settings&lt;/button&gt; */
     &lt;button class=&quot;memory-game-button&quot; onclick=&quot;revealAllCards()&quot;&gt;Reveal All&lt;/button&gt;
   &lt;/div&gt;
-  
   &lt;div id=&quot;memory-progress-container&quot;&gt;
     &lt;div id=&quot;memory-progress-bar&quot;&gt;0/0 Pairs&lt;/div&gt;
   &lt;/div&gt;
-  
   &lt;div id=&quot;memory-timer&quot;&gt;2:00&lt;/div&gt;
-  
   &lt;div id=&quot;memory-game-board&quot;&gt;&lt;/div&gt;
-&lt;/div&gt;
-
+&lt;/div&gt;&lt;&lt;/nobr&gt;&gt;
 &lt;script&gt;
 // Initialize game when passage loads
 $(document).ready(function() {
@@ -17846,9 +17822,9 @@ I will become the queen this realm deserves.
 &lt;&lt;set $hasIngredientAccess = false&gt;&gt;
 &lt;&lt;set $ingredientChoices to 0&gt;&gt;
 &lt;&lt;set $riddleSuccess = false&gt;&gt;
-&lt;&lt;set _i to random(1, 3)&gt;&gt;
+&lt;&lt;set _i to random(1, 10)&gt;&gt;
 &lt;&lt;set $dream_num = &quot;dream_&quot; + _i&gt;&gt;
-[[Dream|$dream_num]] | &lt;br&gt;&lt;br&gt;
+[[Dream|$dream_num]] | 
 [[Get up From Bed|mc_bed_chamber]]
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="334" name="mc_table" tags="" position="475,4225" size="100,100">&lt;&lt;nobr&gt;&gt;
@@ -26945,18 +26921,20 @@ $possible_changes.includes($userBody.torso.orig_body)
 [[Move Forth|$next_passage]] | &lt;br&gt;&lt;br&gt;
 [[Skip Conversation with Thalara|use_success_potion_create_left_hand]]
 &lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="884" name="use_success_potion_create_left_hand" tags="" position="475,11100" size="100,100">&lt;&lt;nobr&gt;&gt;
+
+
 &lt;&lt;if State.variables.direction == &quot;reverse&quot;&gt;&gt;
     &lt;&lt;set $user_stats.gender_appearance += 1&gt;&gt;
 &lt;&lt;else&gt;&gt;
     &lt;&lt;set $user_stats.gender_appearance -= 1&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 /* &lt;&lt;=&gt;&gt; */
-/* &lt;pre&gt;&lt;&lt;= JSON.stringify($userBody.left_hand, null, 2)&gt;&gt;&lt;/pre&gt; */
-&lt;&lt;set $userBody.left_hand.curr_body = $curr_potion_selected.to&gt;&gt;
-&lt;&lt;set $image_key_hand_path = &quot;mc/figure/&quot; + $userBody.left_hand.orig_body + &quot;/&quot; + $userBody.left_hand.curr_body + &quot;/&quot; + $userBody.left_hand.orig_body + &quot;_&quot; + $userBody.left_hand.curr_body + &quot;_&quot; + &quot;left_hand.png&quot;&gt;&gt;
+/* &lt;pre&gt;&lt;&lt;= JSON.stringify($userBody.right_hand, null, 2)&gt;&gt;&lt;/pre&gt; */
+&lt;&lt;set $userBody.right_hand.curr_body = $curr_potion_selected.to&gt;&gt;
+&lt;&lt;set $image_key_hand_path = &quot;mc/figure/&quot; + $userBody.right_hand.orig_body + &quot;/&quot; + $userBody.right_hand.curr_body + &quot;/&quot; + $userBody.right_hand.orig_body + &quot;_&quot; + $userBody.right_hand.curr_body + &quot;_&quot; + &quot;right_hand.png&quot;&gt;&gt;
 /* &lt;&lt;=$image_key_hand_path&gt;&gt; */
-&lt;&lt;set $userBody.left_hand.img = $image_key_hand_path&gt;&gt;
-/* &lt;pre&gt;&lt;&lt;= JSON.stringify($userBody.left_hand, null, 2)&gt;&gt;&lt;/pre&gt; */
+&lt;&lt;set $userBody.right_hand.img = $image_key_hand_path&gt;&gt;
+/* &lt;pre&gt;&lt;&lt;= JSON.stringify($userBody.right_hand, null, 2)&gt;&gt;&lt;/pre&gt; */
 &lt;div style=&quot;text-align: center;&quot;&gt;
 &lt;div class=&quot;change_show torso&quot;&gt;[img[setup.ImagePath+$userBody.torso.img]]&lt;/div&gt;
 &lt;div class=&quot;change_show head&quot;&gt;[img[setup.ImagePath+$userBody.head.img]]&lt;/div&gt;
@@ -27793,9 +27771,42 @@ $possible_changes.includes($userBody.torso.orig_body)
 /* &lt;pre&gt;&lt;&lt;= JSON.stringify($userBody.left_leg, null, 2)&gt;&gt;&lt;/pre&gt; */
 &lt;&lt;set $userBody.left_leg.curr_body = $curr_potion_selected.to&gt;&gt;
 &lt;&lt;set $image_key_leg_path = &quot;mc/figure/&quot; + $userBody.left_leg.orig_body + &quot;/&quot; + $userBody.left_leg.curr_body + &quot;/&quot; + $userBody.left_leg.orig_body + &quot;_&quot; + $userBody.left_leg.curr_body + &quot;_&quot; + &quot;left_leg.png&quot;&gt;&gt;
+
+&lt;&lt;if $userBody.shoes.curr_shoes != &quot;&quot;&gt;&gt;
+&lt;&lt;set $image_key_shoe_path = &quot;mc/figure/&quot; + $userBody.left_leg.curr_body + &quot;/&quot; + $userBody.left_leg.curr_body + &quot;_&quot; + $userBody.shoes.curr_shoes + &quot;.png&quot;&gt;&gt;
+&lt;&lt;else&gt;&gt;
+&lt;&lt;set $image_key_shoe_path = &quot;&quot;&gt;&gt;
+&lt;&lt;/if&gt;&gt;
 /* &lt;&lt;=$image_key_leg_path&gt;&gt; */
 &lt;&lt;set $userBody.left_leg.img = $image_key_leg_path&gt;&gt;
+&lt;&lt;set $userBody.shoes.img = $image_key_shoe_path&gt;&gt;
 /* &lt;pre&gt;&lt;&lt;= JSON.stringify($userBody.left_leg, null, 2)&gt;&gt;&lt;/pre&gt; */
+&lt;div style=&quot;text-align: center;&quot;&gt;
+&lt;div class=&quot;change_show torso&quot;&gt;[img[setup.ImagePath+$userBody.torso.img]]&lt;/div&gt;
+&lt;div class=&quot;change_show head&quot;&gt;[img[setup.ImagePath+$userBody.head.img]]&lt;/div&gt;
+&lt;div class=&quot;change_show right_hand&quot;&gt;[img[setup.ImagePath+$userBody.right_hand.img]]&lt;/div&gt;
+&lt;div class=&quot;change_show left_hand&quot;&gt;[img[setup.ImagePath+$userBody.left_hand.img]]&lt;/div&gt;
+&lt;div class=&quot;change_show left_leg&quot;&gt;[img[setup.ImagePath+$userBody.left_leg.img]]&lt;/div&gt;
+&lt;div class=&quot;change_show right_leg&quot;&gt;[img[setup.ImagePath+$userBody.right_leg.img]]&lt;/div&gt;
+&lt;div class=&quot;change_show chest&quot;&gt;[img[setup.ImagePath+$userBody.chest.img]]&lt;/div&gt;
+&lt;div class=&quot;change_show crotch&quot;&gt;[img[setup.ImagePath+$userBody.crotch.img]]&lt;/div&gt;
+&lt;div class=&quot;change_show hair&quot;&gt;[img[setup.ImagePath+$userBody.hair.img]]&lt;/div&gt;
+&lt;div class=&quot;change_show shoes&quot;&gt;[img[setup.ImagePath+$image_key_shoe_path]]&lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;&lt;if State.variables.direction == &quot;reverse&quot;&gt;&gt;
+    &lt;&lt;set $user_stats.gender_appearance += 1&gt;&gt;
+&lt;&lt;else&gt;&gt;
+    &lt;&lt;set $user_stats.gender_appearance -= 1&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+/* &lt;&lt;=&gt;&gt; */
+/* &lt;pre&gt;&lt;&lt;= JSON.stringify($userBody.right_leg, null, 2)&gt;&gt;&lt;/pre&gt; */
+&lt;&lt;set $userBody.right_leg.curr_body = $curr_potion_selected.to&gt;&gt;
+&lt;&lt;set $image_key_leg_path = &quot;mc/figure/&quot; + $userBody.right_leg.orig_body + &quot;/&quot; + $userBody.right_leg.curr_body + &quot;/&quot; + $userBody.right_leg.orig_body + &quot;_&quot; + $userBody.right_leg.curr_body + &quot;_&quot; + &quot;right_leg.png&quot;&gt;&gt;
+/* &lt;&lt;=$image_key_leg_path&gt;&gt; */
+&lt;&lt;set $userBody.right_leg.img = $image_key_leg_path&gt;&gt;
+/* &lt;pre&gt;&lt;&lt;= JSON.stringify($userBody.right_leg, null, 2)&gt;&gt;&lt;/pre&gt; */
 &lt;div style=&quot;text-align: center;&quot;&gt;
 &lt;div class=&quot;change_show torso&quot;&gt;[img[setup.ImagePath+$userBody.torso.img]]&lt;/div&gt;
 &lt;div class=&quot;change_show head&quot;&gt;[img[setup.ImagePath+$userBody.head.img]]&lt;/div&gt;
@@ -29248,6 +29259,31 @@ $possible_changes.includes($userBody.torso.orig_body)
 &lt;div class=&quot;change_show crotch&quot;&gt;[img[setup.ImagePath+$userBody.crotch.img]]&lt;/div&gt;
 &lt;div class=&quot;change_show hair&quot;&gt;[img[setup.ImagePath+$userBody.hair.img]]&lt;/div&gt;
 &lt;/div&gt;
+
+
+&lt;&lt;if State.variables.direction == &quot;reverse&quot;&gt;&gt;
+    &lt;&lt;set $user_stats.gender_appearance += 1&gt;&gt;
+&lt;&lt;else&gt;&gt;
+    &lt;&lt;set $user_stats.gender_appearance -= 1&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+/* &lt;&lt;=&gt;&gt; */
+/* &lt;pre&gt;&lt;&lt;= JSON.stringify($userBody.left_hand, null, 2)&gt;&gt;&lt;/pre&gt; */
+&lt;&lt;set $userBody.left_hand.curr_body = $curr_potion_selected.to&gt;&gt;
+&lt;&lt;set $image_key_hand_path = &quot;mc/figure/&quot; + $userBody.left_hand.orig_body + &quot;/&quot; + $userBody.left_hand.curr_body + &quot;/&quot; + $userBody.left_hand.orig_body + &quot;_&quot; + $userBody.left_hand.curr_body + &quot;_&quot; + &quot;left_hand.png&quot;&gt;&gt;
+/* &lt;&lt;=$image_key_hand_path&gt;&gt; */
+&lt;&lt;set $userBody.left_hand.img = $image_key_hand_path&gt;&gt;
+/* &lt;pre&gt;&lt;&lt;= JSON.stringify($userBody.left_hand, null, 2)&gt;&gt;&lt;/pre&gt; */
+&lt;div style=&quot;text-align: center;&quot;&gt;
+&lt;div class=&quot;change_show torso&quot;&gt;[img[setup.ImagePath+$userBody.torso.img]]&lt;/div&gt;
+&lt;div class=&quot;change_show head&quot;&gt;[img[setup.ImagePath+$userBody.head.img]]&lt;/div&gt;
+&lt;div class=&quot;change_show right_hand&quot;&gt;[img[setup.ImagePath+$userBody.right_hand.img]]&lt;/div&gt;
+&lt;div class=&quot;change_show left_hand&quot;&gt;[img[setup.ImagePath+$userBody.left_hand.img]]&lt;/div&gt;
+&lt;div class=&quot;change_show left_leg&quot;&gt;[img[setup.ImagePath+$userBody.left_leg.img]]&lt;/div&gt;
+&lt;div class=&quot;change_show right_leg&quot;&gt;[img[setup.ImagePath+$userBody.right_leg.img]]&lt;/div&gt;
+&lt;div class=&quot;change_show chest&quot;&gt;[img[setup.ImagePath+$userBody.chest.img]]&lt;/div&gt;
+&lt;div class=&quot;change_show crotch&quot;&gt;[img[setup.ImagePath+$userBody.crotch.img]]&lt;/div&gt;
+&lt;div class=&quot;change_show hair&quot;&gt;[img[setup.ImagePath+$userBody.hair.img]]&lt;/div&gt;
+&lt;/div&gt;
 &lt;&lt;link &quot;Try another Potion Scroll&quot;&gt;&gt;&lt;&lt;goto &quot;potion_lab&quot;&gt;&gt;&lt;&lt;/link&gt;&gt; |
 [[Leave Veil Tower|castle_map_back_select]]
 &lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="996" name="right_hand_ml_right_hand_mm" tags="" position="725,12475" size="100,100">&lt;&lt;nobr&gt;&gt;
@@ -30184,9 +30220,41 @@ $possible_changes.includes($userBody.torso.orig_body)
 /* &lt;pre&gt;&lt;&lt;= JSON.stringify($userBody.right_leg, null, 2)&gt;&gt;&lt;/pre&gt; */
 &lt;&lt;set $userBody.right_leg.curr_body = $curr_potion_selected.to&gt;&gt;
 &lt;&lt;set $image_key_leg_path = &quot;mc/figure/&quot; + $userBody.right_leg.orig_body + &quot;/&quot; + $userBody.right_leg.curr_body + &quot;/&quot; + $userBody.right_leg.orig_body + &quot;_&quot; + $userBody.right_leg.curr_body + &quot;_&quot; + &quot;right_leg.png&quot;&gt;&gt;
+&lt;&lt;if $userBody.shoes.curr_shoes != &quot;&quot;&gt;&gt;
+&lt;&lt;set $image_key_shoe_path = &quot;mc/figure/&quot; + $userBody.right_leg.curr_body + &quot;/&quot; + $userBody.right_leg.curr_body + &quot;_&quot; + $userBody.shoes.curr_shoes + &quot;.png&quot;&gt;&gt;
+&lt;&lt;else&gt;&gt;
+&lt;&lt;set $image_key_shoe_path = &quot;&quot;&gt;&gt;
+&lt;&lt;/if&gt;&gt;
 /* &lt;&lt;=$image_key_leg_path&gt;&gt; */
 &lt;&lt;set $userBody.right_leg.img = $image_key_leg_path&gt;&gt;
+&lt;&lt;set $userBody.shoes.img = $image_key_shoe_path&gt;&gt;
 /* &lt;pre&gt;&lt;&lt;= JSON.stringify($userBody.right_leg, null, 2)&gt;&gt;&lt;/pre&gt; */
+&lt;div style=&quot;text-align: center;&quot;&gt;
+&lt;div class=&quot;change_show torso&quot;&gt;[img[setup.ImagePath+$userBody.torso.img]]&lt;/div&gt;
+&lt;div class=&quot;change_show head&quot;&gt;[img[setup.ImagePath+$userBody.head.img]]&lt;/div&gt;
+&lt;div class=&quot;change_show right_hand&quot;&gt;[img[setup.ImagePath+$userBody.right_hand.img]]&lt;/div&gt;
+&lt;div class=&quot;change_show left_hand&quot;&gt;[img[setup.ImagePath+$userBody.left_hand.img]]&lt;/div&gt;
+&lt;div class=&quot;change_show left_leg&quot;&gt;[img[setup.ImagePath+$userBody.left_leg.img]]&lt;/div&gt;
+&lt;div class=&quot;change_show right_leg&quot;&gt;[img[setup.ImagePath+$userBody.right_leg.img]]&lt;/div&gt;
+&lt;div class=&quot;change_show chest&quot;&gt;[img[setup.ImagePath+$userBody.chest.img]]&lt;/div&gt;
+&lt;div class=&quot;change_show crotch&quot;&gt;[img[setup.ImagePath+$userBody.crotch.img]]&lt;/div&gt;
+&lt;div class=&quot;change_show hair&quot;&gt;[img[setup.ImagePath+$userBody.hair.img]]&lt;/div&gt;
+&lt;div class=&quot;change_show shoes&quot;&gt;[img[setup.ImagePath+$image_key_shoe_path]]&lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;&lt;if State.variables.direction == &quot;reverse&quot;&gt;&gt;
+    &lt;&lt;set $user_stats.gender_appearance += 1&gt;&gt;
+&lt;&lt;else&gt;&gt;
+    &lt;&lt;set $user_stats.gender_appearance -= 1&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+/* &lt;&lt;=&gt;&gt; */
+/* &lt;pre&gt;&lt;&lt;= JSON.stringify($userBody.left_leg, null, 2)&gt;&gt;&lt;/pre&gt; */
+&lt;&lt;set $userBody.left_leg.curr_body = $curr_potion_selected.to&gt;&gt;
+&lt;&lt;set $image_key_leg_path = &quot;mc/figure/&quot; + $userBody.left_leg.orig_body + &quot;/&quot; + $userBody.left_leg.curr_body + &quot;/&quot; + $userBody.left_leg.orig_body + &quot;_&quot; + $userBody.left_leg.curr_body + &quot;_&quot; + &quot;left_leg.png&quot;&gt;&gt;
+/* &lt;&lt;=$image_key_leg_path&gt;&gt; */
+&lt;&lt;set $userBody.left_leg.img = $image_key_leg_path&gt;&gt;
+/* &lt;pre&gt;&lt;&lt;= JSON.stringify($userBody.left_leg, null, 2)&gt;&gt;&lt;/pre&gt; */
 &lt;div style=&quot;text-align: center;&quot;&gt;
 &lt;div class=&quot;change_show torso&quot;&gt;[img[setup.ImagePath+$userBody.torso.img]]&lt;/div&gt;
 &lt;div class=&quot;change_show head&quot;&gt;[img[setup.ImagePath+$userBody.head.img]]&lt;/div&gt;
