@@ -5,7 +5,7 @@ $(document).ready(function () {
         <div id="custom-left-bar">
             <div id="sidebar-close" class="mobile-only">✖</div>
             <h1 style="margin: 15% 0 0 0; text-align: center;">Veil of the Heir</h1>
-            <p style="margin: 0px; text-align: center;">Vesion - 0.0.3</p>
+            <p style="margin: 0px; text-align: center;">Vesion - 0.0.3.A</p>
             <h3 style="margin: 0px; text-align: center;">by Nexisphere Games</h3>
             <div id="left-top-container" class="image-crop">
                 <img id="player-image" class="player-image" src="" alt="Player Image">
