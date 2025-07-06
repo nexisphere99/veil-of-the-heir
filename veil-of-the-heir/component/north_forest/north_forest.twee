@@ -1,0 +1,93 @@
+
+
+:: north_forest
+<<nobr>>
+<<set $locationImage = setup.ImagePath + 'north_forest/north_forest.png'>>
+<div style="position: relative; width: 100%; max-width: 700px; margin: 0 auto; aspect-ratio: 7 / 5;">
+  <img src="images/north_forest/map/main.png" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" />
+  <svg viewBox="0 0 700 500"
+       preserveAspectRatio="none"
+       style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+    <polygon id="map_1" 
+             points="1,1,1,160,240,160,239,2" 
+             class="mc_bed_chamber_map" 
+             data-passage="map_1" />
+    <polygon id="map_2" 
+             points="2,162,1,330,240,328,239,163" 
+             class="mc_bed_chamber_map" 
+             data-passage="map_2" />
+    <polygon id="map_3" 
+             points="2,332,1,499,241,499,240,331" 
+             class="mc_bed_chamber_map" 
+             data-passage="map_3" />
+    <polygon id="map_4" 
+             points="240,3,241,159,478,159,477,2" 
+             class="mc_bed_chamber_map" 
+             data-passage="map_4" />
+    <polygon id="map_5" 
+             points="241,165,242,328,478,329,478,164" 
+             class="mc_bed_chamber_map" 
+             data-passage="map_5" />
+    <polygon id="map_6" 
+             points="243,331,242,497,478,498,478,331" 
+             class="mc_bed_chamber_map" 
+             data-passage="out_side" />
+    <polygon id="map_7" 
+             points="480,3,479,160,698,162,698,2" 
+             class="mc_bed_chamber_map" 
+             data-passage="map_7" />
+    <polygon id="map_8" 
+             points="480,166,481,328,698,328,698,166" 
+             class="mc_bed_chamber_map" 
+             data-passage="map_8" />
+    <polygon id="map_9" 
+             points="481,331,481,497,698,498,697,330" 
+             class="mc_bed_chamber_map" 
+             data-passage="map_9" />
+  </svg>
+</div><br><br>
+[[Back to Castle|out_side]]
+<</nobr>>
+
+:: map_1
+<<nobr>>
+<<if !$goblin_scrounger_info>>
+<div style="position: relative; width: 100%; max-width: 700px; margin: 0 auto; aspect-ratio: 7 / 5;">
+  <img src="images/north_forest/map/map_1_1.png" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" />
+  <svg viewBox="0 0 700 500"
+       preserveAspectRatio="none"
+       style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+    <polygon id="goblin_scrounger_info" 
+             points="434,163,441,156,448,152,446,144,433,144,435,136,435,127,444,113,447,103,446,94,422,81,432,79,445,79,452,69,460,62,471,63,480,71,489,71,509,68,493,82,496,91,505,99,509,108,504,123,517,132,503,133,501,141,497,150,491,155,497,164,480,165,479,156,480,147,472,153,468,144,462,151,460,161,441,166" 
+             class="mc_bed_chamber_map" 
+             data-passage="goblin_scrounger_info" />
+  </svg>
+</div>
+<<else>>
+<<passage_img "north_forest/map/map_1.png">><</passage_img>>
+<</if>>
+<br><br>
+[[Back to North Forest|north_forest]]
+<</nobr>>
+
+
+:: map_2
+<<nobr>>
+<<if !$murkkin_bandit_info>>
+<div style="position: relative; width: 100%; max-width: 700px; margin: 0 auto; aspect-ratio: 7 / 5;">
+  <img src="images/north_forest/map/map_2_1.png" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" />
+  <svg viewBox="0 0 700 500"
+       preserveAspectRatio="none"
+       style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+    <polygon id="murkkin_bandit_info" 
+             points="202,144,207,132,202,120,200,133,197,124,194,133,193,118,201,105,210,92,221,92,221,86,221,76,223,70,213,61,226,65,229,58,239,52,248,64,260,62,256,70,262,73,270,74,275,61,285,63,278,79,279,88,292,79,296,82,284,94,288,102,292,110,290,122,283,134,288,148,284,167,280,148,270,164,274,146,262,159,267,145,252,159,267,139,264,133,259,144,252,152,247,146,239,154,232,150,230,140,221,139,215,149,205,152" 
+             class="mc_bed_chamber_map" 
+             data-passage="murkkin_bandit_info" />
+  </svg>
+</div>
+<<else>>
+<<passage_img "north_forest/map/map_2.png">><</passage_img>>
+<</if>>
+<br><br>
+[[Back to North Forest|north_forest]]
+<</nobr>>

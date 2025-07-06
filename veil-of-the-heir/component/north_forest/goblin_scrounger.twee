@@ -1,0 +1,166 @@
+
+
+:: goblin_scrounger_info
+<<nobr>>
+<h3 style="text-align: center;">Goblin Scrounger</h3>
+
+<<passage_img "north_forest/goblin_scrounger/goblin_scrounger.png">><</passage_img>>
+
+<div class="monster_information">
+<p><strong>Type:</strong> Low-tier Humanoid</p>
+
+<p>Description:
+Small, wiry, and foul smelling, these green skinned creatures lurk on the edges 
+of villages, scavenging food, tools, or loose coin. 
+Goblin Scroungers wear mismatched leathers and wield rusty daggers or broken spears. 
+They're weak alone, but dangerous in packs.
+</p>
+
+<p><strong>Behavior:</strong> Cowardly, but cunning. Uses distractions and ambush tactics.</p>
+
+/* <p>Quest Hook: A local hamlet reports missing livestock and stolen tools; Queen’s Guard sends Caelan to investigate.</p> */
+
+<p><strong>Combat Level:</strong> Beginner</p>
+
+<p><strong>Loot:</strong> Goblin tooth, scrap leather, weak alchemy herb pouch.</p>
+
+[[Return to the forest|north_forest]] |
+[[Interact with the Goblin Scrounger|goblin_scrounger]]
+</div>
+<</nobr>>
+
+:: goblin_scrounger
+<<nobr>>
+<<set $goblin_scrounger_img = "north_forest/goblin_scrounger/goblin_scrounger.png">>
+I travel alone through the dusky woods on the Queen’s order to investigate missing livestock.
+The faint scent of smoke and rot leads me to an overgrown trail. 
+A snapping twig reveals a small, wiry figure hunched beneath a thorny bush.<br><br>
+
+<<speech "mc">>You there step out. You’re trespassing on royal land, and I’ve no patience for filth hiding in the underbrush.<</speech>><br>
+<<speech "goblok" $goblin_scrounger_img>>Filth? Hah! Says the dainty little prince with hips like a milkmaid. What’s this, then? They sending soft pretty girls to do men’s work now?<</speech>><br>
+<<speech "mc">>I’m no girl. Watch your tongue, creature. This sword is real enough.<</speech>><br>
+<<speech "goblok" $goblin_scrounger_img>>Oh, it’s not just your sword that’s getting smaller, I wager.<br>Used to be a strapping lad, weren’t you? Now look at ya… little nubs under your shirt, lips all pouty. Mm… somebody’s changing…<</speech>><br>
+[[Move Forth|goblin_scrounger_1]]
+<</nobr>>
+
+:: goblin_scrounger_1
+<<nobr>>
+<<speech "mc">>Enough. You’ve stolen from the Queen’s folk. You’ll answer for it.<</speech>><br>
+<<speech "goblok" $goblin_scrounger_img>>Steal? Nah. I collect pretties. And you, princeling, look very pretty now. You’re worth more than goat meat or coin.<br>You even smell different. Got that… perfume of becoming. Bet your little thing's vanishing day by day.<</speech>><br>
+<<speech "mc">>Say another word, and you’ll be collecting your teeth from the dirt.<</speech>><br>
+<<speech "goblok" $goblin_scrounger_img>>Touchy, touchy! The little royal flower’s got thorns.<br>Forgive me, Your Petalness. Didn’t mean to offend your royal panties.<</speech>><br>
+[[Move Forth|goblin_scrounger_2]]
+<</nobr>>
+
+
+:: goblin_scrounger_2
+<<nobr>>
+<<speech "mc">>I don’t wear <br>Enough! You’re stalling.<</speech>><br>
+<<speech "goblok" $goblin_scrounger_img>>"Stalling? No no no, I’m savoring. See, it’s rare to meet a half-turned prince. Not quite a lady, not quite a man. Like a ripe fruit ready to fall. Maybe I’ll slice you open and see what you’ve become.<</speech>><br>
+<<speech "mc">>Try it. I dare you.<</speech>><br>
+<<speech "goblok" $goblin_scrounger_img>>Oh-ho! There’s still fire in you, girly boy. That fire won't save you when your tits get in the way of your swing!<</speech>><br>
+[[Move Forth|goblin_scrounger_3]]
+<</nobr>>
+
+:: goblin_scrounger_3
+<<nobr>>
+<<speech "mc">>I’ll gut you.<</speech>><br>
+<<speech "goblok" $goblin_scrounger_img>>Oooh, that was cute. Like a kitten batting yarn. Come on, then! Show me how deadly a half-princess fights!<</speech>><br>
+<<speech "mc">>I am your future queen!<</speech>><br>
+<<speech "goblok" $goblin_scrounger_img>>"Not yet you ain’t. You’re stuck in between. Not prince, not queen. Just a twitchy little pup growing tits and sass!<</speech>><br>
+[[Move Forth|goblin_scrounger_4]]
+<</nobr>>
+
+:: goblin_scrounger_4
+<<nobr>>
+<<speech "mc">>Then let me show you what ‘in between’ can do!<</speech>><br>
+<<speech "goblok" $goblin_scrounger_img>>Ha! Tasted steel now, have I? Got claws under those soft gloves, do ya?<</speech>><br>
+<<speech "mc">>"You mock me for being feminine, yet you bleed like any man I’ve slain.<</speech>><br>
+<<speech "goblok" $goblin_scrounger_img>>"Bleed, yes… but I don’t weep when my corset’s too tight!<br>You are wearing one under there, aren’t you?<</speech>><br>
+[[Move Forth|goblin_scrounger_5]]
+<</nobr>>
+
+:: goblin_scrounger_5
+<<nobr>>
+<<speech "mc">>I don’t need armor to crush a worm like you.<</speech>><br>
+<<speech "goblok" $goblin_scrounger_img>>"Armor? Hah! You don’t need it your new curves will distract half an army!<br>Bet your enemies don’t know whether to fight or flirt, huh?<</speech>><br>
+<<speech "mc">>"I’ve killed worse than you in dresses and heels.<</speech>><br>
+<<speech "goblok" $goblin_scrounger_img>>"Mmm. Heels! Next time you stumble in those, I’ll be there to pounce. Maybe I’ll keep your shoes after I gut ya.<</speech>><br>
+[[Move Forth|goblin_scrounger_6]]
+<</nobr>>
+
+:: goblin_scrounger_6
+<<nobr>>
+<<speech "mc">>"You’ll be lucky to crawl away with your life.<</speech>><br>
+<<speech "goblok" $goblin_scrounger_img>>Oh, I don’t want to crawl. I want to dance with you, sweetling. Let’s see if those dainty wrists can block a real blow!<</speech>><br>
+<<speech "mc">>They’re strong enough to carve out your filthy tongue!<</speech>><br>
+<<speech "goblok" $goblin_scrounger_img>>You’re fast. I’ll give you that. Not just a pretty face, eh?<</speech>><br>
+[[Move Forth|goblin_scrounger_7]]
+<</nobr>>
+
+:: goblin_scrounger_7
+<<nobr>>
+<<speech "mc">>"Say it again. Say I’m pretty while I bring you to your knees.<</speech>><br>
+<<speech "goblok" $goblin_scrounger_img>>Oh, you are. Pretty and deadly. The Queen’s pet flower, blooming with rage.<</speech>><br>
+<<speech "mc">>"And you’re just rot at the root.<</speech>><br>
+<<speech "goblok" $goblin_scrounger_img>>"Fine. You want a real fight, little petal? Let’s end this.<</speech>><br>
+[[Move Forth|goblin_scrounger_8]]
+<</nobr>>
+
+:: goblin_scrounger_8
+<<nobr>>
+<<speech "mc">>"Gladly.<br><</speech>><br>
+<<speech "goblok" $goblin_scrounger_img>>Y-you… weren’t supposed to be this strong…<</speech>><br>
+<<speech "mc">>"I’m not supposed to be anything. That’s the point.<</speech>><br>
+<<speech "goblok" $goblin_scrounger_img>>"You’re… becoming her. Her heir. Her weapon.<</speech>><br>
+[[Move Forth|goblin_scrounger_9]]
+<</nobr>>
+
+:: goblin_scrounger_9
+<<nobr>>
+<<speech "mc">>"I’m becoming me. Whatever that is. Prince, princess, queen… all that matters is I win.<</speech>><br>
+<<speech "goblok" $goblin_scrounger_img>>Well… you’ve got my vote, sugar.<</speech>><br>
+<<speech "mc">>Keep it.<</speech>><br>
+<<speech "goblok" $goblin_scrounger_img>>Even your kills feel soft…<</speech>><br>
+<<speech "mc">>Then I’ll just have to be sharper.<</speech>><br>
+<<set $gridWidth = 3>>
+<<set $gridHeight = 2>>
+<<set $gameTime = 10>>
+<<set $memory_game_image_set = [
+    setup.ImagePath + "north_forest/goblin_scrounger/goblin_scrounger.png",
+    setup.ImagePath + "north_forest/weapon/moonfang.png",
+    setup.ImagePath + "north_forest/weapon/blazefury.png",
+]>>
+<<set $game_over_passage = "goblin_scrounger_over">>
+[[Attack|MemoryGame]]
+<</nobr>>
+
+:: goblin_scrounger_over
+<<nobr>>
+<<if $memory_game_won>>
+<<speech "goblok" $goblin_scrounger_img>> Damn… didn’t think the Queen’s little maiden could dance like that…<</speech>><br>
+<<speech "mc">> I’m not a maiden. I’m your executioner.<</speech>><br>
+<<speech "goblok" $goblin_scrounger_img>> Bet you make one hell of a bride though. That little sway you got when you dodge ungh! Deadly and fuckable…<</speech>><br>
+<<speech "mc">> You mocked me… called me soft. But look who’s bleeding in the dirt.<</speech>><br>
+<<speech "goblok" $goblin_scrounger_img>> Ain’t softness that killed me… it’s the anger underneath. Heh… you’re gonna be one nasty queen.<</speech>><br>
+<<speech "mc">> Say it again.<</speech>><br>
+<<speech "goblok" $goblin_scrounger_img>> You’re pretty… and mean… just how I like ’em…<</speech>><br>
+<<speech "mc">>Good. Die with that on your tongue.<</speech>><br>
+<<speech "mc">>Call me flower again… and I’ll show you thorns.<</speech>><br>
+<<set $goblin_scrounger_info = true>>
+[[Kill Goblin Scrounger|north_forest]]
+<<else>>
+<<speech "goblok" $goblin_scrounger_img>> Oh-ho-ho… what’s this? The Queen’s precious little blossom is wilting.<</speech>><br>
+<<speech "mc">> This… isn’t over…<</speech>><br>
+<<speech "goblok" $goblin_scrounger_img>>Of course it ain’t. You’re still growing into your new skin. It’s not ripe yet… but almost. I can smell it.<</speech>><br>
+<<speech "mc">> I’ll finish this… another day.<</speech>><br>
+<<speech "goblok" $goblin_scrounger_img>>Ohhh, you look so pretty when you’re panting. Little flush in your cheeks, hair all mussed from battle. Mmm… one more month of those potions and I could sell you to a noble stablehouse.<</speech>><br>
+<<speech "mc">> I’ll slit your throat the next time we meet.<</speech>><br>
+<<speech "goblok" $goblin_scrounger_img>>Will you now, sugar hips? You better run before your corset bursts open.<</speech>><br>
+<<speech "mc">> This isn’t retreat. It’s a warning.<</speech>><br>
+<<speech "goblok" $goblin_scrounger_img>>Tell the Queen her flower nearly got plucked.<</speech>><br>
+<<speech "mc">>Next time, you won’t live to gloat.<</speech>><br>
+<<speech "goblok" $goblin_scrounger_img>>Grow those titties nice and big for me, princess! I wanna see them bounce when I take you next!<</speech>><br>
+[[Run|north_forest]]
+<</if>>
+<</nobr>>

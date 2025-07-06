@@ -2,7 +2,8 @@ Macro.add("speech", {
     tags: null,
     handler: function () {
         let charKey = this.args[0]; // e.g., "mc" or "guard"
-        let text = this.args[1];
+        // let text = this.args[1];
+        let image_path_direct = this.args[1];
         let charName = "";
 
         // Default layers if MC
@@ -29,16 +30,12 @@ Macro.add("speech", {
 
         let speechContent = "";
 
-        if (this.args.length > 1) {
-            // Direct argument mode
-            speechContent = this.args[1];
-        } else {
-            // Evaluate the body as wikicode
-            let content = (this.payload?.[0]?.contents || "").trim();
-            let temp = document.createElement("div");
-            new Wikifier(temp, content);
-            speechContent = temp.innerHTML;
-        }
+
+        // Evaluate the body as wikicode
+        let content = (this.payload?.[0]?.contents || "").trim();
+        let temp = document.createElement("div");
+        new Wikifier(temp, content);
+        speechContent = temp.innerHTML;
 
 
         let imageHTML = "";
@@ -126,6 +123,9 @@ Macro.add("speech", {
                 // image_path = setup.ImagePath + "character/queen/avatar.png";
                 charName = charKey
                 charKey = "other";
+            }
+            if (image_path_direct) {
+                image_path = setup.ImagePath + image_path_direct;
             }
             imageHTML = `
                 <div class="character-image-dialog">

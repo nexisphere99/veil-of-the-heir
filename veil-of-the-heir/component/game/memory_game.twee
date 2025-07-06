@@ -3,13 +3,14 @@
 <script>
 // Memory Game Configuration
 window.memoryGameConfig = {
-    gridWidth: 10,  // Number of columns
-    gridHeight: 10, // Number of rows
-    imageCount: 12, // Number of different images (must be <= (width*height)/2)
+    gridWidth: SugarCube.State.variables.gridWidth,  // Number of columns
+    gridHeight: SugarCube.State.variables.gridHeight, // Number of rows
+    imageCount: SugarCube.State.variables.gridWidth * SugarCube.State.variables.gridHeight / 2, // Number of different images (must be <= (width*height)/2)
     maxWidth: getMaxWidth(),  // Maximum width of game board
-    gameTime: 120   // Game time in seconds
+    gameTime: SugarCube.State.variables.gameTime   // Game time in seconds
 };
 console.log(window.memoryGameConfig.maxWidth)
+// console.log(SugarCube.State.variables.memory_game_image_set)
 // Function to determine max width based on screen size
 function getMaxWidth() {
     const screenWidth = window.innerWidth;
@@ -148,8 +149,10 @@ function updateGameUI() {
   
   let html = '';
   memoryGame.cards.forEach((card, index) => {
+    // console.log("card value", card.value, SugarCube.State.variables.memory_game_image_set)
     const isFlipped = memoryGame.flippedCards.includes(index) || card.matched;
-    const imgSrc = `https://picsum.photos/seed/${card.value}/300/300`;
+    // const imgSrc = `https://picsum.photos/seed/${card.value}/300/300`;
+    const imgSrc = SugarCube.State.variables.memory_game_image_set[card.value];
     
     html += `
       <div class="memory-card" 
@@ -195,7 +198,17 @@ function updateTimerDisplay() {
 
 function endGame(win) {
   clearInterval(memoryGame.timer);
-  alert(win ? 'Congratulations! You won!' : "Time's up! Game over.");
+  // alert(win ? 'Congratulations! You won!' : "Time's up! Game over.");
+  if (win) {
+    // Save game state if won
+    SugarCube.State.variables.memory_game_won = true;
+    // move to next passage, give me command
+    SugarCube.Engine.play(SugarCube.State.variables.game_over_passage);
+  } else {
+    // Reset game state if lost
+    SugarCube.State.variables.memory_game_won = false;
+    SugarCube.Engine.play(SugarCube.State.variables.game_over_passage);
+  }
 }
 
 // Reveal all cards

@@ -6,7 +6,7 @@ Veil of the Heir
 	"ifid": "27FA6D7B-4709-4B3D-9797-F5BF92C9430B",
 	"format": "SugarCube",
 	"format-version": "2.37.3",
-	"start": "startup",
+	"start": "north_forest",
 	"zoom": 0.6
 }
 

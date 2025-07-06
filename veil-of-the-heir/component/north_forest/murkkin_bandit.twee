@@ -1,0 +1,211 @@
+
+
+
+:: murkkin_bandit_info
+<<nobr>>
+<h3 style="text-align: center;">Murkkin Bandit</h3>
+
+<<passage_img "north_forest/murkkin_bandit/murkkin_bandit.png">><</passage_img>>
+
+<div class="monster_information">
+<p><strong>Type:</strong> Corrupted Human-Hybrid</p>
+ 
+<p><strong>Description:</strong>
+Vask the Murkkin – Once human, these bandits traded their souls to swamp spirits for power and now roam the 
+roads with bloodshot eyes, slick gray skin, and sharp bone-like claws. 
+Their minds are half-lost, but their blades are steady.</p>
+
+<p><strong>Behavior:</strong> Aggressive, unpredictable, often works in twos or threes.</p>
+
+<p><strong>Quest Hook:</strong> A merchant's caravan went missing. Clues point to the Murkkin-infested 
+Hollow Ridge trail.</p>
+
+<p><strong>Combat Level:</strong> Low–Intermediate</p>
+
+<p><strong>Loot:</strong> Murkkin fingerbone, cursed coin, potion ingredient (Swamproot Essence).</p>
+
+[[Return to the forest|north_forest]] |
+[[Interact with the Murkkin Bandit|murkkin_bandit]]
+</div>
+<</nobr>>
+
+:: murkkin_bandit
+<<nobr>>
+<<set $murkkin_bandit_img = "north_forest/murkkin_bandit/murkkin_bandit.png">>
+<<speech "mc">>You there! Halt. Step away from the path and identify yourself.<</speech>><br>
+<<speech "Vask" $murkkin_bandit_img>>Mmm… well now. They told me the Queen’s brat was hunting monsters. I didn’t expect such a delicate thing to come skipping into my swamp.<</speech>><br>
+<<speech "mc">>I’m not here to skip. I’m here for justice. You raided the merchant’s caravan.<</speech>><br>
+<<speech "Vask" $murkkin_bandit_img>>Guilty. And now you’ve come to punish me, have you, little flower?<br>You look like you'd bruise if I breathed too hard.<</speech>><br>
+[[Move Forth|murkkin_bandit_1]]
+<</nobr>>
+
+:: murkkin_bandit_1
+<<nobr>>
+<<speech "mc">>I’ve fought worse things than a swamp-mutated thug with a death wish.<</speech>><br>
+<<speech "Vask" $murkkin_bandit_img>>Oh? Fought worse? I don’t doubt that. But did they tease your little tits while they bled?<br>Because I see them. Peeking through your tunic like shy little fruits.<</speech>><br>
+<<speech "mc">>You’ll regret those words.<</speech>><br>
+<<speech "Vask" $murkkin_bandit_img>>Will I?<br>I can smell the magic on you. Your body’s twisting, blooming. Not quite a boy… not yet a queen. That’s when you’re weakest.<</speech>><br>
+[[Move Forth|murkkin_bandit_2]]
+<</nobr>>
+
+:: murkkin_bandit_2
+<<nobr>>
+<<speech "mc">>I’m not weak.<</speech>><br>
+<<speech "Vask" $murkkin_bandit_img>>You’re changing. And change breaks people before it builds them. Your muscles don’t know where they belong. Your hips are shifting. Bet your balance is off.<</speech>><br>
+<<speech "mc">>Try me.<</speech>><br>
+<<speech "Vask" $murkkin_bandit_img>>I plan to.<br>I’ve killed many. But none so… fascinating. You’re like a butterfly halfway out of its shell.<</speech>><br>
+[[Move Forth|murkkin_bandit_3]]
+<</nobr>>
+
+:: murkkin_bandit_3
+<<nobr>>
+<<speech "mc">>Get to the point.<</speech>><br>
+<<speech "Vask" $murkkin_bandit_img>>The point? Oh, prince-turned-pretty, you are the point. They sent you here, thinking you could command. Lead. Fight.<br>But you’re busy learning how to walk without jiggling.<</speech>><br>
+<<speech "mc">>Keep laughing. It’ll make severing your throat feel better.<</speech>><br>
+<<speech "Vask" $murkkin_bandit_img>>Feisty! There it is. That little flicker of the old boy in you.<br>But your voice cracks now. Not deep enough to scare. Not high enough to enchant. You sound... unfinished.<</speech>><br>
+[[Move Forth|murkkin_bandit_4]]
+<</nobr>>
+
+
+:: murkkin_bandit_4
+<<nobr>>
+<<speech "mc">>I am unfinished becoming. That should terrify you.<</speech>><br>
+<<speech "Vask" $murkkin_bandit_img>>It arouses me.<br>There’s musk under that lavender soap you use. Mmm. Both sides battling inside you. Maybe I should end the war.<</speech>><br>
+<<speech "mc">>You’re disgusting.<</speech>><br>
+<<speech "Vask" $murkkin_bandit_img>>I’m truthful.<br>Do your breasts ache at night? They look tender. Bet your armor doesn’t fit right anymore.<</speech>><br>
+[[Move Forth|murkkin_bandit_5]]
+<</nobr>>
+
+:: murkkin_bandit_5
+<<nobr>>
+<<speech "mc">>Enough.<</speech>><br>
+<<speech "Vask" $murkkin_bandit_img>>And your hair? So long now. Soft. Like a maiden’s. Bet the wind tangles it around your pretty lips.<</speech>><br>
+<<speech "mc">>Enough.<</speech>><br>
+<<speech "Vask" $murkkin_bandit_img>>Even your stance has changed. Less weight on the heels. More sway in the hips. You’re not fighting it. Not really.<</speech>><br>
+[[Move Forth|murkkin_bandit_6]]
+<</nobr>>
+
+:: murkkin_bandit_6
+<<nobr>>
+<<speech "mc">>I’m adapting.<</speech>><br>
+<<speech "Vask" $murkkin_bandit_img>>Adaptation is surrender by another name.<</speech>><br>
+<<speech "mc">>No. It’s evolution.<</speech>><br>
+<<speech "Vask" $murkkin_bandit_img>>Well, let’s test that theory. Let’s see how evolved your new body is when it’s bleeding.<</speech>><br>
+[[Move Forth|murkkin_bandit_7]]
+<</nobr>>
+
+:: murkkin_bandit_7
+<<nobr>>
+<<speech "mc">>Draw your weapon.<</speech>><br>
+<<speech "Vask" $murkkin_bandit_img>>With pleasure, lady-boy.<</speech>><br>
+<<speech "mc">>I’m not a boy.<</speech>><br>
+<<speech "Vask" $murkkin_bandit_img>>Then what are you?<</speech>><br>
+<</nobr>><<speech "mc">>I am what will kill you.<</speech>><br>
+[[Move Forth|murkkin_bandit_8]]
+
+:: murkkin_bandit_8
+<<nobr>>
+<<speech "Vask" $murkkin_bandit_img>>Nice swing! But your wrist is softer now. That potion cost you strength, didn’t it?<</speech>><br>
+<<speech "mc">>It gave me speed. Watch this.<</speech>><br>
+<<speech "Vask" $murkkin_bandit_img>>Ooooh! Feisty and fast. A dangerous debutante.<</speech>><br>
+<<speech "mc">>You talk too much.<</speech>><br>
+<</nobr>><<speech "Vask" $murkkin_bandit_img>>And you blush too easily.<</speech>><br>
+[[Move Forth|murkkin_bandit_9]]
+
+
+:: murkkin_bandit_9
+<<nobr>>
+<<speech "mc">>Because I still have shame. You don’t.<</speech>><br>
+<<speech "Vask" $murkkin_bandit_img>>Nope. I gave mine to the swamp.<br>But I take what I want.<</speech>><br>
+<<speech "mc">>Try. Just try.<</speech>><br>
+<<speech "Vask" $murkkin_bandit_img>>You little witchling. You cut me!<</speech>><br>
+[[Move Forth|murkkin_bandit_10]]
+<</nobr>>
+
+:: murkkin_bandit_10
+<<nobr>>
+<<speech "mc">>Bleed, beast.<</speech>><br>
+<<speech "Vask" $murkkin_bandit_img>>You’re enjoying this, aren’t you? All that fire trapped in a new soft shell. You like being underestimated.<</speech>><br>
+<<speech "mc">>It gives me advantage.<</speech>><br>
+<<speech "Vask" $murkkin_bandit_img>>But you’ll never command respect. Not with those budding breasts.<</speech>><br>
+[[Move Forth|murkkin_bandit_11]]
+<</nobr>>
+
+:: murkkin_bandit_11
+<<nobr>>
+<<speech "mc">>Then I’ll command fear.<</speech>><br>
+<<speech "Vask" $murkkin_bandit_img>>Damn you!<</speech>><br>
+<<speech "mc">>No. I damn you.<</speech>><br>
+<<speech "Vask" $murkkin_bandit_img>>Wanna know a secret, pretty prince?<</speech>><br>
+[[Move Forth|murkkin_bandit_12]]
+<</nobr>>
+
+:: murkkin_bandit_12
+<<nobr>>
+<<speech "mc">>What?<</speech>><br>
+<<speech "Vask" $murkkin_bandit_img>>I think… you’d make a beautiful corpse.<</speech>><br>
+<<speech "mc">>Try to make one, then.<</speech>><br>
+<<speech "Vask" $murkkin_bandit_img>>Y-you…<</speech>><br>
+[[Move Forth|murkkin_bandit_14]]
+<</nobr>>
+
+:: murkkin_bandit_14
+<<nobr>>
+<<speech "mc">>I may be softening… but I still kill hard.<</speech>><br>
+<<speech "Vask" $murkkin_bandit_img>>She… turned you into a weapon…<</speech>><br>
+<<speech "mc">>She freed me.<</speech>><br>
+<<speech "mc">>Let them mock my body… they won’t mock my blade.<</speech>><br>
+<<set $gridWidth = 3>>
+<<set $gridHeight = 4>>
+<<set $gameTime = 30>>
+<<set $memory_game_image_set = [
+    setup.ImagePath + "north_forest/murkkin_bandit/murkkin_bandit.png",
+    setup.ImagePath + "north_forest/weapon/moonfang.png",
+    setup.ImagePath + "north_forest/weapon/blazefury.png",
+    setup.ImagePath + "north_forest/weapon/bloodvine.png",
+    setup.ImagePath + "north_forest/weapon/stormreaver.png",
+    setup.ImagePath + "north_forest/weapon/tidepiercer.png",
+]>>
+<<set $game_over_passage = "murkkin_bandit_over">>
+[[Attack|MemoryGame]]
+<</nobr>>
+
+
+
+
+:: murkkin_bandit_over
+<<nobr>>
+<<if $memory_game_won>>
+<<speech "Vask" $murkkin_bandit_img>>Well now... that’s a cruel cut for a pretty hand.<</speech>><br>
+<<speech "mc">>You should have kept your mouth shut.<</speech>><br>
+<<speech "Vask" $murkkin_bandit_img>>I didn’t think... you had it in you... not with that sway in your hips... that glow in your skin...<</speech>><br>
+<<speech "mc">>Your mistake was thinking I traded my strength for softness.<</speech>><br>
+<<speech "Vask" $murkkin_bandit_img>>No… you didn’t trade it… you hid it… like a blade under lace…<</speech>><br>
+<<speech "mc">>You’ll never speak of lace again.<</speech>><br>
+<<speech "Vask" $murkkin_bandit_img>>She’s turning you into something… dangerous…<</speech>><br>
+<<speech "mc">>She’s helping me become me.<</speech>><br>
+<<speech "Vask" $murkkin_bandit_img>>Then you’re not a queen yet... but you'll make a lovely executioner.<</speech>><br>
+<<speech "mc">>Then let this be your coronation.<</speech>><br>
+<<speech "mc">>I may change shape… but the steel remains.<</speech>><br>
+<<speech "mc">>One monster down. A thousand more who think my curves make me weak.<</speech>><br>
+<<speech "mc">>They’ll learn the same lesson. Too late.<</speech>><br>
+<<set $murkkin_bandit_info = true>>
+[[Kill Murkkin Bandit|north_forest]]
+<<else>>
+<<speech "Vask" $murkkin_bandit_img>>Well well well... The little butterfly’s wings aren’t ready yet.<</speech>><br>
+<<speech "mc">>I... I’m not finished…<</speech>><br>
+<<speech "Vask" $murkkin_bandit_img>>No... but you are bleeding.<br>(He lifts his cleaver, mockingly slow.)"<</speech>><br>
+<<speech "mc">>You’ll regret this…<</speech>><br>
+<<speech "Vask" $murkkin_bandit_img>>Oh? You planning to charm me with your pouty lips? Or maybe bat those long lashes and beg for mercy?<</speech>><br>
+<<speech "mc">>You… talk too much…<</speech>><br>
+<<speech "Vask" $murkkin_bandit_img>>Better than you fight today, sweetheart. All that magic... and it still can’t stop you from tripping over your own tits.<</speech>><br>
+<<speech "mc">>You won’t win next time.<</speech>><br>
+<<speech "Vask" $murkkin_bandit_img>>I won this time. That’s what matters.<</speech>><br>
+<<speech "mc">>This isn’t over!<</speech>><br>
+<<speech "Vask" $murkkin_bandit_img>>Run, princess! But remember this: I saw you stumble. I smelled your fear!<</speech>><br>
+<<speech "Vask" $murkkin_bandit_img>>And when you finally become her   I’ll be there. Watching.<</speech>><br>
+<<speech "mc">>One loss… not the end. Let them think I’m weak.<</speech>><br>
+<<speech "mc">>They’ll never see me coming next time.<</speech>><br>
+[[Run|north_forest]]
+<</if>>
+<</nobr>>
