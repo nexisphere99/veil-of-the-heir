@@ -2106,7 +2106,7 @@ $(document).ready(function () {
         <div id="custom-left-bar">
             <div id="sidebar-close" class="mobile-only">✖</div>
             <h1 style="margin: 15% 0 0 0; text-align: center;">Veil of the Heir</h1>
-            <p style="margin: 0px; text-align: center;">Vesion - 0.0.3</p>
+            <p style="margin: 0px; text-align: center;">Vesion - 0.0.3.A</p>
             <h3 style="margin: 0px; text-align: center;">by Nexisphere Games</h3>
             <div id="left-top-container" class="image-crop">
                 <img id="player-image" class="player-image" src="" alt="Player Image">
@@ -12308,7 +12308,7 @@ No, beloved. They’re a gateway to your sensuality, your confidence, and your f
 &lt;br&gt;
 &lt;&lt;/if&gt;&gt;
 /* [[Attend Session One|valetia_session_1]] |&lt;br&gt;&lt;br&gt; */
-&lt;strong style=&quot;color: red;&quot;&gt;This will enable in Version 0.0.3&lt;/strong&gt;
+/* &lt;strong style=&quot;color: red;&quot;&gt;This will enable in Version 0.0.3&lt;/strong&gt; */
 [[Leave Mistress Veletia Roswyn|dressing_bloom]] |&lt;br&gt;&lt;br&gt;
 [[Leave Royal Dressing Bloom|castle_map_front_select]]
 &lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="56" name="valetia_session_1" tags="" position="725,725" size="100,100">&lt;&lt;nobr&gt;&gt;
@@ -27332,6 +27332,30 @@ $possible_changes.includes($userBody.torso.orig_body)
 /* &lt;&lt;=$image_key_hand_path&gt;&gt; */
 &lt;&lt;set $userBody.right_hand.img = $image_key_hand_path&gt;&gt;
 /* &lt;pre&gt;&lt;&lt;= JSON.stringify($userBody.right_hand, null, 2)&gt;&gt;&lt;/pre&gt; */
+
+&lt;&lt;if State.variables.direction == &quot;reverse&quot;&gt;&gt;
+    &lt;&lt;set $user_stats.gender_appearance += 1&gt;&gt;
+&lt;&lt;else&gt;&gt;
+    &lt;&lt;set $user_stats.gender_appearance -= 1&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+/* &lt;&lt;=&gt;&gt; */
+/* &lt;pre&gt;&lt;&lt;= JSON.stringify($userBody.left_hand, null, 2)&gt;&gt;&lt;/pre&gt; */
+&lt;&lt;set $userBody.left_hand.curr_body = $curr_potion_selected.to&gt;&gt;
+&lt;&lt;set $image_key_hand_path = &quot;mc/figure/&quot; + $userBody.left_hand.orig_body + &quot;/&quot; + $userBody.left_hand.curr_body + &quot;/&quot; + $userBody.left_hand.orig_body + &quot;_&quot; + $userBody.left_hand.curr_body + &quot;_&quot; + &quot;left_hand.png&quot;&gt;&gt;
+/* &lt;&lt;=$image_key_hand_path&gt;&gt; */
+&lt;&lt;set $userBody.left_hand.img = $image_key_hand_path&gt;&gt;
+/* &lt;pre&gt;&lt;&lt;= JSON.stringify($userBody.left_hand, null, 2)&gt;&gt;&lt;/pre&gt; */
+/* &lt;div style=&quot;text-align: center;&quot;&gt;
+&lt;div class=&quot;change_show torso&quot;&gt;[img[setup.ImagePath+$userBody.torso.img]]&lt;/div&gt;
+&lt;div class=&quot;change_show head&quot;&gt;[img[setup.ImagePath+$userBody.head.img]]&lt;/div&gt;
+&lt;div class=&quot;change_show right_hand&quot;&gt;[img[setup.ImagePath+$userBody.right_hand.img]]&lt;/div&gt;
+&lt;div class=&quot;change_show left_hand&quot;&gt;[img[setup.ImagePath+$userBody.left_hand.img]]&lt;/div&gt;
+&lt;div class=&quot;change_show left_leg&quot;&gt;[img[setup.ImagePath+$userBody.left_leg.img]]&lt;/div&gt;
+&lt;div class=&quot;change_show right_leg&quot;&gt;[img[setup.ImagePath+$userBody.right_leg.img]]&lt;/div&gt;
+&lt;div class=&quot;change_show chest&quot;&gt;[img[setup.ImagePath+$userBody.chest.img]]&lt;/div&gt;
+&lt;div class=&quot;change_show crotch&quot;&gt;[img[setup.ImagePath+$userBody.crotch.img]]&lt;/div&gt;
+&lt;div class=&quot;change_show hair&quot;&gt;[img[setup.ImagePath+$userBody.hair.img]]&lt;/div&gt;
+&lt;/div&gt; */
 &lt;div style=&quot;text-align: center;&quot;&gt;
 &lt;div class=&quot;change_show torso&quot;&gt;[img[setup.ImagePath+$userBody.torso.img]]&lt;/div&gt;
 &lt;div class=&quot;change_show head&quot;&gt;[img[setup.ImagePath+$userBody.head.img]]&lt;/div&gt;
@@ -27343,6 +27367,7 @@ $possible_changes.includes($userBody.torso.orig_body)
 &lt;div class=&quot;change_show crotch&quot;&gt;[img[setup.ImagePath+$userBody.crotch.img]]&lt;/div&gt;
 &lt;div class=&quot;change_show hair&quot;&gt;[img[setup.ImagePath+$userBody.hair.img]]&lt;/div&gt;
 &lt;/div&gt;
+
 &lt;&lt;link &quot;Try another Potion Scroll&quot;&gt;&gt;&lt;&lt;goto &quot;potion_lab&quot;&gt;&gt;&lt;&lt;/link&gt;&gt; |
 [[Leave Veil Tower|castle_map_back_select]]
 &lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="916" name="left_hand_ml_left_hand_mm" tags="" position="725,11475" size="100,100">&lt;&lt;nobr&gt;&gt;
@@ -28178,7 +28203,7 @@ $possible_changes.includes($userBody.torso.orig_body)
 &lt;&lt;set $userBody.left_leg.img = $image_key_leg_path&gt;&gt;
 &lt;&lt;set $userBody.shoes.img = $image_key_shoe_path&gt;&gt;
 /* &lt;pre&gt;&lt;&lt;= JSON.stringify($userBody.left_leg, null, 2)&gt;&gt;&lt;/pre&gt; */
-&lt;div style=&quot;text-align: center;&quot;&gt;
+/* &lt;div style=&quot;text-align: center;&quot;&gt;
 &lt;div class=&quot;change_show torso&quot;&gt;[img[setup.ImagePath+$userBody.torso.img]]&lt;/div&gt;
 &lt;div class=&quot;change_show head&quot;&gt;[img[setup.ImagePath+$userBody.head.img]]&lt;/div&gt;
 &lt;div class=&quot;change_show right_hand&quot;&gt;[img[setup.ImagePath+$userBody.right_hand.img]]&lt;/div&gt;
@@ -28189,7 +28214,7 @@ $possible_changes.includes($userBody.torso.orig_body)
 &lt;div class=&quot;change_show crotch&quot;&gt;[img[setup.ImagePath+$userBody.crotch.img]]&lt;/div&gt;
 &lt;div class=&quot;change_show hair&quot;&gt;[img[setup.ImagePath+$userBody.hair.img]]&lt;/div&gt;
 &lt;div class=&quot;change_show shoes&quot;&gt;[img[setup.ImagePath+$image_key_shoe_path]]&lt;/div&gt;
-&lt;/div&gt;
+&lt;/div&gt; */
 
 
 &lt;&lt;if State.variables.direction == &quot;reverse&quot;&gt;&gt;
@@ -29645,17 +29670,6 @@ $possible_changes.includes($userBody.torso.orig_body)
 /* &lt;&lt;=$image_key_hand_path&gt;&gt; */
 &lt;&lt;set $userBody.right_hand.img = $image_key_hand_path&gt;&gt;
 /* &lt;pre&gt;&lt;&lt;= JSON.stringify($userBody.right_hand, null, 2)&gt;&gt;&lt;/pre&gt; */
-&lt;div style=&quot;text-align: center;&quot;&gt;
-&lt;div class=&quot;change_show torso&quot;&gt;[img[setup.ImagePath+$userBody.torso.img]]&lt;/div&gt;
-&lt;div class=&quot;change_show head&quot;&gt;[img[setup.ImagePath+$userBody.head.img]]&lt;/div&gt;
-&lt;div class=&quot;change_show right_hand&quot;&gt;[img[setup.ImagePath+$userBody.right_hand.img]]&lt;/div&gt;
-&lt;div class=&quot;change_show left_hand&quot;&gt;[img[setup.ImagePath+$userBody.left_hand.img]]&lt;/div&gt;
-&lt;div class=&quot;change_show left_leg&quot;&gt;[img[setup.ImagePath+$userBody.left_leg.img]]&lt;/div&gt;
-&lt;div class=&quot;change_show right_leg&quot;&gt;[img[setup.ImagePath+$userBody.right_leg.img]]&lt;/div&gt;
-&lt;div class=&quot;change_show chest&quot;&gt;[img[setup.ImagePath+$userBody.chest.img]]&lt;/div&gt;
-&lt;div class=&quot;change_show crotch&quot;&gt;[img[setup.ImagePath+$userBody.crotch.img]]&lt;/div&gt;
-&lt;div class=&quot;change_show hair&quot;&gt;[img[setup.ImagePath+$userBody.hair.img]]&lt;/div&gt;
-&lt;/div&gt;
 
 
 &lt;&lt;if State.variables.direction == &quot;reverse&quot;&gt;&gt;
@@ -29670,6 +29684,17 @@ $possible_changes.includes($userBody.torso.orig_body)
 /* &lt;&lt;=$image_key_hand_path&gt;&gt; */
 &lt;&lt;set $userBody.left_hand.img = $image_key_hand_path&gt;&gt;
 /* &lt;pre&gt;&lt;&lt;= JSON.stringify($userBody.left_hand, null, 2)&gt;&gt;&lt;/pre&gt; */
+/* &lt;div style=&quot;text-align: center;&quot;&gt;
+&lt;div class=&quot;change_show torso&quot;&gt;[img[setup.ImagePath+$userBody.torso.img]]&lt;/div&gt;
+&lt;div class=&quot;change_show head&quot;&gt;[img[setup.ImagePath+$userBody.head.img]]&lt;/div&gt;
+&lt;div class=&quot;change_show right_hand&quot;&gt;[img[setup.ImagePath+$userBody.right_hand.img]]&lt;/div&gt;
+&lt;div class=&quot;change_show left_hand&quot;&gt;[img[setup.ImagePath+$userBody.left_hand.img]]&lt;/div&gt;
+&lt;div class=&quot;change_show left_leg&quot;&gt;[img[setup.ImagePath+$userBody.left_leg.img]]&lt;/div&gt;
+&lt;div class=&quot;change_show right_leg&quot;&gt;[img[setup.ImagePath+$userBody.right_leg.img]]&lt;/div&gt;
+&lt;div class=&quot;change_show chest&quot;&gt;[img[setup.ImagePath+$userBody.chest.img]]&lt;/div&gt;
+&lt;div class=&quot;change_show crotch&quot;&gt;[img[setup.ImagePath+$userBody.crotch.img]]&lt;/div&gt;
+&lt;div class=&quot;change_show hair&quot;&gt;[img[setup.ImagePath+$userBody.hair.img]]&lt;/div&gt;
+&lt;/div&gt; */
 &lt;div style=&quot;text-align: center;&quot;&gt;
 &lt;div class=&quot;change_show torso&quot;&gt;[img[setup.ImagePath+$userBody.torso.img]]&lt;/div&gt;
 &lt;div class=&quot;change_show head&quot;&gt;[img[setup.ImagePath+$userBody.head.img]]&lt;/div&gt;
@@ -30626,7 +30651,7 @@ $possible_changes.includes($userBody.torso.orig_body)
 &lt;&lt;set $userBody.right_leg.img = $image_key_leg_path&gt;&gt;
 &lt;&lt;set $userBody.shoes.img = $image_key_shoe_path&gt;&gt;
 /* &lt;pre&gt;&lt;&lt;= JSON.stringify($userBody.right_leg, null, 2)&gt;&gt;&lt;/pre&gt; */
-&lt;div style=&quot;text-align: center;&quot;&gt;
+/* &lt;div style=&quot;text-align: center;&quot;&gt;
 &lt;div class=&quot;change_show torso&quot;&gt;[img[setup.ImagePath+$userBody.torso.img]]&lt;/div&gt;
 &lt;div class=&quot;change_show head&quot;&gt;[img[setup.ImagePath+$userBody.head.img]]&lt;/div&gt;
 &lt;div class=&quot;change_show right_hand&quot;&gt;[img[setup.ImagePath+$userBody.right_hand.img]]&lt;/div&gt;
@@ -30637,7 +30662,7 @@ $possible_changes.includes($userBody.torso.orig_body)
 &lt;div class=&quot;change_show crotch&quot;&gt;[img[setup.ImagePath+$userBody.crotch.img]]&lt;/div&gt;
 &lt;div class=&quot;change_show hair&quot;&gt;[img[setup.ImagePath+$userBody.hair.img]]&lt;/div&gt;
 &lt;div class=&quot;change_show shoes&quot;&gt;[img[setup.ImagePath+$image_key_shoe_path]]&lt;/div&gt;
-&lt;/div&gt;
+&lt;/div&gt; */
 
 
 &lt;&lt;if State.variables.direction == &quot;reverse&quot;&gt;&gt;
