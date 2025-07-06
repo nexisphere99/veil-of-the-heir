@@ -357,7 +357,7 @@ $possible_changes.includes($userBody.torso.orig_body)
 <<set $userBody.right_leg.img = $image_key_leg_path>>
 <<set $userBody.shoes.img = $image_key_shoe_path>>
 /* <pre><<= JSON.stringify($userBody.right_leg, null, 2)>></pre> */
-<div style="text-align: center;">
+/* <div style="text-align: center;">
 <div class="change_show torso">[img[setup.ImagePath+$userBody.torso.img]]</div>
 <div class="change_show head">[img[setup.ImagePath+$userBody.head.img]]</div>
 <div class="change_show right_hand">[img[setup.ImagePath+$userBody.right_hand.img]]</div>
@@ -368,7 +368,7 @@ $possible_changes.includes($userBody.torso.orig_body)
 <div class="change_show crotch">[img[setup.ImagePath+$userBody.crotch.img]]</div>
 <div class="change_show hair">[img[setup.ImagePath+$userBody.hair.img]]</div>
 <div class="change_show shoes">[img[setup.ImagePath+$image_key_shoe_path]]</div>
-</div>
+</div> */
 
 
 <<if State.variables.direction == "reverse">>
