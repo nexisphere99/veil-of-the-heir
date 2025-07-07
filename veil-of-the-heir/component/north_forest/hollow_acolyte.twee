@@ -1,0 +1,224 @@
+
+
+
+:: hollow_acolyte_info
+<<nobr>>
+<h3 style="text-align: center;">Hollow Acolyte</h3>
+
+<<passage_img "north_forest/hollow_acolyte/hollow_acolyte.png">><</passage_img>>
+
+<div class="monster_information">
+<p><strong>Type:</strong> Undead Cultist</p>
+
+<p>Description:
+Serathis – Once a priest, A gaunt, robed humanoid whose skin has dried like parchment. 
+The Hollow Acolytes were once scholars, turned into undead by ancient forbidden rituals. 
+They speak in whispers, carry cursed tomes, and unleash minor hexes.
+</p>
+
+<p><strong>Behavior:</strong> Chanting, ranged dark magic user.</p>
+
+/* <p>Quest Hook: A forgotten chapel emits strange light—Caelan is sent to investigate a forbidden relic.</p> */
+
+<p><strong>Combat Level:</strong> Intermediate</p>
+
+<p><strong>Loot:</strong> Necrotic dust, tattered robes, corrupted scripture page.</p>
+
+[[Return to the forest|north_forest]] |
+[[Interact with the Hollow Acolyte|hollow_acolyte]]
+</div>
+<</nobr>>
+
+
+
+:: hollow_acolyte
+<<nobr>>
+<<set $hollow_acolyte_img = "north_forest/hollow_acolyte/hollow_acolyte.png">>
+Prince Caelan investigates a decaying chapel at dusk, long abandoned after the Sacred Uprising. 
+Strange whispers and cold wind lead him to the altar, where a lone figure in tattered robes stands 
+beneath a cracked stained glass window. His presence feels... wrong. He does not breathe.
+
+<<speech "caelen">>I know you’re there. The villagers heard chanting. You're not welcome here.<</speech>><br>
+<<speech "serathis" $hollow_acolyte_img>>Mmm… such a voice. Not quite falsetto. Not quite baritone. A song trapped between verses. How... exquisite.<</speech>><br>
+<<speech "caelen">>I didn’t come for riddles. Speak your name.<</speech>><br>
+<<speech "serathis" $hollow_acolyte_img>>I was Serathis. Now I am... Hollow. I speak with the breath of the void and listen with ears full of echoes. And you—what are you, little one?<</speech>><br>
+[[Move Forth|hollow_acolyte_1]]
+<</nobr>>
+
+:: hollow_acolyte_1
+<<nobr>>
+<<speech "caelen">>I’m Prince Caelan of Velmoria.<</speech>><br>
+<<speech "serathis" $hollow_acolyte_img>>No, no. That name lies. You are no prince now.<br>I see breasts beneath that royal leather. I smell sacred oils in your hair. The Queen’s spell is strong… and you are bending to it.<</speech>><br>
+<<speech "caelen">>I bend to no one.<</speech>><br>
+<<speech "serathis" $hollow_acolyte_img>>Ah, but you do. Your waist narrows with submission. Your hips bloom with obedience. Your walk whispers secrets you haven’t yet said aloud.<</speech>><br>
+[[Move Forth|hollow_acolyte_2]]
+<</nobr>>
+
+:: hollow_acolyte_2
+<<nobr>>
+<<speech "caelen">>I came to stop a threat. Not endure perversions.<</speech>><br>
+<<speech "serathis" $hollow_acolyte_img>>Perversion?<br>Oh no. You misunderstand. I worship change. You are a sacred text, rewritten in curves and blushes.<</speech>><br>
+<<speech "caelen">>Then read my sword.<</speech>><br>
+<<speech "serathis" $hollow_acolyte_img>>Oh, but why would I harm a holy thing? You are becoming divine. Your flesh remembers what your mind fears to admit.<</speech>><br>
+[[Move Forth|hollow_acolyte_3]]
+<</nobr>>
+
+:: hollow_acolyte_3
+<<nobr>>
+<<speech "caelen">>I fear nothing.<</speech>><br>
+<<speech "serathis" $hollow_acolyte_img>>Then why the tremble when I say…<br>…your nipples are hard through that thin silk.<</speech>><br>
+<<speech "caelen">>You’ll pay for that.<</speech>><br>
+<<speech "serathis" $hollow_acolyte_img>>Mmm. Wrath suits you. Rage is still a prince’s gift. But your anger now… it rises like perfume, not fire. It dances.<</speech>><br>
+<<speech "caelen">>You speak in riddles and filth.<</speech>><br>
+[[Move Forth|hollow_acolyte_4]]
+<</nobr>>
+
+:: hollow_acolyte_4
+<<nobr>>
+<<speech "serathis" $hollow_acolyte_img>>I speak truth. Your thighs press together now when you’re uncertain. Your breath catches when you’re complimented. Tell me, pretty prince, have you worn lace yet?<</speech>><br>
+<<speech "caelen">>Draw a weapon or shut your rotted mouth.<</speech>><br>
+<<speech "serathis" $hollow_acolyte_img>>I have no weapon. Only words. And look how they cut you already.<</speech>><br>
+<<speech "caelen">>You’re trying to make me doubt.<</speech>><br>
+[[Move Forth|hollow_acolyte_5]]
+<</nobr>>
+
+:: hollow_acolyte_5
+<<nobr>>
+<<speech "serathis" $hollow_acolyte_img>>No. I’m trying to make you see. What you are. What you’ve lost. What you want.<</speech>><br>
+<<speech "caelen">>What I want is to shut your smug mouth with steel.<</speech>><br>
+<<speech "serathis" $hollow_acolyte_img>>You’d spill blood with such dainty hands?<br>Those are queen’s hands now… made to hold silk, not swords.<</speech>><br>
+<<speech "caelen">>They can hold both.<</speech>><br>
+[[Move Forth|hollow_acolyte_6]]
+<</nobr>>
+
+:: hollow_acolyte_6
+<<nobr>>
+<<speech "serathis" $hollow_acolyte_img>>Do you sleep at night wondering who you are?<br>Do you wake with a body that isn’t yours, but feels more like you than ever before?<</speech>><br>
+<<speech "caelen">>I don’t care what you see. I know who I am.<</speech>><br>
+<<speech "serathis" $hollow_acolyte_img>>Then why do you blush?<</speech>><br>
+<<speech "caelen">>Because I still have honor. You lost yours centuries ago.<</speech>><br>
+[[Move Forth|hollow_acolyte_7]]
+<</nobr>>
+
+:: hollow_acolyte_7
+<<nobr>>
+<<speech "serathis" $hollow_acolyte_img>>I lost nothing. I shed it—like you will shed that last thread of masculinity. You want to. I can help you. Unravel it all.<</speech>><br>
+<<speech "caelen">>You want to corrupt me.<</speech>><br>
+<<speech "serathis" $hollow_acolyte_img>>Oh no. You’re doing that fine on your own.<</speech>><br>
+<<speech "caelen">>You think I’m ashamed of this body?<</speech>><br>
+[[Move Forth|hollow_acolyte_8]]
+<</nobr>>
+
+:: hollow_acolyte_8
+<<nobr>>
+<<speech "serathis" $hollow_acolyte_img>>No. I think you’re seduced by it… and afraid of how good that feels.<</speech>><br>
+<<speech "caelen">>I do feel good. I feel stronger. Lighter. Clearer.<</speech>><br>
+<<speech "serathis" $hollow_acolyte_img>>Yes… you glow with power. Feminine magic is so alive. So eager. I could drink from it.<</speech>><br>
+<<speech "caelen">>You won’t touch me.<</speech>><br>
+[[Move Forth|hollow_acolyte_9]]
+<</nobr>>
+
+:: hollow_acolyte_9
+<<nobr>>
+<<speech "serathis" $hollow_acolyte_img>>No… I’ll consume you from afar. Piece by piece. Your confidence. Your balance. Your memory. I’ll unmake you.<</speech>><br>
+<<speech "caelen">>You’re not a god. You’re a ghost.<</speech>><br>
+<<speech "serathis" $hollow_acolyte_img>>Even ghosts can touch dreams. And nightmares.<</speech>><br>
+<<speech "caelen">>Then I’ll give you a nightmare you won’t forget.<</speech>><br>
+[[Move Forth|hollow_acolyte_10]]
+<</nobr>>
+
+:: hollow_acolyte_10
+<<nobr>>
+<<speech "serathis" $hollow_acolyte_img>>Fight me, then. But each strike you land will take something from you. A memory. A name. A fragment of your old self.<</speech>><br>
+<<speech "caelen">>Let it. I don’t need to be him anymore. I’ll be me. Stronger. Fuller. Fierce.<</speech>><br>
+<<speech "serathis" $hollow_acolyte_img>>Delicious. The boy becomes the blade.<</speech>><br>
+<<speech "caelen">>The princess becomes the predator.<</speech>><br>
+[[Move Forth|hollow_acolyte_11]]
+<</nobr>>
+
+:: hollow_acolyte_11
+<<nobr>>
+<<speech "serathis" $hollow_acolyte_img>>Come, then. Let’s see how sharp your femininity can cut.<</speech>><br>
+<<speech "caelen">>For Velmoria!<</speech>><br>
+<<speech "serathis" $hollow_acolyte_img>>For the void!<</speech>><br>
+<<speech "serathis" $hollow_acolyte_img>>You flinch like a girl.<</speech>><br>
+[[Move Forth|hollow_acolyte_1]]
+<</nobr>>
+
+:: hollow_acolyte_12
+<<nobr>>
+<<speech "caelen">>I am a girl.<</speech>><br>
+<<speech "serathis" $hollow_acolyte_img>>Then bleed like one!<</speech>><br>
+<<speech "caelen">>Not before you burn.<</speech>><br>
+<<speech "serathis" $hollow_acolyte_img>>Beautiful and deadly. Your Queen chose well…<</speech>><br>
+[[Move Forth|hollow_acolyte_13]]
+<</nobr>>
+
+:: hollow_acolyte_13
+<<nobr>>
+<<speech "caelen">>She didn’t choose. I chose.<</speech>><br>
+<<speech "serathis" $hollow_acolyte_img>>You'll rule with a crown… or a collar.<</speech>><br>
+<<speech "caelen">>I’ll rule with fire and silk.<</speech>><br>
+<<speech "serathis" $hollow_acolyte_img>>I see you now… not prince… not girl… but queen… becoming...<</speech>><br>
+<<speech "caelen">>And you’ll never see anything again. They all want to define me. But I’m writing my own story.<</speech>><br>
+<<set $gridWidth = 4>>
+<<set $gridHeight = 4>>
+<<set $gameTime = 45>>
+<<set $memory_game_image_set = [
+    setup.ImagePath + "north_forest/hollow_acolyte/hollow_acolyte.png",
+    setup.ImagePath + "north_forest/weapon/moonfang.png",
+    setup.ImagePath + "north_forest/weapon/blazefury.png",
+    setup.ImagePath + "north_forest/weapon/bloodvine.png",
+    setup.ImagePath + "north_forest/weapon/stormreaver.png",
+    setup.ImagePath + "north_forest/weapon/tidepiercer.png",
+    setup.ImagePath + "north_forest/weapon/whisperfang.png",
+    setup.ImagePath + "north_forest/weapon/sylvanwrath.png",
+]>>
+<<set $game_over_passage = "hollow_acolyte_over">>
+[[Attack|MemoryGame]]
+<</nobr>>
+
+
+:: hollow_acolyte_over
+<<nobr>>
+<<if $memory_game_won>>
+Caelan stumbles back, arms shaking. His sword is slick with blood, 
+but Serathis is still standing, dark magic dancing in the air around him. 
+The chapel pulses with whispers. Caelan’s head spins.
+<<speech "serathis" $hollow_acolyte_img>>You’re faltering, fledgling. The spell twists in your bones. 
+Your hips betray you—unbalanced. 
+Your grip? Weak from dainty fingers not meant for war.<</speech>><br>
+<<speech "caelen">>You… haven’t… won…<</speech>><br>
+<<speech "serathis" $hollow_acolyte_img>>But I’ve seen you now. The prince is gone. 
+The boy—buried beneath perfume and corsets. Only doubt remains.<</speech>><br>
+<<speech "caelen">>Shut up!<</speech>><br>
+<<speech "serathis" $hollow_acolyte_img>>Run, pretty thing. Flee in silk and shame. 
+Return to your Queen and tell her you’re not ready. Not yet.<</speech>><br>
+<<speech "caelen">>Next time… you’ll choke on my name.<</speech>><br>
+He hurls the charm. It flashes — a blinding golden light. 
+Serathis recoils with a hiss. Caelan dashes out, blood running from his arm, vision blurred.
+<<speech "serathis" $hollow_acolyte_img>>Run, lovely little ghost. But the transformation never stops. 
+Even in defeat, your body becomes softer... sweeter…<</speech>><br>
+<<speech "caelen">>I’ll return. With better footing. A sharper edge. 
+Let him mock my curves—next time, I’ll carve his name into the stone.<</speech>><br>
+<<set $hollow_acolyte_info = true>>
+[[Kill Hollow Acolyte|north_forest]]
+<<else>>
+
+
+Serathis is on his knees, robes torn, his eyes flickering like dying stars. 
+Caelan stands over him, hair wild, blade slick with dark ichor. 
+The chapel shakes with residual magic.<br>
+
+<<speech "serathis" $hollow_acolyte_img>>I… see it now. You’re not just becoming… you’re transcending.<</speech>><br>
+<<speech "caelen">>Transcend somewhere else.<</speech>><br>
+<<speech "serathis" $hollow_acolyte_img>>Your body hums… a melody of flesh unmoored. 
+You are sacred ruin. I wanted to… taste it…<</speech>><br>
+<<speech "caelen">>You’ve done enough.<</speech>><br>
+<<speech "serathis" $hollow_acolyte_img>>I was supposed to unmake you…<</speech>><br>
+<<speech "caelen">>But you reminded me what I’ve become. I’m not a half-prince. 
+Not a lost boy. I’m something new. Something powerful.<</speech>><br>
+<<speech "caelen">>They keep thinking my softness makes me weak. But softness endures.<</speech>><br>
+[[Run|north_forest]]
+<</if>>
+<</nobr>>
