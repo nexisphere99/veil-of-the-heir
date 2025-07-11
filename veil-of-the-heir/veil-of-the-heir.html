@@ -2097,7 +2097,7 @@ $(document).ready(function () {
         <div id="custom-left-bar">
             <div id="sidebar-close" class="mobile-only">✖</div>
             <h1 style="margin: 15% 0 0 0; text-align: center;">Veil of the Heir</h1>
-            <p style="margin: 0px; text-align: center;">Vesion - 0.0.3.B</p>
+            <p style="margin: 0px; text-align: center;">Vesion - 0.0.3.C</p>
             <h3 style="margin: 0px; text-align: center;">by Nexisphere Games</h3>
             <div id="left-top-container" class="image-crop">
                 <img id="player-image" class="player-image" src="" alt="Player Image">
@@ -2675,7 +2675,7 @@ setup.storeItems = {
 	// --
 	"moonpetal_extract": { 
 		name: "Moonpetal Extract", 
-		value: 8, 
+		value: 20, 
 		unit: "tsp", 
 		min_amount: 1,
 		img: "images/ingredients/moonpetal_extract.png",
@@ -2705,7 +2705,7 @@ setup.storeItems = {
 	// --
 	"starblossom_pollen": { 
 		name: "Starblossom Pollen", 
-		value: 5, 
+		value: 10, 
 		unit: "scoop", 
 		min_amount: 1,
 		img: "images/ingredients/starblossom_pollen.png",
@@ -2735,7 +2735,7 @@ setup.storeItems = {
 	// --
 	"dragonmoss_resin": { 
 		name: "Dragonmoss Resin", 
-		value: 5, 
+		value: 10, 
 		unit: "drop", 
 		min_amount: 1,
 		img: "images/ingredients/dragonmoss_resin.png",
@@ -2745,7 +2745,7 @@ setup.storeItems = {
 	// ---
 	"seraphmilk": { 
 		name: "Seraphmilk", 
-		value: 15, 
+		value: 40, 
 		unit: "ml", 
 		min_amount: 5,
 		img: "images/ingredients/seraphmilk.png",
@@ -2765,7 +2765,7 @@ setup.storeItems = {
 	// --
 	"ashfern_flakes": { 
 		name: "Ashfern Flakes", 
-		value: 4, 
+		value: 8, 
 		unit: "g", 
 		min_amount: 1,
 		img: "images/ingredients/ashfern_flakes.png",
@@ -2795,7 +2795,7 @@ setup.storeItems = {
 	// -
 	"nightshade_bloom": { 
 		name: "Nightshade Bloom", 
-		value: 3, 
+		value: 5, 
 		unit: "petal", 
 		min_amount: 1,
 		img: "images/ingredients/nightshade_bloom.png",
@@ -2815,7 +2815,7 @@ setup.storeItems = {
 	// -
 	"lilywhisper_nectar": { 
 		name: "Lilywhisper Nectar", 
-		value: 2, 
+		value: 4, 
 		unit: "ml", 
 		min_amount: 1,
 		img: "images/ingredients/lilywhisper_nectar.png",
@@ -2825,7 +2825,7 @@ setup.storeItems = {
 	// -
 	"vinesilk_essence": { 
 		name: "Vinesilk Essence", 
-		value: 2, 
+		value: 3, 
 		unit: "ml", 
 		min_amount: 1,
 		img: "images/ingredients/vinesilk_essence.png" ,
@@ -2835,9 +2835,9 @@ setup.storeItems = {
 	// --
 	"crimsonroot_dust": { 
 		name: "Crimsonroot Dust", 
-		value: 10, 
+		value: 25, 
 		unit: "g", 
-		min_amount: 1,
+		min_amount: 5,
 		img: "images/ingredients/crimsonroot_dust.png",
 		description: "Pulverized from the rare crimsonroot found along leyline crossings, this powder glows faintly with internal balance. Used to stabilize chest and core transformations, it enhances femininity subtly across the entire midsection while preventing magical overload.", 
 		effect: "Enhances overall femininity subtly and harmoniously across the midsection. Balances transformations. Stabilizes breast area. Prevents erratic growth or collapse during transformations."
@@ -2845,7 +2845,7 @@ setup.storeItems = {
 	// ---
 	"velvetgrove_essence": { 
 		name: "Velvetgrove Essence", 
-		value: 2, 
+		value: 10, 
 		unit: "tsp", 
 		min_amount: 1,
 		img: "images/ingredients/velvetgrove_essence.png",
@@ -2855,7 +2855,7 @@ setup.storeItems = {
 	// --
 	"frostleaf_crystals": {
 		name: "Frostleaf Crystals", 
-		value: 4, 
+		value: 10, 
 		unit: "tsp", 
 		min_amount: 1,
 		img: "images/ingredients/frostleaf_crystals.png",
@@ -2865,7 +2865,7 @@ setup.storeItems = {
 	// -
 	"eversilk_thread": { 
 		name: "Eversilk Thread", 
-		value: 3, 
+		value: 5, 
 		unit: "cm", 
 		min_amount: 1,
 		img: "images/ingredients/eversilk_thread.png",
@@ -2938,6 +2938,28 @@ postdisplay["gifPopupHandler"] = function () {
     }, 0);
 };
 /* twine-user-script #9: "chest.js" */
+let crimsonroot_dust = 5
+let seraphmilk = 5
+let ashfern_flakes = 2
+let frostvine_elixir = 5
+let eversilk_thread = 2
+let nightshade_bloom = 2
+let dragonmoss_resin = 2
+let nullroot_dust = 1
+let glowleaf_powder = 1
+let starblossom_pollen = 2
+let velvetgrove_essence = 1
+let softroot_essence = 2
+let frostleaf_crystals = 1
+let moonpetal_extract = 3
+let feylace_petal = 1
+let lilywhisper_nectar = 1
+let vinesilk_essence = 1
+let sorrowseed_oil = 1
+let thornberry_juice = 5
+let velmorian_honey = 10
+let crimsondew_drops = 1
+
 setup.chest_forward_potions = {
 	"chest_1": {
 		id: 1,
@@ -2946,9 +2968,9 @@ setup.chest_forward_potions = {
 		name: "Subtle Bloom Tincture",
 		purpose: "Musscle Grace ➝ Man's Bud",
 		ingredients: {
-			"crimsonroot_dust": 10,
-			"seraphmilk": 30,
-			"starblossom_pollen": 10
+			"crimsonroot_dust": crimsonroot_dust * 1,
+			"seraphmilk": seraphmilk * 1,
+			"starblossom_pollen": starblossom_pollen * 1
 		},
 		function: "Skin softens over chest, faint tingling sensation begins.",
 		sideEffects: "Increased awareness of chest, shy arousal when touched there."
@@ -2960,9 +2982,9 @@ setup.chest_forward_potions = {
 		name: "Chestwhisper Draft",
 		purpose: "Man's Bud ➝ Blossom's Stir",
 		ingredients: {
-			"crimsonroot_dust": 20,
-			"seraphmilk": 45,
-			"starblossom_pollen": 15
+			"crimsonroot_dust": crimsonroot_dust * 2,
+			"seraphmilk": seraphmilk * 2,
+			"starblossom_pollen": starblossom_pollen * 2
 		},
 		function: "Areolae darken slightly, underlying glandular formation starts.",
 		sideEffects: "Tingling when in cold rooms, stronger heartbeat sensations in chest."
@@ -2974,9 +2996,9 @@ setup.chest_forward_potions = {
 		name: "Budding Curve Elixir",
 		purpose: "Blossom's Stir ➝ Petal Bloom (A)",
 		ingredients: {
-			"crimsonroot_dust": 30,
-			"seraphmilk": 60,
-			"starblossom_pollen": 20
+			"crimsonroot_dust": crimsonroot_dust * 3,
+			"seraphmilk": seraphmilk * 3,
+			"starblossom_pollen": starblossom_pollen * 3
 		},
 		function: "Breast buds push outward, nipples gain shape and become sensitive.",
 		sideEffects: "Brief moaning during sleep, strong nipple sensitivity."
@@ -2988,9 +3010,9 @@ setup.chest_forward_potions = {
 		name: "Nectar of Early Bloom",
 		purpose: "Petal Bloom (A) ➝ Early Bloom (B)",
 		ingredients: {
-			"crimsonroot_dust": 40,
-			"seraphmilk": 75,
-			"starblossom_pollen": 25
+			"crimsonroot_dust": crimsonroot_dust * 4,
+			"seraphmilk": seraphmilk * 4,
+			"starblossom_pollen": starblossom_pollen * 4
 		},
 		function: "Rounded shape appears, light jiggle when moving.",
 		sideEffects: "Blushing during court dances, gentle bouncing distracts Caelan."
@@ -3002,9 +3024,9 @@ setup.chest_forward_potions = {
 		name: "Curvelace Tonic",
 		purpose: "Early Bloom (B) ➝ Full Bloom (C)",
 		ingredients: {
-			"crimsonroot_dust": 50,
-			"seraphmilk": 90,
-			"starblossom_pollen": 30
+			"crimsonroot_dust": crimsonroot_dust * 5,
+			"seraphmilk": seraphmilk * 5,
+			"starblossom_pollen": starblossom_pollen * 5
 		},
 		function: "Breasts swell in volume, bounce becomes visible.",
 		sideEffects: "Excitement when hugged, habit of cupping chest during thought."
@@ -3016,9 +3038,9 @@ setup.chest_forward_potions = {
 		name: "Queen's Bud Elixir",
 		purpose: "Full Bloom (C) ➝ Lush Curve (D)",
 		ingredients: {
-			"crimsonroot_dust": 60,
-			"seraphmilk": 105,
-			"starblossom_pollen": 35
+			"crimsonroot_dust": crimsonroot_dust * 6,
+			"seraphmilk": seraphmilk * 6,
+			"starblossom_pollen": starblossom_pollen * 6
 		},
 		function: "Shape firms up and pushes forward gracefully.",
 		sideEffects: "Longing glances at other women’s figures, desire for corsetry."
@@ -3030,9 +3052,9 @@ setup.chest_forward_potions = {
 		name: "Blossombond Draft",
 		purpose: "Lush Curve (D) ➝ Lady’s Bust (E)",
 		ingredients: {
-			"crimsonroot_dust": 70,
-			"seraphmilk": 120,
-			"starblossom_pollen": 40
+			"crimsonroot_dust": crimsonroot_dust * 7,
+			"seraphmilk": seraphmilk * 7,
+			"starblossom_pollen": starblossom_pollen * 7
 		},
 		function: "Deepened cleavage, top and bottom curves round fully.",
 		sideEffects: "Lingerie starts to feel erotic, arousal from mirror reflections."
@@ -3044,9 +3066,9 @@ setup.chest_forward_potions = {
 		name: "Velvet Crest Serum",
 		purpose: "Lady’s Bust (E) ➝ Noble Crest (F)",
 		ingredients: {
-			"crimsonroot_dust": 80,
-			"seraphmilk": 135,
-			"starblossom_pollen": 45
+			"crimsonroot_dust": crimsonroot_dust * 8,
+			"seraphmilk": seraphmilk * 8,
+			"starblossom_pollen": starblossom_pollen * 8
 		},
 		function: "Breasts become full, hang with weight and softness.",
 		sideEffects: "Breast sway when walking, erotic dreams become common."
@@ -3058,9 +3080,9 @@ setup.chest_forward_potions = {
 		name: "Crownsworn Bloom",
 		purpose: "Noble Crest (F) ➝ Regal Bloom (F+)",
 		ingredients: {
-			"crimsonroot_dust": 90,
-			"seraphmilk": 150,
-			"starblossom_pollen": 50
+			"crimsonroot_dust": crimsonroot_dust * 9,
+			"seraphmilk": seraphmilk * 9,
+			"starblossom_pollen": starblossom_pollen * 9
 		},
 		function: "Upper swell perky, breasts rest high and bounce heavily.",
 		sideEffects: "Desire to flaunt cleavage, nipples react to attention."
@@ -3072,9 +3094,9 @@ setup.chest_forward_potions = {
 		name: "Empress’s Embrace",
 		purpose: "Regal Bloom (F+) ➝ Crown's Embrace (G+ Regal)",
 		ingredients: {
-			"crimsonroot_dust": 100,
-			"seraphmilk": 165,
-			"starblossom_pollen": 55
+			"crimsonroot_dust": crimsonroot_dust * 10,
+			"seraphmilk": seraphmilk * 10,
+			"starblossom_pollen": starblossom_pollen * 10
 		},
 		function: "Royal curve forms, fuller areolae, stretch marks vanish.",
 		sideEffects: "Dresses feel “too tight,” craving adornment."
@@ -3086,9 +3108,9 @@ setup.chest_forward_potions = {
 		name: "Royal Form Finalé",
 		purpose: "Crown's Embrace (G+ Regal) ➝ Throne’s Heirloom (G++ Queenly)",
 		ingredients: {
-			"crimsonroot_dust": 110,
-			"seraphmilk": 180,
-			"starblossom_pollen": 60
+			"crimsonroot_dust": crimsonroot_dust * 11,
+			"seraphmilk": seraphmilk * 11,
+			"starblossom_pollen": starblossom_pollen * 11
 		},
 		function: "Final size locks in—voluptuous, symmetrical, and regal.",
 		sideEffects: "Accustomed to breasts' pull, constant desire for support and flirty outfits."
@@ -3104,9 +3126,9 @@ setup.chest_reverse_potions = {
 		name: "Shroud of Regality",
 		purpose: "Throne’s Heirloom (G++ Queenly) ➝ Crown's Embrace (G+ Regal)",
 		ingredients: {
-			"crimsonroot_dust": 10,
-			"ashfern_flakes": 8,
-			"frostvine_elixir": 10
+			"crimsonroot_dust": crimsonroot_dust * 1,
+			"ashfern_flakes": ashfern_flakes * 1,
+			"frostvine_elixir": frostvine_elixir * 1
 		},
 		function: "Softens breast tissue, curve reduces, skin slightly sags.",
 		sideEffects: "Loss of tightness in corsets, subtle shame when undressing."
@@ -3118,9 +3140,9 @@ setup.chest_reverse_potions = {
 		name: "Elegance Receded Elixir",
 		purpose: "Crown's Embrace (G+ Regal) ➝ Regal Bloom (F+)",
 		ingredients: {
-			"crimsonroot_dust": 20,
-			"ashfern_flakes": 12,
-			"frostvine_elixir": 20
+			"crimsonroot_dust": crimsonroot_dust * 2,
+			"ashfern_flakes": ashfern_flakes * 2,
+			"frostvine_elixir": frostvine_elixir * 2
 		},
 		function: "Weight lessens, breasts lose royal firmness.",
 		sideEffects: "Bra feels emptier, involuntary crossing of arms over chest."
@@ -3132,9 +3154,9 @@ setup.chest_reverse_potions = {
 		name: "Crownlight Decay",
 		purpose: "Regal Bloom (F+) ➝ Noble Crest (F)",
 		ingredients: {
-			"crimsonroot_dust": 30,
-			"ashfern_flakes": 16,
-			"frostvine_elixir": 30
+			"crimsonroot_dust": crimsonroot_dust * 3,
+			"ashfern_flakes": ashfern_flakes * 3,
+			"frostvine_elixir": frostvine_elixir * 3
 		},
 		function: "Bounce disappears, slight shrinking and lift loss.",
 		sideEffects: "Uneasy when dancing, flickers of doubt in femininity."
@@ -3146,9 +3168,9 @@ setup.chest_reverse_potions = {
 		name: "Bloomless Drift",
 		purpose: "Noble Crest (F) ➝ Lady’s Bust (E)",
 		ingredients: {
-			"crimsonroot_dust": 40,
-			"ashfern_flakes": 20,
-			"frostvine_elixir": 40
+			"crimsonroot_dust": crimsonroot_dust * 4,
+			"ashfern_flakes": ashfern_flakes * 4,
+			"frostvine_elixir": frostvine_elixir * 4
 		},
 		function: "Breast mass contracts subtly, upper roundness diminishes.",
 		sideEffects: "Chest feels “too light,” dreams of wrapping cloth tightly."
@@ -3160,9 +3182,9 @@ setup.chest_reverse_potions = {
 		name: "Fading Curve Tonic",
 		purpose: "Lady’s Bust (E) ➝ Lush Curve (D)",
 		ingredients: {
-			"crimsonroot_dust": 50,
-			"ashfern_flakes": 24,
-			"frostvine_elixir": 50
+			"crimsonroot_dust": crimsonroot_dust * 5,
+			"ashfern_flakes": ashfern_flakes * 5,
+			"frostvine_elixir": frostvine_elixir * 5
 		},
 		function: "Side volume fades, cleavage shallows.",
 		sideEffects: "Occasional discomfort from loose-fitting tops."
@@ -3174,9 +3196,9 @@ setup.chest_reverse_potions = {
 		name: "Wilted Silk Serum",
 		purpose: "Lush Curve (D) ➝ Full Bloom (C)",
 		ingredients: {
-			"crimsonroot_dust": 60,
-			"ashfern_flakes": 28,
-			"frostvine_elixir": 60
+			"crimsonroot_dust": crimsonroot_dust * 6,
+			"ashfern_flakes": ashfern_flakes * 6,
+			"frostvine_elixir": frostvine_elixir * 6
 		},
 		function: "Shape softens, slope decreases.",
 		sideEffects: "Feels naked even when clothed, attempts to hide chest."
@@ -3188,9 +3210,9 @@ setup.chest_reverse_potions = {
 		name: "Lacedown Liquor",
 		purpose: "Full Bloom (C) ➝ Early Bloom (B)",
 		ingredients: {
-			"crimsonroot_dust": 70,
-			"ashfern_flakes": 32,
-			"frostvine_elixir": 70
+			"crimsonroot_dust": crimsonroot_dust * 7,
+			"ashfern_flakes": ashfern_flakes * 7,
+			"frostvine_elixir": frostvine_elixir * 7
 		},
 		function: "Tissue deflates modestly, nipples retract slightly.",
 		sideEffects: "Panic when breasts are not visible under clothes."
@@ -3202,9 +3224,9 @@ setup.chest_reverse_potions = {
 		name: "Breath of Modesty",
 		purpose: "Early Bloom (B) ➝ Petal Bloom (A)",
 		ingredients: {
-			"crimsonroot_dust": 80,
-			"ashfern_flakes": 36,
-			"frostvine_elixir": 80
+			"crimsonroot_dust": crimsonroot_dust * 8,
+			"ashfern_flakes": ashfern_flakes * 8,
+			"frostvine_elixir": frostvine_elixir * 8
 		},
 		function: "Volume becomes minor, tight tops hang loosely.",
 		sideEffects: "Phantom breast sensation, clinging to soft fabrics for comfort."
@@ -3216,9 +3238,9 @@ setup.chest_reverse_potions = {
 		name: "Petalfall Brew",
 		purpose: "Petal Bloom (A) ➝ Blossom's Stir",
 		ingredients: {
-			"crimsonroot_dust": 90,
-			"ashfern_flakes": 40,
-			"frostvine_elixir": 90
+			"crimsonroot_dust": crimsonroot_dust * 9,
+			"ashfern_flakes": ashfern_flakes * 9,
+			"frostvine_elixir": frostvine_elixir * 9
 		},
 		function: "Nipples flatten, glandular mass dissolves.",
 		sideEffects: "Slight tears during bath, lingering gaze at mirrors."
@@ -3230,9 +3252,9 @@ setup.chest_reverse_potions = {
 		name: "Unflowering Draft",
 		purpose: "Blossom's Stir ➝ Man's Bud",
 		ingredients: {
-			"crimsonroot_dust": 100,
-			"ashfern_flakes": 44,
-			"frostvine_elixir": 100
+			"crimsonroot_dust": crimsonroot_dust * 10,
+			"ashfern_flakes": ashfern_flakes * 10,
+			"frostvine_elixir": frostvine_elixir * 10
 		},
 		function: "Skin tightens, flatness returns fully.",
 		sideEffects: "Heavy melancholy, desire for padding or binding."
@@ -3244,15 +3266,18 @@ setup.chest_reverse_potions = {
 		name: "Still Chest Elixir",
 		purpose: "Man's Bud ➝ Musscle Grace",
 		ingredients: {
-			"crimsonroot_dust": 110,
-			"ashfern_flakes": 48,
-			"frostvine_elixir": 110
+			"crimsonroot_dust": crimsonroot_dust * 11,
+			"ashfern_flakes": ashfern_flakes * 11,
+			"frostvine_elixir": frostvine_elixir * 11
 		},
 		function: "Full masculine flatness restored, fat and tissue erased.",
 		sideEffects: "Feels “too exposed,” chest feels cold, denial reflex intensifies."
 	}
 };
 /* twine-user-script #10: "crotch.js" */
+
+
+
 setup.crotch_forward_potions = {
 	"crotch_11": {
 		id: 1,
@@ -3261,9 +3286,9 @@ setup.crotch_forward_potions = {
 		name: "Rootfade Tincture",
 		purpose: "Titanroot ➝ Drakefang",
 		ingredients: {
-			"eversilk_thread": 3,
-			"nightshade_bloom": 6,
-			"moonpetal_extract": 16
+			"eversilk_thread": eversilk_thread * 1,
+			"nightshade_bloom": nightshade_bloom * 1,
+			"moonpetal_extract": moonpetal_extract * 1
 		},
 		function: "Begins the softening and shrinkage of the base shaft; loosens core masculine anchors.",
 		sideEffects: "Sudden warmth and spontaneous submissive thoughts."
@@ -3275,9 +3300,9 @@ setup.crotch_forward_potions = {
 		name: "Shaftsong Elixir",
 		purpose: "Drakefang ➝ Ironspire",
 		ingredients: {
-			"eversilk_thread": 6,
-			"nightshade_bloom": 9,
-			"moonpetal_extract": 24
+			"eversilk_thread": eversilk_thread * 2,
+			"nightshade_bloom": nightshade_bloom * 2,
+			"moonpetal_extract": moonpetal_extract * 2
 		},
 		function: "Enhances blood redistribution and elasticity, making erections less stable and increasingly feminine.",
 		sideEffects: "Brief loss of focus and a giggling reflex."
@@ -3289,9 +3314,9 @@ setup.crotch_forward_potions = {
 		name: "Hollowstem Brew",
 		purpose: "Ironspire ➝ Stonebark",
 		ingredients: {
-			"eversilk_thread": 9,
-			"nightshade_bloom": 12,
-			"moonpetal_extract": 32
+			"eversilk_thread": eversilk_thread * 3,
+			"nightshade_bloom": nightshade_bloom * 3,
+			"moonpetal_extract": moonpetal_extract * 3
 		},
 		function: "Core tissues start to hollow and lose volume; the outer form becomes more neutral.",
 		sideEffects: "Increased desire to touch and explore; discomfort wearing tight clothing."
@@ -3303,9 +3328,9 @@ setup.crotch_forward_potions = {
 		name: "Gleamroot Infusion",
 		purpose: "Stonebark ➝ Oakstem",
 		ingredients: {
-			"eversilk_thread": 12,
-			"nightshade_bloom": 15,
-			"moonpetal_extract": 40
+			"eversilk_thread": eversilk_thread * 4,
+			"nightshade_bloom": nightshade_bloom * 4,
+			"moonpetal_extract": moonpetal_extract * 4
 		},
 		function: "Initiates spiritual realignment; sperm ducts begin magical re-routing into vaginal form.",
 		sideEffects: "Dreams involving feminine surrender; occasional moaning in sleep."
@@ -3317,9 +3342,9 @@ setup.crotch_forward_potions = {
 		name: "Fadebranch Draught",
 		purpose: "Oakstem ➝ Trunkrise",
 		ingredients: {
-			"eversilk_thread": 15,
-			"nightshade_bloom": 18,
-			"moonpetal_extract": 48
+			"eversilk_thread": eversilk_thread * 5,
+			"nightshade_bloom": nightshade_bloom * 5,
+			"moonpetal_extract": moonpetal_extract * 5
 		},
 		function: "External shrinkage continues; loss of male response; urethra starts magical division.",
 		sideEffects: "Euphoric haze during urination."
@@ -3331,9 +3356,9 @@ setup.crotch_forward_potions = {
 		name: "Whisperdew Serum",
 		purpose: "Trunkrise ➝ Branchling",
 		ingredients: {
-			"eversilk_thread": 18,
-			"nightshade_bloom": 21,
-			"moonpetal_extract": 56
+			"eversilk_thread": eversilk_thread * 6,
+			"nightshade_bloom": nightshade_bloom * 6,
+			"moonpetal_extract": moonpetal_extract * 6
 		},
 		function: "Nerve endings migrate and awaken inner clitoral structures.",
 		sideEffects: "Flushed skin, giggling from light touch, erotic sensitivity spike."
@@ -3345,9 +3370,9 @@ setup.crotch_forward_potions = {
 		name: "Hollowspire Elixir",
 		purpose: "Branchling ➝ Rootlet",
 		ingredients: {
-			"eversilk_thread": 21,
-			"nightshade_bloom": 24,
-			"moonpetal_extract": 64
+			"eversilk_thread": eversilk_thread * 7,
+			"nightshade_bloom": nightshade_bloom * 7,
+			"moonpetal_extract": moonpetal_extract * 7
 		},
 		function: "Shaft collapses inward; genital slit begins forming magically.",
 		sideEffects: "Cravings for inner warmth; whimpering from light breeze."
@@ -3359,9 +3384,9 @@ setup.crotch_forward_potions = {
 		name: "Velvetgrove Essence",
 		purpose: "Rootlet ➝ Sproutling",
 		ingredients: {
-			"eversilk_thread": 24,
-			"nightshade_bloom": 27,
-			"moonpetal_extract": 72
+			"eversilk_thread": eversilk_thread * 8,
+			"nightshade_bloom": nightshade_bloom * 8,
+			"moonpetal_extract": moonpetal_extract * 8
 		},
 		function: "Final male form fades; new folds begin appearing; pink flesh emerges.",
 		sideEffects: "Constant wetness; body squirms at compliments or feminine nicknames."
@@ -3373,9 +3398,9 @@ setup.crotch_forward_potions = {
 		name: "Silkslit Nectar",
 		purpose: "Sproutling ➝ First Bloom",
 		ingredients: {
-			"eversilk_thread": 27,
-			"nightshade_bloom": 30,
-			"moonpetal_extract": 80
+			"eversilk_thread": eversilk_thread * 9,
+			"nightshade_bloom": nightshade_bloom * 9,
+			"moonpetal_extract": moonpetal_extract * 9
 		},
 		function: "Full canal forms; inner lips are magical constructs, but sensitive and real. It can bare child.",
 		sideEffects: "Erotic dreams; swelling from whispered words."
@@ -3387,9 +3412,9 @@ setup.crotch_forward_potions = {
 		name: "Maidenflower Tonic",
 		purpose: "First Bloom ➝ Moonborne Blossom",
 		ingredients: {
-			"eversilk_thread": 30,
-			"nightshade_bloom": 33,
-			"moonpetal_extract": 88
+			"eversilk_thread": eversilk_thread * 10,
+			"nightshade_bloom": nightshade_bloom * 10,
+			"moonpetal_extract": moonpetal_extract * 10
 		},
 		function: "Fully establishes inner structure, labia, clit; functions as full feminine genitalia. Magical scent of roses. It can bare child.",
 		sideEffects: "Full arousal from gentle pressure; voice temporarily rises in pitch when flustered."
@@ -3405,9 +3430,9 @@ setup.crotch_reverse_potions = {
 		name: "Rootbend Elixir",
 		purpose: "Pussy 2 ➝ Pussy 1",
 		ingredients: {
-			"eversilk_thread": 3,
-			"dragonmoss_resin": 5,
-			"nullroot_dust": 4
+			"eversilk_thread": eversilk_thread * 1,
+			"dragonmoss_resin": dragonmoss_resin * 1,
+			"nullroot_dust": nullroot_dust * 1
 		},
 		function: "Starts to revert vaginal tissues, narrowing the entrance and tightening inner structures.",
 		sideEffects: "Discomfort and slight cold sensation at the core."
@@ -3419,9 +3444,9 @@ setup.crotch_reverse_potions = {
 		name: "Reclaim Draught",
 		purpose: "Pussy 1 ➝ Pussy 0",
 		ingredients: {
-			"eversilk_thread": 6,
-			"dragonmoss_resin": 10,
-			"nullroot_dust": 8
+			"eversilk_thread": eversilk_thread * 2,
+			"dragonmoss_resin": dragonmoss_resin * 2,
+			"nullroot_dust": nullroot_dust * 2
 		},
 		function: "Tightens the vaginal walls, solidifying the male anatomical foundation. Enhances rigidity and detachment from femininity.",
 		sideEffects: "Sensitivity loss; urge to scratch, uneasy sensations in lower body."
@@ -3433,9 +3458,9 @@ setup.crotch_reverse_potions = {
 		name: "Tightstone Brew",
 		purpose: "Pussy 0 ➝ Penis 1",
 		ingredients: {
-			"eversilk_thread": 9,
-			"dragonmoss_resin": 15,
-			"nullroot_dust": 12
+			"eversilk_thread": eversilk_thread * 3,
+			"dragonmoss_resin": dragonmoss_resin * 3,
+			"nullroot_dust": nullroot_dust * 3
 		},
 		function: "Begins full restoration of the male form; shaft re-expands slowly, reshaping to previous size.",
 		sideEffects: "Emotional stress, pain in the pelvic area from muscle rewiring."
@@ -3447,9 +3472,9 @@ setup.crotch_reverse_potions = {
 		name: "Rigidbloom Elixir",
 		purpose: "Penis 1 ➝ Penis 2",
 		ingredients: {
-			"eversilk_thread": 12,
-			"dragonmoss_resin": 20,
-			"nullroot_dust": 16
+			"eversilk_thread": eversilk_thread * 4,
+			"dragonmoss_resin": dragonmoss_resin * 4,
+			"nullroot_dust": nullroot_dust * 4
 		},
 		function: "Prevents further softening; encourages growth of male tissue, including a gradual return of the penis to its original form.",
 		sideEffects: "Nausea or dizziness; an urge to revert to old masculine patterns."
@@ -3461,9 +3486,9 @@ setup.crotch_reverse_potions = {
 		name: "Ironroot Tincture",
 		purpose: "Penis 2 ➝ Penis 3",
 		ingredients: {
-			"eversilk_thread": 15,
-			"dragonmoss_resin": 25,
-			"nullroot_dust": 20
+			"eversilk_thread": eversilk_thread * 5,
+			"dragonmoss_resin": dragonmoss_resin * 5,
+			"nullroot_dust": nullroot_dust * 5
 		},
 		function: "Increases firmness in the shaft, reasserting masculine characteristics; internal contractions begin.",
 		sideEffects: "Sudden heat flash; irritability when resisting changes."
@@ -3475,9 +3500,9 @@ setup.crotch_reverse_potions = {
 		name: "Thornshriek Serum",
 		purpose: "Penis 3 ➝ Penis 4",
 		ingredients: {
-			"eversilk_thread": 18,
-			"dragonmoss_resin": 30,
-			"nullroot_dust": 24
+			"eversilk_thread": eversilk_thread * 6,
+			"dragonmoss_resin": dragonmoss_resin * 6,
+			"nullroot_dust": nullroot_dust * 6
 		},
 		function: "Invigorates male anatomy, halting any further feminization of the tissues; begins to reshape the entire genital structure.",
 		sideEffects: "Strong sensation of disconnection with femininity; reduced libido."
@@ -3489,9 +3514,9 @@ setup.crotch_reverse_potions = {
 		name: "Stonecore Potion",
 		purpose: "Penis 4 ➝ Penis 5",
 		ingredients: {
-			"eversilk_thread": 21,
-			"dragonmoss_resin": 35,
-			"nullroot_dust": 28
+			"eversilk_thread": eversilk_thread * 7,
+			"dragonmoss_resin": dragonmoss_resin * 7,
+			"nullroot_dust": nullroot_dust * 7
 		},
 		function: "Hardens the shaft and increases rigidity. Slows the process of returning the feminine canal to male form.",
 		sideEffects: "Deep exhaustion; feeling of incomplete transformation."
@@ -3503,9 +3528,9 @@ setup.crotch_reverse_potions = {
 		name: "Regrowth Essence",
 		purpose: "Penis 5 ➝ Penis 6",
 		ingredients: {
-			"eversilk_thread": 24,
-			"dragonmoss_resin": 40,
-			"nullroot_dust": 32
+			"eversilk_thread": eversilk_thread * 8,
+			"dragonmoss_resin": dragonmoss_resin * 8,
+			"nullroot_dust": nullroot_dust * 8
 		},
 		function: "Encourages growth in the genitals, reinforcing male tissue at every stage.",
 		sideEffects: "Temporary swelling and irritation of skin."
@@ -3517,9 +3542,9 @@ setup.crotch_reverse_potions = {
 		name: "Veinroot Infusion",
 		purpose: "Penis 6 ➝ Penis 7",
 		ingredients: {
-			"eversilk_thread": 27,
-			"dragonmoss_resin": 45,
-			"nullroot_dust": 36
+			"eversilk_thread": eversilk_thread * 9,
+			"dragonmoss_resin": dragonmoss_resin * 9,
+			"nullroot_dust": nullroot_dust * 9
 		},
 		function: "Ensures full expansion of male genital form; returns elasticity to the tissues.",
 		sideEffects: "Occasional muscle spasms; uncomfortable physical tightness."
@@ -3531,15 +3556,18 @@ setup.crotch_reverse_potions = {
 		name: "Masculineflare Draught",
 		purpose: "Penis 7 ➝ Penis 9",
 		ingredients: {
-			"eversilk_thread": 30,
-			"dragonmoss_resin": 50,
-			"nullroot_dust": 40
+			"eversilk_thread": eversilk_thread * 10,
+			"dragonmoss_resin": dragonmoss_resin * 10,
+			"nullroot_dust": nullroot_dust * 10
 		},
 		function: "Final restoration of the penis to its original form; rejuvenates male genitalia.",
 		sideEffects: "Intense fatigue; heightened masculinity and increased desire to reclaim former identity."
 	}
 };
 /* twine-user-script #11: "hair.js" */
+
+
+
 // Master list of hair growth potions
 setup.hair_forward_potions = {
 	"hair_1": {
@@ -3549,9 +3577,9 @@ setup.hair_forward_potions = {
 		name: "Fibrefirst Draught",
 		purpose: "Hair Level 1 ➝ Hair Level 2",
 		ingredients: {
-			"glowleaf_powder": 3,
-			"starblossom_pollen": 10,
-			"velvetgrove_essence": 4
+			"glowleaf_powder": glowleaf_powder * 1,
+			"starblossom_pollen": starblossom_pollen * 1,
+			"velvetgrove_essence": velvetgrove_essence * 1
 		},
 		function: "Initiates the growth process, transforming short hair to a longer, thicker texture.",
 		sideEffects: "Mild itching or tingling in the scalp as hair begins to sprout."
@@ -3563,9 +3591,9 @@ setup.hair_forward_potions = {
 		name: "Strandgrowth Elixir",
 		purpose: "Hair Level 2 ➝ Hair Level 3",
 		ingredients: {
-			"glowleaf_powder": 6,
-			"starblossom_pollen": 15,
-			"velvetgrove_essence": 8
+			"glowleaf_powder": glowleaf_powder * 2,
+			"starblossom_pollen": starblossom_pollen * 2,
+			"velvetgrove_essence": velvetgrove_essence * 2
 		},
 		function: "Expands hair growth, providing greater volume and length, starting to touch the shoulders.",
 		sideEffects: "Light sensitivity in the scalp, slight increased heat around hair follicles as they expand."
@@ -3577,9 +3605,9 @@ setup.hair_forward_potions = {
 		name: "Tressbloom Essence",
 		purpose: "Hair Level 3 ➝ Hair Level 4",
 		ingredients: {
-			"glowleaf_powder": 9,
-			"starblossom_pollen": 20,
-			"velvetgrove_essence": 16
+			"glowleaf_powder": glowleaf_powder * 3,
+			"starblossom_pollen": starblossom_pollen * 3,
+			"velvetgrove_essence": velvetgrove_essence * 3
 		},
 		function: "Lengthens hair further, starting to reach mid-neck with smooth, flowing strands.",
 		sideEffects: "Tingling sensation as hair thickens and lengthens; scalp feeling soft and slightly heavier."
@@ -3591,9 +3619,9 @@ setup.hair_forward_potions = {
 		name: "Lustreweave Tonic",
 		purpose: "Hair Level 4 ➝ Hair Level 5",
 		ingredients: {
-			"glowleaf_powder": 12,
-			"starblossom_pollen": 25,
-			"velvetgrove_essence": 20
+			"glowleaf_powder": glowleaf_powder * 4,
+			"starblossom_pollen": starblossom_pollen * 4,
+			"velvetgrove_essence": velvetgrove_essence * 4
 		},
 		function: "Hair reaches neck-length, becoming more voluminous and glossy, with a slightly feminine sheen.",
 		sideEffects: "Hair becoming heavier; mild scalp tightness as length increases."
@@ -3605,9 +3633,9 @@ setup.hair_forward_potions = {
 		name: "Lengthening Draught",
 		purpose: "Hair Level 5 ➝ Hair Level 6",
 		ingredients: {
-			"glowleaf_powder": 15,
-			"starblossom_pollen": 30,
-			"velvetgrove_essence": 24
+			"glowleaf_powder": glowleaf_powder * 5,
+			"starblossom_pollen": starblossom_pollen * 5,
+			"velvetgrove_essence": velvetgrove_essence * 5
 		},
 		function: "Hair grows rapidly to shoulder-length, now fuller and with a greater shine.",
 		sideEffects: "Scalp tingling intensifies as length progresses; increased hair texture softness."
@@ -3619,9 +3647,9 @@ setup.hair_forward_potions = {
 		name: "Flowbloom Elixir",
 		purpose: "Hair Level 6 ➝ Hair Level 7",
 		ingredients: {
-			"glowleaf_powder": 18,
-			"starblossom_pollen": 35,
-			"velvetgrove_essence": 28
+			"glowleaf_powder": glowleaf_powder * 6,
+			"starblossom_pollen": starblossom_pollen * 6,
+			"velvetgrove_essence": velvetgrove_essence * 6
 		},
 		function: "Grows hair down to mid-back with a soft and flowing texture, increasing volume and luster.",
 		sideEffects: "Stronger sense of hair growth, scalp warmth as hair thickens; mild itching as hair reaches mid-back."
@@ -3633,9 +3661,9 @@ setup.hair_forward_potions = {
 		name: "Majestic Mane Draught",
 		purpose: "Hair Level 7 ➝ Hair Level 8",
 		ingredients: {
-			"glowleaf_powder": 21,
-			"starblossom_pollen": 40,
-			"velvetgrove_essence": 32
+			"glowleaf_powder": glowleaf_powder * 7,
+			"starblossom_pollen": starblossom_pollen * 7,
+			"velvetgrove_essence": velvetgrove_essence * 7
 		},
 		function: "Final stage of growth, hair reaches waist-length with added fullness, smooth texture, and shine.",
 		sideEffects: "Fullness around scalp, scalp heat as hair becomes long and voluminous, slight tightness."
@@ -3652,9 +3680,9 @@ setup.hair_reverse_potions = {
 		name: "Rootsnip Elixir",
 		purpose: "Hair Level 8 ➝ Hair Level 7",
 		ingredients: {
-			"glowleaf_powder": 3,
-			"frostvine_elixir": 10,
-			"nullroot_dust": 4
+			"glowleaf_powder": glowleaf_powder * 1,
+			"frostvine_elixir": frostvine_elixir * 1,
+			"nullroot_dust": nullroot_dust * 1
 		},
 		function: "Begins the process of hair reduction, starting with the first stage of regrowth.",
 		sideEffects: "Mild scalp discomfort as hair retracts; slight itching as the follicles slow."
@@ -3666,9 +3694,9 @@ setup.hair_reverse_potions = {
 		name: "Tressfade Draught",
 		purpose: "Hair Level 7 ➝ Hair Level 6",
 		ingredients: {
-			"glowleaf_powder": 6,
-			"frostvine_elixir": 20,
-			"nullroot_dust": 8
+			"glowleaf_powder": glowleaf_powder * 2,
+			"frostvine_elixir": frostvine_elixir * 2,
+			"nullroot_dust": nullroot_dust * 2
 		},
 		function: "Slows hair growth and begins to decrease volume, reducing the length from mid-back to shoulder.",
 		sideEffects: "Scalp feels light, some dryness; temporary shedding as length reduces."
@@ -3680,9 +3708,9 @@ setup.hair_reverse_potions = {
 		name: "Strandslim Essence",
 		purpose: "Hair Level 6 ➝ Hair Level 5",
 		ingredients: {
-			"glowleaf_powder": 9,
-			"frostvine_elixir": 30,
-			"nullroot_dust": 12
+			"glowleaf_powder": glowleaf_powder * 3,
+			"frostvine_elixir": frostvine_elixir * 3,
+			"nullroot_dust": nullroot_dust * 3
 		},
 		function: "Reduces hair thickness and length, making hair feel thinner and shorter, reaching neck-level.",
 		sideEffects: "Scalp tightness and dryness; hair may feel thinner but also a little more fragile."
@@ -3694,9 +3722,9 @@ setup.hair_reverse_potions = {
 		name: "Snipclear Tonic",
 		purpose: "Hair Level 5 ➝ Hair Level 4",
 		ingredients: {
-			"glowleaf_powder": 12,
-			"frostvine_elixir": 40,
-			"nullroot_dust": 16
+			"glowleaf_powder": glowleaf_powder * 4,
+			"frostvine_elixir": frostvine_elixir * 4,
+			"nullroot_dust": nullroot_dust * 4
 		},
 		function: "Shortens hair from shoulder-length to mid-neck, thinning out volume for a finer texture.",
 		sideEffects: "Tingling as hair shrinks, scalp cooling as length decreases."
@@ -3708,9 +3736,9 @@ setup.hair_reverse_potions = {
 		name: "Fadingmane Draught",
 		purpose: "Hair Level 4 ➝ Hair Level 3",
 		ingredients: {
-			"glowleaf_powder": 15,
-			"frostvine_elixir": 50,
-			"nullroot_dust": 20
+			"glowleaf_powder": glowleaf_powder * 5,
+			"frostvine_elixir": frostvine_elixir * 5,
+			"nullroot_dust": nullroot_dust * 5
 		},
 		function: "Further shortens hair to shoulder-length, smoothing out strands and reducing volume.",
 		sideEffects: "The hair may become brittle during this stage, and scalp may feel slightly raw."
@@ -3722,9 +3750,9 @@ setup.hair_reverse_potions = {
 		name: "Lankfall Elixir",
 		purpose: "Hair Level 3 ➝ Hair Level 2",
 		ingredients: {
-			"glowleaf_powder": 18,
-			"frostvine_elixir": 60,
-			"nullroot_dust": 24
+			"glowleaf_powder": glowleaf_powder * 6,
+			"frostvine_elixir": frostvine_elixir * 6,
+			"nullroot_dust": nullroot_dust * 6
 		},
 		function: "Reduces hair from shoulder to chin-length, making it thinner and less voluminous.",
 		sideEffects: "Dryness and slight itchiness as the follicles stop producing thick strands."
@@ -3736,9 +3764,9 @@ setup.hair_reverse_potions = {
 		name: "Baldshrink Draught",
 		purpose: "Hair Level 2 ➝ Hair Level 1",
 		ingredients: {
-			"glowleaf_powder": 21,
-			"frostvine_elixir": 70,
-			"nullroot_dust": 28
+			"glowleaf_powder": glowleaf_powder * 7,
+			"frostvine_elixir": frostvine_elixir * 7,
+			"nullroot_dust": nullroot_dust * 7
 		},
 		function: "Final reduction of hair to short stubs or full baldness, completely halting regrowth.",
 		sideEffects: "Scalp tightness; hair follicles may feel dormant; intense shedding."
@@ -3747,6 +3775,8 @@ setup.hair_reverse_potions = {
 
 
 /* twine-user-script #12: "hand.js" */
+
+
 setup.hand_forward_potions = {
 	"ml": {
 		id: 1,
@@ -3755,9 +3785,9 @@ setup.hand_forward_potions = {
 		name: "Silkweave Tincture",
 		purpose: "Male Ultra Muscular Hands ➝ Male Muscular Hands",
 		ingredients: {
-			"softroot_essence": 5,
-			"velvetgrove_essence": 4,
-			"seraphmilk": 30
+			"softroot_essence": softroot_essence * 1,
+			"velvetgrove_essence": velvetgrove_essence * 1,
+			"seraphmilk": seraphmilk * 1
 		},
 		function: "Begins softening and lightening the skin on the hands; first stage of shaping the fingers for more delicate form.",
 		sideEffects: "Mild tingling in the fingertips; feeling of warmth and lightness."
@@ -3769,9 +3799,9 @@ setup.hand_forward_potions = {
 		name: "Fingerspring Draught",
 		purpose: "Male Muscular Hands ➝ Male Lean Hands",
 		ingredients: {
-			"softroot_essence": 10,
-			"velvetgrove_essence": 8,
-			"seraphmilk": 60
+			"softroot_essence": softroot_essence * 2,
+			"velvetgrove_essence": velvetgrove_essence * 2,
+			"seraphmilk": seraphmilk * 2
 		},
 		function: "Further softens the skin, causing it to lose its roughness and gain smoother texture; the fingers begin to shorten slightly in proportion.",
 		sideEffects: "Occasional hand trembling; slight pain when gripping objects too tightly."
@@ -3783,9 +3813,9 @@ setup.hand_forward_potions = {
 		name: "Delicaflow Elixir",
 		purpose: "Male Lean Hands ➝ Female Slim Hands",
 		ingredients: {
-			"softroot_essence": 15,
-			"velvetgrove_essence": 12,
-			"seraphmilk": 90
+			"softroot_essence": softroot_essence * 3,
+			"velvetgrove_essence": velvetgrove_essence * 3,
+			"seraphmilk": seraphmilk * 3
 		},
 		function: "Shifts the structure of the hands, emphasizing more slender and graceful fingers; nails begin lengthening naturally.",
 		sideEffects: "Constant urge to caress; light sensitivity to touch, especially in fingertips."
@@ -3797,9 +3827,9 @@ setup.hand_forward_potions = {
 		name: "Petalwisp Potion",
 		purpose: "Female Slim Hands ➝ Female Feminine Hands",
 		ingredients: {
-			"softroot_essence": 20,
-			"velvetgrove_essence": 16,
-			"seraphmilk": 120
+			"softroot_essence": softroot_essence * 4,
+			"velvetgrove_essence": velvetgrove_essence * 4,
+			"seraphmilk": seraphmilk * 4
 		},
 		function: "Transforms the hands into their fully feminine shape; the fingers elongate, nails become more elegant, and the palms soften to a delicate texture.",
 		sideEffects: "Heightened sensitivity in the hands; a compulsive need to use hands for fine motor tasks (e.g., writing)."
@@ -3811,9 +3841,9 @@ setup.hand_forward_potions = {
 		name: "Lilyliss Essence",
 		purpose: "Female Feminine Hands ➝ Female Ultra Feminine Hands",
 		ingredients: {
-			"softroot_essence": 25,
-			"velvetgrove_essence": 20,
-			"seraphmilk": 150
+			"softroot_essence": softroot_essence * 5,
+			"velvetgrove_essence": velvetgrove_essence * 5,
+			"seraphmilk": seraphmilk * 5
 		},
 		function: "Final stage of hand feminization; nails grow into smooth, glossy, and feminine shapes; the hands take on a more delicate, petite appearance.",
 		sideEffects: "Overwhelming urge to adjust and style nails; constant admiration of hands, subtle increase in gracefulness."
@@ -3829,9 +3859,9 @@ setup.hand_reverse_potions = {
 		name: "Roughroot Draught",
 		purpose: "Female Ultra Feminine Hands ➝ Female Feminine Hands",
 		ingredients: {
-			"softroot_essence": 5,
-			"frostleaf_crystals": 4,
-			"dragonmoss_resin": 5
+			"softroot_essence": softroot_essence * 1,
+			"frostleaf_crystals": frostleaf_crystals * 1,
+			"dragonmoss_resin": dragonmoss_resin * 1
 		},
 		function: "Begins the regression process, toughening the skin and starting to reassert the masculine texture.",
 		sideEffects: "Minor stinging in the fingertips; dull ache as the skin loses its softness."
@@ -3843,9 +3873,9 @@ setup.hand_reverse_potions = {
 		name: "Thorngrip Essence",
 		purpose: "Female Feminine Hands ➝ Female Slim Hands",
 		ingredients: {
-			"softroot_essence": 10,
-			"frostleaf_crystals": 8,
-			"dragonmoss_resin": 10
+			"softroot_essence": softroot_essence * 2,
+			"frostleaf_crystals": frostleaf_crystals * 2,
+			"dragonmoss_resin": dragonmoss_resin * 2
 		},
 		function: "Reduces the softness and smoothness of the hands, subtly returning the hands to their more masculine shape and texture.",
 		sideEffects: "Hands may feel stiff or uncomfortable; slight heaviness in the fingers."
@@ -3857,9 +3887,9 @@ setup.hand_reverse_potions = {
 		name: "Roughenstride Elixir",
 		purpose: "Female Slim Hands ➝ Male Lean Hands",
 		ingredients: {
-			"softroot_essence": 15,
-			"frostleaf_crystals": 12,
-			"dragonmoss_resin": 15
+			"softroot_essence": softroot_essence * 3,
+			"frostleaf_crystals": frostleaf_crystals * 3,
+			"dragonmoss_resin": dragonmoss_resin * 3
 		},
 		function: "Promotes muscle reassertion in the hands and fingers, gradually giving the hands a more masculine appearance, reducing elegance and grace.",
 		sideEffects: "Heightened tension in the hands and fingers; discomfort when using hands for fine tasks."
@@ -3871,9 +3901,9 @@ setup.hand_reverse_potions = {
 		name: "Gripstone Infusion",
 		purpose: "Male Lean Hands ➝ Muscular Male Hands",
 		ingredients: {
-			"softroot_essence": 20,
-			"frostleaf_crystals": 16,
-			"dragonmoss_resin": 20
+			"softroot_essence": softroot_essence * 3,
+			"frostleaf_crystals": frostleaf_crystals * 3,
+			"dragonmoss_resin": dragonmoss_resin * 3
 		},
 		function: "Strengthens and thickens the fingers, causing them to become rougher and return to their male shape.",
 		sideEffects: "Mild pain as fingers bulk up; nails may become brittle and tough."
@@ -3885,9 +3915,9 @@ setup.hand_reverse_potions = {
 		name: "Ironbark Serum",
 		purpose: "Muscular Male Hands ➝ Male Ultra Muscular Hands",
 		ingredients: {
-			"softroot_essence": 25,
-			"frostleaf_crystals": 20,
-			"dragonmoss_resin": 25
+			"softroot_essence": softroot_essence * 4,
+			"frostleaf_crystals": frostleaf_crystals * 4,
+			"dragonmoss_resin": dragonmoss_resin * 4
 		},
 		function: "Reverses the softening of the hands and nails, making them large and more rugged, returning them to the masculine level.",
 		sideEffects: "Hands may feel raw or sore, fingers losing their previous gracefulness."
@@ -3896,6 +3926,9 @@ setup.hand_reverse_potions = {
 
 
 /* twine-user-script #13: "head.js" */
+
+
+
 // Master list of potion recipes - Face Feminization
 setup.head_forward_potions = {
 	"ml": {
@@ -3905,9 +3938,9 @@ setup.head_forward_potions = {
 		name: "Dewkiss Elixir",
 		purpose: "Male Ultra Muscular Face ➝ Male Muscular Face",
 		ingredients: {
-			"moonpetal_extract": 8,
-			"feylace_petal": 6,
-			"seraphmilk": 30,
+			"moonpetal_extract": moonpetal_extract * 1,
+			"feylace_petal": feylace_petal * 1,
+			"seraphmilk": seraphmilk * 1,
 		},
 		function: "Begins to soften the jawline and smooth rough facial textures.",
 		sideEffects: "Tingling in cheeks and sudden blushes; heightened emotional awareness."
@@ -3919,9 +3952,9 @@ setup.head_forward_potions = {
 		name: "Blushweave Tincture",
 		purpose: "Male Muscular Face ➝ Male Lean Face",
 		ingredients: {
-			"moonpetal_extract": 16,
-			"feylace_petal": 12,
-			"seraphmilk": 60
+			"moonpetal_extract": moonpetal_extract * 2,
+			"feylace_petal": feylace_petal * 2,
+			"seraphmilk": seraphmilk * 2
 		},
 		function: "Narrows nose and enhances cheeks, reducing masculine edge.",
 		sideEffects: "Frequent blushing and subtle floral breath aroma."
@@ -3933,9 +3966,9 @@ setup.head_forward_potions = {
 		name: "Veilpetal Infusion",
 		purpose: "Male Lean Face ➝ Female Slim Face",
 		ingredients: {
-			"moonpetal_extract": 24,
-			"feylace_petal": 18,
-			"seraphmilk": 90
+			"moonpetal_extract": moonpetal_extract * 3,
+			"feylace_petal": feylace_petal * 3,
+			"seraphmilk": seraphmilk * 3
 		},
 		function: "Refines eye sockets, raises brow arches, enhances lash length.",
 		sideEffects: "Eyes glimmer faintly; vision more sensitive under moonlight."
@@ -3947,9 +3980,9 @@ setup.head_forward_potions = {
 		name: "Silklip Decoction",
 		purpose: "Female Slim Face ➝ Female Feminine Face",
 		ingredients: {
-			"moonpetal_extract": 32,
-			"feylace_petal": 24,
-			"seraphmilk": 120
+			"moonpetal_extract": moonpetal_extract * 4,
+			"feylace_petal": feylace_petal * 4,
+			"seraphmilk": seraphmilk * 4
 		},
 		function: "Plumps lips, smooths facial lines, reshapes chin for femininity.",
 		sideEffects: "Increased lip sensitivity; slight urge to smile uncontrollably."
@@ -3961,9 +3994,9 @@ setup.head_forward_potions = {
 		name: "Starlace Serum",
 		purpose: "Female Feminine Face ➝ Female Ultra Feminine Face",
 		ingredients: {
-			"moonpetal_extract": 40,
-			"feylace_petal": 30,
-			"seraphmilk": 150
+			"moonpetal_extract": moonpetal_extract * 5,
+			"feylace_petal": feylace_petal * 5,
+			"seraphmilk": seraphmilk * 5
 		},
 		function: "Finalizes facial feminization, enhancing glow, symmetry, and allure.",
 		sideEffects: "Strong charm aura; irresistible smiles; fits of feminine giggling."
@@ -3980,9 +4013,9 @@ setup.head_reverse_potions = {
 		name: "Grimshade Extract",
 		purpose: "Female Ultra Feminine Face ➝ Female Feminine Face",
 		ingredients: {
-			"moonpetal_extract": 8,
-			"dragonmoss_resin": 5,
-			"frostleaf_crystals": 4
+			"moonpetal_extract": moonpetal_extract * 1,
+			"dragonmoss_resin": dragonmoss_resin * 1,
+			"frostleaf_crystals": frostleaf_crystals * 1
 		},
 		function: "Dulls feminine radiance, retracts symmetry and soft textures.",
 		sideEffects: "Loss of sparkle in the eyes, increased frown reflex."
@@ -3994,9 +4027,9 @@ setup.head_reverse_potions = {
 		name: "Roughskin Infusion",
 		purpose: "Female Feminine Face ➝ Female Slim Face",
 		ingredients: {
-			"moonpetal_extract": 16,
-			"dragonmoss_resin": 10,
-			"frostleaf_crystals": 8
+			"moonpetal_extract": moonpetal_extract * 2,
+			"dragonmoss_resin": dragonmoss_resin * 2,
+			"frostleaf_crystals": frostleaf_crystals * 2
 		},
 		function: "Thickens jawline slightly, reduces lip volume and cheek softness.",
 		sideEffects: "Tight jaw feeling; reduced smile flexibility."
@@ -4008,9 +4041,9 @@ setup.head_reverse_potions = {
 		name: "Charmbreaker Tonic",
 		purpose: "Female Slim Face ➝ Male Lean Face",
 		ingredients: {
-			"moonpetal_extract": 24,
-			"dragonmoss_resin": 15,
-			"frostleaf_crystals": 12
+			"moonpetal_extract": moonpetal_extract * 3,
+			"dragonmoss_resin": dragonmoss_resin * 3,
+			"frostleaf_crystals": frostleaf_crystals * 3
 		},
 		function: "Removes residual feminizing charm, coarsens subtle details.",
 		sideEffects: "Facial expression flattens; emotional dullness."
@@ -4022,9 +4055,9 @@ setup.head_reverse_potions = {
 		name: "Bluntline Brew",
 		purpose: "Male Lean Face ➝ Male Muscular Face",
 		ingredients: {
-			"moonpetal_extract": 32,
-			"dragonmoss_resin": 20,
-			"frostleaf_crystals": 16
+			"moonpetal_extract": moonpetal_extract * 3,
+			"dragonmoss_resin": dragonmoss_resin * 3,
+			"frostleaf_crystals": frostleaf_crystals * 3
 		},
 		function: "Broadens nose bridge, straightens brows, coarsens skin slightly.",
 		sideEffects: "Slight facial itching; urge to grimace more often."
@@ -4036,15 +4069,18 @@ setup.head_reverse_potions = {
 		name: "Ruggedskin Tincture",
 		purpose: "Male Muscular Face ➝ Male Ultra Muscular Face",
 		ingredients: {
-			"moonpetal_extract": 40,
-			"dragonmoss_resin": 25,
-			"frostleaf_crystals": 20
+			"moonpetal_extract": moonpetal_extract * 4,
+			"dragonmoss_resin": dragonmoss_resin * 4,
+			"frostleaf_crystals": frostleaf_crystals * 4
 		},
 		function: "Finalizes masculinization by reinforcing bone structure and roughening skin tone.",
 		sideEffects: "Harsh facial hair stubble growth, strong earthy musk emerges."
 	}
 };
 /* twine-user-script #14: "leg.js" */
+
+
+
 // Master list of potion recipes
 setup.leg_forward_potions = {
 	"ml": {
@@ -4054,9 +4090,9 @@ setup.leg_forward_potions = {
 		name: "Silkenstride Draught",
 		purpose: "Male Ultra Muscular Legs ➝ Male Muscular Legs",
 		ingredients: {
-			"lilywhisper_nectar": 2,
-			"vinesilk_essence": 4,
-			"velvetgrove_essence": 4
+			"lilywhisper_nectar": lilywhisper_nectar * 1,
+			"vinesilk_essence": vinesilk_essence * 1,
+			"velvetgrove_essence": velvetgrove_essence * 1
 		},
 		function: "Begins the softening of the legs, reducing Ultra Muscular tension and initiating the process of femininity.",
 		sideEffects: "Mild tingling sensation, subtle tightness in the calf muscles as they begin to lose their bulk."
@@ -4068,9 +4104,9 @@ setup.leg_forward_potions = {
 		name: "Velvetfoot Elixir",
 		purpose: "Male Muscular Legs ➝ Male Lean Legs",
 		ingredients: {
-			"lilywhisper_nectar": 4,
-			"vinesilk_essence": 8,
-			"velvetgrove_essence": 8
+			"lilywhisper_nectar": lilywhisper_nectar * 2,
+			"vinesilk_essence": vinesilk_essence * 2,
+			"velvetgrove_essence": velvetgrove_essence * 2
 		},
 		function: "Increases the smoothness and curvaceousness of the legs, starting the transformation of muscle into soft, feminine shapes.",
 		sideEffects: "Heightened sensitivity in the skin; legs may feel warm and sensitive to touch."
@@ -4082,9 +4118,9 @@ setup.leg_forward_potions = {
 		name: "Languidstep Serum",
 		purpose: "Male Lean Legs ➝ Female Slim Legs",
 		ingredients: {
-			"lilywhisper_nectar": 6,
-			"vinesilk_essence": 12,
-			"velvetgrove_essence": 12
+			"lilywhisper_nectar": lilywhisper_nectar * 3,
+			"vinesilk_essence": vinesilk_essence * 3,
+			"velvetgrove_essence": velvetgrove_essence * 3
 		},
 		function: "Shapes the legs to a more feminine form, gradually thinning the legs and giving them a gentler contour.",
 		sideEffects: "Swelling and slight stiffness as the legs adjust to the shape; tingling along the thighs."
@@ -4096,9 +4132,9 @@ setup.leg_forward_potions = {
 		name: "Feminique Elixir",
 		purpose: "Female Slim Legs ➝ Female Feminine Legs",
 		ingredients: {
-			"lilywhisper_nectar": 8,
-			"vinesilk_essence": 16,
-			"velvetgrove_essence": 16
+			"lilywhisper_nectar": lilywhisper_nectar * 4,
+			"vinesilk_essence": vinesilk_essence * 4,
+			"velvetgrove_essence": velvetgrove_essence * 4
 		},
 		function: "Focuses on smoothness and curvature, enhancing the legs’ natural feminity and curving them to a more delicate shape.",
 		sideEffects: "Sensation of lightness; legs may feel weaker or more fragile as the transformation deepens."
@@ -4110,9 +4146,9 @@ setup.leg_forward_potions = {
 		name: "Silksheen Draught",
 		purpose: "Female Feminine Legs ➝ Female Ultra Feminine Legs",
 		ingredients: {
-			"lilywhisper_nectar": 10,
-			"vinesilk_essence": 20,
-			"velvetgrove_essence": 20
+			"lilywhisper_nectar": lilywhisper_nectar * 5,
+			"vinesilk_essence": vinesilk_essence * 5,
+			"velvetgrove_essence": velvetgrove_essence * 5
 		},
 		function: "Finalizes the transformation, softening the muscles, enhancing shape, and giving the legs a smooth, slender, and graceful look.",
 		sideEffects: "Complete loss of muscle tension, legs feel extremely smooth and delicate, may be temporarily weaker."
@@ -4128,9 +4164,9 @@ setup.leg_reverse_potions = {
 		name: "Stonestride Draught",
 		purpose: "Female Ultra Feminine Legs ➝ Female Feminine Legs",
 		ingredients: {
-			"lilywhisper_nectar": 2,
-			"sorrowseed_oil": 6,
-			"thornberry_juice": 20
+			"lilywhisper_nectar": lilywhisper_nectar * 1,
+			"sorrowseed_oil": sorrowseed_oil * 1,
+			"thornberry_juice": thornberry_juice * 1
 		},
 		function: "Begins to harden the legs, firming up muscle tone and starting the reversal of softness.",
 		sideEffects: "Sensitivity in legs will decrease, legs may feel more rigid and less flexible, slight swelling."
@@ -4142,9 +4178,9 @@ setup.leg_reverse_potions = {
 		name: "Brutewalk Serum",
 		purpose: "Female Feminine Legs ➝ Female Slim Legs",
 		ingredients: {
-			"lilywhisper_nectar": 4,
-			"sorrowseed_oil": 12,
-			"thornberry_juice": 40
+			"lilywhisper_nectar": lilywhisper_nectar * 2,
+			"sorrowseed_oil": sorrowseed_oil * 2,
+			"thornberry_juice": thornberry_juice * 2
 		},
 		function: "Further strengthens the leg muscles, initiating the return to a more masculine build, firming up the calves and thighs.",
 		sideEffects: "Feeling of tightness, slight soreness in the legs as they revert back to a less graceful form."
@@ -4156,9 +4192,9 @@ setup.leg_reverse_potions = {
 		name: "Ironstep Tonic",
 		purpose: "Female Slim Legs ➝ Male Lean Legs",
 		ingredients: {
-			"lilywhisper_nectar": 6,
-			"sorrowseed_oil": 18,
-			"thornberry_juice": 60
+			"lilywhisper_nectar": lilywhisper_nectar * 3,
+			"sorrowseed_oil": sorrowseed_oil * 3,
+			"thornberry_juice": thornberry_juice * 3
 		},
 		function: "Encourages the thickening and muscle regrowth in the legs, firming them up and reversing femininity.",
 		sideEffects: "A tightening of the skin, legs may feel bulkier and heavier, discomfort in the thighs as they reassert masculinity."
@@ -4170,9 +4206,9 @@ setup.leg_reverse_potions = {
 		name: "Hearthstride Mixture",
 		purpose: "Male Lean Legs ➝ Male Muscular Legs",
 		ingredients: {
-			"lilywhisper_nectar": 8,
-			"sorrowseed_oil": 24,
-			"thornberry_juice": 80
+			"lilywhisper_nectar": lilywhisper_nectar * 3,
+			"sorrowseed_oil": sorrowseed_oil * 3,
+			"thornberry_juice": thornberry_juice * 3
 		},
 		function: "Promotes muscle reconditioning, reducing softness and starting to return the legs to a more masculine appearance.",
 		sideEffects: "Legs may feel swollen, more muscle tension, a sense of “heaviness” in the calves and thighs."
@@ -4184,15 +4220,18 @@ setup.leg_reverse_potions = {
 		name: "Brawnwalk Elixir",
 		purpose: "Male Muscular Legs ➝ Male Ultra Muscular Legs",
 		ingredients: {
-			"lilywhisper_nectar": 10,
-			"sorrowseed_oil": 30,
-			"thornberry_juice": 100
+			"lilywhisper_nectar": lilywhisper_nectar * 4,
+			"sorrowseed_oil": sorrowseed_oil * 4,
+			"thornberry_juice": thornberry_juice * 4
 		},
 		function: "Final stage of muscle restoration, enhancing masculine leg features and reversing the femininity entirely.",
 		sideEffects: "Legs may feel completely rigid and firm, skin could tighten and feel rough as the transformation ends."
 	}
 };
 /* twine-user-script #15: "torso.js" */
+
+
+
 // Master list of torso transformation potions
 setup.torso_forward_potions = {
 	"ml": {
@@ -4202,9 +4241,9 @@ setup.torso_forward_potions = {
 		name: "Softshape Draught",
 		purpose: "Male Ultra Muscular Torso ➝ Male Muscular Torso",
 		ingredients: {
-			"velmorian_honey": 30,
-			"crimsondew_drops": 8,
-			"crimsonroot_dust": 20
+			"velmorian_honey": velmorian_honey * 1,
+			"crimsondew_drops": crimsondew_drops * 1,
+			"crimsonroot_dust": crimsonroot_dust * 1
 		},
 		function: "Softens and tightens the torso muscles, starts reshaping the waist, reducing broadness.",
 		sideEffects: "Mild tightness around the waist and torso, some mild discomfort as the body begins to shift."
@@ -4216,9 +4255,9 @@ setup.torso_forward_potions = {
 		name: "Waistbind Elixir",
 		purpose: "Male Muscular Torso ➝ Male Lean Torso",
 		ingredients: {
-			"velmorian_honey": 60,
-			"crimsondew_drops": 12,
-			"crimsonroot_dust": 30
+			"velmorian_honey": velmorian_honey * 2,
+			"crimsondew_drops": crimsondew_drops * 2,
+			"crimsonroot_dust": crimsonroot_dust * 2
 		},
 		function: "Focuses on slimming the waist and narrowing the shoulders, enhancing the feminine curves.",
 		sideEffects: "Soreness as the body begins narrowing; discomfort from the shifting of the waistline."
@@ -4230,9 +4269,9 @@ setup.torso_forward_potions = {
 		name: "Curvature Serum",
 		purpose: "Male Lean Torso ➝ Female Slim Torso",
 		ingredients: {
-			"velmorian_honey": 90,
-			"crimsondew_drops": 16,
-			"crimsonroot_dust": 40
+			"velmorian_honey": velmorian_honey * 3,
+			"crimsondew_drops": crimsondew_drops * 3,
+			"crimsonroot_dust": crimsonroot_dust * 3
 		},
 		function: "Shifts torso to a more feminine shape, promoting hip widening and narrowing of the waist.",
 		sideEffects: "Sensation of warmth as the hips and waist begin to adjust, some temporary discomfort from changes."
@@ -4244,9 +4283,9 @@ setup.torso_forward_potions = {
 		name: "Hourglass Draught",
 		purpose: "Female Slim Torso ➝ Female Feminine Torso",
 		ingredients: {
-			"velmorian_honey": 120,
-			"crimsondew_drops": 20,
-			"crimsonroot_dust": 50
+			"velmorian_honey": velmorian_honey * 4,
+			"crimsondew_drops": crimsondew_drops * 4,
+			"crimsonroot_dust": crimsonroot_dust * 4
 		},
 		function: "Intensifies hip widening, enhances waist cinching, and adds softness to the belly.",
 		sideEffects: "Increased fullness in the hips, a tightening sensation around the waist, mild dizziness."
@@ -4258,9 +4297,9 @@ setup.torso_forward_potions = {
 		name: "Femmeshape Elixir",
 		purpose: "Female Feminine Torso ➝ Female Ultra Feminine Torso",
 		ingredients: {
-			"velmorian_honey": 150,
-			"crimsondew_drops": 24,
-			"crimsonroot_dust": 60
+			"velmorian_honey": velmorian_honey * 5,
+			"crimsondew_drops": crimsondew_drops * 5,
+			"crimsonroot_dust": crimsonroot_dust * 5
 		},
 		function: "Final refinement of feminine curves, softens the torso’s appearance with full body reshaping.",
 		sideEffects: "Final changes to the body’s outline, slight tingling as the curves fully solidify into place."
@@ -4277,9 +4316,9 @@ setup.torso_reverse_potions = {
 		name: "Slimshape Draught",
 		purpose: "Female Ultra Feminine Torso ➝ Female Feminine Torso",
 		ingredients: {
-			"velmorian_honey": 30,
-			"thornberry_juice": 20,
-			"ashfern_flakes": 4
+			"velmorian_honey": velmorian_honey * 1,
+			"thornberry_juice": thornberry_juice * 1,
+			"ashfern_flakes": ashfern_flakes * 1
 		},
 		function: "Reduces width of hips, tightens the waist, and begins to masculinize the torso.",
 		sideEffects: "Initial tightness around the waist, temporary discomfort from narrowing of the hips."
@@ -4291,9 +4330,9 @@ setup.torso_reverse_potions = {
 		name: "Broadbind Elixir",
 		purpose: "Female Feminine Torso ➝ Female Slim Torso",
 		ingredients: {
-			"velmorian_honey": 60,
-			"thornberry_juice": 40,
-			"ashfern_flakes": 8
+			"velmorian_honey": velmorian_honey * 2,
+			"thornberry_juice": thornberry_juice * 2,
+			"ashfern_flakes": ashfern_flakes * 2
 		},
 		function: "Begins widening the shoulders and reshapes the torso into a more angular, masculine form.",
 		sideEffects: "Muscle ache from reshaping the body; mild dizziness as the chest narrows and shoulders broaden."
@@ -4305,9 +4344,9 @@ setup.torso_reverse_potions = {
 		name: "Hardshape Serum",
 		purpose: "Female Slim Torso ➝ Male Lean Torso",
 		ingredients: {
-			"velmorian_honey": 90,
-			"thornberry_juice": 60,
-			"ashfern_flakes": 12
+			"velmorian_honey": velmorian_honey * 3,
+			"thornberry_juice": thornberry_juice * 3,
+			"ashfern_flakes": ashfern_flakes * 3
 		},
 		function: "Shifts the torso back to a less curved shape, restoring the broader male torso appearance.",
 		sideEffects: "Tingling sensation in the belly and waist, slight discomfort from body hardening and broadening."
@@ -4319,9 +4358,9 @@ setup.torso_reverse_potions = {
 		name: "Masculinize Draught",
 		purpose: "Male Lean Torso ➝ Male Muscular Torso",
 		ingredients: {
-			"velmorian_honey": 120,
-			"thornberry_juice": 80,
-			"ashfern_flakes": 16
+			"velmorian_honey": velmorian_honey * 3,
+			"thornberry_juice": thornberry_juice * 3,
+			"ashfern_flakes": ashfern_flakes * 3
 		},
 		function: "Focuses on reducing the waist and narrowing the hips, restoring the male body shape.",
 		sideEffects: "Intense muscle contractions, minor soreness as the body reverts to a broader male shape."
@@ -4333,9 +4372,9 @@ setup.torso_reverse_potions = {
 		name: "Uncurve Elixir",
 		purpose: "Male Muscular Torso ➝ Male Ultra Muscular Torso",
 		ingredients: {
-			"velmorian_honey": 150,
-			"thornberry_juice": 100,
-			"ashfern_flakes": 20
+			"velmorian_honey": velmorian_honey * 4,
+			"thornberry_juice": thornberry_juice * 4,
+			"ashfern_flakes": ashfern_flakes * 4
 		},
 		function: "Finalizes the reversal, reestablishing the male body structure with broad shoulders and a flat waist.",
 		sideEffects: "A slight feeling of loss of softness, discomfort as the body expands and sharpens into a male form."
@@ -13375,7 +13414,7 @@ I slipped them on. Tighter. Riskier. The ache bloomed deeper.&lt;br&gt;&lt;br&gt
 &lt;&lt;speech   &quot;mc&quot;&gt;&gt;Then let’s begin.&lt;&lt;/speech&gt;&gt;&lt;br&gt;
 
 &lt;&lt;speech &quot;veletia&quot;&gt;&gt;Welcome, princess. Time to dress the queen within.&lt;&lt;/speech&gt;&gt;&lt;br&gt;
-&lt;&lt;set $user_stats.gender_Identity  =- 4&gt;&gt;
+&lt;&lt;set $user_stats.gender_Identity  -= 4&gt;&gt;
 &lt;&lt;run $wardrobe.bottom_underwear.push({
 	img: &quot;bottom_underwear_2.png&quot;,
 	key: &quot;bottom_underwear_2&quot;
@@ -13400,7 +13439,7 @@ I slipped them on. Tighter. Riskier. The ache bloomed deeper.&lt;br&gt;&lt;br&gt
 &lt;&lt;speech   &quot;mc&quot;&gt;&gt;Then let’s begin.&lt;&lt;/speech&gt;&gt;&lt;br&gt;
 
 &lt;&lt;speech &quot;veletia&quot;&gt;&gt;Welcome, princess. Time to dress the queen within.&lt;&lt;/speech&gt;&gt;&lt;br&gt;
-&lt;&lt;set $user_stats.gender_Identity  =- 4&gt;&gt;
+&lt;&lt;set $user_stats.gender_Identity  -= 4&gt;&gt;
 &lt;&lt;run $wardrobe.bottom_underwear.push({
 	img: &quot;bottom_underwear_3.png&quot;,
 	key: &quot;bottom_underwear_3&quot;
@@ -13542,7 +13581,7 @@ But I didn’t leave. I stood there, fists clenched around soft velvet, the silk
 &lt;&lt;speech &quot;veletia&quot;&gt;&gt;You’ll come again. Next time, perhaps in lavender. Or something with bows.&lt;&lt;/speech&gt;&gt;&lt;br&gt;
 I hated that she was right.&lt;br&gt;&lt;br&gt;
 
-&lt;&lt;set $user_stats.gender_Identity  =- 1&gt;&gt;
+&lt;&lt;set $user_stats.gender_Identity  -= 1&gt;&gt;
 [[Leave Mistress Veletia Roswyn|dressing_bloom]] |&lt;br&gt;&lt;br&gt;
 [[Leave Royal Dressing Bloom|castle_map_front_select]]
 &lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="109" name="female_underwear_3" tags="" position="1100,1350" size="100,100">&lt;&lt;nobr&gt;&gt;
@@ -13726,7 +13765,7 @@ I turned to leave.&lt;br&gt;&lt;br&gt;
 &lt;&lt;speech  &quot;mc&quot;&gt;&gt;I’m not coming back.&lt;&lt;/speech&gt;&gt;&lt;br&gt;
 &lt;&lt;speech  &quot;veletia&quot;&gt;&gt;You said that last time.&lt;&lt;/speech&gt;&gt;&lt;br&gt;
 She laughed softly.&lt;br&gt;&lt;br&gt;
-&lt;&lt;set $user_stats.gender_Identity  =- 1&gt;&gt;
+&lt;&lt;set $user_stats.gender_Identity  -= 1&gt;&gt;
 [[Leave Mistress Veletia Roswyn|dressing_bloom]] |&lt;br&gt;&lt;br&gt;
 [[Leave Royal Dressing Bloom|castle_map_front_select]]
 &lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="124" name="female_underwear_3_14_2" tags="" position="475,1600" size="100,100">&lt;&lt;nobr&gt;&gt;
@@ -13748,7 +13787,7 @@ I turned to leave.&lt;br&gt;&lt;br&gt;
 &lt;&lt;speech  &quot;mc&quot;&gt;&gt;I’m not coming back.&lt;&lt;/speech&gt;&gt;&lt;br&gt;
 &lt;&lt;speech  &quot;veletia&quot;&gt;&gt;You said that last time.&lt;&lt;/speech&gt;&gt;&lt;br&gt;
 She laughed softly.&lt;br&gt;&lt;br&gt;
-&lt;&lt;set $user_stats.gender_Identity  =- 1&gt;&gt;
+&lt;&lt;set $user_stats.gender_Identity  -= 1&gt;&gt;
 [[Leave Mistress Veletia Roswyn|dressing_bloom]] |&lt;br&gt;&lt;br&gt;
 [[Leave Royal Dressing Bloom|castle_map_front_select]]
 &lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="125" name="female_underwear_3_14_3" tags="" position="600,1600" size="100,100">&lt;&lt;nobr&gt;&gt;
@@ -13770,7 +13809,7 @@ I turned to leave.&lt;br&gt;&lt;br&gt;
 &lt;&lt;speech  &quot;mc&quot;&gt;&gt;I’m not coming back.&lt;&lt;/speech&gt;&gt;&lt;br&gt;
 &lt;&lt;speech  &quot;veletia&quot;&gt;&gt;You said that last time.&lt;&lt;/speech&gt;&gt;&lt;br&gt;
 She laughed softly.&lt;br&gt;&lt;br&gt;
-&lt;&lt;set $user_stats.gender_Identity  =- 1&gt;&gt;
+&lt;&lt;set $user_stats.gender_Identity  -= 1&gt;&gt;
 [[Leave Mistress Veletia Roswyn|dressing_bloom]] |&lt;br&gt;&lt;br&gt;
 [[Leave Royal Dressing Bloom|castle_map_front_select]]
 &lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="126" name="female_underwear_4" tags="" position="725,1600" size="100,100">&lt;&lt;nobr&gt;&gt;
@@ -14017,7 +14056,7 @@ I looked back. She lifted a heavy black velvet choker from a mannequin and held 
 
 &lt;&lt;speech &quot;veletia&quot;&gt;&gt;Corsets, yes. But also collars.&lt;&lt;/speech&gt;&gt;&lt;br&gt;
 
-&lt;&lt;set $user_stats.gender_Identity  =- 1&gt;&gt;
+&lt;&lt;set $user_stats.gender_Identity  -= 1&gt;&gt;
 &lt;&lt;set $bloom_room_enable  = true&gt;&gt;
 [[Leave Mistress Veletia Roswyn|dressing_bloom]] |&lt;br&gt;&lt;br&gt;
 [[Leave Royal Dressing Bloom|castle_map_front_select]]
@@ -14564,7 +14603,7 @@ I moaned softly.&lt;br&gt;&lt;br&gt;
 [[Let her touch you|female_wear_1_84]]
 [[Stop and Leave her|castle_map_front_select]]
 &lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="200" name="female_wear_1_84" tags="" position="1225,2475" size="100,100">&lt;&lt;nobr&gt;&gt;
-&lt;&lt;set $user_stats.gender_Identity  =- 2&gt;&gt;
+&lt;&lt;set $user_stats.gender_Identity  -= 2&gt;&gt;
 &lt;&lt;speech &quot;veletia&quot;&gt;&gt;Please what? Stop? Or don’t stop?&lt;&lt;/speech&gt;&gt;&lt;br&gt;
 I couldn’t answer. My thighs trembled.&lt;br&gt;&lt;br&gt;
 &lt;&lt;speech &quot;veletia&quot;&gt;&gt;You’ve worn the dress. You’ve breathed through lace,&lt;&lt;/speech&gt;&gt;&lt;br&gt;
@@ -14621,7 +14660,7 @@ I said, breathlessly.&lt;br&gt;&lt;br&gt;
 [[Accept you Like it|female_wear_1_89]]
 [[Leave her|castle_map_front_select]]
 &lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="205" name="female_wear_1_89" tags="" position="600,2600" size="100,100">&lt;&lt;nobr&gt;&gt;
-&lt;&lt;set $user_stats.gender_Identity  =- 2&gt;&gt;
+&lt;&lt;set $user_stats.gender_Identity  -= 2&gt;&gt;
 &lt;&lt;speech &quot;mc&quot;&gt;&gt;And I don’t want to pretend anymore.&lt;&lt;/speech&gt;&gt;&lt;br&gt;
 &lt;&lt;speech &quot;veletia&quot;&gt;&gt;I wouldn’t let you,&lt;&lt;/speech&gt;&gt;&lt;br&gt;
 She said gently, brushing a strand of hair from my face.
@@ -17780,7 +17819,7 @@ The lingerie clung like destiny.</tw-passagedata><tw-passagedata pid="332" name=
 &lt;strong style=&quot;color: red;&quot;&gt;I need to wear some thing before go outside&lt;/strong&gt;
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="333" name="mc_bed" tags="" position="350,4225" size="100,100">&lt;&lt;nobr&gt;&gt;
-&lt;&lt;set $user_stats.energy = 80&gt;&gt;
+&lt;&lt;set $user_stats.energy = 90&gt;&gt;
 &lt;&lt;set $alert_message = &quot;&quot;&gt;&gt;
 &lt;&lt;if $currentArc[&quot;main_arc&quot;] == 1&gt;&gt;
 &lt;div id=&quot;gif_pop_up&quot;&gt;
@@ -33091,7 +33130,7 @@ Then let it be misunderstood. A true soul doesn’t owe clarity to anyone but it
 &lt;&lt;for _key, _data range setup.storeItems&gt;&gt;
 	&lt;&lt;set $userItems[_key] to {
 		name: _data.name,
-		amount: 0,
+		amount: 1000,
 		unit: _data.unit,
 		img: _data.img,
 		min_amount: _data.min_amount,
@@ -33129,7 +33168,7 @@ Then let it be misunderstood. A true soul doesn’t owe clarity to anyone but it
 	leadership: 40,
 	archery_ability: 20,
 	combat_ability: 20,
-	energy: 80
+	energy: 90
 }&gt;&gt;
 
 &lt;&lt;set $wardrobe = {
