@@ -751,7 +751,7 @@ I slipped them on. Tighter. Riskier. The ache bloomed deeper.<br><br>
 <<speech   "mc">>Then let’s begin.<</speech>><br>
 
 <<speech "veletia">>Welcome, princess. Time to dress the queen within.<</speech>><br>
-<<set $user_stats.gender_Identity  =- 4>>
+<<set $user_stats.gender_Identity  -= 4>>
 <<run $wardrobe.bottom_underwear.push({
 	img: "bottom_underwear_2.png",
 	key: "bottom_underwear_2"
@@ -781,7 +781,7 @@ I slipped them on. Tighter. Riskier. The ache bloomed deeper.<br><br>
 <<speech   "mc">>Then let’s begin.<</speech>><br>
 
 <<speech "veletia">>Welcome, princess. Time to dress the queen within.<</speech>><br>
-<<set $user_stats.gender_Identity  =- 4>>
+<<set $user_stats.gender_Identity  -= 4>>
 <<run $wardrobe.bottom_underwear.push({
 	img: "bottom_underwear_3.png",
 	key: "bottom_underwear_3"
@@ -976,7 +976,7 @@ But I didn’t leave. I stood there, fists clenched around soft velvet, the silk
 <<speech "veletia">>You’ll come again. Next time, perhaps in lavender. Or something with bows.<</speech>><br>
 I hated that she was right.<br><br>
 
-<<set $user_stats.gender_Identity  =- 1>>
+<<set $user_stats.gender_Identity  -= 1>>
 [[Leave Mistress Veletia Roswyn|dressing_bloom]] |<br><br>
 [[Leave Royal Dressing Bloom|castle_map_front_select]]
 <</nobr>>
@@ -1211,7 +1211,7 @@ I turned to leave.<br><br>
 <<speech  "mc">>I’m not coming back.<</speech>><br>
 <<speech  "veletia">>You said that last time.<</speech>><br>
 She laughed softly.<br><br>
-<<set $user_stats.gender_Identity  =- 1>>
+<<set $user_stats.gender_Identity  -= 1>>
 [[Leave Mistress Veletia Roswyn|dressing_bloom]] |<br><br>
 [[Leave Royal Dressing Bloom|castle_map_front_select]]
 <</nobr>>
@@ -1236,7 +1236,7 @@ I turned to leave.<br><br>
 <<speech  "mc">>I’m not coming back.<</speech>><br>
 <<speech  "veletia">>You said that last time.<</speech>><br>
 She laughed softly.<br><br>
-<<set $user_stats.gender_Identity  =- 1>>
+<<set $user_stats.gender_Identity  -= 1>>
 [[Leave Mistress Veletia Roswyn|dressing_bloom]] |<br><br>
 [[Leave Royal Dressing Bloom|castle_map_front_select]]
 <</nobr>>
@@ -1261,7 +1261,7 @@ I turned to leave.<br><br>
 <<speech  "mc">>I’m not coming back.<</speech>><br>
 <<speech  "veletia">>You said that last time.<</speech>><br>
 She laughed softly.<br><br>
-<<set $user_stats.gender_Identity  =- 1>>
+<<set $user_stats.gender_Identity  -= 1>>
 [[Leave Mistress Veletia Roswyn|dressing_bloom]] |<br><br>
 [[Leave Royal Dressing Bloom|castle_map_front_select]]
 <</nobr>>
@@ -1574,7 +1574,7 @@ I looked back. She lifted a heavy black velvet choker from a mannequin and held 
 
 <<speech "veletia">>Corsets, yes. But also collars.<</speech>><br>
 
-<<set $user_stats.gender_Identity  =- 1>>
+<<set $user_stats.gender_Identity  -= 1>>
 <<set $bloom_room_enable  = true>>
 [[Leave Mistress Veletia Roswyn|dressing_bloom]] |<br><br>
 [[Leave Royal Dressing Bloom|castle_map_front_select]]
@@ -2298,7 +2298,7 @@ I moaned softly.<br><br>
 
 :: female_wear_1_84
 <<nobr>>
-<<set $user_stats.gender_Identity  =- 2>>
+<<set $user_stats.gender_Identity  -= 2>>
 <<speech "veletia">>Please what? Stop? Or don’t stop?<</speech>><br>
 I couldn’t answer. My thighs trembled.<br><br>
 <<speech "veletia">>You’ve worn the dress. You’ve breathed through lace,<</speech>><br>
@@ -2370,7 +2370,7 @@ I said, breathlessly.<br><br>
 
 :: female_wear_1_89
 <<nobr>>
-<<set $user_stats.gender_Identity  =- 2>>
+<<set $user_stats.gender_Identity  -= 2>>
 <<speech "mc">>And I don’t want to pretend anymore.<</speech>><br>
 <<speech "veletia">>I wouldn’t let you,<</speech>><br>
 She said gently, brushing a strand of hair from my face.
