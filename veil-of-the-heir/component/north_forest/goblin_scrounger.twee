@@ -148,7 +148,7 @@ A snapping twig reveals a small, wiry figure hunched beneath a thorny bush.<br><
 <<speech "mc">>Good. Die with that on your tongue.<</speech>><br>
 <<speech "mc">>Call me flower again… and I’ll show you thorns.<</speech>><br>
 <<set $goblin_scrounger_info = true>>
-[[Kill Goblin Scrounger|north_forest]]
+[[Kill Goblin Scrounger|goblin_scrounger_reward]]
 <<else>>
 <<speech "goblok" $goblin_scrounger_img>> Oh-ho-ho… what’s this? The Queen’s precious little blossom is wilting.<</speech>><br>
 <<speech "mc">> This… isn’t over…<</speech>><br>
@@ -163,4 +163,52 @@ A snapping twig reveals a small, wiry figure hunched beneath a thorny bush.<br><
 <<speech "goblok" $goblin_scrounger_img>>Grow those titties nice and big for me, princess! I wanna see them bounce when I take you next!<</speech>><br>
 [[Run|north_forest]]
 <</if>>
+<</nobr>>
+
+
+
+:: goblin_scrounger_reward
+<<nobr>>
+<div class="loot-header" style="text-align:center; font-size: 1.8em; font-weight: bold; margin-bottom: 0.5em;">
+✨ Spoils of Victory: Goblin Scrounger ✨
+</div>
+
+<div class="loot-description" style="font-style: italic; color: #bbb; margin-bottom: 1em;">
+The air stills as the last breath fades from the fallen beast, leaving behind the faint scent of ancient magic and something quietly precious among the remains. In this fragile silence, a new path unfolds before you.
+</div>
+
+<<set _storeKeys = Object.keys(setup.storeItems)>>
+<<set _shuffled = _storeKeys.sort(() => 0.5 - Math.random())>>
+<<set _rewardKeys = _shuffled.slice(0, 3)>>
+
+<b>You receive the following alchemical ingredients as loot:</b>
+<ul>
+<<for _key range _rewardKeys>>
+    <<set _data = setup.storeItems[_key]>>
+    <<set _amountToAdd = _data.min_amount * 20>>
+
+    <<if $userItems[_key] is undefined>>
+        <<set $userItems[_key] = {
+            name: _data.name,
+            amount: 0,
+            unit: _data.unit,
+            img: _data.img,
+            min_amount: _data.min_amount
+        }>>
+    <</if>>
+
+    <<set $userItems[_key].amount += _amountToAdd>>
+
+    <li>
+        <img @src="_data.img" style="width: 40px; vertical-align: middle; margin-right: 0.5em;">
+        <b><<=_data.name>></b> — +<<=_amountToAdd>> <<=_data.unit>>
+    </li>
+<</for>>
+</ul>
+
+
+<div style="margin-top: 1.5em; font-style: italic; text-align: center; color: #888;">
+In the calm after the storm, I stand remade — a body changed, a spirit sharpened, and a future written by my own hand.
+</div>
+[[Back to North Forest|north_forest]]
 <</nobr>>

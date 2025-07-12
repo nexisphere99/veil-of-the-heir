@@ -38,163 +38,163 @@ Caelan is tracking the remnants of a raider pack and stumbles into an ancient, m
 long overtaken by vines and silence. But something huge is breathing beneath the ferns. 
 A shadow lumbers up, grotesque and stitched like a failed experiment.
 
-<<speech "caelen">>I know what you are. You were twisted by war alchemy. You don’t belong in this forest.<</speech>><br>
+<<speech "mc">>I know what you are. You were twisted by war alchemy. You don’t belong in this forest.<</speech>><br>
 <<speech "griln" $griln_flesh_wister_img>>And you don’t belong on a battlefield, girl-prince.<</speech>><br>
-<<speech "caelen">>I came here to end the threat, not to be judged by a monster.<</speech>><br>
+<<speech "mc">>I came here to end the threat, not to be judged by a monster.<</speech>><br>
 <<speech "griln" $griln_flesh_wister_img>>You wear a sword like a prince… but your hips lie. They sway. I see them moving in rhythm, not strategy.<</speech>><br>
 [[Move Forth|griln_flesh_wister_1]] 
 <</nobr>>
 
 :: griln_flesh_wister_1
 <<nobr>>
-<<speech "caelen">>My hips don’t decide how deep I cut.<</speech>><br>
+<<speech "mc">>My hips don’t decide how deep I cut.<</speech>><br>
 <<speech "griln" $griln_flesh_wister_img>>They’ll slow you. Widen you. Break you. You’re already changing. Breasts rising like unearned medals on your chest.<</speech>><br>
-<<speech "caelen">>Speak again of my body, and I’ll separate yours from your mouth.<</speech>><br>
+<<speech "mc">>Speak again of my body, and I’ll separate yours from your mouth.<</speech>><br>
 <<speech "griln" $griln_flesh_wister_img>>You should hide them better. Or are you proud? Proud of those pert little tits straining your noble leather?<</speech>><br>
 [[Move Forth|griln_flesh_wister_2]] 
 <</nobr>>
 
 :: griln_flesh_wister_2
 <<nobr>>
-<<speech "caelen">>They’re mine. And that makes them dangerous.<</speech>><br>
+<<speech "mc">>They’re mine. And that makes them dangerous.<</speech>><br>
 <<speech "griln" $griln_flesh_wister_img>>No… they make you delicious. Half-made. Half-soft. You reek of perfume and panic.<</speech>><br>
-<<speech "caelen">>I reek of blood. Yours will be next.<</speech>><br>
+<<speech "mc">>I reek of blood. Yours will be next.<</speech>><br>
 <<speech "griln" $griln_flesh_wister_img>>Do your thighs rub when you walk, little heir? Do your underthings ride up in the heat of battle?<</speech>><br>
 [[Move Forth|griln_flesh_wister_3]] 
 <</nobr>>
 
 :: griln_flesh_wister_3
 <<nobr>>
-<<speech "caelen">>You’ll never live to find out.<</speech>><br>
+<<speech "mc">>You’ll never live to find out.<</speech>><br>
 <<speech "griln" $griln_flesh_wister_img>>Have you bled yet? The female bleed? Does your Queen teach you how to pad your panties, or just how to pose?<</speech>><br>
-<<speech "caelen">>She teaches me how to rule. Something you’ll never understand.<</speech>><br>
+<<speech "mc">>She teaches me how to rule. Something you’ll never understand.<</speech>><br>
 <<speech "griln" $griln_flesh_wister_img>>Rule with what? A pretty smile and a swish of your ass? I’ve killed she-warriors with more grit.<</speech>><br>
 [[Move Forth|griln_flesh_wister_4]] 
 <</nobr>>
 
 :: griln_flesh_wister_4
 <<nobr>>
-<<speech "caelen">>You haven’t fought me.<</speech>><br>
+<<speech "mc">>You haven’t fought me.<</speech>><br>
 <<speech "griln" $griln_flesh_wister_img>>I see you. Those trembling wrists. That cinched waist. You’re not a prince. You’re not even a woman. You’re a mistake.<</speech>><br>
-<<speech "caelen">>I am Velmoria’s future.<</speech>><br>
+<<speech "mc">>I am Velmoria’s future.<</speech>><br>
 <<speech "griln" $griln_flesh_wister_img>>Then the kingdom’s future is tits and tears.<</speech>><br>
 [[Move Forth|griln_flesh_wister_5]] 
 <</nobr>>
 
 :: griln_flesh_wister_5
 <<nobr>>
-<<speech "caelen">>I’ll show you fire and steel.<</speech>><br>
+<<speech "mc">>I’ll show you fire and steel.<</speech>><br>
 <<speech "griln" $griln_flesh_wister_img>>I bet you cry after battles now. Bet you look at your reflection and moan.<</speech>><br>
-<<speech "caelen">>Only when I like what I see.<</speech>><br>
+<<speech "mc">>Only when I like what I see.<</speech>><br>
 <<speech "griln" $griln_flesh_wister_img>>Proud of those dainty hands, are you? Can they still grip a blade?<</speech>><br>
 [[Move Forth|griln_flesh_wister_6]] 
 <</nobr>>
 
 :: griln_flesh_wister_6
 <<nobr>>
-<<speech "caelen">>Well enough to carve a brute like you open.<</speech>><br>
+<<speech "mc">>Well enough to carve a brute like you open.<</speech>><br>
 <<speech "griln" $griln_flesh_wister_img>>I could break your bones with one arm.<</speech>><br>
-<<speech "caelen">>Then you better hope you land the first blow.<</speech>><br>
+<<speech "mc">>Then you better hope you land the first blow.<</speech>><br>
 <<speech "griln" $griln_flesh_wister_img>>You sound breathy. Like you moan when you parry.<</speech>><br>
 [[Move Forth|griln_flesh_wister_7]] 
 <</nobr>>
 
 :: griln_flesh_wister_7
 <<nobr>>
-<<speech "caelen">>I breathe like a killer.<</speech>><br>
+<<speech "mc">>I breathe like a killer.<</speech>><br>
 <<speech "griln" $griln_flesh_wister_img>>No. You breathe like a girl in heat.<</speech>><br>
-<<speech "caelen">>You’ll die screaming before I moan.<</speech>><br>
+<<speech "mc">>You’ll die screaming before I moan.<</speech>><br>
 <<speech "griln" $griln_flesh_wister_img>>You don’t fight anymore, prince. You perform.<</speech>><br>
 [[Move Forth|griln_flesh_wister_8]] 
 <</nobr>>
 
 :: griln_flesh_wister_8
 <<nobr>>
-<<speech "caelen">>I perform victory.<</speech>><br>
+<<speech "mc">>I perform victory.<</speech>><br>
 <<speech "griln" $griln_flesh_wister_img>>You have the chest of a milkmaid and the stance of a dancer. You think that scares me?<</speech>><br>
-<<speech "caelen">>You should be terrified. You’re facing a weapon the world isn’t ready for.<</speech>><br>
+<<speech "mc">>You should be terrified. You’re facing a weapon the world isn’t ready for.<</speech>><br>
 <<speech "griln" $griln_flesh_wister_img>>Flesh like yours should be bent, not sharpened.<</speech>><br>
 [[Move Forth|griln_flesh_wister_9]] 
 <</nobr>>
 
 :: griln_flesh_wister_9
 <<nobr>>
-<<speech "caelen">>Then come try and bend me.<</speech>><br>
+<<speech "mc">>Then come try and bend me.<</speech>><br>
 <<speech "griln" $griln_flesh_wister_img>>I’ll twist your spine until you beg for the boyhood you lost.<</speech>><br>
-<<speech "caelen">>I never begged to keep it.<</speech>><br>
+<<speech "mc">>I never begged to keep it.<</speech>><br>
 <<speech "griln" $griln_flesh_wister_img>>Then you’ll beg for your life.<</speech>><br>
 [[Move Forth|griln_flesh_wister_10]] 
 <</nobr>>
 
 :: griln_flesh_wister_10
 <<nobr>>
-<<speech "caelen">>I don’t beg. I end.<</speech>><br>
+<<speech "mc">>I don’t beg. I end.<</speech>><br>
 <<speech "griln" $griln_flesh_wister_img>>Show me, then.<</speech>><br>
-<<speech "caelen">>With pleasure.<</speech>><br>
+<<speech "mc">>With pleasure.<</speech>><br>
 <<speech "griln" $griln_flesh_wister_img>>You move like a temptress!<</speech>><br>
 [[Move Forth|griln_flesh_wister_11]] 
 <</nobr>>
 
 :: griln_flesh_wister_11
 <<nobr>>
-<<speech "caelen">>I strike like a tempest!<</speech>><br>
+<<speech "mc">>I strike like a tempest!<</speech>><br>
 <<speech "griln" $griln_flesh_wister_img>>Even now, your breasts jiggle with every dodge!<</speech>><br>
-<<speech "caelen">>Let them. They don’t slow my blade.<</speech>><br>
+<<speech "mc">>Let them. They don’t slow my blade.<</speech>><br>
 <<speech "griln" $griln_flesh_wister_img>>You wear your weakness like perfume!<</speech>><br>
 [[Move Forth|griln_flesh_wister_12]] 
 <</nobr>>
 
 :: griln_flesh_wister_12
 <<nobr>>
-<<speech "caelen">>I wear my evolution like armor!<</speech>><br>
+<<speech "mc">>I wear my evolution like armor!<</speech>><br>
 <<speech "griln" $griln_flesh_wister_img>>You were stronger before. I can feel it!<</speech>><br>
-<<speech "caelen">>No. I was numb before. Now I burn.<</speech>><br>
+<<speech "mc">>No. I was numb before. Now I burn.<</speech>><br>
 <<speech "griln" $griln_flesh_wister_img>>I’ll rip that fire from your womb!<</speech>><br>
 [[Move Forth|griln_flesh_wister_13]] 
 <</nobr>>
 
 :: griln_flesh_wister_13
 <<nobr>>
-<<speech "caelen">>You’ll never touch it.<</speech>><br>
+<<speech "mc">>You’ll never touch it.<</speech>><br>
 <<speech "griln" $griln_flesh_wister_img>>Ahhh! Bitch!<</speech>><br>
-<<speech "caelen">>Correct.<</speech>><br>
+<<speech "mc">>Correct.<</speech>><br>
 <<speech "griln" $griln_flesh_wister_img>>You should have stayed a prince!<</speech>><br>
 [[Move Forth|griln_flesh_wister_14]] 
 <</nobr>>
 
 :: griln_flesh_wister_14
 <<nobr>>
-<<speech "caelen">>You should have stayed buried!<</speech>><br>
+<<speech "mc">>You should have stayed buried!<</speech>><br>
 <<speech "griln" $griln_flesh_wister_img>>I will snap your girl-bones!<</speech>><br>
-<<speech "caelen">>Try it!<</speech>><br>
+<<speech "mc">>Try it!<</speech>><br>
 <<speech "griln" $griln_flesh_wister_img>>Cursed witch! You twist nature!<</speech>><br>
 [[Move Forth|griln_flesh_wister_15]] 
 <</nobr>>
 
 :: griln_flesh_wister_15
 <<nobr>>
-<<speech "caelen">>I claim nature!<</speech>><br>
+<<speech "mc">>I claim nature!<</speech>><br>
 <<speech "griln" $griln_flesh_wister_img>>Your body lies!<</speech>><br>
-<<speech "caelen">>My body sings.<</speech>><br>
+<<speech "mc">>My body sings.<</speech>><br>
 <<speech "griln" $griln_flesh_wister_img>>I hate your softness!<</speech>><br>
 [[Move Forth|griln_flesh_wister_16]] 
 <</nobr>>
 
 :: griln_flesh_wister_16
 <<nobr>>
-<<speech "caelen">>Because it’s stronger than you.<</speech>><br>
+<<speech "mc">>Because it’s stronger than you.<</speech>><br>
 <<speech "griln" $griln_flesh_wister_img>>I’ll drag your corpse through the mud!<</speech>><br>
-<<speech "caelen">>You’ll never leave this grove.<</speech>><br>
+<<speech "mc">>You’ll never leave this grove.<</speech>><br>
 <<speech "griln" $griln_flesh_wister_img>>You’ll die a half-thing!<</speech>><br>
 [[Move Forth|griln_flesh_wister_17]] 
 <</nobr>>
 
 :: griln_flesh_wister_17
 <<nobr>>
-<<speech "caelen">>I’ll live as Queen.<</speech>><br>
+<<speech "mc">>I’ll live as Queen.<</speech>><br>
 <<speech "griln" $griln_flesh_wister_img>>You… you’re not real…<</speech>><br>
-<<speech "caelen">>I’m the future. And you… are ash.<br>
-<<speech "caelen">>Let them see me. Let them fear me. Let them kneel.<</speech>><br>
+<<speech "mc">>I’m the future. And you… are ash.<</speech>><br>
+<<speech "mc">>Let them see me. Let them fear me. Let them kneel.<</speech>><br>
 <<set $gridWidth = 4>>
 <<set $gridHeight = 3>>
 <<set $gameTime = 30>>
@@ -216,29 +216,75 @@ A shadow lumbers up, grotesque and stitched like a failed experiment.
 <<nobr>>
 <<if $memory_game_won>>
 
-<<speech "griln">>W-what… are you…?<</speech>><br>
-<<speech "caelen">>I’m your end.<</speech>><br>
-<<speech "griln">>You… you’re not a man… not a warrior…<</speech>><br>
-<<speech "caelen">>I’m both. And more. I’m evolution in a corset.<</speech>><br>
-<<speech "griln">>You fight like a queen.<</speech>><br>
-<<speech "caelen">>Then die like a coward.<</speech>><br>
-<<speech "griln">>Softness… should not… win…<</speech>><br>
-<<speech "caelen">>It didn’t. I did.<</speech>><br>
-<<speech "caelen">>Let them whisper of the prince who became a queen with teeth. I don’t need to prove myself with what I was. I’ll rule with what I am becoming.<</speech>><br>
+<<speech "griln" $griln_flesh_wister_img>>W-what… are you…?<</speech>><br>
+<<speech "mc">>I’m your end.<</speech>><br>
+<<speech "griln" $griln_flesh_wister_img>>You… you’re not a man… not a warrior…<</speech>><br>
+<<speech "mc">>I’m both. And more. I’m evolution in a corset.<</speech>><br>
+<<speech "griln" $griln_flesh_wister_img>>You fight like a queen.<</speech>><br>
+<<speech "mc">>Then die like a coward.<</speech>><br>
+<<speech "griln" $griln_flesh_wister_img>>Softness… should not… win…<</speech>><br>
+<<speech "mc">>It didn’t. I did.<</speech>><br>
+<<speech "mc">>Let them whisper of the prince who became a queen with teeth. I don’t need to prove myself with what I was. I’ll rule with what I am becoming.<</speech>><br>
 <<set $griln_flesh_wister_info = true>>
-[[Kill Griln Flesh Twister|north_forest]]
+[[Kill Griln Flesh Twister|griln_flesh_wister_reward]]
 <<else>>
-<<speech "griln">>Bleeding already, flower? I thought you were fire and silk.<</speech>><br>
-<<speech "caelen">>You’re… barely standing.<</speech>><br>
-<<speech "griln">>But I am standing. And you? You wobble like a maid in heels. Pathetic.<</speech>><br>
-<<speech "caelen">>You haven’t won.<</speech>><br>
-<<speech "griln">>Not yet. But I will. I’ll twist every inch of your dainty, trembling flesh.<</speech>><br>
-<<speech "caelen">>You’ll have to catch me first!<</speech>><br>
-<<speech "griln">>Run, princess! Run with your swaying hips and soft thighs! Next time, I’ll break you from the inside out!<</speech>><br>
-<<speech "caelen">>Next time… I’ll bury you. No matter what I’ve become.<</speech>><br>
+<<speech "griln" $griln_flesh_wister_img>>Bleeding already, flower? I thought you were fire and silk.<</speech>><br>
+<<speech "mc">>You’re… barely standing.<</speech>><br>
+<<speech "griln" $griln_flesh_wister_img>>But I am standing. And you? You wobble like a maid in heels. Pathetic.<</speech>><br>
+<<speech "mc">>You haven’t won.<</speech>><br>
+<<speech "griln" $griln_flesh_wister_img>>Not yet. But I will. I’ll twist every inch of your dainty, trembling flesh.<</speech>><br>
+<<speech "mc">>You’ll have to catch me first!<</speech>><br>
+<<speech "griln" $griln_flesh_wister_img>>Run, princess! Run with your swaying hips and soft thighs! Next time, I’ll break you from the inside out!<</speech>><br>
+<<speech "mc">>Next time… I’ll bury you. No matter what I’ve become.<</speech>><br>
 
 [[Run|north_forest]]
 <</if>>
 <</nobr>>
 
 
+
+:: griln_flesh_wister_reward
+<<nobr>>
+<div class="loot-header" style="text-align:center; font-size: 1.8em; font-weight: bold; margin-bottom: 0.5em;">
+✨ Spoils of Victory: Griln Flesh Twister ✨
+</div>
+
+<div class="loot-description" style="font-style: italic; color: #bbb; margin-bottom: 1em;">
+The air stills as the last breath fades from the fallen beast, leaving behind the faint scent of ancient magic and something quietly precious among the remains. In this fragile silence, a new path unfolds before you.
+</div>
+
+<<set _storeKeys = Object.keys(setup.storeItems)>>
+<<set _shuffled = _storeKeys.sort(() => 0.5 - Math.random())>>
+<<set _rewardKeys = _shuffled.slice(0, 4)>>
+
+<b>You receive the following alchemical ingredients as loot:</b>
+<ul>
+<<for _key range _rewardKeys>>
+    <<set _data = setup.storeItems[_key]>>
+    <<set _amountToAdd = _data.min_amount * 20>>
+
+    <<if $userItems[_key] is undefined>>
+        <<set $userItems[_key] = {
+            name: _data.name,
+            amount: 0,
+            unit: _data.unit,
+            img: _data.img,
+            min_amount: _data.min_amount
+        }>>
+    <</if>>
+
+    <<set $userItems[_key].amount += _amountToAdd>>
+
+    <li>
+        <img @src="_data.img" style="width: 40px; vertical-align: middle; margin-right: 0.5em;">
+        <b><<=_data.name>></b> — +<<=_amountToAdd>> <<=_data.unit>>
+    </li>
+<</for>>
+</ul>
+
+
+<div style="margin-top: 1.5em; font-style: italic; text-align: center; color: #888;">
+In the calm after the storm, I stand remade — a body changed, a spirit sharpened, and a future written by my own hand.
+</div>
+[[Back to North Forest|north_forest]]
+<</nobr>>

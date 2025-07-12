@@ -64,7 +64,7 @@
   </svg>
 </div>
 <<else>>
-<<passage_img "north_forest/map/map_1.png">><</passage_img>>
+[img[setup.ImagePath + 'north_forest/map/map_1.png']]
 <</if>>
 <br><br>
 [[Back to North Forest|north_forest]]
@@ -86,8 +86,99 @@
   </svg>
 </div>
 <<else>>
-<<passage_img "north_forest/map/map_2.png">><</passage_img>>
+[img[setup.ImagePath + 'north_forest/map/map_2.png']]
 <</if>>
+<br><br>
+[[Back to North Forest|north_forest]]
+<</nobr>>
+
+
+
+:: map_4
+<<nobr>>
+<<if !$griln_flesh_wister_info>>
+<div style="position: relative; width: 100%; max-width: 700px; margin: 0 auto; aspect-ratio: 7 / 5;">
+  <img src="images/north_forest/map/map_4_1.png" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" />
+  <svg viewBox="0 0 700 500"
+       preserveAspectRatio="none"
+       style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+    <polygon id="griln_flesh_wister_info" 
+             points="210,274,213,257,204,255,199,240,198,216,206,224,209,215,208,200,218,205,237,192,245,198,258,206,268,220,273,237,278,249,267,253,262,249,259,259,256,265,262,269,247,271,247,261,235,260,229,256,224,267,230,273,219,275" 
+             class="mc_bed_chamber_map" 
+             data-passage="griln_flesh_wister_info" />
+  </svg>
+</div>
+<<else>>
+[img[setup.ImagePath + 'north_forest/map/map_4.png']]
+<</if>>
+<br><br>
+[[Back to North Forest|north_forest]]
+<</nobr>>
+
+
+:: map_9
+<<nobr>>
+<<if !$shadebound_changeling_info>>
+<div style="position: relative; width: 100%; max-width: 700px; margin: 0 auto; aspect-ratio: 7 / 5;">
+  <img src="images/north_forest/map/map_9_1.png" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" />
+  <svg viewBox="0 0 700 500"
+       preserveAspectRatio="none"
+       style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+    <polygon id="shadebound_changeling_info" 
+             points="225,165,238,162,250,157,265,133,274,114,268,105,262,115,251,132,253,140,247,142,249,149,239,149,242,138,247,124,256,107,258,94,262,87,270,85,268,72,273,65,280,67,282,77,285,89,294,89,311,79,303,93,294,98,301,114,311,130,317,151,317,160,308,161,309,144,302,128,295,127,301,159,303,171,274,172,261,180,237,175" 
+             class="mc_bed_chamber_map" 
+             data-passage="shadebound_changeling_info" />
+  </svg>
+</div>
+<<else>>
+[img[setup.ImagePath + 'north_forest/map/map_9.png']]
+<</if>>
+<br><br>
+[[Back to North Forest|north_forest]]
+<</nobr>>
+
+
+:: map_5
+<<nobr>>
+<<if !$hollow_acolyte_info>>
+<div style="position: relative; width: 100%; max-width: 700px; margin: 0 auto; aspect-ratio: 7 / 5;">
+  <img src="images/north_forest/map/map_5_1.png" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" />
+  <svg viewBox="0 0 700 500"
+       preserveAspectRatio="none"
+       style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+    <polygon id="hollow_acolyte_info" 
+             points="303,110,321,104,320,93,312,91,312,75,318,59,323,44,330,37,333,29,338,27,343,33,352,51,357,55,365,48,370,51,363,58,362,70,358,85,358,98,364,105,378,109,380,115,350,112,321,115,309,115" 
+             class="mc_bed_chamber_map" 
+             data-passage="hollow_acolyte_info" />
+  </svg>
+</div>
+<<else>>
+[img[setup.ImagePath + 'north_forest/map/map_5.png']]
+<</if>>
+<br><br>
+[[Back to North Forest|north_forest]]
+<</nobr>>
+
+
+
+:: map_3
+<<nobr>>
+[img[setup.ImagePath + 'north_forest/map/map_3.png']]
+<br><br>
+[[Back to North Forest|north_forest]]
+<</nobr>>
+
+
+:: map_7
+<<nobr>>
+[img[setup.ImagePath + 'north_forest/map/map_7.png']]
+<br><br>
+[[Back to North Forest|north_forest]]
+<</nobr>>
+
+:: map_8
+<<nobr>>
+[img[setup.ImagePath + 'north_forest/map/map_8.png']]
 <br><br>
 [[Back to North Forest|north_forest]]
 <</nobr>>

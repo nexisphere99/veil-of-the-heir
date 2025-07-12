@@ -31,123 +31,119 @@ It mimics voices and faces, often impersonating villagers to sow chaos or lure v
 :: shadebound_changeling
 <<nobr>>
 <<set $shadebound_changeling_img = "north_forest/shadebound_changeling/shadebound_changeling.png">>
-A grotesquely beautiful creature born of illusion and lust magic, the Shadebound Changeling is 
-genderless but takes on hyper-sensualized forms—twisting itself into whatever its target fears or desires most. 
-It feeds on identity, lust, and shame. It mimics others and uses mirroring magic to psychologically dominate its prey. 
-It speaks in a voice that shifts between sultry and cruel.
 
-<<speech "caelen">>This part of the forest is corrupted. Show yourself.<</speech>><br>
-<<speech "shade">>Oh, I have... I’m already inside you.<</speech>><br>
-<<speech "caelen">>Enough riddles. Come out and face me.<</speech>><br>
-<<speech "shade">>Is this what you’re becoming? So soft… so pink… so ripe.<</speech>><br>
+<<speech "mc">>This part of the forest is corrupted. Show yourself.<</speech>><br>
+<<speech "shade" $shadebound_changeling_img>>Oh, I have... I’m already inside you.<</speech>><br>
+<<speech "mc">>Enough riddles. Come out and face me.<</speech>><br>
+<<speech "shade" $shadebound_changeling_img>>Is this what you’re becoming? So soft… so pink… so ripe.<</speech>><br>
 [[Move Forth|shadebound_changeling_1]]
 <</nobr>>
 
 :: shadebound_changeling_1
 <<nobr>>
-<<speech "caelen">>You mock what you fear.<</speech>><br>
-<<speech "shade">>Oh, I love what I see. That tight little waist. Those trembling breasts under your armor. The subtle curve of your thighs. You’re a walking invitation.<</speech>><br>
-<<speech "caelen">>I’m a blade, not a gift.<</speech>><br>
-<<speech "shade">>All blades have hilts. And you… you’re aching to be held.<</speech>><br>
+<<speech "mc">>You mock what you fear.<</speech>><br>
+<<speech "shade" $shadebound_changeling_img>>Oh, I love what I see. That tight little waist. Those trembling breasts under your armor. The subtle curve of your thighs. You’re a walking invitation.<</speech>><br>
+<<speech "mc">>I’m a blade, not a gift.<</speech>><br>
+<<speech "shade" $shadebound_changeling_img>>All blades have hilts. And you… you’re aching to be held.<</speech>><br>
 [[Move Forth|shadebound_changeling_2]]
 <</nobr>>
 
 :: shadebound_changeling_2
 <<nobr>>
-<<speech "caelen">>I’m aching to end this.<</speech>><br>
-<<speech "shade">>But you’re torn, aren’t you? Between boy and girl. Between hard and soft. Between pride and pleasure.<</speech>><br>
-<<speech "caelen">>I made my choice.<</speech>><br>
-<<speech "shade">>But your body doesn’t know what it is. I can feel the confusion in your scent. Your nipples... hard with conflict.<</speech>><br>
+<<speech "mc">>I’m aching to end this.<</speech>><br>
+<<speech "shade" $shadebound_changeling_img>>But you’re torn, aren’t you? Between boy and girl. Between hard and soft. Between pride and pleasure.<</speech>><br>
+<<speech "mc">>I made my choice.<</speech>><br>
+<<speech "shade" $shadebound_changeling_img>>But your body doesn’t know what it is. I can feel the confusion in your scent. Your nipples... hard with conflict.<</speech>><br>
 [[Move Forth|shadebound_changeling_3]]
 <</nobr>>
 
 :: shadebound_changeling_3
 <<nobr>>
-<<speech "caelen">>You won’t touch me.<</speech>><br>
-<<speech "shade">>Oh, but I will. I’ll peel back your armor like wrapping on a delicate fruit.<</speech>><br>
-<<speech "caelen">>I will kill you first.<</speech>><br>
-<<speech "shade">>Mmm. So spicy. I wonder how your moans sound. Do they match your new voice? Have you tried them yet? I could help.<</speech>><br>
+<<speech "mc">>You won’t touch me.<</speech>><br>
+<<speech "shade" $shadebound_changeling_img>>Oh, but I will. I’ll peel back your armor like wrapping on a delicate fruit.<</speech>><br>
+<<speech "mc">>I will kill you first.<</speech>><br>
+<<speech "shade" $shadebound_changeling_img>>Mmm. So spicy. I wonder how your moans sound. Do they match your new voice? Have you tried them yet? I could help.<</speech>><br>
 [[Move Forth|shadebound_changeling_4]]
 <</nobr>>
 
 :: shadebound_changeling_4
 <<nobr>>
-<<speech "caelen">>You’re disgusting.<</speech>><br>
-<<speech "shade">>I’m truth. I show you what you crave... and what you fear.<</speech>><br>
-<<speech "caelen">>I fear nothing.<</speech>><br>
-<<speech "shade">>Not even how your body aches when no one’s looking? That tug between your legs? The way your new thighs press together now when you walk?<</speech>><br>
+<<speech "mc">>You’re disgusting.<</speech>><br>
+<<speech "shade" $shadebound_changeling_img>>I’m truth. I show you what you crave... and what you fear.<</speech>><br>
+<<speech "mc">>I fear nothing.<</speech>><br>
+<<speech "shade" $shadebound_changeling_img>>Not even how your body aches when no one’s looking? That tug between your legs? The way your new thighs press together now when you walk?<</speech>><br>
 [[Move Forth|shadebound_changeling_5]]
 <</nobr>>
 
 :: shadebound_changeling_5
 <<nobr>>
-<<speech "caelen">>Shut up.<</speech>><br>
-<<speech "shade">>Do you touch yourself at night and wonder whose fingers they are? Do you feel wrong or do you feel right?<</speech>><br>
-<<speech "caelen">>I said shut up!<</speech>><br>
-<<speech "shade">>Look at me. Look what you’re becoming. Look what I could do to you. I could slide into your mind, your chest, your sweet, unfinished little folds.<</speech>><br>
+<<speech "mc">>Shut up.<</speech>><br>
+<<speech "shade" $shadebound_changeling_img>>Do you touch yourself at night and wonder whose fingers they are? Do you feel wrong or do you feel right?<</speech>><br>
+<<speech "mc">>I said shut up!<</speech>><br>
+<<speech "shade" $shadebound_changeling_img>>Look at me. Look what you’re becoming. Look what I could do to you. I could slide into your mind, your chest, your sweet, unfinished little folds.<</speech>><br>
 [[Move Forth|shadebound_changeling_6]]
 <</nobr>>
 
 :: shadebound_changeling_6
 <<nobr>>
-<<speech "caelen">>I’m warning you.<</speech>><br>
-<<speech "shade">>I don’t need permission.<</speech>><br>
-<<speech "caelen">>You’ll die screaming.<</speech>><br>
-<<speech "shade">>I’ll make you scream first. Softly. Slowly.<</speech>><br>
+<<speech "mc">>I’m warning you.<</speech>><br>
+<<speech "shade" $shadebound_changeling_img>>I don’t need permission.<</speech>><br>
+<<speech "mc">>You’ll die screaming.<</speech>><br>
+<<speech "shade" $shadebound_changeling_img>>I’ll make you scream first. Softly. Slowly.<</speech>><br>
 [[Move Forth|shadebound_changeling_7]]
 <</nobr>>
 
 :: shadebound_changeling_7
 <<nobr>>
-<<speech "caelen">>Try it.<</speech>><br>
-<<speech "shade">>Gladly!<br>
-<<speech "shade">>Mmm! Still got a prince’s instincts. But a princess’s pace.<</speech>><br>
-<<speech "caelen">>I’m faster than you’ll ever be.<</speech>><br>
+<<speech "mc">>Try it.<</speech>><br>
+<<speech "shade" $shadebound_changeling_img>>Gladly!<</speech>><br>
+<<speech "shade" $shadebound_changeling_img>>Mmm! Still got a prince’s instincts. But a princess’s pace.<</speech>><br>
+<<speech "mc">>I’m faster than you’ll ever be.<</speech>><br>
 [[Move Forth|shadebound_changeling_8]]
 <</nobr>>
 
 :: shadebound_changeling_8
 <<nobr>>
-<<speech "shade">>But not stronger. I could pin you, whisper through your lips, make you feel things you haven’t yet dared to dream.<</speech>><br>
-<<speech "caelen">>You’ll never have the chance.<</speech>><br>
-<<speech "shade">>I could take your transformation. Invert it. Pull your womb inside out. Replace your curves with emptiness. Or… double them.<</speech>><br>
-<<speech "caelen">>You want what I’m becoming. You desire it.<</speech>><br>
+<<speech "shade" $shadebound_changeling_img>>But not stronger. I could pin you, whisper through your lips, make you feel things you haven’t yet dared to dream.<</speech>><br>
+<<speech "mc">>You’ll never have the chance.<</speech>><br>
+<<speech "shade" $shadebound_changeling_img>>I could take your transformation. Invert it. Pull your womb inside out. Replace your curves with emptiness. Or… double them.<</speech>><br>
+<<speech "mc">>You want what I’m becoming. You desire it.<</speech>><br>
 [[Move Forth|shadebound_changeling_9]]
 <</nobr>>
 
 :: shadebound_changeling_9
 <<nobr>>
-<<speech "shade">>Of course I do. Who wouldn’t want to wear you? All that soft magic wrapped in royal shame.<</speech>><br>
-<<speech "caelen">>Then die wanting.<</speech>><br>
-<<speech "shade">>Ooh! You cut yourself! So violent, so self-hating. Just like all newborn women.<</speech>><br>
-<<speech "caelen">>I don’t hate myself. I hate you.<</speech>><br>
+<<speech "shade" $shadebound_changeling_img>>Of course I do. Who wouldn’t want to wear you? All that soft magic wrapped in royal shame.<</speech>><br>
+<<speech "mc">>Then die wanting.<</speech>><br>
+<<speech "shade" $shadebound_changeling_img>>Ooh! You cut yourself! So violent, so self-hating. Just like all newborn women.<</speech>><br>
+<<speech "mc">>I don’t hate myself. I hate you.<</speech>><br>
 [[Move Forth|shadebound_changeling_10]]
 <</nobr>>
 
 :: shadebound_changeling_10
 <<nobr>>
-<<speech "shade">>I could have been gentle, Caelan. I could have shown you what your body was meant to do.<</speech>><br>
-<<speech "caelen">>My body was meant to kill monsters.<</speech>><br>
-<<speech "shade">>Yet it begs to be touched.<</speech>><br>
-<<speech "caelen">>Then let me touch you—with fire.<</speech>><br>
+<<speech "shade" $shadebound_changeling_img>>I could have been gentle, Caelan. I could have shown you what your body was meant to do.<</speech>><br>
+<<speech "mc">>My body was meant to kill monsters.<</speech>><br>
+<<speech "shade" $shadebound_changeling_img>>Yet it begs to be touched.<</speech>><br>
+<<speech "mc">>Then let me touch you with fire.<</speech>><br>
 [[Move Forth|shadebound_changeling_11]]
 <</nobr>>
 
 
 :: shadebound_changeling_11
 <<nobr>>
-<<speech "shade">>No! You were mine! Half-formed! Ripe! Yours was a body I could devour and wear!<</speech>><br>
-<<speech "caelen">>I’ll never be anyone’s but my own.<</speech>><br>
-<<speech "shade">>I’ll strip you of your name, your gender, your will!<</speech>><br>
-<<speech "caelen">>You can’t even keep your shape.<</speech>><br>
+<<speech "shade" $shadebound_changeling_img>>No! You were mine! Half-formed! Ripe! Yours was a body I could devour and wear!<</speech>><br>
+<<speech "mc">>I’ll never be anyone’s but my own.<</speech>><br>
+<<speech "shade" $shadebound_changeling_img>>I’ll strip you of your name, your gender, your will!<</speech>><br>
+<<speech "mc">>You can’t even keep your shape.<</speech>><br>
 [[Move Forth|shadebound_changeling_12]]
 <</nobr>>
 
 :: shadebound_changeling_12
 <<nobr>>
-<<speech "shade">>You’ll never be complete. You’ll always be between.<</speech>><br>
-<<speech "caelen">>I was between. Now I’m beyond.<</speech>><br>
-<<speech "caelen">>I’m not your fantasy. I’m my own future.<</speech>><br>
+<<speech "shade" $shadebound_changeling_img>>You’ll never be complete. You’ll always be between.<</speech>><br>
+<<speech "mc">>I was between. Now I’m beyond.<</speech>><br>
+<<speech "mc">>I’m not your fantasy. I’m my own future.<</speech>><br>
 <<set $gridWidth = 4>>
 <<set $gridHeight = 4>>
 <<set $gameTime = 45>>
@@ -172,29 +168,76 @@ It speaks in a voice that shifts between sultry and cruel.
 :: shadebound_changeling_over
 <<nobr>>
 <<if $memory_game_won>>
-<<speech "shade">>Mmm. Look at you—panting, trembling, flushed. Just a few more touches of illusion and you'd offer yourself.<</speech>><br>
-<<speech "caelen">>I'll never... let you... win.<</speech>><br>
-<<speech "shade">>Oh darling. I already tasted your doubt. Your blush was consent enough. That ache between your legs? That’s mine now.<</speech>><br>
-<<speech "caelen">>Wrong!<</speech>><br>
-<<speech "shade">>Run, little princess! But know this—your flesh remembers me. You’ll dream of me. Of what I almost did. Of what you almost wanted.<</speech>><br>
-<<speech "caelen">>Dreams aren’t truth. And I’ll return… to end you.<</speech>><br>
+<<speech "shade" $shadebound_changeling_img>>You… you wanted it. I saw it. The longing. The heat under your armor…<</speech>><br>
+<<speech "mc">>You saw nothing but your own hunger.<</speech>><br>
+<<speech "shade" $shadebound_changeling_img>>Your body betrayed you. It begged to be claimed.<</speech>><br>
+<<speech "mc">>My body belongs to me not your fantasies.<</speech>><br>
+<<speech "shade" $shadebound_changeling_img>>But you’re so soft now. So ready…<</speech>><br>
+<<speech "mc">>And still strong enough to kill you.<</speech>><br>
+<<speech "shade" $shadebound_changeling_img>>You’ll never be complete… you’ll always be between—boy and girl, fear and desire—<</speech>><br>
+<<speech "mc">>Then I’ll rule between. I’ll thrive between. And you’ll rot beneath.<</speech>><br>
+<<speech "shade" $shadebound_changeling_img>>You… were supposed to be… mine…<</speech>><br>
+<<speech "mc">>I belong to no one.<</speech>><br>
+<<speech "mc">>They won’t define me. Not with their fantasies. Not with their fear. I define me.<</speech>><br>
 <<set $shadebound_changeling_info = true>>
-[[Kill Magical Doppelgänger|north_forest]]
+[[Kill Magical Doppelgänger|shadebound_changeling_reward]]
 <<else>>
-<<speech "shade">>You… you wanted it. I saw it. The longing. The heat under your armor…<</speech>><br>
-<<speech "caelen">>You saw nothing but your own hunger.<</speech>><br>
-<<speech "shade">>Your body betrayed you. It begged to be claimed.<</speech>><br>
-<<speech "caelen">>My body belongs to me—not your fantasies.<</speech>><br>
-<<speech "shade">>But you’re so soft now. So ready…<</speech>><br>
-<<speech "caelen">>And still strong enough to kill you.<</speech>><br>
-<<speech "shade">>You’ll never be complete… you’ll always be between—boy and girl, fear and desire—<</speech>><br>
-<<speech "caelen">>Then I’ll rule between. I’ll thrive between. And you’ll rot beneath.<</speech>><br>
-<<speech "shade">>You… were supposed to be… mine…<</speech>><br>
-<<speech "caelen">>I belong to no one.<</speech>><br>
-<<speech "caelen">>They won’t define me. Not with their fantasies. Not with their fear. I define me.<</speech>><br>
+<<speech "shade" $shadebound_changeling_img>>Mmm. Look at you panting, trembling, flushed. Just a few more touches of illusion and you'd offer yourself.<</speech>><br>
+<<speech "mc">>I'll never... let you... win.<</speech>><br>
+<<speech "shade" $shadebound_changeling_img>>Oh darling. I already tasted your doubt. Your blush was consent enough. That ache between your legs? That’s mine now.<</speech>><br>
+<<speech "mc">>Wrong!<</speech>><br>
+<<speech "shade" $shadebound_changeling_img>>Run, little princess! But know this your flesh remembers me. You’ll dream of me. Of what I almost did. Of what you almost wanted.<</speech>><br>
+<<speech "mc">>Dreams aren’t truth. And I’ll return… to end you.<</speech>><br>
 [[Run|north_forest]]
 <</if>>
 <</nobr>>
 
 
 
+
+
+:: shadebound_changeling_reward
+<<nobr>>
+<div class="loot-header" style="text-align:center; font-size: 1.8em; font-weight: bold; margin-bottom: 0.5em;">
+✨ Spoils of Victory: Shadebound Changeling ✨
+</div>
+
+<div class="loot-description" style="font-style: italic; color: #bbb; margin-bottom: 1em;">
+The air stills as the last breath fades from the fallen beast, leaving behind the faint scent of ancient magic and something quietly precious among the remains. In this fragile silence, a new path unfolds before you.
+</div>
+
+<<set _storeKeys = Object.keys(setup.storeItems)>>
+<<set _shuffled = _storeKeys.sort(() => 0.5 - Math.random())>>
+<<set _rewardKeys = _shuffled.slice(0, 4)>>
+
+<b>You receive the following alchemical ingredients as loot:</b>
+<ul>
+<<for _key range _rewardKeys>>
+    <<set _data = setup.storeItems[_key]>>
+    <<set _amountToAdd = _data.min_amount * 20>>
+
+    <<if $userItems[_key] is undefined>>
+        <<set $userItems[_key] = {
+            name: _data.name,
+            amount: 0,
+            unit: _data.unit,
+            img: _data.img,
+            min_amount: _data.min_amount
+        }>>
+    <</if>>
+
+    <<set $userItems[_key].amount += _amountToAdd>>
+
+    <li>
+        <img @src="_data.img" style="width: 40px; vertical-align: middle; margin-right: 0.5em;">
+        <b><<=_data.name>></b> — +<<=_amountToAdd>> <<=_data.unit>>
+    </li>
+<</for>>
+</ul>
+
+
+<div style="margin-top: 1.5em; font-style: italic; text-align: center; color: #888;">
+In the calm after the storm, I stand remade — a body changed, a spirit sharpened, and a future written by my own hand.
+</div>
+[[Back to North Forest|north_forest]]
+<</nobr>>

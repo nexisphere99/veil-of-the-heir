@@ -309,7 +309,7 @@ Only what you’re willing to give… and maybe a little more, if you whisper it
 <</if>>
 [[Leave Torin|torin_chamber_map_select]] |<br><br>
 [[Leave Torin's Chamber|bed_chamber_male]] |<br><br>
-[[Leave Maid Room Corridor|castle_map_back_select]]
+[[Leave Male Room Corridor|castle_map_back_select]]
 <</nobr>>
 
 
@@ -324,7 +324,7 @@ Only what you’re willing to give… and maybe a little more, if you whisper it
 
 <<speech "mc">>Lady Serelyne said... I have to learn... to feel differently.<</speech>><br>
 
-[[Move Forth|torin_sex_1_1]]
+[[Move Forth|torin_sex_1_1]] | [[Skip the Session|torin_sex_1_6]]
 <</nobr>>
 
 :: torin_sex_1_1
@@ -428,8 +428,22 @@ I wasn’t just letting it happen.<br><br>
 
 I wanted it.<br><br>
 
-
+<<set $currentObjectives = "Meet with Alinora, Aldric, and Thalara to discuss the North forest mission. Council Chamber">>
+<<set $currentArc["main_arc"] = 8>>
 [[Leave Torin|torin_chamber_map_select]] |<br><br>
 [[Leave Torin's Chamber|bed_chamber_male]] |<br><br>
-[[Leave Maid Room Corridor|castle_map_back_select]]
+[[Leave Male Room Corridor|castle_map_back_select]]
+<</nobr>>
+
+
+:: torin_sex_1_6
+<<nobr>>
+<<speech "torin">>You sure you want to leave? I can show you more.<</speech>><br><br>
+<<speech "mc">>I… I need to think. This is all so new.<</speech>><br><br>
+<<speech "torin">>I understand. But know this: I’ll always be here when you’re ready to learn more.<</speech>><br><br>
+<<set $currentObjectives = "Meet with Alinora, Aldric, and Thalara to discuss the North forest mission. Council Chamber">>
+<<set $currentArc["main_arc"] = 8>>
+[[Leave Torin|torin_chamber_map_select]] |<br><br>
+[[Leave Torin's Chamber|bed_chamber_male]] |<br><br>
+[[Leave Male Room Corridor|castle_map_back_select]]
 <</nobr>>

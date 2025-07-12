@@ -1,0 +1,506 @@
+
+
+
+:: north_forest_initial
+<<nobr>>
+<<speech "alinora">>Caelan. Come. Stand here by the table.<</speech>><br>
+bows slightly, stepping closer
+<<speech "mc">>You summoned me, Mother?<</speech>><br>
+<<speech "alinora">>Indeed. Reports from the North Forest trouble us deeply. Trade routes go silent. Villages vanish overnight. And now… blood along the Hollow Glade trail.<</speech>><br>
+<<speech "aldric">>Two patrols have not returned. A third sent smoke signals before disappearing. We face something more than bandits.<</speech>><br>
+[[Move Forth|north_forest_initial_1]]
+<</nobr>>
+
+:: north_forest_initial_1
+<<nobr>>
+<<speech "thalara">>Magic clings to the northern winds like rot. Old enchantments stir. I sense hunger there.<</speech>><br>
+<<speech "mc">>You want me to investigate?<</speech>><br>
+<<speech "alinora">>I want you to lead, Caelan. Not just look. The people must see you commanding. Resolving. Deciding.<</speech>><br>
+<<speech "aldric">>You will go with a detachment. Twenty soldiers. Half mounted. Five rangers. One scribe. And me.<</speech>><br>
+[[Move Forth|north_forest_initial_2]]
+<</nobr>>
+
+:: north_forest_initial_2
+<<nobr>>
+<<speech "mc">>And what, exactly, am I to do?<</speech>><br>
+<<speech "thalara">>You are to see. To listen. To judge. You are heir, yes… but your power lies not only in blood. It lies in presence.<</speech>><br>
+<<speech "mc">>And in wearing tighter breeches now, apparently.<</speech>><br>
+<<speech "alinora">>You will treat with village heads, inspect the old ruins, track the missing. If monsters rise? Slay them.<</speech>><br>
+[[Move Forth|north_forest_initial_3]]
+<</nobr>>
+
+:: north_forest_initial_3
+<<nobr>>
+<<speech "aldric">>We will support you. But you will lead. They must learn to look to you, not to your sword.<</speech>><br>
+<<speech "mc">>So I’m to play royalty while dressed in armor that barely fits my new hips.<</speech>><br>
+<<speech "thalara">>Adaptation is part of command. Your body is evolving. So must your tactics.<</speech>><br>
+<<speech "alinora">>Do you object to the assignment?<</speech>><br>
+[[Move Forth|north_forest_initial_4]]
+<</nobr>>
+
+
+:: north_forest_initial_4
+<<nobr>>
+<<speech "mc">>No. Only to being paraded as both weapon and performance.<</speech>><br>
+<<speech "aldric">>You are heir, not a child. You carry the crown’s weight, soft hips or no.<</speech>><br>
+<<speech "mc">>I can fight.<</speech>><br>
+<<speech "alinora">>Then show them. With blade, with word, with will.<</speech>><br>
+[[Move Forth|north_forest_initial_5]]
+<</nobr>>
+
+:: north_forest_initial_5
+<<nobr>>
+<<speech "thalara">>Your transformation makes you feared and fabled. Some will challenge it. Others will crave it.<</speech>><br>
+<<speech "aldric">>And if they crave it too closely. cut them down.<</speech>><br>
+<<speech "mc">>Finally. Advice I like.<</speech>><br>
+They walk around the map laid out before them.
+<<speech "alinora">>Here. The border of Hollow Glade and Twisted Reach. Reports suggest movement in the ruins. Whispers of a 'mirror fiend.'<</speech>><br>
+[[Move Forth|north_forest_initial_6]]
+<</nobr>>
+
+:: north_forest_initial_6
+<<nobr>>
+<<speech "thalara">>A reflection-born creature. It would prey on doubt, identity, beauty. It would see you.<</speech>><br>
+<<speech "mc">>Let it look. I’m not ashamed of what I am.<</speech>><br>
+<<speech "aldric">>You say that now. Wait until it takes your voice and mocks your mother’s face with it.<</speech>><br>
+<<speech "mc">>If it uses her face, I’ll be forced to kill it twice.<</speech>><br>
+[[Move Forth|north_forest_initial_7]]
+<</nobr>>
+
+:: north_forest_initial_7
+<<nobr>>
+<<speech "alinora">>Good. Then go with steel ready and heart steady.<</speech>><br>
+<<speech "thalara">>I will give you protective glyphs. And a potion to strengthen your mind against illusions. But the rest, Caelan… is yours.<</speech>><br>
+<<speech "mc">>When do we ride?<</speech>><br>
+<<speech "aldric">>Tomorrow. Before dawn. Sleep in armor if you must.<</speech>><br>
+[[Move Forth|north_forest_initial_8]]
+<</nobr>>
+
+:: north_forest_initial_8
+<<nobr>>
+<<speech "mc">>I sleep in corsets now, Sir Aldric. Armor is almost a relief.<</speech>><br>
+<<speech "thalara">>Velmoria’s heir sharpens wit alongside sword. A dangerous combination.<</speech>><br>
+<<speech "alinora">>Before you depart… know this, I do not send you to prove yourself. You have nothing to prove to me.<</speech>><br>
+<<speech "mc">>Then why send me?<</speech>><br>
+[[Move Forth|north_forest_initial_9]]
+<</nobr>>
+
+:: north_forest_initial_9
+<<nobr>>
+<<speech "alinora">>Because the realm must see what I already know.<</speech>><br>
+<<speech "mc">>And what’s that?<</speech>><br>
+<<speech "alinora">>That the child I bore is not a prince. Not a daughter. Not even a queen yet.<</speech>><br>
+<<speech "thalara">>But becoming something far more powerful.<</speech>><br>
+[[Move Forth|north_forest_initial_10]]
+<</nobr>>
+
+:: north_forest_initial_10
+<<nobr>>
+<<speech "aldric">>Gods help anything foolish enough to get in their way.<</speech>><br>
+<<speech "mc">>Then I’ll give the North Forest something new to fear.<</speech>><br>
+<<speech "alinora">>Good. Then make them believe.<</speech>><br>
+<<speech "aldric">>You’ll have Commander Dresen’s unit. Twelve swords, six crossbows, three forest-taught trackers.<</speech>><br>
+[[Move Forth|north_forest_initial_11]]
+<</nobr>>
+
+:: north_forest_initial_11
+<<nobr>>
+<<speech "mc">>Do they know they’re following me, not you?<</speech>><br>
+<<speech "aldric">>They’ve been told. They’ll follow orders... if you give them like a commander, not a confused noble in silk.<</speech>><br>
+<<speech "mc">>I gave up silk weeks ago. It doesn’t fit anymore.<</speech>><br>
+<<speech "thalara">>It fits differently. That’s not weakness. It’s leverage.<</speech>><br>
+[[Move Forth|north_forest_initial_12]]
+<</nobr>>
+
+:: north_forest_initial_12
+<<nobr>>
+<<speech "mc">>If you mean my cleavage distracts enemies, say it plainly.<</speech>><br>
+<<speech "thalara">>Very well. Your breasts have strategic potential, just like your blade.<</speech>><br>
+<<speech "aldric">>Gods above. Archmage...<</speech>><br>
+<<speech "thalara">>Don’t blush, Aldric. You’ve seen worse on the field. Likely caused worse too.<</speech>><br>
+[[Move Forth|north_forest_initial_13]]
+<</nobr>>
+
+:: north_forest_initial_13
+<<nobr>>
+<<speech "alinora">>Enough. This is war strategy. If you can’t speak of bodies and blades, you’ll be crushed by both.<</speech>><br>
+<<speech "mc">>Mother, is that how you give battle speeches?<</speech>><br>
+<<speech "alinora">>No. In war, I scream louder than the men, then take their heads when they stop listening.<</speech>><br>
+<<speech "mc">>What of Hollow’s Bend? That’s where the last smoke signal came from.<</speech>><br>
+[[Move Forth|north_forest_initial_14]]
+<</nobr>>
+
+:: north_forest_initial_14
+<<nobr>>
+<<speech "aldric">>Likely ambushed. The ground there swallows noise. Bad acoustics. No cover. Good place for magic.<</speech>><br>
+<<speech "thalara">>I’ll enchant a beacon stone. If things go wrong snap it in two. It will glow bright as dawn, and I’ll come.<</speech>><br>
+<<speech "mc">>Only if I need you.<</speech>><br>
+<<speech "thalara">>You will need me. Accept that. All children do.<</speech>><br>
+[[Move Forth|north_forest_initial_15]]
+<</nobr>>
+
+:: north_forest_initial_15
+<<nobr>>
+<<speech "alinora">>You ride at the front. Do not hide behind rangers. You must be seen.<</speech>><br>
+<<speech "mc">>Seen as what? Heir? Daughter? Distraction?<</speech>><br>
+<<speech "aldric">>Seen as dangerous.<</speech>><br>
+<<speech "thalara">>Beautifully so. There is power in softness. Let them feel unsettled.<</speech>><br>
+[[Move Forth|north_forest_initial_16]]
+<</nobr>>
+
+:: north_forest_initial_16
+<<nobr>>
+<<speech "mc">>They already are. I hear it in the way guards stammer around me now.<</speech>><br>
+<<speech "aldric">>Good. Confusion is a weapon.<</speech>><br>
+<<speech "mc">>You sound like Thalara.<</speech>><br>
+<<speech "thalara">>I trained him.<</speech>><br>
+[[Move Forth|north_forest_initial_17]]
+<</nobr>>
+
+:: north_forest_initial_17
+<<nobr>>
+<<speech "alinora">>Caelan. Before you go... a word. Alone.<</speech>><br>
+<<speech "aldric">>I’ll wait with the unit list.<</speech>><br>
+<<speech "thalara">>Don’t let her get sentimental.<</speech>><br>
+[[Have Conversation with Alinora|north_forest_initial_18]]
+<</nobr>>
+
+:: north_forest_initial_18
+<<nobr>>
+<<speech "mc">>So. Mother to... child?<</speech>><br>
+<<speech "alinora">>To ruler. Listen.<</speech>><br>
+<<speech "mc">>I’m listening.<</speech>><br>
+<<speech "alinora">>They will challenge you. Not just bandits. Not just beasts. The soldiers, too. Whispers. Looks. Doubts.<</speech>><br>
+[[Move Forth|north_forest_initial_19]]
+<</nobr>>
+
+:: north_forest_initial_19
+<<nobr>>
+<<speech "mc">>I know.<</speech>><br>
+<<speech "alinora">>You walk between forms. They don’t know where to place you. So they will test you.<</speech>><br>
+<<speech "mc">>I pass by bleeding?<</speech>><br>
+<<speech "alinora">>No. You pass by enduring and by returning alive with their loyalty. Or their silence.<</speech>><br>
+[[Move Forth|north_forest_initial_20]]
+<</nobr>>
+
+:: north_forest_initial_20
+<<nobr>>
+<<speech "mc">>You still doubt I’m ready?<</speech>><br>
+<<speech "alinora">>No. I know you’re ready. But they don’t yet. Make them learn.<</speech>><br>
+<<speech "mc">>If I enjoy it?<</speech>><br>
+<<speech "alinora">>...The power?<</speech>><br>
+[[Move Forth|north_forest_initial_21]]
+<</nobr>>
+
+:: north_forest_initial_21
+<<nobr>>
+<<speech "mc">>The stares. The confusion. The way they hesitate when I smile like a girl but speak like a prince.<</speech>><br>
+<<speech "alinora">>Then enjoy it. Use it. Just don’t forget, you are not becoming weak. You are becoming impossible to predict.<</speech>><br>
+<<speech "mc">>Like you?<</speech>><br>
+<<speech "alinora">>Exactly.<</speech>><br>
+<<speech "alinora">>Now go discuss with Sir Aldirc...<</speech>><br>
+[[Have Conversation with Sir Aldirc|north_forest_initial_22]]
+<</nobr>>
+
+:: north_forest_initial_22
+<<nobr>>
+<<speech "mc">>Sir Aldric.<</speech>><br>
+<<speech "aldric">>Finished being coddled?<</speech>><br>
+<<speech "mc">>Was I?<</speech>><br>
+<<speech "aldric">>Emotion is a weapon too. But overuse it, and it dulls the edge.<</speech>><br>
+[[Move Forth|north_forest_initial_23]]
+<</nobr>>
+
+:: north_forest_initial_23
+<<nobr>>
+<<speech "mc">>What would you do if you were turning into someone else every week?<</speech>><br>
+<<speech "aldric">>I’d sharpen the changes into fear. Wear my hips like a threat. My softness like bait. My breasts like a dare.<</speech>><br>
+<<speech "mc">>...You’ve thought about this more than I expected.<</speech>><br>
+<<speech "aldric">>You’re not the first I’ve trained through change. Just the most royal.<</speech>><br>
+[[Move Forth|north_forest_initial_24]]
+<</nobr>>
+
+:: north_forest_initial_24
+<<nobr>>
+<<speech "mc">>Will the men listen?<</speech>><br>
+<<speech "aldric">>Yes. Or I’ll make them and if they leer, I’ll gut the worst and make an example.<</speech>><br>
+<<speech "mc">>You really don’t flinch, do you?<</speech>><br>
+<<speech "aldric">>Only once. Twenty years ago. Didn’t like it. Never repeated the mistake.<</speech>><br>
+<<speech "mc">>Was she worth flinching for?<</speech>><br>
+<<speech "aldric">>She became queen...<</speech>><br>
+<<speech "aldric">>Thalra is waiting for you... Go speak with her.<</speech>><br>
+[[Have Conversation with Archmage Thalara|north_forest_initial_25]]
+<</nobr>>
+
+:: north_forest_initial_25
+<<nobr>>
+<<speech "thalara">>You’re glowing.<</speech>><br>
+<<speech "mc">>It’s sweat.<</speech>><br>
+<<speech "thalara">>No. It’s magic. Ripening. You’re nearing phase next of physical alteration.<</speech>><br>
+<<speech "mc">>Next Phase?<</speech>><br>
+[[Move Forth|north_forest_initial_26]]
+<</nobr>>
+
+:: north_forest_initial_26
+<<nobr>>
+
+<<speech "thalara">>Softening of hands. Pelvis rotation. Skin refinement. You’ll notice fragrance changes, too.<</speech>><br>
+<<speech "mc">>I have noticed. Everything smells… brighter.<</speech>><br>
+<<speech "thalara">>You taste different, too.<</speech>><br>
+<<speech "mc">>...You’ve tasted me?<</speech>><br>
+[[Move Forth|north_forest_initial_27]]
+<</nobr>>
+
+:: north_forest_initial_27
+<<nobr>>
+<<speech "thalara">>Only magically. But yes. You’re developing sweetness. Dangerous sweetness.<</speech>><br>
+<<speech "mc">>Is that bad?<</speech>><br>
+<<speech "thalara">>No. It’s magnificent. But beasts like sweetness. Bandits do too.<</speech>><br>
+<<speech "mc">>Then they’ll choke on it.<</speech>><br>
+<<speech "thalara">>That’s my girl.<</speech>><br>
+[[Move Forth|north_forest_initial_28]]
+<</nobr>>
+
+:: north_forest_initial_28
+<<nobr>>
+<<speech "thalara">>Take these. Four enchanted vials. One for night sight, one for muscle reinforcement, one for emergency healing… and one for… emergency femininity.<</speech>><br>
+<<speech "mc">>Emergency what now?<</speech>><br>
+<<speech "thalara">>In case you need to become more you… faster.<</speech>><br>
+<<speech "aldric">>Gods. She’s sending perfume into battle.<</speech>><br>
+[[Move Forth|north_forest_initial_29]]
+<</nobr>>
+
+:: north_forest_initial_29
+<<nobr>>
+<<speech "thalara">>It’s not perfume. It’s alignment serum. Pushes the body toward feminine resonance. Dangerous to misuse. But potent when cornered.<</speech>><br>
+<<speech "mc">>What would it do?<</speech>><br>
+<<speech "thalara">>Grow your curves. Sharpen your scent. Soften your eyes. Intensify hormonal traits for twelve hours.<</speech>><br>
+<<speech "aldric">>Would it make him or her harder to kill?<</speech>><br>
+[[Move Forth|north_forest_initial_30]]
+<</nobr>>
+
+:: north_forest_initial_30
+<<nobr>>
+<<speech "thalara">>Harder to ignore. Which, in battle, is power.<</speech>><br>
+<<speech "mc">>I’ll use it if I must. But no promises.<</speech>><br>
+<<speech "thalara">>That’s what all good queens say.<</speech>><br>
+<<speech "alinora">>Moving on. Supplies?<</speech>><br>
+[[Move Forth|north_forest_initial_31]]
+<</nobr>>
+
+:: north_forest_initial_31
+<<nobr>>
+<<speech "aldric">>Arrows, bandages, fresh blade oil and A spare riding cloak. Yours has been clinging oddly since your chest changed.<</speech>><br>
+<<speech "mc">>Thanks for noticing. Really.<</speech>><br>
+<<speech "aldric">>Don’t mistake observation for compliment.<</speech>><br>
+<<speech "mc">>Oh, I wouldn’t dare.<</speech>><br>
+[[Move Forth|north_forest_initial_32]]
+<</nobr>>
+
+:: north_forest_initial_32
+<<nobr>>
+<<speech "thalara">>You’ve grown into your thighs.<</speech>><br>
+<<speech "mc">>I… What?<</speech>><br>
+<<speech "thalara">>They were awkward three weeks ago. Now they sway like you mean it. You’ve found your walk.<</speech>><br>
+<<speech "mc">>I wasn’t aware I’d lost it.<</speech>><br>
+[[Move Forth|north_forest_initial_33]]
+<</nobr>>
+
+:: north_forest_initial_33
+<<nobr>>
+<<speech "thalara">>You didn’t lose it. It just… blossomed.<</speech>><br>
+<<speech "aldric">>Must we discuss thighs in wartime?<</speech>><br>
+<<speech "alinora">>It is Caelan’s war, Aldric. Every part of him or her is part of the battlefield now.<</speech>><br>
+<<speech "mc">>Are you saying my body is a weapon?<</speech>><br>
+[[Move Forth|north_forest_initial_34]]
+<</nobr>>
+
+:: north_forest_initial_34
+<<nobr>>
+<<speech "alinora">>I’m saying it’s yours. And everything that is yours must serve the realm.<</speech>><br>
+<<speech "aldric">>Even perfume and posture.<</speech>><br>
+<<speech "thalara">>Especially perfume and posture.<</speech>><br>
+<<speech "mc">>You two should write a training manual.<</speech>><br>
+[[Move Forth|north_forest_initial_35]]
+<</nobr>>
+
+:: north_forest_initial_35
+<<nobr>>
+<<speech "thalara">>Oh, I already have. Volume I: The Art of the Feminine Blade.<</speech>><br>
+<<speech "aldric">>Gods preserve us.<</speech>><br>
+<<speech "mc">>Any known monsters reported in the last moons?<</speech>><br>
+<<speech "aldric">>Bandit sightings confirmed. But there’s talk of a shapeshifter, or mimic. Some say a shadowform’s nesting.<</speech>><br>
+[[Move Forth|north_forest_initial_36]]
+<</nobr>>
+
+:: north_forest_initial_36
+<<nobr>>
+<<speech "thalara">>A changeling spirit was banished there a generation ago. It could’ve anchored.<</speech>><br>
+<<speech "mc">>Good. I’d rather face something magical than another moral peasant with a knife.<</speech>><br>
+<<speech "alinora">>You sound like a queen already.<</speech>><br>
+<<speech "mc">>You taught me how.<</speech>><br>
+[[Move Forth|north_forest_initial_37]]
+<</nobr>>
+
+:: north_forest_initial_37
+<<nobr>>
+<<speech "aldric">>Here’s your test, Caelan. Three rules: Keep your troops alive. Win without needing rescue and don’t let them see you doubt.<</speech>><br>
+<<speech "mc">>I’ve already broken that last one.<</speech>><br>
+<<speech "thalara">>No, you haven’t. Doubt is internal. What they see is resolve. The rest is your secret.<</speech>><br>
+<<speech "mc">>How did you fight your first war, Aldric?<</speech>><br>
+[[Move Forth|north_forest_initial_38]]
+<</nobr>>
+
+:: north_forest_initial_38
+<<nobr>>
+<<speech "aldric">>Without permission.<</speech>><br>
+<<speech "mc">>Did you win?<</speech>><br>
+<<speech "aldric">>No. But I survived. And surviving is how you earn the next chance to win.<</speech>><br>
+<<speech "mc">>You Thalara? What’s the first spell you used in battle?<</speech>><br>
+[[Move Forth|north_forest_initial_39]]
+<</nobr>>
+
+:: north_forest_initial_39
+<<nobr>>
+<<speech "thalara">>I melted a man’s face with a glare.<</speech>><br>
+<<speech "mc">>…Literally?<</speech>><br>
+<<speech "thalara">>Literally. But only after he called me ‘wench’ and grabbed my arse.<</speech>><br>
+<<speech "aldric">>Classic.<</speech>><br>
+[[Move Forth|north_forest_initial_40]]
+<</nobr>>
+
+:: north_forest_initial_40
+<<nobr>>
+<<speech "thalara">>Don’t hesitate to burn them if they see only your body. That’s your right now.<</speech>><br>
+<<speech "mc">>They will see it.<</speech>><br>
+<<speech "thalara">>Then blind them with it.<</speech>><br>
+<<speech "alinora">>You ride out at dawn. One last night here. Sleep. Eat. Think.<</speech>><br>
+[[Move Forth|north_forest_initial_41]]
+<</nobr>>
+
+:: north_forest_initial_41
+<<nobr>>
+<<speech "mc">>I don’t know if I can sleep.<</speech>><br>
+<<speech "alinora">>Then don’t. But rest your fears, at least. They’ll kill you faster than any blade.<</speech>><br>
+<<speech "mc">>Am I… what you hoped for?<</speech>><br>
+<<speech "alinora">>No.<</speech>><br>
+[[Move Forth|north_forest_initial_42]]
+<</nobr>>
+
+:: north_forest_initial_42
+<<nobr>>
+<<speech "mc">>...I see.<</speech>><br>
+<<speech "alinora">>You’re more than I hoped for. I wished for a prince. I received something greater. A future no one expected.<</speech>><br>
+<<speech "mc">>Then I won’t let you down.<</speech>><br>
+<<speech "alinora">>You already haven’t.<</speech>><br>
+[[Move Forth|north_forest_initial_43]]
+<</nobr>>
+
+
+:: north_forest_initial_43
+<<nobr>>
+<<speech "alinora">>This… was mine. When I was fifteen, newly betrothed. I wore it when I killed my first traitor.<</speech>><br>
+takes the silver ring reverently
+<<speech "mc">>It’s your bloodring…<</speech>><br>
+<<speech "alinora">>Now it’s yours. May it remind you, noble hands are still meant to draw blood when needed.<</speech>><br>
+<<speech "mc">>I’ll return it worn, not broken.<</speech>><br>
+[[Move Forth|north_forest_initial_44]]
+<</nobr>>
+
+:: north_forest_initial_44
+<<nobr>>
+<<speech "alinora">>I’d expect no less.<</speech>><br>
+<<speech "aldric">>You walk among soldiers now. You speak as one of them. Bleed as one of them. Die as one of them if you must but lead them first.<</speech>><br>
+<<speech "mc">>They’ll follow me. Not because I demand it but because I’ll earn it.<</speech>><br>
+<<speech "aldric">>Spoken like a commander.<</speech>><br>
+[[Move Forth|north_forest_initial_45]]
+<</nobr>>
+
+:: north_forest_initial_45
+<<nobr>>
+<<speech "thalara">>Spoken like a queen.<</speech>><br>
+<<speech "mc">>Is there anything else I should carry?<</speech>><br>
+<<speech "thalara">>Only this: the knowledge that your body is not weakness. It’s prophecy. A bridge between the old Velmoria and the next.<</speech>><br>
+<<speech "mc">>You’ve said that before. The ‘bridge.’<</speech>><br>
+[[Move Forth|north_forest_initial_46]]
+<</nobr>>
+
+:: north_forest_initial_46
+<<nobr>>
+<<speech "thalara">>Soon, others will walk across it. Some willingly. Some… with teeth bared. But you will lead either way.<</speech>><br>
+<<speech "alinora">>When the forest tries to undo you, remember who made you.<</speech>><br>
+<<speech "mc">>You did.<</speech>><br>
+<<speech "alinora">>No. You made yourself. I only gave you the chance.<</speech>><br>
+[[Move Forth|north_forest_initial_47]]
+<</nobr>>
+
+:: north_forest_initial_47
+<<nobr>>
+<<speech "mc">>Then I’ll become something worth remembering.<</speech>><br>
+<<speech "aldric">>Dawn breaks in six hours. Eat something hot. And if you cry, do it with your boots on.<</speech>><br>
+<<speech "mc">>Thanks for the poetry, Aldric.<</speech>><br>
+<<speech "thalara">>If you dream tonight, let it be of victory and silk.<</speech>><br>
+[[Move Forth|north_forest_initial_48]]
+<</nobr>>
+
+:: north_forest_initial_48
+<<nobr>>
+<<speech "alinora">>I’ll dream of you, Caelan. Of the child I raised and the heir you are becoming.<</speech>><br>
+<<speech "mc">>I’ll dream of firelight and future thrones.<</speech>><br>
+<<speech "alinora">>Ride out with steel. Return with legacy.<</speech>><br>
+<<speech "mc">>I will.<</speech>><br>
+<<set $currentObjectives = "Sleep and prepare for the journey to the North Forest. Meet Sir Aldric outside of the castle at dawn.">>
+<<set $currentArc["main_arc"] = 9>>
+[[Move Forth|mc_bed_chamber]]
+<</nobr>>
+
+
+
+:: north_forest_dawn
+<<nobr>>
+stepping forward, eyes scanning the troop formation
+<<speech "aldric">>The men are ready. Packhorses loaded. Scouts already charting the eastern ridge. We await your word, Highness.<</speech>><br>
+<<speech "mc">>Then let’s not waste daylight. I want us at the Northwood bend by dusk.<</speech>><br>
+<<speech "aldric">>...Is your armor fitted well enough? We’ve had trouble with saddle fit in past journeys. The... alterations to your form may affect..<</speech>><br>
+<<speech "mc">>I assure you, Sir Aldric, my cuirass isn’t the only thing that’s adapted.<</speech>><br>
+[[Move Forth|north_forest_dawn_1]]
+<</nobr>>
+
+:: north_forest_dawn_1
+<<nobr>>
+<<speech "aldric">>Of course. I meant no offense, my...<</speech>><br>
+<<speech "mc">>I know. You worry. That’s what you do.<</speech>><br>
+<<speech "soldier #1">>Does this mean we’ll have forest patrol and etiquette lessons, Your Highness?<</speech>><br>
+<<speech "mc">>Only if you start slouching in front of bandits.<</speech>><br>
+[[Move Forth|north_forest_dawn_2]]
+<</nobr>>
+
+:: north_forest_dawn_2
+<<nobr>>
+<<speech "scout captain maren">>We’ve mapped out three ambush points from the last raid reports. Griln’s camp may still be active… or worse, hollowed.<</speech>><br>
+<<speech "aldric">>No lone rides. No late scouting. And if anyone hears whispers that sound like someone they know ignore it. Changeling zone rules apply.<</speech>><br>
+<<speech "mc">>This isn’t just cleanup. We’re hunting what’s out there. The villagers have gone quiet, and we all know that means something has moved in.<</speech>><br>
+<<speech "aldric">>Aye. The forest smells wrong. Magic’s bled through too far this year.<</speech>><br>
+[[Move Forth|north_forest_dawn_3]]
+<</nobr>>
+
+:: north_forest_dawn_3
+<<nobr>>
+<<speech "mc">>This mission carries more than duty. It carries a message. Velmoria doesn’t cower. We do not forget our borders. And no twisted creature bandit, beast, or shadow will claim our woods without facing royal steel.<</speech>><br>
+<<speech "soldier #2">>For Velmoria!<</speech>><br>
+<<speech "soldier #3,4,5">>For Velmoria!<</speech>><br>
+<<speech "mc">>Did you always feel like your sword weighed more the day you carried others with you?<</speech>><br>
+<<speech "aldric">>Every time. But it never stopped me from lifting it.<</speech>><br>
+[[Move Forth|north_forest_dawn_4]]
+<</nobr>>
+
+:: north_forest_dawn_4
+<<nobr>>
+<<speech "mc">>Good. Because I need you beside me.<</speech>><br>
+<<speech "aldric">>Until my final breath.<</speech>><br>
+<<speech "scout captain maren">>Riders at the front ready, Highness. Signal when you’re ready to move.<</speech>><br>
+<<speech "mc">>Let’s ride.<</speech>><br>
+<<set $currentObjectives = "Investigate the North Forest.">>
+<<set $currentArc["main_arc"] = 10>>
+[[Visit North Forest|out_side]]
+<</nobr>>

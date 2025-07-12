@@ -190,7 +190,7 @@ Hollow Ridge trail.</p>
 <<speech "mc">>One monster down. A thousand more who think my curves make me weak.<</speech>><br>
 <<speech "mc">>They’ll learn the same lesson. Too late.<</speech>><br>
 <<set $murkkin_bandit_info = true>>
-[[Kill Murkkin Bandit|north_forest]]
+[[Kill Murkkin Bandit|murkkin_bandit_reward]]
 <<else>>
 <<speech "Vask" $murkkin_bandit_img>>Well well well... The little butterfly’s wings aren’t ready yet.<</speech>><br>
 <<speech "mc">>I... I’m not finished…<</speech>><br>
@@ -208,4 +208,53 @@ Hollow Ridge trail.</p>
 <<speech "mc">>They’ll never see me coming next time.<</speech>><br>
 [[Run|north_forest]]
 <</if>>
+<</nobr>>
+
+
+
+
+:: murkkin_bandit_reward
+<<nobr>>
+<div class="loot-header" style="text-align:center; font-size: 1.8em; font-weight: bold; margin-bottom: 0.5em;">
+✨ Spoils of Victory: Murkkin Bandit ✨
+</div>
+
+<div class="loot-description" style="font-style: italic; color: #bbb; margin-bottom: 1em;">
+The air stills as the last breath fades from the fallen beast, leaving behind the faint scent of ancient magic and something quietly precious among the remains. In this fragile silence, a new path unfolds before you.
+</div>
+
+<<set _storeKeys = Object.keys(setup.storeItems)>>
+<<set _shuffled = _storeKeys.sort(() => 0.5 - Math.random())>>
+<<set _rewardKeys = _shuffled.slice(0, 4)>>
+
+<b>You receive the following alchemical ingredients as loot:</b>
+<ul>
+<<for _key range _rewardKeys>>
+    <<set _data = setup.storeItems[_key]>>
+    <<set _amountToAdd = _data.min_amount * 20>>
+
+    <<if $userItems[_key] is undefined>>
+        <<set $userItems[_key] = {
+            name: _data.name,
+            amount: 0,
+            unit: _data.unit,
+            img: _data.img,
+            min_amount: _data.min_amount
+        }>>
+    <</if>>
+
+    <<set $userItems[_key].amount += _amountToAdd>>
+
+    <li>
+        <img @src="_data.img" style="width: 40px; vertical-align: middle; margin-right: 0.5em;">
+        <b><<=_data.name>></b> — +<<=_amountToAdd>> <<=_data.unit>>
+    </li>
+<</for>>
+</ul>
+
+
+<div style="margin-top: 1.5em; font-style: italic; text-align: center; color: #888;">
+In the calm after the storm, I stand remade — a body changed, a spirit sharpened, and a future written by my own hand.
+</div>
+[[Back to North Forest|north_forest]]
 <</nobr>>
