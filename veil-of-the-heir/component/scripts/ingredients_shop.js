@@ -3,7 +3,7 @@ setup.storeItems = {
 	// --
 	"moonpetal_extract": { 
 		name: "Moonpetal Extract", 
-		value: 8, 
+		value: 20, 
 		unit: "tsp", 
 		min_amount: 1,
 		img: "images/ingredients/moonpetal_extract.png",
@@ -33,7 +33,7 @@ setup.storeItems = {
 	// --
 	"starblossom_pollen": { 
 		name: "Starblossom Pollen", 
-		value: 5, 
+		value: 10, 
 		unit: "scoop", 
 		min_amount: 1,
 		img: "images/ingredients/starblossom_pollen.png",
@@ -63,7 +63,7 @@ setup.storeItems = {
 	// --
 	"dragonmoss_resin": { 
 		name: "Dragonmoss Resin", 
-		value: 5, 
+		value: 10, 
 		unit: "drop", 
 		min_amount: 1,
 		img: "images/ingredients/dragonmoss_resin.png",
@@ -73,7 +73,7 @@ setup.storeItems = {
 	// ---
 	"seraphmilk": { 
 		name: "Seraphmilk", 
-		value: 15, 
+		value: 40, 
 		unit: "ml", 
 		min_amount: 5,
 		img: "images/ingredients/seraphmilk.png",
@@ -93,7 +93,7 @@ setup.storeItems = {
 	// --
 	"ashfern_flakes": { 
 		name: "Ashfern Flakes", 
-		value: 4, 
+		value: 8, 
 		unit: "g", 
 		min_amount: 1,
 		img: "images/ingredients/ashfern_flakes.png",
@@ -123,7 +123,7 @@ setup.storeItems = {
 	// -
 	"nightshade_bloom": { 
 		name: "Nightshade Bloom", 
-		value: 3, 
+		value: 5, 
 		unit: "petal", 
 		min_amount: 1,
 		img: "images/ingredients/nightshade_bloom.png",
@@ -143,7 +143,7 @@ setup.storeItems = {
 	// -
 	"lilywhisper_nectar": { 
 		name: "Lilywhisper Nectar", 
-		value: 2, 
+		value: 4, 
 		unit: "ml", 
 		min_amount: 1,
 		img: "images/ingredients/lilywhisper_nectar.png",
@@ -153,7 +153,7 @@ setup.storeItems = {
 	// -
 	"vinesilk_essence": { 
 		name: "Vinesilk Essence", 
-		value: 2, 
+		value: 3, 
 		unit: "ml", 
 		min_amount: 1,
 		img: "images/ingredients/vinesilk_essence.png" ,
@@ -163,9 +163,9 @@ setup.storeItems = {
 	// --
 	"crimsonroot_dust": { 
 		name: "Crimsonroot Dust", 
-		value: 10, 
+		value: 25, 
 		unit: "g", 
-		min_amount: 1,
+		min_amount: 5,
 		img: "images/ingredients/crimsonroot_dust.png",
 		description: "Pulverized from the rare crimsonroot found along leyline crossings, this powder glows faintly with internal balance. Used to stabilize chest and core transformations, it enhances femininity subtly across the entire midsection while preventing magical overload.", 
 		effect: "Enhances overall femininity subtly and harmoniously across the midsection. Balances transformations. Stabilizes breast area. Prevents erratic growth or collapse during transformations."
@@ -173,7 +173,7 @@ setup.storeItems = {
 	// ---
 	"velvetgrove_essence": { 
 		name: "Velvetgrove Essence", 
-		value: 2, 
+		value: 10, 
 		unit: "tsp", 
 		min_amount: 1,
 		img: "images/ingredients/velvetgrove_essence.png",
@@ -183,7 +183,7 @@ setup.storeItems = {
 	// --
 	"frostleaf_crystals": {
 		name: "Frostleaf Crystals", 
-		value: 4, 
+		value: 10, 
 		unit: "tsp", 
 		min_amount: 1,
 		img: "images/ingredients/frostleaf_crystals.png",
@@ -193,7 +193,7 @@ setup.storeItems = {
 	// -
 	"eversilk_thread": { 
 		name: "Eversilk Thread", 
-		value: 3, 
+		value: 5, 
 		unit: "cm", 
 		min_amount: 1,
 		img: "images/ingredients/eversilk_thread.png",

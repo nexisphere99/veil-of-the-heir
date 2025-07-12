@@ -49,7 +49,7 @@
 
 :: mc_bed
 <<nobr>>
-<<set $user_stats.energy = 80>>
+<<set $user_stats.energy = 90>>
 <<set $alert_message = "">>
 <<if $currentArc["main_arc"] == 1>>
 <div id="gif_pop_up">

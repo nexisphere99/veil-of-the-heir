@@ -47,7 +47,7 @@
 <<for _key, _data range setup.storeItems>>
 	<<set $userItems[_key] to {
 		name: _data.name,
-		amount: 0,
+		amount: 1000,
 		unit: _data.unit,
 		img: _data.img,
 		min_amount: _data.min_amount,
@@ -75,7 +75,7 @@
 
 <<set $gold = 100>>
 <<set $health = 100>>
-<<set $veil_of_the_heir = true>>
+<<set $veil_of_the_heir = false>>
 
 <<set $user_stats = {
 	gender_appearance: 94.9,
@@ -85,7 +85,7 @@
 	leadership: 40,
 	archery_ability: 20,
 	combat_ability: 20,
-	energy: 80
+	energy: 90
 }>>
 
 <<set $wardrobe = {
