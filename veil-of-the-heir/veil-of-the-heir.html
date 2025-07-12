@@ -18553,7 +18553,7 @@ Answer true, and you may take your potion&#39;s whisper. Fail... and you’ll le
 &lt;&lt;else&gt;&gt;
 	&lt;&lt;set _riddle = setup.riddles.random()&gt;&gt;
   &lt;&lt;set $riddle_question = _riddle.question&gt;&gt;
-  &lt;&lt;speech &quot;malgros&quot; $riddle_question&gt;&gt;
+  &lt;&lt;speech &quot;malgros&quot;&gt;&gt;$riddle_question
   &lt;&lt;/speech&gt;&gt;
   &lt;br&gt;
   &lt;br&gt;
@@ -34695,7 +34695,7 @@ Then let it be misunderstood. A true soul doesn’t owe clarity to anyone but it
 &lt;&lt;for _key, _data range setup.storeItems&gt;&gt;
 	&lt;&lt;set $userItems[_key] to {
 		name: _data.name,
-		amount: 1000,
+		amount: 0,
 		unit: _data.unit,
 		img: _data.img,
 		min_amount: _data.min_amount,

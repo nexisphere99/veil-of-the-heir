@@ -47,7 +47,7 @@
 <<for _key, _data range setup.storeItems>>
 	<<set $userItems[_key] to {
 		name: _data.name,
-		amount: 1000,
+		amount: 0,
 		unit: _data.unit,
 		img: _data.img,
 		min_amount: _data.min_amount,

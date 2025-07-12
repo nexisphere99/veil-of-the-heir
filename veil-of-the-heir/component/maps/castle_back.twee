@@ -479,7 +479,7 @@ Answer true, and you may take your potion's whisper. Fail... and you’ll leave 
 <<else>>
 	<<set _riddle = setup.riddles.random()>>
   <<set $riddle_question = _riddle.question>>
-  <<speech "malgros" $riddle_question>>
+  <<speech "malgros">>$riddle_question
   <</speech>>
   <br>
   <br>
