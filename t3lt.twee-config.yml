@@ -1,0 +1,5 @@
+sugarcube-2:
+  macros:
+    speech:
+      name: speech
+      container: true

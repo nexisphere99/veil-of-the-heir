@@ -32,7 +32,7 @@ They're weak alone, but dangerous in packs.
 :: goblin_scrounger
 <<nobr>>
 <<set $goblin_scrounger_img = "north_forest/goblin_scrounger/goblin_scrounger.png">>
-I travel alone through the dusky woods on the Queen’s order to investigate missing livestock.
+We travel through the dusky woods on the Queen’s order to investigate missing livestock.
 The faint scent of smoke and rot leads me to an overgrown trail. 
 A snapping twig reveals a small, wiry figure hunched beneath a thorny bush.<br><br>
 

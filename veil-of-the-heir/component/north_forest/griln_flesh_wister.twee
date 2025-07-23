@@ -34,9 +34,6 @@ Caelan must choose to fight or use strategy.</p> */
 <<nobr>>
 <<set $griln_flesh_wister_img = "north_forest/griln_flesh_wister/griln_flesh_wister.png">>
 The northernmost reaches of Velmoria’s woods are cursed, warped by old battlefield alchemy. 
-Caelan is tracking the remnants of a raider pack and stumbles into an ancient, moss-choked war camp, 
-long overtaken by vines and silence. But something huge is breathing beneath the ferns. 
-A shadow lumbers up, grotesque and stitched like a failed experiment.
 
 <<speech "mc">>I know what you are. You were twisted by war alchemy. You don’t belong in this forest.<</speech>><br>
 <<speech "griln" $griln_flesh_wister_img>>And you don’t belong on a battlefield, girl-prince.<</speech>><br>
