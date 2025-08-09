@@ -354,11 +354,13 @@ window.changeGameSettings = function() {
 </style>
 <<nobr>><div id="memory-game-container">
   <h2>Memory Matching Game</h2>
+  <<if $veil_of_the_heir>>
   <div id="memory-game-controls">
     /* <button class="memory-game-button" onclick="initMemoryGame()">New Game</button> */
     /* <button class="memory-game-button" onclick="changeGameSettings()">Settings</button> */
     <button class="memory-game-button" onclick="revealAllCards()">Reveal All</button>
   </div>
+  <</if>>
   <div id="memory-progress-container">
     <div id="memory-progress-bar">0/0 Pairs</div>
   </div>

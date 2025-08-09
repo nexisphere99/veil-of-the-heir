@@ -2,6 +2,11 @@
 
 :: north_forest
 <<nobr>>
+<<if !$north_forest>>
+<<set $currentObjectives = "End of Current Story Arc. There maybe more NPC interactions in the North Forest.">>
+<<set $currentArc["main_arc"] = 11>>
+<<set $north_forest = true>>
+<</if>>
 <<set $locationImage = setup.ImagePath + 'north_forest/north_forest.png'>>
 <div style="position: relative; width: 100%; max-width: 700px; margin: 0 auto; aspect-ratio: 7 / 5;">
   <img src="images/north_forest/map/main.png" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" />

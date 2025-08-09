@@ -9310,11 +9310,13 @@ window.changeGameSettings = function() {
 &lt;/style&gt;
 &lt;&lt;nobr&gt;&gt;&lt;div id=&quot;memory-game-container&quot;&gt;
   &lt;h2&gt;Memory Matching Game&lt;/h2&gt;
+  &lt;&lt;if $veil_of_the_heir&gt;&gt;
   &lt;div id=&quot;memory-game-controls&quot;&gt;
     /* &lt;button class=&quot;memory-game-button&quot; onclick=&quot;initMemoryGame()&quot;&gt;New Game&lt;/button&gt; */
     /* &lt;button class=&quot;memory-game-button&quot; onclick=&quot;changeGameSettings()&quot;&gt;Settings&lt;/button&gt; */
     &lt;button class=&quot;memory-game-button&quot; onclick=&quot;revealAllCards()&quot;&gt;Reveal All&lt;/button&gt;
   &lt;/div&gt;
+  &lt;&lt;/if&gt;&gt;
   &lt;div id=&quot;memory-progress-container&quot;&gt;
     &lt;div id=&quot;memory-progress-bar&quot;&gt;0/0 Pairs&lt;/div&gt;
   &lt;/div&gt;
@@ -20470,6 +20472,11 @@ In the calm after the storm, I stand remade — a body changed, a spirit sharpen
 &lt;/div&gt;
 [[Back to North Forest|north_forest]]
 &lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="509" name="north_forest" tags="" position="1100,6350" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;if !$north_forest&gt;&gt;
+&lt;&lt;set $currentObjectives = &quot;End of Current Story Arc. There maybe more NPC interactions in the North Forest.&quot;&gt;&gt;
+&lt;&lt;set $currentArc[&quot;main_arc&quot;] = 11&gt;&gt;
+&lt;&lt;set $north_forest = true&gt;&gt;
+&lt;&lt;/if&gt;&gt;
 &lt;&lt;set $locationImage = setup.ImagePath + &#39;north_forest/north_forest.png&#39;&gt;&gt;
 &lt;div style=&quot;position: relative; width: 100%; max-width: 700px; margin: 0 auto; aspect-ratio: 7 / 5;&quot;&gt;
   &lt;img src=&quot;images/north_forest/map/main.png&quot; style=&quot;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&quot; /&gt;
