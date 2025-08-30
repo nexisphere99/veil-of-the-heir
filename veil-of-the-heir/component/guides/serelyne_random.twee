@@ -153,7 +153,7 @@ Then who am I, once you’ve finished forging me?
 <br>
 
 <<speech "serelyne">>
-Someone who survives every room she enters. And commands it by simply existing.
+Someone who survives every room she entered and commands it by simply existing.
 <</speech>>
 <br>
 <<elseif _i == 10>>
@@ -318,28 +318,45 @@ Then it’s time to let yourself evolve into the self you must be. One syllable 
 
 :: serelyne_session_1
 <<nobr>>
-The incense clung to the air like secrets rose, myrrh, and something deeper I couldn’t name. 
-The velvet of the chamber in east wing swallowed sound. Shadows stretched long from the candelabras, gilding the room in amber and scarlet.<br><br>
+The incense clung to the air like secrets rose, myrrh, and something deeper I couldn’t name.
+The velvet of the chamber in the east wing swallowed sound. Shadows stretched 
+long from the candelabras, gilding the room in amber and scarlet.
+<br><br>
+Lady Serelyne stood before me in her usual serenity, hands clasped, 
+posture unnervingly perfect, her silhouette sharp as a dagger sheathed in silk.
+<br><br>
+<<speech "serelyne">>Tell me first before you bare anything further what kind of queen do you seek to become?<</speech>><br>
 
-Lady Serelyne stood before me in her usual serenity, hands clasped, posture unnervingly perfect, her silhouette sharp as a dagger sheathed in silk.<br><br>
+She stepped closer, the flicker of firelight catching the edge of her iris like gold-leaf in motion.
 
-<<speech "serelyne">>Remove your cloak. The weight of it carries pride, and that is the first burden to go.<</speech>><br>
+<<speech "serelyne">>There are two paths that stand before you.<</speech>><br>
+<<speech "serelyne">>One leads to surrender. To learning how to receive, to ache, to obey. To become power through stillness, softness, silence.<</speech>><br>
+<<speech "serelyne">>The other dominance. To command by presence. To be desired, not taken. To shape others with voice and touch. To rule, not kneel.<</speech>><br>
 
-Her voice was quiet, but it rooted into my spine like an order from the gods. I hesitated.<br><br>
+She raised a single hand and gestured outward, as if presenting both before me.
 
-<<speech "serelyne">>You did not hesitate when marching into battle, did you?<</speech>><br>
+<<speech "serelyne">>Neither is easy. Both will reshape you. Choose with your soul, not your shame.<</speech>><br>
 
-My fingers found the clasp. I let the cloak fall from my shoulders. 
-It hit the floor with a weight I’d never noticed before. 
-She didn’t look at the garment she looked at me.<br><br>
-
-<<speech "serelyne">>Now the boots. With reverence. Not defiance.<</speech>><br>
-
-[[Move Forth|serelyne_session_1_1]]
+I stood silent. Breath held. The cloak still clasped at my throat. The firelight flickered between us like a challenge.
+<br><br>
+[[I choose surrender.|serelyne_session_1_1]]
+[[I choose to command.|serelyne_session_1.1_1]]
 <</nobr>>
 
 :: serelyne_session_1_1
 <<nobr>>
+I bowed my head. My voice was low.
+
+<<speech "mc">>I choose to surrender. Not out of weakness… but because I want to be reshaped.<</speech>><br>
+
+Lady Serelyne's smile was subtle, almost sad. She stepped forward, her hand rising not to touch, but to hover just above my chest.
+
+<<speech "serelyne">>Then I will unmake you with care and from the ash of your pride, something beautiful will grow.<</speech>><br>
+
+<<speech "serelyne">>Now… begin. Remove your cloak. The weight of it carries pride, and that is the first burden to go.<</speech>><br>
+
+<<speech "serelyne">>Now the boots. With reverence. Not defiance.<</speech>><br>
+
 I knelt, unstrapping each boot slowly, awkwardly aware of how my legs looked under the velvet scrutiny of the room. 
 As I placed them beside the cloak, she stepped forward, her heels clicking softly on the marble in a rhythm that made my heart skip.
 She circled me.<br><br>
@@ -597,7 +614,7 @@ Her voice darkened warm, commanding.<br><br>
 
 She stepped into my space.<br><br>
 
-<<speech "serelyne">>Instead, you will kneel. You will ache. And you will learn what it means to be filled, not fulfilled.<</speech>><br>
+<<speech "serelyne">>Instead, you will kneel. You will ache and you will learn what it means to be filled, not fulfilled.<</speech>><br>
 
 My stomach tightened. Her presence was absolute.<br><br>
 
@@ -618,7 +635,7 @@ I shivered. My voice barely surfaced.<br><br>
 
 Her smile was velvet and venom.<br><br>
 
-<<speech "serelyne">>This is your calling. You must learn to feel through surrender. And you will learn to please… as a woman must please.<</speech>><br>
+<<speech "serelyne">>This is your calling. You must learn to feel through surrender. You will learn to please… as a woman must please.<</speech>><br>
 
 [[Move Forth|serelyne_session_1_16]]
 
@@ -643,8 +660,7 @@ My breath hitched. A flush of something dark and heady rushed through me.<br><br
 <</nobr>>
 
 :: serelyne_session_1_17
-<<nobr>>
-She stepped away, her hand briefly brushing my chest.<br><br>
+/* She stepped away, her hand briefly brushing my chest.<br><br>
 
 <<speech "serelyne">>Torin waits in the his chamber. He has been given instructions. He will not hurt you unless you crave that pain. He will not force you unless you beg to be overpowered. But he will take what you offer… and in doing so, you will feel what it means to be taken.<</speech>><br>
 
@@ -652,14 +668,655 @@ I stayed silent hard, body trembling.<br><br>
 
 She moved to the door and opened it, light spilling into the shadowed chamber. She did not look at me when she spoke again.<br><br>
 
-<<speech "serelyne">>Go to him. Let this be your second act of relinquishment.<</speech>><br>
-<<set $currentObjectives = "Meet the thorin in his chamber">>
+<<speech "serelyne">>Go to him. Let this be your second act of relinquishment.<</speech>><br> */
+
+<<nobr>>
+
+She let the silence stretch, the weight of her instruction settling into my chest like a stone. Then:
+
+<<speech "serelyne">>You’ve taken the first step. You’ve begun to open. Now, you must be entered not just by a man, but by the truth of what you are becoming.<</speech>><br><br>
+
+She turned toward the far doorway.
+
+<<speech "serelyne">>There are two waiting to initiate you. Both trusted. Both chosen. One by flesh, the other by familiarity.<</speech>><br><br>
+
+<<speech "serelyne">>Torin your bodyguard. Strong. Patient. He will take you with the weight of iron and the grace of discipline. He will claim your body as his duty, and you will beg to be filled.<</speech>><br>
+
+<<speech "serelyne">>Or… Maera your handmaiden. Her mouth is softer than silk, and her tongue has already dreamt of your surrender. She will tame you with warmth. With insistence. She will own you with her fingers and lips, and you will melt for her.<</speech>><br>
+
+She stepped aside, her hands folding.
+
+<<speech "serelyne">>Choose, my little queen. Who shall guide you into your next lesson in relinquishment?<</speech>><br>
+<<set $currentObjectives = "Meet the thorin or Maera in their chambers">>
 <<set $currentArc["main_arc"] = 7>>
-I stood. My legs were weak, my breath unsteady but I obeyed. And as I crossed the threshold into the waiting dark, I knew something had shifted.
+I stood. My legs were weak, my breath unsteady but I obeyed. As I crossed the threshold into the waiting dark, I knew something had shifted.
 I was no longer the one who sought control.
 I was the one learning how to surrender.<br><br>
 <<set $user_stats.gender_Identity -= 4>>
 <<set $user_stats.dominance_level -= 4>>
+[[Leave Lady Serelyne Virellis|east_wing]] |<br><br>
+[[Leave Castle East Wing|castle_map_front_select]]
+<</nobr>>
+
+
+
+
+:: serelyne_session_1.1_1
+<<nobr>>
+I hesitated not out of fear, but consideration. Her words curled around the room, tempting, teasing, threaded with a deeper implication. Her eyes watched me with the precision of a sculptor before the first strike of chisel.
+
+<<speech "mc">>I want to command. Not obey.<</speech>><br>
+
+Her smile sharpened.
+
+<<speech "serelyne">>Then you must earn it. There are two kinds of queens, beloved: one who bows, and one who is bowed to. But either way, she is seen. She is craved. She is worshipped. The difference lies in whether her knees touch stone or others’ do.<</speech>><br>
+
+She stepped forward, her hand ghosting along my collarbone, and I didn’t flinch. Her voice lowered, silk-wrapped iron:
+
+<<speech "serelyne">>You came to me expecting to be stripped down and you will be. But not for their pleasure. For your power. For your truth.<</speech>><br>
+
+Her fingers found the clasp of my cloak.
+
+<<speech "serelyne">>Remove it. Not to surrender but to claim. To show me you can stand bared and unashamed. That you can wield exposure as a blade.<</speech>><br>
+[[Move Forth|serelyne_session_1.1_2]]
+
+<</nobr>>
+
+
+:: serelyne_session_1.1_2
+<<nobr>>
+I dropped the cloak from my shoulders, not slowly but deliberately. It hit the ground with a crack like a challenge. Her eyes glittered.
+
+<<speech "serelyne">>Now the boots. One at a time. Not in reverence but as declaration. Strip yourself of war, not to disarm but to transform.<</speech>><br>
+
+I obeyed, not as servant but as sovereign-in-the-making. Each movement was its own vow. When I stood barefoot, she nodded.
+
+<<speech "serelyne">>The belt. Your strength. Your weapon. Place it inside the chest but do not think of it as relinquishing. You are simply choosing new armament.<</speech>><br>
+
+The chest still glowed with that feminine magic, yes but now it welcomed me not as victim, but vessel of intent. I placed the belt within, and the chest sighed shut.
+
+<<speech "serelyne">>Good. Now… the ring. Your name.<</speech>><br>
+
+She stepped closer. Close enough I could see the way her pupils dilated, not with dominance, but hunger for something not yet shaped. Something I could choose to become.
+
+<<speech "serelyne">>You can cast it aside and wear my name… or you can reclaim your own. Shape it into something no man, no king, no bloodline has ever dared. Who will you be?<</speech>><br>
+[[Move Forth|serelyne_session_1.1_3]]
+
+<</nobr>>
+
+
+:: serelyne_session_1.1_3
+<<nobr>>
+I slid the signet off. Not out of shame but defiance. I dropped it into the chest, and it pulsed crimson and silver.
+
+<<speech "serelyne">>Look at me.<</speech>><br>
+
+I did. This time I held her gaze, my chin high. She circled me again, but no longer like a predator more like a priestess walking around a newly awakened deity.
+
+<<speech "serelyne">>Now undress. Not because I told you to. But because you choose to. Because the future you are stepping into cannot be worn over the past.<</speech>><br>
+
+I unbuttoned the tunic. This time, I didn't hesitate. Her breath slowed as I bared skin inch by inch, but her hands never reached for me. She didn't need to. I wasn’t for the taking I was to be offered. Deliberately and on my own terms.
+
+<<speech "serelyne">>You carry your posture like a sword. Good. We will not sheath it we will hone it.<</speech>><br>
+
+She moved in again, standing just behind me, the tips of her fingers brushing my shoulders, not in possession, but invocation.
+
+<<speech "serelyne">>You feel it, don’t you? The way this body wants to lead. It remembers command. But I will teach you to elevate. To not just rule by title but presence. Embodiment.<</speech>><br>
+[[Move Forth|serelyne_session_1.1_4]]
+
+<</nobr>>
+
+
+
+:: serelyne_session_1.1_4
+<<nobr>>
+Her hands pressed to my chest, steady, grounding not to restrain, but to charge. As though I were a sigil, and she the catalyst. She leaned in again, her voice velvet and low:
+
+<<speech "serelyne">>What do you feel now?<</speech>><br>
+
+<<speech "mc">>Power. Waiting. Under skin.<</speech>><br>
+
+<<speech "serelyne">>Good. You must learn to wield it without force. With presence. Seduction. A queen does not bark. She beckons and they crawl to her.<</speech>><br>
+
+She turned, stepping away to a tall mirror. One I had avoided looking into until now.
+
+<<speech "serelyne">>Sit. Watch. But do not flinch. If you are to become more, you must see exactly what you are now.<</speech>><br>
+[[Move Forth|serelyne_session_1.1_5]]
+
+<</nobr>>
+
+
+:: serelyne_session_1.1_5
+<<nobr>>
+I obeyed, again not because she told me to, but because I chose to see it. My reflection looked back half undressed, shoulders squared, eyes fierce but untested. There was strength. But not yet direction.
+
+<<speech "serelyne">>You see a prince. I see a sovereign waiting to be born. But you must temper your instincts. Pride must become magnetism. Hunger must become elegance. Command must become invitation.<</speech>><br>
+
+She stepped behind me, her hands at my temples, then trailing down my arms.
+
+<<speech "serelyne">>You are not a hammer. You are a throne. They will kneel before you because they want to. Not because they’re forced.<</speech>><br>
+
+I straightened. Her touch sparked heat through me, but I didn’t tremble. I met the gaze in the mirror again and something shifted.
+
+<<speech "serelyne">>Now stand. Spread your arms. Show me you understand that exposure is not weakness. It is a gift. It is your decision to give it.<</speech>><br>
+
+I rose. Arms out. My chest bare. My arousal stirred, but this time, it was not submission it was assertion. Lust wrapped around presence. She noticed.
+
+<<speech "serelyne">>Yes… that. That is the flame I saw flickering beneath your armor. We will coax it until it roars.<</speech>><br>
+
+She stepped close again, eyes level with mine.<br><br>
+[[Move Forth|serelyne_session_1.1_6]]
+
+<</nobr>>
+
+
+
+:: serelyne_session_1.1_6
+<<nobr>>
+<<speech "serelyne">>Now tell me what you desire. Not what you've been taught to want. But what you burn for.<</speech>><br>
+
+My voice came steady. Not loud. But certain.
+
+<<speech "mc">>To be worshipped. Not feared. To command without cruelty. To lead by wanting, not owning. To touch and be devoured. But always on my terms.<</speech>><br>
+
+Her lips parted. The ghost of a smile.
+
+<<speech "serelyne">>Then you will become a queen of fire. Not submission. Not yielding. But pleasure that rules. Passion that commands. The center they orbit. The flame they dare not approach without trembling.<</speech>><br>
+
+Her hand brushed my hip. Then down until it found the waistband of my undergarments.
+
+<<speech "serelyne">>May I? Not to disarm you. But to unveil what you will rule with.<</speech>><br><br>
+[[Move Forth|serelyne_session_1.1_7]]
+
+<</nobr>>
+
+
+
+:: serelyne_session_1.1_7
+<<nobr>>
+<<speech "mc">>Yes.<</speech>><br>
+
+She lowered the garment with ceremonial care. My cock stood half-stirred, but proud. She didn’t gawk. She didn't judge. She nodded.
+
+<<speech "serelyne">>This is not shameful. This is not base. This is sacred. Your arousal is not weakness. It is magnetism. Learn to wield it, and the world will kneel to your pleasure.<</speech>><br>
+
+She stepped back. Her gaze roamed over me appraising, yes, but no longer as judge. As oracle.
+
+<<speech "serelyne">>You are the flame. You are the lure. They will crave your attention, your approval. But they must earn it. You… must learn to make them beg.<</speech>><br>
+
+I nodded and for the first time, she bowed. Not deeply. But enough.
+
+Not because I had taken her power.
+
+Because I had found my own.
+
+The bow wasn’t for humility it was recognition. Her knees kissed the velvet floor, but her spine stayed straight, chin lifted even as her gaze dipped in acknowledgment. Not submission. Respect. Reverence. It landed in my chest like a crown placed, not seized.
+
+She rose in a fluid motion, never once breaking eye contact.<br><br>
+[[Move Forth|serelyne_session_1.1_8]]
+
+<</nobr>>
+
+
+:: serelyne_session_1.1_8
+<<nobr>>
+<<speech "serelyne">>That was not performance. That was prophecy. You see now why I did not take from you. You had nothing to surrender you had only to realize.<</speech>><br>
+
+Her fingers brushed my shoulder. They lingered.
+
+<<speech "serelyne">>Now come. Sit where I once did. On the altar’s edge. Let me serve your next step.<</speech>><br>
+
+She led me to the platform where the rune-marked chest still pulsed faintly. No longer a container for discarded identity it was now a vault. Holding the pieces I had shed. Not lost. Reserved. Beneath me, the stone was warm. The runes shifted as I sat.
+
+Lady Serelyne knelt again, this time beside the chest, opening a lower drawer I hadn’t seen before. Velvet-lined compartments revealed adornments not chains, not cuffs, but things of power: a torque for the throat, intricate rings with sunburst patterns, and a scepter, slender and dark.
+
+<<speech "serelyne">>Choose. Each symbolizes an aspect of what you will become. This is not theater. These are conduits.<</speech>><br>
+
+I reached for the torque first. Its weight was real, cold but humming, as if it wanted to mold itself to me. I placed it around my neck, and as the clasp clicked shut, something pulsed down my spine a quiet surge of gravity. Presence.
+
+Then I touched the ring. The metal warmed instantly at my skin, and I slid it onto my forefinger. The moment it settled, Lady Serelyne’s breath caught softly. She felt it too. I was growing into more than flesh. I was becoming icon.
+
+She stood, no longer circling, no longer guiding standing beside me now, as one who follows.
+
+<<speech "serelyne">>You will need one to serve you first. A body to test your presence against. Someone to feel your will, and reflect it back in moans and trembling flesh.<</speech>><br>
+
+She turned slightly, eyes gleaming in the candlelight.<br><br>
+[[Move Forth|serelyne_session_1.1_9]]
+
+<</nobr>>
+
+
+
+:: serelyne_session_1.1_9
+<<nobr>>
+<<speech "serelyne">>There are two prepared. Both loyal. Both eager.<</speech>><br>
+<<speech "serelyne">>Torin your protector. Strong, silent. He will endure anything, but only if you command it. He kneels easily, but loves fiercely.<</speech>><br>
+
+<<speech "serelyne">>Maera your handmaiden. Clever, perceptive. She’s tasted the edge of your power already and craves the full weight of it. She will whisper her surrender in shivers and slick thighs.<</speech>><br>
+
+She lifted her hand, gesturing to the far velvet-draped door.
+
+<<speech "serelyne">>So. Tell me, my princess. Whom will you mark first with your rule?<</speech>><br><br>
+
+[[Summon Torin.|serelyne_dominant_torin_session_1]]
+[[Summon Maera.|serelyne_dominant_maera_session_1]]
+<</nobr>>
+
+:: serelyne_dominant_torin_session_1
+<<nobr>>
+<<speech "serelyne">>Torin. Enter.<</speech>><br>
+
+He stepped through the threshold with the grace of a man always prepared for war tall, shoulders broad beneath the loose linen shirt clinging to sweat-slick muscle. His eyes met mine briefly, then dipped. Not fully bowed but deferent.
+
+I studied him. He did not quake. He did not smirk. There was strength but also readiness. Not challenge. Invitation.
+
+I stayed seated on the altar. Let him come to me.
+
+He crossed the velvet-touched stone floor with careful reverence, then knelt without needing to be told. His fists pressed to the floor before his knees. His head bowed, neck bared.
+
+<<speech "mc">>Look at me.<</speech>><br>
+
+His eyes rose. Steady. Blue as storm-washed skies.
+
+<<speech "serelyne">>He is yours for this rite. He will serve not because he must but because he longs to. He will not resist, unless you wish him to. He will not act, unless commanded. His will is yours to awaken.<</speech>><br>
+
+I stood.
+
+Torin did not move. But his breathing shifted. A hint faster.
+
+I stepped closer, my bare feet against the marble. My shadow fell over him like a mantle. I could feel the tension in his body not fear, not arrogance. A readiness to obey. A hunger to be claimed.
+
+I spoke softly, letting the resonance of the torque shape my tone.<br><br>
+[[Move Forth|serelyne_dominant_torin_session_1_1]]
+<</nobr>>
+
+
+
+:: serelyne_dominant_torin_session_1_1
+<<nobr>>
+<<speech "mc">>You will serve me tonight. Not as protector. Not as soldier. But as flesh. As pleasure. As offering.<</speech>><br>
+
+His voice was hoarse, but clear.
+
+<<speech "torin">>Yes… my princess.<</speech>><br>
+
+The words struck low in my gut. Not for what they meant but for what they evoked. His submission wasn’t broken. It was chosen and it was beautiful.
+
+Lady Serelyne stepped back now, her role complete.
+
+<<speech "serelyne">>Then I leave you to your claiming. Choose what part of him you wish to explore. Let him show you what it means to be served and let your desires shape his duty.<</speech>><br>
+
+She vanished behind the curtain, the last glimpse of her silhouette like a candlewick’s last glow before a deeper dark.
+
+Torin still knelt. I circled him once, slow. He didn’t track me with his eyes. He kept them forward, face neutral but jaw tense.
+
+I stopped behind him. My hand reached out, fingers curling through the thick fall of his hair. Gently, I tilted his head back. Not roughly deliberate.
+
+<<speech "mc">>Open your mouth.<</speech>><br>
+
+He obeyed. No hesitation.<br><br>
+[[Move Forth|serelyne_dominant_torin_session_1_2]]
+<</nobr>>
+
+
+:: serelyne_dominant_torin_session_1_2
+<<nobr>>
+I stepped around in front of him, letting him look up at my arousal. My cock was already full, heavy, throbbing with the sheer weight of presence. Not lust command.
+
+I didn’t need to ask if he was ready. His breath, his eyes, the way his shoulders subtly arched forward he was aching to serve.
+
+<<speech "mc">>Then show me devotion.<</speech>><br>
+
+His lips closed around me with reverent pressure, no fumbling, just wet heat and rhythm. He began slow, each pass of his tongue measured, meant to honor, not just satisfy. I exhaled, a sound escaping my throat that was half growl, half pleasure-laced sigh.
+
+He hollowed his cheeks, took me deeper, and I let my hand rest atop his head not to push, but to anoint. His throat flexed around the head, and I moaned low:
+
+<<speech "mc">>Nnnnh… yes… like that. Take it deeper, Torin.<</speech>><br>
+
+He did. Inch by inch, he learned me. Adapted. Became conduit. The heat of his mouth was addicting. Wet, needy gulps sounded as I moved my hips just slightly, asserting a slow, grinding thrust against his face. I could feel the control in every muscle of my body not explosive, not frantic. Focused. Measured. Divine.
+
+<<speech "mc">>Don’t stop. You’ll not spill until I command it. But you will take every drop I choose to give.<</speech>><br>
+
+He groaned around my length, and the vibration sent a tremor through my thighs.
+
+But I didn’t cum. I didn’t allow it. I wasn’t there for release I was there for rule.
+
+I pulled back from his lips with a slick pop, and his mouth hung open, breath ragged, lips glistening with saliva and reverence. He hadn’t touched himself once. He hadn’t needed to. His cock strained visibly beneath his trousers, soaked at the tip.
+
+<<speech "mc">>Now strip. I want to see everything I command.<</speech>><br><br>
+[[Move Forth|serelyne_dominant_torin_session_1_3]]
+<</nobr>>
+
+:: serelyne_dominant_torin_session_1_3
+<<nobr>>
+He rose to his knees, undid his shirt, then his pants, casting them aside in practiced motions. His body was carved muscle, scarred and golden. But it was the way he offered it not puffed or preened but bare, vulnerable, mine that made it beautiful.
+
+<<speech "mc">>On the altar. Hands and knees.<</speech>><br>
+
+He obeyed. Silent. Shoulders squared.
+
+I stepped behind him, one hand dragging along his back, down to his hips. I traced the curve of his ass, watching him tense and then relax again, his breath catching as I kneaded a firm palm across the muscle.
+
+<<speech "mc">>You want me to use you, don’t you?<</speech>><br>
+
+<<speech "torin">>Yes, my princess. Please… let me serve your pleasure.<</speech>><br>
+
+My fingers found the cleft of him, brushing the sensitive skin, and his whole body shuddered. I didn’t need to rush. I was sovereign. I could savor.
+
+<<speech "mc">>I will mark you with my voice. With my body and when you walk tomorrow, every step will remind you of this night.<</speech>><br>
+
+He groaned, arching back, offering more. But I didn’t take him yet.<br><br>
+
+[[Move Forth|serelyne_dominant_torin_session_1_4]]
+<</nobr>>
+
+:: serelyne_dominant_torin_session_1_4
+<<nobr>>
+I stepped away.
+
+Let him ache.
+
+Because I wasn’t here to sate. I was here to teach what it means to be devoured by a princess.
+
+Torin stayed still on the altar, breath slow and audible, every inch of him exposed, tension humming just beneath skin. The runes beneath his knees had shifted they no longer pulsed with the magic of surrender, but with the heat of offering. Of holy submission. Not taken earned.
+
+I let the moment stretch. Let silence become pressure. Time itself bowed to me as I watched him. My fingers returned to his lower back, tracing down until the tips found the cleft between his cheeks again slick with oil Serelyne had left out earlier, as if she’d known the rhythm I’d need.
+
+<<speech "mc">>Breathe for me, Torin.<</speech>><br>
+
+He did. One long, shuddering inhale that flared his ribs wide, then fell into a trembling exhale that made his hips sink slightly lower, exposing more of his entrance.
+
+<<speech "mc">>You're open for your princess now. Not because you must. Because you crave to be used.<</speech>><br>
+
+<<speech "torin">>Y–yes… please… take me.<</speech>><br><br>
+[[Move Forth|serelyne_dominant_torin_session_1_5]]
+<</nobr>>
+
+
+:: serelyne_dominant_torin_session_1_5
+<<nobr>>
+I smiled.
+
+I didn’t push inside yet. First, I pressed two fingers between his cheeks and massaged around his hole in slow, deliberate circles. The slick heat of his skin trembled beneath my touch.
+
+When I pressed in the tip of my index, he gasped. Not in pain. In relief.
+
+<<speech "mc">>Shhh… that’s it. Let me shape you.<</speech>><br>
+
+I worked the finger deeper, twisting slightly, then adding another, stretching him slowly. My hand rested on his lower back, keeping him still not restrained, but centered. He rocked backward just a touch, needy. His cock hung heavy and untouched beneath him, already leaking a small puddle onto the altar.
+
+<<speech "torin">>Nnnh… fuck…<</speech>><br>
+
+<<speech "mc">>Language, soldier.<</speech>><br>
+
+He clenched, swallowing the moan that followed. I pulled my fingers out slowly, letting them trail down with teasing slowness.
+
+<<speech "mc">>I’m not here to break you. I'm here to own you.<</speech>><br><br>
+[[Move Forth|serelyne_dominant_torin_session_1_6]]
+<</nobr>>
+
+
+
+:: serelyne_dominant_torin_session_1_6
+<<nobr>>
+I aligned myself behind him, one hand spreading his ass, the other guiding the head of my cock to his slick, waiting entrance.
+
+<<speech "mc">>Say it. Tell me whose you are.<</speech>><br>
+
+<<speech "torin">>Yours, my princess. All of me… is yours.<</speech>><br>
+
+I pushed in. Slowly.
+
+His body gave way with a low, trembling whine, the head popping past his ring with a soft, wet sound shlk his hands curled into fists on the altar. But he didn’t pull away. He pressed back.
+
+<<speech "torin">>Aaaaah… ah gods…<</speech>><br>
+
+I didn’t stop until I was buried to the base.
+
+<<speech "mc">>Good. That’s what it means to be claimed.<</speech>><br><br>
+
+[[Move Forth|serelyne_dominant_torin_session_1_7]]
+<</nobr>>
+
+
+:: serelyne_dominant_torin_session_1_7
+<<nobr>>
+I pulled out a little, then drove back in, hips slapping against the soft curve of his ass smk! smk! smk! each thrust controlled, powerful, timed to the rhythm of his breath.
+
+He moaned with every stroke, his mouth open, drool wetting the altar beneath him.
+
+<<speech "torin">>Mmnnh… please… please…<</speech>><br>
+
+<<speech "mc">>Please what?<</speech>><br>
+
+<<speech "torin">>More… don’t stop… make me yours… please, use me.<</speech>><br>
+
+I leaned over him, chest brushing his back, lips near his ear.
+
+<<speech "mc">>I already have, Torin. You’re not a man tonight. You’re mine.<</speech>><br><br>
+
+[[Move Forth|serelyne_dominant_torin_session_1_8]]
+<</nobr>>
+
+:: serelyne_dominant_torin_session_1_8
+<<nobr>>
+He whimpered nnnhhh! as I pounded into him harder now, faster, grinding my hips to keep my cock pressed deep as he tightened around it, his ass gripping me greedily.
+
+His cock twitched, untouched, precum pouring freely. He was shaking beneath me, unable to steady himself.
+
+<<speech "mc">>Do you feel this? Every inch of you stretched, filled? This is devotion. This is power.<</speech>><br>
+
+He could barely answer, his throat choked on sound Hhhhnnn… ahhh, yesss… yes!
+
+I reached beneath him, hand wrapping around his cock.
+
+<<speech "mc">>You don’t cum until I give it. You hold it. You ache for it. Because this release belongs to me.<</speech>><br>
+
+He sobbed through a whimper and nodded, his body spasming as I drove into him, the sounds growing wetter schlk, schlk, schlk and louder.
+
+I took my time. His body was a throne to ride, not a battlefield to conquer. My strokes deepened, then slowed, grinding into him in slow circles that made his legs shake.
+
+<<speech "torin">>Nnn… nngh qu…princess…<</speech>><br>
+
+<<speech "mc">>That’s it. Say it again.<</speech>><br><br>
+
+[[Move Forth|serelyne_dominant_torin_session_1_9]]
+<</nobr>>
+
+:: serelyne_dominant_torin_session_1_9
+<<nobr>>
+<<speech "torin">>Princess. My princess… please… please let me…<</speech>><br>
+
+<<speech "mc">>You want to cum for me?<</speech>><br>
+
+<<speech "torin">>Yes… I need it… I I'm begging you, please…<</speech>><br>
+
+I held him down with one hand and kept thrusting shallow, grinding strokes that pressed right into the soft bundle of nerves inside him. His whole body twitched like a harpstring plucked again and again.
+
+<<speech "mc">>Then cum. Now. Show me your obedience.<</speech>><br><br>
+
+
+[[Move Forth|serelyne_dominant_torin_session_1_10]]
+<</nobr>>
+
+:: serelyne_dominant_torin_session_1_10
+<<nobr>>
+He did hnnnnAAHH! spilling across the altar in thick, helpless pulses, his whole body convulsing beneath me. I kept fucking him through it, milking every last tremble.
+
+And then I came. Deep, buried inside, holding his hips tight as I groaned aaahhh...hhnn… yes… yes.
+
+The heat of it spilled into him, filling him with my seed, marking him not as a hole used, but a vessel blessed.
+
+I stayed inside a moment longer, hand stroking down his spine.
+
+<<speech "mc">>That was your initiation. From now on, you serve this body. This voice. This throne and you do not forget it.<</speech>><br>
+
+He didn’t speak only nodded, forehead pressed to the altar, lips parted, breath ragged and full of devotion.
+
+The chamber was silent again, thick with the scent of sweat, sex, and sacredness.
+
+Lady Serelyne stepped from behind the curtain, robes pristine, eyes gleaming.
+
+<<speech "serelyne">>You claimed him well. You did not break him. You forged him and yourself.<</speech>><br>
+
+I met her gaze. Strong. Poised.
+
+<<speech "mc">>He’s not the last, is he?<</speech>><br>
+
+She smiled.
+
+<<speech "serelyne">>No, my princess. He was only the beginning.<</speech>><br>
+<<set $user_stats.gender_Identity += 4>>
+<<set $user_stats.dominance_level += 4>>
+<<set $currentObjectives = "Meet with Alinora, Aldric, and Thalara to discuss the North forest mission. Council Chamber">>
+<<set $currentArc["main_arc"] = 8>>
+[[Leave Lady Serelyne Virellis|east_wing]] |<br><br>
+[[Leave Castle East Wing|castle_map_front_select]]
+<</nobr>>
+
+
+
+:: serelyne_dominant_maera_session_1
+<<nobr>>
+
+Serelyne’s tone turned velvet-dark:
+
+<<speech "serelyne">>Maera. Enter.<</speech>><br>
+
+The velvet parted. Maera stepped in barefoot, hair bound back in a long braid, a thin shift clinging to her like mist. Her breasts moved softly beneath it, hips swaying with subtle grace. She didn’t look up only approached with sure, measured steps, lowering herself into a kneel before me.
+
+Her hands folded in her lap. Her posture was that of one awaiting a command, but her breath gave her away. Fast. Excited.
+
+<<speech "serelyne">>She has seen your hunger. Heard it in your voice. Tonight, she will feed it.<</speech>><br>
+
+Serelyne bowed and withdrew, her role complete.
+
+I remained seated on the altar, my legs spread slightly, robe loose around my shoulders, the torque heavy around my neck. Maera’s eyes flicked briefly to my cock already beginning to harden beneath the fabric and then to my face, lips parted in silent question.
+
+<<speech "mc">>You may look. You may worship. You will do nothing unless I allow it.<</speech>><br>
+
+<<speech "maera">>Yes, my princess.<</speech>><br><br>
+
+[[Move Forth|serelyne_dominant_maera_session_1_1]]
+<</nobr>>
+
+
+:: serelyne_dominant_maera_session_1_1
+<<nobr>>
+She crawled forward on hands and knees, bowing low between my thighs. Her breath ghosted over the front of my robe. I loosened it further, letting it fall aside my cock semi-hard, resting against my thigh. Her eyes were wide, reverent.
+
+She didn’t reach for it. She waited.
+
+<<speech "mc">>Take me in your mouth. Slowly. You will savor this. You will make me feel as a princess should.<</speech>><br>
+
+Her lips parted, and she exhaled softly fuuuuhhh before leaning in, pressing a kiss to the base. Then another, higher. Her tongue flicked out, licking a stripe along the underside, slow and wet.
+
+She moaned as she took the tip between her lips.
+
+<<speech "maera">>Mmmmhh…<</speech>><br>
+
+Her head dipped glk then rose again, tongue swirling. She sucked me into her mouth with reverent rhythm, letting her saliva coat every inch. I leaned back on my hands, spreading my thighs wider.
+
+<<speech "mc">>Good girl… yes. Worship your princess properly…<</speech>><br>
+
+She moaned again nnnhhhmmff and began bobbing slowly, taking more with each stroke. Her braid swayed behind her, her hands resting on my knees for support. The heat of her mouth was divine, soft and wet, her throat tensing beautifully each time she sank lower.
+
+I didn’t thrust. I didn’t need to. She worked herself down, inch by inch, until her nose brushed my skin. I could feel her swallowing, the contraction of her throat tight and trembling.
+
+<<speech "mc">>You love this, don’t you? Having your mouth used for my pleasure.<</speech>><br>
+
+She whimpered around me mmnnh! and nodded, still stuffed full.<br><br>
+
+[[Move Forth|serelyne_dominant_maera_session_1_2]]
+<</nobr>>
+
+:: serelyne_dominant_maera_session_1_2
+<<nobr>>
+I stroked her cheek, pushing a lock of hair from her temple, watching her face as she took me deep again, tongue writhing, spit dripping down her chin.
+
+<<speech "mc">>Touch yourself while you serve. Let me hear how wet you are just from tasting me.<</speech>><br>
+
+Her hand slid under her shift. Her hips twitched. She moaned vibrating around my cock and the sound tightened something in my spine.
+
+I groaned ahhhhhh… hnnhh… tilting my hips slightly, just enough to push deeper. She didn’t resist. Her lips kissed the base, throat swallowing.
+
+I let her work. Her body rocked with each bob. Her arousal was audible slick wet sounds beneath her shift as she rubbed herself faster, driven by the taste of me.
+
+<<speech "mc">>You’re going to make me cum down your throat, Maera. You’ll swallow every drop. You’ll thank me for it.<</speech>><br>
+
+<<speech "maera">>Mmmhhhhh!<</speech>><br>
+
+I gripped her braid gently, guiding her rhythm not forcing, just holding her steady. My climax built slowly, molten and thick. I growled through clenched teeth nnnhh… gods, yes… keep going… just like that…
+
+And then mmmHHNNNNN! I came, pulsing hard against her tongue.
+
+Maera whimpered in pleasure as she swallowed each hot spurt, lips sealed tight, throat working. She kept her mouth on me until I twitched once more, then pulled back slowly, licking the tip one last time.
+
+She opened her mouth, showed me her tongue clean.
+
+<<speech "maera">>Thank you, my princess…<</speech>><br><br>
+
+
+[[Move Forth|serelyne_dominant_maera_session_1_3]]
+<</nobr>>
+
+
+:: serelyne_dominant_maera_session_1_3
+<<nobr>>
+<<speech "mc">>You’ve pleased me. But you’re not finished yet.<</speech>><br>
+
+I stood. Her eyes lifted, glowing with hope. I let the robe fall from my shoulders completely, standing above her naked, aroused again already.
+
+<<speech "mc">>Lie back. On the velvet. Legs spread. Show me the heat you tried to hide all this time.<</speech>><br>
+
+She obeyed, reclining slowly on the floor, dress hiked to her waist, thighs parting wide. Her pussy was soaked, folds flushed and glistening, clit stiff and twitching.
+
+<<speech "mc">>You will cum from my voice. From my fingers. Not yours. Keep your hands on your breasts, and do not move them until I tell you.<</speech>><br>
+
+She whimpered. Her hands slid to her chest, cupping herself.
+
+I knelt between her legs, running my fingers lightly through her slick folds just barely touching drawing circles around her clit, not yet pressing in.
+
+<<speech "maera">>Nnnnnhh please… please touch me…<</speech>><br><br>
+
+[[Move Forth|serelyne_dominant_maera_session_1_4]]
+<</nobr>>
+
+
+:: serelyne_dominant_maera_session_1_4
+<<nobr>>
+<<speech "mc">>Beg prettier.<</speech>><br>
+
+<<speech "maera">>My princess, I need it. I ache. Let me cum for you. Let me soak your hand. Please, please…<</speech>><br>
+
+I pushed two fingers inside her with a sudden, slow thrust. She arched, gasping AHHhh yes! as I curled them forward, seeking that perfect, trembling spot.
+
+I found it.
+
+And worked it.
+
+My thumb pressed her clit as I pumped inside her. Her legs shook. Her moans rose louder, more desperate, her hips rocking upward helplessly.
+
+<<speech "maera">>I oh gods I'm going to ahhh yes yes princSSS AHHNNHH!<</speech>><br>
+
+She came violently soaking my hand, thighs twitching, mouth open in a cry of pleasure. I kept rubbing, drawing it out, watching her unravel into soft, panting whimpers.
+
+When her body stilled, I leaned down, kissed her inner thigh.
+
+<<speech "mc">>That was my gift to you. You’ll earn more. But only if you serve me again tomorrow.<</speech>><br>
+
+She nodded, breathless, still twitching.
+
+Serelyne stepped from the shadows, her eyes full of approval.
+
+<<speech "serelyne">>You ruled through pleasurend amade her a vessel for your rise. The throne has tasted your power and it wants more.<</speech>><br>
+
+<<speech "mc">>Then let them come. One by one. They’ll kneel. They’ll serve.<</speech>><br><br>
+
+<<set $user_stats.gender_Identity += 4>>
+<<set $user_stats.dominance_level += 4>>
+<<set $currentObjectives = "Meet with Alinora, Aldric, and Thalara to discuss the North forest mission. Council Chamber">>
+<<set $currentArc["main_arc"] = 8>>
 [[Leave Lady Serelyne Virellis|east_wing]] |<br><br>
 [[Leave Castle East Wing|castle_map_front_select]]
 <</nobr>>

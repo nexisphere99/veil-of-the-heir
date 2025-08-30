@@ -321,6 +321,9 @@ Don’t tempt me, Caelan… unless you mean to follow through.
 <<elseif $curr_chest > 7 && !$maera_sex_6>>
 [[Have Conversation with Maera|maera_sex_6]] | <br><br>
 <</if>>
+<<if $currentArc["main_arc"] >= 7 && !$maera_sex_sub_1>>
+    [[Ask about the session|maera_sex_sub_1]] |<br><br>
+<</if>>
 [[Leave Maera|maera_chamber_map_select]] |<br><br>
 [[Leave Maera's Chamber|bed_chamber_girl]] |<br><br>
 [[Leave Maid Room Corridor|castle_map_back_select]]
@@ -1092,7 +1095,7 @@ Maera looks up as I push the door open, the hinges creaking under the weight of 
 I close the door behind me, water dripping from my cloak.<br>
 <<speech "mc">>If I’m a thief, I’m here to steal you.<</speech>><br>
 
-She smirks, but her gaze lingers—my tunic clings differently now.<br>
+She smirks, but her gaze lingers my tunic clings differently now.<br>
 <<speech "maera">>You’re… smaller.<</speech>><br>
 
 I laugh nervously, unfastening the wet fabric.<br>
@@ -1103,7 +1106,7 @@ I laugh nervously, unfastening the wet fabric.<br>
 
 :: maera_sex_5_1
 <<nobr>>
-Beneath the tunic, my chest is bare—two subtle mounds pressing outward, flushed and firm.<br>
+Beneath the tunic, my chest is bare two subtle mounds pressing outward, flushed and firm.<br>
 <<speech "maera">>You’re really growing…<</speech>><br>
 
 She stands, stepping close, her fingers brushing the edge of one breast.<br>
@@ -1129,7 +1132,7 @@ A gasp escapes my lips, my back arching instinctively.<br>
 She chuckles darkly.<br>
 <<speech "maera">>You moaned like a maiden just now.<</speech>><br>
 
-Her hand trails lower, curling around my shaft—smaller now, softer, even when stiff.<br>
+Her hand trails lower, curling around my shaft smaller now, softer, even when stiff.<br>
 <<speech "maera">>This used to throb in my hand. Now it just… twitches.<</speech>><br>
 
 [[Move Forth|maera_sex_5_3]]
@@ -1146,7 +1149,7 @@ She kisses me, rough and hungry, before pushing me onto the bed.<br>
 She straddles me, grinding slowly against my changed form.<br>
 <<speech "maera">>Do you feel that? It’s not the same. You don’t press into me like you used to.<</speech>><br>
 
-I gasp as she rocks her hips forward—my shaft barely parting her folds.<br>
+I gasp as she rocks her hips forward my shaft barely parting her folds.<br>
 <<speech "mc">>I’m still inside you…<</speech>><br>
 
 [[Move Forth|maera_sex_5_4]]
@@ -1163,7 +1166,7 @@ I grip her hips, trying to thrust, but the depth just isn’t there.<br>
 She leans forward, one breast brushing my lips.<br>
 <<speech "maera">>Then suck. If you can’t fill me, tease me.<</speech>><br>
 
-I wrap my lips around her nipple, sucking gently at first, then with growing hunger. She moans—but something is missing.<br>
+I wrap my lips around her nipple, sucking gently at first, then with growing hunger. She moans but something is missing.<br>
 <<speech "maera">>You feel like a lover in a new skin.<</speech>><br>
 
 [[Move Forth|maera_sex_5_5]]
@@ -1177,11 +1180,11 @@ I try harder, fingers moving between her legs, tongue flicking and pressing.<br>
 She gasps, but there’s no release.<br>
 <<speech "maera">>I need more… I don’t know from who.<</speech>><br>
 
-Her hips stutter—frustrated, she pulls off, breath catching.<br>
-<<speech "maera">>It’s not you—it’s not working.<</speech>><br>
+Her hips stutter frustrated, she pulls off, breath catching.<br>
+<<speech "maera">>It’s not you it’s not working.<</speech>><br>
 
 I sit up, shame burning in my chest.<br>
-<<speech "mc">>I’m sorry. I—I’m trying to hold onto what I am.<</speech>><br>
+<<speech "mc">>I’m sorry. I I’m trying to hold onto what I am.<</speech>><br>
 
 [[Move Forth|maera_sex_5_6]]
 <</nobr>>
@@ -1191,7 +1194,7 @@ I sit up, shame burning in my chest.<br>
 She sits beside me, brushing her curls away.<br>
 <<speech "maera">>It’s not just the size. You move… differently.<</speech>><br>
 
-I study her—face flushed, thighs slick, but unfulfilled.<br>
+I study her face flushed, thighs slick, but unfulfilled.<br>
 <<speech "mc">>I’ll pleasure you another way.<</speech>><br>
 
 I lower myself between her legs, kissing down her stomach.<br>
@@ -1211,7 +1214,7 @@ She sighs, fingers stroking my hair as I kiss her folds.<br>
 My tongue moves, learning her anew. She moans, body shifting, but her eyes remain closed.<br>
 <<speech "maera">>Keep going. Don’t stop.<</speech>><br>
 
-I press and flick, circling—her breathing quickens but holds back.<br>
+I press and flick, circling her breathing quickens but holds back.<br>
 <<speech "maera">>It’s good… but…<</speech>><br>
 
 I lift my head, face damp with her.<br>
@@ -1271,7 +1274,7 @@ She nods, though her voice sounds distant.<br>
 :: maera_sex_6
 <<nobr>>
 <<set $maera_sex_6 = true>>
-I stepped into Maera’s chamber, the silk robe clinging to the curve of my hips. Her gaze met mine—curious, hungry, unsure.<br><br>
+I stepped into Maera’s chamber, the silk robe clinging to the curve of my hips. Her gaze met mine curious, hungry, unsure.<br><br>
 
 <<speech "maera">>You’re changing faster than I can keep track of.<</speech>><br>
 
@@ -1333,7 +1336,7 @@ She pulled back and met my gaze.<br><br>
 
 Her hands moved to my hips, fingers exploring my new curves.<br><br>
 
-<<speech "maera">>Your hips—they’re wider. Curves I didn’t expect.<</speech>><br>
+<<speech "maera">>Your hips they’re wider. Curves I didn’t expect.<</speech>><br>
 
 Her touch trailed down and found me again.<br><br>
 
@@ -1454,3 +1457,210 @@ She held me close, her voice soft against my chest.<br><br>
 [[Leave Maid Room Corridor|castle_map_back_select]]
 <</nobr>>
 
+
+
+
+
+
+:: maera_sex_sub_1
+<<nobr>>
+<<set $maera_sex_sub_1 = true>>
+<<speech "maera">>My prince or princess should I call you…<</speech>><br>
+
+Her voice was soft but sure. The chamber she’d been given was scented with lavender and something sweet. 
+Candles glowed low. Silk sheets rippled across her bed like an invitation.
+<br><br>
+She stood barefoot, her gown sheer in the light. Her hair was loose, tumbling over one shoulder.
+I stepped inside, hesitant. My legs felt weak not with fear, but with the weight of expectation.
+<br><br>
+<<speech "mc">>I… I’m not sure I’m ready for this.<</speech>><br>
+
+<<speech "maera">>You wouldn’t be here if you weren’t. You may not feel ready. But your body already knows what it wants.<</speech>><br>
+
+She crossed the room and took my hands. Her fingers were warm. Confident.
+
+<<speech "maera">>You’ve given orders all your life. But tonight… you’ll learn to receive. To be opened. Not with force. But with worship.<</speech>><br>
+
+[[Move Forth|maera_sex_sub_1_1]]
+<</nobr>>
+
+:: maera_sex_sub_1_1
+<<nobr>>
+
+She helped me out of my tunic with slow, deliberate care like unwrapping a gift. 
+Her eyes never left mine as my skin was exposed, and she kissed each new inch of me with reverence.
+<br><br>
+She knelt. Not in subservience but to elevate me.
+My cock softer now, thinner than it had been before the potions twitched with shy need.
+<br><br>
+<<speech "mc">>It’s… not what it used to be.<</speech>><br>
+
+<<speech "maera">>It’s not meant to be. It’s becoming what it needs to be. So are you.<</speech>><br>
+
+She kissed the inside of my thigh. Then higher. And higher still.
+
+<<speech "maera">>Tonight, you will not thrust. You will not dominate. You will be pleasured. Served. Worshipped.<</speech>><br>
+
+I moaned softly as her lips brushed my tip.
+<br><br>
+[[Move Forth|maera_sex_sub_1_2]]
+<</nobr>>
+
+:: maera_sex_sub_1_2
+<<nobr>>
+
+She took me into her mouth like a priestess to a chalice slow, reverent, no hurry. 
+Her tongue swirled delicately around the head, teasing, coaxing me erect.
+<br><br>
+<<speech "mc">>Nnnhh… gods…<</speech>><br>
+
+Her eyes met mine as her lips slid down the shaft, her hand cupping my sac, massaging gently. 
+Her pace was sensual not frantic, not submissive. She controlled the rhythm of my pleasure.
+My breath hitched.
+<br><br>
+
+She moaned around me mmmmffhh letting the sound vibrate through my shaft. 
+I trembled. My nipples were swollen, aching, sensitive in a way they’d never been before.
+<br><br>
+She noticed. Her fingers brushed my chest, pinching gently nnnhh! and I jerked.
+<br><br>
+<<speech "maera">>You’re becoming so soft, my princess. So sensitive. I love watching you learn what it means to melt.<</speech>><br>
+<br><br>
+[[Move Forth|maera_sex_sub_1_3]]
+<</nobr>>
+
+:: maera_sex_sub_1_3
+<<nobr>>
+
+She pulled away from my cock, breath hot and wet against it.
+<br><br>
+<<speech "maera">>Lie back. Let me see you. All of you.<</speech>><br>
+
+I lay down on the silk sheets. Maera climbed between my legs, kissing her way up my thighs again.
+Then lower.
+Her tongue found my balls, then lower still. I gasped as her warm breath reached my hole.
+<br><br>
+<<speech "mc">>Wait, I…<</speech>><br>
+
+<<speech "maera">>Shhh. Let go. You’re not here to do. You’re here to feel.<</speech>><br>
+
+She kissed the rim soft, slow then circled with her tongue. I arched my back, moaning ahhhhhh Maera…
+<br><br>
+She rimmed me with deliberate worship, her hands spreading me open, her tongue diving deep, swirling, teasing.
+<br><br>
+<<speech "mc">>Nnnnnh fuuuck Maera… it feels… too good…<</speech>><br>
+
+[[Move Forth|maera_sex_sub_1_4]]
+<</nobr>>
+
+
+:: maera_sex_sub_1_4
+<<nobr>>
+<<set $user_stats.gender_Identity -= 3>>
+<<set $user_stats.dominance_level -= 3>>
+
+Her mouth left my skin with a soft kiss. She rose briefly and turned toward the 
+small chest by her bedside, opening it with one hand. The flicker of candlelight 
+danced across something smooth, dark, and curved leather straps and a polished shaft, 
+slightly curved, thick, firm.
+<br><br>
+<<speech "maera">>Tonight you’ll learn how your body gives. Not to dominate. Not to take. But to receive.<</speech>><br>
+
+She buckled the harness around her hips. The dildo bobbed gently between her thighs as she turned back 
+toward me, the sight of it making my breath catch gods… it was beautiful. It looked right on her.
+<br><br>
+She climbed onto the bed, kneeling between my legs, which she gently pushed apart. 
+Her hands gripped my thighs, thumbs brushing near my entrance.
+<br><br>
+<<speech "mc">>Is it going to… hurt?<</speech>><br>
+
+<<speech "maera">>Only for a moment. Then it will bloom. You’ll learn to crave it.<</speech>><br>
+
+She leaned in and kissed my stomach. Then my navel. Then lower. Her mouth found my balls, 
+then my perineum, and finally… my hole.
+<br><br>
+Her tongue circled it first, soft and slow. I gasped aahhnnnh!
+
+Her lips kissed around it, open-mouthed, her breath hot against me. 
+I couldn’t stop squirming. My cock, small and soft now, barely moved. All my arousal pulsed from deeper inside.
+<br><br>
+<<speech "maera">>So soft. So ready. Look at you… already open.<</speech>><br>
+
+I moaned again as her fingers spread me slightly and the head of the toy pressed against my entrance.
+<br><br>
+<<speech "maera">>Breathe, Caelan. Let me in.<</speech>><br>
+
+[[Move Forth|maera_sex_sub_1_5]]
+<</nobr>>
+
+:: maera_sex_sub_1_5
+<<nobr>>
+
+I inhaled sharply shhhhhaaahhh as the dildo slid in.
+Slow. Firm. Unrelenting.
+
+My body tensed. The stretch burned, not painfully, but full. Deep. Real.
+<br><br>
+I clutched at the silk sheets beneath me. She kept going inch by inch until her hips met 
+mine and she exhaled against my throat.
+<br><br>
+<<speech "maera">>There. Claimed. This body was always meant to be entered. You were always meant to be filled.<</speech>><br>
+
+I whimpered, high and soft nnnhhhh! as she pulled back slightly and then pushed in again. The second thrust was smoother. And the third? It hit something.
+
+Inside.
+<br><br>
+I cried out ahhh! gods! as she rocked her hips forward again, the curve of the toy pressing right into that tender, hidden spot.
+<br><br>
+<<speech "mc">>Maera Maera, something’s ahhh, yes!<</speech>><br>
+
+She smiled. One hand pressed on my lower belly, grounding me. The other grabbed my hip. Her pace increased measured, sure, each thrust slow but deep.
+
+My cock was hard now but untouched, forgotten. It leaked across my stomach without effort. Every nerve burned from inside.
+<br><br>
+I moaned openly, wantonly, my voice rising in tone nnnnhh ahh ahh hahhh!
+
+She bent forward, her lips brushing my cheek.
+<br><br>
+<<speech "maera">>That’s it. Take it. Don’t run from it. Let your queenhood be carved from within.<</speech>><br>
+
+[[Move Forth|maera_sex_sub_1_6]]
+<</nobr>>
+
+:: maera_sex_sub_1_6
+<<nobr>>
+
+Her thrusts deepened. Her hips slapped softly against mine smk, smk, smk as I arched my spine to meet her.
+<br><br>
+<<speech "mc">>Harder… oh gods, more… please!<</speech>><br>
+
+She gave it to me.
+
+Her pace turned relentless. The toy rubbed that perfect spot with every grind, sending waves of helpless pleasure through my thighs, my belly, my chest.
+
+My body quaked. I couldn’t control it my hole clenched tight around the toy, hungry, wet with oil and need.
+<br><br>
+<<speech "mc">>I I’m gonna Maera I’m ahhhHHH!<</speech>><br>
+
+I came.
+
+Not from being touched. Not from being stroked. I came from being fucked.
+
+My cock pulsed weakly, spilling over my belly in slow, helpless spurts. My thighs shook. My body arched. My ass gripped the toy greedily, clenching around it like it belonged there.
+<br><br>
+She stayed inside me, letting me feel it.
+
+My moans faded to whimpers. I was soaked in sweat, trembling, flushed.
+<br><br>
+<<speech "maera">>You were beautiful. That was the first of many. You’ll learn to cum like this always. From your softness. From your center. Not from your cock. Not anymore.<</speech>><br>
+
+She pulled out slowly. I gasped again, empty, hollowed, and aching. But satisfied.
+
+Changed.
+<br><br>
+<<set $currentObjectives = "Meet with Alinora, Aldric, and Thalara to discuss the North forest mission. Council Chamber">>
+<<set $currentArc["main_arc"] = 8>>
+[[Leave Maera|maera_chamber_map_select]] |
+[[Leave Maera's Chamber|bed_chamber_girl]] |
+[[Leave Female Room Corridor|castle_map_back_select]]
+<</nobr>>
