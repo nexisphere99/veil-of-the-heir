@@ -3,8 +3,8 @@
 :: north_forest
 <<nobr>>
 <<if !$north_forest>>
-<<set $currentObjectives = "Return Victoriously to Council Room.">>
-<<set $currentArc["main_arc"] = 11>>
+<<set $currentObjectives = "New Seesions with Valetia">>
+<<set $currentArc["main_arc"] = 10>>
 <<set $north_forest = true>>
 <</if>>
 <<set $locationImage = setup.ImagePath + 'north_forest/north_forest.png'>>
