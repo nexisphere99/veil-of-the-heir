@@ -82,7 +82,23 @@ royal_bed_chamber
 :: veil_tower
 /* <<=$currentArc["main_arc"]>> */
 <<nobr>>
-<<if $currentArc["main_arc"] == 3>>
+<<if $currentArc["main_arc"] == 16>>
+<h3 style="text-align: center;">Moonspire Atelier — Veil Tower</h3><br>
+<<set $locationImage = setup.ImagePath + 'location/veil_tower_img.png'>>
+<div style="position: relative; width: 100%; max-width: 700px; margin: 0 auto; aspect-ratio: 7 / 5;">
+  <img src="images/map/veil_tower_mage_map.png" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" />
+  <svg viewBox="0 0 700 500"
+       preserveAspectRatio="none"
+       style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+    <polygon id="thalara_sexual_guidance_1" 
+             points="380,446,371,420,384,375,374,357,361,365,360,354,371,348,390,308,399,285,406,268,414,271,420,288,427,301,433,313,445,342,455,351,452,357,446,355,436,367,453,415,446,429,447,439,429,452,405,454,386,453" 
+             class="castle_front_map" 
+             data-passage="thalara_sexual_guidance_1" />
+  </svg>
+</div>
+<br><br>
+[[Leave Veil Tower|castle_map_back_select]]
+<<elseif $currentArc["main_arc"] == 3>>
 <h3 style="text-align: center;">Moonspire Atelier — Veil Tower</h3><br>
 <<set $locationImage = setup.ImagePath + 'location/veil_tower_img.png'>>
 <div style="position: relative; width: 100%; max-width: 700px; margin: 0 auto; aspect-ratio: 7 / 5;">
@@ -730,6 +746,19 @@ This body of yours is a kingdom too, one we will gently remake. But tell me, hei
   <img @src="setup.ImagePath +'map/royel_bed_chamber_img.png'" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" />
 </div>
 <br><br>
+<<elseif $currentArc["main_arc"] == 12>>
+<div style="position: relative; width: 100%; max-width: 700px; margin: 0 auto; aspect-ratio: 7 / 5;">
+  <img @src="setup.ImagePath +'map/royel_bed_chamber_map.png'" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" />
+  <svg viewBox="0 0 700 500"
+       preserveAspectRatio="none"
+       style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+    <polygon id="private_discussion_marraige_1" 
+             points="322,415,326,407,346,402,365,308,360,295,361,249,356,243,363,215,379,202,383,183,385,158,397,150,405,156,407,167,411,186,416,204,426,210,438,243,432,250,437,290,429,308,439,378,446,399,466,408,473,419,441,423,431,417,415,417,412,426,402,416,395,416,388,426,381,420,370,413,350,421" 
+             class="castle_front_map" 
+             data-passage="private_discussion_marraige_1" />
+  </svg>
+</div>
+<br><br>
 <<else>>
 <div style="position: relative; width: 100%; max-width: 700px; margin: 0 auto; aspect-ratio: 7 / 5;">
   <img @src="setup.ImagePath +'map/royel_bed_chamber_map.png'" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" />
@@ -750,6 +779,22 @@ This body of yours is a kingdom too, one we will gently remake. But tell me, hei
 
 :: royal_leasure_room
 <<nobr>>
+<<if $currentArc["main_arc"] == 13>>
+<h3 style="text-align: center;">Royal Leisure Chamber</h3><br>
+<<set $locationImage = setup.ImagePath + 'location/royal_leisure_chamber_img.png'>>
+<div style="position: relative; width: 100%; max-width: 700px; margin: 0 auto; aspect-ratio: 7 / 5;">
+  <img @src="setup.ImagePath +'map/royel_leisure_chamber_map.png'" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" />
+  <svg viewBox="0 0 700 500"
+       preserveAspectRatio="none"
+       style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+    <polygon id="discussion_with_therion_part1" 
+             points="409,454,418,451,436,348,425,332,426,308,419,288,428,273,430,239,434,220,444,212,454,226,460,214,460,192,475,186,486,193,489,223,495,225,502,215,509,217,511,232,519,242,524,279,530,290,528,308,522,312,520,333,513,346,522,436,537,454,517,464,508,459,509,464,499,468,484,458,465,458,434,469" 
+             class="castle_front_map" 
+             data-passage="discussion_with_therion_part1" />
+  </svg>
+</div>
+<br><br>
+<<else>>
 <h3 style="text-align: center;">Royal Leisure Chamber</h3><br>
 <<set $locationImage = setup.ImagePath + 'location/royal_leisure_chamber_img.png'>>
 <div style="position: relative; width: 100%; max-width: 700px; margin: 0 auto; aspect-ratio: 7 / 5;">
@@ -764,6 +809,7 @@ This body of yours is a kingdom too, one we will gently remake. But tell me, hei
   </svg>
 </div>
 <br><br>
+<</if>>
 [[Leave Royal Leisure Chamber|castle_map_back_select]]
 <</nobr>>
 

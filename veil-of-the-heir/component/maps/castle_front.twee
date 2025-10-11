@@ -109,6 +109,38 @@
 </div>
 <br><br>
 [[Leave Council Chamber|castle_map_front_select]]
+<<elseif $currentArc["main_arc"] == 11>>
+<h3 style="text-align: center;">Council Chamber</h3><br>
+<<set $locationImage = setup.ImagePath + 'location/council_room.png'>>
+<div style="position: relative; width: 100%; max-width: 700px; margin: 0 auto; aspect-ratio: 7 / 5;">
+  <img src="images/map/council_chamber_queen_only_map.png" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" />
+  <svg viewBox="0 0 700 500"
+       preserveAspectRatio="none"
+       style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+    <polygon id="royal_council_choose_consort_1" 
+             points="221,382,237,373,248,315,246,294,246,277,247,256,259,247,261,221,270,218,277,223,281,247,295,271,291,306,292,335,300,373,316,382,278,387,261,387" 
+             class="castle_front_map" 
+             data-passage="royal_council_choose_consort_1" />
+  </svg>
+</div>
+<br><br>
+[[Leave Council Chamber|castle_map_front_select]]
+<<elseif $currentArc["main_arc"] == 17>>
+<h3 style="text-align: center;">Council Chamber</h3><br>
+<<set $locationImage = setup.ImagePath + 'location/council_room.png'>>
+<div style="position: relative; width: 100%; max-width: 700px; margin: 0 auto; aspect-ratio: 7 / 5;">
+  <img src="images/map/council_chamber_queen_only_map.png" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" />
+  <svg viewBox="0 0 700 500"
+       preserveAspectRatio="none"
+       style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+    <polygon id="council_meeting_part_1" 
+             points="221,382,237,373,248,315,246,294,246,277,247,256,259,247,261,221,270,218,277,223,281,247,295,271,291,306,292,335,300,373,316,382,278,387,261,387" 
+             class="castle_front_map" 
+             data-passage="council_meeting_part_1" />
+  </svg>
+</div>
+<br><br>
+[[Leave Council Chamber|castle_map_front_select]]
 <<else>>
 <h3 style="text-align: center;">Council Chamber</h3><br>
 [img[setup.ImagePath + 'location/council_room.png']]
@@ -320,6 +352,22 @@ One last word, Trust her, Caelan. Let her magic shape you, but hold tight to you
 
 :: east_wing
 <<nobr>>
+<<if $currentArc["main_arc"] == 14>>
+<h3 style="text-align: center;">Castle East Wing</h3><br>
+<<set $locationImage = setup.ImagePath + 'location/east_wing_img.png'>>
+<div style="position: relative; width: 100%; max-width: 700px; margin: 0 auto; aspect-ratio: 7 / 5;">
+  <img @src="setup.ImagePath +'map/east_wing_map.png'" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" />
+  <svg viewBox="0 0 700 500"
+       preserveAspectRatio="none"
+       style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+    <polygon id="sereyline_advice_selectionday_1" 
+             points="365,468,394,461,401,435,408,380,403,365,402,356,411,315,406,302,416,278,424,274,421,248,425,237,436,232,446,238,451,248,447,266,455,273,462,279,467,302,466,309,473,352,471,362,468,375,470,401,472,424,479,450,484,460,507,468,485,472,476,476,464,471,455,476,444,478,438,480,422,472,410,475,391,473" 
+             class="castle_front_map" 
+             data-passage="sereyline_advice_selectionday_1" />
+  </svg>
+</div>
+<br><br>
+<<else>>
 <h3 style="text-align: center;">Castle East Wing</h3><br>
 <<set $locationImage = setup.ImagePath + 'location/east_wing_img.png'>>
 <div style="position: relative; width: 100%; max-width: 700px; margin: 0 auto; aspect-ratio: 7 / 5;">
@@ -334,6 +382,7 @@ One last word, Trust her, Caelan. Let her magic shape you, but hold tight to you
   </svg>
 </div>
 <br><br>
+<</if>>
 [[Leave East Wing|castle_map_front_select]]
 <</nobr>>
 
@@ -343,7 +392,22 @@ One last word, Trust her, Caelan. Let her magic shape you, but hold tight to you
 :: dressing_bloom
 <<nobr>>
 /* <<set $bloom_room_enable = true>> */
-<<if $bloom_room_enable>>
+<<if $currentArc["main_arc"] == 15>>
+<h3 style="text-align: center;">Royal Dressing Bloom</h3><br>
+<<set $locationImage = setup.ImagePath + 'location/dressing_bloom_img.png'>>
+<div style="position: relative; width: 100%; max-width: 700px; margin: 0 auto; aspect-ratio: 7 / 5;">
+  <img @src="setup.ImagePath +'map/dressing_bloom_map.png'" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" />
+  <svg viewBox="0 0 700 500"
+       preserveAspectRatio="none"
+       style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+    <polygon id="veletia_selectionday_1" 
+             points="156,487,169,485,174,476,186,479,193,466,200,436,202,402,203,366,202,356,190,346,190,329,177,324,182,297,184,272,195,248,210,221,207,211,206,197,213,187,220,175,231,163,246,158,258,158,275,174,282,187,282,214,288,227,305,246,316,260,296,291,287,296,293,315,293,343,293,377,295,419,297,454,304,476,319,478,330,486,306,489,277,484,276,491,254,496,226,490,214,486,192,492" 
+             class="castle_front_map" 
+             data-passage="veletia_selectionday_1" />
+  </svg>
+</div>
+<br><br>
+<<elseif $bloom_room_enable>>
 <h3 style="text-align: center;">Royal Dressing Bloom</h3><br>
 <<set $locationImage = setup.ImagePath + 'location/dressing_bloom_img.png'>>
 <div style="position: relative; width: 100%; max-width: 700px; margin: 0 auto; aspect-ratio: 7 / 5;">
@@ -362,7 +426,6 @@ One last word, Trust her, Caelan. Let her magic shape you, but hold tight to you
   </svg>
 </div>
 <br><br>
-[[Leave Royal Dressing Bloom|castle_map_front_select]]
 <<else>>
 <h3 style="text-align: center;">Royal Dressing Bloom</h3><br>
 <<set $locationImage = setup.ImagePath + 'location/dressing_bloom_img.png'>>
@@ -378,8 +441,8 @@ One last word, Trust her, Caelan. Let her magic shape you, but hold tight to you
   </svg>
 </div>
 <br><br>
-[[Leave Royal Dressing Bloom|castle_map_front_select]]
 <</if>>
+[[Leave Royal Dressing Bloom|castle_map_front_select]]
 <</nobr>>
 
 :: bloom_room

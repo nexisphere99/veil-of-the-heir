@@ -1293,7 +1293,19 @@ No, beloved. They’re a gateway to your sensuality, your confidence, and your f
 <</speech>>
 <br>
 <</if>>
-/* [[Attend Session One|valetia_session_1]] |<br><br> */
+<<if !$valetia_session_1>>
+[[Attend Session One|valetia_session_1]] |<br><br>
+<<elseif $valetia_session_1 && !$valetia_session_2>>
+[[Attend Session Two|valetia_session_2]] |<br><br>
+<<elseif $valetia_session_2 && !$valetia_session_3>>
+[[Attend Session Three|valetia_session_3]] |<br><br>
+<<elseif $valetia_session_3 && !$valetia_session_4>>
+[[Attend Session Four|valetia_session_4]] |<br><br>
+<<elseif $valetia_session_4 && !$valetia_session_5>>
+[[Attend Session Five|valetia_session_5]] |<br><br>
+<</if>>
+
+
 /* <strong style="color: red;">This will enable in Version 0.0.3</strong> */
 [[Leave Mistress Veletia Roswyn|dressing_bloom]] |<br><br>
 [[Leave Royal Dressing Bloom|castle_map_front_select]]
@@ -1302,6 +1314,7 @@ No, beloved. They’re a gateway to your sensuality, your confidence, and your f
 
 :: valetia_session_1
 <<nobr>>
+<<set $valetia_session_1 = true>>
 I should’ve known what was coming when Mistress Veletia Roswyn greeted me in her usual Attire. 
 Beneath it, nothing but bare skin gleamed under the candlelight. 
 Her feet were bare but adorned in anklets that jingled when she moved, chimes of unspoken ritual.<br><br>
@@ -1326,19 +1339,18 @@ I tried, but my voice caught. Her name came out smaller than I liked. Not like a
 She didn’t flinch.<br><br>
 <<speech "veletia">>From this moment on,<</speech>><br>
 She said, stepping closer until I felt the warmth of her body radiating against mine,<br><br>
-<<speech "veletia">>there will be no compromises. Not in fabric. Not in poise. 
+<<speech "veletia">>There will be no compromises. Not in fabric. Not in poise. 
 Not in you. Either you become the vision, or you walk away unfinished, unseen, unworthy.<</speech>><br>
 She led me wordless now, hand firm around my wrist to the full ritual mirror that stood in the corner of her chamber. 
 It wasn’t just glass. The frame was carved from glimmering duskwood, ancient enough 
 to ripple when you stared too long, laced with tiny ivory roses that bloomed and withered across its trim. 
-It whispered, soft breaths I could almost hear if I tilted my head just so.
-And there I stood.<br><br>
+It whispered, soft breaths I could almost hear if I tilted my head just so.<br><br>
 [[Move Forth|valetia_session_1_2]]
 <</nobr>>
 
 :: valetia_session_1_2
 <<nobr>>
-Caelan. No longer crowned with boyhood. 
+No longer crowned with boyhood. 
 My cock was long gone now, replaced by the heat and delicate folds of a narrow slit that still tingled when 
 I looked too long, a gentle ache that pulsed if I breathed wrong. 
 My breasts round, high, full rose and fell with each shallow breath. <br><br>
@@ -1357,13 +1369,12 @@ I stood naked. Entirely. Fully female.<br><br>
 She made me stand there, bare and silent, as she circled me. Her touch was reverent and maddening. 
 Fingertips tracing the soft inner curve of my thighs, the rising swell of my hips, the taper of my back.
  Her gaze was not lewd. Not mocking. She studied me like an artist considers the negative space of a canvas.<br><br>
-<<speech "veletia">>Today,<</speech>><br>
 [[Move Forth|valetia_session_1_3]]
 <</nobr>>
 
 :: valetia_session_1_3
 <<nobr>>
-<<speech "veletia">>we begin with the sacred art of being seen.<</speech>><br>
+<<speech "veletia">>Today, we begin with the sacred art of being seen.<</speech>><br>
 <<speech "mc">>Why is that sacred?<</speech>><br>
 I asked, voice shaky, eyes fixed on my reflection.<br><br>
 <<speech "mc">>Being seen isn’t strength.<</speech>><br>
@@ -1423,428 +1434,871 @@ She asked, raising an eyebrow.<br><br>
 <<speech "veletia">>So you made a political decision. Queens do that.<</speech>><br>
 I hated that she was right.<br><br>
 <<speech "veletia">>Now,<</speech>><br>
-She said, lifting a corset swan white and embroidered in crimson vine work <br><br>
 [[Move Forth|valetia_session_1_9]]
 <</nobr>>
 
 :: valetia_session_1_9
 <<nobr>>
-<<speech "veletia">>we begin your lesson in constraint.<</speech>><br>
-<<speech "mc">>It looks torturous.<</speech>><br>
-<<speech "veletia">>It is,<</speech>><br>
-She said with a smile.<br><br>
-<<speech "veletia">>And that’s the point.<</speech>><br>
+She did not give me time to wallow in silence. Her voice carried the weight of command again, though softer now, a velvet ribbon pulled tight around my throat.
+<br><br>
+<<speech "veletia">>For the next few days I will remake you from skin outward, beginning with the most private layers that shape how a woman feels her own body. <</speech>><br><br>
+
+
+<<speech "veletia">>We will not skip. We will not rush. We will begin with the foundation of all foundations: the briefs of linen.<</speech>>
+<br><br>
+
+<<passage_img "cloths/bloom_room/session_1/1.png">><</passage_img>>
+
+I blinked at her, heat rushing to my cheeks. Panties, underwear, anything of the sort was still uncharted territory for me. She lifted a folded square of pale cloth from the dressing pedestal and let it unfold between her fingers.
+<br><br>
 [[Move Forth|valetia_session_1_10]]
 <</nobr>>
 
 :: valetia_session_1_10
 <<nobr>>
-She bound me in white first always white for beginnings, she said. 
-The corset was stiffened with boning that arched my back subtly, raising my chest, 
-narrowing my waist until my breathing came in shallow rhythms and I felt like an offering on an altar.
-<<speech "mc">>I thought the point was to dress me,<</speech>><br>
-I muttered, voice strained as she laced the final eyelets behind my back.
-<<speech "veletia">>Oh, it is,<</speech>><br>
-Veletia said, her fingers working fast, nimble, uncannily precise.
-<<speech "veletia">>But first we alter posture. Then breath. Then balance. You can’t simply look like a queen, Caelan. You must be sculpted into one.<</speech>><br>
-[[Move Forth|valetia_session_1_8]]
+The garment looked simple. A plain brief of cream linen, hemmed neatly, soft and pliant. It smelled faintly of lavender oil, as though steeped to soften the fibers.
+<br><br>
+<<speech "mc">>That is… it looks far too simple. Why should something plain be important?<</speech>>
+<br><br>
+<<speech "veletia">>Because simplicity teaches you what matters most. Linen rests against the most tender parts of your new body without chafing, breathing with your skin, absorbing your sweat, protecting the finer silks and gowns that will glide above it. 
+<</speech>>
+<br><br>
+<<speech "veletia">>Every queen begins here. You cannot skip the roots of the garden, no matter how badly you wish to bloom immediately.<</speech>>
+<br><br>
+She knelt with the garment still in her hands, her eyes level with my hips, patient and deliberate.
+<br><br>
+[[Move Forth|valetia_session_1_11]]
 <</nobr>>
 
-:: valetia_session_1
+:: valetia_session_1_11
 <<nobr>>
-<<speech "mc">>I thought that’s what the mage did,<</speech>><br>
-I shot back.
-She paused. Then leaned close, her lips at my ear.
-<<speech "veletia">>Thalara molds flesh. I mold presence. And presence wins battles without a sword drawn.<</speech>><br>
-I bit the inside of my cheek, choking down my usual retort. My ribs creaked with every inhale. 
-The corset was relentless. I wasn’t just standing taller I was standing differently, 
-my center shifted, my hips instinctively canting forward to keep balance. 
-I felt like a statue being shaped, spine forcibly elegant.
-But she wasn’t done.
-Veletia stepped to a wardrobe that stretched to the ceiling. 
-She drew open tall double doors and revealed a riot of colors: silks the hue of new bruises, chiffon in shades of sunrise, 
-velvets as dark as blood and storm clouds. Each gown was a statement. Not mere clothing, but war banners.
-<<speech "veletia">>I’ve prepared six for this session. 
-[[Move Forth|valetia_session_1_8]]
+<<speech "mc">>It is only cloth, Veletia. Does it truly matter if I wear this or nothing at all beneath a gown?<</speech>>
+<br><br>
+<<speech "veletia">>It matters more than you realize. Linen briefs cradle your folds, hold you where you are still learning to feel natural, and remind you with every step that you now belong to softness. 
+<</speech>>
+<br><br>
+<<speech "veletia">>They are daily wear, meant for training your mind as much as your body. Practical, yes, but they carry a quiet sensuality when chosen deliberately. Even plain fabric, placed against such delicate skin, will whisper to you until you cannot ignore your femininity.<</speech>>
+<br><br>
+Her words sank into me like hot wax, and I shifted, thighs pressing together.
+<br><br>
+[[Move Forth|valetia_session_1_12]]
 <</nobr>>
 
-:: valetia_session_1
+:: valetia_session_1_12
 <<nobr>>
-You’ll wear three. Walk in them. Sit in them. 
-Rehearse entrances, exits, receiving line poses, the practiced gestures of benevolence, command, and flirtation. 
-The first gown is your test. The second, your weapon. The third <</speech>><br>
-Her lips curled.
-<<speech "veletia">> your coronation prototype.<</speech>><br>
-My brows shot up.
-<<speech "mc">>Coronation <</speech>><br>
-[[Move Forth|valetia_session_1_8]]
+She held the briefs open for me. My pulse hammered against my throat.
+<br><br>
+<<speech "veletia">>Step in. Slowly. Let the fabric find you. Imagine how it would feel walking through the halls, or leaning over a banquet table, or even bowing to your subjects with these whispering against you. This is not just protection. It is initiation.<</speech>>
+<br><br>
+My feet moved without command. I stepped through, feeling her hands guide the waistband up, the cool linen brushing my calves, sliding over my thighs, and finally hugging the sensitive softness between my legs.
+<br><br>
+<<passage_img "cloths/bloom_room/session_1/2.png">><</passage_img>>
+<<speech "mc">>It feels… too thin. I feel exposed even though I am covered.<</speech>>
+<br><br>
+<<speech "veletia">>Exactly. Exposure that is private, intimate, unseen by others but never forgotten by you. That sensation is the first lesson: your awareness of being clothed differently than before, and the secret pride it can inspire.<</speech>>
+<br><br>
+[[Move Forth|valetia_session_1_13]]
 <</nobr>>
 
-:: valetia_session_1
+:: valetia_session_1_13
 <<nobr>>
-<<speech "veletia">>Do not presume I plan for failure, my dear,<</speech>><br>
-She cut in, smiling, eyes sharp.
-The First Dress: Test of Silk
-It was deceptively simple. Pale gold, high collared, sleeveless, trimmed in white and copper thread. 
-It shimmered like the interior of a goblet, clung at the waist and hips but flowed below the knees. 
-She dressed me herself, sliding it over my head, tugging it down the curve of my breasts and over the cinched middle.
-Then came the shoes. Heels. Bone white, etched with curling vines at the arch. 
-I stared at them like one might a strange animal.
-<<speech "mc">>You’ve got to be joking,<</speech>><br>
-I said flatly.
-<<speech "veletia">>Does it look like I joke about footwear?<</speech>><br>
-Veletia returned.
-[[Move Forth|valetia_session_1_8]]
+I shifted again, testing the way the linen hugged and released with movement. The sensation was new, unrelenting, almost too personal. My breath quickened.
+<br><br>
+<<passage_img "cloths/bloom_room/session_1/4.png">><</passage_img>>
+<<speech "mc">>You mean for me to wear this every day? Even when no one can see it?<</speech>>
+<br><br>
+<<speech "veletia">>Especially when no one can see it. Queenship is not about the spectacle of jewels and brocade; it is about the discipline of carrying dignity in silence. These briefs are your first secret crown. Wear them beneath your gowns, beneath your armor if you must, and you will never forget what you are training to become. Every shift of cloth against your folds will remind you you are not the boy you were.<</speech>>
+<br><br>
+Her voice turned velvet-dark as she leaned close to my ear.
+<br><br>
+<<speech "veletia">>And when you peel them away at night, that too will remind you of your power to reveal, your right to choose how you are seen.<</speech>>
+<br><br>
+[[Move Forth|valetia_session_1_14]]
 <</nobr>>
 
-:: valetia_session_1
+:: valetia_session_1_14
 <<nobr>>
-I sat. She knelt, guiding my feet into the heels, one at a time. 
-Her fingers lingered at my ankles painting powder across the tops, smoothing lotion up to my calves. 
-The shoes fit like a glove.
-When I stood, I nearly stumbled.
-<<speech "veletia">>Balance from the hips. Step with intent. Not heel first. 
-Roll the foot. Do not stomp like a prince. Glide like a storm that knows its destination.<</speech>><br>
-I took three steps. Wobbled on the fourth. Nearly fell on the fifth.
-She caught me under the arm, surprisingly strong.
-<<speech "veletia">>That,<</speech>><br>
-She said with no malice,
-<<speech "veletia">>was the step of a noble’s bastard, not a sovereign.<</speech>><br>
-[[Move Forth|valetia_session_1_8]]
+Her hands lingered, smoothing the linen flat against my hips, tracing the waistband with a deliberate slowness that made my breath shiver. She stepped back only after she had admired her work, eyes narrowing like a painter pleased with the first stroke on canvas.
+<br><br>
+<<passage_img "cloths/bloom_room/session_1/3.png">><</passage_img>><br><br>
+<<speech "mc">>It feels different with every movement. It is distracting.<</speech>>
+<br><br>
+<<speech "veletia">>Then let the distraction become awareness. Awareness will become habit. Habit will become poise. This is how you build a queen from cloth outward. Tomorrow, when I set the high-waisted cotton upon you, you will understand the weight of seasons and the warmth of lineage. But for tonight, you will sleep in these linen briefs. Sleep as a woman, wake as a woman, breathe as a woman from the moment the sun breaks your window.<</speech>>
+<br><br>
+Her words rang final, like a decree. I could only nod, even as the linen clung to me with each subtle shift of my body, every heartbeat a reminder of what she had begun.
+<br><br>
+
+The soft linen clung to me by the end of the night, its weave warm, breathable, utterly unremarkable compared to the weight of all I had endured that day. Veletia smoothed her hand across my hip once, then stepped back with quiet authority.
+<br><br>
+<<speech "veletia">>You will sleep in these tonight, Caelan. They are the foundation, the humble beginning. Tomorrow you may feel tempted by silk or lace, but never forget that every palace rests upon stone, and every queen upon her daily garment. Learn comfort, learn humility. Even in the simplest cloth, you are becoming.<</speech>>
+<br><br>
+/* I lay down in her chamber’s spare bed, the linen whispering against me, not erotic, not dramatic simply present. A reminder that queenship begins in the smallest weave of fabric.
+<br><br> */
+[[Leave Mistress Veletia Roswyn|dressing_bloom]] |<br><br>
+[[Leave Royal Dressing Bloom|castle_map_front_select]]
 <</nobr>>
 
-:: valetia_session_1
+
+
+
+
+
+
+
+
+
+
+
+:: valetia_session_2
 <<nobr>>
-I gritted my teeth.
-<<speech "mc">>It’s a damn shoe.<</speech>><br>
-<<speech "veletia">>It’s your future. Shall I fetch your boots again, little prince?<</speech>><br>
-<<speech "mc">>No.<</speech>><br>
-She nodded.
-<<speech "veletia">>Good. Again.<</speech>><br>
-We spent what felt like an hour on pacing. Walking, turning, pausing. I had to learn how fabric swayed, how to turn so the slit of a gown suggested without exposing, how to stand without fidgeting.
-<<speech "veletia">>Queens must never fidget. Stillness is more terrifying than violence. A still queen is a calculating queen.<</speech>><br>
-<<speech "mc">>And if my leg itches?<</speech>><br>
-<<speech "veletia">>You’ll learn to endure,<</speech>><br>
-She said, tone neutral.
-<<speech "veletia">>Or I’ll teach you how to scratch like royalty.<</speech>><br>
-Dialogues: Long Exchanges
-<<speech "veletia">>Tell me what you see in the mirror,<</speech>><br>
-Veletia said as I stood again before the full ritual glass.
-I hesitated.
-<<speech "mc">>A puppet in gold.<</speech>><br>
-Her face didn’t flicker.
-<<speech "veletia">>That’s what the world sees until you prove otherwise.<</speech>><br>
-I turned to her.
-<<speech "mc">>Is that what you think I am?<</speech>><br>
-<<speech "veletia">>I think,<</speech>><br>
-She said, stepping closer,
-<<speech "veletia">>that you haven’t decided whether this is performance or awakening. And until you do, you’ll flail between both.<</speech>><br>
-<<speech "mc">>I’m not a girl,<</speech>><br>
-I muttered.
-<<speech "veletia">>You have a pussy now.<</speech>><br>
-<<speech "mc">>That doesn’t change who I am.<</speech>><br>
-<<speech "veletia">>Doesn’t it?<</speech>><br>
-She reached up, cupping my cheek.
-<<speech "veletia">>You don’t flinch when I say the word anymore. You don’t look away from the mirror. You walked in heels. You’re fighting yes but you’re no longer running.<</speech>><br>
-I hated her for being right.
-The Second Gown: Weapon of a Queen
-She chose it with reverence. Black and scarlet, the color of House Velmoria’s battle sigil. It hugged my figure like temptation and flowed behind like a silken shadow. Off the shoulder, tightly laced, it left my throat and collarbones bare.
-<<speech "veletia">>Now we learn presence,<</speech>><br>
-She said, sitting me down before a new mirror this one rimmed with candles.
-She produced kohl, rouge, a dozen brushes.
-<<speech "veletia">>Face as armor. Every line deliberate.<</speech>><br>
-<<speech "mc">>I don’t know how to do this.<</speech>><br>
-<<speech "veletia">>You’ll learn. You must. Your face tells stories even when your lips don’t move.<</speech>><br>
-Her fingers guided mine as I practiced the motions: tracing eyeliner, darkening lashes, coloring lips. She demonstrated, then forced me to repeat it until I stopped shaking. The final result was… breathtaking. I looked fierce. Not delicate. Not broken. Powerful. Strange. Me, and not me.
-<<speech "veletia">>Now,<</speech>><br>
-She said, circling behind,
-<<speech "veletia">>speak.<</speech>><br>
-<<speech "mc">>What?<</speech>><br>
-<<speech "veletia">>Command. In your new skin.<</speech>><br>
-I tried. My voice cracked. I coughed, reset. Tried again.
-<<speech "mc">>Guards, bring the ambassador to heel.<</speech>><br>
-<<speech "veletia">>Good,<</speech>><br>
-She murmured.
-<<speech "veletia">>Again. Seduce this time.<</speech>><br>
-<<speech "mc">>Come closer, my sweet…<</speech>><br>
-Her hand brushed the small of my back.
-<<speech "veletia">>Yes. Like that.<</speech>><br>
-Dialogues: The Push and the Pull
-<<speech "mc">>What if I fail?<</speech>><br>
-I asked quietly as she re laced the gown after our twelfth pose lesson.
-<<speech "veletia">>You won’t.<</speech>><br>
-<<speech "mc">>You say that as if it’s guaranteed.<</speech>><br>
-<<speech "veletia">>It is.<</speech>><br>
-<<speech "mc">>I don’t feel like a queen.<</speech>><br>
-<<speech "veletia">>You don’t need to feel like one. You need to act like one. Feelings come later.<</speech>><br>
-I turned to face her.
-<<speech "mc">>Have you done this before? Transformed someone?<</speech>><br>
-She paused. For the first time all day, she hesitated.
-<<speech "veletia">>Not like this.<</speech>><br>
-<<speech "mc">>So I’m your masterpiece.<</speech>><br>
-<<speech "veletia">>You are,<</speech>><br>
-She said.
-<<speech "veletia">>And if you succeed, I become legend.<</speech>><br>
-<<speech "mc">>No pressure then.<</speech>><br>
-<<speech "veletia">>None at all,<</speech>><br>
-She said sweetly, tightening the corset a half inch.
-The Final Dress: Prototype of Ascension
-Unlike the others, this one came with a veil. Veletia laid it across my arms like an offering.
-White again, but iridescent. Shot through with thread of moon silver. Slitted up both legs. A high collar that flared like wings. It felt alive when it touched me warmed by the room or by magic, I couldn’t tell.
-She whispered while she dressed me.
-<<speech "veletia">>Every great queen knows when to conceal and when to reveal. You will be both weapon and sanctuary.<</speech>><br>
-She bound a circlet to my brow, gently kissed each of my fingers as she slid on gloves.
-<<speech "veletia">>You’re beautiful,<</speech>><br>
-She said quietly.
-<<speech "veletia">>Do you see it yet?<</speech>><br>
-I looked. Really looked. Not just the body, or the poise, or the echo of old names lost in lace.
-<<speech "mc">>Yes,<</speech>><br>
-I whispered.
-<<speech "mc">>I think I do.<</speech>><br>
-She bound me in white first always white for beginnings, she said. The corset was stiffened with boning that arched my back subtly, raising my chest, narrowing my waist until my breathing came in shallow rhythms and I felt like an offering on an altar.
-<<speech "mc">>I thought the point was to dress me,<</speech>><br>
-I muttered, voice strained as she laced the final eyelets behind my back.
-<<speech "veletia">>Oh, it is,<</speech>><br>
-Veletia said, her fingers working fast, nimble, uncannily precise.
-<<speech "veletia">>But first we alter posture. Then breath. Then balance. You can’t simply look like a queen, Caelan. You must be sculpted into one.<</speech>><br>
-<<speech "mc">>I thought that’s what the mage did,<</speech>><br>
-I shot back.
-She paused. Then leaned close, her lips at my ear.
-<<speech "veletia">>Thalara molds flesh. I mold presence. And presence wins battles without a sword drawn.<</speech>><br>
-I bit the inside of my cheek, choking down my usual retort. My ribs creaked with every inhale. The corset was relentless. I wasn’t just standing taller I was standing differently, my center shifted, my hips instinctively canting forward to keep balance. I felt like a statue being shaped, spine forcibly elegant.
-But she wasn’t done.
-Veletia stepped to a wardrobe that stretched to the ceiling. She drew open tall double doors and revealed a riot of colors: silks the hue of new bruises, chiffon in shades of sunrise, velvets as dark as blood and storm clouds. Each gown was a statement. Not mere clothing, but war banners.
-<<speech "veletia">>I’ve prepared six for this session. You’ll wear three. Walk in them. Sit in them. Rehearse entrances, exits, receiving line poses, the practiced gestures of benevolence, command, and flirtation. The first gown is your test. The second, your weapon. The third <</speech>><br>
-Her lips curled.
-<<speech "veletia">> your coronation prototype.<</speech>><br>
-My brows shot up.
-<<speech "mc">>Coronation <</speech>><br>
-<<speech "veletia">>Do not presume I plan for failure, my dear,<</speech>><br>
-She cut in, smiling, eyes sharp.
+<<set $valetia_session_2 = true>>
+Morning light cut through the shutters, pale and cool. Veletia already had her brazier burning, its warmth filling the chamber. She studied me with sharp eyes as I entered, still sore from yesterday’s humiliating unveiling.
+<br><br>
+<<speech "veletia">>Yesterday you learned the gentleness of linen, my fledgling princess. Today you will learn the weight of warmth and coverage, for not all softness is light. Some is heavy, protective, and unyielding.<</speech>>
+<br><br>
+She let the silence linger, the fire crackling low, my own breathing louder in my ears than I wanted it to be. I stood there still in the linen briefs, shifting nervously, feeling their every seam whispering against my folds.
+<br><br>
+She reached again for the pedestal, pulling another garment from its drawer, this one heavier, denser, folded square as if it carried the weight of winter itself. When she unfurled it, I saw thick cotton, high-waisted, the cut rising to cover the belly.
+<br><br>
+<<speech "veletia">>This second lesson is the discipline of seasons. Every woman must feel the warmth of her garments guard her womb, her belly, her core. 
+<</speech>>
+<br><br>   
+<<speech "veletia">>This is the high-waisted cotton, the undergarment of winters and hard marches. There is no glamour in it only endurance, and endurance is its own form of beauty.<</speech>>
+<br><br>
+[[Move Forth|valetia_session_2_1]]
+<</nobr>>
 
-The First Dress: Test of Silk
-It was deceptively simple. Pale gold, high collared, sleeveless, trimmed in white and copper thread. It shimmered like the interior of a goblet, clung at the waist and hips but flowed below the knees. She dressed me herself, sliding it over my head, tugging it down the curve of my breasts and over the cinched middle.
-Then came the shoes. Heels. Bone white, etched with curling vines at the arch. I stared at them like one might a strange animal.
-<<speech "mc">>You’ve got to be joking,<</speech>><br>
-I said flatly.
-<<speech "veletia">>Does it look like I joke about footwear?<</speech>><br>
-Veletia returned.
-I sat. She knelt, guiding my feet into the heels, one at a time. Her fingers lingered at my ankles painting powder across the tops, smoothing lotion up to my calves. The shoes fit like a glove.
-When I stood, I nearly stumbled.
-<<speech "veletia">>Balance from the hips. Step with intent. Not heel first. Roll the foot. Do not stomp like a prince. Glide like a storm that knows its destination.<</speech>><br>
-I took three steps. Wobbled on the fourth. Nearly fell on the fifth.
-She caught me under the arm, surprisingly strong.
-<<speech "veletia">>That,<</speech>><br>
-She said with no malice,
-<<speech "veletia">>was the step of a noble’s bastard, not a sovereign.<</speech>><br>
-I gritted my teeth.
-<<speech "mc">>It’s a damn shoe.<</speech>><br>
-<<speech "veletia">>It’s your future. Shall I fetch your boots again, little prince?<</speech>><br>
-<<speech "mc">>No.<</speech>><br>
-She nodded.
-<<speech "veletia">>Good. Again.<</speech>><br>
-We spent what felt like an hour on pacing. Walking, turning, pausing. I had to learn how fabric swayed, how to turn so the slit of a gown suggested without exposing, how to stand without fidgeting.
-<<speech "veletia">>Queens must never fidget. Stillness is more terrifying than violence. A still queen is a calculating queen.<</speech>><br>
-<<speech "mc">>And if my leg itches?<</speech>><br>
-<<speech "veletia">>You’ll learn to endure,<</speech>><br>
-She said, tone neutral.
-<<speech "veletia">>Or I’ll teach you how to scratch like royalty.<</speech>><br>
+:: valetia_session_2_1
+<<nobr>>
+I frowned, my fingers brushing unconsciously over the waistband of the linen still hugging me.<br><br>
 
-Dialogues: Long Exchanges
-<<speech "veletia">>Tell me what you see in the mirror,<</speech>><br>
-Veletia said as I stood again before the full ritual glass.
-I hesitated.
-<<speech "mc">>A puppet in gold.<</speech>><br>
-Her face didn’t flicker.
-<<speech "veletia">>That’s what the world sees until you prove otherwise.<</speech>><br>
-I turned to her.
-<<speech "mc">>Is that what you think I am?<</speech>><br>
-<<speech "veletia">>I think,<</speech>><br>
-She said, stepping closer,
-<<speech "veletia">>that you haven’t decided whether this is performance or awakening. And until you do, you’ll flail between both.<</speech>><br>
-<<speech "mc">>I’m not a girl,<</speech>><br>
-I muttered.
-<<speech "veletia">>You have a pussy now.<</speech>><br>
-<<speech "mc">>That doesn’t change who I am.<</speech>><br>
-<<speech "veletia">>Doesn’t it?<</speech>><br>
-She reached up, cupping my cheek.
-<<speech "veletia">>You don’t flinch when I say the word anymore. You don’t look away from the mirror. You walked in heels. You’re fighting yes but you’re no longer running.<</speech>><br>
-I hated her for being right.
+<<speech "mc">>It looks thick, even stiff. How could anyone feel graceful wearing that, Veletia?<</speech>><br><br>
 
-The Second Gown: Weapon of a Queen
-She chose it with reverence. Black and scarlet, the color of House Velmoria’s battle sigil. It hugged my figure like temptation and flowed behind like a silken shadow. Off the shoulder, tightly laced, it left my throat and collarbones bare.
-<<speech "veletia">>Now we learn presence,<</speech>><br>
-She said, sitting me down before a new mirror this one rimmed with candles.
-She produced kohl, rouge, a dozen brushes.
-<<speech "veletia">>Face as armor. Every line deliberate.<</speech>><br>
-<<speech "mc">>I don’t know how to do this.<</speech>><br>
-<<speech "veletia">>You’ll learn. You must. Your face tells stories even when your lips don’t move.<</speech>><br>
-Her fingers guided mine as I practiced the motions: tracing eyeliner, darkening lashes, coloring lips. She demonstrated, then forced me to repeat it until I stopped shaking. The final result was… breathtaking. I looked fierce. Not delicate. Not broken. Powerful. Strange. Me, and not me.
-<<speech "veletia">>Now,<</speech>><br>
-She said, circling behind,
-<<speech "veletia">>speak.<</speech>><br>
-<<speech "mc">>What?<</speech>><br>
-<<speech "veletia">>Command. In your new skin.<</speech>><br>
-I tried. My voice cracked. I coughed, reset. Tried again.
-<<speech "mc">>Guards, bring the ambassador to heel.<</speech>><br>
-<<speech "veletia">>Good,<</speech>><br>
-She murmured.
-<<speech "veletia">>Again. Seduce this time.<</speech>><br>
-<<speech "mc">>Come closer, my sweet…<</speech>><br>
-Her hand brushed the small of my back.
-<<speech "veletia">>Yes. Like that.<</speech>><br>
+She smiled faintly, not amused, but in that knowing way she had when she caught me missing the point.<br><br>
+<<passage_img "cloths/bloom_room/session_2/1.png">><</passage_img>><br><br>
+<<speech "veletia">>Grace is not always the sway of hips or the glimmer of silk. Grace is also found in resilience the knowledge that you can walk through snow, through hunger, through the weight of duty, and still rise to face the court. This cotton is humble, yes, but when your belly is wrapped in it, you will feel protected. That is its seduction safety, warmth, and the strength of a queen who knows she cannot be shaken by cold winds.<</speech>>
+<br><br>
+[[Move Forth|valetia_session_2_2]]
+<</nobr>>
 
-Dialogues: The Push and the Pull
-<<speech "mc">>What if I fail?<</speech>><br>
-I asked quietly as she re laced the gown after our twelfth pose lesson.
-<<speech "veletia">>You won’t.<</speech>><br>
-<<speech "mc">>You say that as if it’s guaranteed.<</speech>><br>
-<<speech "veletia">>It is.<</speech>><br>
-<<speech "mc">>I don’t feel like a queen.<</speech>><br>
-<<speech "veletia">>You don’t need to feel like one. You need to act like one. Feelings come later.<</speech>><br>
-I turned to face her.
-<<speech "mc">>Have you done this before? Transformed someone?<</speech>><br>
-She paused. For the first time all day, she hesitated.
-<<speech "veletia">>Not like this.<</speech>><br>
-<<speech "mc">>So I’m your masterpiece.<</speech>><br>
-<<speech "veletia">>You are,<</speech>><br>
-She said.
-<<speech "veletia">>And if you succeed, I become legend.<</speech>><br>
-<<speech "mc">>No pressure then.<</speech>><br>
-<<speech "veletia">>None at all,<</speech>><br>
-She said sweetly, tightening the corset a half inch.
+:: valetia_session_2_2
+<<nobr>>
+She stepped forward, fingers slipping into the waistband of my linen briefs without asking, though she gave me that sharp look as if daring me to stop her. I shuddered, caught between resistance and surrender.
+<br><br>
+<<speech "mc">>You mean for me to change again? Already? I’ve hardly grown used to these.<</speech>>
+<br><br>
+<<speech "veletia">>Every garment teaches a lesson, and you will wear them all until your body no longer stumbles between one and the next. Now remove these. Let me see you bare again, and then we sheath you in cotton. This is how queens learn layer by layer, truth by truth.<</speech>>
+<br><br>
+<<passage_img "cloths/bloom_room/session_2/2.png">><</passage_img>><br><br>
+Her voice made the act sound ritualistic, as though undressing before her was no longer shameful but required.
+<br><br>
+[[Move Forth|valetia_session_2_3]]
+<</nobr>>
 
-The Final Dress: Prototype of Ascension
-Unlike the others, this one came with a veil. Veletia laid it across my arms like an offering.
-White again, but iridescent. Shot through with thread of moon silver. Slitted up both legs. A high collar that flared like wings. It felt alive when it touched me warmed by the room or by magic, I couldn’t tell.
-She whispered while she dressed me.
-<<speech "veletia">>Every great queen knows when to conceal and when to reveal. You will be both weapon and sanctuary.<</speech>><br>
-She bound a circlet to my brow, gently kissed each of my fingers as she slid on gloves.
-<<speech "veletia">>You’re beautiful. Do you see it yet?<</speech>><br>
-I looked. Really looked. Not just the body, or the poise, or the echo of old names lost in lace.
-<<speech "mc">>Yes,<</speech>><br>
-I whispered.
-<<speech "mc">>I think I do.<</speech>><br>
-The carriage bumped along the stone causeway leading from the inner castle to the southern garden halls refitted tonight into a mirror palace of light and laughter. A masquerade. Noblewomen from every court in the Velmorian fold had gathered, summoned not by invitation but by the Queen’s silent decree: Come see the future. Come judge the future.
-I sat across from Veletia in the velvet lined cab, dressed in the veil gown, with silver ribbons threaded through my golden hair, my lips the color of crushed berries, my lashes fluttering under the weight of kohl. The circlet rested just above my brow. Not a crown not yet but its suggestion clung to my every gesture.
-Beneath the gown, I wore nothing. She said the gown itself was the message: a queen needs no armor when she is the battlefield.
-<<speech "veletia">>Tonight,<</speech>><br>
-Veletia said, her gloved hand resting on my bare knee,
-<<speech "veletia">>you will be seen. Entirely. And no one must see the prince.<</speech>><br>
-<<speech "mc">>I’m not sure they ever did,<</speech>><br>
-I said, voice barely above a breath.
-She smiled faintly.
-<<speech "veletia">>Then let’s ensure they only remember the queen.<</speech>><br>
+:: valetia_session_2_3
+<<nobr>>
+I obeyed slowly, tugging the linen down over my thighs. The air rushed cool between my legs again, my cheeks burning with the constant reminder of what I had become. Veletia plucked the briefs from my hands, folded them neatly, and set them aside as though archiving a completed lesson.
+<br><br>
+<<passage_img "cloths/bloom_room/session_2/3.png">><</passage_img>><br><br>
+She held open the new pair, the cotton heavy in her hands, the waist rising almost to her chest when she dangled them before me.
+<br><br>
+<<speech "veletia">>Step in again. Feel how different the weight is, how it covers not only your sex but your womb, your very center. These are not made to seduce a partner; they are made to cradle you, to remind you that queenship must endure long winters and pregnancies alike.<</speech>>
+<br><br>
+[[Move Forth|valetia_session_2_4]]
+<</nobr>>
 
-The Arrival: A Corridor of Mirrors
-The entrance was a tunnel of polished glass and dancing flame. Masked noblewomen lined either side, their silks whispering, their eyes sharp behind gold and gemstone. I stepped down from the carriage on trembling heels. The moment my foot touched marble, every eye turned.
-I felt their gaze like hands on my thighs, lips on my neck, steel at my spine.
-They studied me. The swing of my hips. The measured steps. The rise and fall of my breasts beneath the iridescent veil. The tilt of my head.
-<<speech "veletia">>Be neither submissive nor stiff,<</speech>><br>
-Veletia had instructed in the dressing chamber.
-<<speech "veletia">>You are not prey. You are not stone. You are the flame drawing the moths.<</speech>><br>
-I walked, each step a deliberate decision. Chin high. Eyes scanning. I did not smile.
-Until I reached the dais at the center of the marble floor.
-Veletia waited there, already unmasked. She extended a hand. I took it, the silk of my glove whispering against hers.
-<<speech "veletia">>Now,<</speech>><br>
-She said softly, audible only to me,
-<<speech "veletia">>dance.<</speech>><br>
+:: valetia_session_2_4
+<<nobr>>
+I slid my legs through, the thick cotton cool at first, then quickly warming as it drew up along my thighs, my hips, over my belly. The waistband rose high, hugging me in ways the linen never had. I sucked in a breath as the snugness pressed into me, the fabric’s coarseness rougher than silk but strangely reassuring.
+<br><br>
+<<speech "mc">>It feels… constricting. Like armor, but softer. Not beautiful, not elegant. Only… safe.<</speech>><br><br>
+<<passage_img "cloths/bloom_room/session_2/4.png">><</passage_img>><br><br>
+<<speech "veletia">>Yes. Exactly that. Beauty does not vanish because the cloth is plain. Beauty is in what it does to you. Every breath you take now will remind you of your belly, of the woman’s body that beats beneath the skin. The cotton embraces you, grounds you. It is the undergarment of hearth fires, of carrying life, of ruling not from a throne of gold but from a kitchen table in the dead of winter. Remember this feeling, because one day your people will need a queen who can stand in frost and still smile.<</speech>><br><br>
 
-The Dance: A Stage of Queens
-This was no ball of waltzes and husband hunting.
-In Velmoria, the Masque of Flame was a test of dominance. It began as dance but quickly became theater.
-Noblewomen approached. One in sapphire with eyes like knives. Another in crimson, her mask feathered in peacock plumes. They circled. They bowed. And then they began to test me.
-<<speech "noblewoman 1">>How lovely your hips have become, Lady Caelan,<</speech>><br>
-Said one, drawing close, her breath perfumed with plum wine.
-<<speech "noblewoman 1">>Are they as soft as your politics?<</speech>><br>
-I smiled, slow and dangerous.
-<<speech "mc">>You’re welcome to press them and find out.<</speech>><br>
-Laughter rippled. My heart thundered.
-Another slid behind me, tracing a finger along my spine through the gown’s sheer back.
-<<speech "noblewoman 2">>Have you yet learned how to sway votes the way you sway these silks?<</speech>><br>
-<<speech "mc">>I only sway when I want someone watching,<</speech>><br>
-I replied, turning to meet her gaze.
-<<speech "mc">>And you haven’t earned the privilege.<</speech>><br>
-Veletia clapped once, light and amused.
-<<speech "veletia">>She cuts well, doesn’t she?<</speech>><br>
-<<speech "noblewoman 3">>She?<</speech>><br>
-One said, but the word sounded hollow now.
-They circled tighter. The next test came with the next dance.
+[[Move Forth|valetia_session_2_5]]
+<</nobr>>
 
-Dialogues in Circles of Intrigue
-They moved with me. The music swelled stringed instruments and pipes weaving a hypnotic, breathless rhythm. And the court grew drunk on spectacle.
-<<speech "lady theria">>Lady Caelan,<</speech>><br>
-A voice purred at my ear. I turned. Lady Theria of Northgrove bare shoulders, dusky skin, lips stained coral.
-<<speech "lady theria">>Will you sit beside me? The night is long and you must be tired.<</speech>><br>
-I smiled but tilted my head.
-<<speech "mc">>Tired is not a queen’s excuse. But if you wish for me to grace your seat…<</speech>><br>
-<<speech "lady theria">>Not a seat. A lap.<</speech>><br>
-The audacity of it. The challenge.
-I walked forward. Sat beside her not on her lap but leaning close. Our thighs touched.
-<<speech "mc">>Do you want my attention, Lady Theria?<</speech>><br>
-I asked.
-<<speech "lady theria">>I want your weakness.<</speech>><br>
-<<speech "mc">>Then you’ll die wanting.<</speech>><br>
-Her gaze flared but behind it… respect. Approval.
-The nobles weren’t finished. One by one, they tested my poise.
-<<speech "noblewoman 4">>How do you sit with such grace after only months?<</speech>><br>
-<<speech "mc">>Pain teaches fast. Corsets do not lie.<</speech>><br>
-<<speech "noblewoman 5">>What will you do when the border dukes contest your right?<</speech>><br>
-<<speech "mc">>Remind them they already kneel to my mother’s blood and my blade.<</speech>><br>
-<<speech "noblewoman 6">>What kind of queen do you plan to be?<</speech>><br>
-Veletia answered before I could. She stood at my shoulder, gaze steady.
-<<speech "veletia">>A queen who wears fire and silk both. Who wields her body, her smile, her silence, with the same precision as a general wields formations.<</speech>><br>
+:: valetia_session_2_5
+<<nobr>>
+She pressed her palm firmly against my lower belly, right above the waistband, her thumb brushing downward just enough that I shivered.
+<br><br>
+<<speech "veletia">>Here. Do you feel how it steadies you? How it makes you breathe deeper, how it anchors your posture? That is the cotton’s lesson. You cannot always be silk and lace. Sometimes, your people will need you to be sturdy cloth, unyielding, immovable, warm when the world is cruel.<</speech>>
+<br><br>
+Her eyes met mine in the mirror, unrelenting.
+<br><br>
+<<speech "mc">>It feels heavier than I expected. But… reassuring. Almost as if it were holding me together.<</speech>>
+<br><br>
+<<speech "veletia">>That is why you will sleep in them tonight, instead of linen. You will learn the difference in your dreams. Tomorrow, when I strip them away, you will know the contrast of protection and exposure more keenly than words could ever teach you.<</speech>>
+<br><br>
+The cotton rose high over my belly, warmer than the linen, firmer, almost protective. I felt oddly swaddled, though not unpleasantly so. Veletia’s eyes glimmered as she drew the covers over me.
+<br><br>
+<<speech "veletia">>Tonight you will know the embrace of warmth. This is the panty of winter, the guardian against frost. Feel it press your stomach, shield your womb, remind you that even queens must be protected by something stronger than pride. Sleep with it close, and in dreams you will learn to trust comfort without shame.<</speech>>
+<br><br>
+It was hot beneath the blankets, but the weight of it steadied me. I drifted off imagining snow beyond the windows, the cotton holding me like unseen arms.
+<br><br>
+[[Leave Mistress Veletia Roswyn|dressing_bloom]] |<br><br>
+[[Leave Royal Dressing Bloom|castle_map_front_select]]
+<</nobr>>
 
-The Dressing Room Interlude: Touches Beneath the Veil
-At midnight, I was taken briefly to the retreat chamber a mirrored alcove hidden by ivy curtains and glowing crystal sconces. Veletia followed, silent as a shadow.
-I sat, exhaling slowly. My feet ached. My thighs burned. But I’d held. I’d held.
-She approached from behind, undid the circlet. Her fingers stroked through my hair, separating strands, smoothing the sweat at my temples.
-<<speech "veletia">>You wore it well,<</speech>><br>
-She whispered.
-<<speech "mc">>It?<</speech>><br>
-<<speech "veletia">>Your mask. Your power. Your pussy.<</speech>><br>
-I turned.
-<<speech "mc">>You enjoy this, don’t you? Watching me bend into your vision.<</speech>><br>
-She laughed softly, tugging my veil loose.
-<<speech "veletia">>No, Caelan. I enjoy watching you become what you were always meant to be.<</speech>><br>
-I stood then, pushed the gown down let it fall to my feet. Veletia’s eyes drank in the sight without comment. My breasts full, flushed from the heat. My thighs. The glistening folds between them, wet with sweat and something deeper.
-<<speech "veletia">>You’re beautiful,<</speech>><br>
-She murmured.
-<<speech "mc">>I’m a weapon,<</speech>><br>
-I corrected.
-<<speech "veletia">>Yes. And beautiful.<</speech>><br>
 
-Return to the Masquerade: The Final Revelation
-When I stepped out again, I wore only the veil, re fastened across my shoulders. My breasts were bare now, nipples erect in the candlelight. My pussy glistened between bare thighs. The heels still adorned my feet, clicking sharply on the marble.
-Gasps echoed.
-But no one turned away.
-They watched.
-Lady Serelyne, the High Counselor, approached. Her mask was gold filigree. She bowed slightly.
-<<speech "lady serelyne">>Queen Alinora will receive your performance report in the morning,<</speech>><br>
-She said.
-<<speech "mc">>And what will you say?<</speech>><br>
-I asked.
-<<speech "lady serelyne">>I will say you burned. And everyone else warmed themselves at your fire.<</speech>><br>
 
-Closing Dialogues
-Back in the carriage, Veletia didn’t speak for a while. I rested against the velvet cushion, feeling oddly… full. Not with desire. Not with ego.
-With knowing.
-<<speech "mc">>I passed,<</speech>><br>
-I said softly.
-<<speech "veletia">>You claimed,<</speech>><br>
-She corrected.
-<<speech "mc">>That was dangerous. What I did.<</speech>><br>
-<<speech "veletia">>That’s why they believed it.<</speech>><br>
-I turned to her.
-<<speech "mc">>Is this how you teach all your girls?<</speech>><br>
-She looked at me, slowly, intimately.
-<<speech "veletia">>I don’t have other girls. You’re my first. My only.<</speech>><br>
-The carriage bumped once. Her hand reached across and laced into mine.
-<<speech "veletia">>And you’ll be the last,<</speech>><br>
-She said,
-<<speech "veletia">>because when I’m done… no other will need to follow.<</speech>><br>
 
-Session End:
-Caelan’s femininity now commands space. Her body fully changed. Her mind sharpened. The court has seen her desired her, feared her, whispered about her all through the corridors of fire and silk. But she has one final challenge next: taking her seat at the council table.
-Would you like to begin Session II: The Court of Iron and Lace, where Caelan must face the Queen’s full council, dress in the regalia of command, speak policy, outwit nobles, and navigate personal lusts hidden beneath diplomacy? Or would you like an interlude scene perhaps Veletia visiting Caelan late at night, touching more than just silks?
+
+
+
+
+
+:: valetia_session_3
+<<nobr>>
+<<set $valetia_session_3 = true>>
+The day brought rain hammering against the chamber’s high windows, thunder low and constant. Veletia stood barefoot on the rugs, her hair damp, holding a folded bundle of fabric with ties dangling from it.
+<br><br>
+<<speech "veletia">>Today you will learn looseness and separation. You will discover garments that open like secrets, tied only when you command. Not every underthing is snug. Some leave you space to breathe, to sway, to tease.<</speech>>
+<br><br>
+The cotton briefs clung warm and snug against me, but Mistress Veletia wasted no time admiring her work. Already her hands returned to the pedestal, fingers searching, pulling forth something entirely different from the heavy cotton she’d pressed against my womb.
+<br><br>
+She drew out a pair of garments far looser, pale as milk, tied with long thin cords at waist and knees. They hung in her hands like sacks of air, fluttering lightly in the candle glow.
+<br><br>
+<<speech "veletia">>Now, this lesson, drawstring pantlets. They are neither as close as the linen nor as sheltering as the cotton. 
+<</speech>>
+<br><br>
+<<speech "veletia">>Instead, they offer freedom the airy, practical comfort of split drawers, tied only when you wish them secure. They are garments of mobility, of women who must work, ride, or move swiftly without feeling bound.<</speech>>
+<br><br>
+[[Move Forth|valetia_session_3_1]]
+<</nobr>>
+
+:: valetia_session_3_1
+<<nobr>>
+I tilted my head, staring at the cords dangling.
+<br><br>
+<<passage_img "cloths/bloom_room/session_3/1.png">><</passage_img>><br><br>
+<<speech "mc">>They look far too open, Veletia. I cannot imagine how they even cover what they are meant to cover. It seems… careless.<</speech>>
+<br><br>
+Her lips curved, not in amusement, but in challenge.
+<br><br>
+<<speech "veletia">>Careless? No. They are deliberate. Pantlets are the choice of women who know when modesty is a tool, and when speed, comfort, or secrecy is more valuable. They are garments of pragmatism, and in that, they are no less erotic. A queen who rides among soldiers may wear them; a lover who wishes to give access without disrobing may wear them. They remind you that clothing is not always for defense sometimes, it is for possibility.<</speech>>
+<br><br>
+[[Move Forth|valetia_session_3_2]]
+<</nobr>>
+
+:: valetia_session_3_2
+<<nobr>>
+She reached forward and slid her fingers against the waistband of my cotton panties, tugging them down with steady purpose. I gasped softly, my skin prickling as cool air replaced the warmth. She folded them neatly, as before, setting them aside like a finished lesson.
+<br><br>
+The pantlets rustled as she shook them open, cords swinging. She knelt again before me, offering the loose, open legs for me to step into.
+<br><br>
+<<passage_img "cloths/bloom_room/session_3/4.png">><</passage_img>><br><br>
+<<speech "veletia">>Step through slowly. Feel the air slip between your thighs as the cloth falls. These are not meant to press against you tightly. They are meant to remind you that your body is no longer shackled by the armor you once wore.<</speech>>
+<br><br>
+[[Move Forth|valetia_session_3_3]]
+<</nobr>>
+
+:: valetia_session_3_3
+<<nobr>>
+I obeyed, one foot and then the other sliding through the gaping legs of the drawers. She pulled them up gently, the fabric light and loose, billowing against my skin. They tied high at my waist with a tug of the cord, then again at each knee, creating a soft gathered silhouette.
+<br><br>
+<<speech "mc">>It feels… strange. Almost like nothing is there at all. But the ties, they pinch in places. They dangle as if begging to be untied.<</speech>>
+<br><br>
+<<passage_img "cloths/bloom_room/session_3/2.png">><</passage_img>><br><br>
+Her laugh was low, warm, approving.
+<br><br>
+<<speech "veletia">>That is the point. These are garments that tease. When you sit, the fabric parts softly. When you walk, you feel the caress of air. And when you tie or untie the cords, you remember that garments are not only for hiding but for revealing on your terms. Even in their practicality, pantlets whisper promise. To a farmer’s wife, they are comfort; to a courtesan, they are invitation.<</speech>>
+<br><br>
+[[Move Forth|valetia_session_3_4]]
+<</nobr>>
+
+:: valetia_session_3_4
+<<nobr>>
+I ran my hands down the loose folds, unsettled at how easily they opened when I shifted. I could feel the whisper of fabric against my bare slit with every slight movement.
+<br><br>
+<<passage_img "cloths/bloom_room/session_3/3.png">><</passage_img>><br><br>
+<<speech "mc">>But they do not protect me as the cotton did. I feel… exposed. More vulnerable than before. Almost indecent, even though I am covered.<</speech>>
+<br><br>
+<<speech "veletia">>Vulnerability is not always weakness. Sometimes it is power. When you wear these, you are saying, “I am unbound, unashamed, unafraid.” You could run across a meadow, or kneel at a throne, or open yourself to a lover all without undoing more than a knot. The pantlets teach you readiness, flexibility. They are not indecent. They are versatile. And that, too, is part of queenship to know when to be veiled, and when to be accessible.<</speech>>
+<br><br>
+[[Move Forth|valetia_session_3_5]]
+<</nobr>>
+
+:: valetia_session_3_5
+<<nobr>>
+She touched the ties at my knees, tugging them just enough to tighten, then loosening again so I felt the shift of fabric brushing along my inner thighs. The sensation made me tremble, heat curling low in my belly.<br><br>
+
+<<speech "veletia">>Feel how quickly I can bind or release you. That is the lesson you must learn. Drawstring pantlets are a symbol of choice. Your body, your access, your readiness all controlled by a simple knot. Remember this well, because a queen rules not only through decree, but through choosing when to tie, and when to release.<</speech>><br><br>
+
+<<speech "mc">>It is both freeing and unnerving. Like standing naked beneath a cloak of air.<</speech>><br><br>
+
+<<speech "veletia">>Good. That tension is what makes them powerful. Tonight, you will wear them after the cotton. You will compare. You will wake knowing the difference between guarded warmth and playful openness. Only then can you understand what each garment teaches you.<</speech>><br><br>
+The ties tugged faintly at my hips as I lay down, the fabric splitting gently between my thighs. Every small movement made me aware of how precariously they were fastened. Veletia watched, seated by the mirror, lips curved.<br><br>
+<<speech "veletia">>Let the knots haunt you tonight. Toss, turn, and feel the ties strain or loosen. Every bow is a choice; every slip a lesson. By dawn, you will understand how garments can be cages or invitations and how easily either can fall away.<</speech>><br><br>
+The whisper of ties against my skin kept me restless, half-dreaming of hands untying them.<br><br>
+[[Leave Mistress Veletia Roswyn|dressing_bloom]] |<br><br>
+[[Leave Royal Dressing Bloom|castle_map_front_select]]
+<</nobr>>
+
+
+
+
+
+
+
+
+:: valetia_session_4
+<<nobr>>
+<<set $valetia_session_4 = true>>
+Frost rimed the corners of the mirror this morning, the air biting at my bare skin until Veletia pulled me nearer to the fire. She draped thick wool across her arms, its padding obvious even from afar.<br><br>
+<<speech "veletia">>Do you feel the bite of the cold, little queenling? Today’s garment is not for seduction but for survival. A woman’s body must be guarded even in winter, and the warmth of wool is as sacred as the heat of silk.<</speech>><br><br>
+<br><br>
+The pantlets swished softly as I shifted, air curling around my thighs, but Mistress Veletia was already reaching again for another piece from her arsenal. She pulled out something thicker, darker, its weight evident even folded. When she laid it across her arm, I saw layers of wool padded and stitched, not flimsy or free like the drawers but heavy, insulating.
+<br><br>
+<<speech "veletia">>Now, for your this lesson. These are the woolen winter panties. They do not tease with openness or whisper like linen; they enclose, protect, and command endurance. They are for long hunts in frost, for days of snowbound council, for nights when even your palace fires do not suffice. In these, your womb remains warm, your thighs shielded. In these, you endure the season without faltering.<</speech>>
+<br><br>
+[[Move Forth|valetia_session_4_1]]
+<</nobr>>
+
+:: valetia_session_4_1
+<<nobr>>
+I eyed the thick garment skeptically.<br><br>
+<<passage_img "cloths/bloom_room/session_4/1.png">><</passage_img>><br><br>
+<br><br>
+<<speech "mc">>They look coarse, Veletia. Surely no woman would choose this bulk willingly, when silk and lace exist. Wouldn’t they feel more like a prison than an adornment?<</speech>>
+<br><br>
+Her smile was faint, sharp.<br><br>
+<<speech "veletia">>And yet you forget the truth of royalty. A queen must be many things silk at a feast, lace at a lover’s bed, and wool in the dead of winter. These panties may look plain, but they are stitched with survival. When frost bites at every breath and your people look to you for warmth, you must embody it. These make you sturdy, immovable. Their embrace is not seduction, but defiance. And defiance has its own dark allure.<</speech>>
+<br><br>
+[[Move Forth|valetia_session_4_2]]
+<</nobr>>
+
+:: valetia_session_4_2
+<<nobr>>
+She crouched at my knees, her fingers deft at the knots of the pantlets. She loosened, tugged, and slid the airy garment away, leaving me bare again for the third time. Each unveiling grew no easier my cheeks flushed, my breath shallow, the candlelight like eyes. She set the pantlets aside, folded square, as if filing away another completed ritual.
+<br><br>
+She spread the woolen garment open. The inside was softer than it appeared, brushed smooth like velvet but thick, quilted to trap heat.
+<br><br>
+<<passage_img "cloths/bloom_room/session_4/2.png">><</passage_img>><br><br>
+<<speech "veletia">>Step in. Feel the weight. They will not flutter, nor whisper. They will anchor you, remind you that there is a time when a queen must accept bulk, must sacrifice frivolity for warmth and strength. These are for ruling in snow, for walking the halls when icicles form on the rafters.<</speech>>
+<br><br>
+[[Move Forth|valetia_session_4_3]]
+<</nobr>>
+
+:: valetia_session_4_3
+<<nobr>>
+I obeyed, sliding my legs into the heavy garment. The wool slid up slowly, thick fabric brushing over my calves and thighs until the waistband rose to grip firmly above my hips. They felt padded, warm almost instantly, as though lit with their own inner fire. My body adjusted to the embrace, strange and steadying.
+<br><br>
+<<passage_img "cloths/bloom_room/session_4/3.png">><</passage_img>><br><br>
+<<speech "mc">>It feels smothering. Too warm, too thick. I can barely move my thighs as I could with the others.<</speech>>
+<br><br>
+<<speech "veletia">>Yes. And yet imagine snow against your skin, imagine riding for hours in biting wind. These are armor of softness, insulation, endurance. They sacrifice flirtation for survival, and survival is seductive in its own way. A queen is never more powerful than when she defies winter itself and smiles. These woolen panties whisper: “I will not die, I will not falter, I will not yield.”<</speech>>
+<br><br>
+[[Move Forth|valetia_session_4_4]]
+<</nobr>>
+
+:: valetia_session_4_4
+<<nobr>>
+Her hands roamed slowly across the thick waistband, pressing down so that I felt how firmly they hugged my belly, how secure. She cupped the padding at my hips, making me shiver with the strength of her touch through the cloth.
+<br><br>
+<<passage_img "cloths/bloom_room/session_4/4.png">><</passage_img>><br><br>
+<<speech "mc">>They feel heavy… but also safe. Like being wrapped in a blanket. I cannot imagine wearing them under silks, though. They would ruin the line.<</speech>>
+<br><br>
+<<speech "veletia">>Exactly. Every garment has its place. These are not for feasts or dances. They are for nights in lonely chambers when the winds howl, when even the Queen herself shivers but must sit the throne regardless. They are not beautiful, not outwardly. But when you peel them away after enduring a day’s cold, when you finally let the warmth of your skin breathe free, the sensation is more exquisite than any jewel. That is their hidden sensuality privation first, indulgence after.<</speech>>
+<br><br>
+[[Move Forth|valetia_session_4_5]]
+<</nobr>>
+
+:: valetia_session_4_5
+<<nobr>>
+She leaned closer, lips almost brushing my ear.
+<br><br>
+<<speech "veletia">>Tonight, after you have worn the airy pantlets and these woolen guards, you will know both extremes freedom and enclosure, exposure and insulation. A queen must carry them all, must know how each shapes her body and her poise. You will sleep sweating under their embrace, and in that sweat, you will dream of power, not weakness.<</speech>>
+<br><br>
+<<speech "mc">>You make every garment sound like a crown, Veletia.<</speech>>
+<br><br>
+Her laugh was low, pleased.
+<br><br>
+<<speech "veletia">>That is because every one of them is. And before I am finished with you, you will wear each as if it were forged of gold and blessed by the first queens themselves.<</speech>>
+<br><br>
+By nightfall, the thick wool was nearly suffocating, hot under the blankets. I squirmed, but Veletia pulled the cover tighter, her voice stern.
+<br><br>
+<<speech "veletia">>No queen may complain of armor, nor of wool. Sleep in its weight. Sweat in it if you must. You will wake knowing that comfort is not always luxury sometimes comfort is survival. The heat that smothers you is the same heat that will keep you alive through frost and famine. Learn to endure, Caelan. Endurance is a queen’s silent crown.<</speech>>
+<br><br>
+I sweated and shifted, yet in the end sleep came, heavy and close, as though the wool and I had become one unyielding shell.
+<br><br>
+[[Leave Mistress Veletia Roswyn|dressing_bloom]] |<br><br>
+[[Leave Royal Dressing Bloom|castle_map_front_select]]
+<</nobr>>
+
+
+
+
+
+
+
+
+
+:: valetia_session_5
+<<nobr>>
+<<set $valetia_session_5 = true>>
+The morning after the wool felt suffocating, my skin still itching faintly from its coarse weave. Veletia waited this time with a lighter mood, perched on her dressing stool, holding a garment cut startlingly low at the waist.
+<br><br>
+<<speech "veletia">>Too much fabric weighs a queen down. Too little, and she risks scandal. Today you will learn balance a panty that rests low, modest but playful, a compromise between coverage and temptation.<</speech>>
+<br><br>
+The wool still clung to me, too warm, almost suffocating, when Veletia straightened and reached once more into her endless trove. What she withdrew this time seemed lighter, sleeker, cut narrower than anything before. When she held it up between her fingers, I saw it was a low-riding pair of soft woven fabric, smaller at the sides, dipping below the belly line.
+<br><br>
+<<speech "veletia">>Now, the this lesson: the hipster panty. It does not rise to guard your womb like cotton, nor drape open like pantlets, nor encase you like wool. 
+<</speech>>
+<br><br>
+<<speech "veletia">>
+Instead, it rests low on your hips, modest enough to cover, but daring enough to remind you of your curves. This garment is play, subtle confidence stitched in cloth.<</speech>>
+<br><br>
+[[Move Forth|valetia_session_5_1]]
+<</nobr>>
+
+:: valetia_session_5_1
+<<nobr>>
+I frowned, tilting my head as I studied the smallness of the cut.
+<br><br>
+<<passage_img "cloths/bloom_room/session_5/1.png">><</passage_img>><br><br>
+<<speech "mc">>They look… impractical. There’s barely anything to them compared to what you’ve shown me. Wouldn’t they slide down if I moved too much?<</speech>>
+<br><br>
+Her lips curved slowly, dangerously.
+<br><br>
+<<speech "veletia">>They cling tighter than you think, stitched to embrace the slope of your hipbones. They leave your belly bare, accentuate your waist, and hint at what lies beneath without surrendering modesty. They are for a woman who knows her own shape and does not apologize for it. For a queen who wants the world to sense she is desirable, yet dignified.<</speech>>
+<br><br>
+[[Move Forth|valetia_session_5_2]]
+<</nobr>>
+
+:: valetia_session_5_2
+<<nobr>>
+She stepped to me, fingers deftly working at the waistband of the woolen winter panties. She tugged them down slowly, and the hot, padded fabric released my thighs with a sigh. I shivered, gooseflesh prickling instantly at the sudden exposure. She folded the wool neatly, set it aside, then lifted the hipsters in both hands like an offering.
+<br><br>
+<<passage_img "cloths/bloom_room/session_5/2.png">><</passage_img>><br><br>
+<<speech "veletia">>Step in. Let the fabric kiss low across your hips. These do not command your belly; they invite your hips to speak for you. Remember, hips sway long before lips speak, and queenship is as much posture as it is proclamation.<</speech>>
+<br><br>
+[[Move Forth|valetia_session_5_3]]
+<</nobr>>
+
+:: valetia_session_5_3
+<<nobr>>
+I obeyed, one foot, then the other, into the narrow garment. She pulled it up with delicate precision, the soft cloth sliding easily, coming to rest snug just above my thighs, riding low beneath my navel. It clung close but not harsh, accentuating the soft swell of my hips.
+<br><br>
+<<passage_img "cloths/bloom_room/session_5/3.png">><</passage_img>><br><br>
+<<speech "mc">>It feels… smaller. Almost indecent. My stomach is bare, my hips feel more pronounced than they did before. I feel as though I am on display, even if no one can see me.<</speech>>
+<br><br>
+<<passage_img "cloths/bloom_room/session_5/4.png">><</passage_img>><br><br>
+<<speech "veletia">>That is the magic of hipsters. They show you how to be aware of your lines, of how your body moves. When you walk, you will feel them tug against your hips with every step. When you sit, you will feel the waistband tug lower, reminding you that you are not a soldier anymore. You are a woman with hips made for sway and strength both.<</speech>>
+<br><br>
+[[Move Forth|valetia_session_5_4]]
+<</nobr>>
+
+:: valetia_session_5_4
+<<nobr>>
+She placed her hands lightly at my waist, sliding down to trace the waistband of the panties, her thumbs brushing low enough to make me catch my breath.
+<br><br>
+<<speech "veletia">>These are not for the frost, not for battle, not for ceremony. They are for leisure, for the chambers, for moments when you want to feel your own femininity ripple beneath the fabric. They are also a lover’s delight, for they suggest curves without revealing too much. They remind the eye that there is more below always more and queens must learn to wield mystery as well as command.<</speech>>
+<br><br>
+<<speech "mc">>They make me feel… lighter. But also bare. I don’t know if I could sit before a court wearing only these beneath my gown.<</speech>>
+<br><br>
+<<speech "veletia">>And that is why you will wear them in practice first. Tonight, after you sleep in wool, tomorrow you will wear these all morning. You will learn the difference between being covered for safety and covered for allure. Both are weapons, and you will master them equally.<</speech>>
+<br><br>The low cut left my belly bare to the sheets, the waistband pressing firmly at my hips. Veletia tucked me in, her hands lingering at my waistline before retreating.
+<br><br><<speech "veletia">>Tonight you will dream of hips that sway. Feel the band remind you with every toss and turn that your center lies here, at the cradle of your body. Let your hips speak to you in sleep. By morning, you will rise with a new awareness of how curves move not just flesh, but perception.<</speech>>
+<br><br>I shifted, always conscious of the tug low on my body, of the shape I had to inhabit now.<br><br>
+[[Leave Mistress Veletia Roswyn|dressing_bloom]] |<br><br>
+[[Leave Royal Dressing Bloom|castle_map_front_select]]
+<</nobr>>
+
+
+
+
+
+
+
+
+
+
+
+:: valetia_session_1_38
+<<nobr>>
+The training yard echoed outside, steel on steel, while Veletia’s chamber smelled of polished leather and candle wax. She stood like a commander rather than a seamstress, holding what looked almost like short breeches.
+<<speech "veletia">>You cannot forget your soldier’s blood, Caelan. Today’s lesson is not about frill or lace, but discipline. These garments cling steady, follow every movement, and make you remember that even queens fight.<</speech>>
+The low-cut fabric of the hipsters still hugged me when Veletia turned once more to the pedestal. She rifled among folded stacks until she pulled free something altogether different again: a square of cloth cut wider, sturdier, with legs that stretched farther down the thigh. When she shook it open, I recognized the shape at once shorts, but snug and clearly designed to cling.
+
+<<speech "veletia">>Lesson six, Caelan: boyshorts. They are not playful like hipsters, nor swaddling like wool, nor open like pantlets. They are practical, solid, yet not without charm. These are for women who train, who spar, who ride. They cradle you firm, without riding up, and they remind you that comfort itself can be seductive when worn with intent.<</speech>>
+
+[[Move Forth|valetia_session_1_39]]
+<</nobr>>
+
+:: valetia_session_1_39
+<<nobr>>
+I frowned at the shape, watching her fold the hipsters off my hips, leaving me bare yet again under the gaze of firelight and mirror. She folded them neatly, as always, then held out the boyshorts for me to step through.
+
+<<speech "mc">>They look too plain, Veletia. Too much like something a man might wear. Why would a queen choose such a blunt cut when she could choose silks or lace?<</speech>>
+
+Her smile was patient, sharp as ever.
+
+<<speech "veletia">>Because a queen does not always choose garments to delight others. Sometimes she chooses for herself, for her training, for her readiness to move. Boyshorts hold you close, smooth, and steady. They do not flutter like pantlets or cling low like hipsters. They stay, they grip, they make you feel contained but not bound. And that containment is not ugly it is strength made cloth.<</speech>>
+
+[[Move Forth|valetia_session_1_40]]
+<</nobr>>
+
+:: valetia_session_1_40
+<<nobr>>
+I stepped in, the fabric rising smoothly, hugging over my thighs and up across my hips, cupping me tight but not uncomfortably so. The sensation was unlike the others it was secure, reliable, firm.
+
+<<speech "mc">>They feel almost… athletic. Like I could run, or stretch, or fight in them. They don’t shift like the pantlets or cling like the hipsters. They simply stay. I can understand their use, but where is the allure in that?<</speech>>
+
+<<speech "veletia">>The allure is in the steadiness. Imagine a queen sparring with her knights, bowstring drawn, blade in hand, and beneath her armor these boyshorts grip her body, unseen but utterly dependable. There is a quiet seduction in that certainty that no matter how you lunge, bend, or twist, you are held firmly. It is not the seduction of lace. It is the seduction of strength, of knowing your body is supported in every motion.<</speech>>
+
+[[Move Forth|valetia_session_1_41]]
+<</nobr>>
+
+:: valetia_session_1_41
+<<nobr>>
+She moved around me, her hands pressing along the fabric, smoothing it over my hips, down the outside of my thighs, then tracing deliberately along the inner seam where it cupped me snugly. My breath caught as her touch emphasized the fit.
+
+<<speech "veletia">>These boyshorts will teach you balance. They are perfect beneath armor, yes, but also beneath robes when you must mount a horse in public without scandal. They are the garment of discipline no frill, no distraction, only purpose. And when you strip them away later, after they have hugged you all day, you will feel the ache of freedom so sweet it will make you gasp.<</speech>>
+
+<<speech "mc">>They make me feel… less like a princess, more like a soldier. And yet… there’s a strange comfort in that. A familiarity, perhaps, with my past self.<</speech>>
+
+<<speech "veletia">>Exactly. They let you bridge the man you were and the woman you are becoming. A soldier’s steadiness, a queen’s poise. They remind you that transformation does not mean abandoning discipline. It means refining it into new shapes.<</speech>>
+
+[[Move Forth|valetia_session_1_42]]
+<</nobr>>
+
+:: valetia_session_1_42
+<<nobr>>
+Her voice dropped lower, velvet and commanding.
+
+<<speech "veletia">>Tomorrow you will spar in these, beneath your tunic, to feel their worth. Tonight, you will wear them until bed. Let them hold you, remind you that your body is not fragile silk alone. You are strong, and that strength is no less feminine than curves wrapped in lace. Learn to feel powerful in them, Caelan, because a queen’s body is not only for seduction it is for survival.<</speech>>
+
+Her words struck me harder than any swordblow. The boyshorts clung close, a second skin, reminding me of her truth with every breath.
+The snug shorts clung to my thighs, steady, unyielding, almost athletic. Veletia folded my hands over my stomach as she covered me.
+<<speech "veletia">>Sleep in discipline, Caelan. Let these boyshorts remind you of your strength. They will hold you through the night, just as discipline will hold you through fear. Remember, a queen is not only silk and sweetness. She is steel. You will dream of training, of balance, of walking a battlefield with your body supported at every step.<</speech>>
+The snugness pressed me still, not seductive, not playful just reliable. And in that reliability, I found unexpected peace.
+[[End of Sixth Lesson|valetia_session_1_43]]
+<</nobr>>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+:: valetia_session_1_43
+<<nobr>>
+The seventh day was warmer, the sun heavy through open windows. Veletia left her brazier cold, instead letting the breeze play through silks strung across her dressing pedestal. From among them she drew a pair of airy, loose shorts that swayed like petals.
+<<speech "veletia">>After strength, we must return to softness. These are meant not for war nor court, but for leisure garments that float, reminding you that not all queenship is weight. Some is pleasure, light and fluttering.<</speech>>
+The boyshorts hugged me still, steady and soldierlike, but Mistress Veletia was already gliding back to her pedestal. Her hands moved through stacks of folded silks and linens until she drew out something that seemed to shimmer even in the dim light. Loose, wide, almost delicate when she shook them open, the legs flared like petals, a soft silk sheen rippling between her fingers.
+
+<<speech "veletia">>Lesson seven, Caelan: tap pants. Some call them knickers, though they are finer than the word implies. Loose, airy, cool against the skin, they are meant for summer’s breath, for nights when heat makes the body restless. They are not for combat or ceremony they are for indulgence, for feeling silk flutter around your thighs as if you were wrapped in a lover’s sigh.<</speech>>
+
+[[Move Forth|valetia_session_1_44]]
+<</nobr>>
+
+:: valetia_session_1_44
+<<nobr>>
+I stared at them, surprised by how different they looked from the snugness of boyshorts or the bulk of wool.
+
+<<speech "mc">>They look like… shorts made of mist. Wouldn’t they tangle, or ride up, or feel flimsy? It seems they’d do little to protect or conceal.<</speech>>
+
+Her smile softened, eyes glittering like the silk in her hands.
+
+<<speech "veletia">>You keep searching for protection in every garment. That is the soldier still speaking in you. Tap pants are not protection they are play. They are freedom from clinging cloth, a dance of fabric brushing your thighs, cooling you when the air itself is heavy. They are meant to celebrate movement, to remind you that your body can be airy and indulgent, not only bound or armored.<</speech>>
+
+[[Move Forth|valetia_session_1_45]]
+<</nobr>>
+
+:: valetia_session_1_45
+<<nobr>>
+She tugged at the boyshorts, sliding them down from my hips, peeling the snugness away until I stood bare again. The mirror caught the flush on my skin, and the reflection was almost unbearable in its rawness. She folded the shorts with reverence, then held out the silken tap pants, legs fluttering like banners in her hands.
+
+<<speech "veletia">>Step into them slowly. Let the silk remind you of warmth and coolness both. These are not for hiding. They are for feeling every brush of air, every movement of thigh. Queenship is not always endurance, Caelan. Sometimes it is pleasure, leisure, and the art of being adorned for no one but yourself.<</speech>>
+
+[[Move Forth|valetia_session_1_46]]
+<</nobr>>
+
+:: valetia_session_1_46
+<<nobr>>
+I stepped through, silk slipping over my calves and thighs. She pulled them up, the waistband settling softly on my hips. The fabric did not cling it floated, swaying with every small breath. When I shifted, the loose legs fluttered, brushing against the tender skin between my thighs with maddening lightness.
+
+<<speech "mc">>They feel… strange. Like I’m wearing nothing at all, and yet something teases me with every step. I can’t decide if it’s comfortable or distracting.<</speech>>
+
+<<speech "veletia">>That is their lesson. They are garments of sensation, not restraint. They make you aware of your thighs, of how they move and part. When you walk in them, you will feel silk slide and flutter. When you sit, the fabric spills around you like water. They make you conscious of every motion, every curve. And in that awareness, you learn the power of allure born from subtlety.<</speech>>
+
+[[Move Forth|valetia_session_1_47]]
+<</nobr>>
+
+:: valetia_session_1_47
+<<nobr>>
+She circled me, fingertips grazing the silk, teasing it into sways that brushed higher, whispering against places so sensitive I gasped softly. Her eyes never left mine in the mirror.
+
+<<speech "veletia">>These are not for the battlefield or the throne. They are for afternoons in summer gardens, for evenings when you lean at a balcony and feel night air kiss your thighs, for boudoirs where you want a lover to see silk ripple before it parts. They are garments of temptation, of leisure, of softness unapologetically embraced.<</speech>>
+
+<<speech "mc">>They make me feel… exposed in a different way. Not vulnerable, but tempting, even to myself. Like I can’t stop noticing my own body swaying inside them.<</speech>>
+
+<<speech "veletia">>Good. That is the point. If you are tempted by your own body, then imagine what others will see when you carry yourself with that awareness. These will train you not to fear your curves, but to savor them. To walk like silk itself has chosen you.<</speech>>
+
+[[Move Forth|valetia_session_1_48]]
+<</nobr>>
+
+:: valetia_session_1_48
+<<nobr>>
+She leaned close, breath grazing my neck as her hands smoothed the fabric down the front, lingering deliberately until my knees weakened.
+
+<<speech "veletia">>Tonight you will wear these after the boyshorts, and you will feel the shift from containment to freedom, from discipline to indulgence. This is the rhythm of femininity, Caelan: strength one moment, silk the next. And only when you master both will you walk as queen without question.<</speech>>
+
+I swallowed, the silk fluttering against me with every heartbeat, every breath.
+The silk fluttered with every movement under the covers, brushing against me, teasing me awake even as I tried to rest. Veletia sat at the bedside, her voice soft but commanding.
+<<speech "veletia">>Do not fight the flutter. Let the silk wake you, let it tease your thighs, let it remind you of your own skin. A queen must never grow numb to her own body. Even in sleep you will learn awareness. When dawn comes, you will rise knowing that sensation itself can be a teacher.<</speech>>
+I drifted off to dreams full of swaying silk and phantom caresses, my thighs never left alone.
+[[End of Seventh Lesson|valetia_session_1_49]]
+<</nobr>>
+
+
+
+
+
+
+
+
+
+
+:: valetia_session_1_49
+<<nobr>>
+By the eighth morning I was nearly used to her ritual. Nearly. She had laid out breakfast this time fruit and honey and beside it, folded silken puffed garments edged in frills. She picked them up, shaking them out until they swelled like clouds.
+<<speech "veletia">>Do not scoff. Innocence is as powerful as iron. These bloomers exaggerate, they play, they tickle the eye. Today you will learn how softness, even silliness, can be sharpened into a blade of charm.<</speech>>
+The airy silk still swayed against me when Mistress Veletia reached for yet another folded secret. This one she lifted with both hands, thicker than the tap pants, cut wide and voluminous. She shook them out and the fabric billowed like a cloud, edged in delicate frills that danced in the firelight.
+
+<<speech "veletia">>Lesson eight, Caelan: silken bloomers. Baggy, yes, playful, frilled. They are garments of whimsy and comfort, yet also of flirtation. A woman who wears bloomers is not ashamed of taking space with her softness. These make your thighs swell like cushions, your hips round like ripe fruit, and their frills whisper that innocence can also be its own seduction.<</speech>>
+
+[[Move Forth|valetia_session_1_50]]
+<</nobr>>
+
+:: valetia_session_1_50
+<<nobr>>
+I studied the frills, the ridiculous puff of them, lips parting before I could stop myself.
+
+<<speech "mc">>They look… almost childish. Like something meant to mock more than to honor. How could anyone feel regal in such a garment, Veletia?<</speech>>
+
+Her smirk was knowing, wicked.
+
+<<speech "veletia">>And that is the trick of them. Innocence disarms. Playfulness charms. A queen must not only know how to stand in armor and frighten her enemies she must also know how to appear soft, approachable, desirable in ways that lower guard and stir longing. Bloomers, especially of silk, remind men of laughter and girlish giggles, but on you, they will be weaponized. You will wield innocence itself as temptation.<</speech>>
+
+[[Move Forth|valetia_session_1_51]]
+<</nobr>>
+
+:: valetia_session_1_51
+<<nobr>>
+She came to me again, tugging at the fluttering tap pants until they slipped down, leaving me bare to the cool air once more. She folded the silk with care, setting it aside, and opened the bloomers wide, the frilled hems dangling like petals.
+
+<<speech "veletia">>Step in. Feel the difference. Feel how they puff and play, how they swaddle you with softness while tickling your skin with lace. They will feel larger, but that largeness is not ungainly. It is the luxury of space, the confidence of volume, the sweetness of frills embracing flesh.<</speech>>
+
+[[Move Forth|valetia_session_1_52]]
+<</nobr>>
+
+:: valetia_session_1_52
+<<nobr>>
+I stepped through reluctantly, the silk sliding cool over my legs before ballooning out at the thighs. She tied them at my waist, then fussed at the frilled hems where they brushed mid-thigh, making sure they puffed properly.
+
+<<speech "mc">>They feel… strange. Like wearing pillows. So much fabric, yet it’s light. I feel hidden and displayed all at once.<</speech>>
+
+Her eyes glinted as she smoothed the frills outward.
+
+<<speech "veletia">>Exactly. Bloomers are paradox. They cover more, yet because of their frills and volume they draw attention. Every step you take, the silk will sway exaggeratedly. Every laugh or bow will set the frills fluttering. They make you appear soft, playful, touchable, and sometimes that softness is more dangerous than steel. You will learn how to giggle in them without surrendering control, how to flutter your hems while holding every eye in the room hostage.<</speech>>
+
+[[Move Forth|valetia_session_1_53]]
+<</nobr>>
+
+:: valetia_session_1_53
+<<nobr>>
+She bent and smoothed the bloomers across my hips, tugging at the waistband until it hugged more snugly. Then she ran her fingertips along the frills at my thighs, brushing them against my bare skin so that the delicate lace tickled maddeningly.
+
+<<speech "mc">>They are too playful. Too girlish. I feel like I’m pretending at something I’m not.<</speech>>
+
+<<speech "veletia">>You misunderstand, my prince-turned-princess. These are not for pretending they are for practicing duality. Innocence as mask, playfulness as trap. When you wear bloomers, you will feel silly at first, but you will learn to carry even silliness with authority. To laugh and still command. That is their power. Besides… look at your thighs in the mirror. Do they not appear rounder? Softer? More inviting?<</speech>>
+
+[[Move Forth|valetia_session_1_54]]
+<</nobr>>
+
+:: valetia_session_1_54
+<<nobr>>
+I glanced at the mirror, cheeks flushing. The silk did exaggerate my thighs, made them fuller, my hips curvier. The frills caught the light, fluttering with each nervous movement.
+
+<<speech "mc">>They do make me look… softer. Rounder. Almost like the statues in the Hall of Maidens. But it feels like a costume more than clothing.<</speech>>
+
+<<speech "veletia">>And every costume teaches. A queen wears crowns, robes, armor, jewels all costumes that change how the world sees her. Bloomers are a costume of softness, and one day, when you laugh in them and men’s hearts race, you will understand their power. Wear them tonight after the tap pants, and compare. The flutter of silk, the tickle of frill, the bounce of fabric each will remind you that softness itself can be a weapon, wielded sweetly.<</speech>>
+The bloomers puffed and swelled even under the blankets, the frills tickling my skin. I tried to brush them down but Veletia swatted my hand away with amused severity.
+<<speech "veletia">>Do not resist the play, Caelan. Sleep in them. Let their silliness remind you that softness has its place, that laughter has power. Tomorrow you will know how to wield innocence with a smirk. Tonight you will dream of petals, of clouds, of frivolity turned into strength.<</speech>>
+Every time I shifted, the bloomers brushed and rustled, silly yet strangely comforting, as if they were teaching me to accept softness without shame.
+[[End of Eighth Lesson|valetia_session_1_55]]
+<</nobr>>
+
+
+
+
+
+
+
+
+
+
+:: valetia_session_1_55
+<<nobr>>
+Candles lit the chamber even at dawn, their light reflecting in the long river of silk she unfurled from her hands. The attached stockings spilled to the floor, pooling like cream. Veletia looked at me with no smile, only hunger for precision.
+<<speech "veletia">>This lesson is about unity panty and stocking joined as one. There will be no slips, no gaps, no separation. Today you will walk bound in elegance, every step reminding you of your own body’s performance.<</speech>>
+The bloomers still puffed around my thighs, frills swaying with every nervous shift, when Mistress Veletia placed them aside and drew something different something that gleamed with intent. A pair of panties, yes, but stitched directly to long, slender stockings that pooled like rivers of silk down her arms. She let them spill forward, and the stockings caught the candlelight like molten cream.
+
+<<speech "veletia">>Lesson nine: the stocking-attached panty. Practical and decadent, useful yet intimate. They bind bottom and legs together in one garment, leaving no gap, no interruption. These are worn beneath gowns when a woman must keep her stockings secure, or when she wishes the very act of undressing to become a ritual of revelation. They are the undergarment of lovers who linger, of queens who know even practicality can be wrapped in temptation.<</speech>>
+
+[[Move Forth|valetia_session_1_56]]
+<</nobr>>
+
+:: valetia_session_1_56
+<<nobr>>
+I swallowed, staring at the long silken legs dangling from the panty.
+
+<<speech "mc">>But why attach them? Why not wear stockings apart, tied with garters? This seems… excessive. And far too difficult to remove quickly.<</speech>>
+
+Her lips curved into a slow, sultry smile.
+
+<<speech "veletia">>Because difficulty is the point, Caelan. A separate stocking may slip, may need adjusting. But when bound to the panty, they become one seamless piece, hugging you from thighs to waist. You will feel their tug with every bend of the knee, every step on stone floors, every brush of fabric across your calves. They remind you of elegance not just in what is seen, but in what is felt. And when someone undresses you, every inch must be peeled away in a single, slow journey. That is power.<</speech>>
+
+[[Move Forth|valetia_session_1_57]]
+<</nobr>>
+
+:: valetia_session_1_57
+<<nobr>>
+She knelt again, loosening the bloomers at my waist until they puddled around my ankles, leaving me bare once more before the mirror. My skin flushed, thighs tightening instinctively, but she only gathered the stockings-panty and held them open, waiting.
+
+<<speech "veletia">>Step through. Slowly. Feel the silk climbing your legs, clinging as if it were woven to worship your skin. You will not mistake this for mere coverage. This is adornment, this is discipline, this is allure stitched into every step.<</speech>>
+
+I lifted my foot hesitantly, then the other, sliding into the waiting silk.
+
+[[Move Forth|valetia_session_1_58]]
+<</nobr>>
+
+:: valetia_session_1_58
+<<nobr>>
+The stockings pulled high, hugging my calves, tightening against my thighs until the panty settled snugly over my hips. The sensation was unlike any garment so far every movement tugged the fabric against two places at once, reminding me constantly that I was bound in silk from waist to foot.
+
+<<speech "mc">>They feel… restrictive, but not heavy. I can feel every brush against my legs, and every step tugs at my hips. It is… distracting. Almost teasing me with each shift.<</speech>>
+
+<<speech "veletia">>Exactly. This is their lesson. Stocking-attached panties do not let you forget them. They caress you when you walk, remind you when you bend, tighten when you sit. They make your body one long line of silk and promise. Imagine striding into a hall, every step tugging you in secret ways, every glance at your gown betraying nothing, while beneath you carry this constant reminder of elegance stitched to flesh.<</speech>>
+
+[[Move Forth|valetia_session_1_59]]
+<</nobr>>
+
+:: valetia_session_1_59
+<<nobr>>
+She circled me slowly, hands brushing down my thighs, tracing the seam where the stockings met the panty. Her touch pressed the silk tighter, forcing me to feel the way it wrapped me whole.
+
+<<speech "mc">>It feels almost too much. Like I am wrapped, bound. I cannot imagine doing anything but thinking about them when I walk.<</speech>>
+
+<<speech "veletia">>Good. That is why queens wear them in courts of intrigue and dances of diplomacy. When you are bound in silk from hip to heel, you walk differently hips swaying, steps smaller, each movement conscious. You radiate poise because the garment forces you to. And that is the secret: when you wear them, you are no longer merely walking you are performing, even if no one else knows it.<</speech>>
+
+[[Move Forth|valetia_session_1_60]]
+<</nobr>>
+
+:: valetia_session_1_60
+<<nobr>>
+She leaned close, her lips almost brushing my ear as her hands smoothed the panty flat over my mound, then slid down along my thighs, pressing silk to skin.
+
+<<speech "veletia">>Wear these when you wish to command without speaking. Wear them when you wish every step to remind you that you are not simply clothed you are dressed to be desired, to be remembered, even when no one sees what lies beneath. And when the moment comes that someone peels them away, you will know the intoxicating power of patience. Every inch will be a ritual, every tug a prayer to your body.<</speech>>
+
+I shivered, the tug of silk constant, each breath a reminder of my body’s new awareness.
+Bound in silk from waist to toes, I felt almost restrained beneath the blankets, every shift tugging at me in two directions at once. Veletia smoothed her hand down the length of my leg, smiling faintly.
+<<speech "veletia">>You will not escape their embrace tonight. Every twist will remind you that you are held, bound in silk, elegant even in sleep. Queenship is discipline, even in dreams. Tomorrow you will know how to walk in performance but tonight, you will learn how to rest in restraint.<</speech>>
+It was a restless sleep, full of tugging and shifting, but I woke aware of every limb, every line of my body.
+[[End of Ninth Lesson|valetia_session_1_61]]
+<</nobr>>
+
+
+
+
+
+
+
+
+
+
+
+
+:: valetia_session_1_61
+<<nobr>>
+By the tenth day, I thought I could no longer be surprised. I was wrong. Veletia stood with a scrap of fabric and dangling ribbons, each bow waiting to be tied. She toyed with the strings, pulling them taut until they snapped like whispers.
+<<speech "veletia">>Every knot is a choice. Every bow tied is a declaration, every bow untied is surrender. Today you will learn the power of ribbons the lingerie of sovereignty itself.<</speech>>
+The silk of the stocking-attached panty still clung to me like a second skin when Veletia finally eased me from them, drawing the stockings down my calves in one long, deliberate caress. She folded the garment reverently, as though sealing a spell, and placed it aside. Then she turned, and from the pedestal she retrieved a final piece for this first day’s instruction.
+
+It was smaller again light, elegant but what caught my eye were the ribbons at each hip. She unfurled it slowly, and the laces dangled down like serpents, ready to be tied or untied with the barest tug.
+
+<<speech "veletia">>Lesson ten: the laced-side panty. Perhaps the most symbolic of all we’ve touched tonight. This garment is the art of invitation made cloth. The body is covered, yes, but only by knots that beg to be undone. Every ribbon is a decision. Every bow tied tight is a proclamation of modesty; every bow loosened is permission. This is not just underwear it is negotiation stitched in silk.<</speech>>
+
+[[Move Forth|valetia_session_1_62]]
+<</nobr>>
+
+:: valetia_session_1_62
+<<nobr>>
+I stared at the dangling ties, heart quickening.
+
+<<speech "mc">>It looks more like a trap than clothing. If anyone pulled those ribbons, I’d be bare in a heartbeat. How could that ever be dignified? How could a queen trust such fragility?<</speech>>
+
+Her eyes glinted, voice silk-dark.
+
+<<speech "veletia">>Dignity does not lie in iron clasps or heavy fabrics, Caelan. Dignity lies in control. You wear these only when you choose to. And you decide who may see the ribbons, who may tug at them, and who must keep their hands to themselves. Queenship is as much about granting favor as it is denying it. A laced-side panty is not fragility it is sovereignty. With a single knot, you command access, delay pleasure, or unleash temptation. It is elegance that speaks of power hidden in vulnerability.<</speech>>
+
+[[Move Forth|valetia_session_1_63]]
+<</nobr>>
+
+:: valetia_session_1_63
+<<nobr>>
+She approached me again, her hands drawing away the silk stockings from my thighs completely, leaving me bare once more. The ribbons of the new garment whispered as she held it open before me.
+
+<<speech "veletia">>Step through, and feel how it holds you differently. Not with firm waistbands or padded bulk. Not with airy flutter. Not with second-skin silk. But with ties, fragile yet deliberate. Feel how each knot holds not just cloth to flesh, but meaning to choice.<</speech>>
+
+I lifted my foot, then the other, into the delicate triangle of fabric. She drew it up over my thighs, the sides still open until her fingers began lacing the ribbons at my hips, pulling them snug with patient precision.
+
+[[Move Forth|valetia_session_1_64]]
+<</nobr>>
+
+:: valetia_session_1_64
+<<nobr>>
+The fabric settled against me, soft and light, but it was the sensation of the ties that caught my breath the way they cinched at each hip, delicate bows resting against my skin.
+
+<<speech "mc">>It feels… precarious. Like I could lose them with a careless tug. I feel more exposed now than even in the pantlets. I can’t stop imagining how quickly they’d fall away if anyone wanted them gone.<</speech>>
+
+<<speech "veletia">>And that imagination is the point. You will learn how to walk with that awareness, how to let those ribbons whisper with every step. You will learn that vulnerability displayed can become its own armor because no one dares underestimate a queen who shows what she could give, yet withholds until she decides. These panties force you to be deliberate. To tie, to untie, to hold the power in your own hands.<</speech>>
+
+[[Move Forth|valetia_session_1_65]]
+<</nobr>>
+
+:: valetia_session_1_65
+<<nobr>>
+She smoothed her palms across my hips, fingertips brushing the bows where they perched. She gave one an almost playful tug, loosening it just slightly before retying it slowly, eyes never leaving mine in the mirror.
+
+<<speech "mc">>It feels almost… dangerous. Like every knot is a challenge. I can’t stop thinking about who would dare touch them, and how it would feel if they did.<</speech>>
+
+Her lips curved in approval.
+
+<<speech "veletia">>Good. That thought will live with you each time you wear them. That tension between secrecy and surrender, between holding and yielding that is the erotic language of laced panties. Wear them when you wish to keep the world guessing. Wear them when you wish to show confidence that no one but you may untie what protects you. And when at last you allow the ribbons to fall, it will feel not like surrender, but like triumph, because it was your choice.<</speech>>
+
+[[Move Forth|valetia_session_1_66]]
+<</nobr>>
+
+:: valetia_session_1_66
+<<nobr>>
+Her hands lingered at my hips, tightening one knot firmly, leaving the other bow loose enough to sway with each breath.
+
+<<speech "veletia">>Tonight, you will sleep in them last, after all the others. You will wake tangled in ribbons, hips marked with the faintest creases from ties. And when you untie them yourself in the morning, remember: every knot you loosen is a reminder that sovereignty over your own body is the most seductive crown of all.<</speech>>
+
+I swallowed hard, every ribbon pressing into my awareness as though I had been wrapped not just in silk, but in choice itself.
+The bows pressed into my hips beneath the blankets, one tight, one loose, shifting with each breath. Veletia brushed her lips close to my ear as she tucked the sheet around me.
+<<speech "veletia">>Do not untie them tonight. Let the ribbons pull, let them tempt, let them remind you that every knot is a decision. You will sleep knowing that sovereignty rests at your hips, waiting on your choice. By morning you may untie them yourself, and only then will you taste the pleasure of decision made flesh.<</speech>>
+I lay awake long into the night, my fingers brushing the bows, tempted to untie them, haunted by the power in waiting.
+[[End of Tenth Lesson|valetia_session_1_67]]
 <</nobr>>
