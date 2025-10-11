@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Nexisphere Games – Next Release Countdown</title>
+<style>
+  body {
+    background: radial-gradient(circle at center, #0b0e17 0%, #05060a 100%);
+    color: #f0f0f0;
+    font-family: "Cinzel", serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: 2px;
+  }
+  h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    font-weight: normal;
+    opacity: 0.9;
+  }
+  #countdown {
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+  }
+  .label {
+    font-size: 1rem;
+    opacity: 0.7;
+    margin-bottom: 40px;
+  }
+  #dev-logs {
+    width: 100%;
+    max-width: 800px;
+    background-color: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 8px;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: left;
+    overflow-y: auto;
+    max-height: 300px;
+  }
+  #dev-logs h3 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+    padding-bottom: 5px;
+  }
+  #dev-logs ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  #dev-logs li {
+    margin-bottom: 10px;
+    background-color: rgba(255,255,255,0.02);
+    padding: 8px 10px;
+    border-radius: 4px;
+  }
+  #dev-logs li span.date {
+    color: #aaa;
+    font-size: 0.85rem;
+    margin-right: 10px;
+  }
+</style>
+</head>
+<body>
+  <h1>Next Release Countdown</h1>
+  <h2>Veil of the Heir</h2>
+  <div id="countdown">Loading...</div>
+  <div class="label">Nexisphere Games</div>
+
+  <!-- Developer Logs Section -->
+  <div id="dev-logs">
+    <h3>Developer Logs</h3>
+    <ul id="logs-list">
+      <!-- Log entries will appear here -->
+      <li><span class="date">2025-10-13:</span> Planning the next release...</li>
+    </ul>
+  </div>
+
+  <script>
+    // Countdown
+    const targetDate = new Date("2026-01-10T00:00:00"); // Jan 11, 2026
+
+    function updateCountdown() {
+      const now = new Date();
+      const diff = targetDate - now;
+
+      if (diff <= 0) {
+        document.getElementById("countdown").innerHTML = "✨ The release is live!";
+        clearInterval(timer);
+        return;
+      }
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const mins = Math.floor((diff / (1000 * 60)) % 60);
+      const secs = Math.floor((diff / 1000) % 60);
+
+      document.getElementById("countdown").innerHTML =
+        `${days}d ${hours}h ${mins}m ${secs}s`;
+    }
+
+    const timer = setInterval(updateCountdown, 1000);
+    updateCountdown();
+
+    // Optional: dynamically add a new dev log entry
+    function addDevLog(date, message) {
+      const li = document.createElement('li');
+      li.innerHTML = `<span class="date">${date}:</span> ${message}`;
+      document.getElementById('logs-list').prepend(li);
+    }
+
+    // Example of adding a new log dynamically
+    // addDevLog("2025-10-14", "Started integrating countdown with Patreon strategy.");
+  </script>
+</body>
+</html>
