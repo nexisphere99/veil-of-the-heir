@@ -78,7 +78,7 @@ Macro.add("speech", {
                 image_path = setup.ImagePath + "character/aldric/aldric.png";
                 charName = "Sir Aldric";
             }else if (charKey == "veletia") {
-                image_path = setup.ImagePath + "character/valetia/valetia.png";
+                image_path = setup.ImagePath + "character/veletia/veletia.png";
                 charName = "Mistress Veletia";
             }else if (charKey == "thalara") {
                 image_path = setup.ImagePath + "character/thalara/thalara.png";

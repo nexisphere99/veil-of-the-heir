@@ -453,10 +453,10 @@ One last word, Trust her, Caelan. Let her magic shape you, but hold tight to you
   <svg viewBox="0 0 700 500"
        preserveAspectRatio="none"
        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
-    <polygon id="valetia_bloom_room" 
+    <polygon id="veletia_bloom_room" 
              points="122,477,127,471,136,472,147,469,160,450,163,418,164,396,164,369,162,357,153,342,151,332,142,328,145,308,148,281,161,252,168,235,165,215,172,206,178,204,184,188,192,179,204,176,211,176,220,182,229,193,240,209,238,228,247,240,259,254,270,268,271,291,274,311,267,313,254,305,247,298,240,301,244,313,247,329,248,346,247,367,248,390,249,421,251,450,256,465,265,469,271,469,286,478,275,478,263,477,252,473,237,476,231,482,207,485,181,481,165,478,149,483,136,480" 
              class="castle_front_map" 
-             data-passage="valetia_bloom_room" />
+             data-passage="veletia_bloom_room" />
   </svg>
 </div>
 

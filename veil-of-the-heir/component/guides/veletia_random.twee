@@ -330,7 +330,7 @@ Oh no, darling. You will be the divine backup.
 <</if >>
 <strong style="color: red;">Either You still dont need Female Bra or didn’t get the panties. Comeback when you have breasts</strong><br><br>
 <<if $female_underwear_3>>
-[[Craft Cloth with Valetia|interact_with_veletia_for_cloth_craft]] |<br><br>
+[[Craft Cloth with veletia|interact_with_veletia_for_cloth_craft]] |<br><br>
 <</if>>
 [[Leave Mistress Veletia Roswyn|dressing_bloom]] |<br><br>
 [[Leave Royal Dressing Bloom|castle_map_front_select]]
@@ -1744,7 +1744,7 @@ She smiled.<br><br>
 <<speech "mc">>It is to me.<</speech>><br>
 Veletia stepped back and perched on her chair, legs crossed, all elegance and danger.<br><br>
 <<speech "veletia">>Fine. That screen.<</speech>><br>
-<<passage_img "valetia/screen.png">><</passage_img>>
+<<passage_img "veletia/screen.png">><</passage_img>>
 She pointed to a folding divider, draped in chiffon.
 I moved stiffly behind it.
 And then I stopped.

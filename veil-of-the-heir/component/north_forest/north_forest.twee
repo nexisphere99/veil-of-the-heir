@@ -3,7 +3,7 @@
 :: north_forest
 <<nobr>>
 <<if !$north_forest>>
-<<set $currentObjectives = "New Seesions with Valetia">>
+<<set $currentObjectives = "New Seesions with veletia at Bloom Room, at Dressing Bloom...">>
 <<set $currentArc["main_arc"] = 10>>
 <<set $north_forest = true>>
 <</if>>
