@@ -340,8 +340,10 @@ The council chamber fell into silence not hesitation, but reverence. All of them
 
 The heir had chosen.
 
-<<set $currentObjectives = "Visit the Royal Chamber for mother's counsel on choosing a consort.">>
-<<set $currentArc["main_arc"] = 12>>
+/* <<set $currentObjectives = "Visit the Royal Chamber for mother's counsel on choosing a consort.">>
+<<set $currentArc["main_arc"] = 12>> */
+<<set $currentObjectives = "End of Current Main Story">>
+<<set $currentArc["main_arc"] = 12.1>>
 <br><br>
 [[Leave the council chamber|castle_map_front_select]]
 <</nobr>>
