@@ -2073,5 +2073,5 @@ FINAL GUIDANCE
 
 <<set $currentObjectives = "End of Current Main Story">>
 <<set $currentArc["main_arc"] = 16>>
-[[Move Forth|thalara_sexual_guidance_multiple_partners_1_2]]
+[[Leave Her|veil_tower]]
 <</nobr>>
