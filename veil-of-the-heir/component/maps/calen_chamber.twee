@@ -83,6 +83,8 @@ I will become the queen this realm deserves.
 <<set $currentArc["main_arc"] = 2>>
 <<set $day_number += 1>>
 [[Wake Up|mc_bed_chamber]]
+<<elseif $currentArc["main_arc"] == 18>>
+<<goto "dream_sequence">>
 <<else>>
 [img[images/location/mc_bed_img.png]]<br><br>
 <<set $day_number += 1>>

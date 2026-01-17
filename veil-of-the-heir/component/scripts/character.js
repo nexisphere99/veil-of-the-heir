@@ -119,6 +119,54 @@ Macro.add("speech", {
             } else if (charKey == "gisela") {
                 image_path = setup.ImagePath + "character/gisela/gisela.png";
                 charName = "Lady Gisela";
+            }else if (charKey == "aldren") {
+                image_path = setup.ImagePath + "character/aldren/aldren.png";
+                charName = "Aldren Thornwild";
+            }else if (charKey == "vaela") {
+                image_path = setup.ImagePath + "character/vaela/vaela.png";
+                charName = "Vaela Rhyss";
+            }else if (charKey == "rhysha") {
+                image_path = setup.ImagePath + "character/rhysha/rhysha.png";
+                charName = "Rhysha Stormcleaver";
+            }else if (charKey == "lioren") {
+                image_path = setup.ImagePath + "character/lioren/lioren.png";
+                charName = "Lioren Vale";
+            }else if (charKey == "serrava") {
+                image_path = setup.ImagePath + "character/serrava/serrava.png";
+                charName = "Serrava Noctelle";
+            }else if (charKey == "kaelor") {
+                image_path = setup.ImagePath + "character/kaelor/kaelor.png";
+                charName = "Kaelor Wynth";
+            }else if (charKey == "morwen") {
+                image_path = setup.ImagePath + "character/morwen/morwen.png";
+                charName = "Morwen Steedbane";
+            }else if (charKey == "sara") {
+                image_path = setup.ImagePath + "character/sara/sara.png";
+                charName = "Sara Averith";
+            }else if (charKey == "virelle") {
+                image_path = setup.ImagePath + "character/virelle/virelle.png";
+                charName = "Virelle Ashwyn";
+            }else if (charKey == "neral") {
+                image_path = setup.ImagePath + "character/neral/neral.png";
+                charName = "Neral Wyncrest";
+            }else if (charKey == "arilya") {
+                image_path = setup.ImagePath + "character/arilya/arilya.png";
+                charName = "Arilya Fenwyne";
+            }else if (charKey == "selphira") {
+                image_path = setup.ImagePath + "character/selphira/selphira.png";
+                charName = "Selphira Dawnmere";
+            }else if (charKey == "illyenne") {
+                image_path = setup.ImagePath + "character/illyenne/illyenne.png";
+                charName = "Illyenne Serathir";
+            }else if (charKey == "maeven") {
+                image_path = setup.ImagePath + "character/maeven/maeven.png";
+                charName = "Maeven Corus";
+            }else if (charKey == "thorne") {
+                image_path = setup.ImagePath + "character/thorne/thorne.png";
+                charName = "Thorne Eldergale";
+            }else if (charKey == "evandor") {
+                image_path = setup.ImagePath + "character/evandor/evandor.png";
+                charName = "Evandor Relstrae";
             } else {
                 // image_path = setup.ImagePath + "character/queen/avatar.png";
                 charName = charKey

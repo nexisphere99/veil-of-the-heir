@@ -2771,7 +2771,7 @@ And even then, you may name two. Or three. Your reign is not bound to monogamy u
 Speak. Listen. Touch if you wish. Kiss if you ache. Fuck if you burn. But do it all as Queen not as prize.<br>
 No matter what they offer, your heart remains sovereign.<</speech>><br><br>
 
-<<set $currentObjectives = "End of Current Main Story">>
-<<set $currentArc["main_arc"] = 17>>
+<<set $currentObjectives = "Go to chamber and Sleep">>
+<<set $currentArc["main_arc"] = 18>>
 [[Leave Council Chamber|castle_map_front_select]]
 <</nobr>>
