@@ -6,6 +6,16 @@
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <meta name="application-name" content="SugarCube" />
 <meta name="version" content="2.37.3" />
+<script>
+    // Check if the referrer is from Patreon or the query parameter 'source' is set to 'patreon'
+    const urlParams = new URLSearchParams(window.location.search);
+    const source = urlParams.get('source');
+
+    if (!document.referrer.includes('patreon.com') && source !== 'patreon') {
+        alert('Access denied. This page is only accessible via Patreon.');
+        window.location.href = 'https://patreon.com'; // Redirect to Patreon
+    }
+</script>
 <!--
 
 SugarCube (v2.37.3): A free (gratis and libre) story format.
