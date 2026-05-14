@@ -6,16 +6,6 @@
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <meta name="application-name" content="SugarCube" />
 <meta name="version" content="2.37.3" />
-<script>
-    // Check if the referrer is from Patreon or the query parameter 'source' is set to 'patreon'
-    const urlParams = new URLSearchParams(window.location.search);
-    const source = urlParams.get('source');
-
-    if (!document.referrer.includes('patreon.com') && source !== 'patreon') {
-        alert('Access denied. This page is only accessible via Patreon.');
-        window.location.href = 'https://patreon.com'; // Redirect to Patreon
-    }
-</script>
 <!--
 
 SugarCube (v2.37.3): A free (gratis and libre) story format.
@@ -114,7 +104,7 @@ var LZString=function(){var r=String.fromCharCode,o="ABCDEFGHIJKLMNOPQRSTUVWXYZa
 		<div id="init-lacking"><p>Browser lacks capabilities required to play.</p><p>Upgrade or switch to another browser.</p></div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<!-- UUID://27FA6D7B-4709-4B3D-9797-F5BF92C9430B// --><tw-storydata name="Veil of the Heir" startnode="1546" creator="Tweego" creator-version="2.1.1+81d1d71" ifid="27FA6D7B-4709-4B3D-9797-F5BF92C9430B" zoom="0.6" format="SugarCube" format-version="2.37.3" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* twine-user-stylesheet #1: "character.css" */
+	<!-- UUID://27FA6D7B-4709-4B3D-9797-F5BF92C9430B// --><tw-storydata name="Veil of the Heir" startnode="1505" creator="Tweego" creator-version="2.1.1+81d1d71" ifid="27FA6D7B-4709-4B3D-9797-F5BF92C9430B" zoom="0.6" format="SugarCube" format-version="2.37.3" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* twine-user-stylesheet #1: "character.css" */
 /* speech */
 .speech-box {
     display: flex;
@@ -2164,7 +2154,7 @@ $(document).ready(function () {
         <div id="custom-left-bar">
             <div id="sidebar-close" class="mobile-only">✖</div>
             <h1 style="margin: 15% 0 0 0; text-align: center;">Veil of the Heir</h1>
-            <p style="margin: 0px; text-align: center;">Vesion - 0.0.15</p>
+            <p style="margin: 0px; text-align: center;">Vesion - 0.0.13</p>
             <h3 style="margin: 0px; text-align: center;">by Nexisphere Games</h3>
             <div id="left-top-container" class="image-crop">
                 <img id="player-image" class="player-image" src="" alt="Player Image">
@@ -18983,10 +18973,10 @@ I will become the queen this realm deserves.
 &lt;&lt;if $currentArc[&quot;main_arc&quot;] &gt;= 6&gt;&gt;
 &lt;&lt;if $warrior_queen_arc_step == 0&gt;&gt;
 [[Start Training With Aldric|warrior_queen_day_1_1]]
-&lt;&lt;elseif $warrior_queen_arc_step == 1&gt;&gt;
+/* &lt;&lt;elseif $warrior_queen_arc_step == 1&gt;&gt;
 [[Second Day Training With Aldric|warrior_queen_day_2_1]]
 &lt;&lt;elseif $warrior_queen_arc_step == 2&gt;&gt;
-[[Third Day Training With Aldric|warrior_queen_day_3_1]]
+[[Third Day Training With Aldric|warrior_queen_day_3_1]] */
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;/if&gt;&gt;
@@ -41925,1419 +41915,7 @@ Sleep came fitfully. I dreamed of swords that melted in my grip and armour that 
 
 I lay in the dark, the binding tight across my chest, and waited for dawn to come and begin the unmaking of everything I knew.
 
-[[Sleep|mc_bed]]</tw-passagedata><tw-passagedata pid="1505" name="warrior_queen_day_2_1" tags="" position="600,18850" size="100,100">&lt;&lt;set $warrior_queen_arc_step = 1&gt;&gt;
-/* ═══════════════════════════════════════════════
-   DAY 2   STANCE AND CENTER
-   Part 1: Morning   The Body&#39;s Report
-═══════════════════════════════════════════════ */
-
-I woke to pain.
-
-Not sharp pain   not the bright, clean sting of a cut or the hot flare of a bruise. This was //structural// pain. The deep, grinding complaint of muscles that had been asked to do things they had never done, hold positions they had never held, and support a body that was not the body they had been trained for.
-
-My core ached. The band of muscle wrapping my midsection, from the bottom of the ribs to the top of the hips, felt as though it had been beaten with rods. My lower back throbbed with each breath. My thighs   //inner// thighs, specifically, the muscles that had been engaged by yesterday&#39;s wide-legged power stance and then punished for their inadequacy   were so stiff I could barely separate my legs and the breasts were //sore//.
-
-I lay on my back in the half-light of dawn and felt them aching. Not the tenderness of growth, which had become a constant companion these past weeks   a low, humming sensitivity that lived in the tissue like a second heartbeat. This was something layered atop the growth-ache: the soreness of flesh that had been compressed by an ill-fitting chest piece, bounced during two hours of failed swordsmanship, and then squeezed further by Maera&#39;s binding. The tissue was swollen. I could feel it without touching   a heaviness, a //fullness//, as though the breasts had responded to yesterday&#39;s abuse by doubling their efforts to make themselves known.
-
-I placed my hand over my left breast, gingerly, through the sleeping shift. The contact was immediate: warm, soft, //yielding//. The mound was   was it larger than yesterday? I pressed gently. The tissue compressed beneath my fingers, dense and tender, and the nipple   hidden beneath shift and binding but undeniably present   sent a pulse of sensation inward that made me snatch my hand away.
-
-&lt;&lt;speech &quot;mc&quot;&gt;&gt;Do not,&lt;&lt;/speech&gt;&gt; 
-
-I told myself. 
-
-&lt;&lt;speech &quot;mc&quot;&gt;&gt;Do not catalogue. Do not measure. Do not compare to yesterday. Get up. Dress. Move.&lt;&lt;/speech&gt;&gt;
-
-I sat up   and the breasts shifted.
-
-The binding had loosened in sleep, as bindings do, and the tissue that had been compressed against my ribs all night now //dropped// slightly as gravity reasserted itself. A small motion. A quarter-inch, perhaps. But I felt it   felt the weight transfer, felt the flesh settle into a new resting position, felt the gentle, pendulous tug that came with having mass on the chest that responded to gravity independently of the ribcage beneath.
-
-It was the most female sensation I had experienced since the transformation began. Not the tenderness. Not the growth. The //settling//. The way the breast tissue had its own relationship with gravity, separate from the body it sat upon, obeying its own physics.
-
-I sat on the edge of the bed with my feet on the cold stone floor and let the sensation settle with it.
-
-[[Get dressed for training|warrior_queen_day_2_2]]</tw-passagedata><tw-passagedata pid="1506" name="warrior_queen_day_2_2" tags="" position="725,18850" size="100,100">Maera had left a package outside my door. I found it when I opened the chamber to fetch wash-water from the corridor cistern   a wrapped bundle of linen, tied with a neat bow, with a note in her precise hand:
-
-//Proper binding. Wider. Stiffer. Sewn ties. Will not slip. Put it on BEFORE the leathers and eat something   there is bread and cheese in the cloth.//
-
-Beneath the binding was indeed bread and cheese, wrapped in a separate cloth. Maera. Always practical. Always one step ahead.
-
-I unwound the old binding   stiff with dried sweat, loose and useless   and examined the new one. It was clearly her own work: three layers of linen, stitched together for stiffness, with reinforced edges and fabric ties at both ends that could be knotted securely. The width was generous   it would cover from below the armpits to below the breast curve and she had, I noticed with a flush of gratitude, sewn a double layer of padding into the section that would lie over the nipples.
-
-She had thought about my nipples. She had //planned// for them. Had sat somewhere in her chamber last night, needle in hand, and thought: //Caelan&#39;s nipples will chafe against the leather if I do not pad this section.//
-
-The mortification and the gratitude arrived simultaneously, tangled together like fighting cats.
-
-I stripped the sleeping shift over my head   flinching again as the fabric dragged across the nipples, because they were //always// flinching now, every contact a small announcement of their existence   and stood naked in the cold morning air.
-
-The breasts tightened immediately. The cool air found them like a lover&#39;s breath, and the nipples hardened   puckering, contracting, the areolae crinkling into taut little peaks that stood out from the small mounds of flesh like sentinels on alert. I could //see// the goosebumps forming on the breast skin, spreading outward from the nipple in concentric rings, the tissue responding to cold in a way that the flat male chest had never responded to anything.
-
-I wrapped the new binding quickly. The stiffer fabric held better   it compressed the breasts firmly against the ribcage, the padded section settling over the nipples and cushioning them. The ties cinched at my back and held. I tested it   bouncing on my heels, twisting at the waist, swinging my arms in a rough approximation of a sword stroke. The binding held. The breasts were contained. The nipples, padded, did not scrape against anything.
-
-&lt;&lt;speech &quot;mc&quot;&gt;&gt;Thank you, Maera,&lt;&lt;/speech&gt;&gt; 
-
-I murmured. Then, quieter: 
-
-&lt;&lt;speech &quot;mc&quot;&gt;&gt;Thank you for knowing what I needed before I knew it myself.&lt;&lt;/speech&gt;&gt;
-
-I pulled on the training leathers. The chest piece sat better today   not well, not correctly, but better. The binding&#39;s compression reduced the small mounds to a flatter profile, and the padding prevented the nipple impressions that had horrified me yesterday. I could almost pass for the prince I had been.
-
-Almost.
-
-The trousers were the same negotiation as yesterday   the shimmy over widening hips, the tug over a backside that was stubbornly, persistently //rounder//, the lacing at the waist that needed to be tighter as the waist narrowed and looser as the hips flared. But the binding held, and the bread was fresh, and I ate it standing in my chamber with cheese crumbs on my chin and something that was not quite courage but was at least its second cousin settling into my chest alongside the aching breasts.
-
-[[Head to the Iron Garden   Day two training|warrior_queen_day_2_3]]</tw-passagedata><tw-passagedata pid="1507" name="warrior_queen_day_2_3" tags="" position="850,18850" size="100,100">The Iron Garden at dawn. Mist again   Velmoria bred mist the way other kingdoms bred horses, abundantly and without apology.
-
-Aldric was already present. Of course he was. The man did not arrive   he //was there//, as though the yard generated him along with the mist each morning.
-
-But today he carried no sword. In his hands were two things: a wooden dowel, the length of a practice blade but round and smooth, and a sack of sand roughly the size of a large melon.
-
-I eyed the sack with a suspicion that proved, within moments, to be richly justified.
-
-&lt;&lt;speech &quot;mc&quot;&gt;&gt;What purpose does that serve?&lt;&lt;/speech&gt;&gt;
-
-&lt;&lt;speech &quot;aldric&quot;&gt;&gt;Your chest.&lt;&lt;/speech&gt;&gt;
-
-No inflection. No amusement. No malice. Three syllables, delivered with the emotional warmth of a trebuchet stone.
-
-&lt;&lt;speech &quot;aldric&quot;&gt;&gt;Strap it on.&lt;&lt;/speech&gt;&gt;
-
-He tossed the sack to me. I caught it   reflex, the hands still fast even if they were softer   and held it at arm&#39;s length, staring at it as though it were a live serpent.
-
-The sack was weighted to approximately four pounds. It was shaped, roughly, like a pair of breasts   two lobed masses of sand connected by a leather bridge. It had straps. //Chest straps//. Designed to be worn against the torso.
-
-Aldric was asking me to strap a pair of false breasts to my chest.
-
-Over the real, growing, aching ones.
-
-[[Strap on the sand sack|warrior_queen_day_2_4]]</tw-passagedata><tw-passagedata pid="1508" name="warrior_queen_day_2_4" tags="" position="975,18850" size="100,100">The heat that flooded my face could have forged steel.
-
-&lt;&lt;speech &quot;mc&quot;&gt;&gt;You are jesting.&lt;&lt;/speech&gt;&gt;
-
-&lt;&lt;speech &quot;aldric&quot;&gt;&gt;I do not jest. Jesting requires a sense of humour, which I am reliably informed I do not possess. Strap it on.&lt;&lt;/speech&gt;&gt;
-
-&lt;&lt;speech &quot;mc&quot;&gt;&gt;Aldric, I already have   I mean, there is already  &lt;&lt;/speech&gt;&gt;
-
-&lt;&lt;speech &quot;aldric&quot;&gt;&gt;What you //already have// is a pair of buds that weigh, by my estimation, two or three ounces each. What you //will have//, within months, is a pair of breasts that weigh a pound or more apiece. I am not training you for the body you have today. I am training you for the body you will wear to the throne. Strap. It. On.&lt;&lt;/speech&gt;&gt;
-
-I stared at him. He stared back. It was like staring at a cliff face and expecting it to blink.
-
-I strapped it on.
-
-The leather ties went around my torso and over my shoulders, securing the sand sack against my chest. The weight settled immediately   four pounds of sand, divided into two heavy lobes that pressed directly onto the binding, which pressed onto the budding breasts beneath, which pressed onto the hypersensitive tissue that was growing, swelling, and extremely displeased about being subjected to additional compression.
-
-I bit back a hiss. The added pressure on flesh that was already swollen and tender sent bright threads of pain stitching through my ribs, down through the nipples   even through Maera&#39;s careful padding   and deep into the pectoral muscle beneath. The sand shifted with each breath, the lobes swinging slightly, pulling at the straps, generating a constant, rhythmic tug against the chest that was nothing like the body&#39;s own weight and everything like carrying two soft, heavy burdens that the body had not asked for.
-
-&lt;&lt;speech &quot;mc&quot;&gt;&gt;This is...&lt;&lt;/speech&gt;&gt;
-
-I did not finish the sentence. //Humiliating// was the word. //Degrading//. //Correct//. All three were true.
-
-&lt;&lt;speech &quot;aldric&quot;&gt;&gt;Heavy?&lt;&lt;/speech&gt;&gt;
-
-&lt;&lt;speech &quot;mc&quot;&gt;&gt;...Yes.&lt;&lt;/speech&gt;&gt;
-
-&lt;&lt;speech &quot;aldric&quot;&gt;&gt;Good. This is what your chest will carry in six months. Perhaps more. Every stroke, every parry, every step and lunge and pivot will carry this weight. The sooner your body learns to account for it, the sooner the weight becomes invisible. Now   &lt;&lt;/speech&gt;&gt;
-
-He set his feet and sank into a stance I had never seen him demonstrate.
-
-&lt;&lt;speech &quot;aldric&quot;&gt;&gt;Today, you shall learn the Velmorian Feminine Guard.&lt;&lt;/speech&gt;&gt;
-
-[[Learn the Feminine Guard|warrior_queen_day_2_5]]</tw-passagedata><tw-passagedata pid="1509" name="warrior_queen_day_2_5" tags="" position="1100,18850" size="100,100">&lt;&lt;speech &quot;mc&quot;&gt;&gt;The what?&lt;&lt;/speech&gt;&gt;
-
-&lt;&lt;speech &quot;aldric&quot;&gt;&gt;The Velmorian Feminine Guard. An ancient fighting stance designed for the female body. Used by the Queen&#39;s personal guard three centuries past, before the tradition was lost to time and the arrogance of men who decided that if women wished to fight, they could bloody well fight like men.&lt;&lt;/speech&gt;&gt;
-
-That was the longest continuous speech I had heard Aldric deliver in approximately three years. I blinked.
-
-&lt;&lt;speech &quot;aldric&quot;&gt;&gt;The male power stance   the one drilled into every soldier since the day he picks up a practice sword   does the following. Feet wide. Weight in the thighs. Shoulders braced. Center of gravity high, in the chest and upper body. Force generated through mass   the heavier the man, the harder the stroke. This stance was designed for a body with broad shoulders, narrow hips, a flat chest, and a high center of mass. It is, quite simply, a stance built for men.&lt;&lt;/speech&gt;&gt;
-
-He paused.
-
-&lt;&lt;speech &quot;aldric&quot;&gt;&gt;You are not becoming a man.&lt;&lt;/speech&gt;&gt;
-
-The silence that followed was so absolute I could hear the mist condensing on the cobblestones.
-
-&lt;&lt;speech &quot;aldric&quot;&gt;&gt;The Feminine Guard does the opposite. Feet closer together. Weight in the hips   //the hips//, not the thighs. Spine straight, elbows tucked. Center of gravity low, in the pelvis and the core. Force generated not through mass but through rotation   the wider the hips, the stronger the pivot. The lower the centre, the stabler the base. The lighter the frame, the faster the strike.&lt;&lt;/speech&gt;&gt;
-
-He demonstrated and despite the incongruity   a man built like a castle tower adopting a stance designed for a woman&#39;s body   the demonstration was flawless. His body sank low. His weight pooled visibly in his core. His feet drew closer together, precisely positioned, and his elbows tucked to his sides. He became, in the space of three seconds, a different kind of fighter   not smaller, but more //concentrated//. More //dense//. As though every ounce of him had been compressed into the narrow column between hip and shoulder.
-
-&lt;&lt;speech &quot;aldric&quot;&gt;&gt;This stance was designed for bodies with lower centres of gravity. Wider hips. Narrower shoulders. Weight distributed through the midsection rather than the upper body. It was designed  &lt;&lt;/speech&gt;&gt;
-
-He looked at me.
-
-&lt;&lt;speech &quot;aldric&quot;&gt;&gt;  for the body you are growing. Now. Assume the stance.&lt;&lt;/speech&gt;&gt;
-
-[[Attempt the stance|warrior_queen_day_2_6]]</tw-passagedata><tw-passagedata pid="1510" name="warrior_queen_day_2_6" tags="" position="1225,18850" size="100,100">I set my feet closer together. Attempted to drop my weight into the hips   into //the hips//, as though I knew where the hips were, as though the body&#39;s new architecture came with a map and a set of clearly labelled instructions.
-
-The hips were wider. I //knew// this. I felt it every time I sat in a chair that was now too narrow, every time trousers that had once slid on easily now required negotiation. But //finding// them as a source of strength, as the foundation of a fighting stance, was an entirely different proposition.
-
-I sank. Too far. My knees buckled.
-
-&lt;&lt;speech &quot;aldric&quot;&gt;&gt;Not the knees. The hips. Sink //into// them. Imagine your pelvis is a bowl. Pour your weight into the bowl.&lt;&lt;/speech&gt;&gt;
-
-I tried again. Sank. Wobbled. The sand sack swung forward with the motion, its four pounds of false breast weight dragging my balance toward my toes. I lurched, caught myself, and felt my actual breasts compress against the binding as the sand sack pressed inward.
-
-&lt;&lt;speech &quot;mc&quot;&gt;&gt;The sack is  &lt;&lt;/speech&gt;&gt;
-
-&lt;&lt;speech &quot;aldric&quot;&gt;&gt;The sack is showing you what your body will do in six months when you descend into guard. The chest weight will shift your balance forward. Compensate. Lean //back// into the hips. Let the pelvis take the weight that the chest creates.&lt;&lt;/speech&gt;&gt;
-
-I leaned back. The hips widened   or rather, I let them //be// wide, stopped fighting the new angle of the femur, stopped trying to force the legs into the narrow track of the male stance. The wider pelvis accepted the weight that the sand sack was pulling forward. A counterbalance. Physics.
-
-&lt;&lt;speech &quot;aldric&quot;&gt;&gt;Spine straight. Elbows in. Core engaged   tighten the band of muscle around your waist. Feel it? That is your armour. That is what holds the centre when the limbs are in motion.&lt;&lt;/speech&gt;&gt;
-
-I engaged the core. The muscles there   muscles I had never consciously used in combat   fired reluctantly, sluggishly, like servants roused from a long sleep. But they fired. The midsection tightened. The wobble reduced.
-
-&lt;&lt;speech &quot;aldric&quot;&gt;&gt;Now breathe. Into the belly. Not the chest. The belly.&lt;&lt;/speech&gt;&gt;
-
-&lt;&lt;speech &quot;mc&quot;&gt;&gt;I have always breathed into the chest.&lt;&lt;/speech&gt;&gt;
-
-&lt;&lt;speech &quot;aldric&quot;&gt;&gt;Yes. Because the male stance roots strength in the upper body, and chest-breathing expands the ribcage and braces the shoulders. The feminine guard roots strength in the centre. Belly-breathing engages the core, stabilises the pelvis, and  &lt;&lt;/speech&gt;&gt; he gestured at the sand sack &lt;&lt;speech &quot;aldric&quot;&gt;&gt;  prevents the chest weight from oscillating with each breath. If you breathe into the chest, the breasts will move. If the breasts move, the balance shifts. If the balance shifts during a parry, you are dead. Breathe. Into. The belly.&lt;&lt;/speech&gt;&gt;
-
-I breathed into the belly.
-
-The difference was immediate. The chest stilled   the sand sack&#39;s swinging reduced, the false breasts held in place by a ribcage that was no longer expanding and contracting with each breath. The core engaged deeper. The belly filled with air, and the weight pressed //downward// rather than outward   into the hips, into the pelvis, into the widening cradle of bone that was, whether I liked it or not, becoming my body&#39;s true centre of power.
-
-[[Hold the stance|warrior_queen_day_2_7]]</tw-passagedata><tw-passagedata pid="1511" name="warrior_queen_day_2_7" tags="" position="100,18975" size="100,100">I held the stance. For ten seconds. Twenty. Thirty.
-
-At twenty minutes, my lower back was screaming. Sweat ran in rivers down my spine, soaking the linen beneath the sand sack. Every bead of moisture found the binding over my breasts and turned it into a warm, damp compress against tissue that was tender enough to register the temperature change. My thighs trembled   not the massive quads of the old power stance, but the inner thighs, the //adductors//, muscles I had barely been aware of possessing, now burning with the effort of holding the narrower foot position.
-
-My core... my core was //on fire//. The band of muscle Aldric had told me to engage was alight with a deep, structural ache   not the surface burn of a hard workout, but the foundational agony of infrastructure being rebuilt. These muscles had slept for twenty years. They belonged to the body I was becoming, and waking them was like waking a beast that had been hibernating since birth.
-
-But I held the stance.
-
-Shaking. Drenched. Jaw clenched hard enough to crack teeth. The sand sack pulling forward, my hips pulling back, the core holding the balance between them like a keystone in an arch.
-
-I. Held. The. Stance.
-
-Aldric circled me. Slowly. With the patient, predatory orbit of a man assessing a weapon&#39;s readiness. He pressed my left shoulder   testing the stability. The shoulder gave slightly and I compensated from the core, the correction automatic, and I saw something flicker in his grey eyes.
-
-He tapped my right hip with the dowel.
-
-&lt;&lt;speech &quot;aldric&quot;&gt;&gt;Half an inch forward. The hip must be under the shoulder, not behind it.&lt;&lt;/speech&gt;&gt;
-
-I adjusted. The half-inch shift changed the weight distribution and suddenly the stance felt //different//   not easier, but more //aligned//. As though the body had been waiting for this specific configuration and was sighing with a relief I could feel in the bones.
-
-He pressed his palm flat against my lower back. The contact was impersonal   the hand of an armourer adjusting a plate   but the touch still jolted through me. His hand was warm. Large. Calloused. Pressed against a spine that was thinner now, the vertebrae more prominent, the muscle on either side leaner, and the //curve// of the lower back more pronounced   the lumbar lordosis that Thalara had told me would deepen as the pelvis tilted to accommodate its new width.
-
-&lt;&lt;speech &quot;aldric&quot;&gt;&gt;Straighten here. The arch is natural   your spine is changing to match the hips   but in the guard you must control it. Too much arch and your back breaks before your opponent does.&lt;&lt;/speech&gt;&gt;
-
-I straightened the lower back. The adjustment pulled the pelvis forward, which pulled the hips under, which anchored the weight more firmly into the stance, and  
-
-Something //clicked//.
-
-[[The moment it clicks|warrior_queen_day_2_8]]</tw-passagedata><tw-passagedata pid="1512" name="warrior_queen_day_2_8" tags="" position="225,18975" size="100,100">Not in the body. In the //understanding//.
-
-For one crystalline, perfect moment, the stance //aligned//. Weight sinking through hips into earth. Core engaged and alive, a pillar of controlled tension running from ribs to pelvis. The sand sack&#39;s weight distributed evenly, no longer a burden pulling me forward but a component of the system, accounted for and balanced by the counterweight of the hips behind. My breath low, slow, anchored in the belly, the chest still, the heart beating steady behind breasts that were   for one extraordinary second   not an obstacle but simply //part of the machine//.
-
-I felt //rooted//. Not rigid like the old stance, which had planted me like a post to be battered against. Rooted like a willow   flexible, centered, alive with the potential of motion. Every direction was available. Every angle was possible. The stance did not anchor me to a spot   it anchored me to //myself//, to the centre, to the place where the body&#39;s power truly lived.
-
-In the old stance, power had come from the shoulders and thighs   the //outside// of the body, the big muscles, the loud voices. In this stance, power came from the //centre//   the core, the hips, the deep architecture of pelvis and spine. It was quieter. More internal and it used the very things I had been fighting against   the wider hips, the lower centre, the shifted weight   as //assets// rather than obstacles.
-
-The wider hips were not a problem. They were a //base//.
-The lower centre was not a weakness. It was //stability//.
-The weight on the chest was not a burden. It was //information//   a signal the body could learn to read and compensate for, the way a sailor reads the wind.
-
-For one moment, I understood. Not intellectually   the understanding went deeper, into the muscles, into the bones, into the slowly reshaping architecture of a body that was, for the first time, being asked to fight //with// itself rather than against.
-
-Then my left calf cramped.
-
-I collapsed sideways with a yelp that escaped at a pitch I did not recognise as my own   higher, breathier, almost //feminine//   and the shock of hearing that sound from my throat was nearly as disorienting as the cramp itself.
-
-The yelp echoed off the Iron Garden&#39;s stone walls. A crow on the rampart cawed in what sounded like commentary.
-
-I lay on the cobblestones with one leg seized in a knot of cramping muscle and one hand pressed against the sand sack   which had shifted during the fall and was now resting against my actual breasts with the full four pounds of sand compressing the tender tissue directly through the binding, and the pain was //exquisite//   and I stared at the grey sky and thought: //That yelp was a woman&#39;s sound. That sound came from a woman&#39;s throat and it came from me.//.
-
-[[Aldric&#39;s response|warrior_queen_day_2_9]]</tw-passagedata><tw-passagedata pid="1513" name="warrior_queen_day_2_9" tags="" position="350,18975" size="100,100">Aldric stood over me. Arms folded. Naturally.
-
-He did not extend a hand. He never did. Offering help would have been an acknowledgment that the fall was significant. In Aldric&#39;s world, falls were not significant. Only the rising.
-
-I dragged myself upright. The calf was still cramping   a vicious knot beneath the skin   and I bit my lip hard enough to taste copper. The sand sack had resettled against my chest at an angle, one lobe pressing directly onto the left nipple through the binding. Even through Maera&#39;s careful padding, the concentrated pressure on that singular point of sensitivity sent a bright, sharp signal through the breast that was halfway between pain and something I refused to name.
-
-I adjusted the sack. Shifted it back to centre. The nipple throbbed in protest, then settled.
-
-I assumed the feminine guard. Without being told. Without instruction.
-
-Feet together. Weight in hips. Core engaged. Spine straight. Breath in the belly.
-
-The stance held. The calf protested. I overruled the calf.
-
-Aldric circled. He watched. He said nothing for a time that felt longer than the morning.
-
-Then something moved behind those grey eyes   something that, in a more expressive man, might have been approval. In Aldric, it was barely a shift, a softening of the granite by a fraction of a degree. But I had been studying this man&#39;s face for a decade, and I knew his expressions the way a sailor knew weather signs. That was approval.
-
-He gave a single nod.
-
-The nod.
-
-In my entire life of training beneath this man   years of drills, sparring, bruises, and the occasional concussion   I had never received more than that nod. It was his highest currency, spent with a miser&#39;s precision. Worth more than any medal, any praise, any ribbon the court could bestow.
-
-I locked it away inside my chest like a gemstone. Right beside the aching breasts, in the space that was neither prince nor queen but something being forged between the two.
-
-&lt;&lt;speech &quot;aldric&quot;&gt;&gt;Again. Hold for sixty seconds.&lt;&lt;/speech&gt;&gt;
-
-I held for sixty seconds. Shaking. Dripping. Teeth clenched. The sand sack a weight I was learning to carry. The breasts beneath it a weight I was learning to acknowledge.
-
-Sixty seconds. Not a wobble.
-
-&lt;&lt;speech &quot;aldric&quot;&gt;&gt;Again.&lt;&lt;/speech&gt;&gt;
-
-[[Break for water|warrior_queen_day_2_10]]</tw-passagedata><tw-passagedata pid="1514" name="warrior_queen_day_2_10" tags="" position="475,18975" size="100,100">The break came at midmorning. Aldric permitted water and bread   he was not, despite all appearances, actually trying to kill me   and I consumed both while standing, because sitting would have constituted admitting that my legs could not support me.
-
-My legs could not support me. But the principle was important.
-
-I leaned against the weapons rack and drank from the clay jug, water running down my chin and dripping onto the chest piece. The leather was dark with sweat. The binding beneath was thoroughly soaked. The breasts   my actual breasts, small and sore and compressed   ached with a steady, warm throb that pulsed in counterpoint to my heartbeat.
-
-Footsteps from the yard entrance. I straightened   an instinct, the prince&#39;s instinct, //do not be caught leaning//   and immediately regretted it as my core muscles howled.
-
-Nyssa appeared.
-
-She came around the corner barefoot, as always, her layered robes covered in star patterns that seemed to move in the peripheral vision. The crystal orb floated at her shoulder, humming a soft C-sharp that meant, if I remembered correctly, //curious//.
-
-&lt;&lt;speech &quot;nyssa&quot;&gt;&gt;Oh! There you are. Thalara sent me   she wishes to know how the body is responding to the accelerated regimen. Something about monitoring the pectoral tissue development under physical stress conditions.&lt;&lt;/speech&gt;&gt; 
-
-She tilted her head, birdlike. 
-
-&lt;&lt;speech &quot;nyssa&quot;&gt;&gt;Why do you have a sack of sand strapped to your chest?&lt;&lt;/speech&gt;&gt;
-
-&lt;&lt;speech &quot;mc&quot;&gt;&gt;Training.&lt;&lt;/speech&gt;&gt;
-
-&lt;&lt;speech &quot;nyssa&quot;&gt;&gt;It looks as though someone has given you enormous false bosoms.&lt;&lt;/speech&gt;&gt;
-
-&lt;&lt;speech &quot;mc&quot;&gt;&gt;That is //precisely// what someone has done, Nyssa. Thank you for the observation.&lt;&lt;/speech&gt;&gt;
-
-She stepped closer, peering at the sand sack with the scientific fascination she brought to everything   no embarrassment, no judgment, just relentless, cheerful curiosity.
-
-&lt;&lt;speech &quot;nyssa&quot;&gt;&gt;How heavy?&lt;&lt;/speech&gt;&gt;
-
-&lt;&lt;speech &quot;mc&quot;&gt;&gt;Four pounds.&lt;&lt;/speech&gt;&gt;
-
-&lt;&lt;speech &quot;nyssa&quot;&gt;&gt;Hmm. That is approximately the weight of a D-cup bosom on a medium frame, accounting for tissue density and mammary gland volume. Thalara&#39;s projections for your final size are  &lt;&lt;/speech&gt;&gt;
-
-&lt;&lt;speech &quot;mc&quot;&gt;&gt;Nyssa. I do not wish to know my projected final breast size whilst standing in a training yard with sand strapped to my chest.&lt;&lt;/speech&gt;&gt;
-
-&lt;&lt;speech &quot;nyssa&quot;&gt;&gt;Fair. But Caelan   may I?&lt;&lt;/speech&gt;&gt;
-
-She gestured toward the sand sack. I stared at her.
-
-&lt;&lt;speech &quot;mc&quot;&gt;&gt;May you //what//.&lt;&lt;/speech&gt;&gt;
-
-&lt;&lt;speech &quot;nyssa&quot;&gt;&gt;Feel the weight distribution. Thalara wishes to know if Aldric&#39;s simulation is anatomically accurate. The sand should sit higher on the chest for early-stage development   your tissue is currently budding in the upper pectoral region, and the final weight distribution will not descend to a natural hang until the fourth or fifth month of growth.&lt;&lt;/speech&gt;&gt;
-
-She said this with the same cheerful matter-of-factness that she might use to discuss the properties of a herb or the migratory patterns of geese. Nyssa did not experience embarrassment. The concept existed in her vocabulary the way &quot;unicorn&quot; existed in the vocabulary of someone who had never seen one   technically understood, practically irrelevant.
-
-[[Let Nyssa examine the sand sack|warrior_queen_day_2_11]]</tw-passagedata><tw-passagedata pid="1515" name="warrior_queen_day_2_11" tags="" position="600,18975" size="100,100">I sighed. The sigh was higher-pitched than it would have been a month ago.
-
-&lt;&lt;speech &quot;mc&quot;&gt;&gt;Fine. But be quick about it.&lt;&lt;/speech&gt;&gt;
-
-Nyssa&#39;s hands found the sand sack   small, quick, precise. She poked the left lobe, squeezed it, lifted it, let it drop. The motion jostled the straps, which jostled the binding beneath, which jostled the actual breast beneath //that//, and I sucked in a breath through my teeth.
-
-&lt;&lt;speech &quot;nyssa&quot;&gt;&gt;The lobes are too low,&lt;&lt;/speech&gt;&gt; 
-
-she announced. 
-
-&lt;&lt;speech &quot;nyssa&quot;&gt;&gt; The weight should sit here  &lt;&lt;/speech&gt;&gt; 
-
-she pushed the left sand-lobe upward, pressing it higher on my chest, approximately where the budding breast tissue actually sat beneath the binding &lt;&lt;speech &quot;nyssa&quot;&gt;&gt;  
-
-not here. At your current stage of development, the tissue is still high and firm, sitting atop the pectoral muscle. The natural droop comes later. Sir Aldric has simulated the weight of a //mature// bosom but positioned it for a //settled// one. The simulation should match your trajectory, not the destination.&lt;&lt;/speech&gt;&gt;
-
-She adjusted the right lobe as well, pushing it higher. The repositioning changed the weight distribution   the pull on my balance shifted from a forward drag to a higher, tighter compression against the upper chest. It was still heavy. Still unfamiliar. But it sat where the actual breasts sat, and the body&#39;s response was subtly different   less like carrying an external burden and more like an amplification of what was already there.
-
-&lt;&lt;speech &quot;nyssa&quot;&gt;&gt;There,&lt;&lt;/speech&gt;&gt; 
-
-she said, stepping back. 
-
-&lt;&lt;speech &quot;nyssa&quot;&gt;&gt;That is more accurate. You should feel the weight higher now   closer to the collarbone, pulling the shoulders forward rather than the chest down.&lt;&lt;/speech&gt;&gt;
-
-&lt;&lt;speech &quot;mc&quot;&gt;&gt;I feel it.&lt;&lt;/speech&gt;&gt;
-
-&lt;&lt;speech &quot;nyssa&quot;&gt;&gt;Good. The shoulders will want to round forward to compensate. Resist the urge   rounded shoulders compress the developing tissue and can affect growth shape. Stand //tall// with the weight. Let the chest carry it proudly rather than collapsing around it.&lt;&lt;/speech&gt;&gt;
-
-She paused, then added, in a tone that was softer, almost conspiratorial:
-
-&lt;&lt;speech &quot;nyssa&quot;&gt;&gt;Caelan. For what it is worth   the tissue development is beautifully on track. Symmetrical, clean margins, excellent vascularity. Thalara is very pleased. Your body is responding to the alchemy with remarkable... enthusiasm.&lt;&lt;/speech&gt;&gt;
-
-&lt;&lt;speech &quot;mc&quot;&gt;&gt;Enthusiasm,&lt;&lt;/speech&gt;&gt; 
-
-I echoed. 
-
-&lt;&lt;speech &quot;mc&quot;&gt;&gt;My body is //enthusiastically// growing breasts.&lt;&lt;/speech&gt;&gt;
-
-&lt;&lt;speech &quot;nyssa&quot;&gt;&gt;Vigorously, even! The growth rate in the past week has exceeded projections by approximately fifteen percent. If it continus at this pace  &lt;&lt;/speech&gt;&gt;
-
-&lt;&lt;speech &quot;mc&quot;&gt;&gt;Nyssa.&lt;&lt;/speech&gt;&gt;
-
-&lt;&lt;speech &quot;nyssa&quot;&gt;&gt;Right. Not in the training yard. I shall relay to Thalara that the simulation is adjusted and the subject is surviving Sir Aldric&#39;s tender ministrations. Carry on!&lt;&lt;/speech&gt;&gt;
-
-She whirled and departed in a flutter of star-patterned robes, the crystal orb trailing behind her humming a cheerful E-flat.
-
-I stood in the Iron Garden with an adjusted sand sack and the knowledge that my breasts were growing fifteen percent faster than expected, and thought: //Enthusiasm. The word for it is enthusiasm.//.
-
-Aldric reappeared from wherever he had retreated during Nyssa&#39;s visit   likely the shadows, where he maintained a permanent reservation.
-
-&lt;&lt;speech &quot;aldric&quot;&gt;&gt;The mage&#39;s apprentice has adjusted the sack.&lt;&lt;/speech&gt;&gt;
-
-&lt;&lt;speech &quot;mc&quot;&gt;&gt;She said the weight was positioned too low.&lt;&lt;/speech&gt;&gt;
-
-&lt;&lt;speech &quot;aldric&quot;&gt;&gt;Hmph.&lt;&lt;/speech&gt;&gt; 
-
-A pause. 
-
-&lt;&lt;speech &quot;aldric&quot;&gt;&gt;The correction is sound. She is irritating but not incompetent. Resume the stance.&lt;&lt;/speech&gt;&gt;
-
-[[Resume training   afternoon session|warrior_queen_day_2_12]]</tw-passagedata><tw-passagedata pid="1516" name="warrior_queen_day_2_12" tags="" position="725,18975" size="100,100">The afternoon was an education in endurance.
-
-Aldric did not teach new techniques. He did not introduce weapons. He simply made me hold the feminine guard   again, and again, and again. Five minutes. Rest. Five minutes. Rest. Seven minutes. Rest. Ten minutes. Rest. The rest periods grew shorter as the holds grew longer, and my body, already exhausted from the morning, descended into a kind of trembling, sweating, teeth-gritting purgatory that was not quite pain and not quite effort but some unholy marriage of both.
-
-The sand sack was a constant companion. I was beginning to develop a relationship with it   the kind of relationship a prisoner develops with a ball and chain. It swung when I shifted. It pulled when I leaned. It compressed the binding and the breasts beneath during each hold, generating a low-grade ache in the chest tissue that became, over the hours, a background drone I was learning to filter out.
-
-Not ignore. //Filter//. There was a difference. Ignoring the breast ache meant pretending it was not there. Filtering meant acknowledging it, cataloguing it, and filing it under &quot;sensations the body produces that are not emergencies and do not require immediate response.&quot; It was, in its way, the first step toward //integrating// the breasts into the body&#39;s operating system rather than treating them as foreign invaders.
-
-At some point during the afternoon   I had lost track of time, lost track of everything except the stance and the burn and the breath   Aldric began to speak.
-
-&lt;&lt;speech &quot;aldric&quot;&gt;&gt;The body you are building is not weaker than the body you are leaving. It is //different//. The old body was a fortress   thick walls, heavy gates, built to withstand siege. The new body is a river   it does not resist force, it //redirects// it. A fortress stands still and endures. A river flows around every obstacle and wears down mountains given time.&lt;&lt;/speech&gt;&gt;
-
-He circled me. I held the stance. The sweat ran.
-
-&lt;&lt;speech &quot;aldric&quot;&gt;&gt;The masculine fighting tradition treats the body as a weapon of mass. Mass is strength. Mass is power. Mass is dominance. The man with the most mass wins. This is not wrong   for men. For a body with broad shoulders and narrow hips and a flat chest and a high centre of gravity, mass IS the advantage.&lt;&lt;/speech&gt;&gt;
-
-&lt;&lt;speech &quot;aldric&quot;&gt;&gt;But you are not building a body of mass. You are building a body of //precision//. Lower centre. Wider base. Flexible core. The advantages of your changing body are speed, stability, endurance, and rotational force. A man&#39;s hips generate a ninety-degree rotation in a pivot. A woman&#39;s hips   //your// hips, as they widen   will generate a hundred and ten. That additional twenty degrees of rotation is a weapon. It is reach. It is angle. It is the ability to strike from directions a male body cannot access.&lt;&lt;/speech&gt;&gt;
-
-He stopped in front of me. I held his gaze from the feminine guard, shaking, streaming sweat, the sand sack heavy on my chest, the binding damp, the breasts aching, the core burning.
-
-&lt;&lt;speech &quot;aldric&quot;&gt;&gt;Do you understand?&lt;&lt;/speech&gt;&gt;
-
-&lt;&lt;speech &quot;mc&quot;&gt;&gt;Yes.&lt;&lt;/speech&gt;&gt; 
-
-The word came out shaky. Higher than I intended. 
-
-&lt;&lt;speech &quot;mc&quot;&gt;&gt;The body is not... broken. It is different.&lt;&lt;/speech&gt;&gt;
-
-&lt;&lt;speech &quot;aldric&quot;&gt;&gt;It is different and different is not lesser. It is simply different. The sword that fails you yesterday was a weapon designed for the old body. Tomorrow I shall give you a weapon designed for the new one. But today  &lt;&lt;/speech&gt;&gt;
-
-He raised the dowel.
-
-&lt;&lt;speech &quot;aldric&quot;&gt;&gt;  today you learn where the strength lives. In the centre. In the hips. In the breath. The weapon can wait. The foundation cannot. Hold.&lt;&lt;/speech&gt;&gt;
-
-I held.
-
-[[The final hold|warrior_queen_day_2_13]]</tw-passagedata><tw-passagedata pid="1517" name="warrior_queen_day_2_13" tags="" position="850,18975" size="100,100">Sixty consecutive seconds. That was the goal.
-
-I had managed thirty. Forty. Forty-five. Each attempt ended in a tremor that began in the calves, climbed through the thighs, entered the core, and shook the entire structure until the stance collapsed like a tower with its keystone removed.
-
-The sixty-second attempt began at   I guessed   mid-afternoon. The sun had burned through the mist and was now baking the Iron Garden into a stone oven. My leathers were dark with sweat. The binding was thoroughly saturated. The sand sack was somehow even heavier when wet, the sand absorbing moisture and adding weight that Nyssa&#39;s careful adjustment could not account for.
-
-I sank into the feminine guard.
-
-Feet together. Weight in hips. Core engaged. Spine straight. Breath in the belly. Sand sack settled high on the chest, pulling the shoulders forward   resist the pull, stand tall, let the weight be carried rather than collapsed into.
-
-Ten seconds. The stance was solid. The body was remembering yesterday&#39;s moment of //click//   the alignment, the flow, the willow-rootedness.
-
-Twenty seconds. The tremor began in the left calf   the same one that had cramped earlier. I adjusted. Shifted a fraction of weight to the right. The left calf settled.
-
-Thirty seconds. The core was burning. The muscles I had never used were screaming their displeasure at being asked to work a second consecutive day after twenty years of dormancy. I breathed into the belly. The core held.
-
-Forty seconds. The sand sack began to feel different. Not lighter, but... //integrated//. Part of the system. The weight no longer pulled me forward   it sat atop the stance like a load on a well-built cart, balanced, distributed, //accounted for//. My body had found the compensation pattern. The hips countered the chest. The core held the bridge.
-
-Fifty seconds. The sweat was blinding. I blinked it away. My thighs shook. My back ached. The breasts   the real ones, beneath the sand and the binding   throbbed with the deep, warm pulse of tissue that was being compressed and bounced and heated and strained.
-
-Sixty seconds.
-
-I held for sixty seconds without a wobble.
-
-Aldric, who had been watching with a timepiece I had not known he possessed   produced from a pocket with the casual revelation of a man who owned exactly one sentimental object   looked at the dial. Looked at me and gave the nod.
-
-The nod.
-
-I unlocked my stance. My legs buckled immediately   I caught myself on the weapons rack, both hands gripping the wood, head hanging, sweat dripping from my nose and chin and the tips of my long hair. The sand sack hung from my chest like a penance. Beneath it, the breasts pulsed with a relieved, almost //grateful// ache, as though the tissue itself was glad the ordeal was over.
-
-&lt;&lt;speech &quot;aldric&quot;&gt;&gt;Tomorrow. Dawn. Bring nothing.&lt;&lt;/speech&gt;&gt;
-
-He turned and walked away. Frostfang silent at his hip. Footsteps receding. Stone and silence.
-
-I hung from the weapons rack and breathed. Belly-breathing. The way he had taught me.
-
-In the centre of my body, in the place where the new strength was being forged, something that was not quite muscle and not quite will and not quite hope   but was perhaps all three   burned steadily.
-
-[[Return to chambers   evening|warrior_queen_day_2_14]]</tw-passagedata><tw-passagedata pid="1518" name="warrior_queen_day_2_14" tags="" position="975,18975" size="100,100">The walk back to my chambers was a journey conducted primarily on willpower, since my legs had filed a formal complaint with the rest of my body and were operating under protest.
-
-I walked slowly. Carefully. My gait had changed again   not the hip-sway of yesterday, which had been the body&#39;s unconscious accommodation of its new geometry, but a //stiff// walk, the walk of someone whose inner thighs had been set on fire and whose core muscles were staging a general strike. Each step sent small jolts through the body, and each jolt found the breasts, and each time the breasts registered the impact with a tiny, sore, //aware// bounce that I could not prevent because the binding, soaked through with sweat, had loosened just enough to allow the tissue a millimetre of play.
-
-I passed the junction with the maid&#39;s corridor. Maera was not there. But someone else was.
-
-Veletia.
-
-Mistress Veletia Roswyn, Royal Clothier   all fiery red curls and flowing silk and the personality of a bonfire someone had taught to sew   was leaning against the corridor wall with her arms crossed and a measuring tape draped over one shoulder like a general&#39;s sash.
-
-&lt;&lt;speech &quot;veletia&quot;&gt;&gt;Ah. There you are. Maera told me.&lt;&lt;/speech&gt;&gt;
-
-&lt;&lt;speech &quot;mc&quot;&gt;&gt;Told you what.&lt;&lt;/speech&gt;&gt;
-
-&lt;&lt;speech &quot;veletia&quot;&gt;&gt;That your chest piece does not fit. That your binding is inadequate. That you are attempting to fight with growing breasts in armour designed for a man&#39;s flat chest, and that the nipples are visible through the leather.&lt;&lt;/speech&gt;&gt;
-
-She said //nipples// as though it were the most ordinary word in the common tongue. Which, for a woman who had spent her entire career dressing women&#39;s bodies, it presumably was.
-
-&lt;&lt;speech &quot;mc&quot;&gt;&gt;I am //fine//. The new binding Maera made holds well enough  &lt;&lt;/speech&gt;&gt;
-
-&lt;&lt;speech &quot;veletia&quot;&gt;&gt;It holds for sitting in a chair. It does not hold for combat. Come.&lt;&lt;/speech&gt;&gt; 
-
-She pushed off the wall. 
-
-&lt;&lt;speech &quot;veletia&quot;&gt;&gt;I have been working since last night. I have something for you.&lt;&lt;/speech&gt;&gt;
-
-&lt;&lt;speech &quot;mc&quot;&gt;&gt;Veletia, I am exhausted, I am soaked in sweat, my legs are barely functioning, and I  &lt;&lt;/speech&gt;&gt;
-
-&lt;&lt;speech &quot;veletia&quot;&gt;&gt;You have breasts that are being battered to pudding every morning because no one has given you the proper support. //Come//. This will take ten minutes. Then you may collapse.&lt;&lt;/speech&gt;&gt;
-
-She turned and strode down the corridor toward the Bloom Room, her silk robes billowing, the measuring tape swinging from her shoulder like a tail.
-
-I followed. Because arguing with Veletia required more energy than I had, and because   though I would sooner submit to the rack than admit it   she was right. The binding was not enough. The breasts needed something better.
-
-[[The Bloom Room   Veletia&#39;s fitting|warrior_queen_day_2_15]]</tw-passagedata><tw-passagedata pid="1519" name="warrior_queen_day_2_15" tags="" position="1100,18975" size="100,100">The Bloom Room smelled of fabric and lavender and the particular tang of Veletia&#39;s personality, which was a blend of theatrical self-confidence and genuine artistry that could fill a room the way perfume filled a bottle.
-
-She closed the door. Turned to face me. Drew the measuring tape off her shoulder with the precise flourish of a swordsman drawing a blade.
-
-&lt;&lt;speech &quot;veletia&quot;&gt;&gt;Strip the chest piece and the binding.&lt;&lt;/speech&gt;&gt;
-
-&lt;&lt;speech &quot;mc&quot;&gt;&gt;Veletia  &lt;&lt;/speech&gt;&gt;
-
-&lt;&lt;speech &quot;veletia&quot;&gt;&gt;Darling, I have dressed queens, princesses, duchesses, and one very particular baroness who had four breasts due to a magical accident. I assure you, whatever you have beneath that leather is nothing I have not seen, measured, accommodated, and improved upon. Strip.&lt;&lt;/speech&gt;&gt;
-
-I unstrapped the sand sack first. Set it aside. Then unlaced the leather chest piece, wincing as the stiff hide separated from the sweat-soaked binding beneath. Then, with the resignation of a person walking to the gallows, I unwound the binding.
-
-The breasts emerged from their compression like prisoners released from cells. The tissue, held flat against the ribs for hours, expanded   the blood flow returning, the flesh swelling slightly as the capillaries reopened, the shape rounding from the flattened profile of the binding into its natural form. The nipples, freed from the padding, hardened immediately in the Bloom Room&#39;s cool air   two dark pink peaks standing at attention atop the small mounds of new flesh.
-
-I stood there in a damp, sweaty tunic that concealed nothing.
-
-Veletia looked. Assessed. The way Maera had assessed, but with a professional&#39;s eye   she was seeing not the heir&#39;s embarrassment or the transformation&#39;s progress but the //engineering problem//. A body in transition. Clothing to be designed. Measurements to be taken.
-
-&lt;&lt;speech &quot;veletia&quot;&gt;&gt;Tunic off.&lt;&lt;/speech&gt;&gt;
-
-&lt;&lt;speech &quot;mc&quot;&gt;&gt;Must I?&lt;&lt;/speech&gt;&gt;
-
-&lt;&lt;speech &quot;veletia&quot;&gt;&gt;Darling, I cannot measure your bust through a layer of linen. Off. Now. The sooner I measure, the sooner I sew, the sooner your breasts have a home that does not bruise them.&lt;&lt;/speech&gt;&gt;
-
-I pulled the tunic over my head. The fabric caught the nipples   of course it did, because the nipples //existed// to be caught by passing fabric   and I flinched at the sensitivity, and then stood before Veletia bare-chested.
-
-Bare-chested. With breasts.
-
-Small breasts. New breasts. Firm, high-sitting, petal-soft breasts with prominent nipples and widening areolae and the unmistakable shape of female mammary tissue in its earliest stages of development.
-
-Veletia did not gasp. She did not stare. She did not comment on the strangeness, the sadness, the confusion. She simply raised the measuring tape and went to work.
-
-&lt;&lt;speech &quot;veletia&quot;&gt;&gt;Arms up.&lt;&lt;/speech&gt;&gt;
-
-[[The measurements|warrior_queen_day_2_16]]</tw-passagedata><tw-passagedata pid="1520" name="warrior_queen_day_2_16" tags="" position="1225,18975" size="100,100">She measured.
-
-Around the ribcage, just beneath the breasts   the //underbust//, she called it, a word I had never needed before and now apparently required. The tape snugged against my ribs, pressing the warm skin, and Veletia read the number aloud to herself.
-
-&lt;&lt;speech &quot;veletia&quot;&gt;&gt;Thirty-one inches underbust. Down from thirty-three at your last fitting. The ribcage is narrowing. Good   it will continue.&lt;&lt;/speech&gt;&gt;
-
-Around the chest at its fullest point   the tape passing directly over the nipples, which registered the contact with a sharp pulse of sensitivity that I suppressed through clenched teeth. Veletia&#39;s hands were impersonal, quick, expert. She held the tape level, read it, and noted the number.
-
-&lt;&lt;speech &quot;veletia&quot;&gt;&gt;Thirty-three and a half inches at the bust. That gives us a two-and-a-half-inch difference. For current sizing, you are... hm.&lt;&lt;/speech&gt;&gt; 
-
-She tilted her head, considering. 
-
-&lt;&lt;speech &quot;veletia&quot;&gt;&gt;Between an A and a B. Closer to B. The tissue is dense and growing quickly   Nyssa tells me fifteen percent above projected rate. Within a fortnight you shall be a solid B. Within a month... well.&lt;&lt;/speech&gt;&gt;
-
-She smiled. The smile of a woman who was already designing something in her mind.
-
-&lt;&lt;speech &quot;veletia&quot;&gt;&gt;Within a month, we shall have this conversation again with larger numbers.&lt;&lt;/speech&gt;&gt;
-
-She measured the distance between the nipples. The width of each breast from outer edge to inner edge. The distance from the nipple to the //inframammary fold//   the crease where the breast met the ribcage, which was just beginning to form, a faint line of shadow beneath each mound that had not existed a week ago.
-
-Each measurement was a data point. Each data point was a fact about my body that I had not possessed yesterday. I was learning, through Veletia&#39;s tape and Veletia&#39;s vocabulary, the architecture of breasts   my breasts   in a language that was clinical and specific and left no room for denial.
-
-&lt;&lt;speech &quot;veletia&quot;&gt;&gt;The inframammary fold is establishing. Good. That is when the shape begins to settle   the breast will hang naturally from this crease rather than sitting atop the pectoral. You are transitioning from bud stage to early formation. The sensitivity  &lt;&lt;/speech&gt;&gt;
-
-&lt;&lt;speech &quot;mc&quot;&gt;&gt;Is significant.&lt;&lt;/speech&gt;&gt;
-
-&lt;&lt;speech &quot;veletia&quot;&gt;&gt;Naturally. The nerve endings are proliferating. The nipple-areolar complex is expanding   I can see the areolae have widened considerably. The Montgomery glands  &lt;&lt;/speech&gt;&gt; 
-
-she pointed to the small bumps on the areolae, which I had noticed but not named 
-
-&lt;&lt;speech &quot;veletia&quot;&gt;&gt;  are developing. Those are the tiny raised spots around the nipple. Every woman has them. They secrete oils that keep the nipple supple. You have approximately twelve on the left and ten on the right, which is within normal range.&lt;&lt;/speech&gt;&gt;
-
-She had counted my Montgomery glands. This woman had looked at my nipples and //counted the bumps//.
-
-&lt;&lt;speech &quot;mc&quot;&gt;&gt;Veletia. I beg you. The garment.&lt;&lt;/speech&gt;&gt;
-
-&lt;&lt;speech &quot;veletia&quot;&gt;&gt;Patience, darling. Art is not rushed.&lt;&lt;/speech&gt;&gt;
-
-[[The training corset revealed|warrior_queen_day_2_17]]</tw-passagedata><tw-passagedata pid="1521" name="warrior_queen_day_2_17" tags="" position="100,19100" size="100,100">She turned to a work table where a garment lay beneath a cloth. She whisked the cloth away with the theatrical flourish of a woman who could not perform any action without performing it //dramatically//.
-
-&lt;&lt;speech &quot;veletia&quot;&gt;&gt;Behold.&lt;&lt;/speech&gt;&gt;
-
-It was... not what I expected.
-
-I had expected a binding. A strip of reinforced linen, perhaps, or a leather band   something utilitarian, something that //concealed//. What Veletia had made was something else entirely.
-
-A training corset. Not the decorative confections I had seen her create for court ladies   all satin and whalebone and the aesthetic suffering of women who wished to appear as though their waists had been fashioned by gods rather than genetics. This was built for //war//.
-
-The exterior was reinforced linen, dyed dark grey   practical, invisible beneath armour. Thin steel boning ran vertically through the torso, providing structure without rigidity. The chest section was //shaped//   two cupped panels, padded with lambskin, designed to hold and support the breast tissue without compressing it flat. Each cup had internal structure: a gentle curve that would cradle the breast&#39;s natural shape, a reinforced lower edge where the inframammary fold would sit, and   critically   a double layer of soft cotton padding over the nipple zone.
-
-The waist was lightly boned. Not cinching   supporting. The back had lacing ties that could be adjusted in seconds.
-
-I picked it up. It weighed almost nothing.
-
-&lt;&lt;speech &quot;veletia&quot;&gt;&gt;The cups are sized for your current measurement plus room for four weeks of growth. The padding over the nipple area is removable   as sensitivity decreases, you can reduce the cushioning. The boning supports the torso without restricting respiration or rotation. The lacing is leather   it will not slip when wet.&lt;&lt;/speech&gt;&gt;
-
-She took it from my hands and held it against my bare chest, positioning the cups over the breasts. The lambskin lining touched the skin   warm, impossibly soft, and the nipples, which had been standing at hard, aching attention in the cool air, //relaxed//. The padding cushioned them. The cups cradled the tissue. The weight of the breasts   small though it was   transferred from the chest wall to the garment&#39;s structure, and the //relief// was immediate.
-
-&lt;&lt;speech &quot;mc&quot;&gt;&gt;Oh.&lt;&lt;/speech&gt;&gt;
-
-The sound escaped before I could catch it. Small. Surprised. Almost... grateful.
-
-&lt;&lt;speech &quot;veletia&quot;&gt;&gt;Oh, she saith,&lt;&lt;/speech&gt;&gt; 
-
-Veletia murmured, and her voice was warm. 
-
-&lt;&lt;speech &quot;veletia&quot;&gt;&gt;As though the women of the world have not known this for ten thousand years. Turn around. Let me lace you.&lt;&lt;/speech&gt;&gt;
-
-I turned. Her hands were quick, expert, the laces threading through eyelets with the speed of long practice. The corset tightened around my torso   snug but not restrictive. The cups settled against the breasts, lifting them slightly, holding them firmly, eliminating the bounce and the shift and the constant, maddening //movement// that had plagued every moment of training.
-
-For the first time in weeks, the breasts were //held//. Not compressed. Not flattened. Not ignored. //Held//. Supported. Acknowledged. Given a structure that said: //You are here. You are real. You are accounted for.//.
-
-&lt;&lt;speech &quot;veletia&quot;&gt;&gt;Move,&lt;&lt;/speech&gt;&gt; 
-
-Veletia instructed. 
-
-&lt;&lt;speech &quot;veletia&quot;&gt;&gt;Arms up. Arms out. Twist at the waist. Bend forward. Stand on your toes and bounce on your heels.&lt;&lt;/speech&gt;&gt;
-
-I moved. Arms up   the corset rode with the motion, the boning flexing to accommodate the stretch. Arms out   the cups held, the breasts stayed centred. Twist   the torso rotated freely, the steel bones pivoting without restriction. Bend forward   the breasts, supported from below, did not hang or swing. Bounce on heels   the tissue //stayed//.
-
-No bounce. No swing. No pull. No grinding of nipple against rough leather. The breasts were //there//   present, acknowledged, a part of the body   but they were //managed//. Controlled. Integrated.
-
-&lt;&lt;speech &quot;mc&quot;&gt;&gt;It is...&lt;&lt;/speech&gt;&gt;
-
-I searched for the word. //Comfortable// was wrong   nothing about having new breasts was //comfortable//. //Correct// was closer. //Right// was closest.
-
-&lt;&lt;speech &quot;mc&quot;&gt;&gt;Like armour,&lt;&lt;/speech&gt;&gt; I said.
-
-Veletia&#39;s smile broke wide. A real smile   warm, proud, stripped of the theatrical veneer.
-
-&lt;&lt;speech &quot;veletia&quot;&gt;&gt;That, darling, is precisely what it is. Armour for the parts of you that the old armour forgot.&lt;&lt;/speech&gt;&gt;
-
-[[The walk back   a different body|warrior_queen_day_2_18]]</tw-passagedata><tw-passagedata pid="1522" name="warrior_queen_day_2_18" tags="" position="225,19100" size="100,100">She sent me away with the training corset and instructions to wear it beneath the leathers for every session. She also, because she was Veletia and could not leave well enough alone, sent me with a small pot of salve.
-
-&lt;&lt;speech &quot;veletia&quot;&gt;&gt;For the nipples. The friction from today has likely irritated them. Apply at night and morning. It contains moonpetal extract   the same ingredient in your transformation potions, but in a topical form. It will soothe the tissue and promote healthy development.&lt;&lt;/speech&gt;&gt;
-
-&lt;&lt;speech &quot;mc&quot;&gt;&gt;You are asking me to rub transformation potion on my nipples.&lt;&lt;/speech&gt;&gt;
-
-&lt;&lt;speech &quot;veletia&quot;&gt;&gt;I am asking you to care for a part of your body that is new and fragile and deserving of attention. The nipples are not your enemy, Caelan. They are your body&#39;s way of telling you that change is happening. Listen to them.&lt;&lt;/speech&gt;&gt;
-
-I took the salve. I took the corset. I walked back to my chambers with a different posture   the training corset held my torso straighter, the gentle compression engaging the core muscles, the breast support eliminating the subtle forward lean that the chest weight had been creating. I walked //taller//.
-
-The walk was different. Not just the posture   the //gait//. The corset&#39;s structure stabilised the hips, and the stabilised hips moved with a smoother, more controlled version of the sway that had embarrassed me yesterday. Not eliminated   the wider pelvis made some degree of hip motion inevitable. But //refined//. Controlled. Less like a body being dragged into femininity and more like a body learning to move with intention.
-
-I passed the two young soldiers from yesterday. They looked. I met their eyes. They looked away first.
-
-Progress.
-
-[[Maera&#39;s evening visit|warrior_queen_day_2_19]]</tw-passagedata><tw-passagedata pid="1523" name="warrior_queen_day_2_19" tags="" position="350,19100" size="100,100">Maera arrived at my chamber that evening with heated cloths, soup, and her customary absence of tact.
-
-&lt;&lt;speech &quot;maera&quot;&gt;&gt;You look as though a horse has sat upon you.&lt;&lt;/speech&gt;&gt;
-
-&lt;&lt;speech &quot;mc&quot;&gt;&gt;Something not far from it.&lt;&lt;/speech&gt;&gt;
-
-I was lying on the bed, still wearing the training corset   partly because the support was genuinely soothing to the aching breast tissue, and partly because unlacing it felt like it required more coordination than my exhausted hands could manage. The rest of me was stripped to trousers and bare feet, my hair damp from a havey wash, my arms splayed at my sides.
-
-Maera set the soup on the bedside table and sat on the edge of the mattress. She looked at the corset   at the grey linen, the steel boning, the shaped cups that held two small but visible mounds of flesh.
-
-&lt;&lt;speech &quot;maera&quot;&gt;&gt;Veletia&#39;s work?&lt;&lt;/speech&gt;&gt;
-
-&lt;&lt;speech &quot;mc&quot;&gt;&gt;Yes. She measured me. She counted my Montgomery glands. She told me I am between an A and a B cup.&lt;&lt;/speech&gt;&gt;
-
-&lt;&lt;speech &quot;maera&quot;&gt;&gt;What is a Montgomery gland?&lt;&lt;/speech&gt;&gt;
-
-&lt;&lt;speech &quot;mc&quot;&gt;&gt;The bumps on the areolae. Apparently I have twelve on the left and ten on the right.&lt;&lt;/speech&gt;&gt;
-
-Maera stared at me for a long moment. Then she laughed   a real, full laugh, the sound of someone who has been handed an absurdity so complete that the only possible response is joy.
-
-&lt;&lt;speech &quot;maera&quot;&gt;&gt;Oh, Caelan. Only you could turn a breast fitting into a medical examination.&lt;&lt;/speech&gt;&gt;
-
-&lt;&lt;speech &quot;mc&quot;&gt;&gt;I did not turn it into anything. Veletia simply... Veletia&#39;d.&lt;&lt;/speech&gt;&gt;
-
-&lt;&lt;speech &quot;maera&quot;&gt;&gt;Yes. She does that.&lt;&lt;/speech&gt;&gt; 
-
-Maera&#39;s laughter settled into a smile. 
-
-&lt;&lt;speech &quot;maera&quot;&gt;&gt;May I see? The corset?&lt;&lt;/speech&gt;&gt;
-
-&lt;&lt;speech &quot;mc&quot;&gt;&gt;You are looking at it.&lt;&lt;/speech&gt;&gt;
-
-&lt;&lt;speech &quot;maera&quot;&gt;&gt;I mean the //fit//. I spent half the night making you a binding that lasted approximately one hour. I should like to see what a professional produces.&lt;&lt;/speech&gt;&gt;
-
-She leaned forward and examined the corset with the eye of a craftswoman assessing another&#39;s work. She ran a finger along the boning. Tested the cup shape. Tugged the lacing.
-
-&lt;&lt;speech &quot;maera&quot;&gt;&gt;It holds well. The cups are good   they follow your shape without squashing and the nipple padding...&lt;&lt;/speech&gt;&gt; 
-
-she pressed gently over the padded nipple area, and I inhaled sharply 
-
-&lt;&lt;speech &quot;maera&quot;&gt;&gt;...is clearly needed. Still tender?&lt;&lt;/speech&gt;&gt;
-
-&lt;&lt;speech &quot;mc&quot;&gt;&gt;Always.&lt;&lt;/speech&gt;&gt;
-
-&lt;&lt;speech &quot;maera&quot;&gt;&gt;It will pass. Not soon, but it will pass. My sister&#39;s were sore for a full year when they came in at thirteen.&lt;&lt;/speech&gt;&gt;
-
-The casual comparison   //my sister&#39;s//   settled into the room like a stone dropped into still water. Maera had sisters. Her sisters had grown breasts at thirteen, as girls do and now Maera was sitting on my bed, examining a corset designed to support breasts that I was growing at twenty, because I was becoming what her sisters had been born as.
-
-The silence stretched. Maera filled it, as she always did, with the practical.
-
-&lt;&lt;speech &quot;maera&quot;&gt;&gt;Eat your soup. I shall unlace the corset for you   you can barely lift your arms, I can see it and then  &lt;&lt;/speech&gt;&gt; 
-
-she produced a small jar from her apron 
-
-&lt;&lt;speech &quot;maera&quot;&gt;&gt;  I shall show you how to apply the salve Veletia gave you. Unless you have already figured out the complicated process of rubbing cream on your own chest.&lt;&lt;/speech&gt;&gt;
-
-&lt;&lt;speech &quot;mc&quot;&gt;&gt;I believe I can manage.&lt;&lt;/speech&gt;&gt;
-
-&lt;&lt;speech &quot;maera&quot;&gt;&gt;Mmhm. yesterday you believed the binding would hold. Let me help, Caelan. That is what I am //for//.&lt;&lt;/speech&gt;&gt;
-
-She moved behind me and began unlacing the corset. Her fingers worked the ties with the efficiency of someone who had undressed and dressed bodies her entire working life. The tension loosened incrementally   the ribs expanding, the core muscles releasing, the breast tissue, freed from the cups&#39; gentle compression, settling against the chest with that same //settling// sensation that had startled me this morning.
-
-The corset came away. Beneath it, the breasts sat against my bare skin   small, sore, pink where the cups had pressed, the nipples swollen and darker than they had been this morning, the areolae puffy from a full day of compression and heat and the mysterious internal alchemy that was, //enthusiastically//, building them larger.
-
-&lt;&lt;speech &quot;maera&quot;&gt;&gt;Now the salve.&lt;&lt;/speech&gt;&gt; 
-
-She opened the jar. A sweet, floral scent   moonpetal   filled the air. 
-
-&lt;&lt;speech &quot;maera&quot;&gt;&gt;A small amount. Warmed between the fingers first. Then  &lt;&lt;/speech&gt;&gt;
-
-She dipped her fingertips into the salve. Rubbed them together to warm the cream and then, with the same impersonal efficiency she had used on the binding and the corset, she pressed her fingertips against my left breast and began to smooth the salve into the skin.
-
-[[The salve|warrior_queen_day_2_20]]</tw-passagedata><tw-passagedata pid="1524" name="warrior_queen_day_2_20" tags="" position="475,19100" size="100,100">I stopped breathing.
-
-Maera&#39;s fingers moved in small, circular motions   starting at the outer edge of the breast, working inward toward the nipple, the salve leaving a thin, glistening sheen on the skin that tingled with the moonpetal&#39;s magic. The touch was clinical. Professional. The touch of a handmaid performing a task.
-
-But the //sensation// was anything but clinical.
-
-The breast tissue, compressed and aching all day, responded to the gentle touch with a gratitude that bordered on betrayal. Each circular stroke sent warmth spreading through the mound   not the warmth of heat, but the warmth of //attention//. Of touch. Of fingers on skin that was new and sensitive and desperate, in some primal, biological way, for the contact that told it: //You are real. You are here. Someone acknowledges you.//.
-
-The salve tingled. The moonpetal essence sank into the tissue with a cool, silvery sensation that chased the ache and replaced it with something softer   a humming, a settling, a deep relaxation of tissue that had been clenched against the world all day.
-
-Maera&#39;s fingers reached the areola. The ring of darker skin was swollen and warm, and when her fingertip crossed the boundary from breast-skin to areola-skin, I gasped   a small, involuntary sound, because the sensitivity there was //different//. Sharper. More specific. The areola was a receiver tuned to a frequency the rest of the chest could not hear.
-
-&lt;&lt;speech &quot;maera&quot;&gt;&gt;I know,&lt;&lt;/speech&gt;&gt; 
-
-she said softly. 
-
-&lt;&lt;speech &quot;maera&quot;&gt;&gt;The areolae are the most sensitive part during this stage. I shall be gentle.&lt;&lt;/speech&gt;&gt;
-
-She smoothed the salve over the areola   carefully, lightly, the touch barely there and then, with a precision that suggested she had done this before   for her sisters, perhaps, during their own development   she applied a thin layer directly to the nipple.
-
-I bit down on my lower lip. The nipple, when touched, did not simply //register// the contact. It //bloomed//. The sensation radiated outward from the tip   a pulse, a wave, a spreading circle of awareness that traveled from the nipple through the breast, down through the chest wall, and into the centre of my body where it landed like a warm stone dropped into deep water.
-
-Not pain. Not pleasure. Something between. Something that the male body had never produced and that this body was producing with an eloquence that left me breathless.
-
-&lt;&lt;speech &quot;maera&quot;&gt;&gt;Breathe, Caelan,&lt;&lt;/speech&gt;&gt; 
-
-Maera said. She had moved to the right breast, repeating the process   circular strokes, outer to inner, areola, nipple. The right was slightly less sensitive than the left, for reasons Thalara would probably attribute to asymmetric nerve proliferation, but the effect was the same: the salve sank in, the ache receded, and the tissue softened beneath Maera&#39;s fingers into something that felt   for the first time   //cared for//.
-
-&lt;&lt;speech &quot;maera&quot;&gt;&gt;There,&lt;&lt;/speech&gt;&gt; 
-
-she said, wiping her hands on a cloth. 
-
-&lt;&lt;speech &quot;maera&quot;&gt;&gt;Every night and every morning. The salve will reduce the inflammation, promote healthy growth, and protect the skin from cracking as it stretches.  &lt;&lt;/speech&gt;&gt; 
-
-she paused 
-
-&lt;&lt;speech &quot;maera&quot;&gt;&gt;  it will help you become... //familiar// with them. The more you touch them, the less strange they feel. They are your body, Caelan. They deserve to be known by the hand that lives in them.&lt;&lt;/speech&gt;&gt;
-
-I looked at my chest. The breasts glistened with the salve, the skin flushed and smooth, the nipples dark and soft in the lamplight. They looked... peaceful. Tended. Like something a gardener had watered.
-
-&lt;&lt;speech &quot;mc&quot;&gt;&gt;Maera.&lt;&lt;/speech&gt;&gt;
-
-&lt;&lt;speech &quot;maera&quot;&gt;&gt;Yes?&lt;&lt;/speech&gt;&gt;
-
-&lt;&lt;speech &quot;mc&quot;&gt;&gt;Thank you.&lt;&lt;/speech&gt;&gt;
-
-She smiled. The sharp, mischievous face softened into something older and warmer.
-
-&lt;&lt;speech &quot;maera&quot;&gt;&gt;You are welcome. Now eat your soup before it grows cold, and then //sleep//. Tomorrow, that monster of a man will have you holding stances until your legs give up and apply for employment in someone else&#39;s body.&lt;&lt;/speech&gt;&gt;
-
-She left the salve on the bedside table, straightened the blankets, and departed with the brisk efficiency of a woman who had delivered exactly as much tenderness as the situation required and not one grain more.
-
-[[Eat the Soup|warrior_queen_day_2_21]]</tw-passagedata><tw-passagedata pid="1525" name="warrior_queen_day_2_21" tags="" position="600,19100" size="100,100">I ate the soup. It was good. Halda&#39;s work   rich, savoury, thick with root vegetables and a warmth that felt like being held.
-
-I applied the salve again myself, before bed. Maera was right   the more I touched them, the less strange they felt. My own fingers on my own breast skin. The circular motions. The areola&#39;s sharpened sensitivity. The nipple&#39;s deep, radiating pulse. These were //my// sensations, produced by //my// body, and every night I practiced them was a night I became less of a stranger in my own flesh.
-
-I lay in bed wearing only the sleeping shift, without the corset or the binding. The breasts rested against my chest   small, salved, glowing faintly with the moonpetal&#39;s residual tingle   and for the first time I did not try to sleep on my stomach, did not try to crush them flat, did not try to pretend they were not there.
-
-They were there. They were growing. They were becoming a permanent part of me, alongside the hips and the waist and the hair and the voice and the face that was softening in the mirror and today, in the Iron Garden, standing in the feminine guard with a sand sack on my chest and a warrior&#39;s breath in my belly, I had felt something I had not expected to feel.
-
-I had felt the //potential//.
-
-Not the body I had lost. Not the prince who was dissolving. But the thing //growing// beneath the dissolution   the fighter in the feminine guard, the warrior whose strength lived in the centre, the queen whose body would carry breasts and blades and a crown and the weight of an entire kingdom.
-
-Not there yet. Not close. But the foundation was laid.
-
-I closed my eyes. The breasts settled. The core ached. Somewhere beneath both, in the deep place where Aldric had taught me to breathe, the strength took root.
-
-I was too tired to name it. But it was there and tomorrow   another dawn, another yard, another lesson in the body I was becoming   it would still be there.
-
-Waiting to grow.
-&lt;&lt;set $warrior_queen_arc_step = 2&gt;&gt;
-[[Sleep|mc_bed]]</tw-passagedata><tw-passagedata pid="1526" name="warrior_queen_day_3_1" tags="" position="725,19100" size="100,100">/* ═══════════════════════════════════════════════
-   DAY 3   THE RAPIER INTRODUCTION
-   Part 1: Morning   The Corset&#39;s First Dawn
-═══════════════════════════════════════════════ */
-
-I woke before the summons.
-
-Not from discipline   from //discomfort//. The breasts had spent the night growing, apparently, because the dull ache that had been a background hum when I fell asleep was now a proper throb, insistent and warm, pulsing in both mounds with the rhythm of a second heartbeat. The tissue felt //tighter//. Fuller. As though someone had, during the night, gently inflated two small cushions beneath my skin.
-
-I lay still, staring at the ceiling, and assessed the situation with the clinical detachment I was learning to cultivate. A detachment that lasted approximately four seconds before my hand drifted to my chest.
-
-The left breast was... //more//. More than yesterday. Not dramatically   not the sudden leap of the growth-dream that had plagued my sleep on the first night   but measurably. The mound was rounder beneath my fingertips. The tissue denser. The inframammary fold   that crease Veletia had measured, the line where breast met ribcage   was deeper, more defined. Yesterday, my fingers had smoothed over a gentle transition from chest wall to breast curve. Today, there was a //ledge//. A small one, barely perceptible, but present: the point where the breast began to hang rather than merely sit.
-
-I cupped the breast in my palm. The flesh filled my hand differently than it had two days ago. There was more of it. The weight was slightly greater   a few grams, perhaps, nothing a scale would catch but something my hand, which had been touching this chest for twenty years and only recently been introduced to its new tenants, could not miss.
-
-The nipple was harder this morning. Not from cold   the chamber was warm   but from some internal process, some growth-related engorgement that kept the nub raised and prominent against the centre of the areola. I could feel it pressing against my palm: a small, stiff point, radiating a low, constant signal that said //I am here, I am new, I am bigger than I was yesterday and I will be bigger still tomorrow//.
-
-&lt;&lt;speech &quot;mc&quot;&gt;&gt;Good morning to you too,&lt;&lt;/speech&gt;&gt; 
-
-I told the breast.
-
-It did not respond. But it continued throbbing, which I chose to interpret as acknowledgment.
-
-[[Put on the training corset|warrior_queen_day_3_2]]</tw-passagedata><tw-passagedata pid="1527" name="warrior_queen_day_3_2" tags="" position="850,19100" size="100,100">The training corset was waiting on the chair where I had draped it last night. I picked it up and held it for a moment, examining it in the dawn light. Grey linen. Steel boning. Lambskin-lined cups. Nipple padding. A garment designed for a woman&#39;s body, built for combat.
-
-//My// garment. For //my// body.
-
-I stripped the sleeping shift. The cool air found the breasts immediately   the nipples puckered, the areolae tightening, goosebumps spreading across the pale skin of the new tissue in that now-familiar cascade of involuntary response. I watched it happen in the mirror   watched my own nipples harden, watched the goosebumps chase each other across the small mounds   and felt the peculiar dissonance of observing a process that was entirely automatic, entirely female, and entirely mine.
-
-The salve first. I opened the jar, scooped a small amount onto my fingertips, and rubbed them together to warm the cream. Moonpetal scent filled the air   sweet, silvery, alive with the faint tingle of transformation alchemy.
-
-I applied it to the left breast. Circular motions, outer to inner, as Maera had shown me. The skin was smooth beneath my fingers, the tissue warm and yielding, and the sensation of touching my own breast with deliberate, attentive care was becoming   incrementally, reluctantly   less alien. Not normal. But //familiar//.
-
-The areola. The sensitivity sharpened as my fingers crossed the border   the ring of darker skin was a threshold between general awareness and specific, acute attention. I circled the areola gently, pressing the salve into the Montgomery glands   those tiny raised bumps that Veletia had counted, twelve on the left, ten on the right   and each bump responded to the pressure with a small, bright signal that ran inward toward the nipple like tributaries feeding a river.
-
-The nipple. I touched it last, briefly, a single pass of salve-slicked fingertips across the stiff nub. The sensation //bloomed//   that radiating pulse, deep and warm, spreading from the nipple through the breast and down into the chest. Not pleasure. Not pain. Something the body was still learning to categorize, filing under //new// and //intense// and //pay attention//.
-
-Right breast. Same process. Slightly less sensitive, slightly smaller   the asymmetry was subtle but real, and Veletia had assured me it was entirely normal. &quot;Every woman in the history of the world has had one breast slightly larger than the other,&quot; she had said. &quot;It is one of femininity&#39;s less-advertised features.&quot;
-
-Salve applied. Breasts glistening.
-
-I reached for the training corset and put it on.
-
-The cups received the breasts with the precise, cradling hold that had made me gasp yesterday. The lambskin lining   warm from the chamber air, impossibly soft   settled against the salve-slicked skin and the contact was //soothing//. The nipples, cushioned by the double padding, softened from their hard morning erection into a gentler, more relaxed state. The boning engaged the core. The lacing tightened at the back.
-
-Supported. Held. Accounted for.
-
-I pulled on the training leathers over the corset. The chest piece sat better   the corset&#39;s smooth exterior provided a layer between skin and leather, and the shaped cups meant the breast tissue was not being directly compressed by the flat breastplate. The nipple impressions that had horrified me on Day 1 were invisible   the padding smoothed the contour into a gentle, ambiguous curve that could have been muscle or could have been breast and offered certainty to neither.
-
-I examined myself in the mirror. The figure looking back was a warrior. Not the prince   not the broad, hard-edged prince with the flat chest and the swaggering shoulders. But a warrior nonetheless: leathers fitted, corset beneath, rapier belt... wait. I didn&#39;t have the rapier belt yet.
-
-But I would. Today, if Aldric&#39;s &quot;bring nothing&quot; instruction meant what I thought it meant, today I would hold a new weapon.
-
-I braided my hair   a single thick braid down the back, the way I had seen Yseldra wear hers. The hair was long enough now, well past the shoulders, and braiding it kept it from falling across my face during training. The act of braiding   fingers weaving, pulling, the satisfying tug of hair being organized   was oddly calming. A morning ritual that the prince had never possessed and the person I was becoming was slowly adopting.
-
-[[Head to the Iron Garden|warrior_queen_day_3_3]]</tw-passagedata><tw-passagedata pid="1528" name="warrior_queen_day_3_3" tags="" position="975,19100" size="100,100">The corridor was quiet. Dawn&#39;s light bled through the arrow slits in pale, cold bars. My boots   slightly loose now, the feet having narrowed by a fraction   echoed on the flagstones.
-
-I passed the entrance to the Great Library and nearly collided with Jeral.
-
-He emerged from the library door with an armful of scrolls, his spectacles perched crookedly on his thin nose, his muted blue tunic ink-stained at the cuffs. He saw me, stopped, and performed the rapid visual assessment that I was learning to recognize: the eyes tracking from face to chest to hips to feet, cataloguing changes with the efficiency of a man whose entire purpose was to observe, record, and file.
-
-&lt;&lt;speech &quot;jeral&quot;&gt;&gt;Good morning, Your Highness. Training again?&lt;&lt;/speech&gt;&gt;
-
-&lt;&lt;speech &quot;mc&quot;&gt;&gt;As always.&lt;&lt;/speech&gt;&gt;
-
-&lt;&lt;speech &quot;jeral&quot;&gt;&gt;If I may   the leather at the shoulder seems to be sitting differently today. The fit has improved. Is that Mistress Veletia&#39;s doing?&lt;&lt;/speech&gt;&gt;
-
-Of course Jeral noticed. Jeral noticed //everything//. He noticed which servants arrived late. He noticed which councillors had been drinking. He noticed the angle of the Queen&#39;s eyebrow during petitions and adjusted his recommendations accordingly. He was a human instrument of observation, and nothing escaped his lens.
-
-&lt;&lt;speech &quot;mc&quot;&gt;&gt;She made some adjustments, yes.&lt;&lt;/speech&gt;&gt;
-
-&lt;&lt;speech &quot;jeral&quot;&gt;&gt;Wise. The previous arrangement was... conspicuous. In ways that invited comment from those who lack the discretion to remain silent.&lt;&lt;/speech&gt;&gt;
-
-He said it carefully. Diplomatically. The way Jeral said everything   with a precision that conveyed exactly as much information as he intended and not one syllable more. But beneath the diplomacy, the meaning was clear: //I saw the soldiers laughing at you. I heard them and I want you to know that I noticed, and that I judge them for it, not you.//
-
-&lt;&lt;speech &quot;mc&quot;&gt;&gt;Thank you, Jeral.&lt;&lt;/speech&gt;&gt;
-
-He adjusted his spectacles   a nervous habit, or perhaps a tactical one; Jeral&#39;s habits were difficult to distinguish from his strategies.
-
-&lt;&lt;speech &quot;jeral&quot;&gt;&gt;Your Highness. For what it is worth   the changes are becoming... increasingly evident. I say this not to discomfort you, but because it is my duty to inform you of things you may not wish to hear. The court is talking. The servants are talking and the soldiers  &lt;&lt;/speech&gt;&gt;
-
-&lt;&lt;speech &quot;mc&quot;&gt;&gt;The soldiers will think what they think.&lt;&lt;/speech&gt;&gt;
-
-&lt;&lt;speech &quot;jeral&quot;&gt;&gt;The soldiers will think what Sir Aldric //permits// them to think, which is not the same thing at all.&lt;&lt;/speech&gt;&gt; 
-
-A ghost of a smile crossed his thin face. 
-
-&lt;&lt;speech &quot;jeral&quot;&gt;&gt;If I may offer an observation from the administrative perspective: the more visibly capable you become in training, the less the physical changes will be the subject of gossip and the more they will be the subject of... awe. People mock what confuses them. They revere what impresses them. Give them something to be impressed by, and the confusion will become irrelevant.&lt;&lt;/speech&gt;&gt;
-
-He shifted the scrolls in his arms, executed a precise half-bow, and continued on his way.
-
-I stood in the corridor and thought about what he had said. //Give them something to be impressed by.// The rapier, perhaps. Or whatever Aldric had planned for today.
-
-I walked to the Iron Garden with Jeral&#39;s words in my skull and the training corset holding my breasts and the braid swinging against my back like a pendulum marking time.
-
-[[Enter the Iron Garden|warrior_queen_day_3_4]]</tw-passagedata><tw-passagedata pid="1529" name="warrior_queen_day_3_4" tags="" position="1100,19100" size="100,100">Aldric was there. The mist was there. The cobblestones were there. The universe&#39;s commitment to consistency in the Iron Garden was, as ever, absolute.
-
-But today, something was different.
-
-Aldric held no practice blade. Frostfang was at his hip, but sheathed. Instead, in his hands, he held something slender   a weapon I had seen in the armoury a hundred times and never once considered carrying.
-
-A Velmorian court rapier.
-
-Slender as a reed. Light as a willow switch. The blade no wider than two fingers pressed together. The pommel was worked silver, worn smooth by generations of hands. The guard was an elegant swept shell   designed, I would later learn, not merely for aesthetics but to catch and trap an opponent&#39;s blade. The whole weapon weighed perhaps half what my longsword did.
-
-It looked like something a lord would hang above a fireplace to impress dinner guests. Not a weapon. A decoration with pretensions.
-
-He extended it toward me, hilt-first.
-
-&lt;&lt;speech &quot;aldric&quot;&gt;&gt;Your new blade.&lt;&lt;/speech&gt;&gt;
-
-I took it. Turned it in my hands. The balance was... unexpected. The longsword had been heavy, front-weighted, designed to generate force through its own mass. The rapier was balanced at the guard   the weight sitting in the hand rather than ahead of it, making the blade feel like an extension of the wrist rather than a burden on the arm.
-
-I could not keep the contempt from my voice.
-
-&lt;&lt;speech &quot;mc&quot;&gt;&gt;You expect me to fight with this? It is a needle, Aldric. Not a sword.&lt;&lt;/speech&gt;&gt;
-
-Aldric said nothing. He drew Frostfang.
-
-[[Aldric attacks|warrior_queen_day_3_5]]</tw-passagedata><tw-passagedata pid="1530" name="warrior_queen_day_3_5" tags="" position="1225,19100" size="100,100">The greatsword cleared the scabbard with a sound like tearing silk.
-
-Before I could register what was happening   before my brain could bridge the gap between &quot;training conversation&quot; and &quot;I am about to die&quot;   he attacked. Not a drill. Not a measured demonstration. A full-speed, full-force assault   Frostfang sweeping in a lateral arc aimed at my midsection with enough power to cleave a warhorse in two.
-
-Instinct saved me. Twelve years of training under this man had welded certain reflexes into my nervous system so deeply that they operated beneath thought, beneath choice, in the raw animal territory of //move or die//.
-
-I threw the rapier up. A desperate parry. The blades met with a sound that vibrated through my wrist, up my arm, into my teeth, and through my collarbone. The rapier held   the steel was finer than it looked, tempered to flex without shattering   but the impact drove me backward three staggering steps, each step jolting through the training corset, through the breasts, through the core that was still burning from yesterday&#39;s stance work.
-
-Aldric advanced. Frostfang rose for an overhead cleave   the killing stroke, the one that would have split me from crown to collarbone if the blade were not blunted. I twisted aside. The greatsword //cratered// the cobblestone where I had been standing, sending chips of rock skittering across the yard like frightened insects.
-
-He reversed into a backhand cut. I ducked   felt the wind of the blade part my hair, my longer, finer hair that whipped across my face as I dove, strands catching on my lips and eyelashes   and stumbled backward until my spine struck the training yard wall.
-
-Aldric stopped.
-
-Frostfang&#39;s point hovered one inch from my throat. I could feel its cold exhalation on my skin. The promise of steel that did not bluff.
-
-The silence lasted three heartbeats. My heartbeats   hammering so fiercely I could feel them in the budding flesh of my chest, each beat pressing the breast tissue outward against the corset&#39;s cups in a pulse-pulse-pulse of terrified life.
-
-&lt;&lt;speech &quot;aldric&quot;&gt;&gt;Light does not mean weak.&lt;&lt;/speech&gt;&gt;
-
-His voice was quiet. Controlled. The voice of a man who had just attacked at killing speed and was no more winded than if he had sneezed.
-
-&lt;&lt;speech &quot;aldric&quot;&gt;&gt;It means //fast// and fast kills slow. Every time.&lt;&lt;/speech&gt;&gt;
-
-He sheathed Frostfang. The sound of steel entering leather was, in that moment, the most beautiful noise in the world.
-
-I remained pressed against the wall. The rapier in my grip, white-knuckled. My chest heaving   and I was //aware// of the heaving in a way I had never been before, because the chest that was heaving contained breasts, and the breasts were moving with each laboured breath, rising and falling against the corset&#39;s cups, and the motion was visible through the tunic, and I could //feel// it   the tissue expanding and contracting, the corset holding it steady, the nipples pressing against the padding with each inhalation.
-
-The proximity of death had made every part of this changing body more real. More //present//. As though the body had decided, in the moment of potential annihilation, to remind me of everything it was becoming. //You are alive,// the breasts said through their aching. //You are changing and you are still here.//.
-
-I pushed off the wall. My legs were shaking. My hands were shaking. The rapier was shaking.
-
-But I was alive and the rapier was in my hand.
-
-[[Learning the guards|warrior_queen_day_3_6]]</tw-passagedata><tw-passagedata pid="1531" name="warrior_queen_day_3_6" tags="" position="100,19225" size="100,100">&lt;&lt;speech &quot;aldric&quot;&gt;&gt;Three guards. Three positions. Learn them and the rapier becomes a language. Fail to learn them and the rapier becomes a very expensive stick.&lt;&lt;/speech&gt;&gt;
-
-He produced a second rapier   a practice blade, blunted   and demonstrated the first guard.
-
-&lt;&lt;speech &quot;aldric&quot;&gt;&gt;Prima. The first guard.&lt;&lt;/speech&gt;&gt;
-
-He raised the rapier high   blade angled forward, point aimed at an invisible opponent&#39;s face. His body turned slightly, presenting a narrow profile and his off-hand   the left, the hand without a weapon   rose behind him, fingers spread, palm facing upward.
-
-&lt;&lt;speech &quot;aldric&quot;&gt;&gt;The off-hand is not decoration. It is counterweight. When the blade is high, the body wants to tip forward   especially now, with the chest weight. The off-hand behind corrects the balance. Like a dancer&#39;s arm.&lt;&lt;/speech&gt;&gt;
-
-&lt;&lt;speech &quot;mc&quot;&gt;&gt;A dancer&#39;s arm.&lt;&lt;/speech&gt;&gt;
-
-&lt;&lt;speech &quot;aldric&quot;&gt;&gt;Fencing is dancing with the intention to kill. The body mechanics are the same. Assume prima.&lt;&lt;/speech&gt;&gt;
-
-I raised the rapier. Point forward. Body turned and here   //here//   the revelation began.
-
-The old sword stance had required me to face the opponent squarely. Shoulders forward. Chest presented. A broad target that relied on armour and mass to absorb strikes. The rapier&#39;s prima guard turned me //sideways//   presenting the narrowest possible profile to the enemy.
-
-The narrowest possible profile of a body with breasts was... interesting.
-
-Turned sideways, the chest was almost invisible. The corset&#39;s cups, which created a visible curve from the front, presented only a thin edge from the side. My narrowing shoulders helped   less width to present. The overall target I offered the enemy was a sliver of person: one shoulder, one hip, one leg. A body that was becoming smaller, narrower, lighter   a body that the longsword had treated as a liability   was suddenly, in this stance, an //advantage//.
-
-&lt;&lt;speech &quot;aldric&quot;&gt;&gt;Seconda. The second guard.&lt;&lt;/speech&gt;&gt;
-
-He swept the blade left, body turning further upon the hips   using the hip rotation to power the blade&#39;s arc. The off-hand tucked in.
-
-&lt;&lt;speech &quot;aldric&quot;&gt;&gt;This guard uses the hip rotation. The wider the hips, the stronger the arc. You have wider hips than you did a month ago. Use them.&lt;&lt;/speech&gt;&gt;
-
-I swept the rapier left. The hips   my wider, broader, stubbornly expanding hips   drove the rotation, and the blade //whipped// through the air with a speed and force that startled me. The rotation was //bigger// than it had been. Aldric&#39;s lesson from yesterday echoed: a man&#39;s hips generate ninety degrees. A woman&#39;s generate a hundred and ten. That extra twenty degrees was not merely theoretical   I could //feel// it, the additional arc, the extended range, the blade reaching further than the old body could have sent it.
-
-&lt;&lt;speech &quot;aldric&quot;&gt;&gt;You felt that.&lt;&lt;/speech&gt;&gt;
-
-&lt;&lt;speech &quot;mc&quot;&gt;&gt;...Yes.&lt;&lt;/speech&gt;&gt;
-
-&lt;&lt;speech &quot;aldric&quot;&gt;&gt;Good. Remember it. That is what your hips are //for//. They are not an inconvenience. They are a weapon. Terza. Third guard.&lt;&lt;/speech&gt;&gt;
-
-[[Terza   the low guard|warrior_queen_day_3_7]]</tw-passagedata><tw-passagedata pid="1532" name="warrior_queen_day_3_7" tags="" position="225,19225" size="100,100">&lt;&lt;speech &quot;aldric&quot;&gt;&gt;Terza. Low guard. The predator&#39;s crouch.&lt;&lt;/speech&gt;&gt;
-
-He sank. Knees bending, weight dropping into the hips   the feminine guard&#39;s territory, the deep centre I had been drilling for two days   and the rapier descended with him, point angled upward from the low position like a scorpion&#39;s tail, coiled and patient and lethal.
-
-&lt;&lt;speech &quot;aldric&quot;&gt;&gt;This guard uses everything the feminine stance teaches. Low centre. Hip stability. The blade comes from below   from an angle the enemy does not expect, because men are trained to watch for strikes from above and the sides. A blade that rises from the ground is a blade they do not see until it is already inside their guard.&lt;&lt;/speech&gt;&gt;
-
-I assumed terza. Sank into the feminine guard. Let the hips take the weight, let the core engage, let the rapier&#39;s point angle upward and //something happened//.
-
-The rapier responded to this body.
-
-It was the clearest, most undeniable revelation I had experienced since the transformation began   clearer than the first time I felt the breasts grow, clearer than the moment the feminine guard clicked, clearer than anything. The rapier //fit//.
-
-The longsword had been forged for the prince. For broad shoulders that could brace behind a two-handed grip. For thick wrists that could absorb impact. For a flat chest that presented no obstacle to the blade&#39;s path. Every technique assumed mass. Assumed power. Assumed the wielder could muscle through resistance the way a bull muscles through a fence.
-
-The rapier asked for //none of those things//.
-
-It wanted finesse. It craved //wrist articulation//   and my wrists, thinner now, more flexible, the tendons reshaping themselves beneath Thalara&#39;s patient alchemy, could manipulate the blade with a precision my old hands had never achieved. The old thick wrists had been clubs. These new, narrowing wrists were //instruments//. They could rotate the blade through angles that the old joints had physically not permitted   a subtle supination, a flick of the ulna, a wrist-roll that sent the rapier&#39;s point tracing spirals in the air.
-
-It wanted the off-hand free for balance   and my shifting centre of gravity made that counterweight not merely useful but //essential//. The old body, top-heavy, had not needed a counterbalance. This body   lower-centred, chest-weighted, hip-anchored   //required// the off-hand&#39;s presence to maintain equilibrium during lunges and recoveries.
-
-It wanted a narrow profile   and the body I was growing was //becoming// narrow. Shoulders shrinking. Waist tapering. The sideways presentation of the rapier stance reduced me to a sliver of target that was, with each week of transformation, becoming slimmer still.
-
-For the first time since the potions had begun their work   for the first time in weeks of grief and confusion and the slow dissolution of the body I had known   I held a weapon that did not feel as though it was fighting my body.
-
-The rapier moved where I directed it. The thrusts were clean. The parries crisp. When I lunged from the feminine guard, the rapier extended like a natural limb   like a finger pointing at death   and for one bright, burning moment I felt not like a broken swordsman relearning his alphabet, but like something //new//.
-
-Something that might, given time and sweat and the stubborn refusal to yield, become lethal.
-
-&lt;&lt;speech &quot;mc&quot;&gt;&gt;It... fits.&lt;&lt;/speech&gt;&gt;
-
-Aldric watched me with those grey eyes.
-
-&lt;&lt;speech &quot;aldric&quot;&gt;&gt;Every weapon has a body it was made for. The longsword was made for the body you are leaving. The rapier was made for the body you are building. The weapon did not change. //You// did.&lt;&lt;/speech&gt;&gt;
-
-I held the rapier in terza and breathed. The blade hummed in my hand   alive with potential, alive with the kinship between a weapon and the body it was designed to serve.
-
-This was mine. This blade, this stance, this body.
-
-For the first time, all three agreed.
-
-[[Drilling the lunge sequence|warrior_queen_day_3_8]]</tw-passagedata><tw-passagedata pid="1533" name="warrior_queen_day_3_8" tags="" position="350,19225" size="100,100">The morning dissolved into drills.
-
-Lunge. Recover. Lunge. Recover. The rapier&#39;s basic vocabulary   a conversation between blade and body, repeated until the words became instinct.
-
-The lunge in the feminine guard was different from the longsword&#39;s. The old lunge had been a forward explosion   rear leg driving, front leg reaching, the entire body mass thrown behind the blade like a battering ram. Powerful. Linear and, as Aldric had demonstrated on Day 1, entirely dependent on shoulders and thighs that I no longer possessed in their original configuration.
-
-The rapier lunge was driven from the //hips//. The rear hip snapped forward, rotating the torso, and the blade rode the rotation like a surfer riding a wave   arriving at the target with speed that was generated not by mass but by angular momentum. The wider the hips, the more powerful the snap. The lower the centre, the more stable the platform.
-
-I lunged and lunged and lunged.
-
-The motion was percussive   each lunge jolting through the body from toe to fingertip and each jolt found the breasts.
-
-The training corset held them better than anything I had worn before. The cups contained the tissue, the boning stabilized the torso, the lambskin lining cushioned the nipples. But no garment, however brilliantly engineered, could entirely eliminate the //physics// of breast tissue during explosive movement. The breasts had mass. Mass that obeyed Newton&#39;s laws with the same cheerful indifference as any other mass. When the body lunged forward and stopped, the breasts wanted to //continue//   and the corset caught them, absorbed the momentum, and pressed them back. But the motion was there. A small, internal surge. A pulse of weight shifting inside the cups. A sensation that said, with each lunge: //we are here, we are moving, we are physics.//.
-
-I was learning to incorporate it. Not fight it   //use// it. The breast surge during the lunge was a timing signal. When I felt the tissue press forward against the cups, I was at full extension. When I felt it settle back, I was recovered. The body was teaching me its own rhythms, and the rapier was learning to speak the language.
-
-By the twentieth lunge, the motion was smooth. By the fiftieth, it was fast. By the hundredth, the rapier&#39;s point was arriving at the target   a mark chalked on the training dummy&#39;s chest   within a palm&#39;s breadth every time.
-
-Aldric watched. Circled. Corrected my wrist angle once   a quarter-turn inward   and my elbow position twice. He did not comment on the breasts. He did not comment on the corset. He treated the body as he always had: as a system to be optimized. If the system now included breasts, then the system would be optimized around breasts. Simple. Mechanical. Aldric.
-
-The heat rose. The sun crested the eastern wall. The tunic clung to sweat-dampened skin, and the corset beneath grew warm and damp against the breast tissue, and the world narrowed to the rapier and the lunge and the endless, repetitive, meditative //thrust-recover-thrust-recover// that was carving new pathways through my muscles and my mind.
-
-[[Midday   the bouncing|warrior_queen_day_3_9]]</tw-passagedata><tw-passagedata pid="1534" name="warrior_queen_day_3_9" tags="" position="475,19225" size="100,100">The humiliation arrived at midday.
-
-It always arrived at midday. The morning was for learning. Midday was for being reminded that learning occurred inside a body that the world had opinions about.
-
-I was drilling a lunge sequence at speed   thrust, recover, thrust, recover   building rhythm and velocity, pushing the body toward the limit where control frayed and instinct took over. The motion was percussive, driven from the hips, and I was //good// at it   the rapier&#39;s point hitting the target zone consistently, the recovery clean, the stance solid.
-
-But I had made a mistake.
-
-The corset&#39;s lacing had loosened. Sweat, heat, and three hours of explosive movement had worked the leather ties fractionally free, and the cups   which had held the breast tissue in firm, controlled containment all morning   now had //play//. A centimetre of slack. Perhaps less.
-
-It was enough.
-
-The lunge sequence set my budding breasts //bouncing//.
-
-Not wildly. Not dramatically. They were still small   barely filling the loosened cups   and the corset still provided structure. But the combination of loosened support and percussive hip-driven movement produced a visible oscillation. Each lunge sent the tissue pressing forward against the cups. Each recovery let it drop back. The result, beneath the thin training tunic that was clinging to the sweat-soaked corset with the shameless transparency of wet linen, was an unmistakable, rhythmic //bounce//.
-
-I did not notice. I was inside the drill, inside the rhythm, inside the trance-state that repetitive physical practice induces. The body was moving. The blade was striking. The world was small and focused and concerned with nothing except the next thrust.
-
-Two soldiers on the rampart above the yard noticed.
-
-I heard the snicker first.
-
-[[The snicker|warrior_queen_day_3_10]]</tw-passagedata><tw-passagedata pid="1535" name="warrior_queen_day_3_10" tags="" position="600,19225" size="100,100">A muffled, mean little sound. The laughter of men who knew they were being cruel and savoured it   the specific, poisonous amusement of people watching someone struggle with a vulnerability and finding it //funny//.
-
-Then a whispered remark. I could not make out the words, but I understood the tone with the perfect clarity of a person who has heard that tone before and knows exactly what it means. Something about tits. Something about the prince who was growing a pair. Something that reduced twenty years of swordsmanship and three days of desperate, aching, brave reinvention to a //joke//.
-
-Shame hit me like a lance through the ribs.
-
-My face blazed. The heat climbed from my collar to my hairline in a wave that felt like sunburn from the inside. My rhythm shattered. The rapier dipped. The lunge died mid-extension, the point drooping toward the cobblestones, and I stood in the centre of the training yard 
-
-Exposed. Caught. //Seen//.
-
-Not as the heir. Not as a warrior learning a new weapon. Not as a prince undergoing a transformation he had not chosen but was enduring with every fibre of a body that fought him at every turn.
-
-As a //spectacle//. A boy with tits. A joke.
-
-The shame was physical. It //sat// in the chest   in the breasts, specifically, which suddenly felt enormous, which suddenly felt like they were a hundred times the small, tender buds they actually were, which suddenly felt like they were the //only thing// my body consisted of, two grotesque swellings on a frame that was neither one thing nor the other, and every eye in the kingdom was fixed on them and laughing.
-
-I wanted to cross my arms over my chest. I wanted to fold forward, curl inward, compress the shameful flesh into invisibility. Every instinct I possessed was screaming: //hide, cover, disappear, they can see you, they can see what you are becoming, they can see the breasts, they know.//
-
-For one terrible moment I was thirteen years old again, naked in the bathing hall, the only boy whose body did not look like the others&#39;, too soft, too smooth, and now   decades and magic later   too //female//, and the laughter was the same, the shame was the same, and I could not move.
-
-[[Aldric&#39;s response|warrior_queen_day_3_11]]</tw-passagedata><tw-passagedata pid="1536" name="warrior_queen_day_3_11" tags="" position="725,19225" size="100,100">Aldric&#39;s head turned toward the rampart.
-
-Slowly. With the precise, terrible, mechanical deliberation of a siege engine acquiring its target. Every degree of rotation was a promise. Every second of silence was a threat.
-
-The two soldiers on the rampart   I could see them now, young men, barely out of training, their grins dying on their faces as they realised what they had attracted   went perfectly, absolutely, catastrophically still.
-
-&lt;&lt;speech &quot;aldric&quot;&gt;&gt;RAMPART!&lt;&lt;/speech&gt;&gt;
-
-The word cracked across the Iron Garden like a trebuchet stone striking a city wall. Birds fled from the rampart. The mist shuddered.
-
-&lt;&lt;speech &quot;aldric&quot;&gt;&gt;IF YOU HAVE BREATH FOR LAUGHTER, YOU HAVE BREATH FOR THIRTY LAPS IN FULL PLATE! NOW! MOVE!&lt;&lt;/speech&gt;&gt;
-
-The two soldiers went white. Not pale   //white//. The colour drained from their faces with a speed that suggested their blood had decided, independently and unanimously, to flee the scene before the rest of them caught up.
-
-They fled. Their boots rang on the stone stairs   panicked, stumbling, the boots of men who had just discovered that mocking the future sovereign in Sir Aldric Vornhelm&#39;s training yard was a mistake you made precisely //once// in your life, because there would not be a second opportunity, because after thirty laps in full plate you would be too broken to laugh at anything ever again.
-
-Within moments, I could hear the clanking of hastily donned armour and the desperate, gasping panting of men who were learning   at considerable physical cost   that Sir Aldric Vornhelm protected what was his.
-
-I was his. His student. His project. His responsibility.
-
-The yard was silent.
-
-Aldric turned back to me. His scarred face was stone. His expression said nothing.
-
-His eyes said everything.
-
-Not pity   never pity. Aldric did not possess pity the way other men did not possess gills; it was simply not part of his design. But something else lived behind those grey eyes in that moment. Something fierce. Something //guarded//. Something that watched the shame on my face and recognised it   not from experience, perhaps, but from the deep, instinctive understanding of a warrior who knew what it was to be vulnerable and refused to let that vulnerability be exploited.
-
-Protectiveness. That was the word. I would only recognise it later, lying in bed with the corset removed and the breasts aching and the shame still smouldering in my chest. But it was protectiveness.
-
-He raised his practice rapier to prima guard and waited.
-
-[[Resume the drill|warrior_queen_day_3_12]]</tw-passagedata><tw-passagedata pid="1537" name="warrior_queen_day_3_12" tags="" position="850,19225" size="100,100">I swallowed the burning coal of shame lodged in my throat. It went down hard. It tasted of humiliation and copper and the particular bitterness of being laughed at by people you are supposed to lead.
-
-I raised my blade and something... //shifted//. Not in the body   in the //mind//.
-
-The shame was still there. It would be there for hours, perhaps days, a hot coal banked beneath the surface, ready to flare at any reminder. But layered beneath it, like bedrock beneath topsoil, was something else.
-
-//Anger//.
-
-Not the wild, impotent fury of Day 1   the rage at a body that would not obey. This was colder. Quieter. More //focused//. The anger of a person who has been laughed at and has decided, with a calm that borders on dangerous, that the laughter will stop. Not through authority. Not through punishment. Through //competence//.
-
-They laughed because I was a spectacle. Because the bouncing breasts and the changing body and the prince-becoming-queen was //strange//, and strangeness invited mockery from small minds.
-
-They would stop laughing when the strangeness became //strength//.
-
-I lunged. The rapier&#39;s point struck the target dead centre. The sound   a clean //thwack// of blunted steel on straw   was the most satisfying noise I had ever produced.
-
-I recovered. Lunged again. Centre. Again. Centre.
-
-We drilled until the shadows stretched long across the cobblestones. Until my wrist ached from fingertip to elbow. Until the two soldiers on the rampart had long since finished their thirty laps and crawled away to contemplate the wreckage of their choices.
-
-Aldric did not mention the snickering. He did not mention the bouncing. He did not discuss my breasts or my corset or the loosened lacing or the way my body had betrayed me in full view of men I would one day command.
-
-He treated me exactly as he always had: as a student who was not yet adequate, in a body that was not yet finished, and both of those were simply facts to be addressed through repetition and sweat and the stubborn accumulation of skill.
-
-I was grateful beyond the capacity of words to express.
-
-[[After training   the corridor|warrior_queen_day_3_13]]</tw-passagedata><tw-passagedata pid="1538" name="warrior_queen_day_3_13" tags="" position="975,19225" size="100,100">The walk back to my chambers that evening was different.
-
-The rapier rode at my left hip. Not the longsword. The rapier. A weapon so light I barely felt its presence against my leg   a whisper of weight where the longsword had been a shout. But it was //there//. Its presence at my hip said something that no amount of words could say:
-
-//I am armed. I am training. I am becoming something you have not seen before.//
-
-The corridor was not empty. The evening shift was moving   servants carrying linens, soldiers changing watch, the quiet choreography of a castle at dusk and they //looked//. As they always looked. Eyes tracking the heir, cataloguing the changes, noting the differences.
-
-But tonight, they saw something new.
-
-Not just the hair. Not just the softened face. Not just the hints of curve beneath the leathers that the corset could smooth but not entirely erase.
-
-They saw the rapier.
-
-A weapon at the heir&#39;s hip. A blade. Steel. The visible declaration that whatever the body was becoming, it was becoming something //armed//.
-
-I walked through the corridor with my chin up, my shoulders back   narrower shoulders, yes, but //straight//   and the braid swinging against my back. The gait had the hip-sway that I could not entirely prevent, but the corset controlled it, refined it, and the overall effect was less &quot;boy struggling with new hips&quot; and more... something else. Something that the watching servants and soldiers had not quite seen before.
-
-Maera was waiting at my chamber door. She took one look at me   the rapier at my hip, the sweat on my brow, the expression on my face that was equal parts exhaustion and determination   and tilted her head.
-
-&lt;&lt;speech &quot;maera&quot;&gt;&gt;New weapon?&lt;&lt;/speech&gt;&gt;
-
-&lt;&lt;speech &quot;mc&quot;&gt;&gt;Rapier. It is lighter. It fits the body better. Aldric says fast kills slow.&lt;&lt;/speech&gt;&gt;
-
-&lt;&lt;speech &quot;maera&quot;&gt;&gt;The face? That expression that suggests you are planning to either conquer a kingdom or murder someone specific?&lt;&lt;/speech&gt;&gt;
-
-&lt;&lt;speech &quot;mc&quot;&gt;&gt;Two soldiers laughed at me. At the... the bouncing. During drills. The corset lacing slipped and the... I was  &lt;&lt;/speech&gt;&gt;
-
-I stopped. The shame crept back, warm and unwelcome.
-
-&lt;&lt;speech &quot;maera&quot;&gt;&gt;They saw the breasts bounce,&lt;&lt;/speech&gt;&gt; Maera said, without inflection. A statement. Not a question. She knew.
-
-&lt;&lt;speech &quot;mc&quot;&gt;&gt;Yes.&lt;&lt;/speech&gt;&gt;
-
-&lt;&lt;speech &quot;maera&quot;&gt;&gt;They laughed.&lt;&lt;/speech&gt;&gt;
-
-&lt;&lt;speech &quot;mc&quot;&gt;&gt;Yes.&lt;&lt;/speech&gt;&gt;
-
-&lt;&lt;speech &quot;maera&quot;&gt;&gt;Now you are planning to become so devastatingly good with that needle of a sword that no one will ever think about your bouncing breasts again because they will be too busy being terrified of the blade.&lt;&lt;/speech&gt;&gt;
-
-I looked at her. She looked at me. Her dark eyes were steady and warm and knowing.
-
-&lt;&lt;speech &quot;mc&quot;&gt;&gt;...Yes. Something like that.&lt;&lt;/speech&gt;&gt;
-
-&lt;&lt;speech &quot;maera&quot;&gt;&gt;Good.&lt;&lt;/speech&gt;&gt; 
-
-She opened the chamber door. 
-
-&lt;&lt;speech &quot;maera&quot;&gt;&gt;Come in. Bath is drawn. The corset lacing needs reinforcing   I will fix it tonight and there is fresh bread from Halda, who says you are too thin and that she will not have a queen who looks as though a stiff breeze could snap her in two.&lt;&lt;/speech&gt;&gt;
-
-I followed her into the chamber. The door closed behind me. The rapier hung at my hip, and the corset held my breasts, and the shame was still there but so was the anger, and the anger was //useful//.
-
-[[Evening   the body inspection|warrior_queen_day_3_14]]</tw-passagedata><tw-passagedata pid="1539" name="warrior_queen_day_3_14" tags="" position="1100,19225" size="100,100">Maera fixed the corset lacing while I bathed. She sat on a stool beside the tub with a needle, leather cord, and the training corset across her lap, reinforcing each eyelet with a backstitch that would, she promised, resist a hurricane.
-
-I soaked in the hot water and let the day drain away.
-
-The bath was becoming a ritual. Not the utilitarian scrub of the prince, who had treated bathing as a necessary inconvenience between training sessions. This was something longer. More //attentive//. The hot water found the muscles and unknotted them   shoulders, back, core, thighs, all the infrastructure that Aldric&#39;s training was rebuilding from the ground up and the water found the breasts, and the breasts received it with their particular brand of grateful, aching relief.
-
-They floated. The buoyancy of the water lifted the tissue   small though it was   free of gravity&#39;s pull, and the sensation was //rest//. Pure, physical rest for flesh that had been compressed, bounced, compressed again, and generally subjected to more mechanical stress in three days than most breast tissue experienced in a month.
-
-I watched them from above. Two small mounds breaking the waterline. The nipples   softened by the warm water, relaxed from their perpetual state of alertness   just barely visible above the surface. The water lapped at the aerolae, warm tongues of gentle pressure, and each lap produced a subtle, pleasant shiver that I was learning not to flinch from.
-
-&lt;&lt;speech &quot;maera&quot;&gt;&gt;The lacing is reinforced. Triple-stitched at every eyelet. If this slips during training, it will be because Aldric has physically torn the garment off your body, and at that point you will have larger concerns.&lt;&lt;/speech&gt;&gt;
-
-&lt;&lt;speech &quot;mc&quot;&gt;&gt;Thank you.&lt;&lt;/speech&gt;&gt;
-
-&lt;&lt;speech &quot;maera&quot;&gt;&gt;The cups may need adjusting soon.&lt;&lt;/speech&gt;&gt; 
-
-She held the corset up, examining the interior. 
-
-&lt;&lt;speech &quot;maera&quot;&gt;&gt;The breast tissue is pressing against the upper edge of the left cup. There is a millimetre of spillage   the flesh is sitting above the cup&#39;s rim rather than inside it.&lt;&lt;/speech&gt;&gt;
-
-&lt;&lt;speech &quot;mc&quot;&gt;&gt;I noticed this morning. They are growing faster than Veletia planned for.&lt;&lt;/speech&gt;&gt;
-
-&lt;&lt;speech &quot;maera&quot;&gt;&gt;Nyssa&#39;s fifteen percent, yes?&lt;&lt;/speech&gt;&gt;
-
-&lt;&lt;speech &quot;mc&quot;&gt;&gt;Apparently my body is //enthusiastic// about growing breasts.&lt;&lt;/speech&gt;&gt;
-
-Maera snorted. &lt;&lt;speech &quot;maera&quot;&gt;&gt;Your body has always been enthusiastic about everything. You broke three training dummies before you were fifteen. You ate your weight in harvest-feast pie at seventeen and now you are growing breasts at a rate that has Thalara&#39;s apprentice practically vibrating with academic excitement. Consistency is your gift, Caelan.&lt;&lt;/speech&gt;&gt;
-
-She set the corset aside and leaned forward, elbows on knees, studying me with her direct, dark gaze.
-
-&lt;&lt;speech &quot;maera&quot;&gt;&gt;How does it feel? The rapier, I mean. Not the...&lt;&lt;/speech&gt;&gt; 
-
-she gestured generally at my chest.
-
-&lt;&lt;speech &quot;mc&quot;&gt;&gt;It feels... //right//. The longsword was fighting me. The rapier is... talking to me. Responding. The wrists are better for it   thinner, more flexible. The hips drive the rotation. The stance   the feminine guard   the rapier is //designed// for it. Like they were made for each other.&lt;&lt;/speech&gt;&gt;
-
-&lt;&lt;speech &quot;maera&quot;&gt;&gt;They were. The Velmorian court rapier was the Queen&#39;s Blades&#39; weapon, three hundred years ago. Women fighting with weapons made for women&#39;s bodies. Before the male tradition swallowed it all and decided that if women wanted to fight, they could fight like men or not at all.&lt;&lt;/speech&gt;&gt;
-
-&lt;&lt;speech &quot;mc&quot;&gt;&gt;Aldric told me that. Almost the same words.&lt;&lt;/speech&gt;&gt;
-
-&lt;&lt;speech &quot;maera&quot;&gt;&gt;He remembers things that matter.&lt;&lt;/speech&gt;&gt; She paused. &lt;&lt;speech &quot;maera&quot;&gt;&gt;Caelan. The soldiers who laughed today.&lt;&lt;/speech&gt;&gt;
-
-&lt;&lt;speech &quot;mc&quot;&gt;&gt;I do not wish to  &lt;&lt;/speech&gt;&gt;
-
-&lt;&lt;speech &quot;maera&quot;&gt;&gt;Listen. The soldiers who laughed today will not be the last. Every woman who has ever trained among men has been laughed at for the way her body moves during combat. Every woman with breasts who has ever run, jumped, climbed, or fought has dealt with the bouncing. It is not shame. It is physics and the answer is not to bind yourself so tightly you cannot breathe, or to stop moving, or to hide. The answer is to get so good with that blade that the next man who laughs finds the point of it at his throat before the smirk reaches his eyes.&lt;&lt;/speech&gt;&gt;
-
-She stood. Gathered the corset, the needle, the thread.
-
-&lt;&lt;speech &quot;maera&quot;&gt;&gt;Salve. Both breasts. Circular motions. Then //sleep//. You have that look that says tomorrow will be worse than today, and today was already fairly horrible.&lt;&lt;/speech&gt;&gt;
-
-She departed with the corset and a backward glance that said, in the universal language of women who cared too much about people who made it difficult: //You are going to be fine. I am going to make sure of it.//.
-
-[[Call Maera again|warrior_queen_day_3_14b]]</tw-passagedata><tw-passagedata pid="1540" name="warrior_queen_day_3_14b" tags="" position="1225,19225" size="100,100">She was halfway to the door when I spoke.
-
-&lt;&lt;speech &quot;mc&quot;&gt;&gt;Maera.&lt;&lt;/speech&gt;&gt;
-
-She stopped. Turned. The corset was still draped over her arm, the needle pinched between her fingers. Her dark eyes read me the way they always read me   fast, thorough, missing nothing.
-
-&lt;&lt;speech &quot;mc&quot;&gt;&gt;I still have... I mean, down there, the potions haven&#39;t...&lt;&lt;/speech&gt;&gt;
-
-I gestured beneath the waterline. A vague, helpless motion that conveyed nothing and everything.
-
-Maera&#39;s eyebrow rose. One millimetre. The precise, calibrated elevation of a woman who understood exactly what was being asked and was deciding, in real time, whether to make me say it aloud or spare me.
-
-She did not spare me.
-
-&lt;&lt;speech &quot;maera&quot;&gt;&gt;Use your words, Caelan.&lt;&lt;/speech&gt;&gt;
-
-The water was suddenly very warm. Or my face was. Both. The heat was everywhere and nowhere and specifically concentrated in the places I was trying not to think about while thinking about them exclusively.
-
-&lt;&lt;speech &quot;mc&quot;&gt;&gt;I want... while I still can. While the body is still... before the potions change everything down there too. I want to feel &lt;&lt;/speech&gt;&gt;
-
-&lt;&lt;speech &quot;maera&quot;&gt;&gt;You want my mouth.&lt;&lt;/speech&gt;&gt;
-
-Said flatly. Without judgment. Without coyness. The way Maera said everything   like a blade laid on a table, edge up, take it or leave it.
-
-&lt;&lt;speech &quot;mc&quot;&gt;&gt;...Yes.&lt;&lt;/speech&gt;&gt;
-
-She set the corset on the chair. Set the needle beside it. Rolled her sleeves to the elbows with two efficient, unhesitating motions, and crossed back to the tub.
-
-&lt;&lt;speech &quot;maera&quot;&gt;&gt;Scoot forward.&lt;&lt;/speech&gt;&gt;
-
-I scooted. The water sloshed. The breasts bobbed with the movement   two small, buoyant witnesses to the absurdity and the tenderness and the raw, aching need of the moment.
-
-Maera knelt beside the tub. Her knees found the stone floor without complaint   she had knelt on worse, scrubbing corridors and polishing armour and performing the thousand invisible labours that kept the castle breathing. She pushed her dark curls behind one ear and looked down into the water.
-
-My cock was half-hard already. The conversation alone had been enough   the vulnerability of asking, the relief of not being refused, the proximity of Maera&#39;s face to the waterline. It lay against my thigh beneath the surface, flushed and visible through the clear bathwater, stubbornly, defiantly //male// in a body that was surrendering masculinity everywhere else.
-
-&lt;&lt;speech &quot;maera&quot;&gt;&gt;Still works, then.&lt;&lt;/speech&gt;&gt;
-
-&lt;&lt;speech &quot;mc&quot;&gt;&gt;Maera.&lt;&lt;/speech&gt;&gt;
-
-&lt;&lt;speech &quot;maera&quot;&gt;&gt;What? I am making a clinical observation. The potions have changed your face, your chest, your hips, your hands, your hair, and apparently your emotional processing, but your cock is still &lt;&lt;/speech&gt;&gt;
-
-&lt;&lt;speech &quot;mc&quot;&gt;&gt;Still //there//, yes, thank you for the inventory.&lt;&lt;/speech&gt;&gt;
-
-She grinned. That sharp, dark grin that was equal parts affection and wickedness   the grin of a woman who had known you since you were twelve and would never, under any circumstances, let you take yourself too seriously.
-
-Then she reached into the water.
-
-[[Maera&#39;s mouth|warrior_queen_day_3_14c]]</tw-passagedata><tw-passagedata pid="1541" name="warrior_queen_day_3_14c" tags="" position="100,19350" size="100,100">Her fingers found me beneath the surface. Wrapped around the shaft with a familiarity that predated the transformation   they had done this before, in stolen moments, in darkened corridors, in the reckless, breathless encounters of a prince and his handmaid who had never been //merely// a handmaid.
-
-But the hand that gripped me was different now. Not //her// hand   mine. The body she was touching existed in a context that had not existed before. Her fingers circled a cock that rose from hips that were wider, beneath a belly that was softer, between thighs that were beginning to round, and above it all   the breasts. Small. Aching. Present.
-
-She stroked once. Slowly. Root to tip beneath the warm water, her grip firm, her thumb tracing the underside vein with the precision of a woman who had memorized this particular geography and saw no reason to pretend otherwise.
-
-My breath caught. The sensation was //the same//   the same nerves, the same pathways, the same deep, pulling pleasure that radiated from the shaft through the pelvis and into the spine. The cock had not changed. The cock&#39;s responses had not changed. But the //body// around it had, and so the experience was different in ways I could not have predicted.
-
-The pleasure did not stay in the cock.
-
-It //spread//. Through the softened belly. Through the widened hips. Up   //up//   through the core and into the chest, where it found the breasts and //detonated// into a secondary bloom of sensation that made me gasp aloud.
-
-&lt;&lt;speech &quot;mc&quot;&gt;&gt;Ahh &lt;&lt;/speech&gt;&gt;
-
-Maera paused. Looked up. Her hand still gripped me beneath the water, motionless, waiting.
-
-&lt;&lt;speech &quot;maera&quot;&gt;&gt;Pain?&lt;&lt;/speech&gt;&gt;
-
-&lt;&lt;speech &quot;mc&quot;&gt;&gt;No. No, it&#39;s... the breasts. I can //feel// it in the breasts.&lt;&lt;/speech&gt;&gt;
-
-She studied my face for a moment. Then she leaned forward, and her lips brushed the surface of the water, and her mouth descended.
-
-The transition from air to mouth was a //universe// of difference. The bathwater was warm. Maera&#39;s mouth was //hot//   wet and tight and alive with intention, the tongue already moving before the lips had fully sealed, tracing the head with a slow, deliberate circle that sent a bolt of pure, electric pleasure straight through the base of my spine.
-
-&lt;&lt;speech &quot;mc&quot;&gt;&gt;Nnnh &lt;&lt;/speech&gt;&gt;
-
-She took me deeper. An inch. Two. The water lapped at her chin as she worked, her dark curls falling forward, the muscles of her throat visible as she adjusted the angle. She breathed through her nose   steady, controlled, the breathing of a woman who approached even this with the competence she brought to everything.
-
-And the pleasure climbed. Not just in the cock   //everywhere//. Through the belly, the hips, the thighs, up through the ribs and into the chest, where the breasts sat like two receivers tuned to a frequency they had only just discovered.
-
-My hands moved without permission.
-
-[[Touch|warrior_queen_day_3_14d]]</tw-passagedata><tw-passagedata pid="1542" name="warrior_queen_day_3_14d" tags="" position="225,19350" size="100,100">My hands   those narrowing, softening, increasingly //feminine// hands   rose from the water and found my own chest.
-
-I cupped the breasts. Both of them. Palms settling over the wet mounds, fingers curving around the tissue, and the contact was //incandescent//. The pleasure from below   from Maera&#39;s mouth, from the cock, from the ancient male circuitry that still functioned with stubborn mechanical reliability   met the pleasure from above   from the breasts, from the nipples, from the new and still-uncharted female circuitry that was wiring itself into the nervous system with each passing day   and the two systems //talked//.
-
-Not a polite conversation. A //collision//. Two rivers meeting. Two electrical systems finding a common ground wire. The cock-pleasure was deep, pulling, concentrated   a fist of sensation tightening in the pelvis. The breast-pleasure was broad, radiating, diffuse   a wave that spread outward from the nipples through the chest and into the shoulders and neck.
-
-Together, they were something I had never felt. Something the prince had never possessed the architecture to experience.
-
-I squeezed. Gently. The breast tissue yielded beneath my palms   soft and warm and slick with bathwater   and the pressure sent the nipples //singing//. Both nubs hardened instantly, stiffening against the centres of my palms, and each hardening was a pulse, a signal, a bright hot flare that raced down through the chest and met the pleasure Maera was generating below and //amplified// it.
-
-&lt;&lt;speech &quot;mc&quot;&gt;&gt;Ohhh... oh, gods &lt;&lt;/speech&gt;&gt;
-
-Maera hummed. A vibration that travelled through her lips, through the shaft, through the root, and I //keened//   a sound I had never made before, higher than the prince&#39;s voice had ever gone, a sound that came from the throat of a body that was learning new registers of pleasure and did not yet know how to express them quietly.
-
-My fingers found the nipples. I rolled the left between thumb and forefinger   a tentative pinch, barely any pressure   and the sensation was a //lightning strike//. The areola contracted. The nipple stiffened further, impossibly, the nub becoming a hard point of concentrated nerve-fire, and the pleasure was so acute it bordered on pain, so sharp it made my hips jerk upward, driving the cock deeper into Maera&#39;s mouth.
-
-She made a surprised sound   //mmph//   but did not pull away. Her hand gripped the base of the shaft, steadying, controlling the depth, and her tongue did something //devastating// against the frenulum   a rapid fluttering motion, light and relentless, that turned the deep pulling pleasure into a sharp, urgent //demand//.
-
-&lt;&lt;speech &quot;mc&quot;&gt;&gt;Maera  I  aaahh, the nipples, they&#39;re so &lt;&lt;/speech&gt;&gt;
-
-I was babbling. The prince had never babbled during sex. The prince had been controlled, contained, a locked chest of restrained sounds and measured movements. But the prince had not possessed breasts, and the breasts were doing something to the pleasure that obliterated control   opening channels, creating feedback loops, turning what had been a //line// of sensation (cock to spine, simple, direct) into a //web// that encompassed the entire torso.
-
-I pinched the right nipple. Harder this time. The pain was sweet   //sweet//   a bright note in a chord of deeper, darker pleasure, and my back arched, lifting the chest from the water, the breasts rising into the air, wet and glistening, the nipples hard and dark between my fingers, and Maera&#39;s mouth was hot and tight and her tongue was //merciless// and the two systems   male below, female above   were feeding each other in an escalating spiral that was building toward something I could feel approaching like a storm front on the horizon.
-
-[[The edge|warrior_queen_day_3_14e]]</tw-passagedata><tw-passagedata pid="1543" name="warrior_queen_day_3_14e" tags="" position="350,19350" size="100,100">My hips moved. Rocking. The water sloshed against the tub&#39;s edges in rhythmic waves, warm water spilling over the rim and pooling on the stone floor, and I did not care. I rocked into Maera&#39;s mouth with a motion that was driven from the hips   those wider, stronger hips   and the rotation that Aldric had drilled into me all day, the //snap// of angular momentum, translated into a thrust that was fluid and powerful and came from a body that was learning what its new geometry could do in //every// context.
-
-Maera matched the rhythm. Her head bobbed, her hand worked the base, her tongue maintained that devastating flutter, and between the strokes she sucked   a deep, pulling pressure that collapsed the cheeks and //drew// on the cock with an intensity that made my vision blur.
-
-&lt;&lt;speech &quot;mc&quot;&gt;&gt;Nnnhh  ahh  Maera, I&#39;m &lt;&lt;/speech&gt;&gt;
-
-I was close. The orgasm was building in the old place   the familiar tightening at the base, the pressure accumulating behind the cock, the body&#39;s ancient male machinery winding toward release. But it was //also// building somewhere new. In the chest. In the breasts. A parallel crescendo, a harmonic frequency, the new tissue vibrating with a pleasure that had no precedent and no name, only the growing certainty that when the climax arrived it would be //different// from every orgasm the prince had ever experienced.
-
-My fingers worked the nipples. Both. Pinching, rolling, tugging gently   each motion a spark that fed the fire below. The areolae were tight, pebbled, the Montgomery glands raised and sensitive, and every touch on the surrounding skin sent tributaries of sensation flowing inward toward the nipple-centres where the pleasure concentrated into points of //unbearable// focus.
-
-Maera pulled back to the head. Her lips sealed around the tip. Her tongue circled   once, twice   and then she //sank//, taking the full length in a single, smooth, devastating descent that pressed her nose to the skin below my navel, and the cock hit the back of her throat, and she swallowed around it, and the sensation was 
-
-&lt;&lt;speech &quot;mc&quot;&gt;&gt;AAHH  oh //gods// &lt;&lt;/speech&gt;&gt;
-
-The orgasm detonated.
-
-It came from the cock   the familiar, clenching, pulsing release, the shaft jerking, the spend pouring into Maera&#39;s throat   but it //also// came from the breasts. A simultaneous bloom, a secondary explosion, the nipples flaring with a sharp, bright pleasure that radiated outward through the entire chest and met the waves from below and the two merged into a single, compound, //devastating// climax that was neither male nor female but something that existed only in this body, in this moment, in this territory between what I had been and what I was becoming.
-
-I cried out. Not a grunt   the prince&#39;s sound, the contained, masculine acknowledgment of release. A //cry//. High and ragged and torn from a throat that was reshaping itself, from lungs that expanded differently beneath a chest that //felt// differently, a sound that carried in it the shock and the wonder and the grief and the pleasure of a body discovering that even its orgasms were changing.
-
-My back arched. The breasts rose from the water, nipples straining against my pinching fingers, the tissue flushed and warm and //alive// with the aftershocks of a pleasure system that was still wiring itself together. The cock pulsed   three, four, five times   and each pulse was echoed in the chest, a sympathetic throb, the breasts //answering// the cock with their own rhythm as though the two organs were learning to speak the same language.
-
-Maera held me through it. Her mouth stayed sealed. Her hand stayed firm. She swallowed   I felt it, the rhythmic contraction of her throat around the head   and the intimacy of that sensation, of being //taken// so completely, so matter-of-factly, so //Maera//, extended the orgasm by seconds that felt like hours.
-
-[[Aftermath|warrior_queen_day_3_14f]]</tw-passagedata><tw-passagedata pid="1544" name="warrior_queen_day_3_14f" tags="" position="475,19350" size="100,100">She pulled off slowly. A soft, wet sound. She wiped her lips with the back of her hand   practical, unhurried   and sat back on her heels, studying me with those dark, knowing eyes.
-
-I lay in the tub. Shattered. My hands were still on my breasts   I had not removed them, had not even thought to remove them, and the nipples still throbbed gently beneath my palms, echoing the pleasure that was slowly, slowly fading from its peak into a warm, spreading afterglow.
-
-The afterglow was //different//. The prince&#39;s had been concentrated   a post-release heaviness in the pelvis, a drowsy satisfaction, a body that had completed its mechanical function and was powering down. This was... //everywhere//. The warmth spread through the belly, the hips, the thighs, up through the ribs and into the chest, where the breasts held it like cupped hands holding warm water. The nipples softened slowly   reluctantly   as though they did not want the sensation to end.
-
-My breathing steadied. The bathwater, which had been sloshing violently moments before, calmed into gentle ripples. The breasts settled. Small. Tender. //Changed//. Not just by growth   by experience. They had been //used// for the first time. Not by Maera   by //me//. My own hands on my own breasts during my own orgasm, and the integration of that sensation into the architecture of pleasure was permanent. The body would not forget this. The breasts were now, irrevocably, part of the sexual map.
-
-&lt;&lt;speech &quot;maera&quot;&gt;&gt;Well.&lt;&lt;/speech&gt;&gt;
-
-I exhaled. A long, unsteady breath that made the breasts rise and fall and the water ripple.
-
-&lt;&lt;speech &quot;mc&quot;&gt;&gt;That was...&lt;&lt;/speech&gt;&gt;
-
-&lt;&lt;speech &quot;maera&quot;&gt;&gt;Different?&lt;&lt;/speech&gt;&gt;
-
-&lt;&lt;speech &quot;mc&quot;&gt;&gt;...Everything was connected. The mouth   your mouth   and the chest. The nipples. I could feel the... it went //both ways//. Up and down. Like two instruments playing the same &lt;&lt;/speech&gt;&gt;
-
-&lt;&lt;speech &quot;maera&quot;&gt;&gt;Welcome to having breasts during sex.&lt;&lt;/speech&gt;&gt;
-
-She said it simply. Without drama. The way she might have said //welcome to Tuesdays// or //welcome to rain//.
-
-&lt;&lt;speech &quot;maera&quot;&gt;&gt;They are not decorative, Caelan. They are //wired//. Every nerve in those nipples connects to pathways that run straight to the same places that your cock connects to. Different route, same destination. And when both routes fire at once...&lt;&lt;/speech&gt;&gt;
-
-&lt;&lt;speech &quot;mc&quot;&gt;&gt;...Thunderstorm.&lt;&lt;/speech&gt;&gt;
-
-&lt;&lt;speech &quot;maera&quot;&gt;&gt;Mmm. And you are, what, fifteen percent transformed? Twenty? Imagine what it will be like when the breasts are full. When the nipples have finished developing. When the new nerve pathways are fully established and the body has learned to &lt;&lt;/speech&gt;&gt;
-
-&lt;&lt;speech &quot;mc&quot;&gt;&gt;Maera.&lt;&lt;/speech&gt;&gt;
-
-&lt;&lt;speech &quot;maera&quot;&gt;&gt;I am only saying.&lt;&lt;/speech&gt;&gt;
-
-She stood. Her knees left wet marks on the stone. She smoothed her skirt, pushed the damp curls from her face, and retrieved the reinforced corset from the chair.
-
-&lt;&lt;speech &quot;maera&quot;&gt;&gt;Salve. Both breasts. Circular motions.&lt;&lt;/speech&gt;&gt;
-
-The words were the same as always. But her eyes   her dark, sharp, knowing eyes   held something new. Not pity. Not concern.
-
-//Anticipation//.
-
-She had just felt the body respond in a way it never had before. She had been present at the first integration   the first time the male and female pleasure systems had fired simultaneously, the first time the breasts had participated in orgasm, the first time the changing body had shown what it might //become// when the transformation was complete.
-
-And she wanted to see what came next.
-
-She left. The door closed softly.
-
-[[The salve and sleep|warrior_queen_day_3_15]]</tw-passagedata><tw-passagedata pid="1545" name="warrior_queen_day_3_15" tags="" position="600,19350" size="100,100">I applied the salve. Both breasts. Circular motions.
-
-My hands had changed further. I noticed it as I smoothed the cream across my own chest   the fingers were longer, definitively, the knuckles less prominent, the nails growing into slightly different shapes   more oval, less square. The palms were narrower. The skin softer. When my fingertips crossed the areola and reached the nipple, the sensation was transmitted through fingers that were becoming instruments of finer resolution   more sensitive themselves, the nerve endings closer to the surface through thinner skin.
-
-I was touching my breasts with hands that were becoming a woman&#39;s hands and the breasts were becoming a woman&#39;s breasts and the //entire system//   hands to breasts, touch to sensation, body to self   was slowly, incrementally, relentlessly //feminizing//.
-
-The nipple pulsed beneath my fingertip. That deep, radiating wave   outward from the nub, through the areola, into the breast, down through the chest. The salve tingled. The moonpetal magic sank in.
-
-I lingered. Not deliberately   not consciously. But my fingertip remained on the nipple for a second longer than the clinical application required, and in that second the sensation shifted from //medical// to something else. Something warmer. Something that lived in the territory between the body&#39;s functional responses and its //pleasure// responses, a borderland I had never visited from this direction before.
-
-I pulled my hand away. My breath had quickened   I noticed it with a start, the way the chest rose faster, the way the breasts moved with the accelerated breathing, the way the body was responding to its own touch with a specificity that the prince&#39;s flat chest had never possessed.
-
-I wiped the salve from my fingers. Pulled on the sleeping shift. Lay down in bed on my side   the side-sleeping position that accommodated the breasts, left settling against right beneath the binding of gravity.
-
-The rapier leaned against the bedside table. Its slender blade caught the last of the candlelight and gleamed   a thin line of silver in the dark.
-
-Tomorrow, more drills. More lunges. More of the body&#39;s rhythms learned and integrated. More of the //fit// between blade and body deepened.
-
-The breasts settled. The wrists ached. The hips were sore from the rotation drills. The core burned with the beautiful, structural pain of muscles being rebuilt and the anger from the rampart smouldered beneath it all   not destructive, not consuming, but //warm//. The kind of ember that you could build a fire on. The kind of fire that forged weapons.
-
-I closed my eyes. The rapier gleamed. The body breathed.
-
-Tomorrow, I would be better and the day after that.
-
-Every day after that, until //better// became //lethal//, and the laughter stopped, and the only sound that followed me through the corridors of Velmoria was the quiet whisper of a blade at my hip and the silence of men who had learned not to mock what they could not match.
-
-The rapier&#39;s weight was nothing against my thigh. Light as a whisper.
-
-But it felt like a promise.
-
-&lt;&lt;set $warrior_queen_arc_step = 3&gt;&gt;
-[[Sleep|mc_bed]]</tw-passagedata><tw-passagedata pid="1546" name="startup" tags="" position="725,19350" size="100,100">&lt;&lt;nobr&gt;&gt;
+[[Sleep|mc_bed]]</tw-passagedata><tw-passagedata pid="1505" name="startup" tags="" position="600,18850" size="100,100">&lt;&lt;nobr&gt;&gt;
 &lt;!-- Fullscreen Intro Page for Kingdom of Velmoria --&gt;
 &lt;div id=&quot;velmoria-intro&quot; style=&quot;
   position: fixed;
@@ -43387,7 +41965,7 @@ But it felt like a promise.
   &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1547" name="intro" tags="" position="850,19350" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1506" name="intro" tags="" position="725,18850" size="100,100">&lt;&lt;nobr&gt;&gt;
 &lt;div id=&quot;velmoria-intro-2&quot;&gt;
 &lt;h1 class=&#39;topic-head&#39;&gt;👑 *Kingdom of Velmoria* 👑&lt;/h1&gt;
 &lt;p&gt;&lt;strong&gt;Genre:&lt;/strong&gt; Medieval Fantasy · Interactive Story · Gender Transformation&lt;/p&gt;
@@ -43415,7 +41993,7 @@ But it felt like a promise.
 
 &lt;button id=&quot;enter-relam&quot; style=&quot;margin-top: 25px; padding: 10px 20px; background-color: #a58b5c; color: white; border: none; border-radius: 8px;&quot;&gt;Enter the Realm&lt;/button&gt;
 &lt;/div&gt;
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1548" name="body_choice" tags="" position="975,19350" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1507" name="body_choice" tags="" position="850,18850" size="100,100">&lt;&lt;nobr&gt;&gt;
 &lt;h3 style=&quot;text-align: center;&quot;&gt;Choose your starting character&lt;/h3&gt;
 &lt;div class=&quot;item-grid&quot;&gt;
 	&lt;div class=&quot;item-card&quot; style=&quot;width: 90%; &quot;&gt;
@@ -43446,7 +42024,7 @@ But it felt like a promise.
         [[Ultra Muscular|Ultra Muscular]]
     &lt;/div&gt;
 &lt;/div&gt;
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1549" name="Lean" tags="" position="1100,19350" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1508" name="Lean" tags="" position="975,18850" size="100,100">&lt;&lt;nobr&gt;&gt;
 &lt;&lt;set $user_stats.gender_Identity = 60&gt;&gt;
 &lt;&lt;set $user_stats.gender_appearance = 64.5&gt;&gt;
 &lt;&lt;set $user_stats.dominance_level = 60&gt;&gt;
@@ -43521,7 +42099,7 @@ In public mode only the muscular body type is available.
 &lt;br&gt;
 &lt;&lt;/if&gt;&gt;
 [[Back Choose Character|body_choice]]
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1550" name="Muscular" tags="" position="1225,19350" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1509" name="Muscular" tags="" position="1100,18850" size="100,100">&lt;&lt;nobr&gt;&gt;
 &lt;&lt;set $user_stats.gender_Identity = 80&gt;&gt;
 &lt;&lt;set $user_stats.gender_appearance = 80&gt;&gt;
 &lt;&lt;set $user_stats.dominance_level = 80&gt;&gt;
@@ -43588,7 +42166,7 @@ In public mode only the muscular body type is available.
 &lt;&lt;set $curr_chest = 2&gt;&gt;
 [[Start Journey|notice]] |
 [[Back Choose Character|body_choice]]
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1551" name="Ultra Muscular" tags="" position="100,19475" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1510" name="Ultra Muscular" tags="" position="1225,18850" size="100,100">&lt;&lt;nobr&gt;&gt;
 &lt;&lt;set $user_stats.gender_Identity = 100&gt;&gt;
 &lt;&lt;set $user_stats.gender_appearance = 94.9&gt;&gt;
 &lt;&lt;set $user_stats.dominance_level = 100&gt;&gt;
@@ -43664,7 +42242,7 @@ In public mode only the muscular body type is available.
 &lt;br&gt;
 &lt;&lt;/if&gt;&gt;
 [[Back Choose Character|body_choice]]
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1552" name="notice" tags="" position="225,19475" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1511" name="notice" tags="" position="100,18975" size="100,100">&lt;&lt;nobr&gt;&gt;
 &lt;&lt;set $currentObjectives = &quot;The Council Convenes&quot;&gt;&gt;
 &lt;&lt;set $locationName = &#39;Castle&#39;&gt;&gt;
 &lt;&lt;set $locationImage = setup.ImagePath + &#39;location/council_room.png&#39;&gt;&gt;
@@ -43699,7 +42277,7 @@ In public mode only the muscular body type is available.
 [[Contemplate Your Path|Contemplate_Your_Path]]
 [[Skip Intro|into_11]]
 &lt;/div&gt;
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1553" name="Contemplate_Your_Path" tags="" position="350,19475" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1512" name="Contemplate_Your_Path" tags="" position="225,18975" size="100,100">&lt;&lt;nobr&gt;&gt;
 &lt;&lt;speech &quot;malrec&quot;&gt;&gt;
 Your Majesty, may I commend the clarity of your decree. The boy ahem, the Prince deserves to understand the weight of such a crossroads. Rare it is for a ruler to offer choice when the throne’s need is clear.
 &lt;&lt;/speech&gt;&gt;
@@ -43717,7 +42295,7 @@ Enough. This is not a debate of worth. My son was born of my womb, he carries th
 &lt;&lt;/speech&gt;&gt;
 &lt;br&gt;
 [[Move forth|into_1]]
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1554" name="into_1" tags="" position="475,19475" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1513" name="into_1" tags="" position="350,18975" size="100,100">&lt;&lt;nobr&gt;&gt;
 &lt;&lt;speech &quot;mc&quot;&gt;&gt;
 ...May I speak, Mother?
 &lt;&lt;/speech&gt;&gt;
@@ -43735,7 +42313,7 @@ You speak well, my son. Or perhaps... my daughter in waiting. Know this, Your tr
 &lt;&lt;/speech&gt;&gt;
 &lt;br&gt;
 [[Move forth|into_2]]
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1555" name="into_2" tags="" position="600,19475" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1514" name="into_2" tags="" position="475,18975" size="100,100">&lt;&lt;nobr&gt;&gt;
 &lt;&lt;speech &quot;veletia&quot;&gt;&gt;
 And what a divine peace it could be! Imagine, Caelan silk draped on strong shoulders, a crown resting on freshly curled hair, eyes like yours commanding hearts and thrones alike!
 &lt;&lt;/speech&gt;&gt;
@@ -43753,7 +42331,7 @@ And if I say no? If I take a wife and let her rule? Will you all stand by me the
 &lt;&lt;/speech&gt;&gt;
 &lt;br&gt;
 [[Move forth|into_3]]
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1556" name="into_3" tags="" position="725,19475" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1515" name="into_3" tags="" position="600,18975" size="100,100">&lt;&lt;nobr&gt;&gt;
 &lt;&lt;speech &quot;alinora&quot;&gt;&gt;
 I will stand beside you. But not behind you. A queen leads. A consort supports. The throne demands its sovereign to be sovereign not through marriage, but through birth... and rebirth.
 &lt;&lt;/speech&gt;&gt;
@@ -43774,7 +42352,7 @@ Then ask yourself, my child. Do you want to be queen? To rule with the strength 
 &lt;br&gt;
 &lt;br&gt;
 [[No crown is worth losing myself. I will take a wife, not a new form|into_5]]
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1557" name="into_4" tags="" position="850,19475" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1516" name="into_4" tags="" position="725,18975" size="100,100">&lt;&lt;nobr&gt;&gt;
 &lt;&lt;speech &quot;mc&quot;&gt;&gt;
 I have never feared duty. And though this path is strange, even frightening... if my body must change to match the crown, then let it be so. If being a princess means protecting our bloodline, our realm then I will embrace that role, fully and without shame.
 &lt;&lt;/speech&gt;&gt;
@@ -43808,14 +42386,14 @@ Caelan’s heart beat like a war drum. This was no coronation. It was a reforgin
 &lt;br&gt;
 [[Begin with the First Pillar: Mental Conversion|mental_conversion]]
 
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1558" name="into_5" tags="" position="975,19475" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1517" name="into_5" tags="" position="850,18975" size="100,100">&lt;&lt;nobr&gt;&gt;
 &lt;br&gt;
 &lt;br&gt;
 &lt;strong&gt;Dev Message - Not Implemented this path yet..&lt;/strong&gt;
 &lt;br&gt;
 &lt;br&gt;
 [[Go Back|into_3]]
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1559" name="mental_conversion" tags="" position="1100,19475" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1518" name="mental_conversion" tags="" position="975,18975" size="100,100">&lt;&lt;nobr&gt;&gt;
 &lt;&lt;set $currentObjectives = &quot;Listen to Mental Conversion&quot;&gt;&gt;
 &lt;div style=&quot;font-family: &#39;Papyrus&#39;, serif; potion_create_torso color: #8b5e3c; background-color: #f5f0dc; border: 2px solid #a58b5c; padding: 18px; border-radius: 10px; box-shadow: 3px 3px 8px rgba(0,0,0,0.2); max-width: 700px; margin: 20px auto;&quot;&gt;
 &lt;p&gt;&lt;strong&gt;Lady Serelyne Virellis&lt;/strong&gt; stepped forward, her expression unreadable.&lt;/p&gt;
@@ -43839,7 +42417,7 @@ You may struggle, But should you succeed, the court will not see a transformed m
 &lt;br&gt;
 [[Proceed to the Second Pillar: Physical Conversion|physical_conversion]]
 &lt;/div&gt;
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1560" name="physical_conversion" tags="" position="1225,19475" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1519" name="physical_conversion" tags="" position="1100,18975" size="100,100">&lt;&lt;nobr&gt;&gt;
 &lt;&lt;set $currentObjectives = &quot;Listen to Physical Conversion&quot;&gt;&gt;
 &lt;div style=&quot;font-family: &#39;Papyrus&#39;, serif; potion_create_torso color: #8b5e3c; background-color: #f5f0dc; border: 2px solid #a58b5c; padding: 18px; border-radius: 10px; box-shadow: 3px 3px 8px rgba(0,0,0,0.2); max-width: 700px; margin: 20px auto;&quot;&gt;
 &lt;p&gt;&lt;strong&gt;Archmage Thalara Moonveil&lt;/strong&gt; stood with staff in hand, her silver hair glowing faintly under the chandelier&#39;s light.&lt;/p&gt;
@@ -43863,7 +42441,7 @@ The body is clay in the hands of will and magic, But it is &lt;em&gt;you&lt;/em&
 &lt;br&gt;
 [[Proceed to the Third Pillar: Rule and Survival|rule_and_survival]]
 &lt;/div&gt;
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1561" name="rule_and_survival" tags="" position="100,19600" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1520" name="rule_and_survival" tags="" position="1225,18975" size="100,100">&lt;&lt;nobr&gt;&gt;
 &lt;&lt;set $currentObjectives = &quot;Listen to Rule and Survival&quot;&gt;&gt;
 &lt;div style=&quot;font-family: &#39;Papyrus&#39;, serif; potion_create_torso color: #8b5e3c; background-color: #f5f0dc; border: 2px solid #a58b5c; padding: 18px; border-radius: 10px; box-shadow: 3px 3px 8px rgba(0,0,0,0.2); max-width: 700px; margin: 20px auto;&quot;&gt;
 &lt;p&gt;&lt;strong&gt;Queen Alinora&lt;/strong&gt; herself rose now, her voice strong with pride.&lt;/p&gt;
@@ -43894,7 +42472,7 @@ You must earn the kingdom’s love and fear, Caelan,&quot; the Queen declared. &
 [[Move forth|into_6]]
 &lt;/div&gt;
 
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1562" name="into_6" tags="" position="225,19600" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1521" name="into_6" tags="" position="100,19100" size="100,100">&lt;&lt;nobr&gt;&gt;
 &lt;&lt;speech &quot;mc&quot;&gt;&gt;
 Then I accept the Rite of Three Pillars. I will reshape myself, body and soul, for the sake of Velmoria. 
 I only ask to understand what lies ahead, from those who will guide me.
@@ -43914,7 +42492,7 @@ To lead Velmoria, you must &lt;strong&gt;think&lt;/strong&gt; as she does. Not m
 You speak of thoughts and instincts... but how does one change those?
 &lt;&lt;/speech&gt;&gt; &lt;br&gt;
 [[Move forth|into_7]]
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1563" name="into_7" tags="" position="350,19600" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1522" name="into_7" tags="" position="225,19100" size="100,100">&lt;&lt;nobr&gt;&gt;
 &lt;&lt;speech &quot;serelyne&quot;&gt;&gt;
 Through observation. Discipline. Trial and test. You will spend days in court, mimicking our customs. 
 You will learn to speak softly, but with power. To smile in silence and command a room. 
@@ -43936,7 +42514,7 @@ But make no mistake this is not a costume. It is rebirth.
 Will it hurt? Will I lose who I am?
 &lt;&lt;/speech&gt;&gt; &lt;br&gt;
 [[Move forth|into_8]]
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1564" name="into_8" tags="" position="475,19600" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1523" name="into_8" tags="" position="350,19100" size="100,100">&lt;&lt;nobr&gt;&gt;
 &lt;&lt;speech &quot;thalara&quot;&gt;&gt;
 Pain, yes... in moments. But more than pain, there is uncertainty. 
 Your form will shift slowly organs altered, voice softened, curves blooming where none were before. 
@@ -43958,7 +42536,7 @@ You’ll fall off a horse, bruise, sweat, bleed... until you ride like fire and 
 Even after I become... physically different?
 &lt;&lt;/speech&gt;&gt; &lt;br&gt;
 [[Move forth|into_9]]
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1565" name="into_9" tags="" position="600,19600" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1524" name="into_9" tags="" position="475,19100" size="100,100">&lt;&lt;nobr&gt;&gt;
 &lt;&lt;speech &quot;aldric&quot;&gt;&gt;
 Especially then. The sword don’t care what’s between your legs. 
 Neither do enemies. 
@@ -43980,7 +42558,7 @@ You can’t. You will be shaped by them. And one day, you may wake up wondering 
 But such is rule an artful performance of truth and deceit. I will teach you both.
 &lt;&lt;/speech&gt;&gt; &lt;br&gt;
 [[Move forth|into_10]]
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1566" name="into_10" tags="" position="725,19600" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1525" name="into_10" tags="" position="600,19100" size="100,100">&lt;&lt;nobr&gt;&gt;
 Then, in a sudden flourish of silk and laughter, &lt;strong&gt;Mistress Veletia Roswyn&lt;/strong&gt; swept into the center like a flame in human form. &lt;br&gt;
 &lt;&lt;speech &quot;veletia&quot;&gt;&gt;
 And I, darling, shall make you &lt;strong&gt;divine&lt;/strong&gt;. 
@@ -43996,7 +42574,7 @@ It is armor. It is spellwork.
 And you, my dear Caelan, will become the most enchanting vision this kingdom has ever dared to imagine.
 &lt;&lt;/speech&gt;&gt; &lt;br&gt;
 [[Move forth|into_11]]
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1567" name="into_11" tags="" position="850,19600" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1526" name="into_11" tags="" position="725,19100" size="100,100">&lt;&lt;nobr&gt;&gt;
 As the final words settled into the warm silence of the chamber, the great bell of the royal tower tolled twice, signaling the descent of evening. &lt;br&gt;&lt;br&gt;
 Queen Alinora stood once more, her face unreadable. &lt;br&gt;
 &lt;&lt;speech &quot;alinora&quot;&gt;&gt;

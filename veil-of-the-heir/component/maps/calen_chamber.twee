@@ -101,10 +101,10 @@ I will become the queen this realm deserves.
 <<if $currentArc["main_arc"] >= 6>>
 <<if $warrior_queen_arc_step == 0>>
 [[Start Training With Aldric|warrior_queen_day_1_1]]
-<<elseif $warrior_queen_arc_step == 1>>
+/* <<elseif $warrior_queen_arc_step == 1>>
 [[Second Day Training With Aldric|warrior_queen_day_2_1]]
 <<elseif $warrior_queen_arc_step == 2>>
-[[Third Day Training With Aldric|warrior_queen_day_3_1]]
+[[Third Day Training With Aldric|warrior_queen_day_3_1]] */
 <</if>>
 <</if>>
 <</if>>
