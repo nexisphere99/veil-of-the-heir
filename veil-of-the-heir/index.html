@@ -6,16 +6,6 @@
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <meta name="application-name" content="SugarCube" />
 <meta name="version" content="2.37.3" />
-<script>
-    // Check if the referrer is from Patreon or the query parameter 'source' is set to 'patreon'
-    const urlParams = new URLSearchParams(window.location.search);
-    const source = urlParams.get('source');
-
-    if (!document.referrer.includes('patreon.com') && source !== 'patreon') {
-        alert('Access denied. This page is only accessible via Patreon.');
-        window.location.href = 'https://patreon.com'; // Redirect to Patreon
-    }
-</script>
 <!--
 
 SugarCube (v2.37.3): A free (gratis and libre) story format.
@@ -38368,7 +38358,7 @@ Then let it be misunderstood. A true soul doesn’t owe clarity to anyone but it
 
 &lt;&lt;set $gold = 100&gt;&gt;
 &lt;&lt;set $health = 100&gt;&gt;
-&lt;&lt;set $veil_of_the_heir = true&gt;&gt;
+&lt;&lt;set $veil_of_the_heir = false&gt;&gt;
 
 &lt;&lt;set $user_stats = {
 	gender_appearance: 94.9,
