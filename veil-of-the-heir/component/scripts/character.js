@@ -167,6 +167,9 @@ Macro.add("speech", {
             }else if (charKey == "evandor") {
                 image_path = setup.ImagePath + "character/evandor/evandor.png";
                 charName = "Evandor Relstrae";
+            }else if (charKey == "yseldra") {
+                image_path = setup.ImagePath + "character/yseldra/yseldra.png";
+                charName = "Yseldra Thornehart";
             } else {
                 // image_path = setup.ImagePath + "character/queen/avatar.png";
                 charName = charKey
