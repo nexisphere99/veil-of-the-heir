@@ -107,6 +107,8 @@ I will become the queen this realm deserves.
 [[Third Day Training With Aldric|warrior_queen_day_3_1]]
 <<elseif $warrior_queen_arc_step == 3>>
 [[Fourth Day Training With Aldric|warrior_queen_day_4_1]]
+<<elseif $warrior_queen_arc_step == 4>>
+[[Fifth Day Training With Aldric|warrior_queen_day_5_1]]
 <</if>>
 <</if>>
 <</if>>
