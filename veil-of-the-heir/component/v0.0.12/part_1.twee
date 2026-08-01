@@ -1,6 +1,7 @@
 
 
 :: dream_sequence
+<<=$currentArc["main_arc"]>>
 The world softened under me like warm breath, and when I opened my eyes, I was lying on moss. Not the cool, damp moss of the castle gardens I mean a deep emerald carpet, lush and fragrant, glowing under silver moonlight. It took me a moment to realize I wasn’t in my bed at all.
 
 Or in my own body.
