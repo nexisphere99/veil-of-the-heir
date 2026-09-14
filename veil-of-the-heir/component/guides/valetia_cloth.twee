@@ -7,7 +7,7 @@
 <<set _i to random(0, 79)>>
 <<if _i == 0>>
 <<speech "veletia">>
-Oh, you poor thing those sleeves are a tragedy, and that posture? Criminal. Come in, darling, I’m about to rescue your future.
+Oh, you poor thing. Those sleeves are a tragedy, and that posture is a crime. Come in, darling, I’m about to rescue your future.
 <</speech>>
 <br>
 
@@ -92,7 +92,7 @@ I think it just taught me regret.
 <br>
 
 <<speech "veletia">>
-Pain is temporary. Beauty? Oh, that’s remembered in paintings.
+Pain is temporary, darling. Beauty gets remembered in paintings.
 <</speech>>
 <br>
 <<elseif _i == 6>>
@@ -102,7 +102,7 @@ There’s power in a perfect fit. Threads that embrace instead of armor that hid
 <br>
 
 <<speech "mc">>
-And what if I’m still figuring out who I am beneath all these threads?
+What if I’m still figuring out who I am beneath all these threads?
 <</speech>>
 <br>
 
@@ -112,7 +112,7 @@ Then let the fabric show you. Sometimes silk knows before the soul does.
 <br>
 <<elseif _i == 7>>
 <<speech "veletia">>
-That sway of your hips was accidental, wasn’t it? Good. It means your body is listening to me.
+That sway of your hips was accidental, wasn’t it? Good, it means your body is listening to me.
 <</speech>>
 <br>
 
@@ -142,7 +142,7 @@ Oh yes. But only after making half the court swoon and the other half burn with 
 <br>
 <<elseif _i == 9>>
 <<speech "veletia">>
-One last touch… there. Now you’re no longer just a royal you’re a vision.
+One last touch, there. Now you’re no longer just a royal, you’re a vision.
 <</speech>>
 <br>
 
@@ -152,7 +152,7 @@ I’m not sure I recognize myself.
 <br>
 
 <<speech "veletia">>
-Good. That means we’ve found something new. Something extraordinary.
+That’s the goal. It means we’ve found something new, something extraordinary.
 <</speech>>
 <br>
 <<elseif _i == 10>>
@@ -184,12 +184,12 @@ Only if it doesn't whisper too loudly in council meetings.
 <br>
 
 <<speech "veletia">>
-Oh, it will whisper. But that’s half the fun power dressed as poetry.
+Oh, it will whisper. But that’s half the fun, power dressed as poetry.
 <</speech>>
 <br>
 <<elseif _i == 12>>
 <<speech "veletia">>
-I see the curve of your shoulders softening beautiful, like dusk melting into night.
+I see the curve of your shoulders softening, beautiful, like dusk melting into night.
 <</speech>>
 <br>
 
@@ -206,7 +206,7 @@ No, darling. You're becoming inevitable.
 
 <<elseif _i == 13>>
 <<speech "veletia">>
-Step, turn, pause your hips are beginning to sing. Now let’s teach them the whole aria.
+Step, turn, pause. Your hips are beginning to sing. Now let’s teach them the whole aria.
 <</speech>>
 <br>
 
@@ -216,17 +216,17 @@ I swear these heels are a form of warfare.
 <br>
 
 <<speech "veletia">>
-Exactly. And you, my dear, are learning to conquer in silence and satin.
+Exactly, and you, my dear, are learning to conquer in silence and satin.
 <</speech>>
 <br>
 <<elseif _i == 14>>
 <<speech "veletia">>
-Oh, Caelan… in this gown, you don’t enter a room you rewrite it.
+Oh, Caelan, in this gown you don’t enter a room, you rewrite it.
 <</speech>>
 <br>
 
 <<speech "mc">>
-And yet I still feel like I’m playing dress up.
+Still, I feel like I’m playing dress up.
 <</speech>>
 <br>
 
@@ -236,7 +236,7 @@ Then play it beautifully, until the mirror stops laughing and starts applauding.
 <br>
 <<elseif _i == 15>>
 <<speech "veletia">>
-Tell me, sweetling does it thrill you a little, knowing how dangerous you’ll look in velvet and pearl?
+Tell me, sweetling, does it thrill you a little, knowing how dangerous you’ll look in velvet and pearl?
 <</speech>>
 <br>
 
@@ -251,7 +251,7 @@ Then you're standing at the perfect edge. Now lean into it.
 <br>
 <<elseif _i == 16>>
 <<speech "veletia">>
-A soft touch here, a cinch there oh, if only diplomacy were as easy as corsetry.
+A soft touch here, a cinch there, oh, if only diplomacy were as easy as corsetry.
 <</speech>>
 <br>
 
@@ -266,7 +266,7 @@ They do, darling. They just lie charmingly.
 <br>
 <<elseif _i == 17>>
 <<speech "veletia">>
-Let them whisper, let them stare because the future queen walks on whispers and drowns them in presence.
+Let them whisper, let them stare, because the future queen walks on whispers and drowns them in presence.
 <</speech>>
 <br>
 
@@ -276,7 +276,7 @@ You make scandal sound like a royal accessory.
 <br>
 
 <<speech "veletia">>
-It is, dear. The crown is heavy but the drama? That’s where the sparkle lives.
+It is, dear. The crown is heavy, but the drama? That’s where the sparkle lives.
 <</speech>>
 <br>
 <<elseif _i == 18>>
@@ -311,17 +311,17 @@ Oh no, darling. You will be the divine backup.
 <br>
 <<elseif _i == 20>>
 <<speech "veletia">>
-Here we are your very first lingerie set. Rose pink lace, soft and sheer. The bra is lightly padded to encourage your budding breasts to rest properly... and the panties? Trimmed to fit that little gap you're starting to form.
+Here we are, your very first lingerie set. Rose pink lace, soft and sheer. The bra is lightly padded to encourage your budding breasts to rest properly... and the panties? Trimmed to fit that little gap you're starting to form.
 <</speech>>
 <br>
 
 <<speech "mc">>
-It’s... delicate. And tiny. Why do I feel more naked <strong style="color: pink;">wearing </strong>this than wearing nothing at all?
+It’s... delicate, and tiny. Why do I feel more naked <strong style="color: pink;">wearing </strong>this than wearing nothing at all?
 <</speech>>
 <br>
 
 <<speech "veletia">>
-Because this isn't just fabric. It's invitation. It draws attention to what you've become what you're still becoming. Every thread whispers femininity against your skin. And soon, you’ll crave how it clings and flatters.
+Because this isn't just fabric. It's invitation. It draws attention to what you've become, to what you're still becoming. Every thread whispers femininity against your skin, and soon you’ll crave how it clings and flatters.
 <</speech>>
 <br>
 
@@ -337,7 +337,7 @@ I can feel the clips tugging each time I shift. It’s... distracting.
 <br>
 
 <<speech "veletia">>
-Good. Your body <strong style="color: pink;">should </strong>be distracting now. You’ll walk differently in these. Sit more carefully. Every movement a silent reminder: you're not him anymore. You're soft, shaped, and sensual.
+Good. Your body <strong style="color: pink;">should </strong>be distracting now. You’ll walk differently in these, sit more carefully. Every movement is a silent reminder, you're not him anymore. You're soft, shaped, and sensual.
 <</speech>>
 <br>
 
@@ -353,13 +353,13 @@ That’s... devious. You’re saying these panties will betray me?
 <br>
 
 <<speech "veletia">>
-No, sweetling. They’ll reveal you. Every blush, every twitch, every lingering look it’s part of your training. Queens must know their desires, not hide from them. These just... speed that awareness along.
+No, sweetling. They’ll reveal you. Every blush, every twitch, every lingering look, it’s part of your training. Queens must know their desires, not hide from them. These just... speed that awareness along.
 <</speech>>
 <br>
 
 <<elseif _i == 23>>
 <<speech "veletia">>
-This corset is a marvel. Bone ribbed, pearl trimmed, and laced tight to reshape your figure. But more than that it teaches you to breathe like a lady: shallow, graceful, and teasing.
+This corset is a marvel. Bone ribbed, pearl trimmed, and laced tight to reshape your figure. But more than that, it teaches you to breathe like a lady, shallow, graceful, and teasing.
 <</speech>>
 <br>
 
@@ -385,18 +385,18 @@ So this is meant to be seen through? Even in candlelight?
 <br>
 
 <<speech "veletia">>
-Especially in candlelight. Let your silhouette tease and taunt. Let your nipples show beneath the gauze. The dressing gown isn’t meant for sleep. It’s meant for anticipation. And obedience.
+Especially in candlelight. Let your silhouette tease and taunt. Let your nipples show beneath the gauze. The dressing gown isn’t meant for sleep. It’s meant for anticipation and obedience.
 <</speech>>
 <br>
 
 <<elseif _i == 25>>
 <<speech "veletia">>
-This padded bra isn’t just decorative it’s designed to <strong style="color: pink;">guide </strong>your growth. Your nipples will be held gently, your chest lifted and rounded. It’s soft. Supportive. But also shaping.
+This padded bra isn’t just decorative, it’s designed to <strong style="color: pink;">guide </strong>your growth. Your nipples will be held gently, your chest lifted and rounded. It’s soft, supportive, but also shaping.
 <</speech>>
 <br>
 
 <<speech "mc">>
-When I put it on, it’s like... I can see what I’ll become. And it’s... not bad.
+When I put it on, it’s like... I can see what I’ll become. It’s... not bad.
 <</speech>>
 <br>
 
@@ -417,7 +417,7 @@ That’s... a dangerous game. What if someone sees me reacting?
 <br>
 
 <<speech "veletia">>
-Then let them. A queen doesn’t apologize for her desire. She <strong style="color: pink;">controls </strong>it. These teach you restraint and surrender. Both are tools of power. And you will master both.
+Then let them. A queen doesn’t apologize for her desire. She <strong style="color: pink;">controls </strong>it. These teach you restraint and surrender. Both are tools of power, and you will master both.
 <</speech>>
 <br>
 
@@ -433,7 +433,7 @@ When I move, it glides between my legs. It’s... intimate. Embarrassingly so.
 <br>
 
 <<speech "veletia">>
-That’s the beauty of it. The chemise doesn’t <strong style="color: pink;">hide </strong>you it accents you. Reminds you. Your legs, your thighs, the place that’s growing into womanhood <strong style="color: pink;">all of it </strong>deserves attention now.
+That’s the beauty of it. The chemise doesn’t <strong style="color: pink;">hide </strong>you, it accents you, reminds you. Your legs, your thighs, the place that’s growing into womanhood, <strong style="color: pink;">all of it </strong>deserves attention now.
 <</speech>>
 <br>
 
@@ -449,13 +449,13 @@ I can’t wear that in front of anyone. I’d feel completely exposed.
 <br>
 
 <<speech "veletia">>
-And yet, that’s the point. Exposure builds confidence. You won’t always be able to hide what you’re becoming. Better to choose what they see... than to let shame control the view.
+Yet that’s the point. Exposure builds confidence. You won’t always be able to hide what you’re becoming. Better to choose what they see... than to let shame control the view.
 <</speech>>
 <br>
 
 <<elseif _i == 29>>
 <<speech "veletia">>
-This bodice is treated with aromatics subtle oils that warm with your skin and enhance scent. When worn, your body becomes... persuasive. You won’t just look feminine. You’ll <strong style="color: pink;">smell </strong>inviting.
+This bodice is treated with aromatics, subtle oils that warm with your skin and enhance scent. When worn, your body becomes... persuasive. You won’t just look feminine. You’ll <strong style="color: pink;">smell </strong>inviting.
 <</speech>>
 <br>
 
@@ -481,13 +481,13 @@ I never imagined myself in something so... visible. I feel like I’m being watc
 <br>
 
 <<speech "veletia">>
-That’s the point. Queens are watched. You’ll learn to draw attention and wield it like a blade. Now twirl. Let the fabric whisper around your thighs. Good feel the power in that rustle.
+That’s the point. Queens are watched. You’ll learn to draw attention and wield it like a blade. Now twirl. Let the fabric whisper around your thighs. Good, feel the power in that rustle.
 <</speech>>
 <br>
 
 <<elseif _i == 31>>
 <<speech "veletia">>
-This one’s for late feasts and soft music golden fabric laced with starlight thread. In candlelight, your curves will shimmer. It clings to your hips... then flows like liquid fire.
+This one’s for late feasts and soft music, golden fabric laced with starlight thread. In candlelight, your curves will shimmer. It clings to your hips... then flows like liquid fire.
 <</speech>>
 <br>
 
@@ -513,7 +513,7 @@ It's snug... very snug. I can barely bend.
 <br>
 
 <<speech "veletia">>
-Precisely. You’ll stand straight, walk with poise, and breathe with grace. Even your discomfort becomes beautiful. Embrace the discipline it will show in every regal step.
+Precisely. You’ll stand straight, walk with poise, and breathe with grace. Even your discomfort becomes beautiful. Embrace the discipline, it will show in every regal step.
 <</speech>>
 <br>
 
@@ -529,7 +529,7 @@ It feels like I’m baring too much. Shouldn’t royalty cover more?
 <br>
 
 <<speech "veletia">>
-Royalty commands attention. You don’t <strong style="color: pink;">hide </strong>power, you display it with elegance. This gown says: I am not a man to be feared. I am a woman to be <strong style="color: pink;">followed </strong>and <strong style="color: pink;">desired*.
+Royalty commands attention. You don’t <strong style="color: pink;">hide </strong>power, you display it with elegance. This gown says, I am not a man to be feared. I am a woman to be <strong style="color: pink;">followed </strong>and <strong style="color: pink;">desired*.
 <</speech>>
 <br>
 
@@ -561,13 +561,13 @@ So it betrays my feelings to anyone watching?
 <br>
 
 <<speech "veletia">>
-No, darling it teaches you to master them. You’ll learn grace under fire, calm in lust. Wear it until you no longer fear your feelings showing... because you'll control them all.
+No, darling, it teaches you to master them. You’ll learn grace under fire, calm in lust. Wear it until you no longer fear your feelings showing... because you'll control them all.
 <</speech>>
 <br>
 
 <<elseif _i == 36>>
 <<speech "veletia">>
-This tunic appears simple, but there are subtle slits beneath the arms and along the thighs. Laces are threaded inside tightening with every gesture out of posture. It’s a lesson stitched in restraint.
+This tunic appears simple, but there are subtle slits beneath the arms and along the thighs. Laces are threaded inside, tightening with every gesture out of posture. It’s a lesson stitched in restraint.
 <</speech>>
 <br>
 
@@ -577,13 +577,13 @@ You’re dressing me in... punishment?
 <br>
 
 <<speech "veletia">>
-Not punishment. Correction. You’ll carry yourself like a queen... or the dress will teach you to. Many noble girls learn this way. Now it’s your turn.
+Not punishment, correction. You’ll carry yourself like a queen... or the dress will teach you to. Many noble girls learn this way. Now it’s your turn.
 <</speech>>
 <br>
 
 <<elseif _i == 37>>
 <<speech "veletia">>
-This bodice was designed to lift and press the bust together slightly. It encourages you to be proud of your development. The color? Wine red luxurious, regal, and a bit... indulgent.
+This bodice was designed to lift and press the bust together slightly. It encourages you to be proud of your development. The color? Wine red, luxurious, regal, and a bit... indulgent.
 <</speech>>
 <br>
 
@@ -593,7 +593,7 @@ My chest looks... full. Almost like it doesn’t belong to me.
 <br>
 
 <<speech "veletia">>
-Oh, but it does. Every inch you see, every curve that fills this fabric it’s yours. Claimed by choice or fate, it matters not. You will learn to adore what you see reflected.
+Oh, but it does. Every inch you see, every curve that fills this fabric, it’s yours. Claimed by choice or fate, it matters not. You will learn to adore what you see reflected.
 <</speech>>
 <br>
 
@@ -609,7 +609,7 @@ It almost feels... dangerous to wear. Like I’ll reveal too much.
 <br>
 
 <<speech "veletia">>
-That’s what makes it powerful. A queen’s allure is part mystique, part control. This gown flirts, but only you decide how far. And trust me they’ll all be waiting to see more.
+That’s what makes it powerful. A queen’s allure is part mystique, part control. This gown flirts, but only you decide how far. Trust me, they’ll all be waiting to see more.
 <</speech>>
 <br>
 
@@ -636,12 +636,12 @@ Now this is ironic... crimson velvet, flowing and rich. A little joke from me to
 <br>
 
 <<speech "mc">>
-Wait are you implying I’ll... actually have to worry about that?
+Wait, are you implying I’ll... actually have to worry about that?
 <</speech>>
 <br>
 
 <<speech "veletia">>
-Oh darling, we’re not dressing a doll. You’re becoming a woman. And women bleed. Magic or not, you’ll have to learn the art of discreet elegance even when your insides are staging a rebellion.
+Oh darling, we’re not dressing a doll. You’re becoming a woman, and women bleed. Magic or not, you’ll have to learn the art of discreet elegance even when your insides are staging a rebellion.
 <</speech>>
 <br>
 
@@ -663,7 +663,7 @@ Every queen does. Even empresses stain their thrones from time to time. The key 
 
 <<elseif _i == 42>>
 <<speech "veletia">>
-This fabric’s been spellwoven stain resistant, odor absorbing, and entirely discreet. The first time you bleed in silk, you’ll panic. Best to have a dress that doesn’t betray your secrets.
+This fabric’s been spellwoven, stain resistant, odor absorbing, and entirely discreet. The first time you bleed in silk, you’ll panic. Best to have a dress that doesn’t betray your secrets.
 <</speech>>
 <br>
 
@@ -705,7 +705,7 @@ I… didn’t expect it to feel real until it started happening.
 <br>
 
 <<speech "veletia">>
-It always feels real when the cramping starts. Don’t worry I’ve stitched a charm in the hem for comfort. Also, there’s a tiny pocket... for chocolates.
+It always feels real when the cramping starts. Don’t worry, I’ve stitched a charm in the hem for comfort. Also, there’s a tiny pocket... for chocolates.
 <</speech>>
 <br>
 
@@ -721,7 +721,7 @@ You’re saying I’ll cry because of… shoes?
 <br>
 
 <<speech "veletia">>
-No because of hormones, bloating, and someone looking at you the wrong way. The shoes just complete the ensemble.
+No, because of hormones, bloating, and someone looking at you the wrong way. The shoes just complete the ensemble.
 <</speech>>
 <br>
 
@@ -737,7 +737,7 @@ You’re making this sound like I’ll need a disaster kit…
 <br>
 
 <<speech "veletia">>
-You absolutely will. And emergency undergarments. And herbs. And possibly a servant who brings you hot towels and wine. You’ll love womanhood eventually.
+You absolutely will, plus emergency undergarments, herbs, and possibly a servant who brings you hot towels and wine. You’ll love womanhood eventually.
 <</speech>>
 <br>
 
@@ -769,7 +769,7 @@ Do you all <strong style="color: pink;">really </strong>go through this every mo
 <br>
 
 <<speech "veletia">>
-Yes. And we survive it. Sometimes with wine, sometimes with tears, and often while smiling at nobles who deserve a dagger to the eye.
+Yes, and we survive it. Sometimes with wine, sometimes with tears, and often while smiling at nobles who deserve a dagger to the eye.
 <</speech>>
 <br>
 
@@ -785,12 +785,12 @@ You mean I’ll have to <strong style="color: pink;">announce </strong>it?
 <br>
 
 <<speech "veletia">>
-Not announce. Just... appear. Radiant, glowing, a little pale. And when the older women smile and nod, you’ll know you’ve joined a sisterhood that no man can ever understand.
+Not announce. Just... appear. Radiant, glowing, a little pale. When the older women smile and nod, you’ll know you’ve joined a sisterhood that no man can ever understand.
 <</speech>>
 <br>
 <<elseif _i == 50>>
 <<speech "veletia">>
-This lace isn’t just for looks it’s crafted to tease. It brushes against your thighs when you walk, when you shift, when you breathe. You'll soon understand how your skin <strong style="color: pink;">hungers </strong>for sensation in ways it never did before.
+This lace isn’t just for looks, it’s crafted to tease. It brushes against your thighs when you walk, when you shift, when you breathe. You'll soon understand how your skin <strong style="color: pink;">hungers </strong>for sensation in ways it never did before.
 <</speech>>
 <br>
 
@@ -800,7 +800,7 @@ You make it sound like... every little movement will turn me on.
 <br>
 
 <<speech "veletia">>
-Oh sweetling, it might. Female pleasure is patient and deep it builds, tingles, lingers. It doesn't strike like lightning, it <strong style="color: pink;">blooms </strong>like fire beneath the skin.
+Oh sweetling, it might. Female pleasure is patient and deep, it builds, tingles, lingers. It doesn't strike like lightning, it <strong style="color: pink;">blooms </strong>like fire beneath the skin.
 <</speech>>
 <br>
 
@@ -822,7 +822,7 @@ Because it <strong style="color: pink;">is*. Your new body won’t climax like a
 
 <<elseif _i == 52>>
 <<speech "veletia">>
-When your breasts grow in, even the gentlest touch can steal your breath. A soft caress... a teasing flick. You'll learn how sensitive nipples can be how they <strong style="color: pink;">burn </strong>for attention.
+When your breasts grow in, even the gentlest touch can steal your breath. A soft caress... a teasing flick. You'll learn how sensitive nipples can be, how they <strong style="color: pink;">burn </strong>for attention.
 <</speech>>
 <br>
 
@@ -832,13 +832,13 @@ That sounds... distracting.
 <br>
 
 <<speech "veletia">>
-Oh, it is. It’s maddening. It’s <strong style="color: pink;">glorious*. You’ll realize pleasure isn’t just release it’s the build up, the ache, the anticipation that melts your spine and makes your thoughts stutter.
+Oh, it is. It’s maddening. It’s <strong style="color: pink;">glorious*. You’ll realize pleasure isn’t just release, it’s the build up, the ache, the anticipation that melts your spine and makes your thoughts stutter.
 <</speech>>
 <br>
 
 <<elseif _i == 53>>
 <<speech "veletia">>
-Soon, you'll carry your pleasure deep within. Not on the surface like a man. Inside you, there's a place that aches to be touched, stretched, filled. And once awakened… it never forgets.
+Soon, you'll carry your pleasure deep within. Not on the surface like a man. Inside you, there's a place that aches to be touched, stretched, filled. Once awakened, it never forgets.
 <</speech>>
 <br>
 
@@ -848,7 +848,7 @@ That sounds... overwhelming.
 <br>
 
 <<speech "veletia">>
-It is. But it's beautiful. A man may spend his lust in moments. But a woman oh, she can <strong style="color: pink;">drown </strong>in waves of bliss, one after another, like tides pulling her under.
+It is. But it's beautiful. A man may spend his lust in moments. But a woman, oh, she can <strong style="color: pink;">drown </strong>in waves of bliss, one after another, like tides pulling her under.
 <</speech>>
 <br>
 
@@ -864,13 +864,13 @@ My voice will change that much?
 <br>
 
 <<speech "veletia">>
-Yes, darling. You won’t grunt anymore. You’ll gasp. Whimper. <strong style="color: pink;">Sing*. A woman’s pleasure echoes in her throat and thighs and fingertips. It’s music. And you’ll learn the notes soon enough.
+Yes, darling. You won’t grunt anymore. You’ll gasp, whimper, <strong style="color: pink;">sing*. A woman’s pleasure echoes in her throat and thighs and fingertips. It’s music, and you’ll learn the notes soon enough.
 <</speech>>
 <br>
 
 <<elseif _i == 55>>
 <<speech "veletia">>
-One day, you’ll lie in your bed, brush a hand between your legs, and the world will <strong style="color: pink;">stop*. You’ll shudder. You’ll gasp. You’ll want more. And more. And you’ll finally <strong style="color: pink;">understand </strong>what it means to be touched as a woman.
+One day, you’ll lie in your bed, brush a hand between your legs, and the world will <strong style="color: pink;">stop*. You’ll shudder. You’ll gasp. You’ll want more, and more, until you finally <strong style="color: pink;">understand </strong>what it means to be touched as a woman.
 <</speech>>
 <br>
 
@@ -896,7 +896,7 @@ You mean clothes can make me feel... aroused?
 <br>
 
 <<speech "veletia">>
-Every hem that brushes your thighs, every breeze under your skirt. The female body is alive with nerve and desire. You’ll be a symphony of need and you’ll love every note.
+Every hem that brushes your thighs, every breeze under your skirt. The female body is alive with nerve and desire. You’ll be a symphony of need, and you’ll love every note.
 <</speech>>
 <br>
 
@@ -907,18 +907,18 @@ Men feel lust like fire in the belly. Quick, dirty, gone. Women… we ache. We <
 <br>
 
 <<speech "mc">>
-And that’s... better?
+So that’s... better?
 <</speech>>
 <br>
 
 <<speech "veletia">>
-Infinitely. When you come as a woman, it’s not just release. It’s <strong style="color: pink;">surrender*. And sometimes, you’ll be trembling long after, still aching, still <strong style="color: pink;">wanting*. It’s exquisite.
+Infinitely. When you come as a woman, it’s not just release. It’s <strong style="color: pink;">surrender*. Sometimes, you’ll be trembling long after, still aching, still <strong style="color: pink;">wanting*. It’s exquisite.
 <</speech>>
 <br>
 
 <<elseif _i == 58>>
 <<speech "veletia">>
-Your body will learn to <strong style="color: pink;">blush </strong>with arousal wet, soft, and ready. That first slickness between your legs? It’ll frighten you. Then it’ll <strong style="color: pink;">thrill </strong>you. You’ll crave the feeling.
+Your body will learn to <strong style="color: pink;">blush </strong>with arousal, wet, soft, and ready. That first slickness between your legs? It’ll frighten you. Then it’ll <strong style="color: pink;">thrill </strong>you. You’ll crave the feeling.
 <</speech>>
 <br>
 
@@ -928,7 +928,7 @@ I’ve never imagined being... wet.
 <br>
 
 <<speech "veletia">>
-It’s not imagined. It’s experienced. And once you feel the heat rising from within, spreading across your thighs... oh darling, you’ll realize how sweet surrender can taste.
+It’s not imagined. It’s experienced. Once you feel the heat rising from within, spreading across your thighs... oh darling, you’ll realize how sweet surrender can taste.
 <</speech>>
 <br>
 
@@ -950,7 +950,7 @@ You won’t just crave it, my lovely. You’ll <strong style="color: pink;">wors
 
 <<elseif _i == 60>>
 <<speech "veletia">>
-Once your body is complete, you’ll discover something glorious orgasms aren’t a singular event for us. They're <strong style="color: pink;">layers*. One crashes into the next. Sometimes three, four, before your breath even returns.
+Once your body is complete, you’ll discover something glorious, orgasms aren’t a singular event for us. They're <strong style="color: pink;">layers*. One crashes into the next. Sometimes three, four, before your breath even returns.
 <</speech>>
 <br>
 
@@ -960,13 +960,13 @@ Four? That’s… gods, that’s not even possible for a man.
 <br>
 
 <<speech "veletia">>
-Exactly, darling. The male peak is a summit. The female one? A <strong style="color: pink;">storm*. A rhythm. And once you learn your rhythm... you’ll never want to stop dancing.
+Exactly, darling. The male peak is a summit. The female one? A <strong style="color: pink;">storm*. A rhythm. Once you learn your rhythm... you’ll never want to stop dancing.
 <</speech>>
 <br>
 
 <<elseif _i == 61>>
 <<speech "veletia">>
-Try this corset. Laced tight, curves spilling, pressing your breasts upward. Now imagine a whisper of touch, just above your navel. You’ll <strong style="color: pink;">throb*, Caelan. That kind of tightness doesn’t just shape it <strong style="color: pink;">stimulates*.
+Try this corset. Laced tight, curves spilling, pressing your breasts upward. Now imagine a whisper of touch, just above your navel. You’ll <strong style="color: pink;">throb*, Caelan. That kind of tightness doesn’t just shape, it <strong style="color: pink;">stimulates*.
 <</speech>>
 <br>
 
@@ -992,13 +992,13 @@ You mean I’ll get aroused just walking?
 <br>
 
 <<speech "veletia">>
-Oh yes. And when you cross your legs, you’ll feel the fabric press just there. It won’t take much, sweetling. Not once your folds begin to <strong style="color: pink;">flutter </strong>and pulse with need.
+Oh yes. When you cross your legs, you’ll feel the fabric press just there. It won’t take much, sweetling. Not once your folds begin to <strong style="color: pink;">flutter </strong>and pulse with need.
 <</speech>>
 <br>
 
 <<elseif _i == 63>>
 <<speech "veletia">>
-You’ll need these spare lace panties... the first time your new body leaks with need, you’ll soak through. That wetness? It’s <strong style="color: pink;">pure readiness*. And it’s beyond your control.
+You’ll need these spare lace panties... the first time your new body leaks with need, you’ll soak through. That wetness? It’s <strong style="color: pink;">pure readiness*, beyond your control.
 <</speech>>
 <br>
 
@@ -1008,7 +1008,7 @@ So I won’t even choose when it happens?
 <br>
 
 <<speech "veletia">>
-No, darling. Your body <strong style="color: pink;">chooses you*. A scent, a breeze, a brush of silk and suddenly, you’ll be wet, aching, and <strong style="color: pink;">throbbing*. And you’ll thank the gods for every drop.
+No, darling. Your body <strong style="color: pink;">chooses you*. A scent, a breeze, a brush of silk, and suddenly you’ll be wet, aching, and <strong style="color: pink;">throbbing*, and you’ll thank the gods for every drop.
 <</speech>>
 <br>
 
@@ -1024,13 +1024,13 @@ Wearing this outside would be... torture.
 <br>
 
 <<speech "veletia">>
-And pleasure. Remember, dear women feel arousal as tension and vulnerability. We get wet from a <strong style="color: pink;">glance*, a compliment, even a lingering look. And your new body? It will drink in every gaze like wine.
+It's about pleasure too. Remember, dear, women feel arousal as tension and vulnerability. We get wet from a <strong style="color: pink;">glance*, a compliment, even a lingering look. Your new body? It will drink in every gaze like wine.
 <</speech>>
 <br>
 
 <<elseif _i == 65>>
 <<speech "veletia">>
-Your hips are blooming beautifully. Wider now. They sway when you walk. You’ll learn how to use them not just for display, but to <strong style="color: pink;">devour </strong>attention. And pleasure will <strong style="color: pink;">curl </strong>from there inward.
+Your hips are blooming beautifully. Wider now. They sway when you walk. You’ll learn how to use them not just for display, but to <strong style="color: pink;">devour </strong>attention. Pleasure will <strong style="color: pink;">curl </strong>from there inward.
 <</speech>>
 <br>
 
@@ -1040,13 +1040,13 @@ I didn’t think hips could feel... sexual.
 <br>
 
 <<speech "veletia">>
-Oh, they do. Your pelvis will rock with each wave. You’ll grind and pulse and <strong style="color: pink;">feel everything </strong>from your hips down. And when the orgasm hits, it’ll spread through every <strong style="color: pink;">curve you’ve earned*.
+Oh, they do. Your pelvis will rock with each wave. You’ll grind and pulse and <strong style="color: pink;">feel everything </strong>from your hips down. When the orgasm hits, it’ll spread through every <strong style="color: pink;">curve you’ve earned*.
 <</speech>>
 <br>
 
 <<elseif _i == 66>>
 <<speech "veletia">>
-The female body remembers pleasure. It lingers. A single stroke, and hours later your folds may still twitch. The memory of touch <strong style="color: pink;">it haunts you </strong>in the most exquisite way.
+The female body remembers pleasure. It lingers. A single stroke, and hours later your folds may still twitch. The memory of touch, <strong style="color: pink;">it haunts you </strong>in the most exquisite way.
 <</speech>>
 <br>
 
@@ -1056,7 +1056,7 @@ So I won’t just feel it... I’ll <strong style="color: pink;">relive </strong
 <br>
 
 <<speech "veletia">>
-Exactly. Female pleasure is memory, mood, and magic. You’ll lie in bed, flushed, pulsing, remembering that kiss on your inner thigh. And you’ll <strong style="color: pink;">need </strong>another.
+Exactly. Female pleasure is memory, mood, and magic. You’ll lie in bed, flushed, pulsing, remembering that kiss on your inner thigh. You’ll <strong style="color: pink;">need </strong>another.
 <</speech>>
 <br>
 
@@ -1072,13 +1072,13 @@ I never thought of... being filled as something to want.
 <br>
 
 <<speech "veletia">>
-You will. It’s not just about being taken it’s about <strong style="color: pink;">claiming joy*, from the inside out. And with the right rhythm, your body won’t just orgasm it’ll <strong style="color: pink;">sing*.
+You will. It’s not just about being taken, it’s about <strong style="color: pink;">claiming joy*, from the inside out. With the right rhythm, your body won’t just orgasm, it’ll <strong style="color: pink;">sing*.
 <</speech>>
 <br>
 
 <<elseif _i == 68>>
 <<speech "veletia">>
-You’ll soon understand the power in letting go. Male climax feels like control. But female pleasure? It’s surrender. Your body writhes, clenches, pulses <strong style="color: pink;">without permission*. And it’s beautiful.
+You’ll soon understand the power in letting go. Male climax feels like control. But female pleasure? It’s surrender. Your body writhes, clenches, pulses <strong style="color: pink;">without permission*, and it’s beautiful.
 <</speech>>
 <br>
 
@@ -1094,7 +1094,7 @@ Because it is. There’s <strong style="color: pink;">divinity </strong>in it. I
 
 <<elseif _i == 69>>
 <<speech "veletia">>
-This gown has six layers of chiffon and lace, each stitched to <strong style="color: pink;">kiss </strong>your skin. You’ll sweat inside it. You’ll squirm. And when you’re aroused, each layer becomes a secret lover, brushing just the right spot.
+This gown has six layers of chiffon and lace, each stitched to <strong style="color: pink;">kiss </strong>your skin. You’ll sweat inside it. You’ll squirm. When you’re aroused, each layer becomes a secret lover, brushing just the right spot.
 <</speech>>
 <br>
 
@@ -1104,13 +1104,13 @@ It sounds maddening.
 <br>
 
 <<speech "veletia">>
-It is. But you’ll <strong style="color: pink;">crave </strong>it. You’ll beg for one more brush, one more stroke, one more slow pull of fabric across your slick folds. Because with this body, pleasure won’t just be felt it will <strong style="color: pink;">envelop </strong>you.
+It is. But you’ll <strong style="color: pink;">crave </strong>it. You’ll beg for one more brush, one more stroke, one more slow pull of fabric across your slick folds. Because with this body, pleasure won’t just be felt, it will <strong style="color: pink;">envelop </strong>you.
 <</speech>>
 <br>
 
 <<elseif _i == 70>>
 <<speech "veletia">>
-It’s strange at first, isn’t it? How a soft fabric brushing your inner thighs can leave your whole body tingling. That’s the gift of a woman’s skin it listens.
+It’s strange at first, isn’t it? How a soft fabric brushing your inner thighs can leave your whole body tingling. That’s the gift of a woman’s skin, it listens.
 <</speech>>
 <br>
 
@@ -1120,12 +1120,12 @@ It’s overwhelming. I used to barely notice clothes. Now it’s like... every s
 <br>
 
 <<speech "veletia">>
-Exactly. You don’t just wear things now you feel them. Intimately. That’s not weakness, my dear. That’s your new strength.
+Exactly. You don’t just wear things now, you feel them, intimately. That’s not weakness, my dear. That’s your new strength.
 <</speech>>
 <br>
 <<elseif _i == 71>>
 <<speech "veletia">>
-Men chase climax like a sword thrust. Direct. Fast. Done. But you, sweet Caelan... you’ll learn to build your pleasure. Layer by layer, like embroidery.
+Men chase climax like a sword thrust, direct, fast, done. But you, sweet Caelan... you’ll learn to build your pleasure. Layer by layer, like embroidery.
 <</speech>>
 <br>
 
@@ -1172,7 +1172,7 @@ It’s not exposure, love. It’s radiance. Own it.
 <br>
 <<elseif _i == 74>>
 <<speech "veletia">>
-Male climax is a single flame. Bright, but brief. Ours? We’re the hearth. We burn, flicker, build, explode and then burn again. Sometimes... endlessly.
+Male climax is a single flame. Bright, but brief. Ours, though? We’re the hearth. We burn, flicker, build, explode, and then burn again. Sometimes... endlessly.
 <</speech>>
 <br>
 
@@ -1182,12 +1182,12 @@ You mean I could... finish... more than once?
 <br>
 
 <<speech "veletia">>
-You’ll laugh the first time it happens. Then you’ll cry. And then you’ll beg for more.
+You’ll laugh the first time it happens, then you’ll cry, then you’ll beg for more.
 <</speech>>
 <br>
 <<elseif _i == 75>>
 <<speech "veletia">>
-They say being taken is submissive. But those who’ve been inside a woman know the truth we pull them in. They surrender. That’s our power.
+They say being taken is submissive. But those who’ve been inside a woman know the truth, we pull them in. They surrender. That’s our power.
 <</speech>>
 <br>
 
@@ -1239,17 +1239,17 @@ Why do I cry so easily now? It never used to be like this. It just... comes over
 <br>
 
 <<speech "veletia">>
-Because your heart has stopped hiding behind armor. Being male often means being taught to silence emotion. But womanhood? Oh, we feel everything. Deeper. Sharper. Softer.
+Because your heart has stopped hiding behind armor. Being male often means being taught to silence emotion. But womanhood? Oh, we feel everything, deeper, sharper, softer.
 <</speech>>
 <br>
 
 <<speech "mc">>
-It’s frightening. I can feel my voice shake when I speak sometimes. And yet... it also feels honest, like something I never allowed myself.
+It’s frightening. I can feel my voice shake when I speak sometimes. Yet it also feels honest, like something I never allowed myself.
 <</speech>>
 <br>
 
 <<speech "veletia">>
-That’s the truth of it, Caelan. A woman’s heart is not fragile it’s vast. We laugh harder, grieve fuller, love fiercer. Your tears are not weakness. They’re proof that you are blooming.
+That’s the truth of it, Caelan. A woman’s heart is not fragile, it’s vast. We laugh harder, grieve fuller, love fiercer. Your tears are not weakness. They’re proof that you are blooming.
 <</speech>>
 <br>
 
@@ -1269,7 +1269,7 @@ My breasts ache sometimes... like they’re alive. It’s a strange feeling some
 <br>
 
 <<speech "veletia">>
-That’s because they are alive, Caelan. Breasts are not just flesh they are powerful centers of sensation and magic. They respond to your emotions, to touch, even to the phases of the moon.
+That’s because they are alive, Caelan. Breasts are not just flesh, they are powerful centers of sensation and magic. They respond to your emotions, to touch, even to the phases of the moon.
 <</speech>>
 <br>
 
@@ -1303,6 +1303,10 @@ No, beloved. They’re a gateway to your sensuality, your confidence, and your f
 [[Attend Session Four|valetia_session_4]] |<br><br>
 <<elseif $valetia_session_4 && !$valetia_session_5>>
 [[Attend Session Five|valetia_session_5]] |<br><br>
+<<elseif $valetia_session_5 && !$valetia_session_6>>
+[[Attend Session Six|valetia_session_6_1]] |<br><br>
+<<elseif $valetia_session_6 && !$valetia_session_7>>
+[[Attend Session Seven|valetia_session_7_1]] |<br><br>
 <</if>>
 
 
@@ -1315,36 +1319,36 @@ No, beloved. They’re a gateway to your sensuality, your confidence, and your f
 :: valetia_session_1
 <<nobr>>
 <<set $valetia_session_1 = true>>
-I should’ve known what was coming when Mistress Veletia Roswyn greeted me in her usual Attire. 
-Beneath it, nothing but bare skin gleamed under the candlelight. 
-Her feet were bare but adorned in anklets that jingled when she moved, chimes of unspoken ritual.<br><br>
+I should have known what was coming the moment Mistress Veletia Roswyn greets me in her usual attire.
+Beneath it, nothing but bare skin gleams under the candlelight.
+Her feet are bare too, adorned in anklets that jingle when she moves, chimes of some unspoken ritual.<br><br>
 
-She didn’t speak at first. Only walked toward me, circling me once as if I were a bolt of cloth on her cutting table. 
-Her eyes held none of the amusement they sometimes wore when I’d muttered protestations over corsets or hair oils. 
-This time, there was only gravity. Precision.
-Then came the word. No greeting. No room for resistance.<br><br>
+She doesn’t speak at first. She only walks toward me, circling once as if I were a bolt of cloth laid on her cutting table.
+Her eyes hold none of the amusement they sometimes carry when I mutter my protests over corsets or hair oils.
+This time there is only gravity and precision.
+Then comes the word. No greeting. No room for resistance.<br><br>
 <<speech "veletia">>Off. All of it,<</speech>><br>
-She said. Her voice was smooth as honeyed wine and twice as deadly.<br><br>
+she says, her voice smooth as honeyed wine and twice as deadly.<br><br>
 <<speech "veletia">>Even what you thought was enough.<</speech>><br>
-My throat tightened. I had worn the panties and the bra she insisted on the last time we met silk, trimmed with gold thread. 
-I had hoped it would suffice. Hoped I could somehow just slip through this session, 
-show willing obedience without diving headfirst into what I knew waited beneath her command. But she wasn’t here for half measures today.<br><br>
+My throat tightens. I’m wearing the panties and the bra she insisted on last time we met, silk trimmed with gold thread.
+I’d hoped it would be enough, hoped I could slip through this session and
+show willing obedience without diving headfirst into whatever waits beneath her command. But she isn’t here for half measures today.<br><br>
 [[Move Forth|valetia_session_1_1]]
 <</nobr>>
 
 :: valetia_session_1_1
 <<nobr>>
 <<speech "mc">>Veletia…<</speech>><br>
-I tried, but my voice caught. Her name came out smaller than I liked. Not like a prince. Not like someone trained in steel.
-She didn’t flinch.<br><br>
+I try, but my voice catches. Her name comes out smaller than I like. Not like a prince. Not like someone trained in steel.
+She doesn’t flinch.<br><br>
 <<speech "veletia">>From this moment on,<</speech>><br>
-She said, stepping closer until I felt the warmth of her body radiating against mine,<br><br>
-<<speech "veletia">>There will be no compromises. Not in fabric. Not in poise. 
+she says, stepping closer until I feel the warmth of her body radiating against mine,<br><br>
+<<speech "veletia">>There will be no compromises. Not in fabric. Not in poise.
 Not in you. Either you become the vision, or you walk away unfinished, unseen, unworthy.<</speech>><br>
-She led me wordless now, hand firm around my wrist to the full ritual mirror that stood in the corner of her chamber. 
-It wasn’t just glass. The frame was carved from glimmering duskwood, ancient enough 
-to ripple when you stared too long, laced with tiny ivory roses that bloomed and withered across its trim. 
-It whispered, soft breaths I could almost hear if I tilted my head just so.<br><br>
+She leads me, wordless now, hand firm around my wrist, to the full ritual mirror standing in the corner of her chamber.
+It isn’t just glass. The frame is carved from glimmering duskwood, ancient enough
+to ripple when you stare too long, laced with tiny ivory roses that bloom and wither across its trim.
+It whispers, soft breaths I can almost hear if I tilt my head just so.<br><br>
 [[Move Forth|valetia_session_1_2]]
 <</nobr>>
 

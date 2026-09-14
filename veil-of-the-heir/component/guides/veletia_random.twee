@@ -341,15 +341,15 @@ Oh no, darling. You will be the divine backup.
 <<set $female_underwear_1 = true>>
 <div style="text align: center; "><img style="text align: center; border radius: 9px;
     border: 10px ridge #8b5e3c;" @src="setup.ImagePath+'map/dressing_bloom_map.png'"></div><br><br>
-Veletia’s atelier smelled faintly of lavender oil and warm velvet. 
-The curtains were always half drawn, spilling pink dusk light across silk bolts and embroidery hoops, 
+Veletia’s atelier smells faintly of lavender oil and warm velvet.
+The curtains stay half drawn, spilling pink dusk light across silk bolts and embroidery hoops,
 mannequins dressed in every imagined shade of femininity, lined up like ladies in waiting caught mid curtsy. <br><br>
-Her chambers felt like a forbidden room in a storybook a place I never imagined myself stepping foot in, and yet, here I was.
-My new body felt strange beneath my cloth. Not in pain, no, not even unfamiliar anymore. 
-Just... tense. My center was soft now, foreign and damp with nervous sweat. <br><br>
-I walked differently, my thighs brushed in ways they never had. 
-Everything pulled downward when I moved, reminding me I was bare underneath. Vulnerable. Changed.
-And she noticed, of course.<br><br>
+Her chambers feel like a forbidden room out of a storybook, a place I never imagined stepping into, and yet here I am.
+My new body feels strange beneath my cloth. Not in pain, no, not even unfamiliar anymore.
+Just tense. My center is soft now, foreign and damp with nervous sweat. <br><br>
+I walk differently now, my thighs brushing in ways they never used to.
+Everything pulls downward when I move, reminding me I'm bare underneath, vulnerable, changed.
+She notices, of course.<br><br>
 [[I am okay with wearing women cloths|female_underwear_1]] | <br><br>
 [[I am doing it cause I don't have any choice|female_underwear_2]]
 <</nobr>>
@@ -369,7 +369,7 @@ And she noticed, of course.<br><br>
 
 :: female_underwear_1_1
 <<nobr>>
-Veletia circled me slowly, trailing a finger down my arm.<br><br>
+Veletia circles me slowly, trailing a finger down my arm.<br><br>
 
 <<speech "veletia">>To see how silk clings to soft, bare femininity. Now, disrobe for me, darling. Everything.<</speech>><br>
 
@@ -377,7 +377,7 @@ Veletia circled me slowly, trailing a finger down my arm.<br><br>
 
 <<speech "veletia">>You don’t expect me to measure hips and cheeks and sacred folds through royal armor, do you?<</speech>><br>
 
-I hesitated, then began to undress. My cheeks flushed as cool air kissed new, tender skin.<br><br>
+I hesitate, then begin to undress. My cheeks flush as cool air kisses new, tender skin.<br><br>
 
 <<speech   "mc">>This is… strange. Exposing myself like this.<</speech>><br>
 
@@ -387,9 +387,9 @@ I hesitated, then began to undress. My cheeks flushed as cool air kissed new, te
 :: female_underwear_1_2
 <<nobr>>
 
-<<speech "veletia">>Not strange. Natural. Beautiful. You're not shedding armor, my dear  you're shedding boyhood.<</speech>><br>
+<<speech "veletia">>Not strange. Natural. Beautiful. You're not shedding armor, my dear, you're shedding boyhood.<</speech>><br>
 
-I stood naked. Veletia’s gaze softened, clinical yet reverent.<br><br>
+I stand naked. Veletia’s gaze softens, clinical yet reverent.<br><br>
 
 <<speech "veletia">>Turn for me. Slowly.<</speech>><br>
 
@@ -414,15 +414,15 @@ I stood naked. Veletia’s gaze softened, clinical yet reverent.<br><br>
 
 :: female_underwear_1_4
 <<nobr>>
-Veletia knelt behind me, hands finding new hips, warm and sure.<br><br>
+Veletia kneels behind me, hands finding new hips, warm and sure.<br><br>
 
 <<speech "veletia">>Hips are still shy. But they’ll flare in time. Let me measure.<</speech>><br>
 
 <<speech   "mc">>Your hands are so warm…<</speech>><br>
 
-<<speech "veletia">>You’ll find women warm in all the right places. There. 34 inches… for now.<</speech>><br>
+<<speech "veletia">>You’ll find women warm in all the right places. There, 34 inches, for now.<</speech>><br>
 
-She moved to my front, lifting a soft pink measuring tape around my waist.<br><br>
+She moves to my front, lifting a soft pink measuring tape around my waist.<br><br>
 
 <<speech "veletia">>Relax your stomach, darling. We want the underwear to kiss, not strangle.<</speech>><br>
 
@@ -446,7 +446,7 @@ She moved to my front, lifting a soft pink measuring tape around my waist.<br><b
 :: female_underwear_1_6
 <<nobr>>
 
-She turned to her rack of silks, choosing a blush pink pair trimmed in lace.<br><br>
+She turns to her rack of silks, choosing a blush pink pair trimmed in lace.<br><br>
 <<passage_img "cloths/underwear/pink_panty/one.png">><</passage_img>>
 
 <<speech "veletia">>This one. The First Silken Secret. Perfect for your debut.<</speech>><br>
@@ -465,13 +465,13 @@ She turned to her rack of silks, choosing a blush pink pair trimmed in lace.<br>
 <<nobr>>
 <<speech "veletia">>Let’s find out, shall we?<</speech>><br>
 
-She held it open. I stepped forward, placing each foot into the silken trap.<br><br>
+She holds it open. I step forward, placing each foot into the silken trap.<br><br>
 
 <<speech   "mc">>Gods… it's soft.<</speech>><br>
 
 <<speech "veletia">>Glide it up slowly. Let it caress you. Savor the contact.<</speech>><br>
 
-I pulled the panties up, the snug pressure a thrilling revelation.<br><br>
+I pull the panties up, the snug pressure a thrilling revelation.<br><br>
 <<passage_img "cloths/underwear/pink_panty/two.png">><</passage_img>>
 <<set $key_img_path = "mc/figure/" + $userBody["torso"].orig_body + "/" + $userBody["torso"].orig_body + "_" + "bottom_underwear_2.png">>
 /* <<=$key_img_path>> */
@@ -513,7 +513,7 @@ I pulled the panties up, the snug pressure a thrilling revelation.<br><br>
 
 <<speech "veletia">>Exactly. Hips loose. Let the lace know who’s queen.<</speech>><br>
 
-I walked. The panties brushed between my thighs, each step electric.<br><br>
+I walk. The panties brush between my thighs, each step electric.<br><br>
 
 <<passage_img "cloths/underwear/pink_panty/6.png">><</passage_img>>
 
@@ -601,7 +601,7 @@ I walked. The panties brushed between my thighs, each step electric.<br><br>
 
 <<speech "veletia">>Over there. Go look.<</speech>><br>
 
-I stepped in front of the mirror. The silk hugged me like a lover. My reflection stared back  soft, sensual, startlingly new.<br><br>
+I step in front of the mirror. The silk hugs me like a lover. My reflection stares back, soft, sensual, startlingly new.<br><br>
 <<passage_img "cloths/underwear/pink_panty/7.png">><</passage_img>>
 <<speech   "mc">>That’s… me?<</speech>><br>
 
@@ -639,9 +639,9 @@ I stepped in front of the mirror. The silk hugged me like a lover. My reflection
 
 :: female_underwear_1_18
 <<nobr>>
-<<speech "veletia">>Of course. Here  midnight silk. Barely there cut. Naughty royalty.<</speech>><br>
+<<speech "veletia">>Of course. Here, midnight silk. Barely there cut. Naughty royalty.<</speech>><br>
 
-I slipped them on. Tighter. Riskier. The ache bloomed deeper.<br><br>
+I slip them on, tighter and riskier this time, and the ache blooms deeper.<br><br>
 <<set $key_img_path = "mc/figure/" + $userBody["torso"].orig_body + "/" + $userBody["torso"].orig_body + "_" + "bottom_underwear_3.png">>
 /* <<=$key_img_path>> */
 <<set $userBody["bottom_underwear"] to {
@@ -662,7 +662,7 @@ I slipped them on. Tighter. Riskier. The ache bloomed deeper.<br><br>
 
 :: female_underwear_1_19
 <<nobr>>
-<<speech "veletia">>And you will be. But first  more silk.<</speech>><br>
+<<speech "veletia">>You will be. But first, more silk.<</speech>><br>
 <<passage_img "cloths/underwear/purple_panty/3.png">><</passage_img>>
 <<speech   "mc">>I didn’t think underwear would make me feel… alive.<</speech>><br>
 
@@ -676,7 +676,7 @@ I slipped them on. Tighter. Riskier. The ache bloomed deeper.<br><br>
 
 :: female_underwear_1_20
 <<nobr>>
-<<speech "veletia">>You will. And once the court sees you, they'll kneel to your curves.<</speech>><br>
+<<speech "veletia">>You will, and once the court sees you, they'll kneel to your curves.<</speech>><br>
 
 <<speech   "mc">>Mistress… can you teach me to walk like I deserve this?<</speech>><br>
 <<passage_img "cloths/underwear/purple_panty/4.png">><</passage_img>>
@@ -704,7 +704,7 @@ I slipped them on. Tighter. Riskier. The ache bloomed deeper.<br><br>
 
 :: female_underwear_1_22
 <<nobr>>
-<<speech "veletia">>Then undress, my flower. Let me dress you again  this time in something daring.<</speech>><br>
+<<speech "veletia">>Then undress, my flower. Let me dress you again, this time in something daring.<</speech>><br>
 
 <<speech   "mc">>Even more daring?<</speech>><br>
 
@@ -795,10 +795,10 @@ I slipped them on. Tighter. Riskier. The ache bloomed deeper.<br><br>
 :: female_underwear_2
 <<nobr>>
 <<speech "veletia">>Mmm, someone’s walking like he’s forgotten how knees bend. Or should I say she? <</speech>><br>
-<<speech "mc">>I’m just here for underwear. My things are not fitting me anymore..<</speech>><br>
-Her laughter curled through the room like a wisp of scented smoke.<br><br>
+<<speech "mc">>I’m just here for underwear. My things don't fit me anymore.<</speech>><br>
+Her laughter curls through the room like a wisp of scented smoke.<br><br>
 <<speech "veletia">>So serious. Come, come. Let’s not pretend I wasn’t expecting you, precious thing. <</speech>><br>
-I scowled but obeyed.<br><br>
+I scowl but obey.<br><br>
 <<speech "mc">>Don’t call me that. <</speech>><br>
 [[Move Forth|female_underwear_2_1]]
 <</nobr>>
@@ -806,12 +806,12 @@ I scowled but obeyed.<br><br>
 
 :: female_underwear_2_1
 <<nobr>>
-<<speech "veletia">>Oh, but what else am I supposed to call you now, hmm? You’re not my prince anymore. And you’re certainly not just another girl. <</speech>><br>
-I didn’t answer. My stomach clenched when she looked at me like that like I was a puzzle she’d enjoy undoing. Like she already knew where the soft seams were.<br><br>
+<<speech "veletia">>Oh, but what else am I supposed to call you now, hmm? You’re not my prince anymore, and you’re certainly not just another girl. <</speech>><br>
+I don't answer. My stomach clenches when she looks at me like that, like I'm a puzzle she’d enjoy undoing, like she already knows where the soft seams are.<br><br>
 <<speech "veletia">>Remove the cloths. <</speech>><br>
-I hesitated.<br><br>
+I hesitate.<br><br>
 <<speech "mc">>Why? <</speech>><br>
-<<speech "veletia">>Because you came for underthings. And darling, I cannot measure shadows. <</speech>><br>
+<<speech "veletia">>Because you came for underthings, and darling, I cannot measure shadows. <</speech>><br>
 [[Move Forth|female_underwear_2_2]]
 <</nobr>>
 

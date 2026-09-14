@@ -5,33 +5,33 @@
 <<set _i to random(0, 19)>>
 <<if _i == 0>>
 <<speech "anthos">>
-A queen who does not read will be ruled by those who do. Sit. The ledger of border treaties won’t translate itself.
+A queen who does not read will be ruled by those who do. Sit down. This ledger of border treaties won't translate itself.
 <</speech>>
 <br>
 <<speech "mc">>
-I was hoping for something lighter  maybe myths or poetry.
+I was hoping for something lighter. Myths, maybe. Or poetry.
 <</speech>>
 <br>
 <<speech "anthos">>
-Poetry will come once your enemies are dead or disarmed. Until then, we read about taxes and terrain.
+Poetry comes once your enemies are dead or disarmed. Until then we read about taxes and terrain.
 <</speech>>
 <br>
 <<elseif _i == 1>>
 <<speech "anthos">>
-This tome here  written by a madwoman with three crowns and five assassinated husbands. Pay attention, her madness was genius.
+This tome was written by a madwoman with three crowns and five assassinated husbands. Pay attention. Her madness was genius.
 <</speech>>
 <br>
 <<speech "mc">>
-Sounds like the kind of queen I’m supposed to become.
+Sounds like the kind of queen I'm supposed to become.
 <</speech>>
 <br>
 <<speech "anthos">>
-Perhaps. Just don’t drink the ink. She did that too.
+Perhaps. Just don't drink the ink. She did that too.
 <</speech>>
 <br>
 <<elseif _i == 2>>
 <<speech "anthos">>
-A woman may sway with a smile, but true dominion rests in knowing what the ministers fear at night. Read this. Slowly.
+A woman may sway a room with a smile, but true dominion rests in knowing what the ministers fear at night. Read this slowly.
 <</speech>>
 <br>
 <<speech "mc">>
@@ -39,16 +39,16 @@ You always make it sound like knowledge is a blade.
 <</speech>>
 <br>
 <<speech "anthos">>
-Wiser than steel. Sharper, too. And it never rusts.
+Wiser than steel, and sharper too. It never rusts.
 <</speech>>
 <br>
 <<elseif _i == 3>>
 <<speech "anthos">>
-The records of Queen Elyria’s reign are forbidden. Naturally, I’ve kept two copies. Do you want power, or comfort?
+The records of Queen Elyria's reign are forbidden. Naturally I've kept two copies. Do you want power, or comfort?
 <</speech>>
 <br>
 <<speech "mc">>
-If I wanted comfort, I’d be in the kitchens, not here with dust and secrets.
+If I wanted comfort I'd be in the kitchens, not here with dust and secrets.
 <</speech>>
 <br>
 <<speech "anthos">>
@@ -57,11 +57,11 @@ Good. Then read her downfall. It's a mirror with teeth.
 <br>
 <<elseif _i == 4>>
 <<speech "anthos">>
-See this glyph? Misread it, and you grant immunity. Read it correctly, and you condemn. That is the power of clarity.
+See this glyph? Misread it and you grant immunity. Read it correctly and you condemn. That's the power of clarity.
 <</speech>>
 <br>
 <<speech "mc">>
-So, no pressure, then. Just one wrong syllable and someone lives or dies?
+No pressure, then. One wrong syllable and someone lives or dies.
 <</speech>>
 <br>
 <<speech "anthos">>
@@ -78,14 +78,14 @@ Or damnation, depending on who reads it.
 <</speech>>
 <br>
 <<speech "anthos">>
-Ah, you're catching on. Words are weapons. Now forge wisely.
+Ah, you're catching on. Words are weapons. Now forge them wisely.
 <</speech>>
 <br>
 
 
 <<elseif _i == 6>>
 <<speech "anthos">>
-You want to be queen? Then learn to lie beautifully. Start by reading this manual on court flattery.
+You want to be queen? Then learn to lie beautifully. Start with this manual on court flattery.
 <</speech>>
 <br>
 <<speech "mc">>
@@ -93,16 +93,16 @@ Flattery sounds easy enough.
 <</speech>>
 <br>
 <<speech "anthos">>
-Easy flattery is spotted a mile away. True flattery wraps truth in silk and makes your enemies smile.
+Easy flattery is spotted a mile away. True flattery wraps a truth in silk and makes your enemies smile.
 <</speech>>
 <br>
 <<elseif _i == 7>>
 <<speech "anthos">>
-Ah, the young royal enters my domain again. Looking for forbidden truths or just avoiding sword practice?
+Ah, the young royal enters my domain again. Looking for forbidden truths, or just avoiding sword practice?
 <</speech>>
 <br>
 <<speech "mc">>
-Maybe both. Your shelves don’t bruise my ribs.
+Maybe both. Your shelves don't bruise my ribs.
 <</speech>>
 <br>
 <<speech "anthos">>
@@ -111,7 +111,7 @@ Not yet. But they may bruise your illusions.
 <br>
 <<elseif _i == 8>>
 <<speech "anthos">>
-If you master the history of every noble house, you’ll rule them before they know you’ve begun.
+Master the history of every noble house and you'll rule them before they know you've begun.
 <</speech>>
 <br>
 <<speech "mc">>
@@ -119,7 +119,7 @@ Sounds like memorizing a thousand grudges.
 <</speech>>
 <br>
 <<speech "anthos">>
-Exactly. And knowing which one to press makes all the difference.
+Exactly, and knowing which one to press makes all the difference.
 <</speech>>
 <br>
 <<elseif _i == 9>>
@@ -128,7 +128,7 @@ Books do not judge your body, Caelan. They care only for the mind within. Feed i
 <</speech>>
 <br>
 <<speech "mc">>
-Then maybe the books are the only ones who don’t care who  or what  I’m becoming.
+Then maybe the books are the only ones who don't care who, or what, I'm becoming.
 <</speech>>
 <br>
 <<speech "anthos">>
@@ -139,24 +139,24 @@ Ah, but books will still shape the queen you must be. If you let them.
 
 <<elseif _i == 10>>
 <<speech "anthos">>
-Every queen must know the laws of succession  how to bend them, break them, or ensure they hold.
+Every queen must know the laws of succession. How to bend them, break them, or make certain they hold.
 <</speech>>
 <br>
 <<speech "mc">>
-I thought succession was simple when you’re the heir.
+I thought succession was simple when you're the heir.
 <</speech>>
 <br>
 <<speech "anthos">>
-It’s simple until someone challenges your blood, your body, or your right to rule. Be ready for all three.
+It's simple until someone challenges your blood, your body, or your right to rule. Be ready for all three.
 <</speech>>
 <br>
 <<elseif _i == 11>>
 <<speech "anthos">>
-These records were sealed after the War of Three Sisters. Open them, and you’ll see why.
+These records were sealed after the War of Three Sisters. Open them and you'll see why.
 <</speech>>
 <br>
 <<speech "mc">>
-If they’re sealed, why are you showing them to me?
+If they're sealed, why show them to me?
 <</speech>>
 <br>
 <<speech "anthos">>
@@ -165,20 +165,20 @@ Because you need truths that scare lesser minds. Queens do not rule on rumors.
 <br>
 <<elseif _i == 12>>
 <<speech "anthos">>
-The glyphs here alter depending on the reader’s intent. What do you see?
+The glyphs here shift depending on the reader's intent. What do you see?
 <</speech>>
 <br>
 <<speech "mc">>
-It... changed. It’s softer now. Gentler.
+It changed. It's softer now, gentler.
 <</speech>>
 <br>
 <<speech "anthos">>
-So are you. The library adapts to truth. As must you.
+So are you. The library adapts to truth. So must you.
 <</speech>>
 <br>
 <<elseif _i == 13>>
 <<speech "anthos">>
-There are ten languages spoken in Velmoria, four of them by spies. Learn at least six.
+Ten languages are spoken in Velmoria, four of them by spies. Learn at least six.
 <</speech>>
 <br>
 <<speech "mc">>
@@ -186,7 +186,7 @@ Including the language of secrets?
 <</speech>>
 <br>
 <<speech "anthos">>
-That one you’re already studying. Every day you wear the crown’s shadow.
+That one you're already studying. Every day you wear the crown's shadow.
 <</speech>>
 <br>
 <<elseif _i == 14>>
@@ -195,7 +195,7 @@ This codex once belonged to a queen who ruled through whispers. Her pen was her 
 <</speech>>
 <br>
 <<speech "mc">>
-And people feared her more than swords?
+People feared her more than swords?
 <</speech>>
 <br>
 <<speech "anthos">>
@@ -204,11 +204,11 @@ Because she made kings weep with a letter. Learn to write like that.
 <br>
 <<elseif _i == 15>>
 <<speech "anthos">>
-You’re forming into something rare, Caelan. Not just a ruler. A sovereign mind.
+You're forming into something rare, Caelan. Not just a ruler. A sovereign mind.
 <</speech>>
 <br>
 <<speech "mc">>
-Even if I’m no longer seen as a man?
+Even if I'm no longer seen as a man?
 <</speech>>
 <br>
 <<speech "anthos">>
@@ -217,15 +217,15 @@ Wisdom has no gender. But it does demand sacrifice. Keep reading.
 <br>
 <<elseif _i == 16>>
 <<speech "anthos">>
-The archive beneath us holds banned spells and theories. Most are dangerous.
+The archive beneath us holds banned spells and theories. Most of them are dangerous.
 <</speech>>
 <br>
 <<speech "mc">>
-And you're offering them… why?
+You're offering them to me, why exactly?
 <</speech>>
 <br>
 <<speech "anthos">>
-Because you’ll face enemies who use them. Better a queen who knows the darkness than one surprised by it.
+Because you'll face enemies who use them. Better a queen who knows the darkness than one surprised by it.
 <</speech>>
 <br>
 <<elseif _i == 17>>
@@ -234,7 +234,7 @@ This essay argues that femininity in queenship is an asset, not a limitation. It
 <</speech>>
 <br>
 <<speech "mc">>
-Then it’s probably worth reading twice.
+Then it's probably worth reading twice.
 <</speech>>
 <br>
 <<speech "anthos">>
@@ -243,11 +243,11 @@ Three times. Especially once you begin ruling in silks, not armor.
 <br>
 <<elseif _i == 18>>
 <<speech "anthos">>
-Here lies the map of Velmoria's ley-lines. Whoever controls the flows of magic controls the realm’s heartbeat.
+Here lies the map of Velmoria's ley lines. Whoever controls the flow of magic controls the realm's heartbeat.
 <</speech>>
 <br>
 <<speech "mc">>
-And how many people know this exists?
+How many people know this exists?
 <</speech>>
 <br>
 <<speech "anthos">>
@@ -256,7 +256,7 @@ Four. After today, five. Guard it like your throne.
 <br>
 <<elseif _i == 19>>
 <<speech "anthos">>
-Tell me, Caelan  when a noble calls you “Your Grace” with a sneer, how do you respond?
+Tell me, Caelan. When a noble calls you "Your Grace" with a sneer, how do you respond?
 <</speech>>
 <br>
 <<speech "mc">>
@@ -264,7 +264,7 @@ I smile like I know a secret about their house.
 <</speech>>
 <br>
 <<speech "anthos">>
-Good. Because you will. Now, let’s look up their scandals.
+Good. Because you will. Now, let's look up their scandals.
 <</speech>>
 <br>
 <</if>>

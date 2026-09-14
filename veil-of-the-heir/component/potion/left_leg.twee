@@ -411,29 +411,29 @@ $possible_changes.includes($userBody.torso.orig_body)
 <<nobr>>
 <div style="text-align: center; width: 95%;"><img style="text-align: center; border-radius: 9px;
     border: 10px ridge #8b5e3c;width: 95%;" @src="setup.ImagePath+'map/veil_tower_mage_map.png'"></div>
-<<speech "thalara">>You have brewed the potion. Let me see it first.  Caelan Are you ready to start the process...<</speech>>
+<<speech "thalara">>You have brewed the potion. Let me see it first. Caelan, are you ready to start the process?<</speech>>
 <br>
-[[I’m ready. Let’s begin the transformation.|left_leg_ml_left_leg_mm_1]] | <br><br>
-[[I don’t know if I want this… but I’ll try.|left_leg_ml_left_leg_mm_1]] | <br><br>
-[[I’m doing this because I have to, not because I want to.|left_leg_ml_left_leg_mm_1]] | <br><br>
+[[I'm ready. Let's begin the transformation.|left_leg_ml_left_leg_mm_1]] | <br><br>
+[[I don't know if I want this, but I'll try.|left_leg_ml_left_leg_mm_1]] | <br><br>
+[[I'm doing this because I have to, not because I want to.|left_leg_ml_left_leg_mm_1]] | <br><br>
 <</nobr>>
 
 :: left_leg_ml_left_leg_mm_1
 <<nobr>>
 <<speech "thalara">>
-Step forward, Caelan. The first transformation is never about the body   it is about your relationship with what you think it means.
+Step forward, Caelan. The first transformation is never only about the body, it is about your relationship with what you think it means.
 <</speech>><br>
 
 <<speech "mc">>
-…Right.
+Right.
 <</speech>><br>
 
 <<speech "thalara">>
-This draught won’t sculpt breasts or enchant curves. Not yet. All it will do is ask your chest to let go, to ease its grip on a shape that has served you until now.
+This draught won't sculpt breasts or enchant curves, not yet. All it will do is ask your leg to let go, to ease its grip on a shape that has served you until now.
 <</speech>><br>
 
 <<speech "mc">>
-So it’ll make me weaker?
+So it'll make me weaker?
 <</speech>><br>
 
 [[Move Forth|left_leg_ml_left_leg_mm_2]]
@@ -442,7 +442,7 @@ So it’ll make me weaker?
 :: left_leg_ml_left_leg_mm_2
 <<nobr>>
 <<speech "thalara">>
-No. But it will unfasten the pride your muscles have worn like armor. Not every kind of strength shows in bulk. Sometimes, strength shows in surrender.
+No, but it will unfasten the pride your muscles have worn like armor. Not every kind of strength shows in bulk. Sometimes strength shows in surrender.
 <</speech>><br>
 
 <<speech "mc">>
@@ -450,11 +450,11 @@ You sound like a philosopher.
 <</speech>><br>
 
 <<speech "thalara">>
-When you’ve brewed potions that change bones and bend voices, you learn to respect the philosophy of flesh.
+When you've brewed potions that change bones and bend voices, you learn to respect the philosophy of flesh.
 <</speech>><br>
 
 <<speech "thalara">>
-This will taste like mint, metal, and maybe… regret. You may feel your chest ache for its former form. That’s normal. Muscles remember.
+This will taste like mint, metal, and maybe regret. You may feel your leg ache for its former shape. That's normal. Muscles remember.
 <</speech>><br>
 
 [[Move Forth|left_leg_ml_left_leg_mm_3]]
@@ -468,15 +468,15 @@ How fast will it work?
 <</speech>><br>
 
 <<speech "thalara">>
-Gradually. Within the hour, the tautness in your chest will soften. Your posture will shift. Clothes will feel looser. And you may… feel exposed.
+Gradually. Within the hour, the tautness in your leg will soften. Your stride will shift. Clothes will feel looser. And you may feel exposed.
 <</speech>><br>
 
 <<speech "mc">>
-You mean… like I’m losing something?
+You mean like I'm losing something?
 <</speech>><br>
 
 <<speech "thalara">>
-You are. But you’re not being robbed. You are offering it, in exchange for something else. That’s what every step in magic is   a trade, not a theft.
+You are. But you're not being robbed. You are offering it, in exchange for something else. That's what every step in magic is, a trade, not a theft.
 <</speech>><br>
 [[Move Forth|left_leg_ml_left_leg_mm_4]]
 <</nobr>>
@@ -484,19 +484,19 @@ You are. But you’re not being robbed. You are offering it, in exchange for som
 :: left_leg_ml_left_leg_mm_4
 <<nobr>>
 <<speech "mc">>
-…It’s cold.
+It's cold.
 <</speech>><br>
 
 <<speech "thalara">>
-Good. That means it’s working. The swelling in your chest will ease first. That defined line under your collarbone   it’ll blur. Pectorals will yield to smoother flesh. Your heart will beat more openly, less behind armor.
+Good, that means it's working. The tautness along your thigh will ease first. That hard line of muscle beneath the skin will blur. Firm sinew will yield to smoother flesh. Your leg will carry you more openly now, less like armor.
 <</speech>><br>
 
 <<speech "mc">>
-…It feels strange already. Like I’ve been… unmade a little.
+It feels strange already. Like I've been unmade a little.
 <</speech>><br>
 
 <<speech "thalara">>
-That’s the beginning, Caelan. Unmaking to remake. You’re shedding the rigid frame of the past to shape the future queen. You will have moments of doubt   moments when you want to reach back. That’s human.
+That's the beginning, Caelan. Unmaking to remake. You're shedding the rigid frame of the past to shape the future queen. You will have moments of doubt, moments when you want to reach back. That's human.
 <</speech>><br>
 [[Move Forth|left_leg_ml_left_leg_mm_5]]
 <</nobr>>
@@ -505,19 +505,19 @@ That’s the beginning, Caelan. Unmaking to remake. You’re shedding the rigid 
 :: left_leg_ml_left_leg_mm_5
 <<nobr>>
 <<speech "mc">>
-And if I don’t want to reach forward? What then?
+If I don't want to reach forward, what then?
 <</speech>><br>
 
 <<speech "thalara">>
-Then you will wrestle with yourself. The path is yours to choose. But know this: transformation is not merely physical; it is the bending of will and mind. The body follows where the spirit leads.
+Then you will wrestle with yourself. The path is yours to choose. But know this. Transformation is not merely physical, it is the bending of will and mind. The body follows where the spirit leads.
 <</speech>><br>
 
 <<speech "mc">>
-Sounds like the hardest part is what’s inside.
+Sounds like the hardest part is what's inside.
 <</speech>><br>
 
 <<speech "thalara">>
-Exactly. The body can be changed by potion and spell. The mind   that is a more delicate alchemy. One that takes time, patience, and courage.
+Exactly. The body can be changed by potion and spell. The mind is the more delicate alchemy, one that takes time, patience, and courage.
 <</speech>><br>
 
 [[Move Forth|left_leg_ml_left_leg_mm_6]]
@@ -526,7 +526,7 @@ Exactly. The body can be changed by potion and spell. The mind   that is a more 
 :: left_leg_ml_left_leg_mm_6
 <<nobr>>
 <<speech "mc">>
-And you think I have those things?
+Do you think I have those things?
 <</speech>><br>
 
 <<speech "thalara">>
@@ -534,7 +534,7 @@ I see in you a spirit capable of more than you know. But only you can decide whe
 <</speech>><br>
 
 <<speech "mc">>
-Then… I’ll drink. If not for myself, then for the kingdom.
+Then I'll drink. If not for myself, then for the kingdom.
 <</speech>><br>
 
 <<speech "thalara">>
@@ -554,29 +554,29 @@ That is the first true step. Drink now, and let the change begin.
 <<nobr>>
 <div style="text-align: center; width: 95%;"><img style="text-align: center; border-radius: 9px;
     border: 10px ridge #8b5e3c;width: 95%;" @src="setup.ImagePath+'map/veil_tower_mage_map.png'"></div>
-<<speech "thalara">>You have brewed the potion. Let me see it first.  Caelan Are you ready to start the process...<</speech>>
+<<speech "thalara">>You have brewed the potion. Let me see it first. Caelan, are you ready to start the process?<</speech>>
 <br>
-[[I want to regain my old strength. Let’s begin the reversal.|left_leg_mm_left_leg_ml_1]] | <br><br>
-[[I’m unsure if I should do this… but I’ll try.|left_leg_mm_left_leg_ml_1]] | <br><br>
-[[I’m doing this because I want my body back, not because anyone tells me to.|left_leg_mm_left_leg_ml_1]] | <br><br>
+[[I want to regain my old strength. Let's begin the reversal.|left_leg_mm_left_leg_ml_1]] | <br><br>
+[[I'm unsure if I should do this, but I'll try.|left_leg_mm_left_leg_ml_1]] | <br><br>
+[[I'm doing this because I want my body back, not because anyone tells me to.|left_leg_mm_left_leg_ml_1]] | <br><br>
 <</nobr>>
 
 :: left_leg_mm_left_leg_ml_1
 <<nobr>>
 <<speech "thalara">>
-Step forward, Caelan. Reversal is never about undoing the body alone   it is about reclaiming what you believe strength to be.
+Step forward, Caelan. Reversal is never only about undoing the body, it is about reclaiming what you believe strength to be.
 <</speech>><br>
 
 <<speech "mc">>
-…Right.
+Right.
 <</speech>><br>
 
 <<speech "thalara">>
-This draught won’t carve muscle instantly or restore the bulk of your former self. Instead, it will ask your chest to tighten again   to wear the armor of power it once bore with pride.
+This draught won't carve muscle instantly or restore the bulk of your former self. Instead it will ask your leg to tighten again, to wear the armor of power it once bore with pride.
 <</speech>><br>
 
 <<speech "mc">>
-So it’ll make me stronger?
+So it'll make me stronger?
 <</speech>><br>
 
 [[Move Forth|left_leg_mm_left_leg_ml_2]]
@@ -586,7 +586,7 @@ So it’ll make me stronger?
 <<nobr>>
 
 <<speech "thalara">>
-Yes, in one way. But strength is more than size   it is also the courage to reclaim what was lost. Not every kind of power is visible. Sometimes it shows in resolve.
+Yes, in one way. But strength is more than size, it is also the courage to reclaim what was lost. Not every kind of power is visible. Sometimes it shows in resolve.
 <</speech>><br>
 
 <<speech "mc">>
@@ -594,11 +594,11 @@ You sound like a philosopher.
 <</speech>><br>
 
 <<speech "thalara">>
-When you brew potions that build flesh and restore voice, you learn that flesh has memory   and spirit, too.
+When you brew potions that build flesh and restore voice, you learn that flesh has memory, and spirit too.
 <</speech>><br>
 
 <<speech "thalara">>
-This will taste of iron, earth, and maybe… hope. You may feel your chest tighten and muscles contract. That’s normal. Flesh remembers.
+This will taste of iron, earth, and maybe hope. You may feel your leg tighten and the muscle contract. That's normal. Flesh remembers.
 <</speech>><br>
 
 [[Move Forth|left_leg_mm_left_leg_ml_3]]
@@ -611,15 +611,15 @@ How fast will it work?
 <</speech>><br>
 
 <<speech "thalara">>
-Gradually. Within the hour, your chest will regain tautness. Your posture will harden. Clothes will feel tighter. And you may… feel more guarded.
+Gradually. Within the hour, your leg will regain tautness. Your stride will harden. Clothes will feel tighter. And you may feel more guarded.
 <</speech>><br>
 
 <<speech "mc">>
-You mean… like I’m gaining something back?
+You mean like I'm gaining something back?
 <</speech>><br>
 
 <<speech "thalara">>
-You are. But you are not simply reclaiming what was lost. You are forging it anew   stronger, clearer. Every step in magic is a renewal, not a reversal.
+You are. But you are not simply reclaiming what was lost. You are forging it anew, stronger, clearer. Every step in magic is a renewal, not a reversal.
 <</speech>><br>
 
 [[Move Forth|left_leg_mm_left_leg_ml_4]]
@@ -629,19 +629,19 @@ You are. But you are not simply reclaiming what was lost. You are forging it ane
 :: left_leg_mm_left_leg_ml_4
 <<nobr>>
 <<speech "mc">>
-…It’s hot.
+It's hot.
 <</speech>><br>
 
 <<speech "thalara">>
-Good. That means it’s working. The softness in your chest will shrink first. That smooth line under your collarbone will sharpen. Smooth flesh will give way to muscle once again. Your heart will beat with resolve, beneath armor renewed.
+Good, that means it's working. The softness along your thigh will shrink first. That smooth line of the calf will sharpen. Soft flesh will give way to muscle once again. Your stride will carry resolve, beneath armor renewed.
 <</speech>><br>
 
 <<speech "mc">>
-…It feels strange already. Like I’ve been… remade a little.
+It feels strange already. Like I've been remade a little.
 <</speech>><br>
 
 <<speech "thalara">>
-That is the beginning, Caelan. Unmaking to remake   but now you remake what once was, with intention and will. You will have moments of pride   moments when you feel power return. That’s human.
+That is the beginning, Caelan. Unmaking to remake, but now you remake what once was, with intention and will. You will have moments of pride, moments when you feel power return. That's human.
 <</speech>><br>
 [[Move Forth|left_leg_mm_left_leg_ml_5]]
 <</nobr>>
@@ -650,19 +650,19 @@ That is the beginning, Caelan. Unmaking to remake   but now you remake what once
 <<nobr>>
 
 <<speech "mc">>
-And if I want to stop? What then?
+If I want to stop, what then?
 <</speech>><br>
 
 <<speech "thalara">>
-Then you will wrestle with yourself. The path is yours to choose. But know this: transformation and reversal alike shape both body and mind. The body follows where the spirit leads.
+Then you will wrestle with yourself. The path is yours to choose. But know this. Transformation and reversal alike shape both body and mind. The body follows where the spirit leads.
 <</speech>><br>
 
 <<speech "mc">>
-Sounds like the hardest part is what’s inside.
+Sounds like the hardest part is what's inside.
 <</speech>><br>
 
 <<speech "thalara">>
-Exactly. The body can be changed by potion and spell. The mind   that is the delicate alchemy. One that takes time, patience, and courage.
+Exactly. The body can be changed by potion and spell. The mind is the delicate alchemy, one that takes time, patience, and courage.
 <</speech>><br>
 
 [[Move Forth|left_leg_mm_left_leg_ml_6]]
@@ -674,7 +674,7 @@ Exactly. The body can be changed by potion and spell. The mind   that is the del
 <<nobr>>
 
 <<speech "mc">>
-And you think I have those things?
+Do you think I have those things?
 <</speech>><br>
 
 <<speech "thalara">>
@@ -682,7 +682,7 @@ I see in you a spirit capable of more than you know. But only you can decide whe
 <</speech>><br>
 
 <<speech "mc">>
-Then… I’ll drink. If not for myself, then for my strength.
+Then I'll drink. If not for myself, then for my strength.
 <</speech>><br>
 
 <<speech "thalara">>

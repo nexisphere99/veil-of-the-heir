@@ -5,7 +5,7 @@
 <<set _i to random(0, 20)>>
 <<if _i == 0>>
 <<speech "torin">>
-You shouldn't walk alone at night, even within palace walls. Not all threats carry blades… some wear silk and smiles.
+You shouldn't walk alone at night, even within palace walls. Not all threats carry blades. Some wear silk and smiles.
 <</speech>>
 <br>
 
@@ -15,17 +15,17 @@ Are you worried for my safety, or jealous of who I might meet in the dark?
 <br>
 
 <<speech "torin">>
-Does it matter? Either way, I’ll be the shadow at your back… and the hand that draws steel if they get too close.
+Does it matter? Either way, I'll be the shadow at your back, and the hand that draws steel if they get too close.
 <</speech>>
 <br>
 <<elseif _i == 2>>
 <<speech "torin">>
-I memorized every blind spot in this wing. If someone meant to harm you, they wouldn’t get two paces.
+I memorized every blind spot in this wing. If someone meant to harm you, they wouldn't get two paces.
 <</speech>>
 <br>
 
 <<speech "mc">>
-You know my every escape… do you ever think about using them?
+You know every way out of this place. Do you ever think about using them?
 <</speech>>
 <br>
 
@@ -35,22 +35,22 @@ Only if it was to take you somewhere no one could ever hurt you again.
 <br>
 <<elseif _i == 3>>
 <<speech "torin">>
-When the wind shifts, I can hear every loose hinge in this corridor. I lie awake counting them until I know you’re safe.
+When the wind shifts, I can hear every loose hinge in this corridor. I lie awake counting them until I know you're safe.
 <</speech>>
 <br>
 
 <<speech "mc">>
-You don’t have to protect me every hour of the day.
+You don't have to protect me every hour of the day.
 <</speech>>
 <br>
 
 <<speech "torin">>
-I don’t have to. I choose to.
+I don't have to. I choose to.
 <</speech>>
 <br>
 <<elseif _i == 4>>
 <<speech "torin">>
-Your voice carries differently when you're afraid. Softer. Like you’re trying not to be heard by your own doubts.
+Your voice carries differently when you're afraid, softer, like you're trying not to be heard by your own doubts.
 <</speech>>
 <br>
 
@@ -60,17 +60,17 @@ You hear that too?
 <br>
 
 <<speech "torin">>
-I hear everything about you. Even the things you don’t say.
+I hear everything about you. Even the things you don't say.
 <</speech>>
 <br>
 <<elseif _i == 5>>
 <<speech "torin">>
-Someone left a flower at your door. I moved it. Could’ve been a message… or a trap.
+Someone left a flower at your door. I moved it. Could've been a message, or a trap.
 <</speech>>
 <br>
 
 <<speech "mc">>
-And if it was just a gift from someone who cares?
+What if it was just a gift from someone who cares?
 <</speech>>
 <br>
 
@@ -85,12 +85,12 @@ You smiled at a visiting noble today. It unsettled me more than any drawn sword 
 <br>
 
 <<speech "mc">>
-Jealousy doesn’t suit your armor, Torin.
+Jealousy doesn't suit your armor, Torin.
 <</speech>>
 <br>
 
 <<speech "torin">>
-Neither does silence when I want to scream that you belong nowhere near people who see you as conquest.
+Neither does silence, when I want to scream that you belong nowhere near people who see you as conquest.
 <</speech>>
 <br>
 <<elseif _i == 7>>
@@ -110,17 +110,17 @@ It infuriated me. Because I wanted to touch you longer than duty allowed.
 <br>
 <<elseif _i == 8>>
 <<speech "torin">>
-I carved a new rune into my vambrace last night. It’s for protection. Yours.
+I carved a new rune into my vambrace last night. It's for protection, yours.
 <</speech>>
 <br>
 
 <<speech "mc">>
-You’ve etched your devotion into steel… but never into words. Why?
+You've etched your devotion into steel, but never into words. Why is that?
 <</speech>>
 <br>
 
 <<speech "torin">>
-Because armor doesn’t betray. Words sometimes do.
+Because armor doesn't betray. Words sometimes do.
 <</speech>>
 <br>
 <<elseif _i == 9>>
@@ -130,7 +130,7 @@ When I was ordered to guard you, I thought it was just another post. Then I lear
 <br>
 
 <<speech "mc">>
-And that changed your duty?
+That changed your duty?
 <</speech>>
 <br>
 
@@ -140,7 +140,7 @@ No. But it changed me.
 <br>
 <<elseif _i == 10>>
 <<speech "torin">>
-If I could take your pain into my chest and lock it behind my ribs, I would gladly.
+If I could take your pain into my chest and lock it behind my ribs, I would, gladly.
 <</speech>>
 <br>
 
@@ -155,22 +155,22 @@ Especially then. Some burdens are worth being broken for.
 <br>
 <<elseif _i == 11>>
 <<speech "torin">>
-When you took that blade during training, I couldn’t breathe. Not because I feared for the heir… but because I imagined a world without your voice in it.
+When you took that blade during training, I couldn't breathe. Not because I feared for the heir, but because I imagined a world without your voice in it.
 <</speech>>
 <br>
 
 <<speech "mc">>
-I thought you didn’t care for theatrics.
+I thought you didn't care for theatrics.
 <</speech>>
 <br>
 
 <<speech "torin">>
-I don’t. But losing you would be the one drama I couldn’t survive.
+I don't. But losing you would be the one drama I couldn't survive.
 <</speech>>
 <br>
 <<elseif _i == 12>>
 <<speech "torin">>
-They call me a shield. A blade. A ghost of war. But when you touch my arm even in passing I feel more human than I ever have.
+They call me a shield. A blade. A ghost of war. But when you touch my arm, even in passing, I feel more human than I ever have.
 <</speech>>
 <br>
 
@@ -180,12 +180,12 @@ Then why do you always step back when I try to get closer?
 <br>
 
 <<speech "torin">>
-Because if I step forward… I won’t stop until I’ve claimed more than I should.
+Because if I step forward, I won't stop until I've claimed more than I should.
 <</speech>>
 <br>
 <<elseif _i == 13>>
 <<speech "torin">>
-I watched you dance tonight. Not because I was on duty but because every step you took made the world quieter. Like even danger held its breath.
+I watched you dance tonight. Not because I was on duty, but because every step you took made the world quieter. Like even danger held its breath.
 <</speech>>
 <br>
 
@@ -195,17 +195,17 @@ You hide behind duty, but you always see me.
 <br>
 
 <<speech "torin">>
-I see you more clearly than anyone. That’s what terrifies me.
+I see you more clearly than anyone. That's what terrifies me.
 <</speech>>
 <br>
 <<elseif _i == 14>>
 <<speech "torin">>
-You once asked me why I never smile. It’s because the only time I feel that kind of warmth… is when I think of you safe, asleep, and unburdened.
+You once asked me why I never smile. It's because the only time I feel that kind of warmth is when I think of you safe, asleep, and unburdened.
 <</speech>>
 <br>
 
 <<speech "mc">>
-That’s a lonely kind of joy.
+That's a lonely kind of joy.
 <</speech>>
 <br>
 
@@ -215,22 +215,22 @@ It is. But loving you in silence is still better than not loving you at all.
 <br>
 <<elseif _i == 15>>
 <<speech "torin">>
-You fell asleep at your writing desk. I stood there an hour, watching the candlelight on your face and wondering if I’d ever be brave enough to reach for you.
+You fell asleep at your writing desk. I stood there an hour, watching the candlelight on your face and wondering if I'd ever be brave enough to reach for you.
 <</speech>>
 <br>
 
 <<speech "mc">>
-You could’ve touched me. I wouldn’t have woken.
+You could've touched me. I wouldn't have woken.
 <</speech>>
 <br>
 
 <<speech "torin">>
-That’s exactly why I didn’t. Because I would’ve never pulled my hand back.
+That's exactly why I didn't. Because I would've never pulled my hand back.
 <</speech>>
 <br>
 <<elseif _i == 16>>
 <<speech "torin">>
-There are nights when the walls of this castle feel tighter. Like they know the things we’re not allowed to say.
+There are nights when the walls of this castle feel tighter. Like they know the things we're not allowed to say.
 <</speech>>
 <br>
 
@@ -245,37 +245,37 @@ I would burn this entire kingdom down if it meant seeing you free and smiling.
 <br>
 <<elseif _i == 17>>
 <<speech "torin">>
-Sometimes I wake from dreams where you’re screaming, and I can’t reach you. I check your door five times before the fear fades.
+Sometimes I wake from dreams where you're screaming, and I can't reach you. I check your door five times before the fear fades.
 <</speech>>
 <br>
 
 <<speech "mc">>
-You guard more than just my body, don’t you?
+You guard more than just my body, don't you?
 <</speech>>
 <br>
 
 <<speech "torin">>
-Yes. I guard every broken part of you like it’s sacred. Because to me… it is.
+Yes. I guard every broken part of you like it's sacred. Because to me, it is.
 <</speech>>
 <br>
 <<elseif _i == 18>>
 <<speech "torin">>
-When your voice shakes in council meetings, I grip the hilt of my sword not to strike, but because it keeps me from reaching for your hand.
+When your voice shakes in council meetings, I grip the hilt of my sword. Not to strike, but because it keeps me from reaching for your hand.
 <</speech>>
 <br>
 
 <<speech "mc">>
-And if I reached for yours first?
+What if I reached for yours first?
 <</speech>>
 <br>
 
 <<speech "torin">>
-Then gods help me, I wouldn’t let go. Not even for the queen’s command.
+Then gods help me, I wouldn't let go. Not even for the queen's command.
 <</speech>>
 <br>
 <<elseif _i == 19>>
 <<speech "torin">>
-If we were born different me noble, you free do you think we’d be allowed to be something more?
+If we were born different, me noble, you free, do you think we'd be allowed to be something more?
 <</speech>>
 <br>
 
@@ -285,22 +285,22 @@ I think we already are. Just no one dares say it.
 <br>
 
 <<speech "torin">>
-Then let me say it now: I would give up my sword, my post, and my name… just to be yours.
+Then let me say it now. I would give up my sword, my post, and my name, just to be yours.
 <</speech>>
 <br>
 <<elseif _i == 20>>
 <<speech "torin">>
-They all look at you like a ruler. But I… I see the scars you hide beneath the silks. The exhaustion in your smile. And the strength in your softness.
+They all look at you like a ruler. But I see the scars you hide beneath the silks. The exhaustion in your smile. The strength in your softness.
 <</speech>>
 <br>
 
 <<speech "mc">>
-And what do you want from me, Torin?
+What do you want from me, Torin?
 <</speech>>
 <br>
 
 <<speech "torin">>
-Only what you’re willing to give… and maybe a little more, if you whisper it in the dark.
+Only what you're willing to give, and maybe a little more, if you whisper it in the dark.
 <</speech>>
 <br>
 <</if>>
@@ -318,49 +318,49 @@ Only what you’re willing to give… and maybe a little more, if you whisper it
 <<set $torin_sex_1 = true>>
 <<speech "torin">>You ready, Caelan? This is new for both of us.<</speech>><br>
 
-<<speech "mc">>I... I don’t know. It feels strange, unfamiliar.<</speech>><br>
+<<speech "mc">>I don't know. It feels strange, unfamiliar.<</speech>><br>
 
-<<speech "torin">>It will be. But I’m here. I won’t push you beyond what you can take.<</speech>><br>
+<<speech "torin">>It will be. But I'm here. I won't push you beyond what you can take.<</speech>><br>
 
-<<speech "mc">>Lady Serelyne said... I have to learn... to feel differently.<</speech>><br>
+<<speech "mc">>Lady Serelyne said I have to learn to feel differently.<</speech>><br>
 
 [[Move Forth|torin_sex_1_1]] | [[Skip the Session|torin_sex_1_6]]
 <</nobr>>
 
 :: torin_sex_1_1
 <<nobr>>
-I opened the door and stepped inside.<br><br>
+I open the door and step inside.<br><br>
 
-He stood by the hearth, shadows flickering across his bare chest. Most of his armor was gone only the greaves remained, a silent symbol of his duty. His storm-gray eyes locked onto mine.<br><br>
+He stands by the hearth, shadows flickering across his bare chest. Most of his armor is gone, only the greaves remain, a silent symbol of his duty. His storm gray eyes lock onto mine.<br><br>
 
-<<speech "mc">>I… I’m here.<</speech>><br><br>
+<<speech "mc">>I'm here.<</speech>><br><br>
 
-He didn’t answer. He didn’t need to.<br><br>
+He doesn't answer. He doesn't need to.<br><br>
 
-Torin stepped closer, his calloused fingers brushing along my jaw. I flinched not from fear, but from the sudden charge that surged through me. It wasn’t soft, like a woman’s touch. It was firm. Commanding. Real.<br><br>
+Torin steps closer, his calloused fingers brushing along my jaw. I flinch, not from fear, but from the sudden charge that surges through me. It isn't soft, like a woman's touch. It's firm, commanding, real.<br><br>
 
-Then his lips were on mine, and it was like falling into deep water. I parted my lips instinctively, every muscle tense with confusion. I wasn’t meant for this. I was a prince. I was supposed to command not... melt.<br><br>
+Then his lips are on mine, and it's like falling into deep water. I part my lips instinctively, every muscle tense with confusion. I wasn't meant for this. I was a prince. I was supposed to command, not melt.<br><br>
 
-But his taste smoke, spice, steel stirred something buried inside me.<br><br>
+But his taste, smoke, spice, steel, stirs something buried inside me.<br><br>
 
-My knees weakened as his mouth claimed mine again, deeper this time. My cock twitched, smaller than it once was, the potions already thinning my pride. It didn’t feel like mine anymore.<br><br>
+My knees weaken as his mouth claims mine again, deeper this time. My cock twitches, smaller than it once was, the potions already thinning my pride. It doesn't feel like mine anymore.<br><br>
 
-I pulled away, panting.<br><br>
+I pull away, panting.<br><br>
 [[Move Forth|torin_sex_1_2]]
 <</nobr>>
 
 
 :: torin_sex_1_2
 <<nobr>>
-<<speech "mc">>I’m not ready for this.<</speech>><br><br>
+<<speech "mc">>I'm not ready for this.<</speech>><br><br>
 
 <<speech "torin">>You came anyway.<</speech>><br><br>
 
-Damn him. He was right.<br><br>
+Damn him. He's right.<br><br>
 
-He guided me to the bed, hands on my shoulders. I sank to my knees not in obedience, not yet but something close. Confusion? Curiosity? Desire? I looked up, breath catching as he unfastened his breeches. What I saw made my throat tighten.<br><br>
+He guides me to the bed, hands on my shoulders. I sink to my knees, not in obedience, not yet, but something close, confusion, curiosity, desire, I can't tell which. I look up, breath catching as he unfastens his breeches. What I see makes my throat tighten.<br><br>
 
-<<speech "mc">>I’ve never… done this. Not to a man.<</speech>><br><br>
+<<speech "mc">>I've never done this. Not to a man.<</speech>><br><br>
 
 [[Move Forth|torin_sex_1_3]]
 <</nobr>>
@@ -370,25 +370,25 @@ He guided me to the bed, hands on my shoulders. I sank to my knees not in obedie
 <<nobr>>
 <<set $user_stats.gender_Identity -= 3>>
 <<set $user_stats.dominance_level -= 3>>
-<<speech "torin">>You’re learning.<</speech>><br><br>
+<<speech "torin">>You're learning.<</speech>><br><br>
 
 Learning to be what? A queen? A woman? A plaything?<br><br>
 
-I leaned in, my lips grazing the inside of his thigh. The muscle was taut under my kiss. I moved higher, then lower, letting my tongue trace his skin. I imagined how a woman would do this soft, yielding, eager to please. My face flushed at the thought… but I didn’t stop.<br><br>
+I lean in, my lips grazing the inside of his thigh. The muscle is taut under my kiss. I move higher, then lower, letting my tongue trace his skin. I imagine how a woman would do this, soft, yielding, eager to please. My face flushes at the thought, but I don't stop.<br><br>
 
-This is what she wants. What the Kingdom demands.<br><br>
+This is what she wants. What the kingdom demands.<br><br>
 
-I licked higher, letting my tongue curl over his hip. My fingers wrapped around his shaft it twitched in my palm. A surge of power ran through me. I brought the head of his cock to my lips, kissed it, then slowly took it into my mouth.<br><br>
+I lick higher, letting my tongue curl over his hip. My fingers wrap around his shaft, it twitches in my palm. A surge of power runs through me. I bring the head of his cock to my lips, kiss it, then slowly take it into my mouth.<br><br>
 
-It was unfamiliar. Thick. Strange. But not repulsive. Strangely… intoxicating.<br><br>
+It's unfamiliar, thick, strange. But not repulsive, strangely intoxicating.<br><br>
 
-My jaw strained as I tried to mimic what I’d seen from women in brothels. My tongue swirled around his cock, teasing. He groaned, low and deep.<br><br>
+My jaw strains as I try to mimic what I've seen from women in brothels. My tongue swirls around his cock, teasing. He groans, low and deep.<br><br>
 
-That sound thrilled me. I wanted to hear more. I wanted to please him.<br><br>
+That sound thrills me. I want to hear more. I want to please him.<br><br>
 
-His fingers tangled in my hair longer now than it used to be. My body pulsed with heat. My hips shifted with need. My nipples tingled, breasts not yet formed, but the skin was sensitive, swollen. My whole body felt wrong and right at once.<br><br>
+His fingers tangle in my hair, longer now than it used to be. My body pulses with heat. My hips shift with need. My nipples tingle, breasts not yet formed, but the skin is sensitive, swollen. My whole body feels wrong and right at once.<br><br>
 
-I was hard… but not like before. It wasn’t about dominance. It was about… giving. Serving.<br><br>
+I'm hard, but not like before. It isn't about dominance. It's about giving, about serving.<br><br>
 
 [[Move Forth|torin_sex_1_4]]
 <</nobr>>
@@ -396,23 +396,23 @@ I was hard… but not like before. It wasn’t about dominance. It was about… 
 
 :: torin_sex_1_4
 <<nobr>>
-He pulled me to my feet. I stumbled slightly, dazed. My anal hole clenched in anticipation, unbidden. I shouldn’t want this.<br><br>
+He pulls me to my feet. I stumble slightly, dazed. My hole clenches in anticipation, unbidden. I shouldn't want this.<br><br>
 
-But I turned, bent forward over the bed, and gripped the sheets.<br><br>
+But I turn, bend forward over the bed, and grip the sheets.<br><br>
 
-When he pushed into my anal hole, I gasped. My whole body went stiff. The pressure was overwhelming. I bit my lip hard.<br><br>
+When he pushes into me, I gasp. My whole body goes stiff. The pressure is overwhelming. I bite my lip hard.<br><br>
 
 <<speech "mc">>It hurts.<</speech>><br><br>
 
-<<speech "torin">>You’ll learn. You’ll learn how good it can feel.<</speech>><br><br>
+<<speech "torin">>You'll learn. You'll learn how good it can feel.<</speech>><br><br>
 
-And I did.<br><br>
+I do.<br><br>
 
-The pain gave way to warmth, then heat. His thrusts found something deep inside me I hadn’t known existed. My cock tiny now, leaking was forgotten. Useless.<br><br>
+The pain gives way to warmth, then heat. His thrusts find something deep inside me I hadn't known existed. My cock, tiny now and leaking, is forgotten. Beside the point.<br><br>
 
-My breath came in ragged moans. My spine arched. I began pressing back into him, chasing something I couldn’t name. This wasn’t male pleasure. It wasn’t mine. It was hers.<br><br>
+My breath comes in ragged moans. My spine arches. I begin pressing back into him, chasing something I can't name. This isn't male pleasure. It isn't mine. It's hers.<br><br>
 
-The woman I was becoming.<br><br>
+The woman I'm becoming.<br><br>
 
 [[Move Forth|torin_sex_1_5]]
 <</nobr>>
@@ -420,13 +420,13 @@ The woman I was becoming.<br><br>
 
 :: torin_sex_1_5
 <<nobr>>
-I moaned loud, desperate, wanton. My hole clenched around him, greedy. His hands held my hips tight, grounding me in the rhythm. His groans joined mine, echoing in the room like sacred chants.<br><br>
+I moan loud, desperate, wanton. My hole clenches around him, greedy. His hands hold my hips tight, grounding me in the rhythm. His groans join mine, echoing in the room like sacred chants.<br><br>
 
-Something inside me cracked. Or maybe something inside me awakened.<br><br>
+Something inside me cracks. Or maybe something inside me wakes.<br><br>
 
-I wasn’t just letting it happen.<br><br>
+I'm not just letting it happen.<br><br>
 
-I wanted it.<br><br>
+I want it.<br><br>
 
 <<set $currentObjectives = "Meet with Alinora, Aldric, and Thalara to discuss the North forest mission. Council Chamber">>
 <<set $currentArc["main_arc"] = 8>>
@@ -439,8 +439,8 @@ I wanted it.<br><br>
 :: torin_sex_1_6
 <<nobr>>
 <<speech "torin">>You sure you want to leave? I can show you more.<</speech>><br><br>
-<<speech "mc">>I… I need to think. This is all so new.<</speech>><br><br>
-<<speech "torin">>I understand. But know this: I’ll always be here when you’re ready to learn more.<</speech>><br><br>
+<<speech "mc">>I need to think. This is all so new.<</speech>><br><br>
+<<speech "torin">>I understand. But know this. I'll always be here when you're ready to learn more.<</speech>><br><br>
 <<set $currentObjectives = "Meet with Alinora, Aldric, and Thalara to discuss the North forest mission. Council Chamber">>
 <<set $currentArc["main_arc"] = 8>>
 [[Leave Torin|torin_chamber_map_select]] |<br><br>

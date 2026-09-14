@@ -6,7 +6,7 @@
 <<set _i to random(0, 19)>>
 <<if _i == 0>>
 <<speech "serelyne">>
-Sit straight, shoulders low, voice steady. A queen does not fidget she curates silence like it’s a blade.
+Sit straight, shoulders low, voice steady. A queen does not fidget, she curates silence like it’s a blade.
 <</speech>>
 <br>
 
@@ -31,14 +31,14 @@ I was trying to be polite, not domineering.
 <br>
 
 <<speech "serelyne">>
-Then you must learn the art of command through courtesy. It’s not softness it’s velvet over steel.
+Then you must learn the art of command through courtesy. It’s not softness, it’s velvet over steel.
 <</speech>>
 <br>
 
 
 <<elseif _i == 2>>
 <<speech "serelyne">>
-Your posture betrays you femininity is not weakness, Caelan. It is the presentation of grace masking calculated control.
+Your posture betrays you, femininity is not weakness, Caelan. It is the presentation of grace masking calculated control.
 <</speech>>
 <br>
 
@@ -48,7 +48,7 @@ So every gesture must be rehearsed?
 <br>
 
 <<speech "serelyne">>
-Not rehearsed. Mastered. Spontaneity is for peasants.
+Not rehearsed, mastered. Spontaneity is for peasants.
 <</speech>>
 <br>
 <<elseif _i == 3>>
@@ -78,12 +78,12 @@ It’s hard to ignore discomfort when I barely feel like myself.
 <br>
 
 <<speech "serelyne">>
-Then become someone better. Transformation is not erasure it is refinement.
+Then become someone better. Transformation is not erasure, it is refinement.
 <</speech>>
 <br>
 <<elseif _i == 5>>
 <<speech "serelyne">>
-Tell me, Caelan do you want to rule, or merely survive the throne handed to you?
+Tell me, Caelan, do you want to rule, or merely survive the throne handed to you?
 <</speech>>
 <br>
 
@@ -98,7 +98,7 @@ Then I suggest you open your eyes. Rulers shape the storm. Survivors drown benea
 <br>
 <<elseif _i == 6>>
 <<speech "serelyne">>
-Stop speaking with “I think.” A queen knows. Or pretends to. That’s half the crown.
+Stop speaking with “I think.” A queen knows, or pretends to. That’s half the crown.
 <</speech>>
 <br>
 
@@ -113,12 +113,12 @@ All power is artifice. Only peasants demand authenticity.
 <br>
 <<elseif _i == 7>>
 <<speech "serelyne">>
-Today’s lesson is restraint: in gesture, in tone, in vengeance. A queen does not flinch she remembers.
+Today’s lesson is restraint, in gesture, in tone, in vengeance. A queen does not flinch, she remembers.
 <</speech>>
 <br>
 
 <<speech "mc">>
-And what if remembering becomes a weight?
+What if remembering becomes a weight?
 <</speech>>
 <br>
 
@@ -128,7 +128,7 @@ Then you wear it like a crown. Gracefully, and with your chin high.
 <br>
 <<elseif _i == 8>>
 <<speech "serelyne">>
-Your mind is still loud with rebellion. That’s not strength, Caelan it’s wasted noise.
+Your mind is still loud with rebellion. That’s not strength, Caelan, it’s wasted noise.
 <</speech>>
 <br>
 
@@ -138,12 +138,12 @@ Rebellion is all I’ve known.
 <br>
 
 <<speech "serelyne">>
-Then let me teach you the power of quiet defiance calculated, unspoken, undeniable.
+Then let me teach you the power of quiet defiance, calculated, unspoken, undeniable.
 <</speech>>
 <br>
 <<elseif _i == 9>>
 <<speech "serelyne">>
-You are not abandoning your self you are shaping it. Queens are not born, Caelan. They are forged.
+You are not abandoning yourself, you are shaping it. Queens are not born, Caelan. They are forged.
 <</speech>>
 <br>
 
@@ -193,12 +193,12 @@ The crown does not care who you were. It only rewards who you become.
 <br>
 
 <<speech "mc">>
-And if I become someone I don’t recognize?
+What if I become someone I don’t recognize?
 <</speech>>
 <br>
 
 <<speech "serelyne">>
-Then you’ve finally succeeded. Ruling demands sacrifice even of the self.
+Then you’ve finally succeeded. Ruling demands sacrifice, even of the self.
 <</speech>>
 <br>
 <<elseif _i == 13>>
@@ -213,7 +213,7 @@ But what if they see through it?
 <br>
 
 <<speech "serelyne">>
-Then you smile. Let them see but never confirm what’s real. Doubt is its own kind of leash.
+Then you smile. Let them see, but never confirm what’s real. Doubt is its own kind of leash.
 <</speech>>
 <br>
 <<elseif _i == 14>>
@@ -248,7 +248,7 @@ Then ask them in private. In public, you are certainty. No exceptions.
 <br>
 <<elseif _i == 16>>
 <<speech "serelyne">>
-This room will strip you down not your clothes, but your illusions. Are you ready for that?
+This room will strip you down, not your clothes, but your illusions. Are you ready for that?
 <</speech>>
 <br>
 
@@ -258,12 +258,12 @@ I don’t know anymore.
 <br>
 
 <<speech "serelyne">>
-Good. Doubt is a chisel. Let it carve the falsehoods away.
+Good, doubt is a chisel. Let it carve the falsehoods away.
 <</speech>>
 <br>
 <<elseif _i == 17>>
 <<speech "serelyne">>
-I saw the way you flinched when addressed as “Highness.” That’s not humility it’s refusal.
+I saw the way you flinched when addressed as “Highness.” That’s not humility, it’s refusal.
 <</speech>>
 <br>
 
@@ -288,12 +288,12 @@ That’s an unsettling way to put it.
 <br>
 
 <<speech "serelyne">>
-Good. The most dangerous weapons are the ones they never see coming.
+Good, the most dangerous weapons are the ones they never see coming.
 <</speech>>
 <br>
 <<elseif _i == 19>>
 <<speech "serelyne">>
-This voice of yours it must become melody and command in equal measure. Practice until words become music with edge.
+This voice of yours, it must become melody and command in equal measure. Practice until words become music with edge.
 <</speech>>
 <br>
 

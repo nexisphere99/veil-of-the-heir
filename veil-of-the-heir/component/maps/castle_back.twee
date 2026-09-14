@@ -83,7 +83,7 @@ royal_bed_chamber
 /* <<=$currentArc["main_arc"]>> */
 <<nobr>>
 <<if $currentArc["main_arc"] == 16>>
-<h3 style="text-align: center;">Moonspire Atelier — Veil Tower</h3><br>
+<h3 style="text-align: center;">Moonspire Atelier, Veil Tower</h3><br>
 <<set $locationImage = setup.ImagePath + 'location/veil_tower_img.png'>>
 <div style="position: relative; width: 100%; max-width: 700px; margin: 0 auto; aspect-ratio: 7 / 5;">
   <img src="images/map/veil_tower_mage_map.png" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" />
@@ -99,7 +99,7 @@ royal_bed_chamber
 <br><br>
 [[Leave Veil Tower|castle_map_back_select]]
 <<elseif $currentArc["main_arc"] == 3>>
-<h3 style="text-align: center;">Moonspire Atelier — Veil Tower</h3><br>
+<h3 style="text-align: center;">Moonspire Atelier, Veil Tower</h3><br>
 <<set $locationImage = setup.ImagePath + 'location/veil_tower_img.png'>>
 <div style="position: relative; width: 100%; max-width: 700px; margin: 0 auto; aspect-ratio: 7 / 5;">
   <img src="images/map/veil_tower_mage_map.png" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" />
@@ -115,7 +115,7 @@ royal_bed_chamber
 <br><br>
 [[Leave Veil Tower|castle_map_back_select]]
 <<elseif $currentArc["main_arc"] == 5>>
-<h3 style="text-align: center;">Moonspire Atelier — Veil Tower</h3><br>
+<h3 style="text-align: center;">Moonspire Atelier, Veil Tower</h3><br>
 <<set $locationImage = setup.ImagePath + 'location/veil_tower_img.png'>>
 <div style="position: relative; width: 100%; max-width: 700px; margin: 0 auto; aspect-ratio: 7 / 5;">
   <img src="images/map/veil_tower_mage_map.png" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" />
@@ -131,7 +131,7 @@ royal_bed_chamber
 <br><br>
 [[Leave Veil Tower|castle_map_back_select]]
 <<elseif $currentArc["main_arc"] == 6>>
-<h3 style="text-align: center;">Moonspire Atelier — Veil Tower</h3><br>
+<h3 style="text-align: center;">Moonspire Atelier, Veil Tower</h3><br>
 <<set $locationImage = setup.ImagePath + 'location/veil_tower_img.png'>>
 <div style="position: relative; width: 100%; max-width: 700px; margin: 0 auto; aspect-ratio: 7 / 5;">
   <img src="images/map/veil_tower_mage_map.png" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" />
@@ -147,7 +147,7 @@ royal_bed_chamber
 <br><br>
 [[Leave Veil Tower|castle_map_back_select]]
 <<elseif $currentArc["main_arc"] > 6>>
-<h3 style="text-align: center;">Moonspire Atelier — Veil Tower</h3><br>
+<h3 style="text-align: center;">Moonspire Atelier, Veil Tower</h3><br>
 <<set $locationImage = setup.ImagePath + 'location/veil_tower_img.png'>>
 <div style="position: relative; width: 100%; max-width: 700px; margin: 0 auto; aspect-ratio: 7 / 5;">
   <img src="images/map/veil_tower_mage_map.png" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" />
@@ -163,7 +163,7 @@ royal_bed_chamber
 <br><br>
 [[Leave Veil Tower|castle_map_back_select]]
 <<else>>
-<h3 style="text-align: center;">Moonspire Atelier — Veil Tower</h3><br>
+<h3 style="text-align: center;">Moonspire Atelier, Veil Tower</h3><br>
 <<set $locationImage = setup.ImagePath + 'location/veil_tower_img.png'>>
 [img[setup.ImagePath + 'location/veil_tower_img.png']]
 <br>
@@ -174,11 +174,11 @@ royal_bed_chamber
 
 :: interact_with_mage
 <<nobr>>
-<br> <strong><em>The Moonspire Atelier — Veil Tower, Midday</em></strong> Soft glows of floating crystals hovered in the still air. Strange flora bloomed in jars, suspended in liquid starlight. Scrolls lined every surface, runes pulsing faintly beneath the floor.
+<br> <strong><em>The Moonspire Atelier, Veil Tower, Midday</em></strong> Soft glows of floating crystals hover in the still air. Strange flora blooms in jars, suspended in liquid starlight. Scrolls line every surface, runes pulsing faintly beneath the floor.
 <br><br>
 
 <<speech "thalara">>
-Ah... the young heir finally arrives. Welcome, Caelan. Or should I say Velmoria’s chrysalis.
+Ah... the young heir finally arrives. Welcome, Caelan. Or should I say Velmoria's chrysalis.
 <</speech>>
 <br>
 
@@ -188,7 +188,7 @@ Archmage Thalara. The Queen said you would guide me. I come ready, if not fully 
 <br>
 
 <<speech "thalara">>
-Understanding will come in tinctures and time. Here, there are no blades or thrones only vials, steam, and the whisper of changing bones.
+Understanding will come in tinctures and time. Here, there are no blades or thrones, only vials, steam, and the whisper of changing bones.
 <</speech>>
 <br>
 
@@ -201,28 +201,28 @@ Now, look upon this.
 
 :: interact_with_mage_1
 <<nobr>>
-She waved her fingers, and an enchanted scroll floated before Caelan. 
-Symbols shimmered, revealing three transformation branches. flesh, voice, and form. Each with its own list of mystic ingredients.
+She waves her fingers, and an enchanted scroll floats before Caelan.
+Symbols shimmer, revealing three transformation branches, flesh, voice, and form, each with its own list of mystic ingredients.
 <br>
 <<speech "thalara">>
-These are the reagents required to begin your journey. Moonpetal Extract for soft skin. Velmorian Honey for your voice. 
-Eversilk Thread for... well, we’ll save that surprise.
+These are the reagents required to begin your journey. Moonpetal Extract for soft skin. Velmorian Honey for your voice.
+Eversilk Thread for... well, we'll save that surprise.
 <</speech>>
 <br>
 
 <<speech "mc">>
-I thought you’d just hand me a potion and wave your hand.
+I thought you'd just hand me a potion and wave your hand.
 <</speech>>
 <br>
 
 <<speech "thalara">>
-Oh, child. Do you think transformation so shallow? This isn’t a masquerade spell. 
+Oh, child. Do you think transformation so shallow? This isn't a masquerade spell.
 It must come through will, ritual, and cost. You must earn every inch of womanhood that forms.
 <</speech>>
 <br>
 
 <<speech "thalara">>
-And so you will learn alchemy. Slowly. Carefully. With your own hands.
+So you will learn alchemy. Slowly. Carefully. With your own hands.
 <</speech>>
 <br>
 <<set $reverse_passage = "interact_with_mage_2">>
@@ -232,12 +232,12 @@ And so you will learn alchemy. Slowly. Carefully. With your own hands.
 :: interact_with_mage_2
 <<nobr>>
 <<speech "mc">>
-I’m to make these myself?
+I'm to make these myself?
 <</speech>>
 <br>
 
 <<speech "thalara">>
-Not entirely alone. I will guide your hand. But first, you must gather your first satchel of components from the Velmoria’s Essence Vault.
+Not entirely alone. I will guide your hand. But first, you must gather your first satchel of components from Velmoria's Essence Vault.
 <</speech>>
 <br>
 
@@ -247,7 +247,7 @@ The Vault... sounds like something locked away under a mountain.
 <br>
 
 <<speech "thalara">>
-It nearly is. Beneath the southern wing of the castle the Hall of Binding. The Vault holds all restricted magical flora and beast remnants. 
+It nearly is. Beneath the southern wing of the castle lies the Hall of Binding. The Vault holds all restricted magical flora and beast remnants.
 Only those with my sigil may withdraw from it.
 <</speech>>
 <br>
@@ -261,7 +261,7 @@ She produces a glowing crystal, shaped like a drop of liquid moonlight.
 
 <br>
 <<speech "thalara">>
-Take this. It will unlock the Vault’s seal. But listen closely.
+Take this. It will unlock the Vault's seal. But listen closely.
 <</speech>>
 <br>
 
@@ -271,7 +271,7 @@ There is only a limited supply each day. No matter your title, magic obeys scarc
 <br>
 
 <<speech "thalara">>
-And as for the Vault’s keeper... gods help you.
+As for the Vault's keeper... gods help you.
 <</speech>>
 <br>
 
@@ -285,13 +285,13 @@ That bad?
 :: interact_with_mage_4
 <<nobr>>
 <<speech "thalara">>
-He’s a grumbling slab of obsidian with legs. Keeper Malgros. 
+He's a grumbling slab of obsidian with legs. Keeper Malgros.
 He knows the worth of every vial and would sooner strangle a rat than hand over a second drop of Frostvine Elixir.
 <</speech>>
 <br>
 
 <<speech "thalara">>
-Even I suffer his tirades when I request extras. You? He’ll chew your title into powder if you act entitled.
+Even I suffer his tirades when I request extras. You'll fare no better. He'll chew your title into powder if you act entitled.
 <</speech>>
 <br>
 
@@ -301,7 +301,7 @@ So I go to this Malgros, with charm... or perhaps bribes?
 <br>
 
 <<speech "thalara">>
-Charm if you can. Bribes if you're clever. But mostly, show him respect. And never spill what he gives you.
+Charm if you can. Bribes if you're clever. But mostly, show him respect, and never spill what he gives you.
 <</speech>>
 <br>
 [[Move Forth|interact_with_mage_5]]
@@ -310,18 +310,18 @@ Charm if you can. Bribes if you're clever. But mostly, show him respect. And nev
 :: interact_with_mage_5
 <<nobr>>
 <<speech "thalara">>
-Once you have what you need, return here. We'll begin the first infusion. 
-Skin and breath, voice and body slowly, your shell will soften. And your truth will rise.
+Once you have what you need, return here. We'll begin the first infusion.
+Skin and breath, voice and body, slowly your shell will soften, and your truth will rise.
 <</speech>>
 <br>
 
 <<speech "mc">>
-Then I’ll head to the Vault now. Wish me grace... or luck.
+Then I'll head to the Vault now. Wish me grace... or luck.
 <</speech>>
 <br>
 
 <<speech "thalara">>
-You’ll need both. Go, Caelan. Take your first true step not as prince, but as the becoming.
+You'll need both. Go, Caelan. Take your first true step not as prince, but as the becoming.
 <</speech>>
 <br>
 <<set $currentArc["main_arc"] = 4>>
@@ -378,9 +378,9 @@ You’ll need both. Go, Caelan. Take your first true step not as prince, but as 
 
 :: interact_with_keeper
 <<nobr>>
-<br> A heavy door inscribed with ancient runes loomed before me. 
-The air was colder here, almost watchful. 
-I pressed the sigil Thalara had given me into the rune socket. A click echoed… and the vault opened.
+<br> A heavy door inscribed with ancient runes looms before me.
+The air is colder here, almost watchful.
+I press the sigil Thalara gave me into the rune socket. A click echoes, and the vault opens.
 <br><br>
 
 <<speech "mc">>
@@ -388,13 +388,13 @@ So this is the Essence Vault...
 <</speech>>
 <br>
 
-Before me stretched shelves of bottled moonlight, crystal vials with floating eyes, claws wrapped in wax, and herbs that curled away from touch. 
-In the center stood a mountain of a man wide shouldered, skin like cracked granite, arms folded.
+Before me stretch shelves of bottled moonlight, crystal vials with floating eyes, claws wrapped in wax, and herbs that curl away from touch.
+In the center stands a mountain of a man, wide shouldered, skin like cracked granite, arms folded.
 
 <br><br>
 
 <<speech "malgros">>
-Hmph. You’re late for being royalty.
+Hmph. You're late for being royalty.
 <</speech>>
 <br>
 
@@ -414,12 +414,12 @@ Name means little here. Every prince bleeds the same when foolish.
 <</speech>>
 <br>
 
-He stepped forward, eyeing Caelan up and down like a slab of meat.
+He steps forward, eyeing Caelan up and down like a slab of meat.
 
 <br><br>
 
 <<speech "malgros">>
-Magic’s no toy. These ingredients they burn, bite, and twist the soul. You think you’re ready to stir a vial and sip your way into womanhood?
+Magic's no toy. These ingredients, they burn, bite, and twist the soul. You think you're ready to stir a vial and sip your way into womanhood?
 <</speech>>
 <br>
 
@@ -429,7 +429,7 @@ If that is the path to ruling Velmoria, then I am.
 <br>
 
 <<speech "malgros">>
-Hmph. I’ve seen brave boys scorched by Feylace Petal, women driven mad from Seraphmilk. Every item here has a price beyond coin or crown.
+Hmph. I've seen brave boys scorched by Feylace Petal, women driven mad from Seraphmilk. Every item here has a price beyond coin or crown.
 <</speech>>
 <br>
 [[Move Forth|interact_with_keeper_2]]
@@ -437,12 +437,12 @@ Hmph. I’ve seen brave boys scorched by Feylace Petal, women driven mad from Se
 
 :: interact_with_keeper_2
 <<nobr>>
-He walked over to a sealed crystal case and tapped it. Inside glowed a silver blue root wrapped in frost.
+He walks over to a sealed crystal case and taps it. Inside glows a silver blue root wrapped in frost.
 
 <br><br>
 
 <<speech "malgros">>
-Here lies the Frostleaf Crystals Tongue. What melts your voice to silk, can also silence it forever if measured wrong. Still want it?
+Here lies the Frostleaf Crystals Tongue. What melts your voice to silk can also silence it forever if measured wrong. Still want it?
 <</speech>>
 <br>
 
@@ -451,16 +451,16 @@ I need it.
 <</speech>>
 <br>
 
-Malgros squinted. Then a grim smile crept across his lips the kind that had tested many before.
+Malgros squints. Then a grim smile creeps across his lips, the kind that has tested many before.
 
 <br><br>
 
 <<speech "malgros">>
-Then earn it. No item leaves without a mind’s price. Answer me this, princeling!
+Then earn it. No item leaves without a mind's price. Answer me this, princeling!
 <</speech>>
 <br>
 <<speech "malgros">>
-Answer true, and you may take your potion's whisper. Fail... and you’ll leave with empty hands, maybe less.
+Answer true, and you may take your potion's whisper. Fail, and you'll leave with empty hands, maybe less.
 <</speech>>
 <br>
 <<set $currentArc["main_arc"] = 5>>
@@ -474,7 +474,7 @@ Answer true, and you may take your potion's whisper. Fail... and you’ll leave 
   [img[setup.ImagePath + 'location/essence_vault_img.png']]
   <br>
   <<speech "malgros">>
-	You've already got your ingredients today. Go away.
+	You've already got your ingredients today. Go on, get out.
   <</speech>>
   <br>
   <br>
@@ -509,7 +509,7 @@ Answer true, and you may take your potion's whisper. Fail... and you’ll leave 
 					<<if _indexNum == _riddle.answer>>
             <br>
             <<speech "malgros">>
-						<strong>Correct!</strong> You may choose your ingredient. Dont take more than three items you won't get to leave here if thats the case.
+						<strong>Correct!</strong> You may choose your ingredient. Don't take more than three, or you won't leave here at all.
             <</speech>>
             <br>
 						<<set $hasIngredientAccess = true>>
@@ -518,13 +518,13 @@ Answer true, and you may take your potion's whisper. Fail... and you’ll leave 
 					<<else>>
 						<<if $riddleAttempts < $riddleLimit>>
               <<speech "malgros">>
-              <strong>Incorrect. You won’t get anything without solving this.</strong> Better luck next time. You can try again if you like.
+              <strong>Incorrect. You won't get anything without solving this.</strong> Better luck next time. Try again if you like.
               <</speech>>
               <br>
 							<<link "Try another riddle">><<goto "riddle">><</link>> |
 							<<link "Leave Essence Vault">><<goto "castle_map_back_select">><</link>>
 						<<else>>
-							<<speech "malgros">><strong>Incorrect. You won’t get anything without solving this. Better luck next time.</strong><em>You have no attempts left for today.</em>
+							<<speech "malgros">><strong>Incorrect. You won't get anything without solving this. Better luck next time.</strong><em>You have no attempts left for today.</em>
               <</speech>>
               <br>
 							<<link "Leave Essence Vault">><<goto "castle_map_back_select">><</link>>
@@ -544,7 +544,7 @@ Answer true, and you may take your potion's whisper. Fail... and you’ll leave 
 :: interact_with_mage_1_0
 <<nobr>>
 <<speech "thalara">>
-Ah… the vault did not chew you up, after all. And you even returned with your limbs. That’s more than I can say for some of my assistants.
+Ah, the vault didn't chew you up after all, and you even returned with your limbs. That's more than I can say for some of my assistants.
 <</speech>>
 <br>
 
@@ -552,7 +552,7 @@ She rises gracefully from her seat, robes trailing behind like midnight smoke. H
 
 <br>
 <<speech "thalara">>
-Now then... show me what wonders or disasters you’ve brought me.
+Now then... show me what wonders or disasters you've brought me.
 <</speech>>
 <br>
 
@@ -565,7 +565,7 @@ Thalara's eyes glitter faintly. She lifts a glowing vial, turning it delicately 
 
 <br>
 <<speech "thalara">>
-Ingredients you brought, Not bad for a first forage. You’ve the makings of a true potion binder.
+The ingredients you brought aren't bad for a first forage. You've the makings of a true potion binder.
 <</speech>>
 <br>
 [[Move Forth|interact_with_mage_1_2]]
@@ -575,18 +575,18 @@ Ingredients you brought, Not bad for a first forage. You’ve the makings of a t
 <<nobr>>
 <<set $currentObjectives = "Go to Lady Serelyne at East wing for First Session">>
 <<speech "thalara">>
-But remember, these are not mere ingredients. They are choices, Caelan raw threads waiting to be spun into the shape of your new self.
+But remember, these are not mere ingredients. They are choices, Caelan, raw threads waiting to be spun into the shape of your new self.
 <</speech>>
 <br>
 
 <<speech "mc">>
-And you… you want me to decide what shape that will be?
+So you want me to decide what shape that will be?
 <</speech>>
 <br>
 
 <<speech "thalara">>
 It must be you, my prince. Or perhaps I should say my princess-in-becoming.
-What part of yourself do you wish to see changed first? Your face, perhaps? Your curves? Or maybe... you'd rather begin somewhere less visible, like your skin’s softness or your scent?
+What part of yourself do you wish to see changed first? Your face, perhaps? Your curves? Or maybe... you'd rather begin somewhere less visible, like your skin's softness or your scent?
 <</speech>>
 <br>
 

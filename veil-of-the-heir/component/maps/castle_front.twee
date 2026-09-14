@@ -168,26 +168,26 @@
 
 :: interact_with_queen
 <<nobr>>
-<br> <strong><em>The Morning After — Council Chamber, Midmorning</em></strong> <br><br>
+<br> <strong><em>The Morning After, Council Chamber, Midmorning</em></strong> <br><br>
 <<speech "mc">>
-Good morning, Mother. I... slept, though my dreams were strange. I suppose I now stand upon the first step of the path we discussed.
+Good morning, Mother. I slept, though my dreams were strange. I suppose I'm standing now on the first step of the path we discussed.
 <</speech>>
 <br>
 
 <<speech "alinora">>
-Indeed you do, my child. The moment you rose from that council seat, your fate shifted like the winds of prophecy. 
-And now, we must shape you to match the crown you are to bear.
+Indeed you are, my child. The moment you rose from that council seat, your fate shifted like the winds of prophecy.
+Now we must shape you to match the crown you are to bear.
 <</speech>>
 <br>
 
 <<speech "mc">>
-I am ready... or I wish to be. You spoke of three pillars, and I still remember their names. But which one must I begin with?
+I am ready, or I wish to be. You spoke of three pillars, and I still remember their names. But which one must I begin with?
 <</speech>>
 <br>
 
 <<speech "alinora">>
-Each pillar is vital, but one must come first to anchor the rest. 
-The court may overlook uncertain manners or political missteps... but they will not overlook a prince in a dress.
+Each pillar is vital, but one must come first to anchor the rest.
+The court may overlook uncertain manners or political missteps, but they will not overlook a prince in a dress.
 <</speech>>
 <br>
 [[Move Forth|interact_with_queen_1]]
@@ -195,12 +195,12 @@ The court may overlook uncertain manners or political missteps... but they will 
 
 :: interact_with_queen_1
 <<nobr>>
-She stood and moved toward the window, where sunlight spilled across the velvet floor. 
-Her eyes, clear as carved sapphire, regarded her child not unkindly.
+She stands and moves toward the window, where sunlight spills across the velvet floor.
+Her eyes, clear as carved sapphire, regard her child, not unkindly.
 <br>
 <br>
 <<speech "alinora">>
-Thus, your body must change first. Slowly, carefully. The illusion must not be illusion. It must be truth bone, skin, breath, and form.
+Thus, your body must change first. Slowly, carefully. The illusion must not be illusion. It must be truth, bone, skin, breath, and form.
 <</speech>>
 <br>
 
@@ -210,8 +210,8 @@ Then I will face it head on. Is there someone to guide me?
 <br>
 
 <<speech "alinora">>
-There is. You shall meet Archmage Thalara Moonveil, Mistress of Essence and Change. 
-She has served this house longer than you’ve drawn breath and has mastered arts few dare name aloud.
+There is. You shall meet Archmage Thalara Moonveil, Mistress of Essence and Change.
+She has served this house longer than you've drawn breath and has mastered arts few dare name aloud.
 <</speech>>
 <br>
 <<speech "mc">>
@@ -224,12 +224,12 @@ Will it hurt?
 :: interact_with_queen_2
 <<nobr>>
 <<speech "alinora">>
-It will challenge you. Pain may come, though not always in ways you expect. 
-But Thalara is gentle, when she wishes to be. And she understands the weight of what you are to become.
+It will challenge you. Pain may come, though not always in ways you expect.
+But Thalara is gentle, when she wishes to be, and she understands the weight of what you are to become.
 <</speech>>
 <br>
 
-She steps closer now, placing one gloved hand against Caelan’s cheek.
+She steps closer now, placing one gloved hand against Caelan's cheek.
 
 <br>
 <<speech "alinora">>
@@ -243,18 +243,18 @@ Where will I find her?
 <br>
 
 <<speech "alinora">>
-In the Moonspire Atelier - Veil Tower, high in the east tower. She prefers her solitude, so knock only once. 
-She’ll know you’ve come before you touch the door.
+In the Moonspire Atelier, the Veil Tower, high in the east tower. She prefers her solitude, so knock only once.
+She'll know you've come before you touch the door.
 <</speech>>
 <br>
 <<set $currentObjectives = "Go to Veil tower and meet Archmage Thalara Moonveil at Moonspire Atelier">>
 <<speech "mc">>
-I’ll go now.
+I'll go now.
 <</speech>>
 <br>
 
 <<speech "alinora">>
-One last word, Trust her, Caelan. Let her magic shape you, but hold tight to your spirit. The body bends... but the soul must choose its own form.
+One last word. Trust her, Caelan. Let her magic shape you, but hold tight to your spirit. The body may bend, but the soul must choose its own form.
 <</speech>>
 <br>
 <<set $currentArc["main_arc"] = 3>>

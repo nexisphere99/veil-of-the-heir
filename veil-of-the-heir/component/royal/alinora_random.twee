@@ -6,22 +6,22 @@
 <<set _i to random(0, 18)>>
 <<if _i == 0>>
 <<speech "alinora">>
-The crown does not bend, Caelan it expects those who wear it to rise. I did not raise you to be ordinary. I raised you to endure, to become the shape Velmoria needs, not the one it desires.
+The crown does not bend, Caelan. It expects those who wear it to rise. I did not raise you to be ordinary. I raised you to endure, to become the shape Velmoria needs, not the one it desires.
 <</speech>>
 <br>
 
 <<speech "mc">>
-And what if I’m not strong enough to become that shape?
+What if I'm not strong enough to become that shape?
 <</speech>>
 <br>
 
 <<speech "alinora">>
-Then I will grieve. Briefly. And then I will teach you again, as I always have.
+Then I will grieve, briefly, and then I will teach you again, as I always have.
 <</speech>>
 <br>
 <<elseif _i == 1>>
 <<speech "alinora">>
-I saw you hesitate during court today. Not in speech, but in bearing. A ruler cannot afford uncertainty not in voice, not in spine, not in the flicker of an eye.
+I saw you hesitate during court today. Not in speech, but in bearing. A ruler cannot afford uncertainty, not in voice, not in spine, not in the flicker of an eye.
 <</speech>>
 <br>
 
@@ -41,22 +41,22 @@ Do not mistake silence for disapproval, Caelan. I do not speak of your struggles
 <br>
 
 <<speech "mc">>
-Sometimes I wish you’d see me as more than a legacy.
+Sometimes I wish you'd see me as more than a legacy.
 <</speech>>
 <br>
 
 <<speech "alinora">>
-I do. But I see you as a Velmorian first. And that is not a name given lightly.
+I do. But I see you as a Velmorian first. That is not a name given lightly.
 <</speech>>
 <br>
 <<elseif _i == 3>>
 <<speech "alinora">>
-I remember holding you as an infant fragile, loud, utterly unfit for the throne. And yet, even then, I knew you would grow teeth sharper than mine.
+I remember holding you as an infant, fragile, loud, utterly unfit for the throne, and yet even then I knew you would grow teeth sharper than mine.
 <</speech>>
 <br>
 
 <<speech "mc">>
-That doesn’t sound like love.
+That doesn't sound like love.
 <</speech>>
 <br>
 
@@ -81,12 +81,12 @@ Both. A queen learns to read her pain like scripture. You will do the same.
 <br>
 <<elseif _i == 5>>
 <<speech "alinora">>
-The nobles murmur about your softness. Your hesitance. But what they fail to see is that softness can smother just as well as steel can cut.
+The nobles murmur about your softness, your hesitance. But what they fail to see is that softness can smother just as well as steel can cut.
 <</speech>>
 <br>
 
 <<speech "mc">>
-Do you think I’ll ever win them over?
+Do you think I'll ever win them over?
 <</speech>>
 <br>
 
@@ -96,7 +96,7 @@ You do not win over wolves, Caelan. You outlast them. Or you feed them your riva
 <br>
 <<elseif _i == 6>>
 <<speech "alinora">>
-I once dreamed of a daughter. Not because I longed for femininity, but because Velmoria’s law demanded it. Fate gave me you instead unexpected, beautiful, incomplete.
+I once dreamed of a daughter. Not because I longed for femininity, but because Velmoria's law demanded it. Fate gave me you instead, unexpected, beautiful, incomplete.
 <</speech>>
 <br>
 
@@ -106,7 +106,7 @@ Do I disappoint you?
 <br>
 
 <<speech "alinora">>
-You challenge me. And for that, I am endlessly proud and endlessly wary.
+You challenge me, and for that I am endlessly proud and endlessly wary.
 <</speech>>
 <br>
 <<elseif _i == 7>>
@@ -116,7 +116,7 @@ The court sees transformation as spectacle. But this is no performance, Caelan. 
 <br>
 
 <<speech "mc">>
-Can’t I keep part of who I was?
+Can't I keep part of who I was?
 <</speech>>
 <br>
 
@@ -126,7 +126,7 @@ If you must. But remember, a ruler does not ask the world for permission to beco
 <br>
 <<elseif _i == 8>>
 <<speech "alinora">>
-Your father weeps for you in the garden. He believes love should protect, not shape. I envy his softness… but I cannot afford it.
+Your father weeps for you in the garden. He believes love should protect, not shape. I envy his softness. But I cannot afford it.
 <</speech>>
 <br>
 
@@ -136,12 +136,12 @@ Do you ever wish you could be softer?
 <br>
 
 <<speech "alinora">>
-Often. But I learned early: softness is a luxury we cannot afford not as rulers. Not as Velmorians.
+Often. But I learned early that softness is a luxury we cannot afford. Not as rulers. Not as Velmorians.
 <</speech>>
 <br>
 <<elseif _i == 9>>
 <<speech "alinora">>
-One day, they will carve your name into the stone of this castle. And I wonder what story they will tell. Will it be the tale of a prince who vanished… or a queen who conquered her fate?
+One day they will carve your name into the stone of this castle, and I wonder what story they will tell. Will it be the tale of a prince who vanished, or a queen who conquered her fate?
 <</speech>>
 <br>
 
@@ -151,12 +151,12 @@ That depends on the choices I make.
 <br>
 
 <<speech "alinora">>
-Indeed. And I intend to give you every burden necessary to make the right ones.
+Indeed, and I intend to give you every burden necessary to make the right ones.
 <</speech>>
 <br>
 <<elseif _i == 10>>
 <<speech "alinora">>
-You think I do not ache watching you change? I do. But that ache is a ghost I buried it long ago, alongside the woman I might have been if love ruled this kingdom instead of law.
+You think I do not ache watching you change? I do. But that ache is a ghost. I buried it long ago, alongside the woman I might have been if love ruled this kingdom instead of law.
 <</speech>>
 <br>
 
@@ -176,7 +176,7 @@ You stood taller in court today. I noticed. So did Lady Serelyne. The serpents a
 <br>
 
 <<speech "mc">>
-Then why do I still feel like I’m pretending?
+Then why do I still feel like I'm pretending?
 <</speech>>
 <br>
 
@@ -186,12 +186,12 @@ Because you are. But every monarch begins as a myth in their own skin. Eventuall
 <br>
 <<elseif _i == 12>>
 <<speech "alinora">>
-There is power in being watched, Caelan. Every gaze tests you. Every whisper carves its mark. Learn to wear scrutiny like silk it may chafe at first, but it becomes second skin.
+There is power in being watched, Caelan. Every gaze tests you. Every whisper carves its mark. Learn to wear scrutiny like silk. It may chafe at first, but it becomes a second skin.
 <</speech>>
 <br>
 
 <<speech "mc">>
-Sometimes I wish they’d all just stop watching.
+Sometimes I wish they'd all just stop watching.
 <</speech>>
 <br>
 
@@ -201,12 +201,12 @@ Then they win. Never give your enemies the comfort of your retreat.
 <br>
 <<elseif _i == 13>>
 <<speech "alinora">>
-You are not the child who clung to my robes in the temple courtyard. That boy is gone. What remains is the vessel for Velmoria’s future.
+You are not the child who clung to my robes in the temple courtyard. That boy is gone. What remains is the vessel for Velmoria's future.
 <</speech>>
 <br>
 
 <<speech "mc">>
-But I still feel him inside me. Small. Afraid.
+But I still feel him inside me, small, afraid.
 <</speech>>
 <br>
 
@@ -221,27 +221,27 @@ Thalara tells me the physical changes have begun to ripple outward. Eyes softer.
 <br>
 
 <<speech "mc">>
-And how do you see me?
+How do you see me?
 <</speech>>
 <br>
 
 <<speech "alinora">>
-As someone I am beginning to fear and admire. Which means your enemies soon will, too.
+As someone I am beginning to fear and admire. Which means your enemies soon will too.
 <</speech>>
 <br>
 <<elseif _i == 15>>
 <<speech "alinora">>
-You wore the amethyst gown tonight. Good. Its color commands without shouting. Its shape forces posture. Even silk can be armor when used properly.
+You wore the amethyst gown tonight. Good, its color commands without shouting. Its shape forces posture. Even silk can be armor when used properly.
 <</speech>>
 <br>
 
 <<speech "mc">>
-I didn’t wear it for tactics. I wore it because it felt… right.
+I didn't wear it for tactics. I wore it because it felt right.
 <</speech>>
 <br>
 
 <<speech "alinora">>
-Then you’re further along than I dared hope. Trust the instincts that sharpen you.
+Then you're further along than I dared hope. Trust the instincts that sharpen you.
 <</speech>>
 <br>
 <<elseif _i == 16>>
@@ -251,7 +251,7 @@ When the other kingdoms look to Velmoria, they will not see a transition. They w
 <br>
 
 <<speech "mc">>
-That sounds beautiful. And terrifying.
+That sounds beautiful, and terrifying.
 <</speech>>
 <br>
 
@@ -266,17 +266,17 @@ Your father writes you songs. I sharpen your legacy. Between the two of us, you 
 <br>
 
 <<speech "mc">>
-Sometimes I wish you could just… hold me, without expecting anything.
+Sometimes I wish you could just hold me, without expecting anything.
 <</speech>>
 <br>
 
 <<speech "alinora">>
-I hold you every day in my decisions, in my sacrifices, in the silence I swallow so you can speak freely. That is the weight of royal love.
+I hold you every day, in my decisions, in my sacrifices, in the silence I swallow so you can speak freely. That is the weight of royal love.
 <</speech>>
 <br>
 <<elseif _i == 18>>
 <<speech "alinora">>
-Do not let kindness be mistaken for submission. When you smile, let it be like a dagger graceful, and deadly if misunderstood.
+Do not let kindness be mistaken for submission. When you smile, let it be like a dagger, graceful, and deadly if misunderstood.
 <</speech>>
 <br>
 
@@ -286,7 +286,7 @@ You really think I can command them, like you do?
 <br>
 
 <<speech "alinora">>
-No. I believe you will command them differently and that difference may save us all.
+No. I believe you will command them differently, and that difference may save us all.
 <</speech>>
 <br>
 <<elseif _i == 19>>

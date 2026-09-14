@@ -6,7 +6,7 @@
 <<set _i to random(0, 19)>>
 <<if _i == 0>>
 <<speech "malrec">>
-The throne, dear Caelan, is not a seat it is a stage. And everyone who kneels before it is performing.
+The throne, dear Caelan, is not a seat, it is a stage, and everyone who kneels before it is performing.
 <</speech>>
 <br>
 
@@ -61,12 +61,12 @@ I thought he was just being kind.
 <br>
 
 <<speech "malrec">>
-Kindness, my prince, is a currency. And you are very, very rich.
+Kindness, my prince, is a currency, and you are very, very rich.
 <</speech>>
 <br>
 <<elseif _i == 4>>
 <<speech "malrec">>
-You wear your thoughts like a stained tabard. In politics, we prefer velvet soft, opaque, and dangerous.
+You wear your thoughts like a stained tabard. In politics, we prefer velvet, soft, opaque, and dangerous.
 <</speech>>
 <br>
 
@@ -76,7 +76,7 @@ So, conceal everything?
 <br>
 
 <<speech "malrec">>
-No. Reveal what you want them to see. Control the narrative, or become someone else's footnote.
+No, reveal what you want them to see. Control the narrative, or become someone else's footnote.
 <</speech>>
 <br>
 <<elseif _i == 5>>
@@ -106,12 +106,12 @@ You want me to appear uncertain?
 <br>
 
 <<speech "malrec">>
-Not uncertain deliberate. Certainty is admirable. Mystery is controlling.
+Not uncertain, deliberate. Certainty is admirable. Mystery is controlling.
 <</speech>>
 <br>
 <<elseif _i == 7>>
 <<speech "malrec">>
-There are no true allies at court. Only overlapping ambitions.
+There are no true allies at court, only overlapping ambitions.
 <</speech>>
 <br>
 
@@ -136,12 +136,12 @@ So… like murder, but with manners?
 <br>
 
 <<speech "malrec">>
-Exactly. And always offer tea afterward. It keeps the peace and the suspicion low.
+Exactly, and always offer tea afterward. It keeps the peace and the suspicion low.
 <</speech>>
 <br>
 <<elseif _i == 9>>
 <<speech "malrec">>
-Tell me, have you learned to speak without speaking? That’s a queen’s greatest gift her silence commands more than speeches.
+Tell me, have you learned to speak without speaking? That’s a queen’s greatest gift, her silence commands more than speeches.
 <</speech>>
 <br>
 
@@ -171,12 +171,12 @@ Then let’s give them a reason. Perception, my dear, is the sharpest sword you�
 <br>
 <<elseif _i == 11>>
 <<speech "malrec">>
-They whispered you were soft. Sentimental. Easy to sway. So I had the steward leak a rumor that you rejected three proposals last week.
+They whispered you were soft, sentimental, easy to sway. So I had the steward leak a rumor that you rejected three proposals last week.
 <</speech>>
 <br>
 
 <<speech "mc">>
-Wait you what? I didn’t even hear those offers.
+Wait, you did what? I didn’t even hear those offers.
 <</speech>>
 <br>
 
@@ -196,12 +196,12 @@ So what should I do when they insult me?
 <br>
 
 <<speech "malrec">>
-Smile. Laugh. And then let their wine be poured a little too slowly at the next feast. Revenge should be subtle, and delicious.
+Smile, laugh, and then let their wine be poured a little too slowly at the next feast. Revenge should be subtle, and delicious.
 <</speech>>
 <br>
 <<elseif _i == 13>>
 <<speech "malrec">>
-A crown does not make you queen, Caelan. A hundred people believing you already are that’s what seals it.
+A crown does not make you queen, Caelan. A hundred people believing you already are, that’s what seals it.
 <</speech>>
 <br>
 
@@ -216,7 +216,7 @@ Then act like you do. Belief follows repetition, especially when it’s cloaked 
 <br>
 <<elseif _i == 14>>
 <<speech "malrec">>
-I heard you hesitated before punishing the steward’s oversight. A kind impulse but one we can’t afford.
+I heard you hesitated before punishing the steward’s oversight. A kind impulse, but one we can’t afford.
 <</speech>>
 <br>
 
@@ -241,12 +241,12 @@ So I should stop expecting truth entirely?
 <br>
 
 <<speech "malrec">>
-No expect it. But only from those who have nothing to gain, or everything to lose. Rare creatures, those.
+No, expect it, but only from those who have nothing to gain, or everything to lose. Rare creatures, those.
 <</speech>>
 <br>
 <<elseif _i == 16>>
 <<speech "malrec">>
-The queen once said to me: ‘Trust the whisperers, but not their words.’ Do you understand what she meant?
+The queen once said to me, ‘Trust the whisperers, but not their words.’ Do you understand what she meant?
 <</speech>>
 <br>
 
@@ -256,7 +256,7 @@ That I should listen for intent, not content?
 <br>
 
 <<speech "malrec">>
-Bravo. You may yet survive the court. Or better command it.
+Bravo. You may yet survive the court. Or better, command it.
 <</speech>>
 <br>
 <<elseif _i == 17>>
@@ -266,12 +266,12 @@ The commoners are not your enemies. But they are not your friends either. They a
 <br>
 
 <<speech "mc">>
-And who is the moon in this metaphor?
+Who is the moon in this metaphor, then?
 <</speech>>
 <br>
 
 <<speech "malrec">>
-The story you let them believe about you. That’s what moves hearts. And armies.
+The story you let them believe about you. That’s what moves hearts, and armies.
 <</speech>>
 <br>
 <<elseif _i == 18>>
@@ -291,7 +291,7 @@ Because when the room turns to face you, you hold it. Let them wait. Anticipatio
 <br>
 <<elseif _i == 19>>
 <<speech "malrec">>
-Even now, as you sit here there are five petitions on your desk, two spies in your staff, and a lover with a hidden agenda.
+Even now, as you sit here, there are five petitions on your desk, two spies in your staff, and a lover with a hidden agenda.
 <</speech>>
 <br>
 
@@ -301,7 +301,7 @@ Which lover?
 <br>
 
 <<speech "malrec">>
-Ah, that was the test. And you just told me something very useful.
+Ah, that was the test, and you just told me something very useful.
 <</speech>>
 <br>
 <</if>>
@@ -319,21 +319,21 @@ Ah, that was the test. And you just told me something very useful.
 <<set $marlec_chat_1 = true>>
 <<speech "malrec">>Sit, Your Highness. We have much to discuss tonight, and I prefer not to be interrupted by awkward silences or fragile pride. You are, after all, to become a queen… not a shadow in a prince’s cloak.<</speech>><br>
 
-<<speech "mc">>You speak so easily of it. As if shedding my name and body were like changing robes. But I am not ready. I don't even know what it means to be a queen.<</speech>><br>
+<<speech "mc">>You speak so easily of it, as if shedding my name and body were like changing robes. But I am not ready. I don't even know what it means to be a queen.<</speech>><br>
 
-<<speech "malrec">>And that is precisely why we begin. Rulership, dear prince, is not born in the womb it is cultivated in the marrow. Queenship, however, carries an older magic, a deeper expectation. One that no man can understand… until he chooses to.<</speech>><br>
+<<speech "malrec">>That is precisely why we begin. Rulership, dear prince, is not born in the womb, it is cultivated in the marrow. Queenship, however, carries an older magic, a deeper expectation, one that no man can understand until he chooses to.<</speech>><br>
 [[Move Forth|marlec_chat_1_1]]
 <</nobr>>
 
 :: marlec_chat_1_1
 <<nobr>>
-<<speech "mc">>You say 'chooses' but what choice do I have? Mother has made it clear: I am the last vessel of her bloodline.<</speech>><br>
+<<speech "mc">>You say 'chooses,' but what choice do I have? Mother has made it clear, I am the last vessel of her bloodline.<</speech>><br>
 
-<<speech "malrec">>Ah, and therein lies the beauty of illusion. The crown demands duty but how you wear it, how you embody it, can be utterly your own. Shall I tell you what true power tastes like, my prince? It tastes of surrender… and then command.<</speech>><br>
+<<speech "malrec">>Ah, and therein lies the beauty of illusion. The crown demands duty, but how you wear it, how you embody it, can be utterly your own. Shall I tell you what true power tastes like, my prince? It tastes of surrender… and then command.<</speech>><br>
 
 <<speech "mc">>That sounds like a contradiction.<</speech>><br>
 
-<<speech "malrec">>All power is contradiction. The queen bows in council yet commands the realm. She offers her hand in peace while hiding daggers in her gaze. You must learn to become both the rose and the thorn.<</speech>><br>
+<<speech "malrec">>All power is contradiction. The queen bows in council, yet commands the realm. She offers her hand in peace while hiding daggers in her gaze. You must learn to become both the rose and the thorn.<</speech>><br>
 [[Move Forth|marlec_chat_1_2]]
 <</nobr>>
 
@@ -341,9 +341,9 @@ Ah, that was the test. And you just told me something very useful.
 <<nobr>>
 <<speech "mc">>But I was raised as a prince. I was taught to stand firm, not curtsy. I trained to fight, not to dance.<</speech>><br>
 
-<<speech "malrec">>And you shall fight still just with silk instead of steel. A clever queen wages war with a whisper and wins it with a glance. Your sword will be your hips. Your battleground: the court. And your armor… will be the smile of a woman no man dares underestimate.<</speech>><br>
+<<speech "malrec">>You shall fight still, just with silk instead of steel. A clever queen wages war with a whisper and wins it with a glance. Your sword will be your hips, your battleground the court, and your armor will be the smile of a woman no man dares underestimate.<</speech>><br>
 
-<<speech "mc">>And if I cannot smile that way?<</speech>><br>
+<<speech "mc">>What if I cannot smile that way?<</speech>><br>
 
 <<speech "malrec">>Then we shall teach your lips to lie as queens do.<</speech>><br>
 [[Move Forth|marlec_chat_1_3]]
@@ -356,22 +356,22 @@ Ah, that was the test. And you just told me something very useful.
 
 <<speech "malrec">>Because it is. The world bends for the curve of a queen's waist if she learns how to wield it. Men have always mistaken softness for weakness. But your softness will be your secret blade.<</speech>><br>
 
-<<speech "mc">>What of my body? It’s still… mine. And wrong. Some days I look at it and it feels foreign. Other days I cling to it like armor.<</speech>><br>
+<<speech "mc">>What of my body? It’s still mine, and wrong, both at once. Some days I look at it and it feels foreign. Other days I cling to it like armor.<</speech>><br>
 
-<<speech "malrec">>You will lose things, yes. The prince's shape, his proud stance. But you will gain others. Breasts that command attention, hips that sway like pendulums of power. And above all, you will gain sovereignty over yourself.<</speech>><br>
+<<speech "malrec">>You will lose things, yes. The prince's shape, his proud stance. But you will gain others. Breasts that command attention, hips that sway like pendulums of power. But above all, you will gain sovereignty over yourself.<</speech>><br>
 [[Move Forth|marlec_chat_1_4]]
 <</nobr>>
 
 
 :: marlec_chat_1_4
 <<nobr>>
-<<speech "mc">>And the others? What will they see?<</speech>><br>
+<<speech "mc">>What about the others? What will they see?<</speech>><br>
 
-<<speech "malrec">>Let them see what you show them. A queen is never seen she is perceived. Would you like a lesson in perception?<</speech>><br>
+<<speech "malrec">>Let them see what you show them. A queen is never seen, she is perceived. Would you like a lesson in perception?<</speech>><br>
 
 <<speech "mc">>I suppose I must.<</speech>><br>
 
-<<speech "malrec">>Stand. Now walk to the window. Slowly. Let your hands trail against the table as you pass. Not like a soldier, like a siren.<</speech>><br>
+<<speech "malrec">>Stand, and walk to the window, slowly. Let your hands trail against the table as you pass, not like a soldier, like a siren.<</speech>><br>
 [[Move Forth|marlec_chat_1_5]]
 <</nobr>>
 
@@ -379,7 +379,7 @@ Ah, that was the test. And you just told me something very useful.
 <<nobr>>
 <<speech "mc">>This feels ridiculous…<</speech>><br>
 
-<<speech "malrec">>Good. Embrace the ridiculous. From it blooms the divine. Now… pause by the drapes. Tilt your head. Breathe like you're being watched, and you like it.<</speech>><br>
+<<speech "malrec">>Good, embrace the ridiculous. From it blooms the divine. Now… pause by the drapes. Tilt your head. Breathe like you're being watched, and you like it.<</speech>><br>
 
 <<speech "mc">>I… see. I feel… different.<</speech>><br>
 
@@ -396,18 +396,18 @@ Ah, that was the test. And you just told me something very useful.
 
 <<speech "mc">>You speak as if queens are predators.<</speech>><br>
 
-<<speech "malrec">>No. Queens are survivors. In a world of wolves, we dress in silk and make the wolves howl for us.<</speech>><br>
+<<speech "malrec">>No, queens are survivors. In a world of wolves, we dress in silk and make the wolves howl for us.<</speech>><br>
 [[Move Forth|marlec_chat_1_7]]
 <</nobr>>
 
 
 :: marlec_chat_1_7
 <<nobr>>
-<<speech "mc">>And men?<</speech>><br>
+<<speech "mc">>What about men?<</speech>><br>
 
-<<speech "malrec">>Men are taught to conquer. Women are taught to endure. But you… you will learn to convert. To absorb both, and become something the world has no name for.<</speech>><br>
+<<speech "malrec">>Men are taught to conquer. Women are taught to endure. But you… you will learn to convert, to absorb both, and become something the world has no name for.<</speech>><br>
 
-<<speech "mc">>And what if I like… both sides? What if I want to keep part of who I was?<</speech>><br>
+<<speech "mc">>What if I like… both sides? What if I want to keep part of who I was?<</speech>><br>
 
 <<speech "malrec">>Then keep it. The most dangerous queen is the one who still remembers how to be a prince. Let that strength bleed into your walk, your words, your smile.<</speech>><br>
 [[Move Forth|marlec_chat_1_8]]
@@ -417,36 +417,36 @@ Ah, that was the test. And you just told me something very useful.
 <<nobr>>
 <<speech "mc">>You speak of sensuality as if it's strategy.<</speech>><br>
 
-<<speech "malrec">>Because it is. Do you know why men fear queens? Not because they command, but because they seduce. With glances. With words. With the suggestion of power between their thighs.<</speech>><br>
+<<speech "malrec">>Because it is. Do you know why men fear queens? Not because they command, but because they seduce, with glances, with words, with the suggestion of power between their thighs.<</speech>><br>
 
 <<speech "mc">>That sounds… manipulative.<</speech>><br>
 
-<<speech "malrec">>Politics is manipulation. Your body will be a treaty. Your presence a negotiation. Learn to let others desire your power, and they will never notice you stealing theirs.<</speech>><br>
+<<speech "malrec">>Politics is manipulation. Your body will be a treaty, your presence a negotiation. Learn to let others desire your power, and they will never notice you stealing theirs.<</speech>><br>
 [[Move Forth|marlec_chat_1_9]]
 <</nobr>>
 
 
 :: marlec_chat_1_9
 <<nobr>>
-<<speech "mc">>And I’ll have to change everything, won’t I?<</speech>><br>
+<<speech "mc">>I’ll have to change everything, won’t I?<</speech>><br>
 
-<<speech "malrec">>Yes. And no. You’ll change only the parts that block your ascension. You’ll preserve your core but polish your exterior until it blinds the court.<</speech>><br>
+<<speech "malrec">>Yes and no. You’ll change only the parts that block your ascension. You’ll preserve your core, but polish your exterior until it blinds the court.<</speech>><br>
 
 <<speech "mc">>Even my voice? My face? My… sex?<</speech>><br>
 
-<<speech "malrec">>Especially those. The court respects tradition. Let them see a queen even if beneath the skin, the prince still watches.<</speech>><br>
+<<speech "malrec">>Especially those. The court respects tradition. Let them see a queen, even if beneath the skin, the prince still watches.<</speech>><br>
 [[Move Forth|marlec_chat_1_10]]
 <</nobr>>
 
 :: marlec_chat_1_10
 <<nobr>>
-<<speech "mc">>And if I like being watched?<</speech>><br>
+<<speech "mc">>What if I like being watched?<</speech>><br>
 
 <<speech "malrec">>Then you are already learning. A true queen knows that attention is currency. She spends herself wisely.<</speech>><br>
 
-<<speech "mc">>And what of love?<</speech>><br>
+<<speech "mc">>What of love, then?<</speech>><br>
 
-<<speech "malrec">>Love? A lovely illusion. If you find it, treasure it but never depend on it. Rule first. Love later.<</speech>><br>
+<<speech "malrec">>Love? A lovely illusion. If you find it, treasure it, but never depend on it. Rule first, love later.<</speech>><br>
 [[Move Forth|marlec_chat_1_11]]
 <</nobr>>
 
@@ -458,7 +458,7 @@ Ah, that was the test. And you just told me something very useful.
 
 <<speech "mc">>You're a dangerous man, Malrec.<</speech>><br>
 
-<<speech "malrec">>And you're a dangerous woman in the making, Caelan. Soon, no one will call you prince again not out of respect, but out of fear.<</speech>><br>
+<<speech "malrec">>You're a dangerous woman in the making, Caelan. Soon, no one will call you prince again, not out of respect, but out of fear.<</speech>><br>
 
 [[Move Forth|marlec_chat_1_12]]
 <</nobr>>
@@ -467,12 +467,12 @@ Ah, that was the test. And you just told me something very useful.
 <<nobr>>
 <<speech "mc">>Will I still be me?<</speech>><br>
 
-<<speech "malrec">>You will be more you than you’ve ever been. Unmasked. Unbound. A queen is never a lie she is the final truth.<</speech>><br>
+<<speech "malrec">>You will be more you than you’ve ever been, unmasked, unbound. A queen is never a lie, she is the final truth.<</speech>><br>
 
 <<speech "mc">>...Then teach me. I want to know it all. The walk. The gaze. The power. The seduction. Teach me to become something they cannot ignore.<</speech>><br>
-Malrec raised his goblet.<br><br>
+Malrec raises his goblet.<br><br>
 
-<<speech "malrec">>To the queen you were born to be hidden in a prince’s skin. Let’s begin.<</speech>><br>
+<<speech "malrec">>To the queen you were born to be, hidden in a prince’s skin. Let’s begin.<</speech>><br>
 <<set $user_stats.confidence += 4>>
 <<set $user_stats.leadership += 4>>
 [[Leave Lord Malrec Thorne|thrones_mirror]] |<br><br>

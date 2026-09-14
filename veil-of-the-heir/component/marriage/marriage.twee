@@ -3,9 +3,9 @@
 
 :: royal_council_choose_consort_1
 <<nobr>>
-The council chamber was warm with firelight, though my skin still remembered the cold winds of the North Forest. I stood at the long oaken table, the maps and seals still scattered from our last campaign discussion. My mother, Queen Alinora, sat straight-backed upon her throne-like chair, hands folded in a way that made it clear tonight was no simple debriefing. My father, King Consort Therion, leaned against the armrest, sharp-eyed but silent for now. Lady Serelyne’s quill scratched softly on parchment beside her, and Archmage Thalara waited with that unreadable serenity that often unnerved me.
+The council chamber is warm with firelight, though my skin still remembers the cold winds of the North Forest. I stand at the long oaken table, the maps and seals still scattered from our last campaign discussion. My mother, Queen Alinora, sits straight-backed upon her throne-like chair, hands folded in a way that makes it clear tonight is no simple debriefing. My father, King Consort Therion, leans against the armrest, sharp-eyed but silent for now. Lady Serelyne's quill scratches softly on parchment beside her, and Archmage Thalara waits with that unreadable serenity that often unnerves me.
 <br><br>
-I broke the silence.<br><br>
+I break the silence.<br><br>
 <<speech "mc">>We have returned victorious. The Mirror Fiend is ash. The people of Hollow Glade will sleep safely tonight. Was that not what you wanted to hear, Mother?<</speech>><br><br><br><br>
 <<speech "alinora">>It pleases me greatly, Caelan. Velmoria sings of your triumph already. But victories on the field are not the only battles awaiting you.<</speech>><br><br><br><br>
 I narrowed my eyes.<br><br>
@@ -40,7 +40,7 @@ Lady Serelyne laid her quill down.<br><br>
 <<nobr>>
 <<speech "mc">>What if I don’t want any of them?<</speech>><br>
 <<speech "alinora">>Then you shall say so. But the offer must be extended. It is not only for your heart it is for Velmoria’s stability. We cannot allow the court to whisper that our heir is indecisive.<</speech>><br>
-<<speech "therion">>Let the boy - <i>the young woman</i> consider this, Alinora. You speak as if politics is clearer than a mirror’s edge.<</speech>><br>
+<<speech "therion">>Let the boy, no, <i>the young woman</i>, consider this, Alinora. You speak as if politics were clearer than a mirror’s edge.<</speech>><br>
 <<speech "serelyne">>Politics is never clear. That is why the line must be drawn sharply. A consort grounds the realm. A throne alone cannot bear weight forever.<</speech>><br>
 <<speech "thalara">>The signs do not lie. The moon’s full rise over the Temple of Origins aligns with the Sevenfold Star this cycle. It speaks of union, of conception, of legacy secured by flesh. This moment comes once in three generations.<</speech>><br>
 <<speech "mc">>So it’s not just about showing I’m ready. You’re saying something deeper happens if I <i>bond</i> under that moon?<</speech>><br>
@@ -336,9 +336,9 @@ Lady Serelyne laid her quill down.<br><br>
 <<speech "serelyne">>So be it. The Great Hall will be prepared. The velvet drawn. The harpstrings tuned. Let the dance begin.<</speech>><br>
 <<speech "thalara">>The moon above will watch and perhaps... envy.<</speech>><br>
 <<speech "mc">>Then let her. She may shine coldly, but I? I will burn.<</speech>><br>
-The council chamber fell into silence not hesitation, but reverence. All of them felt it the shift, subtle and deep, like tectonic plates moving beneath stone. Caelan stood not as the prince they had raised, nor the daughter they had conjured, but as something vast, unnamed, and entirely their own.
+The council chamber falls into silence, not hesitation but reverence. All of them feel the shift, subtle and deep, like tectonic plates moving beneath stone. I stand there, not as the prince they raised, nor the daughter they conjured, but as something vast, unnamed, and entirely my own.
 
-The heir had chosen.
+The heir has chosen.
 
 <<set $currentObjectives = "Visit the Royal Chamber for mother's counsel on choosing a consort.">>
 <<set $currentArc["main_arc"] = 12>>
@@ -351,10 +351,10 @@ The heir had chosen.
 :: private_discussion_marraige_1
 
 <<nobr>>
-The early light from the palace garden spilled across the stone floor, painting long bars of 
-silver through the tall arched windows. I stood barefoot near the balustrade, 
-wrapped in a dressing robe of violet silk, my hair still damp from the morning basin. 
-I gripped the fabric like a shield. Behind me, My mother, Queen Alinora poured two cups 
+The early light from the palace garden spills across the stone floor, painting long bars of
+silver through the tall arched windows. I stand barefoot near the balustrade,
+wrapped in a dressing robe of violet silk, my hair still damp from the morning basin.
+I grip the fabric like a shield. Behind me, my mother, Queen Alinora, pours two cups
 of steaming winterflower tea, her crown left behind on the table, her gaze sharp even in the gentle hour.
 <br><br>
 <<speech "mc">>I don’t know how to breathe through it anymore.<</speech>><br>
@@ -377,7 +377,7 @@ of steaming winterflower tea, her crown left behind on the table, her gaze sharp
 <<speech "alinora">>You command the rhythm. You dance it. You invent it. If they seek to lead, let them prove their worth in your mouth and hands. If you lead, let them gasp with joy when your weight pins them. The bedroom is the one place where you rule not by crown but by <i>want</i>.<</speech>><br>
 <<speech "mc">>Gods… I don’t know whether I’m aroused or terrified.<</speech>><br>
 <<speech "alinora">>Good. That means your blood runs hot. You are alive in this and that fire is what they will crave.<</speech>><br>
-<br><br>The Queen stepped forward, touching my cheek, her palm cool, grounding.
+<br><br>The Queen steps forward and touches my cheek, her palm cool, grounding.
 
 <<speech "alinora">>You will marry not to be tamed but to burn. To choose who burns beside you.<</speech>><br>
 <<speech "mc">>Then I want to learn everything. Every rite. Every kiss. Every law. I want to walk into that chamber and know I am <i>desired</i> not for tradition, not for prophecy but for what I am becoming.<</speech>><br>
@@ -389,10 +389,10 @@ of steaming winterflower tea, her crown left behind on the table, her gaze sharp
 :: private_discussion_marriage_genderfluidity_2
 
 <<nobr>>
-The hearth crackled low behind them, firelight licking over darkwood shelves lined with old lawbooks, 
-scandalous diaries, and silk-bound records of past royal pairings some still scandalous. 
-Caelan had settled into the window seat now, knees drawn up beneath my robe, eyes distant. 
-Alinora, still poised and queenly in her quiet, joined me with the ease of a lioness nearing her cub.<br><br>
+The hearth crackles low behind us, firelight licking over darkwood shelves lined with old lawbooks,
+scandalous diaries, and silk-bound records of past royal pairings, some still scandalous.
+I have settled into the window seat now, knees drawn up beneath my robe, eyes distant.
+Alinora, still poised and queenly in her quiet, joins me with the ease of a lioness nearing her cub.<br><br>
 
 <<speech "mc">>Was it always like this? Did <i>you</i> feel this way? Like every gaze tried to peel away your skin and find someone who isn’t there yet?<</speech>><br>
 <<speech "alinora">>Yes. Though in my case, they tried to peel off the fire to find something softer. They failed. I let them try and then I gave them <i>blisters</i>.<</speech>><br>
@@ -417,7 +417,7 @@ What if I still feel not ready?<</speech>><br>
 <<speech "alinora">>Then take them. Take them with power and grace. Let them feel that you are not a queen made for their hunger but a queen who <i>chooses</i> to feed it.<</speech>><br>
 <<speech "mc">>The child that follows?<</speech>><br>
 <<speech "alinora">>Will be born not of politics, but of want and that child will rule knowing they were not bargained but <i>begotten</i>. That is a gift you alone can give.<</speech>><br>
-I leaned into the cushions, eyes flickering with new purpose. The panic had not vanished but it had grown roots, like something that might bloom instead of burn.
+I lean into the cushions, eyes flickering with new purpose. The panic hasn't vanished, but it has grown roots, like something that might bloom instead of burn.
 <br><br>
 <<speech "mc">>Then teach me. Everything. From the vows to the scent of the sheets on the wedding night. I want to be <i>ready</i>.<</speech>><br>
 <<speech "alinora">>I will. Because you are not stepping into another’s role. You are building your own throne.<</speech>><br>
@@ -464,8 +464,8 @@ She’ll tell me how to have sex?<</speech>><br>
 <<speech "alinora">>Then do it. Let them take you in tandem, if you crave it. Let your body be worshipped from every angle. The ritual is not prude. The rite is <i>desire in service of destiny</i>. It will accept what you give it if it is <i>true</i>.<</speech>><br>
 <<speech "mc">>If… if I fail to connect? If no one moves me?<</speech>><br>
 <<speech "alinora">>Then you wait. We send for others. Or we delay the moon. Or we break the pattern entirely. The realm will shift if it must. But you do not force your heart for anyone. That is not queenship. That is <i>martyrdom</i>.<</speech>><br>
-I looked down at hands. They were still changing slimmer than they once were, the bones more elegant, 
-the fingers still rough from swordwork. He flexed them, slowly, as 
+I look down at my hands. They're still changing, slimmer than they once were, the bones more elegant,
+the fingers still rough from swordwork. I flex them slowly, as
 if imagining them threading through hair, gripping sheets, raising a lover’s chin.
 <br><br>
 <<speech "mc">>Then I’ll go. I’ll speak to Father. To Serelyne. Veletia. Thalara. I want to learn it <i>all</i>. The crown. The bed. The ache. The fire.<</speech>><br>
@@ -483,24 +483,24 @@ if imagining them threading through hair, gripping sheets, raising a lover’s c
 :: discussion_with_therion_part1
 
 <<nobr>>
-I stood outside the chamber, fists clenched, heart battering against my ribs like a caged bird. 
-The guards had bowed and stepped aside, and yet I hesitated at the threshold. 
-King Consort Therion father, yes, but also the quiet mystery at the edge of every courtly tale. 
-The man who'd once turned half the eastern nobility down without uttering a cruel word. 
-The man who, they said, made Queen Alinora wait through four dinners before she earned his hand.
+I stand outside the chamber, fists clenched, heart battering against my ribs like a caged bird.
+The guards have bowed and stepped aside, and yet I hesitate at the threshold.
+King Consort Therion, my father, yes, but also the quiet mystery at the edge of every courtly tale.
+The man who once turned half the eastern nobility down without uttering a cruel word.
+The man who, they say, made Queen Alinora wait through four dinners before she earned his hand.
 <br><br>
-A breath. Then another. Then the doors opened.
+A breath. Then another. Then the doors open.
 <br><br>
-Therion stood by the tall harp, his back to Caelan, plucking idle chords that hummed with an aching beauty. He did not turn, but his voice was warm as ever, low as silk pressed flat between fingers.
+Therion stands by the tall harp, his back to me, plucking idle chords that hum with an aching beauty. He doesn't turn, but his voice is warm as ever, low as silk pressed flat between fingers.
 <br><br>
 <<speech "therion">>If you've come to ask how I wore these silks without strangling myself, the answer is practice and wine.<</speech>><br>
 <br><br>
-I laughed despite myself, stepping inside and closing the door behind me.
+I laugh despite myself, stepping inside and closing the door behind me.
 <br><br>
 <<speech "mc">>I… came because Mother said I should. About marriage. Consorts. What’s expected of me. What’s expected <i>from</i> them.<</speech>><br>
 <br><br>
-Therion turned slowly, offering a small, knowing smile. 
-He gestured to a cushioned bench before the fire, where a carafe of sweetroot cordial already waited.
+Therion turns slowly, offering a small, knowing smile.
+He gestures to a cushioned bench before the fire, where a carafe of sweetroot cordial already waits.
 <br><br>
 <<speech "therion">>Then sit and speak not as prince, nor as queen-to-be but as someone who’s about to stare into the eyes of strangers who want to <i>own</i> a piece of you.<</speech>><br>
 <<speech "mc">>That’s what it feels like. Like I’m a jewel they want to fit into their crown. Not a person. Just... proof they’ve won something rare.<</speech>><br>
@@ -534,10 +534,10 @@ He gestured to a cushioned bench before the fire, where a carafe of sweetroot co
 :: discussion_with_therion_part2
 
 <<nobr>>
-The fire snapped gently in the hearth, casting shifting light across the stone walls and velvet drapes. 
-I poured myself a second cup of cordial, less from thirst and more to keep my hands moving. 
-Therion leaned back in his chair, legs crossed, a thoughtful gaze on his child no, on the heir, 
-the half-changed flame who would soon command a realm and a bed in equal measure.
+The fire snaps gently in the hearth, casting shifting light across the stone walls and velvet drapes.
+I pour myself a second cup of cordial, less from thirst and more to keep my hands moving.
+Therion leans back in his chair, legs crossed, a thoughtful gaze on his child, no, on the heir,
+the half-changed flame who will soon command a realm and a bed in equal measure.
 <br><br>
 <<speech "mc">>Did you ever… worry that you wouldn’t be enough for her? That you’d be chosen and then discarded? A decoration for the throne?<</speech>><br>
 <<speech "therion">>Every day, at first. I knew I was beautiful, clever, charming. But would I be <i>seen</i>? Would I be <i>kept</i>? Then I realized if I waited for her to prove she wanted me every hour, I’d go mad. So I made <i>myself</i> indispensable. I learned how to listen when no one else dared speak. I touched her when she didn’t know she needed it and I never tried to match her shadow. I <i>lit</i> it.<</speech>><br>
@@ -568,11 +568,11 @@ He poured his own cup with a quiet smile, unhurried, and waited.
 :: discussion_with_therion_part3
 
 <<nobr>>
-The candles had burned low. Shadows danced soft across the chamber walls. 
-I sat now with legs drawn beneath me, my robe slightly askew, 
-feet bare against the fur rug. Across from me, Therion rested with the 
-serenity of someone who had survived a hundred banquets, a thousand hungry eyes, 
-and still managed to hold my own. The wine sat mostly untouched.
+The candles have burned low. Shadows dance soft across the chamber walls.
+I sit now with legs drawn beneath me, my robe slightly askew,
+feet bare against the fur rug. Across from me, Therion rests with the
+serenity of someone who has survived a hundred banquets, a thousand hungry eyes,
+and still manages to hold his own. The wine sits mostly untouched.
 <br><br>
 <<speech "mc">>I think what terrifies me most isn’t the sex. Or the magic. Or the bloodlines. It’s being <i>claimed</i>. In front of everyone and not knowing if the person I choose is seeing me or what I <i>represent</i>.<</speech>><br>
 <<speech "therion">>That fear will never fully vanish. But you’ll learn to dance with it. Because that fear means you care. That what you give them matters.<</speech>><br>
@@ -593,7 +593,7 @@ A queen, yes. But in the bed, in their arms, when it’s just us… am I lover? 
 <<speech "mc">>Then Thalara. For… gods, for everything else.<</speech>><br>
 <<speech "therion">>She’ll show you every path. If you choose a man, how to guide his seed into your reshaping womb before and after transformation. If a woman, how to merge souls through magic so that her love becomes fertile, even without a cock. If a futa, the spells of polarity, of timing, of entry that causes no harm but <i>only hunger</i>. If a cuntmale, the hormonal tides and how to ride them. She’ll prepare you. Even if you take them all.<</speech>><br>
 <<speech "mc">>All of them… gods.<</speech>><br>
-I ran a hand through hair, eyes half-dazed.
+I run a hand through my hair, eyes half-dazed.
 <br><br>
 <<speech "therion">>You may blush now. But you’ll command them soon enough. Not because you must… but because they <i>ache</i> for the chance to kneel.<</speech>><br>
 <<speech "mc">>What if <i>I</i> ache?<br>
@@ -619,23 +619,23 @@ I rose slowly, exhaling a breath he hadn’t noticed he’d been holding. His sp
 :: sereyline_advice_selectionday_1
 
 <<nobr>>
-The chamber of High Counselor Lady Serelyne Virellis was not warm. 
-It was deliberate. White stone walls, tall glass panels veiled in silk. 
-No hearth, only sun and shadow. Scrolls arranged with mathematical precision. 
-Every chair positioned for angles not comfort. I stepped inside with care, 
+The chamber of High Counselor Lady Serelyne Virellis isn't warm.
+It's deliberate. White stone walls, tall glass panels veiled in silk.
+No hearth, only sun and shadow. Scrolls arranged with mathematical precision.
+Every chair positioned for angles, not comfort. I step inside with care,
 like walking onto a gameboard mid-match.
 <br><br>
-Serelyne stood at the far end, back turned, arranging a tray of 
-black figs and folded parchment. She spoke before I did, her tone crisp as cut glass.
+Serelyne stands at the far end, back turned, arranging a tray of
+black figs and folded parchment. She speaks before I do, her tone crisp as cut glass.
 <br><br>
 <<speech "serelyne">>You’re late by six minutes. Which means you were either avoiding this… or trying to look less eager.<</speech>><br>
 <<speech "mc">>I was talking to my father. About… what happens next.<</speech>><br>
 <<speech "serelyne">>Did he tell you how to walk into a room with twelve hungry eyes and make them forget every lover they’ve ever had?<</speech>><br>
 <<speech "mc">>No. He said I should be dangerous.<</speech>><br>
 <<speech "serelyne">>Then he was half right. Sit.<</speech>><br>
-She didn’t wait to see if I obeyed. She moved to her own seat 
-high-backed, stiff, as though even furniture bowed to her. 
-I sat opposite her, suddenly more aware of the way my robe clung to one thigh.
+She doesn't wait to see if I obey. She moves to her own seat,
+high-backed, stiff, as though even furniture bows to her.
+I sit opposite her, suddenly more aware of the way my robe clings to one thigh.
 <br><br>
 <<speech "serelyne">>Now. We begin with presence. Before you speak a word, your body must say three things: I am not prey. I am not prize. I am <i>the question</i> they were born to answer.<</speech>><br>
 <<speech "mc">>How do I say that with a look?<</speech>><br>
@@ -648,7 +648,7 @@ I sat opposite her, suddenly more aware of the way my robe clung to one thigh.
 <<speech "serelyne">>Then use it. Femininity is not fragility. Let your strength show in restraint. Let them imagine what it might feel like to have your fingers at their throat or their waist.<</speech>><br>
 <<speech "mc">>This sounds more like battle strategy than courtship.<</speech>><br>
 <<speech "serelyne">>They are the same. Selection Day is war dressed in perfume. One wrong move, and you invite weakness. One <i>perfect</i> glance and you’ll have three of them writing poetry and one of them losing sleep until you allow their fingers near your wrist.<</speech>><br>
-I swallowed hard, feeling the weight of her words settle across chest like chainmail.
+I swallow hard, feeling the weight of her words settle across my chest like chainmail.
 <br><br>
 <<speech "mc">>What happens when they speak to me? What’s expected?<</speech>><br>
 <<speech "serelyne">>You let them speak first. Always. You reward confidence but punish arrogance. Tilt your head when intrigued. Narrow your eyes when unimpressed. Never laugh unless it <i>shocks</i> you. Your laughter is <i>treasure</i>. Guard it.<</speech>><br>
@@ -663,11 +663,11 @@ I swallowed hard, feeling the weight of her words settle across chest like chain
 :: sereyline_advice_selectionday_2
 
 <<nobr>>
-The air in Serelyne’s chamber never shifted. No wind, no warmth, 
-no softness. I sat straighter now, robe cinched tighter, feeling 
-the weight of her gaze like a sword hovering mid-stroke. 
-She had not once touched me, but every word molded my spine, 
-my breath, my poise. Serelyne picked up a polished obsidian mirror and turned it toward me.
+The air in Serelyne’s chamber never shifts. No wind, no warmth,
+no softness. I sit straighter now, robe cinched tighter, feeling
+the weight of her gaze like a sword hovering mid-stroke.
+She hasn't once touched me, but every word molds my spine,
+my breath, my poise. Serelyne picks up a polished obsidian mirror and turns it toward me.
 <br><br>
 <<speech "serelyne">>Look at yourself. Tell me what you see.<</speech>><br>
 <<speech "mc">>My face. Hair tied right. Skin pale. A bit of stubble on my neck damn it <</speech>><br>
@@ -685,7 +685,7 @@ Not because it’s shameful but because <i>they’ll try to use it</i>.<</speech
 Or maybe I want them to try and then regret.<</speech>><br>
 <<speech "serelyne">>Excellent. Then let them touch. Let them cross the line. Then pull away with a smile that says they’ll only feel your skin again if they <i>earn</i> forgiveness.<br>
 Desire them, Caelan, but make them <i>ache</i> for it.<</speech>><br>
-She stood and paced slowly behind me, her fingers ghosting above my shoulders without ever landing.
+She stands and paces slowly behind me, her fingers ghosting above my shoulders without ever landing.
 <br><br>
 <<speech "serelyne">>What if you desire more than one? That’s when balance becomes blade. Each must feel unique. No repetition. You do not praise their beauty the same way. You do not gaze at them the same length. If one kisses your hand, the other must <i>beg</i> to touch your wrist.<</speech>><br>
 <<speech "mc">>So I divide myself?<</speech>><br>
@@ -706,10 +706,10 @@ You already <i>are</i>.<</speech>><br>
 :: sereyline_advice_selectionday_3
 
 <<nobr>>
-The light in the chamber dimmed slightly as a summer cloud passed 
-over the sun outside the high glass. Serelyne lit a single white taper 
-and placed it between them. Its flame danced, small but steady, 
-casting shadows beneath my cheekbones. She studied me like parchment under ink.
+The light in the chamber dims slightly as a summer cloud passes
+over the sun outside the high glass. Serelyne lights a single white taper
+and places it between us. Its flame dances, small but steady,
+casting shadows beneath my cheekbones. She studies me like parchment under ink.
 <br><br>
 <<speech "serelyne">>Now. We speak of timing. The rhythm of Selection Day is not yours alone. It moves around you. You must control its pace without seeming to grasp for it.<</speech>><br>
 <<speech "mc">>You mean… how long I speak to each suitor? Or when to favor one over another?<</speech>><br>
@@ -719,8 +719,8 @@ casting shadows beneath my cheekbones. She studied me like parchment under ink.
 <<speech "mc">>If one is arrogant? Bold? Acts like they’ve already won me?<</speech>><br>
 <<speech "serelyne">>Then you strip them. Not with fingers. With <i>words</i>. Ask them questions they’ve never answered in public. Make them show their mind, not their rank and if they fail, smile with pity not scorn. <br>
 Humiliation is an art. Use it only when it teaches.<</speech>><br>
-She stood again, gliding past me toward a table lined with glass decanters and velvet-bound books. 
-From one, she drew a narrow leather folio marked with gold thread.
+She stands again, gliding past me toward a table lined with glass decanters and velvet-bound books.
+From one, she draws a narrow leather folio marked with gold thread.
 <br><br>
 <<speech "serelyne">>Here. Inside are the names of each confirmed suitor. Their court backgrounds. Strengths. Weaknesses. Known secrets. Hidden vices.<</speech>><br>
 <<speech "mc">>You have <i>this</i> on all of them?<</speech>><br>
@@ -731,7 +731,7 @@ From one, she drew a narrow leather folio marked with gold thread.
 <<speech "serelyne">>You should be. Because they will learn to use it.<</speech>><br>
 <<speech "mc">>So I’m supposed to never let them in? To be untouchable?<</speech>><br>
 <<speech "serelyne">>No. You are to let the <i>right</i> ones in. But only after they’ve stripped <i>themselves</i> bare. You give nothing first. You take everything before you offer your hand.<</speech>><br>
-She sat again, closer now, her gaze softer but no less cutting.
+She sits again, closer now, her gaze softer but no less cutting.
 <br><br>
 <<speech "serelyne">>When the evening deepens. When the wine flows. When your body starts to respond eyes growing low, lips fuller with breath…<br>
 You do not yield. Not yet. You let them <i>ache</i> with patience. The more they suffer, the more they believe they’ve <i>earned</i> you.<</speech>><br>
@@ -747,9 +747,9 @@ You do not yield. Not yet. You let them <i>ache</i> with patience. The more they
 :: sereyline_advice_selectionday_4
 
 <<nobr>>
-Lady Serelyne placed the folio on the table with slow, ceremonial grace. 
-It made no sound, as if the names inside it dared not speak without her permission. 
-The flame of the single taper still danced between them, reflecting in her eyes like twin stars of cold fire.
+Lady Serelyne places the folio on the table with slow, ceremonial grace.
+It makes no sound, as if the names inside it dare not speak without her permission.
+The flame of the single taper still dances between us, reflecting in her eyes like twin stars of cold fire.
 <br><br>
 <<speech "serelyne">>Now, the close. The ending of the ritual. You’ve met them all. Tested their manners, their ambition, their appetite. The final hour of Selection Day is yours to choreograph. It is not a banquet. It is a stage and <i>you</i> are the question still unanswered.<</speech>><br>
 <<speech "mc">>How do I close that curtain? Without letting them think they’ve already won me?<</speech>><br>
@@ -761,7 +761,7 @@ You rise slowly. Let your robe shift let the curves and lines whisper what your 
 <<speech "mc">>Give me an example.<</speech>><br>
 <<speech "serelyne">>You might say… “I have seen many fine offerings tonight. But some gifts do not open unless broken first.”<br>
 Or, “A kiss is nothing compared to a name whispered after climax.”<br>
-Or, if you wish to be savage: “I wonder which of you will look the most honest while begging.”<</speech>><br>
+Or, if you wish to be savage, try “I wonder which of you will look the most honest while begging.”<</speech>><br>
 <br><br>
 <<speech "mc">>Goddess. You want me to <i>scar</i> them with longing.<</speech>><br>
 <<speech "serelyne">>No. I want you to <i>crown</i> yourself with it.<br>
@@ -789,29 +789,29 @@ Because after that? They will send letters. Flowers. Tokens. Some will try to br
 :: veletia_selectionday_1
 
 <<nobr>>
-Mistress Veletia Roswyn's atelier was no mere tailor's den it was an imperial sanctum. 
-Velvet wall-drapes shifted color with the light. 
-Bolts of cloth hovered midair by unseen magic, folding and twisting like dancers 
-before being guided by flicks of her pale fingers. 
-It smelled of pressed orchids and scorched silk, like beauty born by fire. 
-I stepped in cautiously, boots sinking into deep rug embroidery that might have been stitched with moonlight.
+Mistress Veletia Roswyn's atelier is no mere tailor's den. It's an imperial sanctum.
+Velvet wall-drapes shift color with the light.
+Bolts of cloth hover midair by unseen magic, folding and twisting like dancers
+before being guided by flicks of her pale fingers.
+It smells of pressed orchids and scorched silk, like beauty born by fire.
+I step in cautiously, boots sinking into deep rug embroidery that might have been stitched with moonlight.
 <br><br>
-Veletia didn’t turn when I entered. She stood in front of a mannequin 
-already shaped to my approximate figure, its torso blank, its hips only half padded. H
-er voice wafted into the room like perfume sharp, sweet, and edged in command.
+Veletia doesn't turn when I enter. She stands in front of a mannequin
+already shaped to my approximate figure, its torso blank, its hips only half padded.
+Her voice wafts into the room like perfume, sharp, sweet, and edged in command.
 <br><br>
 <<speech "veletia">>Ah. There you are, precious contradiction. Come closer. Let me look at what the gods have dared to revise again.<</speech>><br>
 <br><br>
-I obeyed. The moment he crossed the mirrored floor, 
-I felt the room assessing me. 
-Not just her <i>the entire room</i>. 
-Reflections curved at strange angles. Fabric sighed. Measuring ribbons swirled toward me like vines.
+I obey. The moment I cross the mirrored floor,
+I feel the room assessing me.
+Not just her, <i>the entire room</i>.
+Reflections curve at strange angles. Fabric sighs. Measuring ribbons swirl toward me like vines.
 <br><br>
 <<speech "mc">>Mistress Roswyn… I was told I should present myself to you. For <br>
 For the Selection Day. My attire.<</speech>><br>
 <<speech "veletia">>For your <i>unveiling</i>. For the moment when every watching eye attempts to devour you, and you deny them with velvet and light. Yes, darling. You were <i>told</i> correctly.<</speech>><br>
 <br><br>
-She turned now, striking and sharp. Her hair braided like a crown. Her corset so tightly boned it might have been armor. Her eyes, violet and piercing, tracked every inch of him like a weaver seeking thread flaws.
+She turns now, striking and sharp. Her hair is braided like a crown. Her corset so tightly boned it might be armor. Her eyes, violet and piercing, track every inch of me like a weaver seeking thread flaws.
 <br><br>
 <<speech "veletia">>Let me guess your question.<br>
 ‘Do I wear male clothes, or female ones?’ Is that it?<</speech>><br>
@@ -828,7 +828,7 @@ But no corset that cripples. No gown that cages.<</speech>><br>
 My hips aren’t wide enough. My voice isn't always soft. What if they see <i>too much</i>?<</speech>><br>
 <<speech "veletia">>Then we show them <i>more</i>. We make them <i>stare</i> and wonder why they’re aroused by someone they cannot define. You do not fit their hunger, Caelan. You <i>rewrite</i> it.<</speech>><br>
 <br><br>
-She beckoned. Fabric floated toward her soft gray layered over blood red, fine silver embroidery like veins branching along the trim.
+She beckons. Fabric floats toward her, soft gray layered over blood red, fine silver embroidery like veins branching along the trim.
 <br><br>
 <<speech "veletia">>I will dress you in contradiction.<br>
 In velvet that kisses your curves and daggers at your boots.<br>
@@ -847,25 +847,25 @@ and they will <i>beg</i> to name it.<</speech>><br>
 :: veletia_selectionday_2
 
 <<nobr>>
-Mistress Veletia clapped twice. Instantly, the room stirred alive. 
-Floating sewing needles glided from their cushion nests. Ribbons danced midair. 
-Three enchanted mannequins stepped from their alcoves, blank-faced and humanoid 
-in shape, ready to wear whatever vision she conjured. Caelan took a step back, 
+Mistress Veletia claps twice. Instantly, the room stirs alive.
+Floating sewing needles glide from their cushion nests. Ribbons dance midair.
+Three enchanted mannequins step from their alcoves, blank-faced and humanoid
+in shape, ready to wear whatever vision she conjures. I take a step back,
 both awed and vaguely hunted by the sheer precision.
 <br><br>
-Veletia turned, eyes glittering with narrowed delight.
+Veletia turns, eyes glittering with narrowed delight.
 <br><br>
-<<speech "veletia">>Now strip. Slowly. Let me see what I’m shaping. I will not tailor you blind, and illusion only flatters cowards.<</speech>><br>
-I hesitated. Then began to unfasten the front of robe. 
-But it missed nothing every muscle line, every shadow of lingering masculinity, 
-every inch that spoke of transition’s liminal pace.
+<<speech "veletia">>Now strip, slowly. Let me see what I’m shaping. I will not tailor you blind, and illusion only flatters cowards.<</speech>><br>
+I hesitate, then begin to unfasten the front of my robe.
+But her gaze misses nothing, every muscle line, every shadow of lingering masculinity,
+every inch that speaks of transition’s liminal pace.
 <br><br>
 <<speech "mc">>I still have… the old shape. At least, parts of it. Thalara says it’ll complete soon. But until then…<</speech>><br>
 <<speech "veletia">>Until then, we dress both the body you possess and the one you <i>promise</i>. You are a shrine under construction and shrines do not apologize for scaffolding.<</speech>><br>
-With a snap of her fingers, one mannequin mirrored my current figure. 
-Another slowly shifted hips widening, shoulders narrowing, 
-chest swelling with soft curves as though drawing from some magical 
-understanding of my eventual self. The third stood androgynous, a perfect balance. Veletia pointed between them.
+With a snap of her fingers, one mannequin mirrors my current figure.
+Another slowly shifts, hips widening, shoulders narrowing,
+chest swelling with soft curves, as though drawing from some magical
+understanding of my eventual self. The third stands androgynous, a perfect balance. Veletia points between them.
 <br><br>
 <<speech "veletia">>These are your masks. Choose none. Choose all. Or let me blend them. That is the beauty of royalty, the <i>privilege</i> of ambiguity.<</speech>><br>
 <<speech "mc">>Which do you think suits me?<</speech>><br>
@@ -873,7 +873,7 @@ understanding of my eventual self. The third stood androgynous, a perfect balanc
 You are meant to make the suitors question themselves.<br>
 If one looks upon you and cannot tell if he wishes to pin you down or kneel at your feet you’ve succeeded.<br>
 If a woman gasps and flushes and cannot decide whether to whisper your name like prayer or sin you’ve <i>arrived</i>.<</speech>><br>
-She spun, catching two bolts of fabric midair and stretching them over her arms.
+She spins, catching two bolts of fabric midair and stretching them over her arms.
 <br><br>
 <<speech "veletia">>You will wear a half-split gown. One side sheer, flowing, dark as midnight wine. The other, structured, with embroidered sigils of Velmoria’s founding queens <i>including your mother</i>. High boots laced to your thighs. Sleeves that can fall or cling, depending on your gesture. Nothing fixed. Everything fluid.<</speech>><br>
 <<speech "mc">>What about jewelry?<</speech>><br>
@@ -896,16 +896,16 @@ and leave as something that even <i>gods</i> would hesitate to seduce.<</speech>
 :: veletia_selectionday_3
 
 <<nobr>>
-The gowns now hung in midair like summoned spirits   three of them this time   fabrics hovering in layered perfection, collars rippling with a motionless wind.
-Caelan stood in only a silk slip, half-sheer, as Veletia walked a slow circle around him, trailed by enchanted ribbons and pinned swatches that flicked like tongues of flame.
+The gowns now hang in midair like summoned spirits, three of them this time, fabrics hovering in layered perfection, collars rippling with a motionless wind.
+I stand in only a silk slip, half-sheer, as Veletia walks a slow circle around me, trailed by enchanted ribbons and pinned swatches that flick like tongues of flame.
 
 <br><br>
 <<speech "veletia">>You hold tension in your lower back. From riding, I’d guess. Or shame. Both must be corrected.<</speech>><br>
 <<speech "mc">>It’s not shame. It’s… weight. All eyes. All questions. I’m supposed to be more queen than man, more symbol than person and I’m still trying to figure out how to <i>stand</i> in it.<</speech>><br>
 <<speech "veletia">>Then I will show you. Turn.<</speech>><br>
 
-She stepped close. Her hands, cool and deft, traced down my sides, over the swell of ribs, to hips guiding posture without gentleness.
-She adjusted arms, lifted chin with two knuckles.
+She steps close. Her hands, cool and deft, trace down my sides, over the swell of ribs, to my hips, guiding posture without gentleness.
+She adjusts my arms, lifts my chin with two knuckles.
 
 <br><br>
 <<speech "veletia">>There. That is how a flame carries itself.<br>
@@ -914,20 +914,20 @@ Not like it is proud but like it <i>knows</i> it will burn everything that comes
 <<speech "veletia">>Then you test how long they last and whether they scream your name in agony or in reverence.<</speech>><br>
 
 <br><br>
-Veletia snapped her fingers, and the air shimmered.
-Three gowns drifted forward from the circle of floating fabric   each alive with its own light, each whispering its promise.
+Veletia snaps her fingers, and the air shimmers.
+Three gowns drift forward from the circle of floating fabric, each alive with its own light, each whispering its promise.
 <br><br>
 
 <<speech "veletia">>The <i>Dominion Gown</i>. It declares sovereignty in every step. Whoever sees you in this will forget their tongue before they forget your eyes.<</speech>><br>
 
 
-<<speech "veletia">>The <i>Devotion Gown</i>. For the queen who commands through softness. It is mercy, turned weapon. It makes them ache to kneel, not from fear   but from yearning.<</speech>><br>
+<<speech "veletia">>The <i>Devotion Gown</i>. For the queen who commands through softness. It is mercy, turned weapon. It makes them ache to kneel, not from fear but from yearning.<</speech>><br>
 
 
-<<speech "veletia">>And this   the <i>Vixen Flame</i>. It does not ask. It <i>consumes</i>. When you walk in this, they will see divinity made flesh and know they are already lost.<</speech>><br>
+<<speech "veletia">>Then there's the <i>Vixen Flame</i>. It doesn't ask. It <i>consumes</i>. When you walk in this, they will see divinity made flesh and know they're already lost.<</speech>><br>
 
 <<speech "mc">>You mean each of these says something before I even speak?<</speech>><br>
-<<speech "veletia">>Exactly. Each gown is a sermon, Caelan. Fashion is belief made visible. Choose not what flatters your body   but what completes your myth.<</speech>><br>
+<<speech "veletia">>Exactly. Each gown is a sermon, Caelan. Fashion is belief made visible. Choose not what flatters your body, but what completes your myth.<</speech>><br>
 
 <h3 style="text-align: center;">Choose your Gown</h3>
 <div class="item-grid">

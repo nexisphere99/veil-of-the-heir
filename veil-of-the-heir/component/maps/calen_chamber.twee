@@ -43,7 +43,7 @@
 <<if $userBody["top_wear"].img != "" || $userBody["bottom_wear"].img != "">>
 [[Leave Bed Chamber|castle_map_back_select]]
 <<else>>
-<strong style="color: red;">I need to wear some thing before go outside</strong>
+<strong style="color: red;">I need to wear something before I go outside.</strong>
 <</if>>
 <</nobr>>
 
@@ -56,20 +56,20 @@
   <img src="images/gif/night_1.gif" alt="Sleeping" style="max-width:80%; height:auto; border: 5px solid white;">
   <button id="closeBtn" style="margin-top: 15px; padding: 10px 20px;">Close</button>
 </div>
-The morning sun filtered through the tall arched windows of the my bedchamber, casting honeyed light across velvet drapes and ornate stone columns. 
-For the first time in my life, I awoke not as a boy of blood and heritage, but as an heir choosing transformation.
-I blinked slowly, as if even sleep had been cautious to let go. 
-The silken sheets rustled as I sat up, bare chest rising and falling with a strange, quiet weight.
+The morning sun filters through the tall arched windows of my bedchamber, casting honeyed light across velvet drapes and ornate stone columns.
+For the first time in my life, I wake not as a boy of blood and heritage, but as an heir choosing transformation.
+I blink slowly, as if even sleep is cautious to let go.
+The silken sheets rustle as I sit up, bare chest rising and falling with a strange, quiet weight.
 <br><br>
 <<speech "mc">>
 Today... it begins.
 <</speech>>
 <br>
-The words were barely more than a whisper, yet they felt carved into the morning itself.
-Emotions tangled within me like ivy climbing a wall anxious knots of fear, tendrils of hope, branches of quiet resolve. 
-My body was the same, but my future now felt utterly unfamiliar. Would I still feel like myself a week from now? A month? Would the mirror know me?
-Images from the night before returned in fragments the Queen’s fierce pride, 
-Serelyne’s piercing gaze, Thalara’s haunting reassurance, Aldric’s gruff approval, and the way Veletia spoke of beauty like it was both art and war.
+The words are barely more than a whisper, yet they feel carved into the morning itself.
+Emotions tangle inside me like ivy climbing a wall, anxious knots of fear, tendrils of hope, branches of quiet resolve.
+My body is the same, but my future now feels utterly unfamiliar. Will I still feel like myself a week from now? A month? Will the mirror still know me?
+Images from the night before return in fragments, the Queen's fierce pride,
+Serelyne's piercing gaze, Thalara's haunting reassurance, Aldric's gruff approval, and the way Veletia spoke of beauty like it was both art and war.
 <br><br>
 <<speech "mc">>
 No more delaying. No more wondering. I chose this... I wanted this.
@@ -117,7 +117,7 @@ I will become the queen this realm deserves.
 :: mc_table
 <<nobr>>
 [img[images/location/mc_table_img.png]]<br><br>
-Nothing on the table.
+There's nothing on the table.
 <br><br>
 [[Move Away from Table|mc_bed_chamber]]
 <</nobr>>

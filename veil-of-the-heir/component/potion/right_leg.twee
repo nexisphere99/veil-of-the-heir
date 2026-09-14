@@ -406,7 +406,7 @@ $possible_changes.includes($userBody.torso.orig_body)
 <<nobr>>
 <div style="text-align: center; width: 95%;"><img style="text-align: center; border-radius: 9px;
     border: 10px ridge #8b5e3c;width: 95%;" @src="setup.ImagePath+'map/veil_tower_mage_map.png'"></div>
-<<speech "thalara">>You have brewed the potion. Let me see it first.  Caelan Are you ready to start the process...<</speech>>
+<<speech "thalara">>You have brewed the potion. Let me look it over first. Caelan, are you ready to begin?<</speech>>
 <br>
 [[I’m ready. I understand what must be done.|right_leg_ml_right_leg_mm_1]] | <br><br>
 [[I suppose I have no choice. Let’s get this over with.|right_leg_ml_right_leg_mm_1]] | <br><br>
@@ -416,16 +416,16 @@ $possible_changes.includes($userBody.torso.orig_body)
 :: right_leg_ml_right_leg_mm_1
 <<nobr>>
 <<speech "thalara">>
-Step forward, Caelan. The first transformation is never about the body it is about your relationship with what you think it means.
+Step forward, Caelan. The first transformation is never about the body. It's about your relationship with what you think it means.
 <</speech>><br>
 
-<<speech "mc">>…Right.<</speech>><br>
+<<speech "mc">>Right.<</speech>><br>
 
 <<speech "thalara">>
-This draught won’t sculpt breasts or enchant curves. Not yet. All it will do is ask your chest to let go to ease its grip on a shape that has served you until now.
+This draught won't sculpt curves or shape anything new. Not yet. All it will do is ask your leg to let go, to ease its grip on a strength that has served you until now.
 <</speech>><br>
 
-<<speech "mc">>So it’ll make me weaker?<</speech>><br>
+<<speech "mc">>So it'll make me weaker?<</speech>><br>
 
 [[Move Forth|right_leg_ml_right_leg_mm_2]]
 <</nobr>>
@@ -434,17 +434,17 @@ This draught won’t sculpt breasts or enchant curves. Not yet. All it will do i
 <<nobr>>
 
 <<speech "thalara">>
-No. But it will unfasten the pride your muscles have worn like armor. Not every kind of strength shows in bulk. Sometimes it shows in surrender.
+No, but it will unfasten the pride your muscles have worn like armor. Not every kind of strength shows in bulk. Sometimes it shows in surrender.
 <</speech>><br>
 
 <<speech "mc">>You sound like a philosopher.<</speech>><br>
 
 <<speech "thalara">>
-When you’ve brewed potions that change bones and bend voices, you learn to respect the philosophy of flesh.
+When you've brewed potions that change bones and bend voices, you learn to respect the philosophy of flesh.
 <</speech>><br>
 
 <<speech "thalara">>
-This will taste like mint, metal, and maybe… regret. You may feel your chest ache for its former form. That’s normal. Muscles remember.
+This will taste like mint, metal, and maybe regret. You may feel your leg ache for its former form. That's normal. Muscles remember.
 <</speech>><br>
 
 [[Move Forth|right_leg_ml_right_leg_mm_3]]
@@ -455,13 +455,13 @@ This will taste like mint, metal, and maybe… regret. You may feel your chest a
 <<speech "mc">>How fast will it work?<</speech>><br>
 
 <<speech "thalara">>
-Gradually. Within the hour, the tautness in your chest will soften. Your posture will shift. Clothes will feel looser. And you may… feel exposed.
+Gradually. Within the hour, the tautness in your leg will soften. Your gait will shift. Boots will feel looser. You may feel exposed.
 <</speech>><br>
 
-<<speech "mc">>You mean… like I’m losing something?<</speech>><br>
+<<speech "mc">>You mean like I'm losing something?<</speech>><br>
 
 <<speech "thalara">>
-You are. But you’re not being robbed. You are offering it, in exchange for something else. That’s what every step in magic is a trade, not a theft.
+You are. But you're not being robbed. You are offering it, in exchange for something else. That's what every step in magic is, a trade, not a theft.
 <</speech>><br>
 
 [[Move Forth|right_leg_ml_right_leg_mm_4]]
@@ -470,16 +470,16 @@ You are. But you’re not being robbed. You are offering it, in exchange for som
 :: right_leg_ml_right_leg_mm_4
 <<nobr>>
 
-<<speech "mc">>…It’s cold.<</speech>><br>
+<<speech "mc">>It's cold.<</speech>><br>
 
 <<speech "thalara">>
-Good. That means it’s working. The swelling in your chest will ease first. That defined line under your collarbone? It’ll blur. Pectorals will yield to smoother flesh. Your heart will beat more openly, less behind armor.
+Good, that means it's working. The swelling in your leg will ease first. That hard line along your thigh, it will blur. The muscle will yield to smoother flesh. Your stride will carry you more openly, less like a soldier bracing for a blow.
 <</speech>><br>
 
-<<speech "mc">>…It feels strange already. Like I’ve been… unmade a little.<</speech>><br>
+<<speech "mc">>It feels strange already, like I've been unmade a little.<</speech>><br>
 
 <<speech "thalara">>
-That is the beginning, Caelan. To become what you must be, you first must shed what you are. Do not fear the unmaking fear the refusal to remake.
+That is the beginning, Caelan. To become what you must be, you first must shed what you are. Don't fear the unmaking. Fear the refusal to remake.
 <</speech>><br>
 
 [[Move Forth|right_leg_ml_right_leg_mm_5]]
@@ -488,16 +488,16 @@ That is the beginning, Caelan. To become what you must be, you first must shed w
 :: right_leg_ml_right_leg_mm_5
 <<nobr>>
 
-<<speech "mc">>What if I don’t want to be remade? What if I still want to be myself?<</speech>><br>
+<<speech "mc">>What if I don't want to be remade? What if I still want to be myself?<</speech>><br>
 
 <<speech "thalara">>
-Then you will have a long and difficult path ahead. This magic is ancient and patient; it does not rush. But it does not forgive hesitation forever. You will be given choices, but know this every choice shapes not just your body, but your soul.
+Then you will have a long and difficult path ahead. This magic is ancient and patient, it doesn't rush. But it won't forgive hesitation forever. You will be given choices, but know this, every choice shapes not just your body, but your soul.
 <</speech>><br>
 
-<<speech "mc">>How do I keep hold of myself if I’m changing so much?<</speech>><br>
+<<speech "mc">>How do I keep hold of myself if I'm changing so much?<</speech>><br>
 
 <<speech "thalara">>
-By remembering who you are beyond flesh and bone. You are Caelan, child of Queen Alinora and Therion. You carry their blood and their will. This transformation is not erasure, but evolution. The question is will you embrace it, or resist until the end?
+By remembering who you are beyond flesh and bone. You are Caelan, child of Queen Alinora and Therion. You carry their blood and their will. This transformation isn't erasure, but evolution. The question is whether you'll embrace it, or resist until the end.
 <</speech>><br>
 
 [[Move Forth|right_leg_ml_right_leg_mm_6]]
@@ -506,16 +506,16 @@ By remembering who you are beyond flesh and bone. You are Caelan, child of Queen
 :: right_leg_ml_right_leg_mm_6
 <<nobr>>
 
-<<speech "mc">>And if I resist? Will it hurt more?<</speech>><br>
+<<speech "mc">>If I resist, will it hurt more?<</speech>><br>
 
 <<speech "thalara">>
-Magic follows intent as much as matter. Resistance will make the process slower, more painful, more uncertain. Surrender brings grace; defiance brings struggle. The choice is yours always.
+Magic follows intent as much as matter. Resistance will make the process slower, more painful, more uncertain. Surrender brings grace, defiance brings struggle. The choice is always yours.
 <</speech>><br>
 
-<<speech "mc">>…And what if I surrender but lose myself?<</speech>><br>
+<<speech "mc">>What if I surrender but lose myself?<</speech>><br>
 
 <<speech "thalara">>
-Then you will find a new self one forged in fire and rebirth. That self may be unfamiliar, but it will be yours in ways you cannot yet imagine. Trust the process, Caelan. The queen trusts you.
+Then you will find a new self, one forged in fire and rebirth. That self may be unfamiliar, but it will be yours in ways you can't yet imagine. Trust the process, Caelan. The queen trusts you.
 <</speech>><br>
 
 [[Move Forth|right_leg_ml_right_leg_mm_7]]
@@ -527,7 +527,7 @@ Then you will find a new self one forged in fire and rebirth. That self may be u
 <<speech "mc">>I hope I can live up to that trust.<</speech>><br>
 
 <<speech "thalara">>
-You already have. Now, drink. Let the first step begin.
+You already have. Now drink, and let the first step begin.
 <</speech>><br>
 [[I feel the potion working in my right leg|use_success_potion_create_right_leg]]
 <</nobr>>
@@ -542,7 +542,7 @@ You already have. Now, drink. Let the first step begin.
 <<nobr>>
 <div style="text-align: center; width: 95%;"><img style="text-align: center; border-radius: 9px;
     border: 10px ridge #8b5e3c;width: 95%;" @src="setup.ImagePath+'map/veil_tower_mage_map.png'"></div>
-<<speech "thalara">>You have brewed the potion. Let me see it first.  Caelan Are you ready to start the process...<</speech>>
+<<speech "thalara">>You have brewed the potion. Let me look it over first. Caelan, are you ready to begin?<</speech>>
 <br>
 [[I want to regain the strength I had before.|right_leg_mm_right_leg_ml_1]] | <br><br>
 [[I’m not sure this is right, but I’ll try.|right_leg_mm_right_leg_ml_1]] | <br><br>
@@ -552,13 +552,13 @@ You already have. Now, drink. Let the first step begin.
 :: right_leg_mm_right_leg_ml_1
 <<nobr>>
 <<speech "thalara">>
-Step forward, Caelan. This reversal is not merely physical it's a reclaiming of what once was, a renewal of power you’ve allowed to wane.
+Step forward, Caelan. This reversal isn't merely physical, it's a reclaiming of what once was, a renewal of power you've allowed to wane.
 <</speech>><br>
 
-<<speech "mc">>…Understood.<</speech>><br>
+<<speech "mc">>Understood.<</speech>><br>
 
 <<speech "thalara">>
-This draught will not bulk you up overnight, but it will call your muscles back to life. It asks your leg to remember its former strength, to rebuild fibers it once held tightly.
+This draught won't bulk you up overnight, but it will call your muscles back to life. It asks your leg to remember its former strength, to rebuild fibers it once held tightly.
 <</speech>><br>
 
 <<speech "mc">>So it will make me stronger?<</speech>><br>
@@ -570,17 +570,17 @@ This draught will not bulk you up overnight, but it will call your muscles back 
 <<nobr>>
 
 <<speech "thalara">>
-Yes. But with strength comes responsibility. You will regain the muscle that bore your burdens, but also the rigidity and armor that came with it.
+Yes, but with strength comes responsibility. You will regain the muscle that bore your burdens, but also the rigidity and armor that came with it.
 <</speech>><br>
 
 <<speech "mc">>You speak as though this is a burden.<</speech>><br>
 
 <<speech "thalara">>
-Strength is a double-edged sword. It protects, but it can also confine. To wield it well requires wisdom as much as power.
+Strength is a double edged sword. It protects, but it can also confine. To wield it well requires wisdom as much as power.
 <</speech>><br>
 
 <<speech "thalara">>
-This potion tastes of iron, earth, and resolve. You may feel a sudden rush of heat, a tightening of sinews and veins. It is your body waking from its softer state.
+This potion tastes of iron, earth, and resolve. You may feel a sudden rush of heat, a tightening of sinew and vein. It is your body waking from its softer state.
 <</speech>><br>
 
 [[Move Forth|right_leg_mm_right_leg_ml_3]]
@@ -592,13 +592,13 @@ This potion tastes of iron, earth, and resolve. You may feel a sudden rush of he
 <<speech "mc">>How quickly will it take hold?<</speech>><br>
 
 <<speech "thalara">>
-Within the hour, your leg will thicken, muscles contracting and swelling. Movement will feel more forceful, weightier. But with that, a sense of rawness may surface new strength comes with strain.
+Within the hour, your leg will thicken, muscles contracting and swelling. Movement will feel more forceful, weightier. Alongside that, a sense of rawness may surface, new strength comes with strain.
 <</speech>><br>
 
 <<speech "mc">>It sounds painful.<</speech>><br>
 
 <<speech "thalara">>
-Transformation always challenges the body and mind. You may feel tightness or soreness as muscle reshapes. But it is a sign of progress your leg reawakening to its true power.
+Transformation always challenges the body and mind. You may feel tightness or soreness as the muscle reshapes. But it's a sign of progress, your leg reawakening to its true power.
 <</speech>><br>
 
 [[Move Forth|right_leg_mm_right_leg_ml_4]]
@@ -606,16 +606,16 @@ Transformation always challenges the body and mind. You may feel tightness or so
 
 :: right_leg_mm_right_leg_ml_4
 <<nobr>>
-<<speech "mc">>I’m afraid of becoming too rigid, too unyielding.<</speech>><br>
+<<speech "mc">>I'm afraid of becoming too rigid, too unyielding.<</speech>><br>
 
 <<speech "thalara">>
-That is the nature of strength sometimes it hardens you, sometimes it frees you. The choice to balance it wisely rests with you.
+That is the nature of strength, sometimes it hardens you, sometimes it frees you. The choice to balance it wisely rests with you.
 <</speech>><br>
 
-<<speech "mc">>What if I lose some of the grace I’ve gained?<</speech>><br>
+<<speech "mc">>What if I lose some of the grace I've gained?<</speech>><br>
 
 <<speech "thalara">>
-Grace and strength can coexist, but often in tension. Your movement may become less fluid, but more purposeful. It’s a trade-off you must consider carefully.
+Grace and strength can coexist, but often in tension. Your movement may become less fluid, but more purposeful. It's a trade you must consider carefully.
 <</speech>><br>
 
 [[Move Forth|right_leg_mm_right_leg_ml_5]]
@@ -624,16 +624,16 @@ Grace and strength can coexist, but often in tension. Your movement may become l
 :: right_leg_mm_right_leg_ml_5
 <<nobr>>
 
-<<speech "mc">>Will this reversal undo the progress I’ve made mentally?<</speech>><br>
+<<speech "mc">>Will this reversal undo the progress I've made mentally?<</speech>><br>
 
 <<speech "thalara">>
-Body and mind are intertwined. As your form hardens, your thoughts may shift, perhaps toward fierceness and resolve. It is not a loss only a different path.
+Body and mind are intertwined. As your form hardens, your thoughts may shift, perhaps toward fierceness and resolve. It isn't a loss, only a different path.
 <</speech>><br>
 
-<<speech "mc">>And if I resist this change?<</speech>><br>
+<<speech "mc">>If I resist this change?<</speech>><br>
 
 <<speech "thalara">>
-Resistance will slow the process and make it harsher. But your will is strong if you choose this, you must embrace it fully. Half measures bring only pain.
+Resistance will slow the process and make it harsher. Your will is strong, so if you choose this, you must embrace it fully. Half measures bring only pain.
 <</speech>><br>
 
 [[Move Forth|right_leg_mm_right_leg_ml_6]]
@@ -642,7 +642,7 @@ Resistance will slow the process and make it harsher. But your will is strong if
 :: right_leg_mm_right_leg_ml_6
 <<nobr>>
 
-<<speech "mc">>…I hope I am ready.<</speech>><br>
+<<speech "mc">>I hope I'm ready.<</speech>><br>
 
 <<speech "thalara">>
 You are more ready than you realize. Drink now, and reclaim your strength.
@@ -660,7 +660,7 @@ You are more ready than you realize. Drink now, and reclaim your strength.
 <<nobr>>
 <div style="text-align: center; width: 95%;"><img style="text-align: center; border-radius: 9px;
     border: 10px ridge #8b5e3c;width: 95%;" @src="setup.ImagePath+'map/veil_tower_mage_map.png'"></div>
-<<speech "thalara">>You have brewed the potion. Let me see it first.  Caelan Are you ready to start the process...<</speech>>
+<<speech "thalara">>You have brewed the potion. Let me look it over first. Caelan, are you ready to begin?<</speech>>
 <br>
 [[I want to regain more strength and power.|right_leg_mm_right_leg_ms_1]] | <br><br>
 [[I’m hesitant, but I will try to accept it.|right_leg_mm_right_leg_ms_1]] | <br><br>
@@ -750,7 +750,7 @@ You are ready. Drink, and welcome the power returning to your frame.
 <<nobr>>
 <div style="text-align: center; width: 95%;"><img style="text-align: center; border-radius: 9px;
     border: 10px ridge #8b5e3c;width: 95%;" @src="setup.ImagePath+'map/veil_tower_mage_map.png'"></div>
-<<speech "thalara">>You have brewed the potion. Let me see it first.  Caelan Are you ready to start the process...<</speech>>
+<<speech "thalara">>You have brewed the potion. Let me look it over first. Caelan, are you ready to begin?<</speech>>
 <br>
 [[I am ready to soften and refine, to walk more lightly.|right_leg_ms_right_leg_mm_1]] | <br><br>
 [[I don’t know if I want this change, but I’ll try.|right_leg_ms_right_leg_mm_1]] | <br><br>
@@ -840,7 +840,7 @@ You will. Drink now, and let the change begin.
 <<nobr>>
 <div style="text-align: center; width: 95%;"><img style="text-align: center; border-radius: 9px;
     border: 10px ridge #8b5e3c;width: 95%;" @src="setup.ImagePath+'map/veil_tower_mage_map.png'"></div>
-<<speech "thalara">>You have brewed the potion. Let me see it first.  Caelan Are you ready to start the process...<</speech>>
+<<speech "thalara">>You have brewed the potion. Let me look it over first. Caelan, are you ready to begin?<</speech>>
 <br>
 [[I am ready to embrace this new form and the changes it will bring.|right_leg_ms_right_leg_fs_1]] | <br><br>
 [[I am uncertain, but I will try to accept what must be.|right_leg_ms_right_leg_fs_1]] | <br><br>
@@ -929,7 +929,7 @@ You will. Drink deeply, and let your new form begin to blossom.
 <<nobr>>
 <div style="text-align: center; width: 95%;"><img style="text-align: center; border-radius: 9px;
     border: 10px ridge #8b5e3c;width: 95%;" @src="setup.ImagePath+'map/veil_tower_mage_map.png'"></div>
-<<speech "thalara">>You have brewed the potion. Let me see it first.  Caelan Are you ready to start the process...<</speech>>
+<<speech "thalara">>You have brewed the potion. Let me look it over first. Caelan, are you ready to begin?<</speech>>
 <br>
 [[I am ready to reclaim my former strength and identity.|right_leg_fs_right_leg_ms_1]] | <br><br>
 [[I feel uncertain, but I will try to accept this change.|right_leg_fs_right_leg_ms_1]] | <br><br>
@@ -1018,7 +1018,7 @@ You will. Drink deeply, and let your new form begin to strengthen.
 <<nobr>>
 <div style="text-align: center; width: 95%;"><img style="text-align: center; border-radius: 9px;
     border: 10px ridge #8b5e3c;width: 95%;" @src="setup.ImagePath+'map/veil_tower_mage_map.png'"></div>
-<<speech "thalara">>You have brewed the potion. Let me see it first.  Caelan Are you ready to start the process...<</speech>>
+<<speech "thalara">>You have brewed the potion. Let me look it over first. Caelan, are you ready to begin?<</speech>>
 <br>
 [[I’m ready to deepen this change and embrace a fuller femininity.|right_leg_fs_right_leg_fm_1]] | <br><br>
 [[I’m uncertain, but I will try to accept whatever comes.|right_leg_fs_right_leg_fm_1]] | <br><br>
@@ -1110,7 +1110,7 @@ You will. Drink the potion, and let your right leg blossom into fuller, more flu
 <<nobr>>
 <div style="text-align: center; width: 95%;"><img style="text-align: center; border-radius: 9px;
     border: 10px ridge #8b5e3c;width: 95%;" @src="setup.ImagePath+'map/veil_tower_mage_map.png'"></div>
-<<speech "thalara">>You have brewed the potion. Let me see it first.  Caelan Are you ready to start the process...<</speech>>
+<<speech "thalara">>You have brewed the potion. Let me look it over first. Caelan, are you ready to begin?<</speech>>
 <br>
 [[I accept the return to a subtler femininity.|right_leg_fm_right_leg_fs_1]] | <br><br>
 [[I’m hesitant, but I’ll let the magic do its work.|right_leg_fm_right_leg_fs_1]] | <br><br>
@@ -1199,7 +1199,7 @@ You will. Drink the potion, and your leg will begin to bloom into gentler grace 
 <<nobr>>
 <div style="text-align: center; width: 95%;"><img style="text-align: center; border-radius: 9px;
     border: 10px ridge #8b5e3c;width: 95%;" @src="setup.ImagePath+'map/veil_tower_mage_map.png'"></div>
-<<speech "thalara">>You have brewed the potion. Let me see it first.  Caelan Are you ready to start the process...<</speech>>
+<<speech "thalara">>You have brewed the potion. Let me look it over first. Caelan, are you ready to begin?<</speech>>
 <br>
 [[I’ve awaited this moment. Let the final step refine me fully.|right_leg_fm_right_leg_fl_1]] | <br><br>
 [[I’m nervous, but I know I must see this through.|right_leg_fm_right_leg_fl_1]] | <br><br>
@@ -1285,7 +1285,7 @@ Then drink, and let the last threads of transformation weave their perfect patte
 <<nobr>>
 <div style="text-align: center; width: 95%;"><img style="text-align: center; border-radius: 9px;
     border: 10px ridge #8b5e3c;width: 95%;" @src="setup.ImagePath+'map/veil_tower_mage_map.png'"></div>
-<<speech "thalara">>You have brewed the potion. Let me see it first.  Caelan Are you ready to start the process...<</speech>>
+<<speech "thalara">>You have brewed the potion. Let me look it over first. Caelan, are you ready to begin?<</speech>>
 <br>
 [[I accept this step back. Sometimes strength lies in returning to what is simpler.|right_leg_fl_right_leg_fm_1]] | <br><br>
 [[I’m hesitant to lose this final grace... but I trust your guidance.|right_leg_fl_right_leg_fm_1]] | <br><br>

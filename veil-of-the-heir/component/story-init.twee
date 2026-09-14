@@ -77,6 +77,11 @@
 <<set $health = 100>>
 <<set $veil_of_the_heir = true>>
 
+<<set $femininity_style = 0>>
+<<set $valetia_trust = 0>>
+<<set $confusion = 0>>
+<<set $defiance = 0>>
+
 <<set $user_stats = {
 	gender_appearance: 94.9,
 	gender_Identity: 95,

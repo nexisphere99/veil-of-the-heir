@@ -426,7 +426,7 @@ $possible_changes.includes($userBody.torso.orig_body)
 <<nobr>>
 <div style="text-align: center; width: 95%;"><img style="text-align: center; border-radius: 9px;
     border: 10px ridge #8b5e3c;width: 95%;" @src="setup.ImagePath+'map/veil_tower_mage_map.png'"></div>
-<<speech "thalara">>You have brewed the potion. Let me see it first.  Caelan Are you ready to start the process...<</speech>>
+<<speech "thalara">>You have brewed the potion. Let me look it over first. Caelan, are you ready to begin?<</speech>>
 <br>
 [[I’m ready. Let’s begin this transformation|torso_ml_torso_mm_1]] | <br><br>
 [[…I still don’t know if this is right, but I’ll go through with it… for the kingdom.|torso_ml_torso_mm_1]] | <br><br>
@@ -435,13 +435,13 @@ $possible_changes.includes($userBody.torso.orig_body)
 
 :: torso_ml_torso_mm_1
 <<nobr>>
-<<speech "thalara">>Welcome, Caelan. I see you’ve made your decision. However difficult, however noble or simply inevitable. This is the first of many transformations… and it begins not with grand spectacle, but with subtle change.<</speech>><br>
+<<speech "thalara">>Welcome, Caelan. I see you've made your decision, however difficult, however noble, or simply inevitable. This is the first of many transformations. It begins not with grand spectacle, but with a subtle change.<</speech>><br>
 
-<<speech "mc">>...So this is it. My body starts turning into something else. Into someone else.<</speech>><br>
+<<speech "mc">>So this is it. My body starts turning into something else. Into someone else.<</speech>><br>
 
-<<speech "thalara">>No, not someone else. Into yourself, reimagined. You may feel disoriented, even betrayed by your own skin. But transformation is not loss it is refinement. The steel remains... we merely reshape the blade.<</speech>><br>
+<<speech "thalara">>No, not someone else. Into yourself, reimagined. You may feel disoriented, even betrayed by your own skin. But transformation isn't loss, it's refinement. The steel remains. We simply reshape the blade.<</speech>><br>
 
-<<speech "mc">>I still feel like this body is part of who I am. The strength, the width of my shoulders I've trained with Sir Aldric since I was a boy. This doesn’t just vanish.<</speech>><br>
+<<speech "mc">>I still feel like this body is part of who I am. The strength, the width of my shoulders, I've trained with Sir Aldric since I was a boy. This doesn't just vanish.<</speech>><br>
 
 [[Move Forth|torso_ml_torso_mm_2]]
 <</nobr>>
@@ -449,13 +449,13 @@ $possible_changes.includes($userBody.torso.orig_body)
 :: torso_ml_torso_mm_2
 <<nobr>>
 
-<<speech "thalara">>And it shouldn’t. But strength has many forms, my prince. Some visible, some not. What you’ve learned in battle will live in your spine, in your balance. Even as your shape softens, your core your discipline remains. This potion doesn’t erase you; it invites the rest of you forward.<</speech>><br>
+<<speech "thalara">>It shouldn't. But strength has many forms, my prince. Some visible, some not. What you've learned in battle lives in your spine, in your balance. Even as your shape softens, your core, your discipline, remains. This potion doesn't erase you, it invites the rest of you forward.<</speech>><br>
 
-<<speech "mc">>And yet, my waist will shrink, my bones realign, and I’ll lose the body I’ve known since childhood.<</speech>><br>
+<<speech "mc">>Yet my waist will shrink, my bones will realign, and I'll lose the body I've known since childhood.<</speech>><br>
 
-<<speech "thalara">>Yes. The potion guides your form into a silhouette that suits the queen you are becoming. Narrower flanks, a taper of the torso, a gentler rise at the chest. The beginning of space for gowns and corsets, for gestures to flow rather than clash.<</speech>><br>
+<<speech "thalara">>Yes, the potion guides your form into a silhouette that suits the queen you are becoming. Narrower flanks, a taper at the torso, a gentler rise at the chest. The beginning of space for gowns and corsets, for gestures that flow rather than clash.<</speech>><br>
 
-<<speech "mc">>Sounds like I’m being molded into a dress form.<</speech>><br>
+<<speech "mc">>Sounds like I'm being molded into a dress form.<</speech>><br>
 
 [[Move Forth|torso_ml_torso_mm_3]]
 <</nobr>>
@@ -463,13 +463,13 @@ $possible_changes.includes($userBody.torso.orig_body)
 :: torso_ml_torso_mm_3
 <<nobr>>
 
-<<speech "thalara">>Perhaps. Or perhaps into a vessel of power in a world that kneels before beauty, grace, and presence. Remember, in Velmoria, the queen’s body is not just adorned it commands attention, redirects courtly currents, holds the eye of friend and rival alike.<</speech>><br>
+<<speech "thalara">>Perhaps, or perhaps into a vessel of power in a world that kneels before beauty, grace, and presence. Remember, in Velmoria, the queen's body is not just adorned. It commands attention, redirects courtly currents, holds the eye of friend and rival alike.<</speech>><br>
 
-<<speech "mc">>And this potion how does it actually work? I thought transformation was violent. This sounds… poetic.<</speech>><br>
+<<speech "mc">>This potion, how does it actually work? I thought transformation was violent. This sounds... poetic.<</speech>><br>
 
-<<speech "thalara">>Most physical changes occur beneath the surface first. This first draft targets the subdermal tissue, loosening muscle memory, guiding the growth plates of the ribs inward. Your abdomen will become more supple, while the dorsal spine will slowly arch to allow for a regal posture. Your internal balance will shift. It is not instant it will take days but the shift begins the moment the potion touches your tongue.<</speech>><br>
+<<speech "thalara">>Most physical changes happen beneath the surface first. This first draft targets the subdermal tissue, loosening muscle memory, guiding the growth plates of the ribs inward. Your abdomen will grow more supple, while your spine will slowly arch to allow for a regal posture. Your internal balance will shift. It isn't instant, it will take days, but the shift begins the moment the potion touches your tongue.<</speech>><br>
 
-<<speech "mc">>And it won’t hurt?<</speech>><br>
+<<speech "mc">>It won't hurt?<</speech>><br>
 
 [[Move Forth|torso_ml_torso_mm_4]]
 <</nobr>>
@@ -477,11 +477,11 @@ $possible_changes.includes($userBody.torso.orig_body)
 :: torso_ml_torso_mm_4
 <<nobr>>
 
-<<speech "thalara">>Not in the way a blade hurts. You may feel warmth then pressure. A pulling sensation at your waist. Your breath may catch as your diaphragm realigns. Some describe it as... being unwound and re-knotted with silken thread.<</speech>><br>
+<<speech "thalara">>Not in the way a blade hurts. You may feel warmth, then pressure. A pulling sensation at your waist. Your breath may catch as your diaphragm realigns. Some describe it as being unwound and re-knotted with silken thread.<</speech>><br>
 
-<<speech "mc">>…Do you remember everyone you’ve done this to?<</speech>><br>
+<<speech "mc">>Do you remember everyone you've done this to?<</speech>><br>
 
-<<speech "thalara">>Yes. Every one of them. Some wept. Some laughed. One threw the vial at my head. But in time, they each saw their reflection change and saw strength where they feared loss. And not all ended the same. Some embraced womanhood. Others found balance. A few… resisted until the very end. You will write your own path through this.<</speech>><br>
+<<speech "thalara">>Yes, every one of them. Some wept. Some laughed. One threw the vial at my head. But in time, they each saw their reflection change and saw strength where they feared loss. Not all ended the same. Some embraced womanhood. Others found balance. A few resisted until the very end. You will write your own path through this.<</speech>><br>
 
 <<speech "mc">>What happens after I drink it?<</speech>><br>
 
@@ -492,11 +492,11 @@ $possible_changes.includes($userBody.torso.orig_body)
 :: torso_ml_torso_mm_5
 <<nobr>>
 
-<<speech "thalara">>You lie back on the velvet table. I will cast a stabilizing ward to guide the changes. You may feel dizzy or flushed. By the next morning, you will begin to notice the way your tunic hangs differently. Your waistline will inch inward. Breathing may feel lighter or stranger. That will be the first sign.<</speech>><br>
+<<speech "thalara">>You lie back on the velvet table. I will cast a stabilizing ward to guide the changes. You may feel dizzy or flushed. By the next morning, you will notice the way your tunic hangs differently. Your waistline will inch inward. Breathing may feel lighter, or stranger. That will be the first sign.<</speech>><br>
 
-<<speech "mc">>I suppose there’s no turning back?<</speech>><br>
+<<speech "mc">>I suppose there's no turning back?<</speech>><br>
 
-<<speech "thalara">>This potion moves only forward. But you, Caelan… you have choices. You can slow the process. You can guide its direction. And more than anything you can define what womanhood means to you. Drink when you’re ready.<</speech>><br>
+<<speech "thalara">>This potion moves only forward. But you, Caelan, you have choices. You can slow the process. You can guide its direction. More than anything, you can define what womanhood means to you. Drink when you're ready.<</speech>><br>
 
 [[I feel the potion working in my torso|use_success_potion_create_torso]]
 <</nobr>>
@@ -511,7 +511,7 @@ $possible_changes.includes($userBody.torso.orig_body)
 <<nobr>>
 <div style="text-align: center; width: 95%;"><img style="text-align: center; border-radius: 9px;
     border: 10px ridge #8b5e3c;width: 95%;" @src="setup.ImagePath+'map/veil_tower_mage_map.png'"></div>
-<<speech "thalara">>You have brewed the potion. Let me see it first.  Caelan Are you ready to start the process...<</speech>>
+<<speech "thalara">>You have brewed the potion. Let me look it over first. Caelan, are you ready to begin?<</speech>>
 <br>
 [[This is what I want. I feel more like myself this way.|torso_mm_torso_ml_1]] | <br><br>
 [[…I don’t know if this is the right path either. But I can’t keep pretending.|torso_mm_torso_ml_1]] | <br><br>
@@ -520,13 +520,13 @@ $possible_changes.includes($userBody.torso.orig_body)
 
 :: torso_mm_torso_ml_1
 <<nobr>>
-<<speech "thalara">>You’ve come to step backward, Caelan. Not many do. But I will not stop you.<</speech>><br>
+<<speech "thalara">>You've come to step backward, Caelan. Not many do, but I won't stop you.<</speech>><br>
 
-<<speech "mc">>I feel like I’m floating in someone else’s body. Like silk is being draped over a frame that was built for steel. I need to feel real again.<</speech>><br>
+<<speech "mc">>I feel like I'm floating in someone else's body. Like silk is being draped over a frame that was built for steel. I need to feel real again.<</speech>><br>
 
-<<speech "thalara">>I understand. The body you were born into was no mistake. Neither is the one offered to you now. But you are entitled to reclaim what grounds you.<</speech>><br>
+<<speech "thalara">>I understand. The body you were born into was no mistake. Neither is the one offered to you now. But you're entitled to reclaim what grounds you.<</speech>><br>
 
-<<speech "mc">>Then let’s stop talking and begin. I want my strength back. My shape. My center.<</speech>><br>
+<<speech "mc">>Then let's stop talking and begin. I want my strength back, my shape, my center.<</speech>><br>
 
 [[Move Forth|torso_mm_torso_ml_2]]
 <</nobr>>
@@ -534,11 +534,11 @@ $possible_changes.includes($userBody.torso.orig_body)
 :: torso_mm_torso_ml_2
 <<nobr>>
 
-<<speech "thalara">>This draft is different. Reversal is heavier magic blunt, raw, and less graceful. It strengthens bone density, reverses the contractions of the waistline, and re-engages your abdominal wall. You’ll feel your frame stretch outward, your breath deepen, your center re-anchor.<</speech>><br>
+<<speech "thalara">>This draft is different. Reversal is heavier magic, blunt, raw, and less graceful. It strengthens bone density, reverses the contraction of the waistline, and re-engages your abdominal wall. You'll feel your frame stretch outward, your breath deepen, your center re-anchor.<</speech>><br>
 
-<<speech "mc">>That’s what I need. To feel anchored again. To feel like I’m not shrinking.<</speech>><br>
+<<speech "mc">>That's what I need. To feel anchored again. To feel like I'm not shrinking.<</speech>><br>
 
-<<speech "thalara">>But know this: the magic does not forget. It will resist being unwoven. There may be pain spasms in your lower spine, tightness in the ribs as they flare outward. And the more you transform back and forth, the harder it becomes to remain whole. Your body will carry echoes of each shape.<</speech>><br>
+<<speech "thalara">>But know this, the magic doesn't forget. It will resist being unwoven. There may be spasms of pain in your lower spine, tightness in the ribs as they flare outward. The more you transform back and forth, the harder it becomes to remain whole. Your body will carry echoes of each shape.<</speech>><br>
 
 <<speech "mc">>So this is my last clear fork in the road?<</speech>><br>
 
@@ -549,11 +549,11 @@ $possible_changes.includes($userBody.torso.orig_body)
 :: torso_mm_torso_ml_3
 <<nobr>>
 
-<<speech "thalara">>Yes. If you drink this, it won’t close the path forward entirely, but it will make every future step slower... heavier. The body will grow stubborn. It will begin to choose sides for you.<</speech>><br>
+<<speech "thalara">>Yes. If you drink this, it won't close the path forward entirely, but it will make every future step slower, heavier. The body will grow stubborn. It will begin to choose sides for you.<</speech>><br>
 
-<<speech "mc">>I’ve felt off-balance since I began changing. As if my reflection belongs to someone I don’t recognize. This whatever the cost will let me feel like myself again.<</speech>><br>
+<<speech "mc">>I've felt off balance since I began changing, as if my reflection belongs to someone I don't recognize. This, whatever the cost, will let me feel like myself again.<</speech>><br>
 
-<<speech "thalara">>Then may you drink with clarity, not anger. And remember, this shape your shape is not weakness. Nor is the other strength. There is only your truth. Let it root deeply.<</speech>><br>
+<<speech "thalara">>Then drink with clarity, not anger. Remember, this shape, your shape, is not weakness. Nor is the other strength. There is only your truth. Let it root deeply.<</speech>><br>
 [[I feel the potion working in my torso|use_success_potion_create_torso]]
 <</nobr>>
 
@@ -568,7 +568,7 @@ $possible_changes.includes($userBody.torso.orig_body)
 <<nobr>>
 <div style="text-align: center; width: 95%;"><img style="text-align: center; border-radius: 9px;
     border: 10px ridge #8b5e3c;width: 95%;" @src="setup.ImagePath+'map/veil_tower_mage_map.png'"></div>
-<<speech "thalara">>You have brewed the potion. Let me see it first.  Caelan Are you ready to start the process...<</speech>>
+<<speech "thalara">>You have brewed the potion. Let me look it over first. Caelan, are you ready to begin?<</speech>>
 <br>
 [[I’ve come this far... and I think I’m starting to understand. Let's keep going.|torso_mm_torso_ms_1]] | <br><br>
 [[I still don’t know how to feel about this... but I’m here.|torso_mm_torso_ms_1]] | <br><br>
@@ -577,13 +577,13 @@ $possible_changes.includes($userBody.torso.orig_body)
 
 :: torso_mm_torso_ms_1
 <<nobr>>
-<<speech "thalara">>You’ve returned for the second draught. The change will deepen now. What was a whisper in your bones will begin to speak clearly in your frame.<</speech>><br>
+<<speech "thalara">>You've returned for the second draught. The change will deepen now. What was a whisper in your bones will begin to speak clearly in your frame.<</speech>><br>
 
-<<speech "mc">>Everything already feels... looser. Lighter, somehow. My tunics don’t sit the same. I catch myself moving differently, even when I don’t mean to.<</speech>><br>
+<<speech "mc">>Everything already feels looser. Lighter, somehow. My tunics don't sit the same. I catch myself moving differently, even when I don't mean to.<</speech>><br>
 
 <<speech "thalara">>The body remembers shape like a song, Caelan. Even as you change, it sings back what it was. But the new melody is forming now. This potion will quiet more of the old notes.<</speech>><br>
 
-<<speech "mc">>I woke up with soreness along my ribs this morning. Like something was pressing inward.<</speech>><br>
+<<speech "mc">>I woke up with soreness along my ribs this morning, like something was pressing inward.<</speech>><br>
 
 [[Move Forth|torso_mm_torso_ms_2]]
 <</nobr>>
@@ -591,11 +591,11 @@ $possible_changes.includes($userBody.torso.orig_body)
 :: torso_mm_torso_ms_2
 <<nobr>>
 
-<<speech "thalara">>That’s natural. The broad structure of a prince’s ribcage is beginning to yield to narrow. Your lungs will adjust. Breathing may feel different. Lighter, perhaps. Or tight at first. These are small shifts with great purpose.<</speech>><br>
+<<speech "thalara">>That's natural. The broad structure of a prince's ribcage is beginning to narrow. Your lungs will adjust. Breathing may feel different, lighter perhaps, or tight at first. These are small shifts with great purpose.<</speech>><br>
 
-<<speech "mc">>And if I wanted to stop?<</speech>><br>
+<<speech "mc">>If I wanted to stop?<</speech>><br>
 
-<<speech "thalara">>You may always stop. I will never bind your will. But transformation is not just magic, Caelan. It is motion. And motion builds momentum. The more steps you take, the more your body will forget the stillness of its old form. But nothing is irreversible until you claim it.<</speech>><br>
+<<speech "thalara">>You may always stop. I will never bind your will. But transformation is not just magic, Caelan, it is motion, and motion builds momentum. The more steps you take, the more your body forgets the stillness of its old form. Still, nothing is irreversible until you claim it.<</speech>><br>
 
 <<speech "mc">>Have others gone back?<</speech>><br>
 
@@ -605,13 +605,13 @@ $possible_changes.includes($userBody.torso.orig_body)
 :: torso_mm_torso_ms_3
 <<nobr>>
 
-<<speech "thalara">>Some have. Most only for a time. Many come to realize that the new form did not strip them of self it gave them a canvas they never knew they needed. Others find a middle ground, neither prince nor princess, but something singular.<</speech>><br>
+<<speech "thalara">>Some have. Most only for a time. Many come to realize that the new form didn't strip them of self, it gave them a canvas they never knew they needed. Others find a middle ground, neither prince nor princess, but something singular.<</speech>><br>
 
-<<speech "mc">>I don't know what I’ll be. I only know I’m not who I was. Not anymore.<</speech>><br>
+<<speech "mc">>I don't know what I'll be. I only know I'm not who I was. Not anymore.<</speech>><br>
 
-<<speech "thalara">>Then you are exactly where you must be. Unfinished. Becoming. Let the potion guide you not command you.<</speech>><br>
+<<speech "thalara">>Then you are exactly where you must be, unfinished, becoming. Let the potion guide you, not command you.<</speech>><br>
 
-<<speech "mc">>This one smells... softer than the last.<</speech>><br>
+<<speech "mc">>This one smells softer than the last.<</speech>><br>
 
 [[Move Forth|torso_mm_torso_ms_4]]
 <</nobr>>
@@ -621,11 +621,11 @@ $possible_changes.includes($userBody.torso.orig_body)
 
 <<speech "thalara">>It works deeper, more subtly. It will soften the muscle definition at your sides and flatten the hard edges of your torso. The waistline will slip inward more noticeably now. You may feel a tingling under your skin, as if your frame is reshaping itself from within.<</speech>><br>
 
-<<speech "mc">>It’s warm. And... sweet?<</speech>><br>
+<<speech "mc">>It's warm. Sweet, somehow.<</speech>><br>
 
-<<speech "thalara">>A touch of starblossom to ease the ache. You’ll feel it reach your bones within the hour. You may ache under your arms, just beneath the ribs. That is the narrowing process. I’ve cast a binding glyph over your spine to ease the shift. It will align your posture toward a more upright, flowing center.<</speech>><br>
+<<speech "thalara">>A touch of starblossom to ease the ache. You'll feel it reach your bones within the hour. You may ache under your arms, just beneath the ribs, that's the narrowing process. I've cast a binding glyph over your spine to ease the shift. It will align your posture toward a more upright, flowing center.<</speech>><br>
 
-<<speech "mc">>Is that why I feel like I’m standing straighter lately? My shoulders don’t want to hunch forward anymore.<</speech>><br>
+<<speech "mc">>Is that why I feel like I'm standing straighter lately? My shoulders don't want to hunch forward anymore.<</speech>><br>
 
 [[Move Forth|torso_mm_torso_ms_5]]
 <</nobr>>
@@ -633,11 +633,11 @@ $possible_changes.includes($userBody.torso.orig_body)
 :: torso_mm_torso_ms_5
 <<nobr>>
 
-<<speech "thalara">>Precisely. You’re already adapting. Posture is more than physical it’s a projection of self. You are beginning to move like a queen, Caelan. Even if your heart still clings to the sword.<</speech>><br>
+<<speech "thalara">>Precisely. You're already adapting. Posture is more than physical, it's a projection of self. You are beginning to move like a queen, Caelan, even if your heart still clings to the sword.<</speech>><br>
 
 <<speech "mc">>What if part of me still wants that sword?<</speech>><br>
 
-<<speech "thalara">>Then part of you shall keep it. Womanhood is no exile from strength. You are not losing power you are reshaping its language. And soon, the world will listen.<</speech>><br>
+<<speech "thalara">>Then part of you shall keep it. Womanhood is no exile from strength. You aren't losing power, you're reshaping its language. Soon, the world will listen.<</speech>><br>
 
 
 [[I feel the potion working in my torso|use_success_potion_create_torso]]
@@ -654,7 +654,7 @@ $possible_changes.includes($userBody.torso.orig_body)
 <<nobr>>
 <div style="text-align: center; width: 95%;"><img style="text-align: center; border-radius: 9px;
     border: 10px ridge #8b5e3c;width: 95%;" @src="setup.ImagePath+'map/veil_tower_mage_map.png'"></div>
-<<speech "thalara">>You have brewed the potion. Let me see it first.  Caelan Are you ready to start the process...<</speech>>
+<<speech "thalara">>You have brewed the potion. Let me look it over first. Caelan, are you ready to begin?<</speech>>
 <br>
 [[I want this. I need to feel like myself again.|torso_ms_torso_mm_1]] | <br><br>
 [[I don’t know if this is right… but I can’t ignore this pull.|torso_ms_torso_mm_1]] | <br><br>
@@ -663,13 +663,13 @@ $possible_changes.includes($userBody.torso.orig_body)
 
 :: torso_ms_torso_mm_1
 <<nobr>>
-<<speech "thalara">>So... you return, seeking the path behind you.<</speech>><br>
+<<speech "thalara">>So, you return, seeking the path behind you.<</speech>><br>
 
-<<speech "mc">>Everything’s been changing so fast. My body… my mind… even the way people look at me. I just I need to slow it down. Maybe even backtrack a little.<</speech>><br>
+<<speech "mc">>Everything's been changing so fast. My body, my mind, even the way people look at me. I need to slow it down. Maybe even backtrack a little.<</speech>><br>
 
 <<speech "thalara">>Backtrack, or reclaim?<</speech>><br>
 
-<<speech "mc">>I want to feel strong again. Solid. Like I used to. I know that might not be the ‘queenly’ thing to say, but <</speech>><br>
+<<speech "mc">>I want to feel strong again, solid, like I used to. I know that might not be the queenly thing to say, but...<</speech>><br>
 
 [[Move Forth|torso_ms_torso_mm_2]]
 <</nobr>>
@@ -677,13 +677,13 @@ $possible_changes.includes($userBody.torso.orig_body)
 :: torso_ms_torso_mm_2
 <<nobr>>
 
-<<speech "thalara">>There is no single shape to strength, Caelan. But there is value in clarity. This potion will call back what’s been softened. Your ribs will expand slightly. Your waist will tighten with muscle again. Your breath may feel heavier, but fuller. You’ll feel your center brace itself like the girding of a castle wall.<</speech>><br>
+<<speech "thalara">>There is no single shape to strength, Caelan. But there is value in clarity. This potion will call back what's been softened. Your ribs will expand slightly. Your waist will tighten with muscle again. Your breath may feel heavier, but fuller. You'll feel your center brace itself like the girding of a castle wall.<</speech>><br>
 
-<<speech "mc">>Does it… undo everything?<</speech>><br>
+<<speech "mc">>Does it undo everything?<</speech>><br>
 
-<<speech "thalara">>No. This will not make you who you were it will remind you of what still remains. You are not erasing the queen within you. You are inviting the prince back to speak.<</speech>><br>
+<<speech "thalara">>No, this won't make you who you were. It will remind you of what still remains. You aren't erasing the queen within you. You are inviting the prince back to speak.<</speech>><br>
 
-<<speech "mc">>And what if I change my mind again?<</speech>><br>
+<<speech "mc">>What if I change my mind again?<</speech>><br>
 
 [[Move Forth|torso_ms_torso_mm_3]]
 <</nobr>>
@@ -691,13 +691,13 @@ $possible_changes.includes($userBody.torso.orig_body)
 :: torso_ms_torso_mm_3
 <<nobr>>
 
-<<speech "thalara">>Then you return again. As many times as it takes. That is the shape of becoming not a line, but a spiral.<</speech>><br>
+<<speech "thalara">>Then you return again, as many times as it takes. That is the shape of becoming, not a line, but a spiral.<</speech>><br>
 
 <<speech "mc">>You always speak in riddles.<</speech>><br>
 
-<<speech "thalara">>And yet you always understand me by the end of the session.<</speech>><br>
+<<speech "thalara">>Yet you always understand me by the end of the session.<</speech>><br>
 
-<<speech "thalara">>This one may ache more than the others. Reclaiming muscle, bone width, and core tone takes more from the body than surrendering it. You’ll feel pressure along your ribcage, possibly in your lower back. If your tunics tighten tomorrow, that is no illusion.<</speech>><br>
+<<speech "thalara">>This one may ache more than the others. Reclaiming muscle, bone width, and core tone takes more from the body than surrendering it. You'll feel pressure along your ribcage, possibly in your lower back. If your tunics tighten tomorrow, that is no illusion.<</speech>><br>
 
 [[Move Forth|torso_ms_torso_mm_4]]
 <</nobr>>
@@ -706,11 +706,11 @@ $possible_changes.includes($userBody.torso.orig_body)
 
 :: torso_ms_torso_mm_4
 <<nobr>>
-<<speech "mc">>Smells like pepper and iron. Very different from before.<</speech>><br>
+<<speech "mc">>Smells like pepper and iron, very different from before.<</speech>><br>
 
-<<speech "thalara">>A warrior’s blend. It’s brewed with wolvenroot and spiced sinew. You’ll feel your lungs expand within an hour. Stretch often. Breathe deeply. Your gait will shift heavier, more grounded. Less glide, more march.<</speech>><br>
+<<speech "thalara">>A warrior's blend. It's brewed with wolvenroot and spiced sinew. You'll feel your lungs expand within an hour. Stretch often, breathe deeply. Your gait will shift heavier, more grounded. Less glide, more march.<</speech>><br>
 
-<<speech "mc">>Burns going down.<</speech>><br>
+<<speech "mc">>It burns going down.<</speech>><br>
 
 <<speech "thalara">>Reforging always does.<</speech>><br>
 
@@ -720,9 +720,9 @@ $possible_changes.includes($userBody.torso.orig_body)
 :: torso_ms_torso_mm_5
 <<nobr>>
 
-<<speech "mc">>You think I’m running away?<</speech>><br>
+<<speech "mc">>You think I'm running away?<</speech>><br>
 
-<<speech "thalara">>I think you’re gathering pieces. No one becomes whole by choosing only one side. You carry both queen and warrior. Drink again, if you must. And when you walk from this chamber, walk like both still belong to you.<</speech>><br>
+<<speech "thalara">>I think you're gathering pieces. No one becomes whole by choosing only one side. You carry both queen and warrior. Drink again, if you must, and when you walk from this chamber, walk like both still belong to you.<</speech>><br>
 
 
 [[I feel the potion working in my torso|use_success_potion_create_torso]]
@@ -739,7 +739,7 @@ $possible_changes.includes($userBody.torso.orig_body)
 <<nobr>>
 <div style="text-align: center; width: 95%;"><img style="text-align: center; border-radius: 9px;
     border: 10px ridge #8b5e3c;width: 95%;" @src="setup.ImagePath+'map/veil_tower_mage_map.png'"></div>
-<<speech "thalara">>You have brewed the potion. Let me see it first.  Caelan Are you ready to start the process...<</speech>>
+<<speech "thalara">>You have brewed the potion. Let me look it over first. Caelan, are you ready to begin?<</speech>>
 <br>
 [[I’m ready. Whatever I am becoming… I want to meet her.|torso_ms_torso_fs_1]] | <br><br>
 [[I don’t know if I can do this… but I’m here.|torso_ms_torso_fs_1]] | <br><br>
@@ -748,11 +748,11 @@ $possible_changes.includes($userBody.torso.orig_body)
 
 :: torso_ms_torso_fs_1
 <<nobr>>
-<<speech "thalara">>You’ve arrived at a threshold today, my prince… or perhaps, soon no longer a prince.<</speech>><br>
+<<speech "thalara">>You've arrived at a threshold today, my prince, or perhaps, soon, no longer a prince.<</speech>><br>
 
 <<speech "mc">>You say that like it's something I should be proud of.<</speech>><br>
 
-<<speech "thalara">>Not proud. Not ashamed, either. Simply aware. Today is not a step it is a crossing. The potion will carry you into the space between. Neither truly man, nor fully woman. It's not a disguise, but a state of truth. You ready?<</speech>><br>
+<<speech "thalara">>Not proud, not ashamed either, simply aware. Today isn't a step, it's a crossing. The potion will carry you into the space between, neither truly man nor fully woman. It's not a disguise, but a state of truth. Are you ready?<</speech>><br>
 
 <<speech "mc">>What does it feel like?<</speech>><br>
 
@@ -762,11 +762,11 @@ $possible_changes.includes($userBody.torso.orig_body)
 :: torso_ms_torso_fs_2
 <<nobr>>
 
-<<speech "thalara">>Like a conversation between two halves of your soul. At first, there's confusion. A twist along your spine, a gentle pull beneath the ribs. Then you’ll feel your center tilt. The waist will draw in, not sharply but enough that your frame begins to suggest, not declare.<</speech>><br>
+<<speech "thalara">>Like a conversation between two halves of your soul. At first there's confusion, a twist along your spine, a gentle pull beneath the ribs. Then you'll feel your center tilt. The waist draws in, not sharply, but enough that your frame begins to suggest, not declare.<</speech>><br>
 
-<<speech "mc">>And my hips?<</speech>><br>
+<<speech "mc">>My hips?<</speech>><br>
 
-<<speech "thalara">>They begin to open. Not like a sculptor with a hammer, but a painter with a brush. The bones do not break. They breathe wider.<</speech>><br>
+<<speech "thalara">>They begin to open. Not like a sculptor with a hammer, but a painter with a brush. The bones don't break. They breathe wider.<</speech>><br>
 
 <<speech "mc">>Will I still look like myself?<</speech>><br>
 
@@ -776,11 +776,11 @@ $possible_changes.includes($userBody.torso.orig_body)
 :: torso_ms_torso_fs_3
 <<nobr>>
 
-<<speech "thalara">>You will look like someone who includes who you were. But no… not quite the same. Others may glance at you and pause. Not in doubt just in awe.<</speech>><br>
+<<speech "thalara">>You will look like someone who includes who you were, though not quite the same. Others may glance at you and pause, not in doubt, just in awe.<</speech>><br>
 
 <<speech "mc">>Then I suppose I should get used to being stared at.<</speech>><br>
 
-<<speech "thalara">>Royalty always is. You’ll learn to wield it.<</speech>><br>
+<<speech "thalara">>Royalty always is. You'll learn to wield it.<</speech>><br>
 
 <<speech "thalara">>This brew is gentler than some, but its magic is precise. You may feel a tightening in your abdomen, a strange hollowness just beneath your ribs. Your breathing might shift as the shape of your torso changes. Drink slowly, and sit after.<</speech>><br>
 
@@ -789,37 +789,37 @@ $possible_changes.includes($userBody.torso.orig_body)
 
 :: torso_ms_torso_fs_4
 <<nobr>>
-<<speech "mc">>Does this… does this make me a woman?<</speech>><br>
+<<speech "mc">>Does this make me a woman?<</speech>><br>
 
-<<speech "thalara">>No. It makes you closer to one. And farther from the boy the world demanded you be. What comes next is not womanhood but the echo of her first footsteps in your body.<</speech>><br>
+<<speech "thalara">>No, it makes you closer to one, and farther from the boy the world demanded you be. What comes next is not womanhood, but the echo of her first footsteps in your body.<</speech>><br>
 
-<<speech "mc">>It tastes like... honey and steel.<</speech>><br>
+<<speech "mc">>It tastes like honey and steel.<</speech>><br>
 
-<<speech "thalara">>Moonflower and powdered starlace. Mixed with root iron from the deep mines. It was crafted to hold opposites in harmony. As must you.<</speech>><br>
+<<speech "thalara">>Moonflower and powdered starlace, mixed with root iron from the deep mines. It was crafted to hold opposites in harmony. As must you.<</speech>><br>
 
 [[Move Forth|torso_ms_torso_fs_5]]
 <</nobr>>
 
 :: torso_ms_torso_fs_5
 <<nobr>>
-<<speech "mc">>I can feel it. My center is... changing. Like I’m being redrawn from the spine outward.<</speech>><br>
+<<speech "mc">>I can feel it. My center is changing, like I'm being redrawn from the spine outward.<</speech>><br>
 
-<<speech "thalara">>That is exactly what’s happening. The waist begins to tuck inward. Not by compression, but realignment. The muscles soften, slightly. The hips respond by shifting ever so subtly almost imperceptible at first.<</speech>><br>
+<<speech "thalara">>That is exactly what's happening. The waist begins to tuck inward, not by compression, but realignment. The muscles soften slightly. The hips respond by shifting ever so subtly, almost imperceptible at first.<</speech>><br>
 
-<<speech "mc">>It’s strange. Not painful… but like I’m stepping into someone else’s skin.<</speech>><br>
+<<speech "mc">>It's strange. Not painful, but like I'm stepping into someone else's skin.<</speech>><br>
 
-<<speech "thalara">>No, Caelan. You’re shedding what never truly fit and stepping into a skin that has always waited for you.<</speech>><br>
+<<speech "thalara">>No, Caelan. You're shedding what never truly fit and stepping into a skin that has always waited for you.<</speech>><br>
 
 [[Move Forth|torso_ms_torso_fs_6]]
 <</nobr>>
 
 :: torso_ms_torso_fs_6
 <<nobr>>
-<<speech "mc">>And if I stop here?<</speech>><br>
+<<speech "mc">>If I stop here?<</speech>><br>
 
-<<speech "thalara">>Then you walk the world as something rare. Neither queen nor prince, but a sovereign of your own design. It is not weakness to choose the middle. It is power to stand within it.<</speech>><br>
+<<speech "thalara">>Then you walk the world as something rare. Neither queen nor prince, but a sovereign of your own design. It isn't weakness to choose the middle. It's power to stand within it.<</speech>><br>
 
-<<speech "mc">>I thought I’d feel fear. But this… it feels like peace. Like I’ve stopped fighting something that’s been inside me for years.<</speech>><br>
+<<speech "mc">>I thought I'd feel fear, but this feels like peace, like I've stopped fighting something that's been inside me for years.<</speech>><br>
 
 <<speech "thalara">>Then you are not crossing a line, Caelan. You are finally walking it.<</speech>><br>
 [[I feel the potion working in my torso|use_success_potion_create_torso]]
@@ -836,7 +836,7 @@ $possible_changes.includes($userBody.torso.orig_body)
 <<nobr>>
 <div style="text-align: center; width: 95%;"><img style="text-align: center; border-radius: 9px;
     border: 10px ridge #8b5e3c;width: 95%;" @src="setup.ImagePath+'map/veil_tower_mage_map.png'"></div>
-<<speech "thalara">>You have brewed the potion. Let me see it first.  Caelan Are you ready to start the process...<</speech>>
+<<speech "thalara">>You have brewed the potion. Let me look it over first. Caelan, are you ready to begin?<</speech>>
 <br>
 [[I need to feel solid again. I want to remember who I was.|torso_fs_torso_ms_1]] | <br><br>
 [[This feels like going backward… but maybe that’s what I need.|torso_fs_torso_ms_1]] | <br><br>
@@ -845,13 +845,13 @@ $possible_changes.includes($userBody.torso.orig_body)
 
 :: torso_fs_torso_ms_1
 <<nobr>>
-<<speech "thalara">>You’re here. So… you’ve chosen to slow the river and walk back along its bank.<</speech>><br>
+<<speech "thalara">>You're here. So you've chosen to slow the river and walk back along its bank.<</speech>><br>
 
-<<speech "mc">>Maybe I’ve drifted too far. Or maybe I just want to see what still fits.<</speech>><br>
+<<speech "mc">>Maybe I've drifted too far. Or maybe I just want to see what still fits.<</speech>><br>
 
-<<speech "thalara">>This isn’t failure, Caelan. It’s clarity. Even a queen must know how to retreat wisely.<</speech>><br>
+<<speech "thalara">>This isn't failure, Caelan. It's clarity. Even a queen must know how to retreat wisely.<</speech>><br>
 
-<<speech "mc">>It’s not that I regret it. Just… the curve of my waist, the tilt of my hips it didn’t feel like me. Not today.<</speech>><br>
+<<speech "mc">>It's not that I regret it. Just, the curve of my waist, the tilt of my hips, it didn't feel like me. Not today.<</speech>><br>
 
 [[Move Forth|torso_fs_torso_ms_2]]
 <</nobr>>
@@ -859,26 +859,26 @@ $possible_changes.includes($userBody.torso.orig_body)
 :: torso_fs_torso_ms_2
 <<nobr>>
 
-<<speech "thalara">>This brew doesn’t erase. It rebalances. It straightens what had begun to flow. It gives the core a firmer stance, the ribs a bit more space. It’s not about becoming less it’s about becoming different again.<</speech>><br>
+<<speech "thalara">>This brew doesn't erase. It rebalances. It straightens what had begun to flow. It gives the core a firmer stance, the ribs a bit more space. It's not about becoming less, it's about becoming different again.<</speech>><br>
 
 <<speech "mc">>You're always so poetic about bones and guts.<</speech>><br>
 
-<<speech "thalara">>I talk about the body the way you talk about duty. With reverence and grief.<</speech>><br>
+<<speech "thalara">>I talk about the body the way you talk about duty, with reverence and grief.<</speech>><br>
 
-<<speech "thalara">>Drink. Slowly. You may feel a tightening in the lower ribs, a mild pressure as your frame asserts itself again. The softness you’ve carried these past days may ebb but the memory of it will not vanish.<</speech>><br>
+<<speech "thalara">>Drink slowly. You may feel a tightening in the lower ribs, a mild pressure as your frame asserts itself again. The softness you've carried these past days may ebb, but the memory of it won't vanish.<</speech>><br>
 
 [[Move Forth|torso_fs_torso_ms_3]]
 <</nobr>>
 
 :: torso_fs_torso_ms_3
 <<nobr>>
-<<speech "mc">>And if I wanted to stay like this, halfway?<</speech>><br>
+<<speech "mc">>If I wanted to stay like this, halfway?<</speech>><br>
 
-<<speech "thalara">>Then I would brew you a different tonic. Something that holds the shape between a form both open and defined. But today… you asked for what was before.<</speech>><br>
+<<speech "thalara">>Then I would brew you a different tonic, something that holds the shape between, a form both open and defined. But today you asked for what was before.<</speech>><br>
 
-<<speech "mc">>Mint and ash. That’s… bold.<</speech>><br>
+<<speech "mc">>Mint and ash. That's bold.<</speech>><br>
 
-<<speech "thalara">>The taste of grounding. Earth and will. Fitting.<</speech>><br>
+<<speech "thalara">>The taste of grounding, earth and will. Fitting.<</speech>><br>
 
 [[Move Forth|torso_fs_torso_ms_4]]
 <</nobr>>
@@ -886,13 +886,13 @@ $possible_changes.includes($userBody.torso.orig_body)
 :: torso_fs_torso_ms_4
 <<nobr>>
 
-<<speech "mc">>My waist… it’s pulling in tighter. Not narrowing but bracing. It feels… stronger again.<</speech>><br>
+<<speech "mc">>My waist is pulling in tighter, not narrowing but bracing. It feels stronger again.<</speech>><br>
 
-<<speech "thalara">>The frame returns. Straightens. You’ll feel the tilt of your hips ease, the alignment settle. The softness remains for a time, but the form your form resurfaces with each breath.<</speech>><br>
+<<speech "thalara">>The frame returns, straightens. You'll feel the tilt of your hips ease, the alignment settle. The softness remains for a time, but the form, your form, resurfaces with each breath.<</speech>><br>
 
-<<speech "mc">>It’s strange. I thought I’d feel disappointment. But all I feel is… steadiness.<</speech>><br>
+<<speech "mc">>It's strange. I thought I'd feel disappointment, but all I feel is steadiness.<</speech>><br>
 
-<<speech "thalara">>Then you are walking your own truth. The potion doesn’t define you. You do.<</speech>><br>
+<<speech "thalara">>Then you are walking your own truth. The potion doesn't define you. You do.<</speech>><br>
 
 [[Move Forth|torso_fs_torso_ms_5]]
 <</nobr>>
@@ -900,9 +900,9 @@ $possible_changes.includes($userBody.torso.orig_body)
 :: torso_fs_torso_ms_5
 <<nobr>>
 
-<<speech "mc">>So if I return to F1 again later… you won’t stop me?<</speech>><br>
+<<speech "mc">>If I return to F1 again later, you won't stop me?<</speech>><br>
 
-<<speech "thalara">>I am not here to chain your body. Only to guide it when you call. You may move forward, backward, or sideways and I will craft for you either a crown or a compass.<</speech>><br>
+<<speech "thalara">>I'm not here to chain your body, only to guide it when you call. You may move forward, backward, or sideways, and I will craft for you either a crown or a compass.<</speech>><br>
 
 
 [[I feel the potion working in my torso|use_success_potion_create_torso]]
@@ -919,7 +919,7 @@ $possible_changes.includes($userBody.torso.orig_body)
 <<nobr>>
 <div style="text-align: center; width: 95%;"><img style="text-align: center; border-radius: 9px;
     border: 10px ridge #8b5e3c;width: 95%;" @src="setup.ImagePath+'map/veil_tower_mage_map.png'"></div>
-<<speech "thalara">>You have brewed the potion. Let me see it first.  Caelan Are you ready to start the process...<</speech>>
+<<speech "thalara">>You have brewed the potion. Let me look it over first. Caelan, are you ready to begin?<</speech>>
 <br>
 [[I think I’m ready. It’s strange, but... this feels like becoming something beautiful.|torso_fs_torso_fm_1]] | <br><br>
 [[Still not sure what this makes me. But if I’m going forward, let it be with eyes open.|torso_fs_torso_fm_1]] | <br><br>
@@ -930,51 +930,51 @@ $possible_changes.includes($userBody.torso.orig_body)
 <<nobr>>
 <<speech "thalara">>Four steps down the path, and still your eyes linger on the door before you enter. That tells me something important, Caelan.<</speech>><br>
 
-<<speech "mc">>What’s that? That I’m unsure?<</speech>><br>
+<<speech "mc">>What's that? That I'm unsure?<</speech>><br>
 
-<<speech "thalara">>No. That you’re brave enough to keep returning despite the unknown.<</speech>><br>
+<<speech "thalara">>No, that you're brave enough to keep returning despite the unknown.<</speech>><br>
 
 <<speech "mc">>Or foolish enough to keep drinking potions brewed with stardust and powdered coral spine.<</speech>><br>
 
-<<speech "thalara">>And a sliver of dryad root. Can’t forget the drama.<</speech>><br>
+<<speech "thalara">>A sliver of dryad root too. Can't forget the drama.<</speech>><br>
 
-<<speech "thalara">>Today’s mixture is more elegant than forceful. Less of a reshaping, more… an invitation to form.<</speech>><br>
+<<speech "thalara">>Today's mixture is more elegant than forceful, less of a reshaping, more an invitation to form.<</speech>><br>
 
-<<speech "mc">>My waist already looks like I’ve worn corsets since birth. What more can it do?<</speech>><br>
+<<speech "mc">>My waist already looks like I've worn corsets since birth. What more can it do?<</speech>><br>
 
-<<speech "thalara">>Ah, but it’s not only the waist. It’s the alignment of grace. Your spine will arch slightly, supporting poise. The muscles around your center will shift their memory from power to performance. It’s not about thinness, but balance. Feminine elegance isn’t weak, Caelan. It’s trained.<</speech>><br>
+<<speech "thalara">>Ah, but it's not only the waist. It's the alignment of grace. Your spine will arch slightly, supporting poise. The muscles around your center will shift their memory from power to performance. It's not about thinness, but balance. Feminine elegance isn't weak, Caelan. It's trained.<</speech>><br>
 
-<<speech "mc">>I’ve started to feel it. The way people look at me in the halls… different. Softer eyes. More questions in their stares.<</speech>><br>
+<<speech "mc">>I've started to feel it, the way people look at me in the halls is different now. Softer eyes, more questions in their stares.<</speech>><br>
 
-<<speech "thalara">>Then you are already becoming real to them in this new form. When a prince walks through the court, he is watched. When a queen-in-the-making walks through the court, she is measured.<</speech>><br>
+<<speech "thalara">>Then you are already becoming real to them in this new form. When a prince walks through the court, he is watched. When a queen in the making walks through the court, she is measured.<</speech>><br>
 
-<<speech "mc">>And if I don’t want to be measured like that?<</speech>><br>
+<<speech "mc">>If I don't want to be measured like that?<</speech>><br>
 
-<<speech "thalara">>Then hold your gaze higher than theirs. There’s power in elegance its own kind. This potion is not submission. It is the posture of command, dressed in silk.<</speech>><br>
+<<speech "thalara">>Then hold your gaze higher than theirs. There's power in elegance, its own kind. This potion isn't submission. It's the posture of command, dressed in silk.<</speech>><br>
 
-<<speech "thalara">>Drink. Slowly. It will settle in the ribs first, coaxing them to draw inward. Then to the muscles of the lower back… a subtle persuasion, not a demand. You may feel heat spreading across your middle and down your flanks.<</speech>><br>
+<<speech "thalara">>Drink slowly. It will settle in the ribs first, coaxing them to draw inward, then to the muscles of the lower back, a subtle persuasion, not a demand. You may feel heat spreading across your middle and down your flanks.<</speech>><br>
 
 <<speech "mc">>Does it get easier?<</speech>><br>
 
-<<speech "thalara">>The decisions? Never. The changes? They become familiar. Until one day, they stop feeling like changes at all and simply feel like you.<</speech>><br>
+<<speech "thalara">>The decisions never do. The changes become familiar, until one day they stop feeling like changes at all and simply feel like you.<</speech>><br>
 
-<<speech "mc">>...It tastes like petals. And ash.<</speech>><br>
+<<speech "mc">>It tastes like petals and ash.<</speech>><br>
 
-<<speech "thalara">>Moonpetal blossom. And a flake of burned ivory a symbolic thread, burned bridges and new forms. Breathe.<</speech>><br>
+<<speech "thalara">>Moonpetal blossom, and a flake of burned ivory, a symbolic thread, burned bridges and new forms. Now breathe.<</speech>><br>
 
-<<speech "mc">>It’s tight… not painful. But present. Like something’s being tugged from the inside.<</speech>><br>
+<<speech "mc">>It's tight, not painful, but present. Like something's being tugged from the inside.<</speech>><br>
 
-<<speech "thalara">>That’s the realignment beginning. Your bones will draw closer, the tissue soften just slightly. Your spine is learning a new shape not to bend, but to carry differently.<</speech>><br>
+<<speech "thalara">>That's the realignment beginning. Your bones will draw closer, the tissue soften just slightly. Your spine is learning a new shape, not to bend, but to carry differently.<</speech>><br>
 
-<<speech "mc">>You sound like you’re sculpting a statue.<</speech>><br>
+<<speech "mc">>You sound like you're sculpting a statue.<</speech>><br>
 
-<<speech "thalara">>I am. Only this statue answers back.<</speech>><br>
+<<speech "thalara">>I am, only this statue answers back.<</speech>><br>
 
-<<speech "mc">>Gods… I can feel the valley. The dip it’s like it’s marking me.<</speech>><br>
+<<speech "mc">>Gods, I can feel the valley, the dip. It's like it's marking me.<</speech>><br>
 
-<<speech "thalara">>It’s claiming your center. The masculine flatness gives way to something neither weak nor strong just graceful. Remember this moment. You’ll feel it in every turn, every bow, every gown you wear.<</speech>><br>
+<<speech "thalara">>It's claiming your center. The masculine flatness gives way to something neither weak nor strong, just graceful. Remember this moment. You'll feel it in every turn, every bow, every gown you wear.<</speech>><br>
 
-<<speech "mc">>I don’t know what I’m becoming… but it’s hard to look away.<</speech>><br>
+<<speech "mc">>I don't know what I'm becoming, but it's hard to look away.<</speech>><br>
 [[I feel the potion working in my torso|use_success_potion_create_torso]]
 <</nobr>>
 
@@ -989,7 +989,7 @@ $possible_changes.includes($userBody.torso.orig_body)
 <<nobr>>
 <div style="text-align: center; width: 95%;"><img style="text-align: center; border-radius: 9px;
     border: 10px ridge #8b5e3c;width: 95%;" @src="setup.ImagePath+'map/veil_tower_mage_map.png'"></div>
-<<speech "thalara">>You have brewed the potion. Let me see it first.  Caelan Are you ready to start the process...<</speech>>
+<<speech "thalara">>You have brewed the potion. Let me look it over first. Caelan, are you ready to begin?<</speech>>
 <br>
 [[Maybe I leaned too far. Maybe I need to find the middle again.|torso_fm_torso_fs_1]] | <br><br>
 [[I don’t like going back… but I’m not sure I can carry all this softness just yet.|torso_fm_torso_fs_1]] | <br><br>
@@ -998,13 +998,13 @@ $possible_changes.includes($userBody.torso.orig_body)
 
 :: torso_fm_torso_fs_1
 <<nobr>>
-<<speech "thalara">>You return… not to advance, but to lessen. I’ll admit, Caelan, that’s rare.<</speech>><br>
+<<speech "thalara">>You return, not to advance, but to lessen. I'll admit, Caelan, that's rare.<</speech>><br>
 
-<<speech "mc">>I need to feel… something closer to balance. Something I can still recognize in the mirror.<</speech>><br>
+<<speech "mc">>I need to feel something closer to balance, something I can still recognize in the mirror.<</speech>><br>
 
-<<speech "thalara">>Recognition is a flickering thing. It changes as you do. Are you sure it’s yourself you’re chasing, and not the comfort of what you once were?<</speech>><br>
+<<speech "thalara">>Recognition is a flickering thing. It changes as you do. Are you sure it's yourself you're chasing, and not the comfort of what you once were?<</speech>><br>
 
-<<speech "mc">>I don’t know. Maybe both.<</speech>><br>
+<<speech "mc">>I don't know. Maybe both.<</speech>><br>
 
 [[Move Forth|torso_fm_torso_fs_2]]
 <</nobr>>
@@ -1016,9 +1016,9 @@ $possible_changes.includes($userBody.torso.orig_body)
 
 <<speech "mc">>What exactly will it change?<</speech>><br>
 
-<<speech "thalara">>The pinch in your waist will ease. Your sides will round slightly back into softness not male, not quite female. The subtle arch in your back will level, and your center will carry less ‘song’ and more ‘silence.’ The kind of silence that doesn't declare just waits.<</speech>><br>
+<<speech "thalara">>The pinch in your waist will ease. Your sides will round slightly back into softness, not male, not quite female. The subtle arch in your back will level, and your center will carry less song and more silence, the kind that doesn't declare, just waits.<</speech>><br>
 
-<<speech "mc">>And the court will see that?<</speech>><br>
+<<speech "mc">>The court will see that?<</speech>><br>
 
 [[Move Forth|torso_fm_torso_fs_3]]
 <</nobr>>
@@ -1026,13 +1026,13 @@ $possible_changes.includes($userBody.torso.orig_body)
 :: torso_fm_torso_fs_3
 <<nobr>>
 
-<<speech "thalara">>Yes. You may not wear your promise as clearly. But ambiguity can be a powerful mask, too.<</speech>><br>
+<<speech "thalara">>Yes, though you may not wear your promise as clearly. Ambiguity can be a powerful mask too.<</speech>><br>
 
 <<speech "mc">>It looks duller than the others.<</speech>><br>
 
-<<speech "thalara">>This one is brewed not to awaken, but to dim. That doesn't mean it's empty. Just subtle.<</speech>><br>
+<<speech "thalara">>This one is brewed not to awaken, but to dim. That doesn't mean it's empty, just subtle.<</speech>><br>
 
-<<speech "mc">>Ugh. Like old flowers soaked in rain.<</speech>><br>
+<<speech "mc">>Ugh, like old flowers soaked in rain.<</speech>><br>
 
 [[Move Forth|torso_fm_torso_fs_4]]
 <</nobr>>
@@ -1041,13 +1041,13 @@ $possible_changes.includes($userBody.torso.orig_body)
 :: torso_fm_torso_fs_4
 <<nobr>>
 
-<<speech "thalara">>That’s the fennel root. And withering violet petals. They signal to your body to ease its dramatic shapes… to blur, rather than define.<</speech>><br>
+<<speech "thalara">>That's the fennel root, and withering violet petals. They signal to your body to ease its dramatic shapes, to blur rather than define.<</speech>><br>
 
-<<speech "mc">>It’s already happening. The tightness in my waist… it’s slipping. The spine it’s like someone’s unhooking me from inside.<</speech>><br>
+<<speech "mc">>It's already happening. The tightness in my waist is slipping. My spine, it's like someone's unhooking me from inside.<</speech>><br>
 
-<<speech "thalara">>You wore elegance well, but sometimes, we need space between layers of change. You’re not failing, Caelan. You’re pausing.<</speech>><br>
+<<speech "thalara">>You wore elegance well, but sometimes we need space between layers of change. You're not failing, Caelan. You're pausing.<</speech>><br>
 
-<<speech "mc">>It feels strange. Not wrong, just… uncertain.<</speech>><br>
+<<speech "mc">>It feels strange. Not wrong, just uncertain.<</speech>><br>
 
 [[Move Forth|torso_fm_torso_fs_5]]
 <</nobr>>
@@ -1055,20 +1055,20 @@ $possible_changes.includes($userBody.torso.orig_body)
 :: torso_fm_torso_fs_5
 <<nobr>>
 
-<<speech "thalara">>That’s what F1 is. The liminal shape. Not prince. Not princess. Just possibility.<</speech>><br>
+<<speech "thalara">>That's what F1 is, the liminal shape. Not prince, not princess. Just possibility.<</speech>><br>
 
-<<speech "mc">>And if I want to move forward again later?<</speech>><br>
+<<speech "mc">>If I want to move forward again later?<</speech>><br>
 
-<<speech "thalara">>Then we step with intention. There is no punishment in stepping back. Just as there’s no shame in leaping ahead.<</speech>><br>
+<<speech "thalara">>Then we step with intention. There is no punishment in stepping back, just as there's no shame in leaping ahead.<</speech>><br>
 
-<<speech "mc">>I don’t look like either of them now… the boy I was, or the woman I was becoming.<</speech>><br>
+<<speech "mc">>I don't look like either of them now, the boy I was, or the woman I was becoming.<</speech>><br>
 
 [[Move Forth|torso_fm_torso_fs_6]]
 <</nobr>>
 :: torso_fm_torso_fs_6
 <<nobr>>
 
-<<speech "thalara">>And that, my dear Caelan, can be powerful in itself. Let the world wonder. Let you wonder.<</speech>><br>
+<<speech "thalara">>That, my dear Caelan, can be powerful in itself. Let the world wonder. Let yourself wonder.<</speech>><br>
 [[I feel the potion working in my torso|use_success_potion_create_torso]]
 <</nobr>>
 
@@ -1083,7 +1083,7 @@ $possible_changes.includes($userBody.torso.orig_body)
 <<nobr>>
 <div style="text-align: center; width: 95%;"><img style="text-align: center; border-radius: 9px;
     border: 10px ridge #8b5e3c;width: 95%;" @src="setup.ImagePath+'map/veil_tower_mage_map.png'"></div>
-<<speech "thalara">>You have brewed the potion. Let me see it first.  Caelan Are you ready to start the process...<</speech>>
+<<speech "thalara">>You have brewed the potion. Let me look it over first. Caelan, are you ready to begin?<</speech>>
 <br>
 [[This is the final step. I’m ready. If I am to be a queen, then let my body wear that truth.|torso_fm_torso_fl_1]] | <br><br>
 [[So this is what it comes to… a body shaped not for armor, but for lace.|torso_fm_torso_fl_1]] | <br><br>
@@ -1092,13 +1092,13 @@ $possible_changes.includes($userBody.torso.orig_body)
 
 :: torso_fm_torso_fl_1
 <<nobr>>
-<<speech "thalara">>You’ve returned for the final shaping. This time, the potion knows no hesitation. It will curve what’s straight, soften what’s square, and ready your frame for the mantle of royalty.<</speech>><br>
+<<speech "thalara">>You've returned for the final shaping. This time the potion knows no hesitation. It will curve what's straight, soften what's square, and ready your frame for the mantle of royalty.<</speech>><br>
 
-<<speech "mc">>It’s hard to believe this is still my body. Every sip pulls me further from the battlefield and closer to… the ballroom.<</speech>><br>
+<<speech "mc">>It's hard to believe this is still my body. Every sip pulls me further from the battlefield and closer to the ballroom.<</speech>><br>
 
-<<speech "thalara">>And why should the ballroom be lesser? Power is not always clenched in fists, Caelan. Sometimes it is wielded from a throne, with gloved hands and veiled smiles.<</speech>><br>
+<<speech "thalara">>Why should the ballroom be lesser? Power isn't always clenched in fists, Caelan. Sometimes it's wielded from a throne, with gloved hands and veiled smiles.<</speech>><br>
 
-<<speech "mc">>But this body was once armor. Now you make it into… a gown rack.<</speech>><br>
+<<speech "mc">>But this body was once armor. Now you make it into a gown rack.<</speech>><br>
 
 [[Move Forth|torso_fm_torso_fl_2]]
 <</nobr>>
@@ -1106,13 +1106,13 @@ $possible_changes.includes($userBody.torso.orig_body)
 :: torso_fm_torso_fl_2
 <<nobr>>
 
-<<speech "thalara">>Not just a rack for silks and stays. A symbol. A declaration. This final form Feminine Level Three is not weakness. It’s a banner. It says, 'I am not a prince hiding in silk I am a queen claiming it.'<</speech>><br>
+<<speech "thalara">>Not just a rack for silks and stays. A symbol, a declaration. This final form, Feminine Level Three, is not weakness. It's a banner. It says, I am not a prince hiding in silk, I am a queen claiming it.<</speech>><br>
 
 <<speech "mc">>What exactly will it change?<</speech>><br>
 
-<<speech "thalara">>Your ribcage will narrow further. The waist will cinch in, almost naturally corset-shaped. The line from your shoulder to hip will slope in the manner tailors adore. You’ll be ready to wear gowns that whisper of station and seduction, without a word spoken.<</speech>><br>
+<<speech "thalara">>Your ribcage will narrow further. The waist will cinch in, almost naturally corset shaped. The line from your shoulder to hip will slope in the manner tailors adore. You'll be ready to wear gowns that whisper of station and seduction, without a word spoken.<</speech>><br>
 
-<<speech "mc">>And once it’s done… there’s no mistaking it, is there?<</speech>><br>
+<<speech "mc">>Once it's done, there's no mistaking it, is there?<</speech>><br>
 
 
 [[Move Forth|torso_fm_torso_fl_3]]
@@ -1121,13 +1121,13 @@ $possible_changes.includes($userBody.torso.orig_body)
 :: torso_fm_torso_fl_3
 <<nobr>>
 
-<<speech "thalara">>No. Once this takes hold, no one will look at you and think ‘he.’ They’ll see the heir not as a compromise, but as a woman destined to reign.<</speech>><br>
+<<speech "thalara">>No, once this takes hold, no one will look at you and think he. They'll see the heir not as a compromise, but as a woman destined to reign.<</speech>><br>
 
 <<speech "mc">>Is that what my mother saw when she made this pact with you?<</speech>><br>
 
 <<speech "thalara">>She saw your strength and wanted to teach you how to use it in every form. She believes in a ruler who understands both sword and scepter, steel and satin.<</speech>><br>
 
-<<speech "mc">>It smells sweet. Like lavender before a storm.<</speech>><br>
+<<speech "mc">>It smells sweet, like lavender before a storm.<</speech>><br>
 
 [[Move Forth|torso_fm_torso_fl_4]]
 <</nobr>>
@@ -1138,11 +1138,11 @@ $possible_changes.includes($userBody.torso.orig_body)
 
 <<speech "thalara">>Salt and flower. The body remembers battle, even as it bends toward grace.<</speech>><br>
 
-<<speech "mc">>It’s… warm. Tight. My ribs feel like they’re being drawn together with string.<</speech>><br>
+<<speech "mc">>It's warm, tight. My ribs feel like they're being drawn together with string.<</speech>><br>
 
-<<speech "thalara">>That’s the bone alignment shifting. Your waistline narrows naturally now. It’s not a trick of lacing or illusion this is the shape your body was always ready to hold.<</speech>><br>
+<<speech "thalara">>That's the bone alignment shifting. Your waistline narrows naturally now. It's not a trick of lacing or illusion, this is the shape your body was always ready to hold.<</speech>><br>
 
-<<speech "mc">>And my spine… it’s pulling straighter. I feel like I’m standing taller, but softer too.<</speech>><br>
+<<speech "mc">>My spine is pulling straighter. I feel like I'm standing taller, but softer too.<</speech>><br>
 
 [[Move Forth|torso_fm_torso_fl_5]]
 <</nobr>>
@@ -1150,13 +1150,13 @@ $possible_changes.includes($userBody.torso.orig_body)
 :: torso_fm_torso_fl_5
 <<nobr>>
 
-<<speech "thalara">>The potion encourages posture meant for thrones and audiences. You’ll walk like a procession, even alone.<</speech>><br>
+<<speech "thalara">>The potion encourages posture meant for thrones and audiences. You'll walk like a procession, even alone.<</speech>><br>
 
-<<speech "mc">>It’s beautiful. Strange. I used to dread this moment… but now I just feel full. Full of something new.<</speech>><br>
+<<speech "mc">>It's beautiful, strange. I used to dread this moment, but now I just feel full. Full of something new.<</speech>><br>
 
-<<speech "thalara">>You are regal now, in body and bearing. No more halfway. No more waiting. You are corset-ready not because it binds you, but because it frames you.<</speech>><br>
+<<speech "thalara">>You are regal now, in body and bearing. No more halfway, no more waiting. You are corset ready, not because it binds you, but because it frames you.<</speech>><br>
 
-<<speech "mc">>And if I put armor back on?<</speech>><br>
+<<speech "mc">>If I put armor back on?<</speech>><br>
 
 [[Move Forth|torso_fm_torso_fl_6]]
 <</nobr>>
@@ -1164,7 +1164,7 @@ $possible_changes.includes($userBody.torso.orig_body)
 :: torso_fm_torso_fl_6
 <<nobr>>
 
-<<speech "thalara">>Then let the enemy fall to their knees before the most dangerous shape of all: a woman who chose her crown and sculpted herself to wear it.<</speech>><br>
+<<speech "thalara">>Then let the enemy fall to their knees before the most dangerous shape of all, a woman who chose her crown and sculpted herself to wear it.<</speech>><br>
 [[I feel the potion working in my torso|use_success_potion_create_torso]]
 <</nobr>>
 
@@ -1179,7 +1179,7 @@ $possible_changes.includes($userBody.torso.orig_body)
 <<nobr>>
 <div style="text-align: center; width: 95%;"><img style="text-align: center; border-radius: 9px;
     border: 10px ridge #8b5e3c;width: 95%;" @src="setup.ImagePath+'map/veil_tower_mage_map.png'"></div>
-<<speech "thalara">>You have brewed the potion. Let me see it first.  Caelan Are you ready to start the process...<</speech>>
+<<speech "thalara">>You have brewed the potion. Let me look it over first. Caelan, are you ready to begin?<</speech>>
 <br>
 [[I need to take a step back. Too much, too soon. Let me breathe in something simpler.|torso_fl_torso_fm_1]] | <br><br>
 [[This feels like undoing progress, but… maybe it's necessary. Maybe I wasn’t ready for the gown.|torso_fl_torso_fm_1]] | <br><br>
@@ -1188,13 +1188,13 @@ $possible_changes.includes($userBody.torso.orig_body)
 
 :: torso_fl_torso_fm_1
 <<nobr>>
-<<speech "thalara">>So, we ease the grip of elegance today. The body you wore with pride refined, sculpted will step back into something less… ceremonial.<</speech>><br>
+<<speech "thalara">>So, we ease the grip of elegance today. The body you wore with pride, refined, sculpted, will step back into something less ceremonial.<</speech>><br>
 
-<<speech "mc">>It’s strange. I thought once I crossed that line once I became her there’d be no going back.<</speech>><br>
+<<speech "mc">>It's strange. I thought once I crossed that line, once I became her, there'd be no going back.<</speech>><br>
 
-<<speech "thalara">>That’s the myth, isn’t it? That transformation is a one-way street. But no magic I wield is about prisons. It’s about choice.<</speech>><br>
+<<speech "thalara">>That's the myth, isn't it, that transformation is a one way street. No magic I wield is about prisons. It's about choice.<</speech>><br>
 
-<<speech "mc">>I wore that figure like a crown. And yet… it felt heavy. As if I had to walk like a portrait, not a person.<</speech>><br>
+<<speech "mc">>I wore that figure like a crown, and yet it felt heavy, as if I had to walk like a portrait, not a person.<</speech>><br>
 
 [[Move Forth|torso_fl_torso_fm_2]]
 <</nobr>>
@@ -1204,15 +1204,15 @@ $possible_changes.includes($userBody.torso.orig_body)
 :: torso_fl_torso_fm_2
 <<nobr>>
 
-<<speech "thalara">>That’s because the world demands perfection from women who rule. But power does not always need to be laced at the waist.<</speech>><br>
+<<speech "thalara">>That's because the world demands perfection from women who rule. But power doesn't always need to be laced at the waist.<</speech>><br>
 
-<<speech "mc">>So this… will unlace me?<</speech>><br>
+<<speech "mc">>So this will unlace me?<</speech>><br>
 
-<<speech "thalara">>It will ease you back to something softer. Still feminine. Still shaped. But not carved like a statue. You’ll move with curve, not edge.<</speech>><br>
+<<speech "thalara">>It will ease you back to something softer, still feminine, still shaped, but not carved like a statue. You'll move with curve, not edge.<</speech>><br>
 
-<<speech "mc">>And it won’t erase everything?<</speech>><br>
+<<speech "mc">>It won't erase everything?<</speech>><br>
 
-<<speech "thalara">>No. You’ll still hold the grace. Just less of the posture, less of the narrow cinch that made every breath feel rehearsed.<</speech>><br>
+<<speech "thalara">>No, you'll still hold the grace. Just less of the posture, less of the narrow cinch that made every breath feel rehearsed.<</speech>><br>
 
 [[Move Forth|torso_fl_torso_fm_3]]
 <</nobr>>
@@ -1220,13 +1220,13 @@ $possible_changes.includes($userBody.torso.orig_body)
 :: torso_fl_torso_fm_3
 <<nobr>>
 
-<<speech "mc">>Honestly… I want to breathe again.<</speech>><br>
+<<speech "mc">>Honestly, I want to breathe again.<</speech>><br>
 
-<<speech "thalara">>Then drink. And let your body remember what it is to move without performance.<</speech>><br>
+<<speech "thalara">>Then drink, and let your body remember what it is to move without performance.<</speech>><br>
 
-<<speech "mc">>It’s… colder. Less sweet than the last one.<</speech>><br>
+<<speech "mc">>It's colder, less sweet than the last one.<</speech>><br>
 
-<<speech "thalara">>Because it releases. The previous potion constructed this one relaxes.<</speech>><br>
+<<speech "thalara">>Because this one releases. The previous potion constructed. This one relaxes.<</speech>><br>
 
 [[Move Forth|torso_fl_torso_fm_4]]
 <</nobr>>
@@ -1234,13 +1234,13 @@ $possible_changes.includes($userBody.torso.orig_body)
 :: torso_fl_torso_fm_4
 <<nobr>>
 
-<<speech "mc">>My ribs… spreading slightly. Not quite as tight. I can feel the corset lines unwinding in my posture.<</speech>><br>
+<<speech "mc">>My ribs are spreading slightly, not quite as tight. I can feel the corset lines unwinding in my posture.<</speech>><br>
 
-<<speech "thalara">>And your spine see how it no longer arches quite so sharply? You’ll still turn heads, Caelan, just without straining to hold every gaze.<</speech>><br>
+<<speech "thalara">>Your spine too, see how it no longer arches quite so sharply. You'll still turn heads, Caelan, just without straining to hold every gaze.<</speech>><br>
 
-<<speech "mc">>My waist is still curved, but… it looks more natural. Less drawn. I don’t feel as… poised, but I feel more real.<</speech>><br>
+<<speech "mc">>My waist is still curved, but it looks more natural, less drawn. I don't feel as poised, but I feel more real.<</speech>><br>
 
-<<speech "thalara">>Feminine does not always mean fashioned. Sometimes, it simply is. This form? This is the middle path. The honest one.<</speech>><br>
+<<speech "thalara">>Feminine doesn't always mean fashioned. Sometimes it simply is. This form is the middle path. The honest one.<</speech>><br>
 
 [[Move Forth|torso_fl_torso_fm_5]]
 <</nobr>>
@@ -1248,8 +1248,8 @@ $possible_changes.includes($userBody.torso.orig_body)
 :: torso_fl_torso_fm_5
 <<nobr>>
 
-<<speech "mc">>I thought stepping back would feel like failing. But… it’s not.<</speech>><br>
+<<speech "mc">>I thought stepping back would feel like failing, but it's not.<</speech>><br>
 
-<<speech "thalara">>No. It’s understanding. Your body is not a costume. It’s a dialogue. And today, it speaks with a gentler tone.<</speech>><br>
+<<speech "thalara">>No, it's understanding. Your body isn't a costume. It's a dialogue, and today it speaks with a gentler tone.<</speech>><br>
 [[I feel the potion working in my torso|use_success_potion_create_torso]]
 <</nobr>>

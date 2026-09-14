@@ -240,7 +240,7 @@
 <<nobr>>
 <div style="text-align: center; width: 95%;"><img style="text-align: center; border-radius: 9px;
     border: 10px ridge #8b5e3c;width: 95%;" @src="setup.ImagePath+'map/veil_tower_mage_map.png'"></div>
-<<speech "thalara">>You have brewed the potion. Let me see it first.  Caelan Are you ready to start the process...<</speech>>
+<<speech "thalara">>You've brewed the potion. Let me look it over first. Caelan, are you ready to begin?<</speech>>
 <br>
 [[I’m ready, Thalara. Let’s begin.|hair_1_hair_2_1]] | <br><br>
 [[…I still don’t know if this is right, but… I’m here. Do what you must.|hair_1_hair_2_1]] | <br><br>
@@ -250,13 +250,13 @@
 :: hair_1_hair_2_1
 <<nobr>>
 <br>
-<<speech "thalara">>Choice is a curious thing, Your Highness. Some find it in rebellion, others in surrender. But even indecision... is a choice in disguise.<</speech>><br>
+<<speech "thalara">>Choice is a curious thing, Your Highness. Some find it in rebellion, others in surrender. But even indecision is a choice wearing a disguise.<</speech>><br>
 
 <<speech "mc">>You speak in riddles, Thalara. Do you ever say anything plainly?<</speech>><br>
 
-<<speech "thalara">>Rarely. Plain words carry heavy truths, and most prefer a little mystery in their medicine.<</speech>><br>
+<<speech "thalara">>Rarely, if I can help it. Plain words carry heavy truths, and most people prefer a little mystery mixed into their medicine.<</speech>><br>
 
-<<speech "thalara">>Hair is trivial to most. A vanity. A fashion. But for those born to rule in Velmoria, it is part of the rite. Our ancestors believed that a ruler’s hair must mirror her heart growing wild only when she accepts herself.<</speech>><br>
+<<speech "thalara">>Hair is trivial to most. A vanity, a fashion. But for those born to rule in Velmoria, it's part of the rite. Our ancestors believed a ruler's hair mirrors her heart, growing wild only once she accepts herself.<</speech>><br>
 
 [[Move Forth|hair_1_hair_2_2]]
 <</nobr>>
@@ -264,13 +264,13 @@
 :: hair_1_hair_2_2
 <<nobr>>
 
-<<speech "mc">>And if I never accept myself like that? If I don’t want to grow into the queen they all expect?<</speech>><br>
+<<speech "mc">>What if I never accept myself like that? What if I don't want to grow into the queen they all expect?<</speech>><br>
 
-<<speech "thalara">>Then you may never grow hair beyond your collar… or perhaps you’ll grow it and still feel like a stranger inside your own skin. But that is not failure, dear prince. That is simply a different path.<</speech>><br>
+<<speech "thalara">>Then you may never grow hair beyond your collar, or perhaps you'll grow it and still feel like a stranger inside your own skin. That's not failure, dear prince. That's simply a different path.<</speech>><br>
 
-<<speech "thalara">>This potion will awaken the follicles that once lay dormant. It is slow, respectful magic. The body must learn it is safe to change.<</speech>><br>
+<<speech "thalara">>This potion will awaken the follicles that once lay dormant. It's slow, respectful magic. The body has to learn it's safe to change.<</speech>><br>
 
-<<speech "mc">>It tingles already. Like… like my head is remembering something it forgot.<</speech>><br>
+<<speech "mc">>It's tingling already. Like my head is remembering something it forgot.<</speech>><br>
 
 [[Move Forth|hair_1_hair_2_3]]
 <</nobr>>
@@ -278,13 +278,13 @@
 :: hair_1_hair_2_3
 <<nobr>>
 
-<<speech "thalara">>Good. That’s the potion greeting your nerves. The mind resists faster than the flesh, but flesh has patience. You may fight it, mourn it, or lean into it. All of those reactions are sacred.<</speech>><br>
+<<speech "thalara">>Good, that's the potion greeting your nerves. The mind resists faster than the flesh, but flesh has patience. You may fight it, mourn it, or lean into it. All of those reactions are sacred.<</speech>><br>
 
-<<speech "mc">>Is it wrong that I feel… nervous?<</speech>><br>
+<<speech "mc">>Is it wrong that I feel nervous?<</speech>><br>
 
-<<speech "thalara">>No. It would be stranger if you felt nothing. But nerves are not enemies. They are just truth in motion.<</speech>><br>
+<<speech "thalara">>It would be stranger if you felt nothing. Nerves aren't enemies. They're just truth in motion.<</speech>><br>
 
-<<speech "thalara">>Look. Only wisps now, but they are yours. The first strand, born of your decision however it was made.<</speech>><br>
+<<speech "thalara">>Look there, only wisps now, but they're yours. The first strand, born of your decision, however it was made.<</speech>><br>
 
 [[Move Forth|hair_1_hair_2_4]]
 <</nobr>>
@@ -292,20 +292,20 @@
 :: hair_1_hair_2_4
 <<nobr>>
 
-<<speech "mc">>It looks soft… like my mother’s when I was little.<</speech>><br>
+<<speech "mc">>It looks soft, like my mother's when I was little.<</speech>><br>
 
-<<speech "thalara">>Then you carry more of her than you knew. But you are not her echo, Caelan. You are your own unfolding.<</speech>><br>
+<<speech "thalara">>Then you carry more of her than you knew. But you're not her echo, Caelan. You're your own unfolding.<</speech>><br>
 
 <<speech "mc">>Will the rest be like this? Gentle and slow?<</speech>><br>
 
-<<speech "thalara">>Some potions are like whispers. Others like fire. When we begin changing what lies below the scalp bones, skin, organs there may be… harsher tides. But the hair? It begins with kindness.<</speech>><br>
+<<speech "thalara">>Some potions are like whispers. Others like fire. When we begin changing what lies below the scalp, the bones, the skin, the organs, there may be harsher tides. But the hair begins with kindness.<</speech>><br>
 
 [[Move Forth|hair_1_hair_2_5]]
 <</nobr>>
 
 :: hair_1_hair_2_5
 <<nobr>>
-<<speech "thalara">>This session is complete. Rest well. Tonight, your head dreams as a prince. Tomorrow, it may wake as something new.<</speech>><br>
+<<speech "thalara">>This session is complete. Rest well. Tonight your head dreams as a prince. Tomorrow it may wake as something new.<</speech>><br>
 [[I feel the potion working in my head and hair|use_success_potion_create_hair]]
 <</nobr>>
 
@@ -320,7 +320,7 @@
 <<nobr>>
 <div style="text-align: center; width: 95%;"><img style="text-align: center; border-radius: 9px;
     border: 10px ridge #8b5e3c;width: 95%;" @src="setup.ImagePath+'map/veil_tower_mage_map.png'"></div>
-<<speech "thalara">>You have brewed the potion. Let me see it first.  Caelan Are you ready to start the process...<</speech>>
+<<speech "thalara">>You've brewed the potion. Let me look it over first. Caelan, are you ready to begin?<</speech>>
 <br>
 [[It’s growing faster than I thought. I… don’t hate how it feels.|hair_2_hair_3_1]] | <br><br>
 [[I’m not sure this is what I want yet… but I guess we keep going.|hair_2_hair_3_1]] | <br><br>
@@ -330,13 +330,13 @@
 :: hair_2_hair_3_1
 <<nobr>>
 <br>
-<<speech "thalara">>Your hair tells more stories than your lips ever will, Caelan. You may lie, you may hide but each inch grown is a secret whispered to the world.<</speech>><br>
+<<speech "thalara">>Your hair tells more stories than your lips ever will, Caelan. You may lie, you may hide, but each inch grown is a secret whispered to the world.<</speech>><br>
 
 <<speech "mc">>I don’t want the world whispering about me. Not like this.<</speech>><br>
 
-<<speech "thalara">>Then let it whisper. And you… you may choose whether to listen or ignore it. That too is power.<</speech>><br>
+<<speech "thalara">>Then let it whisper. You still choose whether to listen or ignore it. That too is power.<</speech>><br>
 
-<<speech "mc">>It’s strange. I thought hair would just be hair. But every session feels like another part of me is being... unraveled. Rewritten.<</speech>><br>
+<<speech "mc">>It’s strange. I thought hair would just be hair. But every session feels like another part of me is being unraveled, then rewritten.<</speech>><br>
 
 [[Move Forth|hair_2_hair_3_2]]
 <</nobr>>
@@ -344,11 +344,11 @@
 :: hair_2_hair_3_2
 <<nobr>>
 
-<<speech "thalara">>Because it is. Hair has memory. Not just of genetics, but of intent. Each time I touch your crown, it listens. It remembers your resistance. Your surrender. Your curiosity.<</speech>><br>
+<<speech "thalara">>Because it is. Hair has memory, not just of genetics, but of intent. Each time I touch your crown, it listens. It remembers your resistance, your surrender, your curiosity.<</speech>><br>
 
 <<speech "mc">>What if I don’t know what I’m feeling anymore? Some days I wake up and want this. Others I feel like I’m erasing myself.<</speech>><br>
 
-<<speech "thalara">>You are not erasing. You are shedding. There's a difference. The serpent does not mourn its old skin. The tree does not grieve last season’s leaves. And yet both continue wiser, changed, alive.<</speech>><br>
+<<speech "thalara">>You are not erasing. You are shedding, and there's a difference. The serpent does not mourn its old skin. The tree does not grieve last season’s leaves, and yet both continue on, wiser, changed, alive.<</speech>><br>
 
 <<speech "mc">>You make it sound beautiful. But it doesn’t always feel that way. Sometimes I feel like I’m pretending. Like I’m performing softness, but I still ache inside.<</speech>><br>
 
@@ -357,13 +357,13 @@
 
 :: hair_2_hair_3_3
 <<nobr>>
-<<speech "thalara">>And yet here you are sitting before me, letting the strands grow. Even pretending is a kind of bravery. Sometimes we walk into roles before we grow into them.<</speech>><br>
+<<speech "thalara">>Yet here you are, sitting before me, letting the strands grow. Even pretending is a kind of bravery. Sometimes we walk into roles before we grow into them.<</speech>><br>
 
 <<speech "mc">>That sounds like manipulation.<</speech>><br>
 
-<<speech "thalara">>No. It is hope. I am not twisting you. I am showing you the mirror and asking, 'What might you become if you stepped closer?'<</speech>><br>
+<<speech "thalara">>It's hope, not manipulation. I am not twisting you. I am holding up the mirror and asking, what might you become if you stepped closer?<</speech>><br>
 
-<<speech "thalara">>See how it falls now less like the child prince, more like the lady who waits beneath. But only if you wish her to be.<</speech>><br>
+<<speech "thalara">>See how it falls now, less like the child prince, more like the lady who waits beneath. But only if you wish her to be.<</speech>><br>
 
 [[Move Forth|hair_2_hair_3_4]]
 <</nobr>>
@@ -372,18 +372,18 @@
 <<nobr>>
 <<speech "mc">>I… look different already. Not just in the mirror. Even when I speak, I hear it. My voice isn’t higher, but the tone… the hesitations…<</speech>><br>
 
-<<speech "thalara">>Ah. That is the mind catching up to the body. And soon, the body will follow the soul’s pacing.<</speech>><br>
+<<speech "thalara">>That's the mind catching up to the body. Soon enough the body will follow the soul's pacing.<</speech>><br>
 
 <<speech "mc">>Do you think I’ll ever feel... like her? Like a real woman, not just a made one?<</speech>><br>
 
-<<speech "thalara">>Real is not a mold. It is a resonance. If you feel the music rising inside you, you are not fake you are becoming. All of this..." she gestures to your reflection "…is simply harmony catching up.<</speech>><br>
+<<speech "thalara">>Real is not a mold. It is a resonance. If you feel the music rising inside you, you are not faking, you are becoming. All of this, she says, gesturing to your reflection, is simply harmony catching up.<</speech>><br>
 
 [[Move Forth|hair_2_hair_3_5]]
 <</nobr>>
 
 :: hair_2_hair_3_5
 <<nobr>>
-<<speech "thalara">>Hair to frame your face. Words to shape your future. And a body in-between, learning to trust you.<</speech>><br>
+<<speech "thalara">>Hair to frame your face, words to shape your future, and a body in between, learning to trust you.<</speech>><br>
 
 <<speech "mc">>How much longer until it reaches my shoulders?<</speech>><br>
 
@@ -404,7 +404,7 @@
 <<nobr>>
 <div style="text-align: center; width: 95%;"><img style="text-align: center; border-radius: 9px;
     border: 10px ridge #8b5e3c;width: 95%;" @src="setup.ImagePath+'map/veil_tower_mage_map.png'"></div>
-<<speech "thalara">>You have brewed the potion. Let me see it first.  Caelan Are you ready to start the process...<</speech>>
+<<speech "thalara">>You've brewed the potion. Let me look it over first. Caelan, are you ready to begin?<</speech>>
 <br>
 [[You weren’t lying this part is starting to feel… kind of nice.|hair_3_hair_4_1]] | <br><br>
 [[This is happening faster than I expected. I’m not sure I’m keeping up.|hair_3_hair_4_1]] | <br><br>
@@ -413,7 +413,7 @@
 
 :: hair_3_hair_4_1
 <<nobr>>
-<<speech "thalara">>Hair that flows, Caelan, has little to do with beauty. It’s not for their gaze it’s for your reflection.<</speech>><br>
+<<speech "thalara">>Hair that flows, Caelan, has little to do with beauty. It’s not for their gaze, it’s for your reflection.<</speech>><br>
 
 <<speech "mc">>You say that like I’m supposed to believe this is for me, not the throne.<</speech>><br>
 
@@ -431,7 +431,7 @@
 
 <<speech "mc">>That I’m not who I used to be. That something is changing, and I can’t slow it down anymore.<</speech>><br>
 
-<<speech "thalara">>Change is a current. You can swim with it or against it but either way, you will be moved.<</speech>><br>
+<<speech "thalara">>Change is a current. You can swim with it or against it, but either way, you will be moved.<</speech>><br>
 
 <<speech "thalara">>Do you know what it meant, once, to let one’s hair grow beyond the collar in Velmoria?<</speech>><br>
 
@@ -441,13 +441,13 @@
 :: hair_3_hair_4_3
 <<nobr>>
 
-<<speech "mc">>No. Another ancient rite I’ve never heard of?<</speech>><br>
+<<speech "mc">>Not really. Another ancient rite I’ve never heard of?<</speech>><br>
 
-<<speech "thalara">>Mmm. In the old kingdoms, it was a sign of spiritual readiness of leaving behind the boy's sword and taking up the queen’s mantle. To let one’s hair touch the back was to welcome intuition over instinct. Wisdom over conquest.<</speech>><br>
+<<speech "thalara">>Mm, in the old kingdoms it was a sign of spiritual readiness, of leaving behind the boy's sword and taking up the queen’s mantle. To let one’s hair touch the back was to welcome intuition over instinct, wisdom over conquest.<</speech>><br>
 
 <<speech "mc">>I wasn’t raised to think that way. Everything was discipline, duty, dominion.<</speech>><br>
 
-<<speech "thalara">>And yet you sit here, letting starlight drip through your veins.<</speech>><br>
+<<speech "thalara">>Yet here you sit, letting starlight drip through your veins.<</speech>><br>
 
 [[Move Forth|hair_3_hair_4_4]]
 <</nobr>>
@@ -472,9 +472,9 @@
 
 <<speech "thalara">>You’re starting to look like yourself, when you’re no longer trying to fit someone else’s shape.<</speech>><br>
 
-<<speech "mc">>And if I change too much and decide I don’t want to go back?<</speech>><br>
+<<speech "mc">>What if I change too much and decide I don’t want to go back?<</speech>><br>
 
-<<speech "thalara">>Then you’ve found your truth. And truth is no betrayal it’s a kind of return. A coming home.<</speech>><br>
+<<speech "thalara">>Then you’ve found your truth. Truth is no betrayal, it’s a kind of return, a coming home.<</speech>><br>
 
 <<speech "thalara">>That reaction? That’s not magic. That’s you feeling your own form anew.<</speech>><br>
 
@@ -485,7 +485,7 @@
 <<nobr>>
 <<speech "mc">>I didn’t expect to feel… sensual. That’s not something I ever associated with myself.<</speech>><br>
 
-<<speech "thalara">>That’s because it was hidden beneath armor. This is not weakness. It’s awareness. And awareness breeds presence. Presence breeds power.<</speech>><br>
+<<speech "thalara">>That’s because it was hidden beneath armor. This is not weakness. It’s awareness, and awareness breeds presence. Presence breeds power.<</speech>><br>
 
 <<speech "thalara">>Now your hair rests not only as a crown, but as a curtain framing the thoughts you have yet to speak aloud. When the council looks at you next, they won’t see a boy trying. They’ll see a ruler emerging.<</speech>><br>
 [[I feel the potion working in my head and hair|use_success_potion_create_hair]]
@@ -502,7 +502,7 @@
 <<nobr>>
 <div style="text-align: center; width: 95%;"><img style="text-align: center; border-radius: 9px;
     border: 10px ridge #8b5e3c;width: 95%;" @src="setup.ImagePath+'map/veil_tower_mage_map.png'"></div>
-<<speech "thalara">>You have brewed the potion. Let me see it first.  Caelan Are you ready to start the process...<</speech>>
+<<speech "thalara">>You've brewed the potion. Let me look it over first. Caelan, are you ready to begin?<</speech>>
 <br>
 [[I’ve actually been looking forward to this one. There’s something… grounding about the ritual.|hair_4_hair_5_1]] | <br><br>
 [[It’s just brushing, right? That doesn’t sound so bad… unless there’s a catch?|hair_4_hair_5_1]] | <br><br>
@@ -515,9 +515,9 @@
 
 <<speech "mc">>So you want me to slow down, savor every strand?<</speech>><br>
 
-<<speech "thalara">>No. I want you to notice yourself really notice. Not in fragments or reactions, but in rhythm. Brushing teaches presence, something rulers often lose in pursuit of power.<</speech>><br>
+<<speech "thalara">>I want you to notice yourself, really notice. Not in fragments or reactions, but in rhythm. Brushing teaches presence, something rulers often lose in pursuit of power.<</speech>><br>
 
-<<speech "mc">>It’s strange… I used to think growing my hair was something girls did to attract attention. Something soft. Decorative.<</speech>><br>
+<<speech "mc">>It’s strange… I used to think growing my hair was something girls did to attract attention. Something soft and decorative.<</speech>><br>
 
 [[Move Forth|hair_4_hair_5_2]]
 <</nobr>>
@@ -525,13 +525,13 @@
 :: hair_4_hair_5_2
 <<nobr>>
 
-<<speech "thalara">>And now?<</speech>><br>
+<<speech "thalara">>And what do you think now?<</speech>><br>
 
-<<speech "mc">>Now I realize it’s work. The brushing alone takes patience. And there’s something… intimate about it.<</speech>><br>
+<<speech "mc">>Now I realize it’s work. The brushing alone takes patience, and there’s something intimate about it.<</speech>><br>
 
-<<speech "thalara">>Exactly. Intimacy with the self. We spend so much time trying to be seen that we forget how to look inward. Brushing is a conversation with your reflection one without words.<</speech>><br>
+<<speech "thalara">>Intimacy with the self, precisely. We spend so much time trying to be seen that we forget how to look inward. Brushing is a conversation with your reflection, one without words.<</speech>><br>
 
-<<speech "mc">>And what is this reflection supposed to say back?<</speech>><br>
+<<speech "mc">>What is this reflection supposed to say back?<</speech>><br>
 
 [[Move Forth|hair_4_hair_5_3]]
 <</nobr>>
@@ -541,7 +541,7 @@
 
 <<speech "thalara">>‘I am changing, and I am watching myself change. I do not flinch from either truth.’<</speech>><br>
 
-<<speech "mc">>I used to polish my boots before battle. That was ritual too. But this… this feels different. Softer. Not weaker, just... quieter.<</speech>><br>
+<<speech "mc">>I used to polish my boots before battle. That was ritual too. But this feels different, softer, not weaker, just quieter.<</speech>><br>
 
 <<speech "thalara">>You’re learning the difference between force and presence. Force pushes. Presence pulls. Hair, especially long hair, pulls attention. It demands softness to manage, but grace to carry.<</speech>><br>
 
@@ -553,11 +553,11 @@
 :: hair_4_hair_5_4
 <<nobr>>
 
-<<speech "thalara">>It is asking. You’re just listening now. And more importantly you’re responding.<</speech>><br>
+<<speech "thalara">>It is asking. You’re just listening now, and more importantly, you’re responding.<</speech>><br>
 
-<<speech "mc">>And what if I don’t want to become someone who has to worry about these things?<</speech>><br>
+<<speech "mc">>What if I don’t want to become someone who has to worry about these things?<</speech>><br>
 
-<<speech "thalara">>Then don’t. But know this: worry and awareness are not the same. You can wear long hair and still wield a sword. You can glide like silk and still command like steel.<</speech>><br>
+<<speech "thalara">>Then don’t. But understand this much, worry and awareness are not the same. You can wear long hair and still wield a sword. You can glide like silk and still command like steel.<</speech>><br>
 
 <<speech "mc">>I didn’t think I’d be so aware of something so… simple.<</speech>><br>
 
@@ -567,11 +567,11 @@
 :: hair_4_hair_5_5
 <<nobr>>
 
-<<speech "thalara">>It’s not simple. It’s symbolic. You are shaping how you’ll be perceived, yes but you’re also shaping how you’ll perceive yourself.<</speech>><br>
+<<speech "thalara">>It’s not simple. It’s symbolic. You are shaping how you’ll be perceived, yes, but you’re also shaping how you’ll perceive yourself.<</speech>><br>
 
-<<speech "mc">>And if I start liking this more than I thought I would?<</speech>><br>
+<<speech "mc">>What if I start liking this more than I thought I would?<</speech>><br>
 
-<<speech "thalara">>Then you are discovering something vital: this path doesn’t rob you of identity it reveals it.<</speech>><br>
+<<speech "thalara">>Then you are discovering something vital, that this path doesn’t rob you of identity, it reveals it.<</speech>><br>
 
 <<speech "thalara">>Let your hair fall like a banner behind you, Caelan. Not of surrender… but of awakening.<</speech>><br>
 [[I feel the potion working in my head and hair|use_success_potion_create_hair]]
@@ -587,7 +587,7 @@
 <<nobr>>
 <div style="text-align: center; width: 95%;"><img style="text-align: center; border-radius: 9px;
     border: 10px ridge #8b5e3c;width: 95%;" @src="setup.ImagePath+'map/veil_tower_mage_map.png'"></div>
-<<speech "thalara">>You have brewed the potion. Let me see it first.  Caelan Are you ready to start the process...<</speech>>
+<<speech "thalara">>You've brewed the potion. Let me look it over first. Caelan, are you ready to begin?<</speech>>
 <br>
 [[You’ve got that look again, Thalara. The one that says I’m about to feel something new.|hair_5_hair_6_1]] | <br><br>
 [[Mid-back, huh? Sounds… manageable. I suppose I can live with that.|hair_5_hair_6_1]] | <br><br>
@@ -596,11 +596,11 @@
 
 :: hair_5_hair_6_1
 <<nobr>>
-<<speech "thalara">>You always think these potions take something from you. But they don’t strip they reveal.<</speech>><br>
+<<speech "thalara">>You always think these potions take something from you. But they don’t strip, they reveal.<</speech>><br>
 
 <<speech "mc">>Easy for you to say. You’re not the one growing a silk curtain down your spine.<</speech>><br>
 
-<<speech "thalara">>No. But I remember when mine reached that length. I remember how it changed how I moved, how I sat, how I felt seen. There is power in the way something brushes against you constantly it reminds you of your presence.<</speech>><br>
+<<speech "thalara">>Fair, but I remember when mine reached that length. I remember how it changed how I moved, how I sat, how I felt seen. There is power in the way something brushes against you constantly, it reminds you of your presence.<</speech>><br>
 
 <<speech "mc">>You make it sound like hair is some kind of… spiritual tether.<</speech>><br>
 
@@ -610,11 +610,11 @@
 
 :: hair_5_hair_6_2
 <<nobr>>
-<<speech "thalara">>It is. Especially for women. And for those becoming women, it marks a threshold. Hair this long carries weight not just physically, but symbolically.<</speech>><br>
+<<speech "thalara">>It is, especially for women. For those becoming women, it marks a threshold. Hair this long carries weight, not just physically, but symbolically.<</speech>><br>
 
 <<speech "mc">>I do feel it now. When I turn my head, or breathe too deep. It’s everywhere.<</speech>><br>
 
-<<speech "thalara">>And soon it will be part of how others perceive you. Mid-back length draws attention differently. People will read you as someone practiced in elegance. Whether you feel elegant or not, your appearance starts doing the work for you.<</speech>><br>
+<<speech "thalara">>Soon it will be part of how others perceive you. Mid-back length draws attention differently. People will read you as someone practiced in elegance. Whether you feel elegant or not, your appearance starts doing the work for you.<</speech>><br>
 
 <<speech "mc">>Feels strange… that a length of hair could influence how others treat me.<</speech>><br>
 [[Move Forth|hair_5_hair_6_3]]
@@ -623,11 +623,11 @@
 :: hair_5_hair_6_3
 
 <<nobr>>
-<<speech "thalara">>Strange, yes. But not untrue. In this court, in this kingdom, perception shapes reality. Long hair signals not just femininity, but maturity. Grace. Fertility. Control.<</speech>><br>
+<<speech "thalara">>Strange, yes, but not untrue. In this court, in this kingdom, perception shapes reality. Long hair signals not just femininity, but maturity, grace, fertility, control.<</speech>><br>
 
-<<speech "mc">>I thought ruling meant commanding armies, negotiating treaties not conditioning hair and dodging tangles.<</speech>><br>
+<<speech "mc">>I thought ruling meant commanding armies, negotiating treaties, not conditioning hair and dodging tangles.<</speech>><br>
 
-<<speech "thalara">>You'll do all of those things. But a queen must also understand symbolism. Her hair becomes her banner. Her voice becomes law. Her body becomes myth. And myths, Caelan, start with details like these.<</speech>><br>
+<<speech "thalara">>You'll do all of those things. But a queen must also understand symbolism. Her hair becomes her banner. Her voice becomes law. Her body becomes myth, and myths, Caelan, start with details like these.<</speech>><br>
 
 <<speech "mc">>I never asked to become a myth.<</speech>><br>
 
@@ -641,9 +641,9 @@
 
 <<speech "mc">>Sometimes I wonder if this is really me. Or just… a role I’m learning to perform.<</speech>><br>
 
-<<speech "thalara">>Then let me ask you something: when you feel your hair brush your skin, when you notice yourself turning just a little slower, holding your head a little higher does it feel false?<</speech>><br>
+<<speech "thalara">>Then let me ask you something. When you feel your hair brush your skin, when you notice yourself turning just a little slower, holding your head a little higher, does it feel false?<</speech>><br>
 
-<<speech "mc">>No. Just… unfamiliar.<</speech>><br>
+<<speech "mc">>Not false. Just unfamiliar.<</speech>><br>
 
 [[Move Forth|hair_5_hair_6_5]]
 <</nobr>>
@@ -669,7 +669,7 @@
 <<nobr>>
 <div style="text-align: center; width: 95%;"><img style="text-align: center; border-radius: 9px;
     border: 10px ridge #8b5e3c;width: 95%;" @src="setup.ImagePath+'map/veil_tower_mage_map.png'"></div>
-<<speech "thalara">>You have brewed the potion. Let me see it first.  Caelan Are you ready to start the process...<</speech>>
+<<speech "thalara">>You've brewed the potion. Let me look it over first. Caelan, are you ready to begin?<</speech>>
 <br>
 [[So, today I’m one step closer to having my own royal veil, huh?|hair_6_hair_7_1]] | <br><br>
 [[Waist-length hair. That’s… quite the commitment. I guess we’re doing this.|hair_6_hair_7_1]] | <br><br>
@@ -682,7 +682,7 @@
 
 <<speech "mc">>Well, when those inches start weighing down your neck, it’s hard not to notice.<</speech>><br>
 
-<<speech "thalara">>True. But that weight is a sign of legacy. Queens don’t just inherit crowns they carry them, strand by strand, choice by choice.<</speech>><br>
+<<speech "thalara">>True enough. But that weight is a sign of legacy. Queens don’t just inherit crowns, they carry them, strand by strand, choice by choice.<</speech>><br>
 
 <<speech "mc">>I’m not sure I chose this.<</speech>><br>
 
@@ -696,7 +696,7 @@
 
 <<speech "mc">>That sounds suspiciously like you’re rewriting history.<</speech>><br>
 
-<<speech "thalara">>No. I'm reading it. And history rarely waits for perfect consent. It unfolds while we’re still deciding who we are.<</speech>><br>
+<<speech "thalara">>I'm reading it, not rewriting it. History rarely waits for perfect consent. It unfolds while we’re still deciding who we are.<</speech>><br>
 
 [[Move Forth|hair_6_hair_7_3]]
 <</nobr>>
@@ -707,7 +707,7 @@
 
 <<speech "thalara">> A little more aware of your own presence?<</speech>><br>
 
-<<speech "mc">>Yeah. Like I’m filling the space around me in a way I didn’t before.<</speech>><br>
+<<speech "mc">>Yeah, like I’m filling the space around me in a way I didn’t before.<</speech>><br>
 
 <<speech "thalara">>That’s the veil’s first lesson. Not to conceal but to expand. A queen’s hair doesn’t hide her. It extends her.<</speech>><br>
 
@@ -719,22 +719,22 @@
 
 <<speech "mc">>So it’s not about modesty.<</speech>><br>
 
-<<speech "thalara">>No. It’s about magnetism. Ritual. Discipline. Power. Hair this long is a declaration. Not everyone can carry it. You are.<</speech>><br>
+<<speech "thalara">>It’s about magnetism, ritual, discipline, power. Hair this long is a declaration. Not everyone can carry it. You are.<</speech>><br>
 
 <<speech "mc">>It’s… beautiful. I won’t lie. But also, I feel so… seen.<</speech>><br>
 
-<<speech "thalara">>You are. And you will be more and more, in ways you’ve never experienced. You’ll be admired. Envied. Doubted. Desired.<</speech>><br>
+<<speech "thalara">>You are, and you will be more and more, in ways you’ve never experienced. You’ll be admired, envied, doubted, desired.<</speech>><br>
 
 [[Move Forth|hair_6_hair_7_5]]
 <</nobr>>
 
 :: hair_6_hair_7_5
 <<nobr>>
-<<speech "mc">>And judged, no doubt.<</speech>><br>
+<<speech "mc">>Judged too, no doubt.<</speech>><br>
 
-<<speech "thalara">>Always. But the veil gives you a choice. You can use that judgment as a wall or as a mirror. Let it show you what others project, then choose what to reflect back.<</speech>><br>
+<<speech "thalara">>Always, but the veil gives you a choice. You can use that judgment as a wall or as a mirror. Let it show you what others project, then choose what to reflect back.<</speech>><br>
 
-<<speech "mc">>I keep thinking about how different I look now. And how little of who I was remains visible.<</speech>><br>
+<<speech "mc">>I keep thinking about how different I look now, and how little of who I was remains visible.<</speech>><br>
 
 <<speech "thalara">>You’re not shedding the past. You’re integrating it. This isn’t a costume. It’s a culmination.<</speech>><br>
 
@@ -746,11 +746,11 @@
 
 <<speech "mc">>Then why does it still feel like I’m playing pretend some days?<</speech>><br>
 
-<<speech "thalara">>Because pretending is practice. And practice is the path to embodiment.<</speech>><br>
+<<speech "thalara">>Because pretending is practice, and practice is the path to embodiment.<</speech>><br>
 
 <<speech "mc">>So I’m nearly there. Nearly wearing the Queen’s Veil.<</speech>><br>
 
-<<speech "thalara">>Not yet… but you’ll know when the final strands fall. When your hair kisses your hips and wraps you in command. Then, my dear, you won’t just look like royalty you’ll move like it.<</speech>><br>
+<<speech "thalara">>Not yet, but you’ll know when the final strands fall, when your hair kisses your hips and wraps you in command. Then, my dear, you won’t just look like royalty, you’ll move like it.<</speech>><br>
 [[I feel the potion working in my head and hair|use_success_potion_create_hair]]
 <</nobr>>
 
@@ -765,7 +765,7 @@
 <<nobr>>
 <div style="text-align: center; width: 95%;"><img style="text-align: center; border-radius: 9px;
     border: 10px ridge #8b5e3c;width: 95%;" @src="setup.ImagePath+'map/veil_tower_mage_map.png'"></div>
-<<speech "thalara">>You have brewed the potion. Let me see it first.  Caelan Are you ready to start the process...<</speech>>
+<<speech "thalara">>You've brewed the potion. Let me look it over first. Caelan, are you ready to begin?<</speech>>
 <br>
 [[Seven candles… fitting for seven steps. I’ve come too far to stop now.|hair_7_hair_8_1]] | <br><br>
 [[So this is it? The last of my old self gone in a strand of hair?|hair_7_hair_8_1]] | <br><br>
@@ -788,11 +788,11 @@
 :: hair_7_hair_8_2
 <<nobr>>
 
-<<speech "thalara">>Ah. That phantom comfort. The body remembers until it finally accepts the new shape of its story.<</speech>><br>
+<<speech "thalara">>That phantom comfort. The body remembers until it finally accepts the new shape of its story.<</speech>><br>
 
-<<speech "mc">>And now that story touches my hips.<</speech>><br>
+<<speech "mc">>Now that story touches my hips.<</speech>><br>
 
-<<speech "thalara">>Indeed. It wraps you in softness, yes but also in strength. Feminine grace is not weakness. It is wielded like velvet steel.<</speech>><br>
+<<speech "thalara">>It wraps you in softness, yes, but also in strength. Feminine grace is not weakness. It is wielded like velvet steel.<</speech>><br>
 
 <<speech "mc">>I thought the transformation would feel like losing pieces of me. But sometimes it feels like I’m recovering things I didn’t know I’d buried.<</speech>><br>
 
@@ -805,11 +805,11 @@
 
 <<speech "thalara">>You’re not becoming someone else. You’re becoming someone more.<</speech>><br>
 
-<<speech "mc">>It’s strange. I still feel like me but the world is already reacting to me like I’m someone else.<</speech>><br>
+<<speech "mc">>It’s strange. I still feel like me, but the world is already reacting to me like I’m someone else.<</speech>><br>
 
-<<speech "thalara">>The world sees symbols first. Hips. Hair. Softness. Eyes. But only queens command both symbol and substance. That is your path.<</speech>><br>
+<<speech "thalara">>The world sees symbols first, hips, hair, softness, eyes. But only queens command both symbol and substance. That is your path.<</speech>><br>
 
-<<speech "mc">>And this is the final step?<</speech>><br>
+<<speech "mc">>Is this the final step?<</speech>><br>
 
 [[Move Forth|hair_7_hair_8_4]]
 <</nobr>>
@@ -837,7 +837,7 @@
 
 <<speech "mc">>That’s a lot to live up to.<</speech>><br>
 
-<<speech "thalara">>Then live beyond it. You’ve passed every test. Suffered the doubts. Endured the awkward middles. This… this is your unveiling. The hair brushing your hips is not a burden it is your banner.<</speech>><br>
+<<speech "thalara">>Then live beyond it. You’ve passed every test. Suffered the doubts. Endured the awkward middles. This… this is your unveiling. The hair brushing your hips is not a burden, it is your banner.<</speech>><br>
 
 [[Move Forth|hair_7_hair_8_6]]
 <</nobr>>
@@ -846,7 +846,7 @@
 <<nobr>>
 <<speech "mc">>I don’t think I can hide anymore. Even if I wanted to.<</speech>><br>
 
-<<speech "thalara">>Good. Queens don’t hide. They command the room. And from this moment forward… every step you take will remind others of your power.<</speech>><br>
+<<speech "thalara">>Good, because queens don’t hide. They command the room. From this moment forward, every step you take will remind others of your power.<</speech>><br>
 [[I feel the potion working in my head and hair|use_success_potion_create_hair]]
 <</nobr>>
 
@@ -860,7 +860,7 @@
 <<nobr>>
 <div style="text-align: center; width: 95%;"><img style="text-align: center; border-radius: 9px;
     border: 10px ridge #8b5e3c;width: 95%;" @src="setup.ImagePath+'map/veil_tower_mage_map.png'"></div>
-<<speech "thalara">>You have brewed the potion. Let me see it first.  Caelan Are you ready to start the process...<</speech>>
+<<speech "thalara">>You've brewed the potion. Let me look it over first. Caelan, are you ready to begin?<</speech>>
 <br>
 [[This feels right. It was time. I want to walk a little lighter again.|hair_8_hair_7_1]] | <br><br>
 [[I’m not sure this is what I want. But I know I can't keep pretending it's not weighing on me.|hair_8_hair_7_1]] | <br><br>
@@ -869,11 +869,11 @@
 
 :: hair_8_hair_7_1
 <<nobr>>
-<<speech "thalara">>You came to me once, trembling with doubt but full of possibility. You stood in this very room and drank change like firewater. And now, you ask me to walk you back from that fire.<</speech>><br>
+<<speech "thalara">>You came to me once, trembling with doubt but full of possibility. You stood in this very room and drank change like firewater. Now you ask me to walk you back from that fire.<</speech>><br>
 
-<<speech "mc">>I know. And I didn’t come lightly.<</speech>><br>
+<<speech "mc">>I know, and I didn’t come lightly.<</speech>><br>
 
-<<speech "thalara">>No. You didn’t. I can see the weight behind your eyes. This isn’t about hair, is it?<</speech>><br>
+<<speech "thalara">>You didn’t. I can see the weight behind your eyes. This isn’t about hair, is it?<</speech>><br>
 
 <<speech "mc">>...Maybe not just hair. Maybe it’s what it came to represent. How people looked at me. What they expected of me. Every inch felt like another promise I wasn’t sure I could keep.<</speech>><br>
 [[Move Forth|hair_8_hair_7_2]]
@@ -888,7 +888,7 @@
 
 <<speech "mc">>Because it holds magic?<</speech>><br>
 
-<<speech "thalara">>Yes. And because it holds memory. Each strand that grew was spun with your courage, your confusion, your longing. Every lock was a declaration even if you didn’t always know what it declared.<</speech>><br>
+<<speech "thalara">>Yes, and because it holds memory. Each strand that grew was spun with your courage, your confusion, your longing. Every lock was a declaration, even if you didn’t always know what it declared.<</speech>><br>
 
 [[Move Forth|hair_8_hair_7_3]]
 <</nobr>>
@@ -896,26 +896,26 @@
 :: hair_8_hair_7_3
 <<nobr>>
 
-<<speech "mc">>And now I’m taking that declaration back.<</speech>><br>
+<<speech "mc">>Now I’m taking that declaration back.<</speech>><br>
 
-<<speech "thalara">>Or rewriting it. There's no shame in stepping back to find your balance. But know this, this is not erasure. You cannot undo who you’ve become.<</speech>><br>
+<<speech "thalara">>Or rewriting it. There's no shame in stepping back to find your balance. But understand, this is not erasure. You cannot undo who you’ve become.<</speech>><br>
 
-<<speech "mc">>I don’t want to erase anything. I just… need to breathe. Need to remember what it feels like not to be constantly observed. Measured. Interpreted.<</speech>><br>
+<<speech "mc">>I don’t want to erase anything. I just… need to breathe. Need to remember what it feels like not to be constantly observed, measured, interpreted.<</speech>><br>
 
-<<speech "thalara">>And do you think a few inches of hair were the cause of all that?<</speech>><br>
+<<speech "thalara">>Do you really think a few inches of hair were the cause of all that?<</speech>><br>
 
 [[Move Forth|hair_8_hair_7_4]]
 <</nobr>>
 
 :: hair_8_hair_7_4
 <<nobr>>
-<<speech "mc">>No. But they were the banner. The signal. And maybe I’m tired of flying it.<</speech>><br>
+<<speech "mc">>No, but they were the banner. The signal. Maybe I’m just tired of flying it.<</speech>><br>
 
 <<speech "thalara">>You may feel lighter. But you may also feel loss. You’re allowed to grieve what you’re choosing to let go.<</speech>><br>
 
 <<speech "mc">>I think I’m just… scared that this is weakness. That I couldn’t bear the crown I grew.<</speech>><br>
 
-<<speech "thalara">>Then let me tell you what I see, I see someone strong enough to explore transformation and brave enough to pause it. That isn’t weakness. That’s wisdom.<</speech>><br>
+<<speech "thalara">>Then let me tell you what I see. I see someone strong enough to explore transformation and brave enough to pause it. That isn’t weakness. That’s wisdom.<</speech>><br>
 
 [[Move Forth|hair_8_hair_7_5]]
 <</nobr>>
@@ -925,7 +925,7 @@
 
 <<speech "mc">>You always sound like you’ve already seen where my path ends.<</speech>><br>
 
-<<speech "thalara">>Not ends. Forks. Rivers branch, remember? But the water still flows. Whether you wear your hair to your hips or to your shoulders or not at all your essence remains. The kingdom will respond to that, not your silhouette.<</speech>><br>
+<<speech "thalara">>Not ends, forks. Rivers branch, remember? But the water still flows. Whether you wear your hair to your hips, to your shoulders, or not at all, your essence remains. The kingdom will respond to that, not your silhouette.<</speech>><br>
 
 <<speech "thalara">>Will you mourn the veil, Caelan?<</speech>><br>
 
@@ -951,7 +951,7 @@
 <<nobr>>
 <div style="text-align: center; width: 95%;"><img style="text-align: center; border-radius: 9px;
     border: 10px ridge #8b5e3c;width: 95%;" @src="setup.ImagePath+'map/veil_tower_mage_map.png'"></div>
-<<speech "thalara">>You have brewed the potion. Let me see it first.  Caelan Are you ready to start the process...<</speech>>
+<<speech "thalara">>You've brewed the potion. Let me look it over first. Caelan, are you ready to begin?<</speech>>
 <br>
 [[I know what I want now. I’m ready to see myself differently.|hair_7_hair_6_1]] | <br><br>
 [[This isn’t easy. I’m still not sure if this is the right path.|hair_7_hair_6_1]] | <br><br>
@@ -960,7 +960,7 @@
 
 :: hair_7_hair_6_1
 <<nobr>>
-<<speech "thalara">>You look at your reflection now, and I see someone who is both familiar and strange. That is the nature of change sometimes it makes us strangers to ourselves.<</speech>><br>
+<<speech "thalara">>You look at your reflection now, and I see someone who is both familiar and strange. That is the nature of change, sometimes it makes us strangers to ourselves.<</speech>><br>
 <<speech "mc">>It’s… hard to recognize who I am in that mirror.<</speech>><br>
 
 <<speech "thalara">>Change carves new shapes into our soul’s vessel. But what you see is still you, only in a different light.<</speech>><br>
@@ -975,11 +975,11 @@
 
 <<speech "thalara">>Certainty is a luxury rarely afforded to those who walk transformations. But it is the uncertainty that makes your journey meaningful.<</speech>><br>
 
-<<speech "thalara">>This potion is bitter, yes. But it carries the grace of slowing the flood, of giving you space to breathe to reconsider.<</speech>><br>
+<<speech "thalara">>This potion is bitter, yes. But it carries the grace of slowing the flood, of giving you space to breathe, to reconsider.<</speech>><br>
 
 <<speech "mc">>Am I retreating or progressing?<</speech>><br>
 
-<<speech "thalara">>Neither. You are choosing your own rhythm. You have the courage to step forward and to step back. Both are acts of strength.<</speech>><br>
+<<speech "thalara">>Neither one. You are choosing your own rhythm. You have the courage to step forward and to step back. Both are acts of strength.<</speech>><br>
 
 [[Move Forth|hair_7_hair_6_3]]
 <</nobr>>
@@ -991,7 +991,7 @@
 
 <<speech "mc">>I fear what I will say to myself when I see it. I’ve tasted power, beauty, and expectation wrapped in these long strands. To let them fall is to strip away a part of that identity.<</speech>><br>
 
-<<speech "thalara">>And yet, identity is never one thing. It is a tapestry woven from many threads some thick, some thin, some shining, some shadowed.<</speech>><br>
+<<speech "thalara">>Yet identity is never one thing. It is a tapestry woven from many threads, some thick, some thin, some shining, some shadowed.<</speech>><br>
 
 <<speech "thalara">>You are not diminished by letting your hair fall. You are refined. Like silver polished by flame.<</speech>><br>
 
@@ -1015,9 +1015,9 @@
 :: hair_7_hair_6_5
 <<nobr>>
 
-<<speech "thalara">>Then let this be a turning point not an ending, but a new beginning. The grace in falling is the promise of rising again.<</speech>><br>
+<<speech "thalara">>Then let this be a turning point, not an ending, but a new beginning. The grace in falling is the promise of rising again.<</speech>><br>
 
-<<speech "thalara">>Remember, Caelan, every change is a step closer to your truth whatever that may be.<</speech>><br>
+<<speech "thalara">>Remember, Caelan, every change is a step closer to your truth, whatever that may be.<</speech>><br>
 [[I feel the potion working in my head and hair|use_success_potion_create_hair]]
 <</nobr>>
 
@@ -1031,7 +1031,7 @@
 <<nobr>>
 <div style="text-align: center; width: 95%;"><img style="text-align: center; border-radius: 9px;
     border: 10px ridge #8b5e3c;width: 95%;" @src="setup.ImagePath+'map/veil_tower_mage_map.png'"></div>
-<<speech "thalara">>You have brewed the potion. Let me see it first.  Caelan Are you ready to start the process...<</speech>>
+<<speech "thalara">>You've brewed the potion. Let me look it over first. Caelan, are you ready to begin?<</speech>>
 <br>
 [[I’m ready for this. I want to understand what’s truly mine beneath the surface.|hair_6_hair_5_1]] | <br><br>
 [[It’s hard to let go… but maybe I need to.|hair_6_hair_5_1]] | <br><br>
@@ -1040,7 +1040,7 @@
 
 :: hair_6_hair_5_1
 <<nobr>>
-<<speech "thalara">>Your willingness, reluctance, or defiance it all matters less than your honesty with yourself. Each choice reveals a piece of your heart.<</speech>><br>
+<<speech "thalara">>Your willingness, reluctance, or defiance, it all matters less than your honesty with yourself. Each choice reveals a piece of your heart.<</speech>><br>
 <<speech "mc">>It’s strange how cutting back can sometimes feel more powerful than growing forward.<</speech>><br>
 
 <<speech "thalara">>True strength often lies not in expansion but in restraint. To carry less, but carry it well.<</speech>><br>
@@ -1055,7 +1055,7 @@
 <<speech "thalara">>Borrowed, yes. A gift from the magic that shaped you, but not the whole story of who you are.<</speech>><br>
 
 <<speech "thalara">>Tell me, Caelan, what do you feel as your hair shortens?<</speech>><br>
-<<speech "mc">>A mixture. Relief that it’s not so heavy, but also loss like I’m losing something I earned.<</speech>><br>
+<<speech "mc">>A mixture. Relief that it’s not so heavy, but also loss, like I’m losing something I earned.<</speech>><br>
 <<speech "thalara">>Loss is not absence. It is transformation. Sometimes shedding is necessary to grow stronger roots.<</speech>><br>
 
 [[Move Forth|hair_6_hair_5_3]]
@@ -1065,10 +1065,10 @@
 <<nobr>>
 <<speech "mc">>But how do I hold onto myself when the reflection keeps changing? How do I know who I am beneath these shifts?<</speech>><br>
 
-<<speech "thalara">>You know by looking beyond the mirror. Your spirit, your choices, your courage those are constants, even as your form shifts.<</speech>><br>
+<<speech "thalara">>You know by looking beyond the mirror. Your spirit, your choices, your courage, those are constants, even as your form shifts.<</speech>><br>
 
 <<speech "thalara">>Do you remember when you first came here? How uncertain you were?<</speech>><br>
-<<speech "mc">>Vividly. I was afraid of becoming something I didn’t want to be.<</speech>><br>
+<<speech "mc">>Vividly, I was afraid of becoming something I didn’t want to be.<</speech>><br>
 
 [[Move Forth|hair_6_hair_5_4]]
 
@@ -1076,11 +1076,11 @@
 
 :: hair_6_hair_5_4
 <<nobr>>
-<<speech "thalara">>And now?<</speech>><br>
+<<speech "thalara">>What about now?<</speech>><br>
 <<speech "mc">>Now, I’m afraid of losing what I have become... but I also wonder if that fear is keeping me from finding something deeper.<</speech>><br>
 
 <<speech "thalara">>Fear is a natural companion on any path worth taking. But it should not be a prison.<</speech>><br>
-<<speech "mc">>I want to be free of that prison. I want to own my reflection whatever it may be, short hair or long.<</speech>><br>
+<<speech "mc">>I want to be free of that prison. I want to own my reflection, whatever it may be, short hair or long.<</speech>><br>
 
 [[Move Forth|hair_6_hair_5_5]]
 <</nobr>>
@@ -1090,7 +1090,7 @@
 
 <<speech "thalara">>That is the beginning of true grace. Ownership of your story, not just the appearance.<</speech>><br>
 
-<<speech "thalara">>This potion, this moment it’s not just about hair. It’s about shedding expectations. About choosing what you carry forward and what you leave behind.<</speech>><br>
+<<speech "thalara">>This potion, this moment, it’s not just about hair. It’s about shedding expectations. About choosing what you carry forward and what you leave behind.<</speech>><br>
 <<speech "mc">>Sometimes I wonder if the crown I seek is more than just a title or appearance.<</speech>><br>
 
 <<speech "thalara">>The crown is your spirit, your will, your authenticity. Magic is merely the language we use to speak it.<</speech>><br>
@@ -1104,7 +1104,7 @@
 
 <<speech "mc">>Less like a borrowed image. More like... myself, though still learning who that truly is.<</speech>><br>
 
-<<speech "thalara">>And that is the path of every ruler worth their salt. The journey inward is the greatest transformation of all.<</speech>><br>
+<<speech "thalara">>That is the path of every ruler worth their salt. The journey inward is the greatest transformation of all.<</speech>><br>
 
 <<speech "thalara">>Remember, no matter the length of your hair, the kingdom will follow the strength of your heart.<</speech>><br>
 
@@ -1116,7 +1116,7 @@
 
 <<speech "mc">>I’m beginning to believe that. Maybe this shedding is a gift, not a loss.<</speech>><br>
 
-<<speech "thalara">>It is. And when you are ready, the magic will be here again always adapting, always growing with you.<</speech>><br>[[I feel the potion working in my head and hair|use_success_potion_create_hair]]
+<<speech "thalara">>It is. When you are ready, the magic will be here again, always adapting, always growing with you.<</speech>><br>[[I feel the potion working in my head and hair|use_success_potion_create_hair]]
 <</nobr>>
 
 
@@ -1130,7 +1130,7 @@
 <<nobr>>
 <div style="text-align: center; width: 95%;"><img style="text-align: center; border-radius: 9px;
     border: 10px ridge #8b5e3c;width: 95%;" @src="setup.ImagePath+'map/veil_tower_mage_map.png'"></div>
-<<speech "thalara">>You have brewed the potion. Let me see it first.  Caelan Are you ready to start the process...<</speech>>
+<<speech "thalara">>You've brewed the potion. Let me look it over first. Caelan, are you ready to begin?<</speech>>
 <br>
 [[I understand now. I want to find myself in a truer way.|hair_5_hair_4_1]] | <br><br>
 [[It’s harder than I imagined to let go of what my hair represented. I’m not sure I’m ready.|hair_5_hair_4_1]] | <br><br>
@@ -1181,9 +1181,9 @@
 :: hair_5_hair_4_4
 <<nobr>>
 
-<<speech "thalara">>You do not lose yourself you reveal more layers beneath the surface. Like a melody that’s richer when played softly.<</speech>><br>
+<<speech "thalara">>You do not lose yourself, you reveal more layers beneath the surface. Like a melody that’s richer when played softly.<</speech>><br>
 
-<<speech "thalara">>Your hair has carried your story, yes. But your spirit the true essence of you remains untouched by length or style.<</speech>><br>
+<<speech "thalara">>Your hair has carried your story, yes. But your spirit, the true essence of you, remains untouched by length or style.<</speech>><br>
 
 <<speech "mc">>I want to believe that. It’s just… hard to let go of the beauty, the power, the statement my hair made.<</speech>><br>
 
@@ -1196,7 +1196,7 @@
 <<nobr>>
 <<speech "mc">>I suppose there’s something freeing about that idea being less visible but no less significant.<</speech>><br>
 
-<<speech "thalara">>Exactly. Your presence will fill any room, not because of what flows behind you, but because of what shines from within.<</speech>><br>
+<<speech "thalara">>Exactly so. Your presence will fill any room, not because of what flows behind you, but because of what shines from within.<</speech>><br>
 
 <<speech "thalara">>As your hair settles to your shoulders, remember it’s a transformation of essence, not just appearance.<</speech>><br>
 
@@ -1213,7 +1213,7 @@
 
 <<speech "mc">>I want to write my story honestly. Even if it means changing the chapters I once loved.<</speech>><br>
 
-<<speech "thalara">>And I will be here to guide your pen, no matter where the tale leads.<</speech>><br>
+<<speech "thalara">>I will be here to guide your pen, no matter where the tale leads.<</speech>><br>
 
 <<speech "thalara">>How do you feel looking in the mirror now?<</speech>><br>
 
@@ -1243,7 +1243,7 @@
 <<nobr>>
 <div style="text-align: center; width: 95%;"><img style="text-align: center; border-radius: 9px;
     border: 10px ridge #8b5e3c;width: 95%;" @src="setup.ImagePath+'map/veil_tower_mage_map.png'"></div>
-<<speech "thalara">>You have brewed the potion. Let me see it first.  Caelan Are you ready to start the process...<</speech>>
+<<speech "thalara">>You've brewed the potion. Let me look it over first. Caelan, are you ready to begin?<</speech>>
 <br>
 [[I want to remember who I was. Maybe find who I am now.|hair_4_hair_3_1]] | <br><br>
 [[I don’t know if I’m ready to go back this far, but I have to try.|hair_4_hair_3_1]] | <br><br>
@@ -1340,7 +1340,7 @@
 <<nobr>>
 <div style="text-align: center; width: 95%;"><img style="text-align: center; border-radius: 9px;
     border: 10px ridge #8b5e3c;width: 95%;" @src="setup.ImagePath+'map/veil_tower_mage_map.png'"></div>
-<<speech "thalara">>You have brewed the potion. Let me see it first.  Caelan Are you ready to start the process...<</speech>>
+<<speech "thalara">>You've brewed the potion. Let me look it over first. Caelan, are you ready to begin?<</speech>>
 <br>
 [[Yes, I’m certain. It’s time to feel what I once sought, even if it’s different now.|hair_3_hair_2_1]] | <br><br>
 [[I’m still unsure, but maybe I need to understand this part of myself better.|hair_3_hair_2_1]] | <br><br>
@@ -1452,7 +1452,7 @@
 <<nobr>>
 <div style="text-align: center; width: 95%;"><img style="text-align: center; border-radius: 9px;
     border: 10px ridge #8b5e3c;width: 95%;" @src="setup.ImagePath+'map/veil_tower_mage_map.png'"></div>
-<<speech "thalara">>You have brewed the potion. Let me see it first. Caelan Are you ready to start the process...<</speech>>
+<<speech "thalara">>You've brewed the potion. Let me look it over first. Caelan, are you ready to begin?<</speech>>
 <br>
 [[I’m ready to face myself completely. No more masks, no more illusions.|hair_2_hair_1_1]] | <br><br>
 [[I don’t know if I can do this… but I guess there’s no turning back now.|hair_2_hair_1_1]] | <br><br>
