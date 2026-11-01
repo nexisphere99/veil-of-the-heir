@@ -104,7 +104,7 @@ var LZString=function(){var r=String.fromCharCode,o="ABCDEFGHIJKLMNOPQRSTUVWXYZa
 		<div id="init-lacking"><p>Browser lacks capabilities required to play.</p><p>Upgrade or switch to another browser.</p></div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<!-- UUID://27FA6D7B-4709-4B3D-9797-F5BF92C9430B// --><tw-storydata name="Veil of the Heir" startnode="1654" creator="Tweego" creator-version="2.1.1+81d1d71" ifid="27FA6D7B-4709-4B3D-9797-F5BF92C9430B" zoom="0.6" format="SugarCube" format-version="2.37.3" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* twine-user-stylesheet #1: "character.css" */
+	<!-- UUID://27FA6D7B-4709-4B3D-9797-F5BF92C9430B// --><tw-storydata name="Veil of the Heir" startnode="1655" creator="Tweego" creator-version="2.1.1+81d1d71" ifid="27FA6D7B-4709-4B3D-9797-F5BF92C9430B" zoom="0.6" format="SugarCube" format-version="2.37.3" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* twine-user-stylesheet #1: "character.css" */
 /* speech */
 .speech-box {
     display: flex;
@@ -41319,7 +41319,7 @@ The suitors leaned forward almost imperceptibly. I let the silence stretch just 
 &lt;&lt;set $currentObjectives = &quot;End of Current Story&quot;&gt;&gt;
 &lt;&lt;set $currentArc[&quot;main_arc&quot;] = 20&gt;&gt;
 
-[[End of current Path|great_hall]]</tw-passagedata><tw-passagedata pid="1488" name="not_here" tags="" position="975,18600" size="100,100">&lt;&lt;speech &quot;mc&quot;&gt;&gt;…the one who calls to my intuition first.&lt;&lt;/speech&gt;&gt;
+[[Continue|suitor_date_bridge]]</tw-passagedata><tw-passagedata pid="1488" name="not_here" tags="" position="975,18600" size="100,100">&lt;&lt;speech &quot;mc&quot;&gt;&gt;…the one who calls to my intuition first.&lt;&lt;/speech&gt;&gt;
 
 A murmur ran through the court.
 Each suitor subtly straightened, hopeful and ready.
@@ -46410,7 +46410,34 @@ My knuckles tingled where his lips had been. I wiped them against the tunic-dres
 
 Or so I told myself as I walked away from the gate with the white rose still gripped in fingers that would not unclench.
 
-[[Prepare for Lady Vaela|suitor_date_vaela_1]]</tw-passagedata><tw-passagedata pid="1641" name="suitor_date_evaluation_1" tags="suitor-date evaluation" position="100,20600" size="100,100">&lt;&lt;set $suitor_dates_completed += 1&gt;&gt;
+[[Prepare for Lady Vaela|suitor_date_vaela_1]]</tw-passagedata><tw-passagedata pid="1641" name="suitor_date_bridge" tags="suitor-date" position="100,20600" size="100,100">&lt;&lt;speech &quot;mc&quot;&gt;&gt;
+Sir Aldren Thornwild. He asked me if it hurt, back in the line, with his eyes and not his mouth. I would like to meet him first.
+&lt;&lt;/speech&gt;&gt;
+&lt;br&gt;
+
+A ripple moves through the chamber. Aldren&#39;s head lifts, and the warm hope on his face is so naked that I look away before it undoes me.
+&lt;br&gt;&lt;br&gt;
+
+&lt;&lt;speech &quot;serelyne&quot;&gt;&gt;
+Noted. Sir Aldren, at the garden, tomorrow morning.
+&lt;&lt;/speech&gt;&gt;
+&lt;br&gt;
+
+She does not pause for a breath. Her grey eyes slide to the suitor line, and one of them, dark-haired, golden-eyed, smiling like she has been waiting all morning for exactly this, steps a half pace forward.
+&lt;br&gt;&lt;br&gt;
+
+&lt;&lt;speech &quot;serelyne&quot;&gt;&gt;
+Lady Vaela Rhyss of the Dawncourt has petitioned for the same day. The Crown sees no reason to refuse. One suitor in the garden, one in the Iron Garden, with a rest between. The Heir will learn more from two contrasts than from sixteen speeches.
+&lt;&lt;/speech&gt;&gt;
+&lt;br&gt;
+
+&lt;&lt;speech &quot;alinora&quot;&gt;&gt;
+Then it is decided. Go and rest, Caelan. Tomorrow, you begin.
+&lt;&lt;/speech&gt;&gt;
+&lt;br&gt;
+
+&lt;&lt;set $currentObjectives = &quot;Go to your chamber and sleep. The first suitor dates begin tomorrow.&quot;&gt;&gt;
+[[Leave Council Chamber|castle_map_front_select]]</tw-passagedata><tw-passagedata pid="1642" name="suitor_date_evaluation_1" tags="suitor-date evaluation" position="225,20600" size="100,100">&lt;&lt;set $suitor_dates_completed += 1&gt;&gt;
 
 Serelyne&#39;s chambers smelled of roses and parchment. The walls were ivory, the furnishings dark wood, the light filtered through gauze curtains that softened the afternoon sun into something that felt curated — as though even sunlight required Serelyne&#39;s approval before entering.
 
@@ -46436,7 +46463,7 @@ Serelyne listened. Made notes. Asked questions that were surgical in their preci
 
 [[Aldren&#39;s lips.|suitor_date_evaluation_2][$aldren_affection += 1]]
 [[Vaela&#39;s fingers.|suitor_date_evaluation_2][$vaela_affection += 1; $lesbian_curiosity += 1]]
-[[Both. Differently.|suitor_date_evaluation_2]]</tw-passagedata><tw-passagedata pid="1642" name="suitor_date_evaluation_2" tags="suitor-date evaluation" position="225,20600" size="100,100">&lt;&lt;set $currentArc[&quot;main_arc&quot;] = 21&gt;&gt;
+[[Both. Differently.|suitor_date_evaluation_2]]</tw-passagedata><tw-passagedata pid="1643" name="suitor_date_evaluation_2" tags="suitor-date evaluation" position="350,20600" size="100,100">&lt;&lt;set $currentArc[&quot;main_arc&quot;] = 21&gt;&gt;
 &lt;&lt;set $currentObjectives = &quot;The first dates are done. Rest, and think on who you need.&quot;&gt;&gt;
 
 Serelyne recorded my answer without commentary. The quill scratched across the journal page in her precise, angular script — letters that looked like they had been engineered rather than written.
@@ -46473,13 +46500,19 @@ The quill resumed scratching. The conversation was over.
 
 I left the chamber and closed the door behind me, and the corridor was cool and quiet and I stood there with the white rose tucked into the breast of the tunic-dress and the ghost of two different touches on two different parts of a body that belonged to neither the prince I had been nor the queen I would become, and the silence held both.
 
-[[Return to your chamber|mc_bed_chamber]]</tw-passagedata><tw-passagedata pid="1643" name="suitor_date_morning_1" tags="suitor-date morning" position="350,20600" size="100,100">&lt;&lt;set $currentObjectives = &quot;The first suitor dates: Sir Aldren Thornwild, then Lady Vaela Rhyss&quot;&gt;&gt;
+[[Return to your chamber|mc_bed_chamber]]</tw-passagedata><tw-passagedata pid="1644" name="suitor_date_morning_1" tags="suitor-date morning" position="475,20600" size="100,100">&lt;&lt;set $currentObjectives = &quot;The first suitor dates: Sir Aldren Thornwild, then Lady Vaela Rhyss&quot;&gt;&gt;
+&lt;&lt;set $day_number += 1&gt;&gt;
+&lt;&lt;set $riddleLimit = 3&gt;&gt;
+&lt;&lt;set $riddleAttempts = 0&gt;&gt;
+&lt;&lt;set $hasIngredientAccess = false&gt;&gt;
+&lt;&lt;set $ingredientChoices to 0&gt;&gt;
+&lt;&lt;set $riddleSuccess = false&gt;&gt;
 
 I woke to the sound of Maera humming — a lullaby from somewhere in her childhood that she only ever sang when she was nervous on my behalf. The bed linens clung to me, damp with the sweat of a restless night, and when I pushed them aside and sat up, the shift in my chest reminded me of the truth before my mind could catch up.
 
 Breasts. Small still — barely more than swellings beneath the sleep shirt — but undeniably present. They ached with the dull tenderness that had become my morning companion these past weeks, a deep soreness that pulsed with each heartbeat as though the flesh itself was arguing with my ribcage about how much space it deserved.
 
-&quot;Good morrow, Your Grace.&quot; Maera turned from the wardrobe with a garment draped over her arm. Not my usual tunic. Something new — cream-coloured linen with silver threading at the collar, cut in a way I had never seen before. Structured through the shoulders but softer through the torso, the waistline gently shaped rather than straight.
+&quot;Good morrow, Your Grace.&quot; Maera turned from the wardrobe with a garment draped over her arm. Not my usual tunic, and not the four-layer gown Veletia had drilled into me. Something new — cream-coloured linen with silver threading at the collar, cut in a way I had never seen before. Structured through the shoulders but softer through the torso, the waistline gently shaped rather than straight.
 
 &quot;Veletia sent this up before dawn,&quot; Maera said, holding it against my frame. Her eyes did that thing they had been doing more often lately — the quick, involuntary sweep from my shoulders to my hips, cataloguing the changes. The narrowing. The softening. The slow erasure of the body she had known since we were children together. &quot;A transitional tunic-dress, she called it. &#39;For a body that lives in two tenses.&#39;&quot;
 
@@ -46513,7 +46546,7 @@ My hands were shaking. I looked down at them — the tapered fingers, the delica
 
 &quot;The goblins,&quot; I said, &quot;did not care what I was becoming.&quot;
 
-[[Continue|suitor_date_morning_2]]</tw-passagedata><tw-passagedata pid="1644" name="suitor_date_morning_2" tags="suitor-date morning" position="475,20600" size="100,100">Serelyne arrived precisely when Maera finished — not a moment sooner, not a moment later, because Lady Serelyne Virellis had elevated punctuality into an art form indistinguishable from intimidation.
+[[Continue|suitor_date_morning_2]]</tw-passagedata><tw-passagedata pid="1645" name="suitor_date_morning_2" tags="suitor-date morning" position="600,20600" size="100,100">Serelyne arrived precisely when Maera finished — not a moment sooner, not a moment later, because Lady Serelyne Virellis had elevated punctuality into an art form indistinguishable from intimidation.
 
 She stood in the doorway in her customary monochrome — charcoal robes over black silk, the royal sigil embroidered at her cuff in thread so dark it was visible only when the light caught it at certain angles. Her steel-grey eyes took me in with one sweeping assessment that catalogued everything from the braid to the boots.
 
@@ -46553,7 +46586,7 @@ Whether they wanted me.
 
 I walked out of the chamber before I could change my mind.
 
-[[Meet Sir Aldren in the garden|suitor_date_aldren_1]]</tw-passagedata><tw-passagedata pid="1645" name="suitor_date_vaela_1" tags="suitor-date vaela" position="600,20600" size="100,100">The Iron Garden.
+[[Meet Sir Aldren in the garden|suitor_date_aldren_1]]</tw-passagedata><tw-passagedata pid="1646" name="suitor_date_vaela_1" tags="suitor-date vaela" position="725,20600" size="100,100">The Iron Garden.
 
 That was what the castle staff called the training yard — a name that married the stone enclosure&#39;s brutal functionality with the garden&#39;s promise that things could grow here, even if what grew was skill rather than roses. The flagstones were scarred by a thousand practice bouts. The weapons racks lined the eastern wall like metal ribs. The air smelled of sand and sweat and oiled steel.
 
@@ -46575,7 +46608,7 @@ She raised the rapier. The point aimed at my sternum with the casual precision o
 
 &quot;Show me.&quot;
 
-[[Fight|suitor_date_vaela_2]]</tw-passagedata><tw-passagedata pid="1646" name="suitor_date_vaela_2" tags="suitor-date vaela" position="725,20600" size="100,100">She moved first.
+[[Fight|suitor_date_vaela_2]]</tw-passagedata><tw-passagedata pid="1647" name="suitor_date_vaela_2" tags="suitor-date vaela" position="850,20600" size="100,100">She moved first.
 
 The attack came in a form I had never encountered — a lateral slash that originated not from the shoulder, as I expected, but from the hip. The blade arced upward in a whipping crescent, powered by a rotational force that used the wider female pelvis as a fulcrum rather than the squared male stance I had been raised in. The Dawncourt Blade Form.
 
@@ -46603,7 +46636,7 @@ Not cruelly. Not mockingly. The fierce, bright-eyed grin of a warrior who has fo
 
 &quot;Again.&quot;
 
-[[Spar again|suitor_date_vaela_3]]</tw-passagedata><tw-passagedata pid="1647" name="suitor_date_vaela_3" tags="suitor-date vaela" position="850,20600" size="100,100">We sparred three more times.
+[[Spar again|suitor_date_vaela_3]]</tw-passagedata><tw-passagedata pid="1648" name="suitor_date_vaela_3" tags="suitor-date vaela" position="975,20600" size="100,100">We sparred three more times.
 
 Each bout, I lasted longer. The feminine guard that Aldric had planted in my body began to sprout — the hip-driven rotation that Vaela used instinctively, I was learning to adopt through repetition, through observation, through the primal teacher of a blade at my throat and the refusal to let it stay there.
 
@@ -46631,7 +46664,7 @@ A real laugh — not the controlled, courtly sound I had heard from the other su
 
 &quot;There it is,&quot; she said, her golden eyes finding mine, her voice carrying the raw warmth of someone who had found exactly what they came looking for. &quot;The queen.&quot;
 
-[[Continue|suitor_date_vaela_4]]</tw-passagedata><tw-passagedata pid="1648" name="suitor_date_vaela_4" tags="suitor-date vaela" position="975,20600" size="100,100">The aftermath was charged.
+[[Continue|suitor_date_vaela_4]]</tw-passagedata><tw-passagedata pid="1649" name="suitor_date_vaela_4" tags="suitor-date vaela" position="1100,20600" size="100,100">The aftermath was charged.
 
 We stood perhaps three feet apart. Both breathing hard — my chest heaving against the budding tissue with each inhale, the tenderness that was my constant companion now sharpened by exertion into something that bordered on painful. Sweat ran down my temples and traced the line of my jaw — the softer jawline, the one that was reshaping itself week by week beneath the alchemy&#39;s patient hand — and darkened the collar of the cream tunic-dress.
 
@@ -46653,7 +46686,7 @@ Her golden eyes held mine. This close, I could see the flecks of darker amber in
 
 &quot;You are caught between,&quot; she murmured. Her voice was low, barely above a whisper, and her breath was warm against my face — we were that close, though I could not remember either of us stepping forward. &quot;I have never wanted anything more.&quot;
 
-[[Continue|suitor_date_vaela_5]]</tw-passagedata><tw-passagedata pid="1649" name="suitor_date_vaela_5" tags="suitor-date vaela" position="1100,20600" size="100,100">She pulled me forward.
+[[Continue|suitor_date_vaela_5]]</tw-passagedata><tw-passagedata pid="1650" name="suitor_date_vaela_5" tags="suitor-date vaela" position="1225,20600" size="100,100">She pulled me forward.
 
 Her hand closed on the collar of the tunic-dress — not roughly, but with the decisive grip of a woman who did not ask permission to take what she wanted because she had never needed to — and drew me toward her until our faces were inches apart.
 
@@ -46681,7 +46714,7 @@ Then she walked away. Her hips moved with a fighter&#39;s economy — tight, con
 
 She did not look back.
 
-[[Continue|suitor_date_vaela_6]]</tw-passagedata><tw-passagedata pid="1650" name="suitor_date_vaela_6" tags="suitor-date vaela" position="1225,20600" size="100,100">I stood in the Iron Garden.
+[[Continue|suitor_date_vaela_6]]</tw-passagedata><tw-passagedata pid="1651" name="suitor_date_vaela_6" tags="suitor-date vaela" position="100,20725" size="100,100">I stood in the Iron Garden.
 
 The flagstones were warm beneath my boots. The sun was directly overhead now, pouring heat into the stone enclosure, and the air shimmered above the practice ground in waves that made the walls seem to breathe.
 
@@ -46705,7 +46738,7 @@ My hand went to my jawline. Traced the spot where her fingers had been. The skin
 
 [[She terrifies me. I want more.|suitor_date_vaela_7a]]
 [[A skilled warrior, but too aggressive.|suitor_date_vaela_7b]]
-[[I felt nothing.|suitor_date_vaela_7c]]</tw-passagedata><tw-passagedata pid="1651" name="suitor_date_vaela_7a" tags="suitor-date vaela choice" position="100,20725" size="100,100">&lt;&lt;set $vaela_affection += 3&gt;&gt;
+[[I felt nothing.|suitor_date_vaela_7c]]</tw-passagedata><tw-passagedata pid="1652" name="suitor_date_vaela_7a" tags="suitor-date vaela choice" position="225,20725" size="100,100">&lt;&lt;set $vaela_affection += 3&gt;&gt;
 &lt;&lt;set $lesbian_curiosity += 2&gt;&gt;
 
 She terrified me. I wanted more.
@@ -46718,7 +46751,7 @@ I wanted more because the place where her fingers had touched my jaw was still s
 
 I left the Iron Garden with my pulse still hammering and the smell of sweat and steel in my nostrils and the shape of Vaela&#39;s smile imprinted on the inside of my eyelids.
 
-[[Report to Serelyne|suitor_date_evaluation_1]]</tw-passagedata><tw-passagedata pid="1652" name="suitor_date_vaela_7b" tags="suitor-date vaela choice" position="225,20725" size="100,100">&lt;&lt;set $vaela_affection -= 2&gt;&gt;
+[[Report to Serelyne|suitor_date_evaluation_1]]</tw-passagedata><tw-passagedata pid="1653" name="suitor_date_vaela_7b" tags="suitor-date vaela choice" position="350,20725" size="100,100">&lt;&lt;set $vaela_affection -= 2&gt;&gt;
 
 A skilled warrior. Undeniably talented. The Dawncourt Blade Form was a revelation — proof that the feminine body could fight not merely adequately but brilliantly, and the techniques Vaela had demonstrated in those four bouts would change the way I trained with Aldric.
 
@@ -46726,13 +46759,13 @@ But the touch. The collar grab. The whispered declaration and the near-kiss and 
 
 I left the Iron Garden appreciating what she had shown me with the blade and wary of what she had shown me without it.
 
-[[Report to Serelyne|suitor_date_evaluation_1]]</tw-passagedata><tw-passagedata pid="1653" name="suitor_date_vaela_7c" tags="suitor-date vaela choice" position="350,20725" size="100,100">I felt nothing.
+[[Report to Serelyne|suitor_date_evaluation_1]]</tw-passagedata><tw-passagedata pid="1654" name="suitor_date_vaela_7c" tags="suitor-date vaela choice" position="475,20725" size="100,100">I felt nothing.
 
 I told myself this as I left the Iron Garden. Felt nothing. The sparring was educational, the near-kiss was a power play, and the thundering of my pulse was simple exertion from four bouts of combat. Nothing more.
 
 The ghost of her fingers on my jaw argued otherwise, but I had become skilled at ignoring the testimony of a body I no longer trusted to tell me the truth about anything.
 
-[[Report to Serelyne|suitor_date_evaluation_1]]</tw-passagedata><tw-passagedata pid="1654" name="startup" tags="" position="475,20725" size="100,100">&lt;&lt;nobr&gt;&gt;
+[[Report to Serelyne|suitor_date_evaluation_1]]</tw-passagedata><tw-passagedata pid="1655" name="startup" tags="" position="600,20725" size="100,100">&lt;&lt;nobr&gt;&gt;
 &lt;!-- Fullscreen Intro Page for Kingdom of Velmoria --&gt;
 &lt;div id=&quot;velmoria-intro&quot; style=&quot;
   position: fixed;
@@ -46782,7 +46815,7 @@ The ghost of her fingers on my jaw argued otherwise, but I had become skilled at
   &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1655" name="intro" tags="" position="600,20725" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1656" name="intro" tags="" position="725,20725" size="100,100">&lt;&lt;nobr&gt;&gt;
 &lt;div id=&quot;velmoria-intro-2&quot;&gt;
 &lt;h1 class=&#39;topic-head&#39;&gt;👑 *Kingdom of Velmoria* 👑&lt;/h1&gt;
 &lt;p&gt;&lt;strong&gt;Genre:&lt;/strong&gt; Medieval Fantasy · Interactive Story · Gender Transformation&lt;/p&gt;
@@ -46810,7 +46843,7 @@ The ghost of her fingers on my jaw argued otherwise, but I had become skilled at
 
 &lt;button id=&quot;enter-relam&quot; style=&quot;margin-top: 25px; padding: 10px 20px; background-color: #a58b5c; color: white; border: none; border-radius: 8px;&quot;&gt;Enter the Realm&lt;/button&gt;
 &lt;/div&gt;
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1656" name="body_choice" tags="" position="725,20725" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1657" name="body_choice" tags="" position="850,20725" size="100,100">&lt;&lt;nobr&gt;&gt;
 &lt;h3 style=&quot;text-align: center;&quot;&gt;Choose your starting character&lt;/h3&gt;
 &lt;div class=&quot;item-grid&quot;&gt;
 	&lt;div class=&quot;item-card&quot; style=&quot;width: 90%; &quot;&gt;
@@ -46841,7 +46874,7 @@ The ghost of her fingers on my jaw argued otherwise, but I had become skilled at
         [[Ultra Muscular|Ultra Muscular]]
     &lt;/div&gt;
 &lt;/div&gt;
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1657" name="Lean" tags="" position="850,20725" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1658" name="Lean" tags="" position="975,20725" size="100,100">&lt;&lt;nobr&gt;&gt;
 &lt;&lt;set $user_stats.gender_Identity = 60&gt;&gt;
 &lt;&lt;set $user_stats.gender_appearance = 64.5&gt;&gt;
 &lt;&lt;set $user_stats.dominance_level = 60&gt;&gt;
@@ -46916,7 +46949,7 @@ In public mode only the muscular body type is available.
 &lt;br&gt;
 &lt;&lt;/if&gt;&gt;
 [[Back Choose Character|body_choice]]
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1658" name="Muscular" tags="" position="975,20725" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1659" name="Muscular" tags="" position="1100,20725" size="100,100">&lt;&lt;nobr&gt;&gt;
 &lt;&lt;set $user_stats.gender_Identity = 80&gt;&gt;
 &lt;&lt;set $user_stats.gender_appearance = 80&gt;&gt;
 &lt;&lt;set $user_stats.dominance_level = 80&gt;&gt;
@@ -46983,7 +47016,7 @@ In public mode only the muscular body type is available.
 &lt;&lt;set $curr_chest = 2&gt;&gt;
 [[Start Journey|notice]] |
 [[Back Choose Character|body_choice]]
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1659" name="Ultra Muscular" tags="" position="1100,20725" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1660" name="Ultra Muscular" tags="" position="1225,20725" size="100,100">&lt;&lt;nobr&gt;&gt;
 &lt;&lt;set $user_stats.gender_Identity = 100&gt;&gt;
 &lt;&lt;set $user_stats.gender_appearance = 94.9&gt;&gt;
 &lt;&lt;set $user_stats.dominance_level = 100&gt;&gt;
@@ -47059,7 +47092,7 @@ In public mode only the muscular body type is available.
 &lt;br&gt;
 &lt;&lt;/if&gt;&gt;
 [[Back Choose Character|body_choice]]
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1660" name="notice" tags="" position="1225,20725" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1661" name="notice" tags="" position="100,20850" size="100,100">&lt;&lt;nobr&gt;&gt;
 &lt;&lt;set $currentObjectives = &quot;The Council Convenes&quot;&gt;&gt;
 &lt;&lt;set $locationName = &#39;Castle&#39;&gt;&gt;
 &lt;&lt;set $locationImage = setup.ImagePath + &#39;location/council_room.png&#39;&gt;&gt;
@@ -47094,7 +47127,7 @@ In public mode only the muscular body type is available.
 [[Contemplate Your Path|Contemplate_Your_Path]]
 [[Skip Intro|into_11]]
 &lt;/div&gt;
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1661" name="Contemplate_Your_Path" tags="" position="100,20850" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1662" name="Contemplate_Your_Path" tags="" position="225,20850" size="100,100">&lt;&lt;nobr&gt;&gt;
 &lt;&lt;speech &quot;malrec&quot;&gt;&gt;
 Your Majesty, may I commend the clarity of your decree. The boy ahem, the Prince deserves to understand the weight of such a crossroads. Rare it is for a ruler to offer choice when the throne’s need is clear.
 &lt;&lt;/speech&gt;&gt;
@@ -47112,7 +47145,7 @@ Enough. This is not a debate of worth. My son was born of my womb, he carries th
 &lt;&lt;/speech&gt;&gt;
 &lt;br&gt;
 [[Move forth|into_1]]
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1662" name="into_1" tags="" position="225,20850" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1663" name="into_1" tags="" position="350,20850" size="100,100">&lt;&lt;nobr&gt;&gt;
 &lt;&lt;speech &quot;mc&quot;&gt;&gt;
 ...May I speak, Mother?
 &lt;&lt;/speech&gt;&gt;
@@ -47130,7 +47163,7 @@ You speak well, my son. Or perhaps... my daughter in waiting. Know this, Your tr
 &lt;&lt;/speech&gt;&gt;
 &lt;br&gt;
 [[Move forth|into_2]]
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1663" name="into_2" tags="" position="350,20850" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1664" name="into_2" tags="" position="475,20850" size="100,100">&lt;&lt;nobr&gt;&gt;
 &lt;&lt;speech &quot;veletia&quot;&gt;&gt;
 And what a divine peace it could be! Imagine, Caelan silk draped on strong shoulders, a crown resting on freshly curled hair, eyes like yours commanding hearts and thrones alike!
 &lt;&lt;/speech&gt;&gt;
@@ -47148,7 +47181,7 @@ And if I say no? If I take a wife and let her rule? Will you all stand by me the
 &lt;&lt;/speech&gt;&gt;
 &lt;br&gt;
 [[Move forth|into_3]]
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1664" name="into_3" tags="" position="475,20850" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1665" name="into_3" tags="" position="600,20850" size="100,100">&lt;&lt;nobr&gt;&gt;
 &lt;&lt;speech &quot;alinora&quot;&gt;&gt;
 I will stand beside you. But not behind you. A queen leads. A consort supports. The throne demands its sovereign to be sovereign not through marriage, but through birth... and rebirth.
 &lt;&lt;/speech&gt;&gt;
@@ -47169,7 +47202,7 @@ Then ask yourself, my child. Do you want to be queen? To rule with the strength 
 &lt;br&gt;
 &lt;br&gt;
 [[No crown is worth losing myself. I will take a wife, not a new form|into_5]]
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1665" name="into_4" tags="" position="600,20850" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1666" name="into_4" tags="" position="725,20850" size="100,100">&lt;&lt;nobr&gt;&gt;
 &lt;&lt;speech &quot;mc&quot;&gt;&gt;
 I have never feared duty. And though this path is strange, even frightening... if my body must change to match the crown, then let it be so. If being a princess means protecting our bloodline, our realm then I will embrace that role, fully and without shame.
 &lt;&lt;/speech&gt;&gt;
@@ -47203,14 +47236,14 @@ Caelan’s heart beat like a war drum. This was no coronation. It was a reforgin
 &lt;br&gt;
 [[Begin with the First Pillar: Mental Conversion|mental_conversion]]
 
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1666" name="into_5" tags="" position="725,20850" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1667" name="into_5" tags="" position="850,20850" size="100,100">&lt;&lt;nobr&gt;&gt;
 &lt;br&gt;
 &lt;br&gt;
 &lt;strong&gt;Dev Message - Not Implemented this path yet..&lt;/strong&gt;
 &lt;br&gt;
 &lt;br&gt;
 [[Go Back|into_3]]
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1667" name="mental_conversion" tags="" position="850,20850" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1668" name="mental_conversion" tags="" position="975,20850" size="100,100">&lt;&lt;nobr&gt;&gt;
 &lt;&lt;set $currentObjectives = &quot;Listen to Mental Conversion&quot;&gt;&gt;
 &lt;div style=&quot;font-family: &#39;Papyrus&#39;, serif; potion_create_torso color: #8b5e3c; background-color: #f5f0dc; border: 2px solid #a58b5c; padding: 18px; border-radius: 10px; box-shadow: 3px 3px 8px rgba(0,0,0,0.2); max-width: 700px; margin: 20px auto;&quot;&gt;
 &lt;p&gt;&lt;strong&gt;Lady Serelyne Virellis&lt;/strong&gt; stepped forward, her expression unreadable.&lt;/p&gt;
@@ -47234,7 +47267,7 @@ You may struggle, But should you succeed, the court will not see a transformed m
 &lt;br&gt;
 [[Proceed to the Second Pillar: Physical Conversion|physical_conversion]]
 &lt;/div&gt;
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1668" name="physical_conversion" tags="" position="975,20850" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1669" name="physical_conversion" tags="" position="1100,20850" size="100,100">&lt;&lt;nobr&gt;&gt;
 &lt;&lt;set $currentObjectives = &quot;Listen to Physical Conversion&quot;&gt;&gt;
 &lt;div style=&quot;font-family: &#39;Papyrus&#39;, serif; potion_create_torso color: #8b5e3c; background-color: #f5f0dc; border: 2px solid #a58b5c; padding: 18px; border-radius: 10px; box-shadow: 3px 3px 8px rgba(0,0,0,0.2); max-width: 700px; margin: 20px auto;&quot;&gt;
 &lt;p&gt;&lt;strong&gt;Archmage Thalara Moonveil&lt;/strong&gt; stood with staff in hand, her silver hair glowing faintly under the chandelier&#39;s light.&lt;/p&gt;
@@ -47258,7 +47291,7 @@ The body is clay in the hands of will and magic, But it is &lt;em&gt;you&lt;/em&
 &lt;br&gt;
 [[Proceed to the Third Pillar: Rule and Survival|rule_and_survival]]
 &lt;/div&gt;
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1669" name="rule_and_survival" tags="" position="1100,20850" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1670" name="rule_and_survival" tags="" position="1225,20850" size="100,100">&lt;&lt;nobr&gt;&gt;
 &lt;&lt;set $currentObjectives = &quot;Listen to Rule and Survival&quot;&gt;&gt;
 &lt;div style=&quot;font-family: &#39;Papyrus&#39;, serif; potion_create_torso color: #8b5e3c; background-color: #f5f0dc; border: 2px solid #a58b5c; padding: 18px; border-radius: 10px; box-shadow: 3px 3px 8px rgba(0,0,0,0.2); max-width: 700px; margin: 20px auto;&quot;&gt;
 &lt;p&gt;&lt;strong&gt;Queen Alinora&lt;/strong&gt; herself rose now, her voice strong with pride.&lt;/p&gt;
@@ -47289,7 +47322,7 @@ You must earn the kingdom’s love and fear, Caelan,&quot; the Queen declared. &
 [[Move forth|into_6]]
 &lt;/div&gt;
 
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1670" name="into_6" tags="" position="1225,20850" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1671" name="into_6" tags="" position="100,20975" size="100,100">&lt;&lt;nobr&gt;&gt;
 &lt;&lt;speech &quot;mc&quot;&gt;&gt;
 Then I accept the Rite of Three Pillars. I will reshape myself, body and soul, for the sake of Velmoria. 
 I only ask to understand what lies ahead, from those who will guide me.
@@ -47309,7 +47342,7 @@ To lead Velmoria, you must &lt;strong&gt;think&lt;/strong&gt; as she does. Not m
 You speak of thoughts and instincts... but how does one change those?
 &lt;&lt;/speech&gt;&gt; &lt;br&gt;
 [[Move forth|into_7]]
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1671" name="into_7" tags="" position="100,20975" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1672" name="into_7" tags="" position="225,20975" size="100,100">&lt;&lt;nobr&gt;&gt;
 &lt;&lt;speech &quot;serelyne&quot;&gt;&gt;
 Through observation. Discipline. Trial and test. You will spend days in court, mimicking our customs. 
 You will learn to speak softly, but with power. To smile in silence and command a room. 
@@ -47331,7 +47364,7 @@ But make no mistake this is not a costume. It is rebirth.
 Will it hurt? Will I lose who I am?
 &lt;&lt;/speech&gt;&gt; &lt;br&gt;
 [[Move forth|into_8]]
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1672" name="into_8" tags="" position="225,20975" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1673" name="into_8" tags="" position="350,20975" size="100,100">&lt;&lt;nobr&gt;&gt;
 &lt;&lt;speech &quot;thalara&quot;&gt;&gt;
 Pain, yes... in moments. But more than pain, there is uncertainty. 
 Your form will shift slowly organs altered, voice softened, curves blooming where none were before. 
@@ -47353,7 +47386,7 @@ You’ll fall off a horse, bruise, sweat, bleed... until you ride like fire and 
 Even after I become... physically different?
 &lt;&lt;/speech&gt;&gt; &lt;br&gt;
 [[Move forth|into_9]]
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1673" name="into_9" tags="" position="350,20975" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1674" name="into_9" tags="" position="475,20975" size="100,100">&lt;&lt;nobr&gt;&gt;
 &lt;&lt;speech &quot;aldric&quot;&gt;&gt;
 Especially then. The sword don’t care what’s between your legs. 
 Neither do enemies. 
@@ -47375,7 +47408,7 @@ You can’t. You will be shaped by them. And one day, you may wake up wondering 
 But such is rule an artful performance of truth and deceit. I will teach you both.
 &lt;&lt;/speech&gt;&gt; &lt;br&gt;
 [[Move forth|into_10]]
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1674" name="into_10" tags="" position="475,20975" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1675" name="into_10" tags="" position="600,20975" size="100,100">&lt;&lt;nobr&gt;&gt;
 Then, in a sudden flourish of silk and laughter, &lt;strong&gt;Mistress Veletia Roswyn&lt;/strong&gt; swept into the center like a flame in human form. &lt;br&gt;
 &lt;&lt;speech &quot;veletia&quot;&gt;&gt;
 And I, darling, shall make you &lt;strong&gt;divine&lt;/strong&gt;. 
@@ -47391,7 +47424,7 @@ It is armor. It is spellwork.
 And you, my dear Caelan, will become the most enchanting vision this kingdom has ever dared to imagine.
 &lt;&lt;/speech&gt;&gt; &lt;br&gt;
 [[Move forth|into_11]]
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1675" name="into_11" tags="" position="600,20975" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1676" name="into_11" tags="" position="725,20975" size="100,100">&lt;&lt;nobr&gt;&gt;
 As the final words settled into the warm silence of the chamber, the great bell of the royal tower tolled twice, signaling the descent of evening. &lt;br&gt;&lt;br&gt;
 Queen Alinora stood once more, her face unreadable. &lt;br&gt;
 &lt;&lt;speech &quot;alinora&quot;&gt;&gt;

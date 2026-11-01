@@ -1,0 +1,30 @@
+
+:: suitor_date_bridge [suitor-date]
+<<speech "mc">>
+Sir Aldren Thornwild. He asked me if it hurt, back in the line, with his eyes and not his mouth. I would like to meet him first.
+<</speech>>
+<br>
+
+A ripple moves through the chamber. Aldren's head lifts, and the warm hope on his face is so naked that I look away before it undoes me.
+<br><br>
+
+<<speech "serelyne">>
+Noted. Sir Aldren, at the garden, tomorrow morning.
+<</speech>>
+<br>
+
+She does not pause for a breath. Her grey eyes slide to the suitor line, and one of them, dark-haired, golden-eyed, smiling like she has been waiting all morning for exactly this, steps a half pace forward.
+<br><br>
+
+<<speech "serelyne">>
+Lady Vaela Rhyss of the Dawncourt has petitioned for the same day. The Crown sees no reason to refuse. One suitor in the garden, one in the Iron Garden, with a rest between. The Heir will learn more from two contrasts than from sixteen speeches.
+<</speech>>
+<br>
+
+<<speech "alinora">>
+Then it is decided. Go and rest, Caelan. Tomorrow, you begin.
+<</speech>>
+<br>
+
+<<set $currentObjectives = "Go to your chamber and sleep. The first suitor dates begin tomorrow.">>
+[[Leave Council Chamber|castle_map_front_select]]
