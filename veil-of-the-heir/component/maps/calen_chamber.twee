@@ -85,6 +85,8 @@ I will become the queen this realm deserves.
 [[Wake Up|mc_bed_chamber]]
 <<elseif $currentArc["main_arc"] == 18>>
 <<goto "dream_sequence">>
+<<elseif $currentArc["main_arc"] == 20 && $suitor_dates_completed == 0>>
+<<goto "suitor_date_morning_1">>
 <<else>>
 [img[images/location/mc_bed_img.png]]<br><br>
 <<set $day_number += 1>>

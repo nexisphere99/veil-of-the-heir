@@ -82,6 +82,11 @@
 <<set $confusion = 0>>
 <<set $defiance = 0>>
 
+<<set $aldren_affection = 0>>
+<<set $vaela_affection = 0>>
+<<set $lesbian_curiosity = 0>>
+<<set $suitor_dates_completed = 0>>
+
 <<set $user_stats = {
 	gender_appearance: 94.9,
 	gender_Identity: 95,

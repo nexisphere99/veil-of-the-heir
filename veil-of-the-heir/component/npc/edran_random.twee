@@ -2,7 +2,7 @@
 
 :: interact_with_edran
 <<nobr>>
-<<set _i to random(0, 20)>>
+<<set _i to random(0, 20 + ($suitor_dates_completed >= 1 ? 1 : 0))>>
 <<if _i == 0>>
 <<elseif _i == 1>>
 <<speech "edran">>
@@ -302,6 +302,21 @@ Sounds like a warning.
 
 <<speech "edran">>
 A choice. That plant won't touch you unless you ask it to, and you haven't.
+<</speech>>
+<br>
+<<elseif _i == 21>>
+<<speech "edran">>
+That white rose you carried in from the garden walk. Do you know its meaning in Valmoria? Purity. New beginnings. A flower given to queens-to-be since before the Echofire.
+<</speech>>
+<br>
+
+<<speech "mc">>
+Aldren chose it himself?
+<</speech>>
+<br>
+
+<<speech "edran">>
+He chose well, your golden knight. Or perhaps the rose chose him.
 <</speech>>
 <br>
 <</if>>

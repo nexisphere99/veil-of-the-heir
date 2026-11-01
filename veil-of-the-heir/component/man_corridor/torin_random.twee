@@ -2,7 +2,7 @@
 
 :: interact_with_torin
 <<nobr>>
-<<set _i to random(0, 20)>>
+<<set _i to random(0, 20 + ($suitor_dates_completed >= 1 ? 1 : 0))>>
 <<if _i == 0>>
 <<speech "torin">>
 You shouldn't walk alone at night, even within palace walls. Not all threats carry blades. Some wear silk and smiles.
@@ -302,6 +302,14 @@ What do you want from me, Torin?
 <<speech "torin">>
 Only what you're willing to give, and maybe a little more, if you whisper it in the dark.
 <</speech>>
+<br>
+<<elseif _i == 21>>
+<<speech "torin">>
+I heard the dates went... well.
+<</speech>>
+<br>
+
+He doesn't look up from the harness he is mending. The leather creaks in his grip. He says nothing else, and the silence between us is a different shape than it used to be.
 <br>
 <</if>>
 <<if $currentArc["main_arc"] >= 7 && !$torin_sex_1>>

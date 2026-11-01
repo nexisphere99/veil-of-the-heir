@@ -1,0 +1,69 @@
+:: suitor_date_evaluation_1 [suitor-date evaluation]
+<<set $suitor_dates_completed += 1>>
+
+Serelyne's chambers smelled of roses and parchment. The walls were ivory, the furnishings dark wood, the light filtered through gauze curtains that softened the afternoon sun into something that felt curated — as though even sunlight required Serelyne's approval before entering.
+
+She was seated at her writing desk when I arrived, the leather-bound journal open before her, a quill in her hand. She did not look up.
+
+"Sit."
+
+I sat. The chair was upholstered in pale rose silk — chosen, I suspected, to make whoever sat in it feel slightly too beautiful and slightly too vulnerable. Serelyne designed her spaces the way generals designed battlefields: every element positioned for maximum psychological effect.
+
+"I know everything that happened," she said, still writing. "My handmaidens observed both encounters in their entirety. I know that Aldren gave you a white rose and kissed your knuckles. I know that Vaela disarmed you three times and was touched on the fourth bout. I know that she pulled you forward by the collar and nearly kissed you before withdrawing."
+
+She set down the quill. Looked up. The steel-grey eyes were clinical, assessing, entirely devoid of the warmth that either suitor had shown me.
+
+"What I do not know — and what my handmaidens cannot report — is what you did feel. So tell me."
+
+She waited. The silence was a technique — I had learned to recognise it. Serelyne's silences were weapons, designed to make the person across from her fill the void with truths they had not intended to share.
+
+I told her. Not everything — not the word *desire*, not the precise quality of the ache in my chest — but enough. The warmth of Aldren's sincerity. The way he had asked if it hurt. The stone-skipping and the kneeling and the kiss on the knuckles. The ferocity of Vaela's sparring. The near-kiss. The electric charge of her fingers on my jaw.
+
+Serelyne listened. Made notes. Asked questions that were surgical in their precision.
+
+"Which touch lingered?" she said. "Aldren's lips on your knuckles, or Vaela's fingers on your jaw?"
+
+[[Aldren's lips.|suitor_date_evaluation_2][$aldren_affection += 1]]
+[[Vaela's fingers.|suitor_date_evaluation_2][$vaela_affection += 1; $lesbian_curiosity += 1]]
+[[Both. Differently.|suitor_date_evaluation_2]]
+
+
+:: suitor_date_evaluation_2 [suitor-date evaluation]
+<<set $currentArc["main_arc"] = 21>>
+<<set $currentObjectives = "The first dates are done. Rest, and think on who you need.">>
+
+Serelyne recorded my answer without commentary. The quill scratched across the journal page in her precise, angular script — letters that looked like they had been engineered rather than written.
+
+"I evaluate suitors across four axes," she said, turning the journal so I could see. A grid, neatly drawn. Names on one axis, categories on the other. **Physical. Emotional. Intellectual. Political.** Each cell contained a number — small, preliminary, already adjusted based on the morning's encounters.
+
+"Physical compatibility measures the body's response — not merely attraction, but chemistry. The unconscious signals. Pupil dilation, breathing pattern, skin flush. My handmaidens are trained observers." She tapped the physical column. "Emotional compatibility measures connection — the ability to see, to hear, to understand. Intellectual compatibility measures whether the conversation stimulates or stagnates. Political compatibility measures alignment of interests, alliances, and the strategic value of the match to Valmoria."
+
+She leaned back in her chair.
+
+"Aldren Thornwild scores highly on emotional and intellectual axes. He is warm, sincere, perceptive. His lineage is respectable, his estates solvent, his reputation unblemished. He would love you gently — steadily — with the patient devotion of a man who understands that transformation is a process, not an event."
+
+She paused. Her grey eyes held mine.
+
+"Vaela Rhyss scores highly on physical and intellectual axes. She is fierce, honest, and her combat skills are extraordinary. The Dawncourt alliance would strengthen Valmoria's southern border significantly. She would love you fiercely — challenge you, push you, demand your best and refuse to accept less."
+
+The journal closed. Serelyne's eyes met mine with the cool precision of a woman who had spent decades reading people the way scholars read texts.
+
+"The question is not which is better. They are different instruments playing different music. The question is which you need."
+
+She rose. Crossed to the window. The afternoon light framed her in silhouette — the sharp lines of her robes, the severe architecture of her braided hair, the posture that never bent even when the crown's weight pressed down on everyone around it.
+
+"There will be more dates. More suitors. The field is large, and I intend to narrow it with data, not sentiment." She turned back. "But data begins with honest feeling. Do not perform for me, Caelan. I can work with honesty. I cannot work with what you think I wish to hear."
+
+She returned to her desk. Opened the journal again.
+
+"Dismissed."
+
+I stood. Walked to the door. My hand was on the handle when her voice caught me one more time — quiet, almost offhand, the words delivered like an afterthought when they were anything but.
+
+"One observation. For your consideration." A pause. The quill suspended above the page. "Aldren kissed your hand and asked if the transformation hurt. Vaela threw a sword at you and said *show me.* Both were acts of respect. The difference is in the assumption. Aldren assumed fragility. Vaela assumed strength."
+
+The quill resumed scratching. The conversation was over.
+
+I left the chamber and closed the door behind me, and the corridor was cool and quiet and I stood there with the white rose tucked into the breast of the tunic-dress and the ghost of two different touches on two different parts of a body that belonged to neither the prince I had been nor the queen I would become, and the silence held both.
+
+[[Return to your chamber|mc_bed_chamber]]

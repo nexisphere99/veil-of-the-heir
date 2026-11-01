@@ -104,7 +104,7 @@ var LZString=function(){var r=String.fromCharCode,o="ABCDEFGHIJKLMNOPQRSTUVWXYZa
 		<div id="init-lacking"><p>Browser lacks capabilities required to play.</p><p>Upgrade or switch to another browser.</p></div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<!-- UUID://27FA6D7B-4709-4B3D-9797-F5BF92C9430B// --><tw-storydata name="Veil of the Heir" startnode="1632" creator="Tweego" creator-version="2.1.1+81d1d71" ifid="27FA6D7B-4709-4B3D-9797-F5BF92C9430B" zoom="0.6" format="SugarCube" format-version="2.37.3" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* twine-user-stylesheet #1: "character.css" */
+	<!-- UUID://27FA6D7B-4709-4B3D-9797-F5BF92C9430B// --><tw-storydata name="Veil of the Heir" startnode="1654" creator="Tweego" creator-version="2.1.1+81d1d71" ifid="27FA6D7B-4709-4B3D-9797-F5BF92C9430B" zoom="0.6" format="SugarCube" format-version="2.37.3" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* twine-user-stylesheet #1: "character.css" */
 /* speech */
 .speech-box {
     display: flex;
@@ -2157,7 +2157,7 @@ $(document).ready(function () {
         <div id="custom-left-bar">
             <div id="sidebar-close" class="mobile-only">✖</div>
             <h1 style="margin: 15% 0 0 0; text-align: center;">Veil of the Heir</h1>
-            <p style="margin: 0px; text-align: center;">Vesion - 0.0.18</p>
+            <p style="margin: 0px; text-align: center;">Vesion - 0.0.19</p>
             <h3 style="margin: 0px; text-align: center;">by Nexisphere Games</h3>
             <div id="left-top-container" class="image-crop">
                 <img id="player-image" class="player-image" src="" alt="Player Image">
@@ -16194,7 +16194,7 @@ Smart. Tears don’t buy ingredients. But maybe your mind can.
 [[Close the Ingredinet Details|$reverse_passage_ingredient]]
 &lt;/div&gt;
 &lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="320" name="interact_with_maera" tags="" position="1225,3975" size="100,100">&lt;&lt;nobr&gt;&gt;
-&lt;&lt;set _i to random(0, 19)&gt;&gt;
+&lt;&lt;set _i to random(0, 19 + ($suitor_dates_completed &gt;= 1 ? 1 : 0))&gt;&gt;
 &lt;&lt;if _i == 0&gt;&gt;
 &lt;&lt;speech &quot;maera&quot;&gt;&gt;
 You sneak into a lady&#39;s chambers without knocking now? Careful, Your Grace, I might get ideas.
@@ -16493,6 +16493,30 @@ Then let me be nothing but yours for a while.
 
 &lt;&lt;speech &quot;maera&quot;&gt;&gt;
 Don&#39;t tempt me, Caelan, unless you mean to follow through.
+&lt;&lt;/speech&gt;&gt;
+&lt;br&gt;
+&lt;&lt;elseif _i == 20&gt;&gt;
+&lt;&lt;speech &quot;maera&quot;&gt;&gt;
+Sir Aldren seems kind. Too kind for court, maybe. Kindness has a short lifespan in these halls.
+&lt;&lt;/speech&gt;&gt;
+&lt;br&gt;
+
+&lt;&lt;speech &quot;mc&quot;&gt;&gt;
+And Lady Vaela?
+&lt;&lt;/speech&gt;&gt;
+&lt;br&gt;
+
+She folds a chemise with unnecessary force.
+
+&lt;&lt;speech &quot;maera&quot;&gt;&gt;
+That one would eat you alive.
+&lt;&lt;/speech&gt;&gt;
+&lt;br&gt;
+
+A beat. She smooths the chemise she just mangled.
+
+&lt;&lt;speech &quot;maera&quot;&gt;&gt;
+I approve.
 &lt;&lt;/speech&gt;&gt;
 &lt;br&gt;
 &lt;&lt;/if&gt;&gt;
@@ -18368,7 +18392,7 @@ Sometimes. Gods help us both if I start needing it.
 [[Leave Jeral&#39;s Chamber|bed_chamber_male]] |&lt;br&gt;&lt;br&gt;
 [[Leave Maid Room Corridor|castle_map_back_select]]
 &lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="412" name="interact_with_torin" tags="" position="225,5225" size="100,100">&lt;&lt;nobr&gt;&gt;
-&lt;&lt;set _i to random(0, 20)&gt;&gt;
+&lt;&lt;set _i to random(0, 20 + ($suitor_dates_completed &gt;= 1 ? 1 : 0))&gt;&gt;
 &lt;&lt;if _i == 0&gt;&gt;
 &lt;&lt;speech &quot;torin&quot;&gt;&gt;
 You shouldn&#39;t walk alone at night, even within palace walls. Not all threats carry blades. Some wear silk and smiles.
@@ -18669,6 +18693,14 @@ What do you want from me, Torin?
 Only what you&#39;re willing to give, and maybe a little more, if you whisper it in the dark.
 &lt;&lt;/speech&gt;&gt;
 &lt;br&gt;
+&lt;&lt;elseif _i == 21&gt;&gt;
+&lt;&lt;speech &quot;torin&quot;&gt;&gt;
+I heard the dates went... well.
+&lt;&lt;/speech&gt;&gt;
+&lt;br&gt;
+
+He doesn&#39;t look up from the harness he is mending. The leather creaks in his grip. He says nothing else, and the silence between us is a different shape than it used to be.
+&lt;br&gt;
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;if $currentArc[&quot;main_arc&quot;] &gt;= 7 &amp;&amp; !$torin_sex_1&gt;&gt;
     [[Ask about the session|torin_sex_1]] |&lt;br&gt;&lt;br&gt;
@@ -18946,6 +18978,8 @@ I will become the queen this realm deserves.
 [[Wake Up|mc_bed_chamber]]
 &lt;&lt;elseif $currentArc[&quot;main_arc&quot;] == 18&gt;&gt;
 &lt;&lt;goto &quot;dream_sequence&quot;&gt;&gt;
+&lt;&lt;elseif $currentArc[&quot;main_arc&quot;] == 20 &amp;&amp; $suitor_dates_completed == 0&gt;&gt;
+&lt;&lt;goto &quot;suitor_date_morning_1&quot;&gt;&gt;
 &lt;&lt;else&gt;&gt;
 [img[images/location/mc_bed_img.png]]&lt;br&gt;&lt;br&gt;
 &lt;&lt;set $day_number += 1&gt;&gt;
@@ -24703,7 +24737,7 @@ Good. Because you will. Now, let&#39;s look up their scandals.
 [[Leave Royal Librarian Anthos Quillshade|great_library]] |&lt;br&gt;&lt;br&gt;
 [[Leave Royal Library|castle_map_front_select]]
 &lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="663" name="interact_with_edran" tags="" position="350,8350" size="100,100">&lt;&lt;nobr&gt;&gt;
-&lt;&lt;set _i to random(0, 20)&gt;&gt;
+&lt;&lt;set _i to random(0, 20 + ($suitor_dates_completed &gt;= 1 ? 1 : 0))&gt;&gt;
 &lt;&lt;if _i == 0&gt;&gt;
 &lt;&lt;elseif _i == 1&gt;&gt;
 &lt;&lt;speech &quot;edran&quot;&gt;&gt;
@@ -25003,6 +25037,21 @@ Sounds like a warning.
 
 &lt;&lt;speech &quot;edran&quot;&gt;&gt;
 A choice. That plant won&#39;t touch you unless you ask it to, and you haven&#39;t.
+&lt;&lt;/speech&gt;&gt;
+&lt;br&gt;
+&lt;&lt;elseif _i == 21&gt;&gt;
+&lt;&lt;speech &quot;edran&quot;&gt;&gt;
+That white rose you carried in from the garden walk. Do you know its meaning in Valmoria? Purity. New beginnings. A flower given to queens-to-be since before the Echofire.
+&lt;&lt;/speech&gt;&gt;
+&lt;br&gt;
+
+&lt;&lt;speech &quot;mc&quot;&gt;&gt;
+Aldren chose it himself?
+&lt;&lt;/speech&gt;&gt;
+&lt;br&gt;
+
+&lt;&lt;speech &quot;edran&quot;&gt;&gt;
+He chose well, your golden knight. Or perhaps the rose chose him.
 &lt;&lt;/speech&gt;&gt;
 &lt;br&gt;
 &lt;&lt;/if&gt;&gt;
@@ -38322,6 +38371,11 @@ Then let it be misunderstood. A true soul doesn&#39;t owe clarity to anyone but 
 &lt;&lt;set $confusion = 0&gt;&gt;
 &lt;&lt;set $defiance = 0&gt;&gt;
 
+&lt;&lt;set $aldren_affection = 0&gt;&gt;
+&lt;&lt;set $vaela_affection = 0&gt;&gt;
+&lt;&lt;set $lesbian_curiosity = 0&gt;&gt;
+&lt;&lt;set $suitor_dates_completed = 0&gt;&gt;
+
 &lt;&lt;set $user_stats = {
 	gender_appearance: 94.9,
 	gender_Identity: 95,
@@ -46144,7 +46198,541 @@ The breast guard sat beside it. The shaped leather chest piece beside that. Laye
 
 The warrior queen. In the making. Not yet made. Not yet certain. Not yet fully herself. But closer tonight than she was this morning and closer still by dawn.
 
-[[Sleep|mc_bed]]</tw-passagedata><tw-passagedata pid="1632" name="startup" tags="" position="225,20475" size="100,100">&lt;&lt;nobr&gt;&gt;
+[[Sleep|mc_bed]]</tw-passagedata><tw-passagedata pid="1632" name="suitor_date_aldren_1" tags="suitor-date aldren" position="225,20475" size="100,100">The Royal Garden in morning light was Edran Mossfoot&#39;s cathedral. Every path was a nave, every rose bed an altar, and the old gardener himself was always somewhere among the blooms — barefoot, dirt-fingered, communing with the earth in a language that required no words.
+
+Sir Aldren Thornwild waited at the garden entrance.
+
+&lt;&lt;passage_img &quot;character/aldren/aldren_3.png&quot;&gt;&gt;&lt;&lt;/passage_img&gt;&gt;
+
+He stood in polished sun-forged armour — ceremonial, not combat, the metal worked with the golden sunburst of his house — with a flowing white cape that caught the breeze and held it like a sail. His hair was the colour of late summer wheat: thick, wavy, falling to his collar, framing a face that was handsome in the way that old paintings depicted heroes. Strong jaw, golden skin, green eyes that crinkled at the edges when he smiled.
+
+He smiled now.
+
+&quot;Your Grace.&quot; He bowed — deep, unhurried, the cape sweeping the flagstones. When he rose, his eyes met mine with a warmth that contained nothing I had feared. No mockery. No pity. No discomfort at the visible evidence of what I was becoming. He looked at the tunic-dress, at the braid, at the softer line of my jaw, and he simply... saw me. Whoever I was today. Exactly that.
+
+&quot;Sir Aldren.&quot; I inclined my head in the formal greeting Serelyne had drilled into me — chin down, not forward; acknowledge, don&#39;t defer. &quot;I trust the morning finds you well.&quot;
+
+&quot;Better now,&quot; he said, and the earnestness of it was so naked that I nearly laughed. There was no artifice in this man. He was warmth incarnate — golden through and through — and his sincerity was either the most disarming weapon I had ever encountered or no weapon at all.
+
+We walked. The garden&#39;s central path led through Edran&#39;s rose beds — crimson, ivory, pale blush, deep violet — and the scent was thick enough to taste. Morning dew still clung to the petals, catching the light in prismatic droplets that scattered tiny rainbows across the flagstones.
+
+Edran was there, of course. Kneeling among the white roses, his bare feet caked with dark earth, his long brown hair tangled with leaves. He looked up as we passed — looked at Aldren, looked at me, and a knowing expression crossed his weathered face.
+
+Without a word, he reached into the bed and plucked a single white rose. Held it out to Aldren with dirt-blackened fingers and an expression that said everything words would have ruined.
+
+Aldren accepted the rose. Turned to me. Presented it with a half-bow that was pure storybook romance — the kind of gesture that should have been ridiculous, corny, the stuff of ballads written by bards who had never actually been in love.
+
+His sincerity sold it utterly.
+
+&quot;For the heir,&quot; he said. &quot;Whatever form the heir chooses.&quot;
+
+I took the rose. The thorns had been trimmed — Edran&#39;s doing, no doubt — and the stem was smooth against my reshaped fingers. The petals were cool and impossibly soft, and the scent was clean and sharp, like snowmelt.
+
+&quot;Thank you.&quot; My voice came out quieter than I intended.
+
+We walked on.
+
+[[Continue the garden walk|suitor_date_aldren_2]]</tw-passagedata><tw-passagedata pid="1633" name="suitor_date_aldren_2" tags="suitor-date aldren" position="350,20475" size="100,100">The conversation began where most conversations begin when two people are acutely aware that they are being observed and assessed: with careful, navigable territory.
+
+Aldren spoke of his childhood in the Thornwild estates. The lands were green and vast, he said — rolling hills that turned amber in autumn, forests that bordered the realm&#39;s northern reaches. His father had been a border knight, tall and laughing and gone too soon.
+
+&quot;He fell in the Border Wars,&quot; Aldren said, his voice steady but softer. &quot;I was seven. My mother raised me after — alone, with no title of her own, only the estate and her stubbornness.&quot; He glanced at me. &quot;She taught me everything I know about honour. And about stubbornness.&quot;
+
+A mirror. Whether he knew it or not — and I suspected, looking at his open, unguarded face, that he did not — he was holding up a mirror. A child raised by a single parent of extraordinary will. A father shaped more by absence than presence. A household where duty and love were the same word spoken in different tones.
+
+&quot;My father is still alive,&quot; I said, surprising myself with the honesty. &quot;But he has always been... peripheral. The Queen is the centre. Everything orbits her. Therion exists in her shadow by choice, by design, by the simple gravitational truth that Alinora is the sun and the rest of us are objects in her sky.&quot;
+
+Aldren nodded. Not with pity — with recognition. &quot;My mother was the same. A sun. And I was content to be warmed by her, rather than burned by my father&#39;s fire.&quot; He paused. &quot;I think perhaps the children of suns learn to shine differently.&quot;
+
+We had reached the far end of the rose walk, where the garden path descended through a stone archway toward the lakeshore. The morning mist had not yet burned away, and the lake was a sheet of hammered silver beneath a pale sky. Somewhere across the water, a heron called — a raw, prehistoric sound that cut through the garden&#39;s cultivated peace.
+
+Aldren&#39;s armour clinked softly as he walked. Not the heavy, crashing noise of battle plate, but a musical sound, like wind chimes forged in a smithy. Every piece had been fitted to his frame with a craftsman&#39;s precision, and he moved in it as naturally as I moved in the tunic-dress.
+
+&quot;I believe a sword protects — it does not define,&quot; he said, as though continuing a thought that had begun somewhere before this conversation. &quot;I have seen men whose entire identity was sheathed at their hip, and when they lost the blade, they lost themselves with it. A knight should be a knight without armour, without weapon, without title. The protection should live here—&quot; He tapped his chest. &quot;Not here.&quot; He tapped the pommel of his ceremonial sword.
+
+It was the most articulate thing any suitor had said to me, and he delivered it without flourish, without the sense that he was performing. He was simply telling me what he believed, and trusting me to decide whether it mattered.
+
+&quot;May I ask you something?&quot; he said.
+
+&quot;You may.&quot;
+
+He stopped walking. Turned to face me. The green eyes were serious now — not grave, not solemn, but serious in the way of a man who was about to say something he had been thinking about and had decided to say simply rather than cleverly.
+
+&quot;Does it hurt?&quot;
+
+Four words. No preamble. No elaborate lead-in about the honour of transformation or the sacred duty of the crown or any of the courtly circumlocutions I had grown to loathe. Just — does it hurt.
+
+No one had asked me that so simply.
+
+Serelyne spoke of the transformation in terms of progress and protocol. Thalara described it clinically — tissue development, hormonal cascades, skeletal remodelling. Maera avoided the subject with a dancer&#39;s skill, circling it in conversation the way she circled obstacles in the corridors. Even Aldric addressed it only in terms of its impact on my fighting stance.
+
+No one had simply asked if it hurt.
+
+[[Answer honestly|suitor_date_aldren_3]]</tw-passagedata><tw-passagedata pid="1634" name="suitor_date_aldren_3" tags="suitor-date aldren" position="475,20475" size="100,100">&quot;Yes.&quot;
+
+The word came out before I could curate it. Raw and unpolished and exactly the thing Serelyne would have wanted me not to say.
+
+&quot;It hurts constantly,&quot; I continued, and the honesty was a dam breaking — weeks of compressed silence cracking open in the presence of a man who had asked the one question no one else had thought to ask. &quot;Not always sharply. Sometimes it is a dull ache — here—&quot; I pressed my palm flat against my chest, against the budding tissue beneath the linen, and felt the soreness throb in response to the pressure. &quot;The growing. The tissue pushing outward against muscle and rib and skin that were not designed for it. It is like — have you ever broken a bone?&quot;
+
+&quot;My collarbone,&quot; he said. &quot;When I was twelve.&quot;
+
+&quot;The ache of bone knitting. That deep, grinding tenderness that tells you something is happening beneath the surface that you cannot stop and cannot accelerate. That is what the chest feels like. Every day. Worse in the morning, when the potions are freshest.&quot;
+
+We had started walking again — slowly, along the lakeshore path where the stones were smooth and the mist curled around our ankles. Aldren walked beside me, not ahead, his pace matched to mine.
+
+&quot;And the rest of it,&quot; I said, because the dam was broken and I could not seem to rebuild it. &quot;The disorientation. I reach for a doorframe and miss because my shoulders are narrower than my memory insists. I turn too quickly and the balance is wrong — the weight distribution has shifted, the hips are wider, the centre of gravity is lower than it was a month ago. I am living in a house whose rooms rearrange themselves every night, and every morning I wake and have to learn the layout again.&quot;
+
+Aldren was quiet. Not uncomfortable quiet — listening quiet. The kind of silence that a person maintains not because they have nothing to say but because they understand that the most important thing they can do right now is hold space for someone else&#39;s truth.
+
+&quot;And the grief,&quot; I said, quieter now. &quot;That is the part no one mentions. The grief of losing the body you knew. I was not — I was not in love with my old body. I did not worship my own reflection. But it was mine. Every scar, every callus, every proportion was a map of my life, and the potions are redrawing it. And there are days when I catch myself reaching for a muscle that is no longer there, or looking in the mirror and seeing a face that is almost mine but not quite, and the grief of that — the strange, untidy grief of becoming someone you have not yet learned to be — that is what hurts the most.&quot;
+
+I stopped walking. Realised my eyes were burning.
+
+Aldren stood beside me on the lakeshore path. The mist swirled between us. The heron called again from across the water — long and mournful and ancient.
+
+&quot;Thank you,&quot; he said.
+
+&quot;For what?&quot;
+
+&quot;For trusting me with that.&quot; He said it simply. Without grandiosity. A man who understood that honesty was a gift and treated it as such.
+
+The silence between us was not awkward. It was the silence of two people who had unexpectedly arrived somewhere real, and who needed a moment to acknowledge the terrain before continuing.
+
+&quot;My mother,&quot; Aldren said, after a time, &quot;used to skip stones on the lake near our estate. She said patience is a weapon, and the lake is your sparring partner.&quot; He looked at the water. &quot;Shall we?&quot;
+
+[[Skip stones with Aldren|suitor_date_aldren_4]]</tw-passagedata><tw-passagedata pid="1635" name="suitor_date_aldren_4" tags="suitor-date aldren" position="600,20475" size="100,100">He was surprisingly good at it.
+
+The first stone left his hand in a low, flat arc — wrist snapping at the release point with the controlled precision of a man who had been throwing things accurately since childhood. The stone kissed the water once, twice, three times, four, five, six — six skips before it lost momentum and slipped beneath the silver surface with barely a ripple.
+
+&quot;Six,&quot; he said, grinning. The grin transformed his face from handsome to boyish, the green eyes crinkling, the carefully maintained courtly composure dissolving into something genuine and warm and utterly disarming.
+
+I selected a stone. Flat, smooth, palm-sized — the kind Torin and I used to throw when we were boys, competing for skips on the river behind the castle. I set my feet, drew back my arm, and threw.
+
+The motion felt wrong.
+
+Not catastrophically wrong. Not painful. But the arm that threw the stone was not the arm that had thrown stones a year ago. The shoulder was narrower, the joint socket slightly repositioned, and the whip-crack of the release that had once come naturally required a conscious adjustment I had not anticipated. The stone left my hand at an angle — too steep, too high — and instead of skipping, it plunged into the lake with a hollow *plonk* and vanished.
+
+&quot;Ah,&quot; I said.
+
+Aldren did not laugh. He did not comment on the miss with careful, patronising encouragement. He simply picked up another stone and held it out.
+
+&quot;The elbow,&quot; he said. &quot;May I?&quot;
+
+I nodded. He stepped behind me — close enough that I could smell him, soap and leather and something warm beneath that might have been his skin — and placed his fingers on my elbow. The touch was brief and professional. A trainer&#39;s correction, not a suitor&#39;s advance. He adjusted the angle of the joint — inward by perhaps two degrees — and stepped back.
+
+&quot;Try again.&quot;
+
+I threw. The stone left my hand cleanly this time, the adjusted elbow angle compensating for the shifted shoulder geometry, and it skipped — once, twice, three times — before sinking.
+
+&quot;Three,&quot; I said. &quot;Half of yours.&quot;
+
+&quot;Three with a body you are still learning,&quot; he said. &quot;When you have finished learning it, you will beat me.&quot;
+
+There was something in the way he said it — *you will beat me* — that was neither flirtation nor flattery. It was an assessment. A knight&#39;s assessment of another person&#39;s potential. And it landed in my chest with a warmth that had nothing to do with the morning sun.
+
+We skipped stones for perhaps twenty minutes. The mist burned off. The lake turned from silver to blue. My throws improved — the body&#39;s new mechanics clicking into place through repetition, the way Aldric&#39;s combat drills had taught the feminine guard through a thousand iterations.
+
+Aldren told me about his mother. How she had governed the estate alone after his father&#39;s death, managing tenants and harvests and disputes with a combination of iron will and genuine compassion that earned her a loyalty no lord had managed. How she had taught him that a sword protects — it does not define. How she had died three years ago, in her sleep, with Aldren holding her hand, and how the estate now was his but felt emptier without the sound of her humming in the kitchen.
+
+I told him about Therion. About the man who painted and played music while his wife ruled a kingdom. About the strange, quiet courage of choosing gentleness in a world that rewarded only strength. About the evenings when Therion would sit with me in the garden — this garden, these paths — and say nothing, and how the nothing he said was more nourishing than all of Serelyne&#39;s lectures combined.
+
+The conversation was easy. Warm. Like sitting beside a fire that gave heat without smoke.
+
+And throughout it all — throughout the stone-skipping and the stories and the morning light shifting across the water — I was aware of my body. The ache in my chest. The way the tunic-dress moved against new curves. The unfamiliar weight at my hips. The softness of my hands. And Aldren saw it all, and said nothing about it, and treated me as though I were exactly the person I was supposed to be at this exact moment, which was the most generous thing anyone had done for me in weeks.
+
+[[Walk back to the garden gate|suitor_date_aldren_5]]</tw-passagedata><tw-passagedata pid="1636" name="suitor_date_aldren_5" tags="suitor-date aldren" position="725,20475" size="100,100">We walked back through the garden. The roses had opened further in the warming air — the crimson ones wide and velvety, the white ones luminous, the pale blush ones blushing deeper. Edran had vanished, as he always did, melting back into the greenery like a spirit of the garden itself.
+
+Aldren walked beside me. Our shoulders were nearly level — his slightly broader, mine slightly narrower, the difference smaller than it would have been a month ago and larger than it would be a month hence. The space between us was comfortable. Warm. Steady. A space that said: I am here. I am not going anywhere. Take as long as you need.
+
+The garden gate appeared. Wrought iron, laced with climbing roses, the point where the cultivated beauty of the garden met the structured stone of the castle&#39;s outer wall. The transition between Edran&#39;s world and Serelyne&#39;s.
+
+Aldren stopped.
+
+He turned to face me. The green eyes were soft and serious and very, very present. The morning light was behind him, catching the gold of his hair like a halo in a temple fresco, and I was acutely aware that this was the moment — the climax of the date, the point at which a suitor would reveal something of their true intentions before retreating.
+
+He knelt.
+
+Not performatively. Not with the theatrical flourish of a man who had rehearsed the gesture before a mirror. He simply — sank. One knee to the ground, cape pooling around him like spilled cream, head bowed, and the motion was so natural, so devoid of pretension, that it took me a moment to understand what was happening.
+
+He reached for my hand.
+
+My hand. The hand the potions had been reshaping — the tapered fingers, the smaller palm, the wrist that was more bone and less muscle than it had been. He took it gently, as though he were handling something fragile and precious, and turned it so the knuckles faced upward.
+
+He pressed his lips to my knuckles.
+
+The sensation rippled up my arm and into my chest and settled behind the budding tissue with a warmth that was entirely different from the ache I had grown accustomed to. His lips were dry and warm and the kiss lasted perhaps two seconds — long enough to be felt, brief enough to be chaste, precise enough to communicate something that words would have cluttered.
+
+He raised his head. Looked up at me from one knee.
+
+&quot;Whatever you become,&quot; he said, &quot;I would be honoured to stand beside it.&quot;
+
+He rose. Bowed. His eyes held mine for one more breath — steady, golden, unafraid — and then he turned and walked away, the white cape catching the morning breeze, his armour chiming that soft, musical chime, his footsteps sure and unhurried on the garden path.
+
+I stood at the gate.
+
+The white rose was in my left hand. The ghost of his lips lingered on the knuckles of my right — knuckles that were no longer a man&#39;s, not yet a woman&#39;s, belonging to someone in between who was trembling and could not entirely explain why.
+
+[[How did that make you feel?|suitor_date_aldren_6]]</tw-passagedata><tw-passagedata pid="1637" name="suitor_date_aldren_6" tags="suitor-date aldren" position="850,20475" size="100,100">I pressed my back against the garden gate. The wrought iron was cool through the linen of the tunic-dress. The white rose trembled in my grip.
+
+My heart was doing something complicated. Not racing — Aldren did not provoke racing. He provoked something slower and deeper, a gravitational pull, a warmth that settled into the bones and stayed. The kind of feeling you did not notice until you tried to move away from it and found it had already rooted.
+
+The ghost of his lips on my knuckles. The sound of his armour chiming as he walked away. The simple, devastating honesty of *whatever you become.*
+
+Not *whoever.* Whatever. As though he understood — truly understood — that what I was becoming was not merely a change of person but a change of category, a metamorphosis so fundamental that the usual pronouns and frameworks did not apply, and he had chosen the word that held the most space.
+
+I looked down at my hands. The right one, where his lips had been, was trembling. The left one held the rose so tightly that the smooth stem was denting the soft flesh of my palm.
+
+[[My heart raced.|suitor_date_aldren_6a]]
+[[A kind gesture, nothing more.|suitor_date_aldren_6b]]
+[[Too forward.|suitor_date_aldren_6c]]</tw-passagedata><tw-passagedata pid="1638" name="suitor_date_aldren_6a" tags="suitor-date aldren choice" position="975,20475" size="100,100">&lt;&lt;set $aldren_affection += 3&gt;&gt;
+
+My heart raced.
+
+Not with the wild, stammering terror of infatuation — but with something quieter and more dangerous. The slow, warm recognition of a person who might understand. Who might see the body in transition and the soul in flux and choose to stay not because of what I would become but because of the becoming itself.
+
+I brought the rose to my face and breathed in. Snowmelt. New beginnings.
+
+The garden gate at my back. The castle ahead. And somewhere between the two, the fading chime of golden armour carried on the morning wind.
+
+[[Prepare for Lady Vaela|suitor_date_vaela_1]]</tw-passagedata><tw-passagedata pid="1639" name="suitor_date_aldren_6b" tags="suitor-date aldren choice" position="1100,20475" size="100,100">A kind gesture. Nothing more.
+
+I told myself this and almost believed it. Aldren was courteous — bred for it, trained in it, a sun-knight who radiated warmth the way a hearth radiates heat: constantly, generously, without discrimination. The kiss on the knuckles was a performance of gallantry, not a declaration of passion, and the speech about standing beside me was the sort of thing any well-schooled suitor would say.
+
+I tucked the rose into the breast of the tunic-dress and straightened my spine. Time to move on.
+
+[[Prepare for Lady Vaela|suitor_date_vaela_1]]</tw-passagedata><tw-passagedata pid="1640" name="suitor_date_aldren_6c" tags="suitor-date aldren choice" position="1225,20475" size="100,100">&lt;&lt;set $aldren_affection -= 2&gt;&gt;
+
+Too forward.
+
+He had touched me. Without waiting for me to initiate — Serelyne&#39;s explicit instruction — he had taken my hand and pressed his mouth to my skin, and however gentle the gesture, however correct the kneeling posture, it was a presumption. A claim made in the language of chivalry, dressed in courtesy, but a claim nonetheless.
+
+My knuckles tingled where his lips had been. I wiped them against the tunic-dress and felt nothing but irritation.
+
+Or so I told myself as I walked away from the gate with the white rose still gripped in fingers that would not unclench.
+
+[[Prepare for Lady Vaela|suitor_date_vaela_1]]</tw-passagedata><tw-passagedata pid="1641" name="suitor_date_evaluation_1" tags="suitor-date evaluation" position="100,20600" size="100,100">&lt;&lt;set $suitor_dates_completed += 1&gt;&gt;
+
+Serelyne&#39;s chambers smelled of roses and parchment. The walls were ivory, the furnishings dark wood, the light filtered through gauze curtains that softened the afternoon sun into something that felt curated — as though even sunlight required Serelyne&#39;s approval before entering.
+
+She was seated at her writing desk when I arrived, the leather-bound journal open before her, a quill in her hand. She did not look up.
+
+&quot;Sit.&quot;
+
+I sat. The chair was upholstered in pale rose silk — chosen, I suspected, to make whoever sat in it feel slightly too beautiful and slightly too vulnerable. Serelyne designed her spaces the way generals designed battlefields: every element positioned for maximum psychological effect.
+
+&quot;I know everything that happened,&quot; she said, still writing. &quot;My handmaidens observed both encounters in their entirety. I know that Aldren gave you a white rose and kissed your knuckles. I know that Vaela disarmed you three times and was touched on the fourth bout. I know that she pulled you forward by the collar and nearly kissed you before withdrawing.&quot;
+
+She set down the quill. Looked up. The steel-grey eyes were clinical, assessing, entirely devoid of the warmth that either suitor had shown me.
+
+&quot;What I do not know — and what my handmaidens cannot report — is what you did feel. So tell me.&quot;
+
+She waited. The silence was a technique — I had learned to recognise it. Serelyne&#39;s silences were weapons, designed to make the person across from her fill the void with truths they had not intended to share.
+
+I told her. Not everything — not the word *desire*, not the precise quality of the ache in my chest — but enough. The warmth of Aldren&#39;s sincerity. The way he had asked if it hurt. The stone-skipping and the kneeling and the kiss on the knuckles. The ferocity of Vaela&#39;s sparring. The near-kiss. The electric charge of her fingers on my jaw.
+
+Serelyne listened. Made notes. Asked questions that were surgical in their precision.
+
+&quot;Which touch lingered?&quot; she said. &quot;Aldren&#39;s lips on your knuckles, or Vaela&#39;s fingers on your jaw?&quot;
+
+[[Aldren&#39;s lips.|suitor_date_evaluation_2][$aldren_affection += 1]]
+[[Vaela&#39;s fingers.|suitor_date_evaluation_2][$vaela_affection += 1; $lesbian_curiosity += 1]]
+[[Both. Differently.|suitor_date_evaluation_2]]</tw-passagedata><tw-passagedata pid="1642" name="suitor_date_evaluation_2" tags="suitor-date evaluation" position="225,20600" size="100,100">&lt;&lt;set $currentArc[&quot;main_arc&quot;] = 21&gt;&gt;
+&lt;&lt;set $currentObjectives = &quot;The first dates are done. Rest, and think on who you need.&quot;&gt;&gt;
+
+Serelyne recorded my answer without commentary. The quill scratched across the journal page in her precise, angular script — letters that looked like they had been engineered rather than written.
+
+&quot;I evaluate suitors across four axes,&quot; she said, turning the journal so I could see. A grid, neatly drawn. Names on one axis, categories on the other. **Physical. Emotional. Intellectual. Political.** Each cell contained a number — small, preliminary, already adjusted based on the morning&#39;s encounters.
+
+&quot;Physical compatibility measures the body&#39;s response — not merely attraction, but chemistry. The unconscious signals. Pupil dilation, breathing pattern, skin flush. My handmaidens are trained observers.&quot; She tapped the physical column. &quot;Emotional compatibility measures connection — the ability to see, to hear, to understand. Intellectual compatibility measures whether the conversation stimulates or stagnates. Political compatibility measures alignment of interests, alliances, and the strategic value of the match to Valmoria.&quot;
+
+She leaned back in her chair.
+
+&quot;Aldren Thornwild scores highly on emotional and intellectual axes. He is warm, sincere, perceptive. His lineage is respectable, his estates solvent, his reputation unblemished. He would love you gently — steadily — with the patient devotion of a man who understands that transformation is a process, not an event.&quot;
+
+She paused. Her grey eyes held mine.
+
+&quot;Vaela Rhyss scores highly on physical and intellectual axes. She is fierce, honest, and her combat skills are extraordinary. The Dawncourt alliance would strengthen Valmoria&#39;s southern border significantly. She would love you fiercely — challenge you, push you, demand your best and refuse to accept less.&quot;
+
+The journal closed. Serelyne&#39;s eyes met mine with the cool precision of a woman who had spent decades reading people the way scholars read texts.
+
+&quot;The question is not which is better. They are different instruments playing different music. The question is which you need.&quot;
+
+She rose. Crossed to the window. The afternoon light framed her in silhouette — the sharp lines of her robes, the severe architecture of her braided hair, the posture that never bent even when the crown&#39;s weight pressed down on everyone around it.
+
+&quot;There will be more dates. More suitors. The field is large, and I intend to narrow it with data, not sentiment.&quot; She turned back. &quot;But data begins with honest feeling. Do not perform for me, Caelan. I can work with honesty. I cannot work with what you think I wish to hear.&quot;
+
+She returned to her desk. Opened the journal again.
+
+&quot;Dismissed.&quot;
+
+I stood. Walked to the door. My hand was on the handle when her voice caught me one more time — quiet, almost offhand, the words delivered like an afterthought when they were anything but.
+
+&quot;One observation. For your consideration.&quot; A pause. The quill suspended above the page. &quot;Aldren kissed your hand and asked if the transformation hurt. Vaela threw a sword at you and said *show me.* Both were acts of respect. The difference is in the assumption. Aldren assumed fragility. Vaela assumed strength.&quot;
+
+The quill resumed scratching. The conversation was over.
+
+I left the chamber and closed the door behind me, and the corridor was cool and quiet and I stood there with the white rose tucked into the breast of the tunic-dress and the ghost of two different touches on two different parts of a body that belonged to neither the prince I had been nor the queen I would become, and the silence held both.
+
+[[Return to your chamber|mc_bed_chamber]]</tw-passagedata><tw-passagedata pid="1643" name="suitor_date_morning_1" tags="suitor-date morning" position="350,20600" size="100,100">&lt;&lt;set $currentObjectives = &quot;The first suitor dates: Sir Aldren Thornwild, then Lady Vaela Rhyss&quot;&gt;&gt;
+
+I woke to the sound of Maera humming — a lullaby from somewhere in her childhood that she only ever sang when she was nervous on my behalf. The bed linens clung to me, damp with the sweat of a restless night, and when I pushed them aside and sat up, the shift in my chest reminded me of the truth before my mind could catch up.
+
+Breasts. Small still — barely more than swellings beneath the sleep shirt — but undeniably present. They ached with the dull tenderness that had become my morning companion these past weeks, a deep soreness that pulsed with each heartbeat as though the flesh itself was arguing with my ribcage about how much space it deserved.
+
+&quot;Good morrow, Your Grace.&quot; Maera turned from the wardrobe with a garment draped over her arm. Not my usual tunic. Something new — cream-coloured linen with silver threading at the collar, cut in a way I had never seen before. Structured through the shoulders but softer through the torso, the waistline gently shaped rather than straight.
+
+&quot;Veletia sent this up before dawn,&quot; Maera said, holding it against my frame. Her eyes did that thing they had been doing more often lately — the quick, involuntary sweep from my shoulders to my hips, cataloguing the changes. The narrowing. The softening. The slow erasure of the body she had known since we were children together. &quot;A transitional tunic-dress, she called it. &#39;For a body that lives in two tenses.&#39;&quot;
+
+I took the garment. The linen was impossibly soft against my fingers — fingers that were thinner now, the knuckles less prominent, the nails longer than any prince&#39;s nails had a right to be. Thalara&#39;s potions were reshaping me from the extremities inward, and my hands had been among the first casualties.
+
+&quot;Today is the day, then,&quot; I said.
+
+&quot;Today is the day.&quot; Maera&#39;s voice was carefully neutral. &quot;First dates with Sir Aldren Thornwild and Lady Vaela Rhyss. Serelyne has arranged them both, back to back, with a recovery period between.&quot; She paused. &quot;Recovery period. As though you are undergoing surgery rather than a garden walk.&quot;
+
+I pulled the sleep shirt over my head and stood in the morning light from the window. The mirror across the chamber showed me what it always showed me now — a figure caught between chapters. Shoulders that had narrowed enough that my old tunics hung wrong. The slight swell at the chest where the budding tissue pushed forward, tender and conspicuous beneath thin fabric. Hips that were — God, I could see it now — pressing outward, the waistband of my sleeping trousers sitting differently than it had a month ago.
+
+&quot;Stop staring at yourself and lift your arms,&quot; Maera said, approaching with the tunic-dress. I obeyed. She slid the garment over my head and down my torso, and the sensation of the linen settling against the new contours of my chest sent a shiver through me that I could not entirely attribute to the morning chill.
+
+The fit was extraordinary. Veletia was a genius — there was no other word for it. The structured shoulders preserved the breadth I still had, projecting something like authority, while the softer torso allowed the emerging shape beneath to exist without being either concealed or displayed. The silver threading at the collar caught the light and drew the eye upward to my face — my jawline, which was softening, and my cheekbones, which were becoming more prominent as the fat redistributed beneath my skin.
+
+&quot;Well?&quot; I turned to Maera.
+
+She tilted her head. Considered. &quot;You look like a prince who is becoming a queen. Which is precisely what you are.&quot; She reached up and tugged a strand of my hair — longer now, falling past my earlobes in dark waves that had begun to curl at the tips. &quot;Shall I braid this back? Or leave it?&quot;
+
+&quot;Back. I do not want hair in my face if—&quot;
+
+&quot;If what? If Sir Aldren tries to kiss you?&quot; She grinned. The grin of a woman who had been my closest companion since age six and had earned the right to be insufferable.
+
+&quot;If I need to see clearly,&quot; I finished, with as much dignity as I could muster while a woman I had once beaten at wrestling was braiding hair I had never asked for.
+
+Maera&#39;s fingers worked through the strands — deft, practiced, as though she had been braiding hair all her life. Perhaps she had. I had simply never needed to notice.
+
+&quot;You have fought goblins in the forest,&quot; she said, her breath warm against my neck as she tied off the braid, &quot;and you&#39;re trembling over a garden walk?&quot;
+
+My hands were shaking. I looked down at them — the tapered fingers, the delicate wrists, the palms that were losing their calluses despite Aldric&#39;s best efforts — and clenched them into fists that no longer felt like weapons.
+
+&quot;The goblins,&quot; I said, &quot;did not care what I was becoming.&quot;
+
+[[Continue|suitor_date_morning_2]]</tw-passagedata><tw-passagedata pid="1644" name="suitor_date_morning_2" tags="suitor-date morning" position="475,20600" size="100,100">Serelyne arrived precisely when Maera finished — not a moment sooner, not a moment later, because Lady Serelyne Virellis had elevated punctuality into an art form indistinguishable from intimidation.
+
+She stood in the doorway in her customary monochrome — charcoal robes over black silk, the royal sigil embroidered at her cuff in thread so dark it was visible only when the light caught it at certain angles. Her steel-grey eyes took me in with one sweeping assessment that catalogued everything from the braid to the boots.
+
+&quot;The tunic-dress is acceptable,&quot; she said. Not good. Not lovely. Acceptable. From Serelyne, this was approximately equivalent to a standing ovation.
+
+She entered the chamber. Maera stepped aside with the instinctive deference that Serelyne commanded from everyone, including, I suspected, the furniture.
+
+&quot;Today you shall meet two suitors in private audience,&quot; Serelyne began, her voice carrying the clipped cadence of a woman who had rehearsed these instructions in her sleep. &quot;Sir Aldren Thornwild of the Thornwild estates. Lady Vaela Rhyss of the Dawncourt. The encounters are designed to test compatibility across four axes: physical chemistry, emotional resonance, intellectual match, and political suitability.&quot;
+
+She produced a small leather-bound journal — the same one she carried to every council session, the one rumoured to contain assessments of every person of consequence in Valmoria. She opened it to a fresh page.
+
+&quot;My handmaidens will observe from a distance. You know this. They will report to me on your body language, your responses, your reactions — particularly the ones you do not intend to reveal.&quot; She met my eyes. &quot;Balance genuine reaction with performative poise. Be honest enough to give me useful data. Be guarded enough to retain your options.&quot;
+
+&quot;And if I feel nothing?&quot;
+
+Serelyne&#39;s mouth twitched — the closest she came to a smile. &quot;Then I shall record that, and we shall discuss what &#39;nothing&#39; truly means in a body flooded with transformation hormones and the expectations of an entire kingdom.&quot;
+
+She closed the journal. Tucked it beneath her arm.
+
+&quot;Three rules. First: observe. Watch how they move, how they speak, what they reveal without intending to. A suitor who cannot surprise you will bore you on the throne. Second: listen. Not merely to words — to pauses, to breath, to what they choose not to say. Third: respond honestly. I can work with honesty. I cannot work with performance.&quot;
+
+She turned toward the door, then stopped.
+
+&quot;And under no circumstances allow physical contact beyond what you do initiate. If a suitor touches you first, I wish to know whether it was welcome. That datum is useless if you provok it.&quot;
+
+She departed. The door closed behind her with the quiet finality of a woman who had just armed me for a battle I was not certain I could win.
+
+Maera let out a breath she had been holding since Serelyne entered.
+
+&quot;Well,&quot; she said. &quot;That was terrifying. Shall we go?&quot;
+
+I looked at myself in the mirror one final time. The cream linen and silver threading. The braid that framed a face being sculpted by magic into someone I had not yet learned to recognise. The slight swell at the chest that would be visible to anyone who looked — to Aldren, to Vaela, to the handmaidens who would report every glance.
+
+Weeks ago, courtship had meant nothing. The body was male, the future uncertain, and the prospect of suitors was an abstraction discussed in council chambers by people who spoke of me in the third person. Now — with breasts budding beneath the linen and hips pressing against the waistband in ways they never had before — courtship had become terrifyingly, viscerally real. Someone was going to look at this body. This half-finished, between-worlds body. And they were going to decide whether they wanted it.
+
+Whether they wanted me.
+
+I walked out of the chamber before I could change my mind.
+
+[[Meet Sir Aldren in the garden|suitor_date_aldren_1]]</tw-passagedata><tw-passagedata pid="1645" name="suitor_date_vaela_1" tags="suitor-date vaela" position="600,20600" size="100,100">The Iron Garden.
+
+That was what the castle staff called the training yard — a name that married the stone enclosure&#39;s brutal functionality with the garden&#39;s promise that things could grow here, even if what grew was skill rather than roses. The flagstones were scarred by a thousand practice bouts. The weapons racks lined the eastern wall like metal ribs. The air smelled of sand and sweat and oiled steel.
+
+Lady Vaela Rhyss did not wait.
+
+&lt;&lt;passage_img &quot;character/vaela/vaela_4.png&quot;&gt;&gt;&lt;&lt;/passage_img&gt;&gt;
+
+She was already there when I arrived — already stripped to a fitted ivory-and-gold training tunic that hugged the lean, defined musculature of her frame with a frankness that was half martial, half provocative. Dark hair bound in a warrior&#39;s tail that fell between her shoulder blades like a whip. Skin pale and luminous, already flushed with the morning&#39;s heat. And eyes — golden-amber eyes that tracked my approach with the focused intensity of a predator assessing prey.
+
+She did not bow. She did not greet me. She did not smile.
+
+Two practice rapiers rested on the weapons rack. She took one, tested its balance with a flick of her wrist that made the blade sing, and threw the other one to me.
+
+I caught it. Barely. The handle slapped into my palm with a *crack* that stung, and my fingers closed around the grip with the reflexive quickness that Aldric&#39;s training had beaten into muscle memory.
+
+&quot;I did not come to Valmoria to drink tea and discuss lineage,&quot; Vaela said. Her voice was low, resonant, carrying the accent of the Dawncourt — vowels rounded like river stones, consonants that cut like the blade she held. &quot;I came to see if the heir is worth protecting.&quot;
+
+She raised the rapier. The point aimed at my sternum with the casual precision of a woman who could thread a needle at twenty paces.
+
+&quot;Show me.&quot;
+
+[[Fight|suitor_date_vaela_2]]</tw-passagedata><tw-passagedata pid="1646" name="suitor_date_vaela_2" tags="suitor-date vaela" position="725,20600" size="100,100">She moved first.
+
+The attack came in a form I had never encountered — a lateral slash that originated not from the shoulder, as I expected, but from the hip. The blade arced upward in a whipping crescent, powered by a rotational force that used the wider female pelvis as a fulcrum rather than the squared male stance I had been raised in. The Dawncourt Blade Form.
+
+I parried. Barely. The impact rang up my forearm and into my shoulder, and the force of it surprised me — not the raw power, which was less than Aldric&#39;s strikes, but the efficiency. Every ounce of her body weight was channelled through that rotation. Nothing wasted. Nothing held in reserve.
+
+She pressed. A thrust, a feint, a pivot that carried her around my guard before I could adjust, and suddenly her blade was at my ribs, the point dimpling the linen of the tunic-dress.
+
+&quot;Reset,&quot; she said. The word was not a command. It was an invitation. *Come again. Do better.*
+
+I set the feminine guard — feet shoulder-width, weight on the balls, rapier extended at mid-line, the hip-driven stance Aldric had been teaching me. It felt raw still, unfinished, a technique my body was learning to inhabit rather than one it owned.
+
+Vaela saw it. Her golden eyes narrowed — not with contempt, but with recognition.
+
+&quot;The Vornhelm guard,&quot; she said. &quot;Adapted for a changing frame.&quot; She shifted her own stance — a mirror of mine, but perfected. Hips open, weight settled, the rapier an extension of her spine. &quot;He taught you the bones of it. I shall teach you the blood.&quot;
+
+She attacked.
+
+The second bout lasted longer — perhaps ninety seconds. I managed three parries, a cross-step that Aldric would have approved of, and a riposte that Vaela deflected with a flick of the wrist so economical it barely qualified as movement. She fought the way a river fights — flowing around obstacles, finding gaps, never forcing, always adapting. Every strike flowed from her centre, powered by the same biomechanics that I was trying to learn, and watching her was like watching a proof of concept — a living demonstration that the feminine body was not a limitation but an architecture, and she had built a fighting style that used every curve and angle as load-bearing structure.
+
+On my fourth parry, she disarmed me. A bind, a twist, and the rapier was wrenched from my grip and clattering across the flagstones. Her blade hovered at my throat — close enough that the cool steel kissed the skin beneath my jaw.
+
+She grinned.
+
+Not cruelly. Not mockingly. The fierce, bright-eyed grin of a warrior who has found an opponent worth the effort — one who held for ninety seconds when most would have folded in thirty.
+
+&quot;Again.&quot;
+
+[[Spar again|suitor_date_vaela_3]]</tw-passagedata><tw-passagedata pid="1647" name="suitor_date_vaela_3" tags="suitor-date vaela" position="850,20600" size="100,100">We sparred three more times.
+
+Each bout, I lasted longer. The feminine guard that Aldric had planted in my body began to sprout — the hip-driven rotation that Vaela used instinctively, I was learning to adopt through repetition, through observation, through the primal teacher of a blade at my throat and the refusal to let it stay there.
+
+The second bout: forty seconds before disarming. The cross-step was cleaner. The pivot-retreat — that backward glide that dropped beneath a horizontal slash — came without conscious thought. Vaela nodded when she disarmed me. A nod that said *better.*
+
+The third bout: two minutes. I found the rotation. Not perfectly — the hips were still learning their new proportions, still arguing with the muscle memory of a male pelvis — but enough to power a riposte that came from the core rather than the shoulder, and the blade moved faster because the engine driving it was more efficient. Vaela&#39;s eyes widened by a fraction when the riposte nearly tagged her forearm.
+
+&quot;There,&quot; she breathed. &quot;That. Again.&quot;
+
+The fourth bout.
+
+I set the guard. Vaela circled. The morning sun was high enough now to pour into the Iron Garden, catching the dust motes we kicked up from the flagstones, gilding the sweat on her arms and the steel of the practice blades. Her dark hair had loosened from the warrior&#39;s tail, strands clinging to her neck and jaw, and her breathing was deeper now — not ragged, but present, the rhythm of a body working near its edge.
+
+She attacked. The lateral slash — her signature opening, the hip-driven crescent. I read it this time. Shifted my weight to the rear foot, let the slash pass through the space where my ribs had been a heartbeat earlier, and drove forward into the gap her rotation created.
+
+The rapier&#39;s point tagged her shoulder.
+
+The practice blade kissed the ivory fabric of her training tunic — not hard enough to mark, barely hard enough to register — and we both froze.
+
+Vaela looked down at the spot where my blade had touched her.
+
+Then she laughed.
+
+A real laugh — not the controlled, courtly sound I had heard from the other suitors during the ceremony, but something bright and wild and unguarded, a laugh that came from the belly and the chest and the deep place where exhilaration and violence met. It rang off the Iron Garden&#39;s stone walls and scattered upward into the morning sky like startled birds.
+
+&quot;There it is,&quot; she said, her golden eyes finding mine, her voice carrying the raw warmth of someone who had found exactly what they came looking for. &quot;The queen.&quot;
+
+[[Continue|suitor_date_vaela_4]]</tw-passagedata><tw-passagedata pid="1648" name="suitor_date_vaela_4" tags="suitor-date vaela" position="975,20600" size="100,100">The aftermath was charged.
+
+We stood perhaps three feet apart. Both breathing hard — my chest heaving against the budding tissue with each inhale, the tenderness that was my constant companion now sharpened by exertion into something that bordered on painful. Sweat ran down my temples and traced the line of my jaw — the softer jawline, the one that was reshaping itself week by week beneath the alchemy&#39;s patient hand — and darkened the collar of the cream tunic-dress.
+
+Vaela was sweating too. Her ivory training tunic clung to her frame, the fabric translucent at the shoulders and the small of her back, and the body beneath was a sculptor&#39;s study in controlled power — lean muscle over long bones, a warrior&#39;s shoulders above a dancer&#39;s waist, the swell of breasts held firm by the tunic&#39;s fitted cut. She wore her body the way Aldren wore his armour: naturally, completely, without apology.
+
+My hair had escaped the braid during the sparring. Dark waves fell past my shoulders — longer than I realised, the transformation accelerating the growth — and they were damp and tangled and clinging to my neck in ways that my hair had never done before because there had never been enough of it.
+
+Vaela reached out.
+
+She tucked a strand behind my ear.
+
+The touch was light. Fingertips against the side of my face — just above the ear, where the skin was thin and sensitive. Her fingers were calloused from the sword grip but warm, and they lingered against my temple for a beat longer than the gesture required, tracing the curve of my ear, grazing the jaw that was softening day by day beneath flesh that remembered a different shape.
+
+My breath stopped.
+
+Not a decision. Not a choice. A purely physical response — the lungs seizing, the heartbeat slamming forward into a sudden, accelerating rhythm that pulsed through the new tissue at my chest with aching clarity. Each heartbeat was a drum strike against flesh that had not existed three months ago, and the sensitivity was maddening, amplifying every sensation until Vaela&#39;s fingertips against my jaw felt like they were touching nerve endings that ran all the way to the base of my spine.
+
+Her golden eyes held mine. This close, I could see the flecks of darker amber in the irises, the fine lines at the corners where sun and wind and laughter had left their marks. The pupils were wide. Not with exertion — we had stopped moving. With something else.
+
+&quot;You are caught between,&quot; she murmured. Her voice was low, barely above a whisper, and her breath was warm against my face — we were that close, though I could not remember either of us stepping forward. &quot;I have never wanted anything more.&quot;
+
+[[Continue|suitor_date_vaela_5]]</tw-passagedata><tw-passagedata pid="1649" name="suitor_date_vaela_5" tags="suitor-date vaela" position="1100,20600" size="100,100">She pulled me forward.
+
+Her hand closed on the collar of the tunic-dress — not roughly, but with the decisive grip of a woman who did not ask permission to take what she wanted because she had never needed to — and drew me toward her until our faces were inches apart.
+
+I could see every detail of her. The thin scar that bisected her left eyebrow — a sparring wound, or something worse. The faint sheen of sweat on her upper lip. The way her nostrils flared slightly with each breath. The dark hair that had escaped the warrior&#39;s tail, framing her face in damp tendrils that clung to the pale skin.
+
+I could feel the heat coming off her. Her body radiated warmth the way a forge radiates heat — concentrated, intense, the product of sustained effort and a metabolism that ran hot. The air between us was thick with it — her warmth, my warmth, the iron tang of sweat and the mineral scent of the flagstones and something beneath both that was purely chemical, purely animal, a scent I had never noticed before because the body I was becoming processed sensation differently than the body I had been.
+
+My heart slammed against the budding flesh of my chest. Each beat sent a pulse of sensation through the tender tissue — not pain, exactly, but a heightened awareness that bordered on it, a sensitivity so acute that I could feel my own pulse in places that had not existed before, in the swelling curves beneath the linen, in the thin skin that stretched tighter with each passing day over growth that would not be denied.
+
+Vaela&#39;s mouth was close enough that I could feel her breath on my lips.
+
+For a breathless, suspended moment, we hovered. The Iron Garden was silent. The morning sun poured down like molten gold. The practice rapiers lay forgotten on the flagstones. And I was aware — with a clarity that was almost violent — that every nerve in this half-finished body was reaching toward her.
+
+Vaela released.
+
+She opened her hand and stepped back. One step, then two, creating distance with the deliberate control of a woman who was choosing not to take something she wanted very badly.
+
+She smiled. Not the fierce grin of the sparring — something else. Something slower, warmer, more dangerous. A wolf&#39;s smile. Patient, knowing, hungry.
+
+&quot;Not yet,&quot; she said. &quot;I want you to choose me, not fall into me.&quot;
+
+She turned. Walked to the weapons rack. Retrieved both rapiers and replaced them with a precision that was almost meditative, each blade settled into its bracket with a soft *click* of steel on wood.
+
+Then she walked away. Her hips moved with a fighter&#39;s economy — tight, controlled, powerful — but there was something else in the motion now. An awareness. A sway that was not calculated but was not accidental either, the natural rhythm of a woman&#39;s body in movement, and it pulled my gaze down her spine and along the curve of her waist and lower, and I could not look away.
+
+She did not look back.
+
+[[Continue|suitor_date_vaela_6]]</tw-passagedata><tw-passagedata pid="1650" name="suitor_date_vaela_6" tags="suitor-date vaela" position="1225,20600" size="100,100">I stood in the Iron Garden.
+
+The flagstones were warm beneath my boots. The sun was directly overhead now, pouring heat into the stone enclosure, and the air shimmered above the practice ground in waves that made the walls seem to breathe.
+
+My pulse was still thundering. Not the even, controlled rhythm that Aldric had trained into me — the wild, irregular stammer of a heart that had been ambushed by something it did not have a name for. Each beat resonated through my chest, through the budding flesh that the potions were building with relentless, aching patience, and the ghost of Vaela&#39;s fingers lingered on my jawline like a brand.
+
+She had almost kissed me.
+
+Or I had almost kissed her. The geometry of those final inches was ambiguous — who had leaned, who had tilted, whose breath had quickened first — and the ambiguity itself was maddening, because it meant that whatever had happened in the space between our mouths was shared. Mutual. A thing we had both reached for and both denied.
+
+Vaela Rhyss. A woman. A warrior-goddess from the Dawncourt who fought with the Blade Form that used the female body as an engine rather than an obstacle. Who had disarmed me three times and praised me the fourth. Who had touched my face with sword-calloused fingers and said *I have never wanted anything more* while looking at a body that was neither one thing nor the other, a body caught between, and had wanted it precisely because of the between.
+
+The word surfaced from somewhere deep. A word I had been circling for weeks without ever quite landing on it, the way you circle a hot coal barefoot — aware of the heat, unable to commit to the step.
+
+*Desire.*
+
+Not admiration. Not curiosity. Not the intellectual acknowledgment that Vaela was beautiful and powerful and interesting. Desire — the visceral, physical, aching pull of a body toward another body, the kind of want that lived below the collarbone and above the navel and had nothing to do with thought.
+
+And the body that desired her was not the body of a prince. It was this body — the in-between one, the changing one, the one with budding breasts and softening jaw and widening hips. The body that was becoming female desired a woman with a ferocity that stole my breath and left me standing alone in the Iron Garden with sweat cooling on skin that no longer belonged to who I used to be.
+
+My hand went to my jawline. Traced the spot where her fingers had been. The skin was still warm.
+
+[[She terrifies me. I want more.|suitor_date_vaela_7a]]
+[[A skilled warrior, but too aggressive.|suitor_date_vaela_7b]]
+[[I felt nothing.|suitor_date_vaela_7c]]</tw-passagedata><tw-passagedata pid="1651" name="suitor_date_vaela_7a" tags="suitor-date vaela choice" position="100,20725" size="100,100">&lt;&lt;set $vaela_affection += 3&gt;&gt;
+&lt;&lt;set $lesbian_curiosity += 2&gt;&gt;
+
+She terrified me. I wanted more.
+
+The two truths coexisted without contradiction, occupying the same space in my chest the way the new tissue occupied the same ribcage as the old muscle — pushing, pressing, making room for themselves in a body that had not planned for their arrival.
+
+Vaela Rhyss terrified me because she did not handle me gently. She did not treat the transformation as a fragility to be accommodated. She had thrown a rapier at me and said *show me* — and when I showed her, she had seen the queen.
+
+I wanted more because the place where her fingers had touched my jaw was still singing. Because the near-kiss hung in the air of the Iron Garden like a chord that had not resolved. Because the word *desire* had lodged itself beneath my ribs and was pulsing there with each heartbeat, warm and terrifying and undeniably alive.
+
+I left the Iron Garden with my pulse still hammering and the smell of sweat and steel in my nostrils and the shape of Vaela&#39;s smile imprinted on the inside of my eyelids.
+
+[[Report to Serelyne|suitor_date_evaluation_1]]</tw-passagedata><tw-passagedata pid="1652" name="suitor_date_vaela_7b" tags="suitor-date vaela choice" position="225,20725" size="100,100">&lt;&lt;set $vaela_affection -= 2&gt;&gt;
+
+A skilled warrior. Undeniably talented. The Dawncourt Blade Form was a revelation — proof that the feminine body could fight not merely adequately but brilliantly, and the techniques Vaela had demonstrated in those four bouts would change the way I trained with Aldric.
+
+But the touch. The collar grab. The whispered declaration and the near-kiss and the deliberate, theatrical withdrawal — it was too much. Too aggressive. The border between confidence and presumption was fine, and Vaela had crossed it with the same ease she crossed swords.
+
+I left the Iron Garden appreciating what she had shown me with the blade and wary of what she had shown me without it.
+
+[[Report to Serelyne|suitor_date_evaluation_1]]</tw-passagedata><tw-passagedata pid="1653" name="suitor_date_vaela_7c" tags="suitor-date vaela choice" position="350,20725" size="100,100">I felt nothing.
+
+I told myself this as I left the Iron Garden. Felt nothing. The sparring was educational, the near-kiss was a power play, and the thundering of my pulse was simple exertion from four bouts of combat. Nothing more.
+
+The ghost of her fingers on my jaw argued otherwise, but I had become skilled at ignoring the testimony of a body I no longer trusted to tell me the truth about anything.
+
+[[Report to Serelyne|suitor_date_evaluation_1]]</tw-passagedata><tw-passagedata pid="1654" name="startup" tags="" position="475,20725" size="100,100">&lt;&lt;nobr&gt;&gt;
 &lt;!-- Fullscreen Intro Page for Kingdom of Velmoria --&gt;
 &lt;div id=&quot;velmoria-intro&quot; style=&quot;
   position: fixed;
@@ -46194,7 +46782,7 @@ The warrior queen. In the making. Not yet made. Not yet certain. Not yet fully h
   &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1633" name="intro" tags="" position="350,20475" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1655" name="intro" tags="" position="600,20725" size="100,100">&lt;&lt;nobr&gt;&gt;
 &lt;div id=&quot;velmoria-intro-2&quot;&gt;
 &lt;h1 class=&#39;topic-head&#39;&gt;👑 *Kingdom of Velmoria* 👑&lt;/h1&gt;
 &lt;p&gt;&lt;strong&gt;Genre:&lt;/strong&gt; Medieval Fantasy · Interactive Story · Gender Transformation&lt;/p&gt;
@@ -46222,7 +46810,7 @@ The warrior queen. In the making. Not yet made. Not yet certain. Not yet fully h
 
 &lt;button id=&quot;enter-relam&quot; style=&quot;margin-top: 25px; padding: 10px 20px; background-color: #a58b5c; color: white; border: none; border-radius: 8px;&quot;&gt;Enter the Realm&lt;/button&gt;
 &lt;/div&gt;
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1634" name="body_choice" tags="" position="475,20475" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1656" name="body_choice" tags="" position="725,20725" size="100,100">&lt;&lt;nobr&gt;&gt;
 &lt;h3 style=&quot;text-align: center;&quot;&gt;Choose your starting character&lt;/h3&gt;
 &lt;div class=&quot;item-grid&quot;&gt;
 	&lt;div class=&quot;item-card&quot; style=&quot;width: 90%; &quot;&gt;
@@ -46253,7 +46841,7 @@ The warrior queen. In the making. Not yet made. Not yet certain. Not yet fully h
         [[Ultra Muscular|Ultra Muscular]]
     &lt;/div&gt;
 &lt;/div&gt;
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1635" name="Lean" tags="" position="600,20475" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1657" name="Lean" tags="" position="850,20725" size="100,100">&lt;&lt;nobr&gt;&gt;
 &lt;&lt;set $user_stats.gender_Identity = 60&gt;&gt;
 &lt;&lt;set $user_stats.gender_appearance = 64.5&gt;&gt;
 &lt;&lt;set $user_stats.dominance_level = 60&gt;&gt;
@@ -46328,7 +46916,7 @@ In public mode only the muscular body type is available.
 &lt;br&gt;
 &lt;&lt;/if&gt;&gt;
 [[Back Choose Character|body_choice]]
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1636" name="Muscular" tags="" position="725,20475" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1658" name="Muscular" tags="" position="975,20725" size="100,100">&lt;&lt;nobr&gt;&gt;
 &lt;&lt;set $user_stats.gender_Identity = 80&gt;&gt;
 &lt;&lt;set $user_stats.gender_appearance = 80&gt;&gt;
 &lt;&lt;set $user_stats.dominance_level = 80&gt;&gt;
@@ -46395,7 +46983,7 @@ In public mode only the muscular body type is available.
 &lt;&lt;set $curr_chest = 2&gt;&gt;
 [[Start Journey|notice]] |
 [[Back Choose Character|body_choice]]
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1637" name="Ultra Muscular" tags="" position="850,20475" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1659" name="Ultra Muscular" tags="" position="1100,20725" size="100,100">&lt;&lt;nobr&gt;&gt;
 &lt;&lt;set $user_stats.gender_Identity = 100&gt;&gt;
 &lt;&lt;set $user_stats.gender_appearance = 94.9&gt;&gt;
 &lt;&lt;set $user_stats.dominance_level = 100&gt;&gt;
@@ -46471,7 +47059,7 @@ In public mode only the muscular body type is available.
 &lt;br&gt;
 &lt;&lt;/if&gt;&gt;
 [[Back Choose Character|body_choice]]
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1638" name="notice" tags="" position="975,20475" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1660" name="notice" tags="" position="1225,20725" size="100,100">&lt;&lt;nobr&gt;&gt;
 &lt;&lt;set $currentObjectives = &quot;The Council Convenes&quot;&gt;&gt;
 &lt;&lt;set $locationName = &#39;Castle&#39;&gt;&gt;
 &lt;&lt;set $locationImage = setup.ImagePath + &#39;location/council_room.png&#39;&gt;&gt;
@@ -46506,7 +47094,7 @@ In public mode only the muscular body type is available.
 [[Contemplate Your Path|Contemplate_Your_Path]]
 [[Skip Intro|into_11]]
 &lt;/div&gt;
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1639" name="Contemplate_Your_Path" tags="" position="1100,20475" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1661" name="Contemplate_Your_Path" tags="" position="100,20850" size="100,100">&lt;&lt;nobr&gt;&gt;
 &lt;&lt;speech &quot;malrec&quot;&gt;&gt;
 Your Majesty, may I commend the clarity of your decree. The boy ahem, the Prince deserves to understand the weight of such a crossroads. Rare it is for a ruler to offer choice when the throne’s need is clear.
 &lt;&lt;/speech&gt;&gt;
@@ -46524,7 +47112,7 @@ Enough. This is not a debate of worth. My son was born of my womb, he carries th
 &lt;&lt;/speech&gt;&gt;
 &lt;br&gt;
 [[Move forth|into_1]]
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1640" name="into_1" tags="" position="1225,20475" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1662" name="into_1" tags="" position="225,20850" size="100,100">&lt;&lt;nobr&gt;&gt;
 &lt;&lt;speech &quot;mc&quot;&gt;&gt;
 ...May I speak, Mother?
 &lt;&lt;/speech&gt;&gt;
@@ -46542,7 +47130,7 @@ You speak well, my son. Or perhaps... my daughter in waiting. Know this, Your tr
 &lt;&lt;/speech&gt;&gt;
 &lt;br&gt;
 [[Move forth|into_2]]
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1641" name="into_2" tags="" position="100,20600" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1663" name="into_2" tags="" position="350,20850" size="100,100">&lt;&lt;nobr&gt;&gt;
 &lt;&lt;speech &quot;veletia&quot;&gt;&gt;
 And what a divine peace it could be! Imagine, Caelan silk draped on strong shoulders, a crown resting on freshly curled hair, eyes like yours commanding hearts and thrones alike!
 &lt;&lt;/speech&gt;&gt;
@@ -46560,7 +47148,7 @@ And if I say no? If I take a wife and let her rule? Will you all stand by me the
 &lt;&lt;/speech&gt;&gt;
 &lt;br&gt;
 [[Move forth|into_3]]
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1642" name="into_3" tags="" position="225,20600" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1664" name="into_3" tags="" position="475,20850" size="100,100">&lt;&lt;nobr&gt;&gt;
 &lt;&lt;speech &quot;alinora&quot;&gt;&gt;
 I will stand beside you. But not behind you. A queen leads. A consort supports. The throne demands its sovereign to be sovereign not through marriage, but through birth... and rebirth.
 &lt;&lt;/speech&gt;&gt;
@@ -46581,7 +47169,7 @@ Then ask yourself, my child. Do you want to be queen? To rule with the strength 
 &lt;br&gt;
 &lt;br&gt;
 [[No crown is worth losing myself. I will take a wife, not a new form|into_5]]
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1643" name="into_4" tags="" position="350,20600" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1665" name="into_4" tags="" position="600,20850" size="100,100">&lt;&lt;nobr&gt;&gt;
 &lt;&lt;speech &quot;mc&quot;&gt;&gt;
 I have never feared duty. And though this path is strange, even frightening... if my body must change to match the crown, then let it be so. If being a princess means protecting our bloodline, our realm then I will embrace that role, fully and without shame.
 &lt;&lt;/speech&gt;&gt;
@@ -46615,14 +47203,14 @@ Caelan’s heart beat like a war drum. This was no coronation. It was a reforgin
 &lt;br&gt;
 [[Begin with the First Pillar: Mental Conversion|mental_conversion]]
 
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1644" name="into_5" tags="" position="475,20600" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1666" name="into_5" tags="" position="725,20850" size="100,100">&lt;&lt;nobr&gt;&gt;
 &lt;br&gt;
 &lt;br&gt;
 &lt;strong&gt;Dev Message - Not Implemented this path yet..&lt;/strong&gt;
 &lt;br&gt;
 &lt;br&gt;
 [[Go Back|into_3]]
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1645" name="mental_conversion" tags="" position="600,20600" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1667" name="mental_conversion" tags="" position="850,20850" size="100,100">&lt;&lt;nobr&gt;&gt;
 &lt;&lt;set $currentObjectives = &quot;Listen to Mental Conversion&quot;&gt;&gt;
 &lt;div style=&quot;font-family: &#39;Papyrus&#39;, serif; potion_create_torso color: #8b5e3c; background-color: #f5f0dc; border: 2px solid #a58b5c; padding: 18px; border-radius: 10px; box-shadow: 3px 3px 8px rgba(0,0,0,0.2); max-width: 700px; margin: 20px auto;&quot;&gt;
 &lt;p&gt;&lt;strong&gt;Lady Serelyne Virellis&lt;/strong&gt; stepped forward, her expression unreadable.&lt;/p&gt;
@@ -46646,7 +47234,7 @@ You may struggle, But should you succeed, the court will not see a transformed m
 &lt;br&gt;
 [[Proceed to the Second Pillar: Physical Conversion|physical_conversion]]
 &lt;/div&gt;
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1646" name="physical_conversion" tags="" position="725,20600" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1668" name="physical_conversion" tags="" position="975,20850" size="100,100">&lt;&lt;nobr&gt;&gt;
 &lt;&lt;set $currentObjectives = &quot;Listen to Physical Conversion&quot;&gt;&gt;
 &lt;div style=&quot;font-family: &#39;Papyrus&#39;, serif; potion_create_torso color: #8b5e3c; background-color: #f5f0dc; border: 2px solid #a58b5c; padding: 18px; border-radius: 10px; box-shadow: 3px 3px 8px rgba(0,0,0,0.2); max-width: 700px; margin: 20px auto;&quot;&gt;
 &lt;p&gt;&lt;strong&gt;Archmage Thalara Moonveil&lt;/strong&gt; stood with staff in hand, her silver hair glowing faintly under the chandelier&#39;s light.&lt;/p&gt;
@@ -46670,7 +47258,7 @@ The body is clay in the hands of will and magic, But it is &lt;em&gt;you&lt;/em&
 &lt;br&gt;
 [[Proceed to the Third Pillar: Rule and Survival|rule_and_survival]]
 &lt;/div&gt;
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1647" name="rule_and_survival" tags="" position="850,20600" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1669" name="rule_and_survival" tags="" position="1100,20850" size="100,100">&lt;&lt;nobr&gt;&gt;
 &lt;&lt;set $currentObjectives = &quot;Listen to Rule and Survival&quot;&gt;&gt;
 &lt;div style=&quot;font-family: &#39;Papyrus&#39;, serif; potion_create_torso color: #8b5e3c; background-color: #f5f0dc; border: 2px solid #a58b5c; padding: 18px; border-radius: 10px; box-shadow: 3px 3px 8px rgba(0,0,0,0.2); max-width: 700px; margin: 20px auto;&quot;&gt;
 &lt;p&gt;&lt;strong&gt;Queen Alinora&lt;/strong&gt; herself rose now, her voice strong with pride.&lt;/p&gt;
@@ -46701,7 +47289,7 @@ You must earn the kingdom’s love and fear, Caelan,&quot; the Queen declared. &
 [[Move forth|into_6]]
 &lt;/div&gt;
 
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1648" name="into_6" tags="" position="975,20600" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1670" name="into_6" tags="" position="1225,20850" size="100,100">&lt;&lt;nobr&gt;&gt;
 &lt;&lt;speech &quot;mc&quot;&gt;&gt;
 Then I accept the Rite of Three Pillars. I will reshape myself, body and soul, for the sake of Velmoria. 
 I only ask to understand what lies ahead, from those who will guide me.
@@ -46721,7 +47309,7 @@ To lead Velmoria, you must &lt;strong&gt;think&lt;/strong&gt; as she does. Not m
 You speak of thoughts and instincts... but how does one change those?
 &lt;&lt;/speech&gt;&gt; &lt;br&gt;
 [[Move forth|into_7]]
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1649" name="into_7" tags="" position="1100,20600" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1671" name="into_7" tags="" position="100,20975" size="100,100">&lt;&lt;nobr&gt;&gt;
 &lt;&lt;speech &quot;serelyne&quot;&gt;&gt;
 Through observation. Discipline. Trial and test. You will spend days in court, mimicking our customs. 
 You will learn to speak softly, but with power. To smile in silence and command a room. 
@@ -46743,7 +47331,7 @@ But make no mistake this is not a costume. It is rebirth.
 Will it hurt? Will I lose who I am?
 &lt;&lt;/speech&gt;&gt; &lt;br&gt;
 [[Move forth|into_8]]
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1650" name="into_8" tags="" position="1225,20600" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1672" name="into_8" tags="" position="225,20975" size="100,100">&lt;&lt;nobr&gt;&gt;
 &lt;&lt;speech &quot;thalara&quot;&gt;&gt;
 Pain, yes... in moments. But more than pain, there is uncertainty. 
 Your form will shift slowly organs altered, voice softened, curves blooming where none were before. 
@@ -46765,7 +47353,7 @@ You’ll fall off a horse, bruise, sweat, bleed... until you ride like fire and 
 Even after I become... physically different?
 &lt;&lt;/speech&gt;&gt; &lt;br&gt;
 [[Move forth|into_9]]
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1651" name="into_9" tags="" position="100,20725" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1673" name="into_9" tags="" position="350,20975" size="100,100">&lt;&lt;nobr&gt;&gt;
 &lt;&lt;speech &quot;aldric&quot;&gt;&gt;
 Especially then. The sword don’t care what’s between your legs. 
 Neither do enemies. 
@@ -46787,7 +47375,7 @@ You can’t. You will be shaped by them. And one day, you may wake up wondering 
 But such is rule an artful performance of truth and deceit. I will teach you both.
 &lt;&lt;/speech&gt;&gt; &lt;br&gt;
 [[Move forth|into_10]]
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1652" name="into_10" tags="" position="225,20725" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1674" name="into_10" tags="" position="475,20975" size="100,100">&lt;&lt;nobr&gt;&gt;
 Then, in a sudden flourish of silk and laughter, &lt;strong&gt;Mistress Veletia Roswyn&lt;/strong&gt; swept into the center like a flame in human form. &lt;br&gt;
 &lt;&lt;speech &quot;veletia&quot;&gt;&gt;
 And I, darling, shall make you &lt;strong&gt;divine&lt;/strong&gt;. 
@@ -46803,7 +47391,7 @@ It is armor. It is spellwork.
 And you, my dear Caelan, will become the most enchanting vision this kingdom has ever dared to imagine.
 &lt;&lt;/speech&gt;&gt; &lt;br&gt;
 [[Move forth|into_11]]
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1653" name="into_11" tags="" position="350,20725" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="1675" name="into_11" tags="" position="600,20975" size="100,100">&lt;&lt;nobr&gt;&gt;
 As the final words settled into the warm silence of the chamber, the great bell of the royal tower tolled twice, signaling the descent of evening. &lt;br&gt;&lt;br&gt;
 Queen Alinora stood once more, her face unreadable. &lt;br&gt;
 &lt;&lt;speech &quot;alinora&quot;&gt;&gt;

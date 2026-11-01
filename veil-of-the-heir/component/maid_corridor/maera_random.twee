@@ -2,7 +2,7 @@
 
 :: interact_with_maera
 <<nobr>>
-<<set _i to random(0, 19)>>
+<<set _i to random(0, 19 + ($suitor_dates_completed >= 1 ? 1 : 0))>>
 <<if _i == 0>>
 <<speech "maera">>
 You sneak into a lady's chambers without knocking now? Careful, Your Grace, I might get ideas.
@@ -301,6 +301,30 @@ Then let me be nothing but yours for a while.
 
 <<speech "maera">>
 Don't tempt me, Caelan, unless you mean to follow through.
+<</speech>>
+<br>
+<<elseif _i == 20>>
+<<speech "maera">>
+Sir Aldren seems kind. Too kind for court, maybe. Kindness has a short lifespan in these halls.
+<</speech>>
+<br>
+
+<<speech "mc">>
+And Lady Vaela?
+<</speech>>
+<br>
+
+She folds a chemise with unnecessary force.
+
+<<speech "maera">>
+That one would eat you alive.
+<</speech>>
+<br>
+
+A beat. She smooths the chemise she just mangled.
+
+<<speech "maera">>
+I approve.
 <</speech>>
 <br>
 <</if>>
